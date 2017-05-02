@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}qa\PYGZus{}block\PYGZus{}name.h\PYGZdq{}}
+
+\PYG{n}{CppUnit}\PYG{o}{::}\PYG{n}{TestSuite} \PYG{o}{*}
+\PYG{n}{qa\PYGZus{}tutorial\PYGZus{}multiply}\PYG{o}{::}\PYG{n}{suite}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+	\PYG{n}{CppUnit}\PYG{o}{::}\PYG{n}{TestSuite} \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{k}{new} \PYG{n}{CppUnit}\PYG{o}{::}\PYG{n}{TestSuite}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}block\PYGZus{}name\PYGZdq{}}\PYG{p}{);}
+
+	\PYG{k}{return} \PYG{n}{s}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -507,6 +507,46 @@ I learned...
 	\item  ... that you need to compile twice before the TOC is updated.
 \end{itemize}
 
+\subsection{git - executive summary}
+
+Creating the repository:
+
+\begin{minted}{bash}
+#first open directory whose contents are to be controlled
+#then
+$ git init
+$ echo "# Caption" >> README.md
+$ git add .
+$ git commit -m "initial commit"
+$ git remote -v
+$ git remote rm origin
+$ git remote add origin https://github.com/tangboshi/bachelor_thesis.git
+$ git push -u origin master
+\end{minted}
+
+Pulling from the remote repository:
+
+\begin{minted}{bash}
+$ git remote -v
+$ git fetch origin
+\end{minted}
+
+Pushing to the remote repository:
+
+\begin{minted}{bash}
+$ git remote -v
+# inspect remote branch
+$ git remote show origin
+$ git push -u origin master
+\end{minted}
+
+Renaming and removing the remote repository:
+
+\begin{minted}{bash}
+$ git remote rename origin name
+$ git remote remove name 
+\end{minted}
+
 \subsection{Miscallaneous}
 
 \begin{itemize}

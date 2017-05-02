@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}first open directory whose contents are to be controlled}
+\PYG{c+c1}{\PYGZsh{}then}
+\PYGZdl{} git init
+\PYGZdl{} \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}\PYGZsh{} Caption\PYGZdq{}} \PYGZgt{}\PYGZgt{} README.md
+\PYGZdl{} git add .
+\PYGZdl{} git commit \PYGZhy{}m \PYG{l+s+s2}{\PYGZdq{}initial commit\PYGZdq{}}
+\PYGZdl{} git remote \PYGZhy{}v
+\PYGZdl{} git remote rm origin
+\PYGZdl{} git remote add origin https://github.com/tangboshi/bachelor\PYGZus{}thesis.git
+\PYGZdl{} git push \PYGZhy{}u origin master
+\end{Verbatim}

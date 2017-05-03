@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if}\PYG{p}{(}\PYG{n}{condition}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+	\PYG{n}{add\PYGZus{}item\PYGZus{}tag}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{c+c1}{//port}
+				 \PYG{n}{nitems\PYGZus{}written}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o}{+} \PYG{n}{i}\PYG{p}{,} \PYG{c+c1}{//offset \PYGZhy{} pos not fixed}
+				 \PYG{n}{pmt}\PYG{o}{::}\PYG{n}{mp}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}tag key\PYGZdq{}}\PYG{p}{),} \PYG{c+c1}{//key}
+				 \PYG{n}{pmt}\PYG{o}{::}\PYG{n}{from\PYGZus{}double}\PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{c+c1}{// value}
+	\PYG{p}{);}
+	\PYG{n}{opt\PYGZus{}var} \PYG{o}{=} \PYG{n}{opt\PYGZus{}val}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

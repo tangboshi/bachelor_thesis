@@ -21,6 +21,8 @@
 		\PYG{n}{src} \PYG{o}{=} \PYG{n}{blocks}\PYG{o}{.}\PYG{n}{vector\PYGZus{}source\PYGZus{}i}\PYG{p}{(}\PYG{n}{src\PYGZus{}data}\PYG{p}{)}
 		\PYG{n}{block} \PYG{o}{=} \PYG{n}{block\PYGZus{}name}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}fibs\PYGZdq{}}\PYG{p}{)}
 		\PYG{n}{snk} \PYG{o}{=} \PYG{n}{blocks}\PYG{o}{.}\PYG{n}{vector\PYGZus{}sink\PYGZus{}i}\PYG{p}{()}
+		\PYG{c+c1}{\PYGZsh{}connecting to a multiportblock has the following signature:}
+		\PYG{c+c1}{\PYGZsh{}connect(src, port, dst, port)}
 		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tb}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{src}\PYG{p}{,} \PYG{n}{block}\PYG{p}{)}
 		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tb}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{block}\PYG{p}{,} \PYG{n}{snk}\PYG{p}{)}
 		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tb}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}

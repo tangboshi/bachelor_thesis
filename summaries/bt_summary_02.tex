@@ -261,6 +261,8 @@ class qa_block_name (gr_unittest.TestCase):
 		src = blocks.vector_source_i(src_data)
 		block = block_name("fibs")
 		snk = blocks.vector_sink_i()
+		#connecting to a multiportblock has the following signature:
+		#connect(src, port, dst, port)
 		self.tb.connect(src, block)
 		self.tb.connect(block, snk)
 		self.tb.run()
@@ -479,9 +481,124 @@ sudo make uninstall
 
 \subsubsection{\texttt{set\_history()}}
 
+\mintinline{cpp}{void set_history(unsigned int N)} provides the current and the previous N-1 items to the input buffer, despite already having been consumed.
+
 \subsubsection{\texttt{set\_output\_multiple()}}
 
+\mintinline{cpp}{void set_output_multiple(unsigned int N)} allows us to make sure the output has a minimum block size of N. However, note that we can also get output blocks with the size of multiples of N, such as 2N or 3N.
+
 \subsubsection{Blocks, Blocks, Blocks!}
+
+Just a question here for brevity's sake...
+
+\bigskip
+
+\color{blue}
+[question] (\href{https://wiki.gnuradio.org/index.php/Guided\_Tutorial\_GNU\_Radio\_in\_C\%2B\%2B}{Guided Tutorial GNU Radio in \texttt{C++}}) The terminology of GNU Radio is a little bit confusing when it comes to rate changing blocks with a fixed rate. While this seems like a contradiction I see two ways of resolving it. The more likely one goes as follows: since such a block inherits from \texttt{gr\_sync\_decimator} or \texttt{gr\_sync\_interpolator} the decimation/interpolation rate is variable, otherwise the sync prefix does not make any sense. The other possibility is to have the input and output rate change, but keeping their aspect ratio, specified as decimation or interpolation factor. 
+\color{black}
+
+\subsubsection{Polymorphic Types, Stream Tags and Message Passing}
+
+Data between blocks is passed in a stream, which makes sense if data is continuously produced and/or consumed. However, if you want to once-only pass specific information, e.g. to change variable values keeping up a continuous sparsely populated stream is wasteful. The solution to this problem are synchronous stream-tagging or asynchronous message passing.
+
+\bigskip
+
+Another problem is that a message can assume all kinds of data types. This is not a problem for the weakly typed Python, but problematic for the strongly typed \texttt{C++}. The solution to this are Polymorphic Types (PMT).
+
+\begin{description}[leftmargin=!, labelwidth=1in]
+	\item[PMTs]  Basically making \texttt{C++} compatible to weak typing. We simply use the polymorphic (could rephrase with universal or weak) type \texttt{pmt::pmt\_t}. Typecasting non-polymorphic types to PMT is easy, we simply use the commands of the following structure:
+	\mint{cpp}{pmt::pmt_t Poly = pmt::from_complex(gr_complex(0,1));}
+	Alternatively, we can use the following pattern \texttt{C++} and Python:
+	\mint{cpp}{pmt::pmt_t P = pmt::mp(5);}
+	\mint{python}{P_int = pmt.to_pmt(42)}
+	Strings have a special role in PMTs. They are converted to PMT.
+	\mint{cpp}{pmt::pmt_t string = pmt::string_to_symbol("content");}
+	Useful PMT constants
+	\begin{minted}[tabsize=0]{cpp}
+	pmt::pmt_t P_true = pmt::PMT_T;
+	pmt::pmt_t P_false = pmt::PMT_F;
+	pmt::pmt_t P_nil = pmt::PMT_NIL;
+	\end{minted}
+	\item[Stream Tags] If two blocks are already connected through a stream, so-called tags can be passed along with the stream at fixed positions and consist of:
+	\begin{itemize}
+		\item a key, which serves as identifier
+		\item a value, which can be any PMT
+		\item (optionally) a source ID, which identifies the source of the tag.
+	\end{itemize}
+	Implementation in C++:
+	\begin{minted}[tabsize=4]{cpp}
+if(condition)
+{
+	add_item_tag(0, //port
+				 nitems_written(0) + i, //offset - pos not fixed
+				 pmt::mp("tag key"), //key
+				 pmt::from_double(in[i]) // value
+	);
+	opt_var = opt_val;
+}
+	\end{minted}
+	Implementation in Python:
+	\begin{minted}[tabsize=4]{python}
+if condition:
+	self.add_item_tag(0, #port
+		self.nitems_written(0) + i, #offset
+		pmt.intern("tag_key"), #key
+		pmt.from_double(numpy.double(in0[i])) #value
+	)
+	self.opt_var = opt_val
+	\end{minted}
+	Tag propagation policies:
+	\begin{itemize}
+		\item TPP\_ALL\_TO\_ALL
+		\item TPP\_ONE\_TO\_ONE
+		\item TPP\_DONT
+	\end{itemize}
+	
+	
+	\item[Msg Passing] Works very different from stream tags. There is no offset and no key and a special message port designated for message passing.
+	
+	\textbf{Note:} Multiple message output ports can be connected to a single input port. This is not possible with stream tags.
+	
+	\bigskip
+	
+	Add this to the block's constructor to create message ports and handler:
+	
+	\begin{minted}[tabsize=4]{cpp}
+// Message port
+message_port_register_in(pmt::mp("in_port_name"));
+message_port_register_out(pmt::mp("out_port_name"));
+// Message handler
+set_msg_handler(
+	// This is the port identifier
+	pmt::mp("in_port_name"), 
+	// [FIXME class name] Bind the class method
+	boost::bind(&block_class_name::msg_handler_method, this, _1)  
+);
+	\end{minted}
+	
+	The same for Python:
+	\begin{minted}[tabsize=4]{python}
+# Put this into the constructor to create message ports
+self.message_port_register_in(pmt.intern("in_port_name"))
+self.message_port_register_out(pmt.intern("out_port_name"))
+# No bind necessary, we can pass the function directly
+self.set_msg_handler(pmt.intern("in_port_name"), self.msg_handler_method) 
+	\end{minted}
+	
+	Connecting message ports works analogous to the connecting other ports. The only difference: the function's name is \texttt{msg\_connect}.
+	
+	\bigskip
+	
+	Example passing "message" every second to a debug block:
+	
+	\begin{minted}{python}
+tb = gr.top_block()
+src = blocks.message_strobe(pmt.to_pmt("message"), 1000)
+dbg = blocks.message_debug()
+tb.msg_connect(src, "pdus", dbg, "print")
+	\end{minted}
+	
+\end{description}
 
 \section{Good to Know...}
 
@@ -491,6 +608,7 @@ sudo make uninstall
 	\item \verb|[:]| means all entries of an array in Python.
 	\item \href{https://docs.python.org/2/library/unittest.html#assert-methods}{Python assert methods}
 	\item \href{https://docs.scipy.org/doc/numpy/user/basics.types.html}{Numpy data types}
+	\item \href{https://docs.python.org/2/library/datatypes.html}{Python data types}
 \end{itemize}
 
 \subsection{\LaTeX}

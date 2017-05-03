@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{tb} \PYG{o}{=} \PYG{n}{gr}\PYG{o}{.}\PYG{n}{top\PYGZus{}block}\PYG{p}{()}
+\PYG{n}{src} \PYG{o}{=} \PYG{n}{blocks}\PYG{o}{.}\PYG{n}{message\PYGZus{}strobe}\PYG{p}{(}\PYG{n}{pmt}\PYG{o}{.}\PYG{n}{to\PYGZus{}pmt}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}message\PYGZdq{}}\PYG{p}{),} \PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{n}{dbg} \PYG{o}{=} \PYG{n}{blocks}\PYG{o}{.}\PYG{n}{message\PYGZus{}debug}\PYG{p}{()}
+\PYG{n}{tb}\PYG{o}{.}\PYG{n}{msg\PYGZus{}connect}\PYG{p}{(}\PYG{n}{src}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}pdus\PYGZdq{}}\PYG{p}{,} \PYG{n}{dbg}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}print\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

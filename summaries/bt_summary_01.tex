@@ -4,7 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{soul}
 \usepackage{graphicx}
+
 \usepackage{color}
+\definecolor{orange}{RGB}{255,127,0}
 
 \graphicspath{{img/}}
 \setlength{\parindent}{0pt}
@@ -191,13 +193,18 @@
 	\bigskip
 	
 	\color{blue}
-	[thought experiment:] If I had nodes with very different power levels belonging to the same BSS (for instance let edge nodes have more "buzz" in order to cover peripheral areas). Imagine now that an arbitrary node A wants to transmit and issues a RTS. A set of nodes \{B\} in vicinity of this node will subsequently respond with a CTS and shutdown nodes in their vicinity. Suppose the CTS doesn't reach an edge node E, but the edge node's power would be big enough to interfere with the original sender. Suppose that without loss of generality range A equals the range of each member of the set {B}. This implies that E's range is more than twice as big as A's. Is this possible scenario with 802.11? The question has come up once I read that 802.11 features energy regulation to adapt the nodes' respective ranges to prevent similar scenarios to what I described. Below a little sketch to illustrate what I'm asking.
+	[thought experiment] If I had nodes with very different power levels belonging to the same BSS (for instance let edge nodes have more "buzz" in order to cover peripheral areas). Imagine now that an arbitrary node A wants to transmit and issues a RTS. A set of nodes \{B\} in vicinity of this node will subsequently respond with a CTS and shutdown nodes in their vicinity. Suppose the CTS doesn't reach an edge node E, but the edge node's power would be big enough to interfere with the original sender. Suppose that without loss of generality range A equals the range of each member of the set {B}. This implies that E's range is more than twice as big as A's. Is this possible scenario with 802.11? The question has come up once I read that 802.11 features energy regulation to adapt the nodes' respective ranges to prevent similar scenarios to what I described. Below a little sketch to illustrate what I'm asking.
 	\color{black}
-
+	
 	\begin{figure}[h] \label{signal-ranges}
 		\includegraphics[height=7cm, keepaspectratio]{signal-ranges}
 		\centering
 	\end{figure}
+	
+	\bigskip
+	\color{red}
+	[answer] This scenario is possible, however not very likely. RTS/CTS is optional (used only in high-capacity environments with significant contention (gast, p.36)) and furthermore not designed to prevent but only reduce the risk of interference. 802.11's transmit power control (TPC) further reduces interference of stations with each other and also other wireless networks (Gast, p.26). The above sketch holds true especially if the only access point in the infrastructure BSS would be between A and B.
+	\color{black}
 	
 	\subsection{How the MAC stuff is supposed to work}
 	
@@ -217,14 +224,20 @@
 	
 	\medskip
 	
-	\color{blue}
-	[confirmation required] DCF is the only practically established MAC access function.
+	\color{red}
+	[confirmed] DCF is the only practically established MAC access function.
 	\color{black}
 	
 	\subsubsection{Virtual Carrier Sensing and the Network Allocation Vector}
 	
 	\color{blue}
 	[question] Is the following statement correct: 802.11 only uses physical carrier sensing while receiving and just before sending?
+	\color{black}
+	
+	\bigskip
+	
+	\color{red}
+	[answer] Yes. Note that the statement can be condensed to "802.11 only uses physical carrier sensing while receiving". This is due the fact that if a station is not sending it is receiving (alias listening).
 	\color{black}
 	
 	\bigskip
@@ -261,6 +274,12 @@
 	[question] What is meant by the following statement: "Once a station has transmitted the first frame in a sequence, it has gained control over the channel. Any additional frames and their ACKs can be sent using the SIFS, which locks any other stations"? (p.42, Gast) Does this imply after seizing control over the channel there are no frame intervals of length DIFS anymore? This wouldn't make sense, because after a break of DIFS follows the contention-phase. I think the following statement would be more concise: "Once a station has transmitted the first FRAGMENT of a sequence (...) it sends any additional FRAGMENTS OF THAT ATOMIC SEQUENCE with an interframe (better interfragment) spacing of SIFS.
 	\color{black}
 	 
+	\bigskip
+	
+	\color{red}
+	[deferred] DIFS follows after each atomic sequence. Aggregation is not topical as of now and fragment is not specified enough to comprehensively answer this question.
+	\color{black}
+	 
 	\subsection{Error Recovery and Backoff with the DCF}
 	
 	When an error is detected a retransmission has to take place. Upon retransmission a station's retry counter (one for each frame) is incremented. We distinguish between short and long frames and also between short and long retry counts. Frames longer than a threshold (typically the RTS frame length) are considered to be long, otherwise short.
@@ -279,8 +298,8 @@
 	
 	\medskip
 	
-	\color{blue}
-	[confirmation required] I think the point of this is to catch some fairly rare errors, such as that frame still lingering around will be discarded instead of taken for a valid frame of a later transmission.
+	\color{red}
+	[confirmed] I think the point of this is to catch some fairly rare errors, such as that frame still lingering around will be discarded instead of taken for a valid frame of a later transmission.
 	\color{black}
 	
 	\bigskip
@@ -303,14 +322,33 @@
 	
 	\bigskip
 	
+	\color{orange}
+	[clarification required] You said (B/E)SSIDs were employed to provide a human-readable way of distinguishing between networks. You also said in the protocols MAC-addresses were used to decide whether a packet is dropped. So I imagine that there exist some efficient data structures, possibly trees that save ESSs, BSSs and MAC-addresses. Is that about correct?
+	\color{black}
+	
+	\bigskip
+	
 	\color{blue}
 	[question] (Gast p.53) "(...) There is no higher-level protocol tag in the 802.11 frame to distinguish between higher-layer protocol types. Higher-layer protocol types are tagged with a type field by an additional header (...)." What is a tag and how are they used? If a tag is something like a higher-layer header, doesn't the second contradict the first one then?
+	\color{black}
+	
+	\bigskip
+	
+	\color{orange}
+	[clarification required] This still doesn't make sense to me. Could you define tag in this context?
 	\color{black}
 	
 	\bigskip
 
 	\color{blue}
 	[question] (Gast p.53) "802.11 does not have negative ACKs for frames that fail the frame check sequence". Why not? Would this add, too much to the device complexity? 
+	\color{black}
+	
+	\bigskip
+	
+	\color{red}
+	[answer] Since there are no "Go-Back-N-like" accumulative ACKs negative ACKs would not provide any additional information as missing positive ACKs can be interpreted as NAKs. The reason that there are no accumulative ACKs is the half-duplex nature of wireless transmission. ACKs could be lost in the sending process.
+	Furthermore, for larger N other nodes could suffer from huge delays.
 	\color{black}
 	
 	\section{Getting to Know GNU Companion}

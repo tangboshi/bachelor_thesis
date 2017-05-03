@@ -499,7 +499,7 @@ Just a question here for brevity's sake...
 
 \subsubsection{Polymorphic Types, Stream Tags and Message Passing}
 
-Data between blocks is passed in a stream, which makes sense if data is continuously produced and/or consumed. However, if you want to once-only pass specific information, e.g. to change variable values keeping up a continuous sparsely populated stream is wasteful. The solution to this problem are synchronous stream-tagging or asynchronous message passing.
+Data between blocks is passed in a stream, which makes sense if data is continuously produced and/or consumed. However, if you want to once-only pass specific information, e.g. to change variable values keeping up a continuous sparsely populated stream is wasteful. The solutions to this problem are synchronous stream-tagging or asynchronous message passing.
 
 \bigskip
 
@@ -508,10 +508,10 @@ Another problem is that a message can assume all kinds of data types. This is no
 \begin{description}[leftmargin=!, labelwidth=1in]
 	\item[PMTs]  Basically making \texttt{C++} compatible to weak typing. We simply use the polymorphic (could rephrase with universal or weak) type \texttt{pmt::pmt\_t}. Typecasting non-polymorphic types to PMT is easy, we simply use the commands of the following structure:
 	\mint{cpp}{pmt::pmt_t Poly = pmt::from_complex(gr_complex(0,1));}
-	Alternatively, we can use the following pattern \texttt{C++} and Python:
+	Alternatively, we can use the following pattern in \texttt{C++} / Python:
 	\mint{cpp}{pmt::pmt_t P = pmt::mp(5);}
 	\mint{python}{P_int = pmt.to_pmt(42)}
-	Strings have a special role in PMTs. They are converted to PMT.
+	Strings have a special role in PMTs. They are converted to the PMT symbol.
 	\mint{cpp}{pmt::pmt_t string = pmt::string_to_symbol("content");}
 	Useful PMT constants
 	\begin{minted}[tabsize=0]{cpp}

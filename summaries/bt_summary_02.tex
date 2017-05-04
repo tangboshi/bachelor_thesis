@@ -69,6 +69,10 @@ An abstract device with at least one input and/or output port. There are differe
 
 \medskip
 
+\color{red}
+[answer] Creating only general blocks is possible, however specialized blocks have a slightly changed template, reducing implementation efforts. For instance they inherit from specialized block classes to whose member functions one gains access. 
+\color{black}
+
 \emph{item}
 
 Abstract entity of arbitrary type and size. Can be data container, such as a vector or tuple. Can also be of "primitive type".
@@ -196,8 +200,8 @@ The \verb|general_work()| function is purely virtually inherited from \verb|gr::
 
 \bigskip
 
-\color{blue}
-[confirmation required] What is the difference between \verb|work()| and \verb|general_work()|? 
+\color{red}
+[confirmed] What is the difference between \verb|work()| and \verb|general_work()|? 
 
 \medskip
 
@@ -217,7 +221,13 @@ only in \texttt{C++} code. Thus, I assume they are functionally equivalent.
 \bigskip
 
 \color{blue}
-[question] What does the \texttt{d} in \verb|d_gray_code(gray_code)| (Guided Tutorial GNU Radio in C++ p.3 @ bottom) stand for?
+[question] What does the \texttt{d} in \verb|d_gray_code(gray_code)| (\href{https://wiki.gnuradio.org/index.php/Guided\_Tutorial\_GNU\_Radio\_in\_C\%2B\%2B}{Guided Tutorial GNU Radio in \texttt{C++}} p.3 @ bottom) stand for?
+\color{black}
+
+\bigskip
+
+\color{red}
+[answer] It stands for data (and it should always be implemented as a private member - hooray good coding style).
 \color{black}
 
 \subsection{Testing and Installing Your Module}
@@ -311,8 +321,8 @@ FAILED (failures=1)
 
 \bigskip
 
-\color{blue}
-[question] What if I want to compare integer tuples? While the function comparing floats works it might be an overkill. I assume Python's "native" (you have to \mintinline{python}{import unittest}) assertions will suffice, however with my lowly Python skills I couldn't quickly find a way to make it work. 
+\color{red}
+[deferred] What if I want to compare integer tuples? While the function comparing floats works it might be an overkill. I assume Python's "native" (you have to \mintinline{python}{import unittest}) assertions will suffice, however with my lowly Python skills I couldn't quickly find a way to make it work. 
 \color{black}
 
 \bigskip
@@ -395,8 +405,8 @@ Let's recite the steps of setting up a test:
 
 \bigskip
 
-\color{blue}
-[question] Why is there a \verb|lib/qa_module_name.cc| but no equivalent for Python QA? What's the point of this file and how to make use of it anyway? Is this just supposed to be a wrapper enabling you to encapsulate the tests of all the module's blocks into a single file?
+\color{red}
+[deferred] Why is there a \verb|lib/qa_module_name.cc| but no equivalent for Python QA? What's the point of this file and how to make use of it anyway? Is this just supposed to be a wrapper enabling you to encapsulate the tests of all the module's blocks into a single file?
 \color{black}
 
 \subsubsection{Installing Block to GRC}
@@ -493,8 +503,8 @@ Just a question here for brevity's sake...
 
 \bigskip
 
-\color{blue}
-[question] (\href{https://wiki.gnuradio.org/index.php/Guided\_Tutorial\_GNU\_Radio\_in\_C\%2B\%2B}{Guided Tutorial GNU Radio in \texttt{C++}}) The terminology of GNU Radio is a little bit confusing when it comes to rate changing blocks with a fixed rate. While this seems like a contradiction I see two ways of resolving it. The more likely one goes as follows: since such a block inherits from \texttt{gr\_sync\_decimator} or \texttt{gr\_sync\_interpolator} the decimation/interpolation rate is variable, otherwise the sync prefix does not make any sense. The other possibility is to have the input and output rate change, but keeping their aspect ratio, specified as decimation or interpolation factor. 
+\color{red}
+[deferred] (\href{https://wiki.gnuradio.org/index.php/Guided\_Tutorial\_GNU\_Radio\_in\_C\%2B\%2B}{Guided Tutorial GNU Radio in \texttt{C++}}) The terminology of GNU Radio is a little bit confusing when it comes to rate changing blocks with a fixed rate. While this seems like a contradiction I see two ways of resolving it. The more likely one goes as follows: since such a block inherits from \texttt{gr\_sync\_decimator} or \texttt{gr\_sync\_interpolator} the decimation/interpolation rate is variable, otherwise the sync prefix does not make any sense. The other possibility is to have the input and output rate change, but keeping their aspect ratio, specified as decimation or interpolation factor. 
 \color{black}
 
 \subsubsection{Polymorphic Types, Stream Tags and Message Passing}

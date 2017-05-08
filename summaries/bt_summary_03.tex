@@ -27,7 +27,7 @@
 
 \title{CW 19 summary}
 \author{Alexander Pastor}
-\date{04.05.2017}
+\date{08.05.2017}
 \maketitle
 \tableofcontents
 \newpage
@@ -36,7 +36,7 @@
 
 \subsection{Basic Terminology}
 
-\emph{Digitizer Amplitude Error}
+\emph{digitizer amplitude error}
 
 The following formula provides the dampening or attenuation factor E of the digitizer:
 
@@ -59,7 +59,7 @@ It is recommended by NI to have X be 3 to 5 times higher than the frequency of i
 
 \bigskip
 
-\emph{Rise Time}
+\emph{rise time}
 
 Rise time is defined as the time a signal needs to rise from 10\% to 90\% of its steady-state or periodic maximum.
 
@@ -81,41 +81,83 @@ $\Leftrightarrow$ To extinguish aliasing in the passband one either has to make 
 
 \bigskip
 
-\emph{Phase Noise}
+\emph{phase noise}
 
 \bigskip
 
-\emph{Resolution Bandwidth}
+\emph{resolution bandwidth}
 
 \bigskip
 
-\emph{Noise Density}
+\emph{noise density}
 
 \bigskip
 
-\emph{Dynamic Range}
+\emph{dynamic range}
 
 \bigskip
 
-\emph{Voltage Standing Wave Ratio (VSWR)}
+\emph{voltage standing wave ratio (VSWR)}
 
 \bigskip
 
-\emph{Frequency Response}
+\emph{frequency response}
 
 \bigskip
  
-\emph{Modulation Error Ratio (MER)}
+\emph{modulation error ratio (MER)}
 
 \bigskip
 
-\emph{Error Vector Magnitude (EVM)}
+\emph{error vector magnitude (EVM)}
 
 \bigskip
 
-\emph{Third-Order Intercept (TOI)}
+\emph{third-order intercept (TOI)}
 
 \section{Physical Layer Challenge}
+
+\subsection{Basic Terminology}
+
+\subsubsection{FIR Filters}
+
+\emph{passband, transitionband, stopband}
+
+The passband is the frequency band that is not attenuated band of a filter, i.e. that band of allowed frequencies. The stopband is the band that a filter stops, or attenuates strong enough, so that the signal amplitude for those frequencies is below the stopband threshold. The transitionband is an attenuated band between passband and stopband.  
+
+\bigskip
+
+\emph{filter tap}
+
+A filter tap is a (coefficient, delay) pair. The number of taps is often denoted as N. This number is a good mesaure for the amount of filtering, the required space and the amount of calculation required by the filter. 
+
+\subsubsection{Frame Synchronization}
+
+\emph{frame preamble}
+
+\bigskip
+
+\emph{CRC-based framing}
+
+\bigskip
+
+\emph{self-clocking signal}
+
+\bigskip
+
+\emph{bit slip}
+
+A lost bit or an extra bit.
+
+\subsection{FIR Filters vs. IIR Filters} 
+
+\subsection{iNets PHY Layer}
+
+\section{GNU Radio Techniques}
+
+\subsection{Creating a hierarchical block directly in GRC}
+
+\subsection{Read and Write Stream Tags}
 
 \section{Good to Know...}
 

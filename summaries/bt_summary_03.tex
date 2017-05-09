@@ -113,6 +113,27 @@ Ratio between the highest and lowest signal level a circuit can take. Spurious d
 
 \emph{voltage standing wave ratio (VSWR)}
 
+The VSWR is the reflected-to-transmitted wave ratio. Self-evidently, the smaller, the better.
+
+$$
+	VSWR = \frac{1+p}{1-p}
+$$
+
+where p is the reflection coefficient.
+
+\medskip
+
+Note that is also possible to represent reflections as return loss (in dB):
+
+\begin{align*}
+	RL \quad 	&= 10 	\log\left(\frac{P_\text{in}}{P_\text{reflected}}\right) 	\\
+				&= 20 	\log\left(\frac{V_\text{in}}{V_\text{reflected}}\right) 	\\
+				&= -20 	\log\left(\frac{V_\text{reflected}}{V_\text{in}}\right) 	\\
+				&= -20 	\log\left(\lvert p \rvert\right)
+\end{align*}
+	
+
+
 \bigskip
 
 \emph{frequency response}
@@ -139,13 +160,23 @@ Where the components with $\sim$ are the ideal and those without are the actuall
 
 \emph{IQ procedure}
 
+In-phase and quadrature demodulation procedure. 
+
 \bigskip
 
 \emph{error vector magnitude (EVM)}
 
+Quantifies demodulation performance under the influence of noise. The EVM is the normalized root-mean-square of the difference of ideal and measured location over all symbols. It is normalized by the maximum length of an ideal symbol to make the EVM's value comparable under different system gain conditions.
+
+$$
+	EVM = \frac{\sqrt{\frac{1}{N}\sum_{j=1}^{N} (\tilde{I_j}-I_j)^2+(\tilde{Q_j}-Q_j)^2 }}{\lvert v_\text{max} \rvert}
+$$
+
 \bigskip
 
 \emph{third-order intercept (TOI)}
+
+Theoretical number. TOI is the power level when the third-order harmonic distortion has the same power level as the fundamental tone. The bigger the TOI, the better since it is a measure for the maximum RF-circuit power.
 
 \section{Physical Layer Challenge}
 
@@ -165,21 +196,31 @@ A filter tap is a (coefficient, delay) pair. The number of taps is often denoted
 
 \subsubsection{Frame Synchronization}
 
-\emph{frame preamble}
+\emph{frame preamble and start frame delimiter (SFD)}
+
+Aliases: syncword or sync sequence framing.
+
+Repetitive pattern of all the same nibbles (and thus bytes). Marks an Ethernet frame beginning. After the preamble the one-byte \emph{start frame delimiter} is located to mark the beginning of real data. This mechanism is employed to achieve a self-clocking protocol. The preamble is needed to resynchronize the receiver once a bit slip occurs.
 
 \bigskip
 
 \emph{CRC-based framing}
 
+\color{blue}
+[question] CRC-based framing is used in ATM protocols by reusing the header CRC. How exactly does this work? Also, I wondered since 802.11 and Ethernet both also have a FCS (CRC) at the end of their frames, do they use some kind of CRC-based / syncword-based framing at the same time? As of now I think it is as follows: 802.11 and Ethernet frame synchronization is syncword-based and CRC is employed for error correction only.
+\color{black}
+
 \bigskip
 
 \emph{self-clocking signal}
+
+Signal that is synchronized without a separate clock signal. Receiver synchronization information is contained in the signal (preamble+SFD).
 
 \bigskip
 
 \emph{bit slip}
 
-A lost bit or an extra bit.
+A lost bit or an extra bit in the signal.
 
 \subsection{FIR Filters vs. IIR Filters} 
 

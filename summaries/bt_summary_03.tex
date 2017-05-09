@@ -222,15 +222,65 @@ Signal that is synchronized without a separate clock signal. Receiver synchroniz
 
 A lost bit or an extra bit in the signal.
 
-\subsection{FIR Filters vs. IIR Filters} 
+\bigskip
+
+\color{blue}
+[question] Why aren't Ethernet (and 802.11) using byte- or bitstuffing methods for frame synchronization? I thought maybe bit errors could corrupt the whole "synchronization complex", but one lost frame shouldn't be too bad? I guess that a big 56-bit preamble and 8-bit SFD might just be more robust against bit errors?
+\color{black}
+
+\subsection{FIR Filters vs. IIR Filters}
 
 \subsection{iNets PHY Layer}
 
-\section{GNU Radio Techniques}
+I received GRC flowcharts of a wireless transceiver and a test application.
+
+\bigskip
+
+The transceiver consists of a transmitter and a receiver. The transceiver has a UDP server as input for the transmitter and a USRP source hardware device as input for the receiver. 
+
+\bigskip
+
+Let me now describe how the two components work (let's think inside the box):
+
+\subsubsection{The Transmitter}
+
+The data from the UDP source is first packeted (optionally with CRC checksum). Then, the PDU is converted into a tagged stream, because GR does not have a "natural" packet concept, instead packets are delimited by tags as described later. The bits are repacked and then converted into symbols. The symbols are then outputted to a constellation diagram and passed to a root raised cosine filter. \_\_\_ Tagged Stream Multiply Length Tag \_\_\_. The signal then is multiplied with 0.6 (why?) and then serves as the input for a burst shaper.
+
+\bigskip
+
+\color{blue}
+[confirmation required] How exactly does the repack bits block work? I mean what does output byte mean? I presume the following: example - bits per input byte 8, bits per output byte 2 - all bits of an input byte are relevant so they are split up into four bytes where only the first two bits are relevant and the rest is nonsense. The relevant bits are fed to a byte to symbol converter.
+\color{black}
+
+\subsubsection{The Receiver}
+
+The received signal is adaptively amplified by the AGC (automatic gain control) to a certain level no matter what input signal magnitude (only constrained of a maximum amplifying factor).
+
+\bigskip
+
+The polyphase clock synchronizer filters and then minimizes the derivative of the filtered signal to maximize SNR and minimize ISI. The next step is frame synchronization (preamble synchronization). 
+
+\bigskip
+
+\hl{No idea what the variable derotator does}. The baseband derotator then performs derotation by $\phi$ simply by multiplying with $\exp(-j\phi)$ in order to compensate for carrier frequency offset (CFO) and sampling clock offset (SCO) caused by oscillator mismatch and the Doppler effect. 
+
+\bigskip
+
+The data then is passed to a demultiplexer whose job it is to separate the header from the payload. The payload is subsequently demodulated, repacked, parsed and fed beck to a dedicated port of the demux block. \hl{Probably to decide what to do with the payload?} The payload is handed to a constellation plot, a demodulator and a MPSK SNR estimator. The demodulated payload bitstream is repacked and converted back from a tagged stream to a protocol data unit.
+
+\bigskip
+
+\color{blue}
+[question] How does the polyphase clock synchronizer work?
+\color{black}
+
+\section{GNU Radio Techniques and Concepts}
 
 \subsection{Creating a hierarchical block directly in GRC}
 
-\subsection{Read and Write Stream Tags}
+\subsection{The use of Virtual Sinks and Virtual Sources}
+
+\subsection{Read/Write Stream Tags and Tagged Stream Blocks}
 
 \section{Good to Know...}
 
@@ -243,6 +293,7 @@ I learned...
 \begin{itemize}
 	\item ... when to use \href{https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include}{input or include}
 	\item ... some tikz basics
+	\item ... using the \verb|\newcommand{}| command.
 \end{itemize}
 
 \end{document}

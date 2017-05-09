@@ -83,17 +83,31 @@ $\Leftrightarrow$ To extinguish aliasing in the passband one either has to make 
 
 \emph{phase noise}
 
+Phase noise is the frequency domain representation of time domain jitter. Jitter in turn is the first derivative of a delay. Phase noise is usually close to the carrier and thus measured in dBc (decibels relative to the carrier).
+
+\bigskip
+
+\emph{spectral density}
+
+Measures the power per frequency in a frequency domain [W/Hz].
+
 \bigskip
 
 \emph{resolution bandwidth}
+
+The resolution bandwidth equals the FFT bin size and is smallest resolvable frequency. It is inversely proportional to the number of samples.
 
 \bigskip
 
 \emph{noise density}
 
+Noise level below which signal cannot be detected. One has to distinguish between broadband noise density of a sinusoidal and random (perhaps AWGN) noise. In the latter case one can use a narrow band filter to improve our signal. 
+
 \bigskip
 
 \emph{dynamic range}
+
+Ratio between the highest and lowest signal level a circuit can take. Spurious dynamic range is the ratio between the highest and lowest signal level, without any unwanted sinusoidal frequencies. It is usually expressed in dB.
 
 \bigskip
 
@@ -103,9 +117,27 @@ $\Leftrightarrow$ To extinguish aliasing in the passband one either has to make 
 
 \emph{frequency response}
 
+Just as a reminder: the frequency response is the fourier transform of the impulse response $h(t)$.
+
+$$
+	H(f) = \int_{-\infty}^{\infty} h(\tau) \cdot \exp(-j2\pi ft) \,d\tau
+$$
+
 \bigskip
  
 \emph{modulation error ratio (MER)}
+
+A measure of SNR for digitally modulated signals, also expressed in dB.
+
+$$
+	MER = \frac{\sum_{j=1}^{N} \tilde{I_j^2}+\tilde{Q_j^2}}{\sum_{j=1}^{N} (\tilde{I_j}-I_j)^2+(\tilde{Q_j}-Q_j)^2}
+$$
+
+Where the components with $\sim$ are the ideal and those without are the actually received components of the N symbols of the signal.
+
+\bigskip
+
+\emph{IQ procedure}
 
 \bigskip
 

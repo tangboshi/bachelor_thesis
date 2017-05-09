@@ -278,9 +278,61 @@ The data then is passed to a demultiplexer whose job it is to separate the heade
 
 \subsection{Creating a hierarchical block directly in GRC}
 
+In the options block, generate options must be set to "Hier Block". Then press Ctrl+A and right click on any block. Under "More" choose "Create Hier". After a reload the block should be usable.
+
 \subsection{The use of Virtual Sinks and Virtual Sources}
 
-\subsection{Read/Write Stream Tags and Tagged Stream Blocks}
+Virtual sinks and sources are a way to keep the flowgraph tidy. Due to the fact, that the horizontal space is limited several collected "rows" of blocks look overcrowded. The solution is elegant. Simply feed the output of a block to a virtual sink and let in the next row a virtual source with the same name output what the sink has devoured.
+
+\subsection{Read/Write Stream Tags}
+
+A straight copy from the \href{https://wiki.gnuradio.org/index.php/BlocksCodingGuide}{Blocks Coding Guide}.
+
+\bigskip
+
+Reading:
+\begin{minted}[tabsize=4]{cpp}
+int work(int noutput_items,
+         gr_vector_const_void_star &input_items,
+         gr_vector_void_star &output_items)
+{
+	std::vector tags;
+	//number of items read on port
+	const uint64_t nread = this->nitems_read(0);
+	//assumption for sync block, this can change
+	const size_t ninput_items = noutput_items; 
+	
+	//read all tags associated with port 0 for items in this work function
+	this->get_tags_in_range(tags, 0, nread, nread+ninput_items);
+	
+	//work stuff here...
+}
+\end{minted}
+
+\bigskip
+
+Writing:
+\begin{minted}[tabsize=4]{cpp}
+int work(int noutput_items,
+		gr_vector_const_void_star &input_items,
+		gr_vector_void_star &output_items)
+{
+	//which output item gets the tag?
+	const size_t item_index = ? 
+	const uint64_t offset = this->nitems_written(0) + item_index;
+	pmt::pmt_t key = pmt::pmt_string_to_symbol("example_key");
+	pmt::pmt_t value = pmt::pmt_string_to_symbol("example_value");
+	
+	//write at tag to output port 0 with given absolute item offset
+	this->add_item_tag(0, offset, key, value);
+	
+	//work stuff here...
+}
+\end{minted}
+
+\subsection{Tagged Stream Blocks}
+
+For our networking stuff we need packets, but GNR only has streams. The solution to this dilemma are tagged stream blocks. They as all blocks operate on streams, but delimit packets with tags. These tags must be the first item of a PDU and contain a PMT integer indicating the PDU's length, otherwise the flowgraph crashes.
 
 \section{Good to Know...}
 

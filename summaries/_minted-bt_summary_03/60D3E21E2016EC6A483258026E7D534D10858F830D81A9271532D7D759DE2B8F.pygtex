@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{work}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{noutput\PYGZus{}items}\PYG{p}{,}
+		\PYG{n}{gr\PYGZus{}vector\PYGZus{}const\PYGZus{}void\PYGZus{}star} \PYG{o}{\PYGZam{}}\PYG{n}{input\PYGZus{}items}\PYG{p}{,}
+		\PYG{n}{gr\PYGZus{}vector\PYGZus{}void\PYGZus{}star} \PYG{o}{\PYGZam{}}\PYG{n}{output\PYGZus{}items}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+	\PYG{c+c1}{//which output item gets the tag?}
+	\PYG{k}{const} \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{item\PYGZus{}index} \PYG{o}{=} \PYG{o}{?}
+	\PYG{k}{const} \PYG{k+kt}{uint64\PYGZus{}t} \PYG{n}{offset} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nitems\PYGZus{}written}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o}{+} \PYG{n}{item\PYGZus{}index}\PYG{p}{;}
+	\PYG{n}{pmt}\PYG{o}{::}\PYG{n}{pmt\PYGZus{}t} \PYG{n}{key} \PYG{o}{=} \PYG{n}{pmt}\PYG{o}{::}\PYG{n}{pmt\PYGZus{}string\PYGZus{}to\PYGZus{}symbol}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}example\PYGZus{}key\PYGZdq{}}\PYG{p}{);}
+	\PYG{n}{pmt}\PYG{o}{::}\PYG{n}{pmt\PYGZus{}t} \PYG{n}{value} \PYG{o}{=} \PYG{n}{pmt}\PYG{o}{::}\PYG{n}{pmt\PYGZus{}string\PYGZus{}to\PYGZus{}symbol}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}example\PYGZus{}value\PYGZdq{}}\PYG{p}{);}
+
+	\PYG{c+c1}{//write at tag to output port 0 with given absolute item offset}
+	\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{add\PYGZus{}item\PYGZus{}tag}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{offset}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{);}
+
+	\PYG{c+c1}{//work stuff here...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

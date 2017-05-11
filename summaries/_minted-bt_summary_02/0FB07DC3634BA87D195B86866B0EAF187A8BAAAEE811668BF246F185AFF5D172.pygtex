@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{block\PYGZus{}name\PYGZus{}impl}\PYG{o}{::}\PYG{n}{block\PYGZus{}name\PYGZus{}impl}\PYG{p}{(}\PYG{k+kt}{bool} \PYG{n}{arg1}\PYG{p}{,} \PYG{k+kt}{unsigned} \PYG{k+kt}{int} \PYG{n}{arg2}\PYG{p}{)} \PYG{o}{:}
-\PYG{n}{gr}\PYG{o}{::}\PYG{n}{block}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}block\PYGZus{}name\PYGZdq{}}\PYG{p}{,}
-		  \PYG{n}{gr}\PYG{o}{::}\PYG{n}{io\PYGZus{}signature}\PYG{o}{::}\PYG{n}{make}\PYG{p}{(}\PYG{n}{MIN\PYGZus{}IN}\PYG{p}{,} \PYG{n}{MAX\PYGZus{}IN}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{ITYPE}\PYG{p}{)),}
-		  \PYG{n}{gr}\PYG{o}{::}\PYG{n}{io\PYGZus{}signature}\PYG{o}{::}\PYG{n}{make}\PYG{p}{(}\PYG{n}{MIN\PYGZus{}OUT}\PYG{p}{,} \PYG{n}{MAX\PYGZus{}OUT}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{OTYPE}\PYG{p}{))),}
-	\PYG{n}{d\PYGZus{}arg1}\PYG{p}{(}\PYG{n}{arg1}\PYG{p}{),}
-	\PYG{n}{d\PYGZus{}arg2}\PYG{p}{(}\PYG{n}{arg2}\PYG{p}{)}
-\PYG{p}{\PYGZob{}\PYGZcb{}}
-\end{Verbatim}

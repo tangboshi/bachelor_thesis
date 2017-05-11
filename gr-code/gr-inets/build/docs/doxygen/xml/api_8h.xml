@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="api_8h" kind="file" language="C++">
+    <compoundname>api.h</compoundname>
+    <includes local="no">gnuradio/attributes.h</includes>
+    <includedby refid="baseband__derotation_8h" local="no">baseband_derotation.h</includedby>
+    <includedby refid="frame__sync__cc_8h" local="no">frame_sync_cc.h</includedby>
+    <includedby refid="packetizer_8h" local="no">packetizer.h</includedby>
+    <includedby refid="rssi_8h" local="no">rssi.h</includedby>
+    <includedby refid="timing__recovery__cc_8h" local="no">timing_recovery_cc.h</includedby>
+    <includedby refid="variable__rotator_8h" local="no">variable_rotator.h</includedby>
+    <incdepgraph>
+      <node id="0">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gnuradio/attributes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>packetizer.h</label>
+        <link refid="packetizer_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>baseband_derotation_impl.h</label>
+        <link refid="baseband__derotation__impl_8h"/>
+      </node>
+      <node id="9">
+        <label>rssi.h</label>
+        <link refid="rssi_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>frame_sync_cc.h</label>
+        <link refid="frame__sync__cc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>packetizer_impl.h</label>
+        <link refid="packetizer__impl_8h"/>
+      </node>
+      <node id="10">
+        <label>rssi_impl.h</label>
+        <link refid="rssi__impl_8h"/>
+      </node>
+      <node id="6">
+        <label>frame_sync_cc_impl.h</label>
+        <link refid="frame__sync__cc__impl_8h"/>
+      </node>
+      <node id="13">
+        <label>variable_rotator.h</label>
+        <link refid="variable__rotator_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>baseband_derotation.h</label>
+        <link refid="baseband__derotation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>variable_rotator_impl.h</label>
+        <link refid="variable__rotator__impl_8h"/>
+      </node>
+      <node id="11">
+        <label>timing_recovery_cc.h</label>
+        <link refid="timing__recovery__cc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>timing_recovery_cc_impl.h</label>
+        <link refid="timing__recovery__cc__impl_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="api_8h_1a7e5966e18f6b27dc867609731f1be879" prot="public" static="no">
+        <name>INETS_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/api.h" line="30" column="12" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/api.h"/>
+  </compounddef>
+</doxygen>

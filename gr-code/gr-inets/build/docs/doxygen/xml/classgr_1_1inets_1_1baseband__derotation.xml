@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1baseband__derotation" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>gr::inets::baseband_derotation</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1inets_1_1baseband__derotation__impl" prot="public" virt="non-virtual">gr::inets::baseband_derotation_impl</derivedcompoundref>
+    <includes refid="baseband__derotation_8h" local="no">baseband_derotation.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1inets_1_1baseband__derotation_1a1f140c532e9434522c7c01e2e6c0fab2" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1inets_1_1baseband__derotation" kindref="compound">baseband_derotation</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;baseband_derotation&gt; gr::inets::baseband_derotation::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" line="39" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1baseband__derotation_1a52b832642b3c76881c4f9c96e86a4ea5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1inets_1_1baseband__derotation_1a1f140c532e9434522c7c01e2e6c0fab2" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::inets::baseband_derotation::make</definition>
+        <argsstring>(float mu, gr::digital::constellation_sptr con)</argsstring>
+        <name>make</name>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>gr::digital::constellation_sptr</type>
+          <declname>con</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1inets_1_1baseband__derotation" kindref="compound">inets::baseband_derotation</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1inets_1_1baseband__derotation" kindref="compound">inets::baseband_derotation</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1inets_1_1baseband__derotation_1a52b832642b3c76881c4f9c96e86a4ea5" kindref="member">inets::baseband_derotation::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1baseband__derotation_1a67259e810468bf9a4e785294d9b9b8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::inets::baseband_derotation::set_mu</definition>
+        <argsstring>(float mu)=0</argsstring>
+        <name>set_mu</name>
+        <reimplementedby refid="classgr_1_1inets_1_1baseband__derotation__impl_1a431e7e882079d4a84fda537df5d8ef96">set_mu</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1baseband__derotation_1aac1bb262f8f22e4be13942e68d30da9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float gr::inets::baseband_derotation::mu</definition>
+        <argsstring>() const =0</argsstring>
+        <name>mu</name>
+        <reimplementedby refid="classgr_1_1inets_1_1baseband__derotation__impl_1a73e155dba51753fdc5fc7916d9e66ac6">mu</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::inets::baseband_derotation_impl</label>
+        <link refid="classgr_1_1inets_1_1baseband__derotation__impl"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>gr::inets::baseband_derotation</label>
+        <link refid="classgr_1_1inets_1_1baseband__derotation"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>gr::inets::baseband_derotation</label>
+        <link refid="classgr_1_1inets_1_1baseband__derotation"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/baseband_derotation.h" bodystart="36" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1baseband__derotation_1a52b832642b3c76881c4f9c96e86a4ea5" prot="public" virt="non-virtual"><scope>gr::inets::baseband_derotation</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1baseband__derotation_1aac1bb262f8f22e4be13942e68d30da9f" prot="public" virt="pure-virtual"><scope>gr::inets::baseband_derotation</scope><name>mu</name></member>
+      <member refid="classgr_1_1inets_1_1baseband__derotation_1a67259e810468bf9a4e785294d9b9b8e0" prot="public" virt="pure-virtual"><scope>gr::inets::baseband_derotation</scope><name>set_mu</name></member>
+      <member refid="classgr_1_1inets_1_1baseband__derotation_1a1f140c532e9434522c7c01e2e6c0fab2" prot="public" virt="non-virtual"><scope>gr::inets::baseband_derotation</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

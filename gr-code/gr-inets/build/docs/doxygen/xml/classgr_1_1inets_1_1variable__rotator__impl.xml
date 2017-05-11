@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1variable__rotator__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::variable_rotator_impl</compoundname>
+    <basecompoundref refid="classgr_1_1inets_1_1variable__rotator" prot="public" virt="non-virtual">gr::inets::variable_rotator</basecompoundref>
+    <includes refid="variable__rotator__impl_8h" local="no">variable_rotator_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1variable__rotator__impl_1a80bc2ce2663c9bbca642507cf9675777" prot="private" static="no" mutable="no">
+        <type>gr::blocks::rotator</type>
+        <definition>gr::blocks::rotator gr::inets::variable_rotator_impl::_rot</definition>
+        <argsstring></argsstring>
+        <name>_rot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="33" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1variable__rotator__impl_1a8e092ec52bc7b0faf201c19c96249800" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::variable_rotator_impl::_num_delay</definition>
+        <argsstring></argsstring>
+        <name>_num_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="34" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1variable__rotator__impl_1a41f19a91831d55aec32bbe0d7f2ae0ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::variable_rotator_impl::variable_rotator_impl</definition>
+        <argsstring>(int num_delay)</argsstring>
+        <name>variable_rotator_impl</name>
+        <param>
+          <type>int</type>
+          <declname>num_delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1variable__rotator__impl_1ada65f622aa478edb4ab09eaf5323e996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::variable_rotator_impl::~variable_rotator_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~variable_rotator_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1variable__rotator__impl_1a1748ef8916147ff034e6b712c0d4e7f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::inets::variable_rotator_impl::set_num_delay</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_num_delay</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1variable__rotator__impl_1a52fa13f704b0ecb6bc6d7366d7067a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::inets::variable_rotator_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>gr::inets::variable_rotator</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="60">
+        <label>gr::inets::variable_rotator_impl</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator__impl"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>gr::inets::variable_rotator</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="63">
+        <label>gr::inets::variable_rotator_impl</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator__impl"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" line="31" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/variable_rotator_impl.h" bodystart="30" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a8e092ec52bc7b0faf201c19c96249800" prot="private" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>_num_delay</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a80bc2ce2663c9bbca642507cf9675777" prot="private" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>_rot</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a1748ef8916147ff034e6b712c0d4e7f4" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>set_num_delay</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a41f19a91831d55aec32bbe0d7f2ae0ce" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>variable_rotator_impl</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a52fa13f704b0ecb6bc6d7366d7067a31" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator__impl_1ada65f622aa478edb4ab09eaf5323e996" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator_impl</scope><name>~variable_rotator_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

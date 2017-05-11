@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1inets_1_1baseband__derotation" kind="class"><name>gr::inets::baseband_derotation</name>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a1f140c532e9434522c7c01e2e6c0fab2" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a52b832642b3c76881c4f9c96e86a4ea5" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a67259e810468bf9a4e785294d9b9b8e0" kind="function"><name>set_mu</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1aac1bb262f8f22e4be13942e68d30da9f" kind="function"><name>mu</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1frame__sync__cc" kind="class"><name>gr::inets::frame_sync_cc</name>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1a93a2da834912991f9fde50a60ec88fc7" kind="function"><name>set_constellation</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1packetizer" kind="class"><name>gr::inets::packetizer</name>
+    <member refid="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1rssi" kind="class"><name>gr::inets::rssi</name>
+    <member refid="classgr_1_1inets_1_1rssi_1aa2e245e7f748c17a8f0936f4b1db09fe" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1ae29dcb1e14d2e05f42a32d2471ceb0ca" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a74d0e9c0cf64c46455f98ba73ffd413e" kind="function"><name>reset</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a74e64108040c185adecbe5bedccddfce" kind="function"><name>set_alpha</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a0fef109d5c7bf0ebdab1165058ddc432" kind="function"><name>get_pow_data</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1afeade22c1e2d2fda20b7cc176437867f" kind="function"><name>get_pow</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a34adaf18caa9b981e68ebf803d3be394" kind="function"><name>get_last_sample_count</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1timing__recovery__cc" kind="class"><name>gr::inets::timing_recovery_cc</name>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc_1a1f8a0d34c06d8014c916251e0cf501e8" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc_1a1718efd48bf9f7f41e9a9336b08c6c97" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1variable__rotator" kind="class"><name>gr::inets::variable_rotator</name>
+    <member refid="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1inets" kind="namespace"><name>gr::inets</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a7e5966e18f6b27dc867609731f1be879" kind="define"><name>INETS_API</name></member>
+  </compound>
+  <compound refid="baseband__derotation_8h" kind="file"><name>baseband_derotation.h</name>
+  </compound>
+  <compound refid="frame__sync__cc_8h" kind="file"><name>frame_sync_cc.h</name>
+  </compound>
+  <compound refid="packetizer_8h" kind="file"><name>packetizer.h</name>
+  </compound>
+  <compound refid="rssi_8h" kind="file"><name>rssi.h</name>
+  </compound>
+  <compound refid="timing__recovery__cc_8h" kind="file"><name>timing_recovery_cc.h</name>
+  </compound>
+  <compound refid="variable__rotator_8h" kind="file"><name>variable_rotator.h</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/alex/0_ba/gr-inets/gr-inets/include</name>
+  </compound>
+  <compound refid="dir_06ae7070600e62babd2775f1fe0d47bf" kind="dir"><name>/home/alex/0_ba/gr-inets/gr-inets/include/inets</name>
+  </compound>
+</doxygenindex>

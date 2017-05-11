@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1variable__rotator" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::variable_rotator</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <includes refid="variable__rotator_8h" local="no">variable_rotator.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1inets_1_1variable__rotator" kindref="compound">variable_rotator</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;variable_rotator&gt; gr::inets::variable_rotator::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h" line="39" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::inets::variable_rotator::make</definition>
+        <argsstring>(int num_delay)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>num_delay</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1inets_1_1variable__rotator" kindref="compound">inets::variable_rotator</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1inets_1_1variable__rotator" kindref="compound">inets::variable_rotator</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" kindref="member">inets::variable_rotator::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>gr::inets::variable_rotator</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>gr::inets::variable_rotator</label>
+        <link refid="classgr_1_1inets_1_1variable__rotator"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" prot="public" virt="non-virtual"><scope>gr::inets::variable_rotator</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

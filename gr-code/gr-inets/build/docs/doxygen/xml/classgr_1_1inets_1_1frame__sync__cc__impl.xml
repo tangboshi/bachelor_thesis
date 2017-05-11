@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1frame__sync__cc__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::frame_sync_cc_impl</compoundname>
+    <basecompoundref refid="classgr_1_1inets_1_1frame__sync__cc" prot="public" virt="non-virtual">gr::inets::frame_sync_cc</basecompoundref>
+    <includes refid="frame__sync__cc__impl_8h" local="no">frame_sync_cc_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1ab0dcedaa0f2e6c217799413a0f3c1c79" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::inets::frame_sync_cc_impl::_mod_preamble</definition>
+        <argsstring></argsstring>
+        <name>_mod_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="33" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a4e4883c41de74070e77373bb5ec00aa0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr::inets::frame_sync_cc_impl::_preamble</definition>
+        <argsstring></argsstring>
+        <name>_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="34" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a3ebb805705900b183cb76e1c95c7eead" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::inets::frame_sync_cc_impl::_threshold</definition>
+        <argsstring></argsstring>
+        <name>_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="35" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a7fe6b6d77ad1ddf447fea24030748b1f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::frame_sync_cc_impl::_len_preamble</definition>
+        <argsstring></argsstring>
+        <name>_len_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="36" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1aa5b97ce0ec472a4dbcbfe1dea4bfe30e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::inets::frame_sync_cc_impl::_len_tag_key</definition>
+        <argsstring></argsstring>
+        <name>_len_tag_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a72f8def6de16e25ec2f16aa93670606e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::frame_sync_cc_impl::_state</definition>
+        <argsstring></argsstring>
+        <name>_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="38" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a5f1aab5c684c5194b36a70a0ae8d462d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::inets::frame_sync_cc_impl::_d_f</definition>
+        <argsstring></argsstring>
+        <name>_d_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="39" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a0b2d44ac2d0f6f90259c4a7f8728e610" prot="private" static="no" mutable="no">
+        <type>std::complex&lt; float &gt;</type>
+        <definition>std::complex&lt;float&gt; gr::inets::frame_sync_cc_impl::_d_phi</definition>
+        <argsstring></argsstring>
+        <name>_d_phi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="40" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1ad337fadfd8c50bf51b4730dacbda18dc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::inets::frame_sync_cc_impl::_last_corr</definition>
+        <argsstring></argsstring>
+        <name>_last_corr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="41" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a18f68246d5c19cae109b31e55cca96f1" prot="private" static="no" mutable="no">
+        <type>std::complex&lt; float &gt;</type>
+        <definition>std::complex&lt;float&gt; gr::inets::frame_sync_cc_impl::_diff</definition>
+        <argsstring></argsstring>
+        <name>_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="42" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a94ef7a54044757a4414600891681450a" prot="private" static="no" mutable="no">
+        <type>gr::digital::constellation_sptr</type>
+        <definition>gr::digital::constellation_sptr gr::inets::frame_sync_cc_impl::_constellation</definition>
+        <argsstring></argsstring>
+        <name>_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="43" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1afeea59e728ba3979cad27b88443e93ea" prot="private" static="no" mutable="no">
+        <type>boost::mutex</type>
+        <definition>boost::mutex gr::inets::frame_sync_cc_impl::_set_lock</definition>
+        <argsstring></argsstring>
+        <name>_set_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="44" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a837ec4a335b93e71d258483072aefcab" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gr::inets::frame_sync_cc_impl::rx_time_full_sec</definition>
+        <argsstring></argsstring>
+        <name>rx_time_full_sec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="57" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a15b88a837b1a15d6daa47909bfd29c5f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::frame_sync_cc_impl::rx_time_frac_sec</definition>
+        <argsstring></argsstring>
+        <name>rx_time_frac_sec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="58" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a023a731ba676c4b30919d6cb408ce32b" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::frame_sync_cc_impl::STATE_DETECT</definition>
+        <argsstring></argsstring>
+        <name>STATE_DETECT</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="46" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a21c8b60d8f152c6e630ac7f0513ebf0e" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::frame_sync_cc_impl::STATE_PREAMBLE</definition>
+        <argsstring></argsstring>
+        <name>STATE_PREAMBLE</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="47" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a90adda65061bb8310eea8c1765d86094" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::frame_sync_cc_impl::STATE_PAYLOAD</definition>
+        <argsstring></argsstring>
+        <name>STATE_PAYLOAD</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="48" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1aaa92670210475117ff4452288fa7cd66" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::frame_sync_cc_impl::STATE_PROCESS_PREAMBLE</definition>
+        <argsstring></argsstring>
+        <name>STATE_PROCESS_PREAMBLE</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="49" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a48b37bb627d14cfa96dae5d435024625" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::frame_sync_cc_impl::STATE_SET_TRIGGER</definition>
+        <argsstring></argsstring>
+        <name>STATE_SET_TRIGGER</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="50" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1af8c36429b1708c52b9f4e533c817a6e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::inets::frame_sync_cc_impl::calculate_fd</definition>
+        <argsstring>(const gr_complex *z, const gr_complex *x, const gr_complex *c, int N, int L0)</argsstring>
+        <name>calculate_fd</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1ade806072a9915ebe997b4d7139c3f80f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt;double&gt; gr::inets::frame_sync_cc_impl::calculate_R</definition>
+        <argsstring>(int m, const gr_complex *z, int L0)</argsstring>
+        <name>calculate_R</name>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1ab36e6ec54a98f64e15d610c81ff2cd8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::inets::frame_sync_cc_impl::wrap_phase</definition>
+        <argsstring>(float phi)</argsstring>
+        <name>wrap_phase</name>
+        <param>
+          <type>float</type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1ac89147dae493c01478f0f85ee3fead61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::inets::frame_sync_cc_impl::modulate_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>modulate_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a542cb99a9ee5910253b06bf3c4edf9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::frame_sync_cc_impl::frame_sync_cc_impl</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;preamble, gr::digital::constellation_sptr constellation, float threshold, const std::string &amp;len_tag_key)</argsstring>
+        <name>frame_sync_cc_impl</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <param>
+          <type>gr::digital::constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>len_tag_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1af5c7673e8bb240d312b931f898e332c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::frame_sync_cc_impl::~frame_sync_cc_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~frame_sync_cc_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1aac677f55826b24b6d26a92b35d21f226" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::inets::frame_sync_cc_impl::set_constellation</definition>
+        <argsstring>(gr::digital::constellation_sptr constellation)</argsstring>
+        <name>set_constellation</name>
+        <reimplements refid="classgr_1_1inets_1_1frame__sync__cc_1a93a2da834912991f9fde50a60ec88fc7">set_constellation</reimplements>
+        <param>
+          <type>gr::digital::constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a6e7f6c93d7ee7eb5400dd3d51f37b47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::inets::frame_sync_cc_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc__impl_1a94cdb7cfa588bdca52641758d265f9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::inets::frame_sync_cc_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="68" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>gr::inets::frame_sync_cc</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gr::inets::frame_sync_cc_impl</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc__impl"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>gr::inets::frame_sync_cc</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>gr::inets::frame_sync_cc_impl</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc__impl"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" line="31" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/frame_sync_cc_impl.h" bodystart="30" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a94ef7a54044757a4414600891681450a" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_constellation</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a5f1aab5c684c5194b36a70a0ae8d462d" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_d_f</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a0b2d44ac2d0f6f90259c4a7f8728e610" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_d_phi</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a18f68246d5c19cae109b31e55cca96f1" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_diff</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ad337fadfd8c50bf51b4730dacbda18dc" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_last_corr</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a7fe6b6d77ad1ddf447fea24030748b1f" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_len_preamble</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aa5b97ce0ec472a4dbcbfe1dea4bfe30e" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_len_tag_key</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ab0dcedaa0f2e6c217799413a0f3c1c79" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_mod_preamble</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a4e4883c41de74070e77373bb5ec00aa0" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_preamble</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1afeea59e728ba3979cad27b88443e93ea" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_set_lock</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a72f8def6de16e25ec2f16aa93670606e" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_state</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a3ebb805705900b183cb76e1c95c7eead" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>_threshold</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1af8c36429b1708c52b9f4e533c817a6e0" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>calculate_fd</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ade806072a9915ebe997b4d7139c3f80f" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>calculate_R</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a6e7f6c93d7ee7eb5400dd3d51f37b47a" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a542cb99a9ee5910253b06bf3c4edf9ec" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>frame_sync_cc_impl</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a94cdb7cfa588bdca52641758d265f9b3" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ac89147dae493c01478f0f85ee3fead61" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>modulate_preamble</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a15b88a837b1a15d6daa47909bfd29c5f" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>rx_time_frac_sec</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a837ec4a335b93e71d258483072aefcab" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>rx_time_full_sec</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aac677f55826b24b6d26a92b35d21f226" prot="public" virt="virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>set_constellation</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a023a731ba676c4b30919d6cb408ce32b" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>STATE_DETECT</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a90adda65061bb8310eea8c1765d86094" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>STATE_PAYLOAD</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a21c8b60d8f152c6e630ac7f0513ebf0e" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>STATE_PREAMBLE</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aaa92670210475117ff4452288fa7cd66" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>STATE_PROCESS_PREAMBLE</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a48b37bb627d14cfa96dae5d435024625" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>STATE_SET_TRIGGER</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ab36e6ec54a98f64e15d610c81ff2cd8e" prot="private" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>wrap_phase</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1af5c7673e8bb240d312b931f898e332c9" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc_impl</scope><name>~frame_sync_cc_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rssi_8h" kind="file" language="C++">
+    <compoundname>rssi.h</compoundname>
+    <includes refid="api_8h" local="no">inets/api.h</includes>
+    <includes local="no">gnuradio/sync_block.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="rssi__impl_8h" local="no">rssi_impl.h</includedby>
+    <incdepgraph>
+      <node id="61">
+        <label>rssi.h</label>
+        <link refid="rssi_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="65">
+        <label>string</label>
+      </node>
+      <node id="62">
+        <label>inets/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>gnuradio/attributes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="66">
+        <label>rssi.h</label>
+        <link refid="rssi_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>rssi_impl.h</label>
+        <link refid="rssi__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1inets_1_1rssi" prot="public">gr::inets::rssi</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1inets">gr::inets</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/rssi.h"/>
+  </compounddef>
+</doxygen>

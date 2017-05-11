@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1packetizer" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::packetizer</compoundname>
+    <basecompoundref prot="public" virt="virtual">block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1inets_1_1packetizer__impl" prot="public" virt="non-virtual">gr::inets::packetizer_impl</derivedcompoundref>
+    <includes refid="packetizer_8h" local="no">packetizer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1inets_1_1packetizer" kindref="compound">packetizer</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;packetizer&gt; gr::inets::packetizer::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/packetizer.h" line="39" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/packetizer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::inets::packetizer::make</definition>
+        <argsstring>(const std::vector&lt; unsigned char &gt; &amp;preamble, int padding, double bps)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const std::vector&lt; unsigned char &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1inets_1_1packetizer" kindref="compound">inets::packetizer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1inets_1_1packetizer" kindref="compound">inets::packetizer</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" kindref="member">inets::packetizer::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/packetizer.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="22">
+        <label>gr::inets::packetizer</label>
+        <link refid="classgr_1_1inets_1_1packetizer"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>block</label>
+      </node>
+      <node id="24">
+        <label>gr::inets::packetizer_impl</label>
+        <link refid="classgr_1_1inets_1_1packetizer__impl"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>gr::inets::packetizer</label>
+        <link refid="classgr_1_1inets_1_1packetizer"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/packetizer.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/packetizer.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" prot="public" virt="non-virtual"><scope>gr::inets::packetizer</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" prot="public" virt="non-virtual"><scope>gr::inets::packetizer</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1frame__sync__cc" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>gr::inets::frame_sync_cc</compoundname>
+    <basecompoundref prot="public" virt="virtual">block</basecompoundref>
+    <includes refid="frame__sync__cc_8h" local="no">frame_sync_cc.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1inets_1_1frame__sync__cc" kindref="compound">frame_sync_cc</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;frame_sync_cc&gt; gr::inets::frame_sync_cc::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" line="40" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::inets::frame_sync_cc::make</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;preamble, gr::digital::constellation_sptr constellation, float threshold, const std::string &amp;len_tag_key=&quot;packet_len&quot;)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <param>
+          <type>gr::digital::constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>len_tag_key</declname>
+          <defval>&quot;packet_len&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1inets_1_1frame__sync__cc" kindref="compound">inets::frame_sync_cc</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1inets_1_1frame__sync__cc" kindref="compound">inets::frame_sync_cc</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" kindref="member">inets::frame_sync_cc::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1frame__sync__cc_1a93a2da834912991f9fde50a60ec88fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::inets::frame_sync_cc::set_constellation</definition>
+        <argsstring>(gr::digital::constellation_sptr constellation)=0</argsstring>
+        <name>set_constellation</name>
+        <param>
+          <type>gr::digital::constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" line="52" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>gr::inets::frame_sync_cc</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>gr::inets::frame_sync_cc</label>
+        <link refid="classgr_1_1inets_1_1frame__sync__cc"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" line="38" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/include/inets/frame_sync_cc.h" bodystart="37" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc_1a93a2da834912991f9fde50a60ec88fc7" prot="public" virt="pure-virtual"><scope>gr::inets::frame_sync_cc</scope><name>set_constellation</name></member>
+      <member refid="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" prot="public" virt="non-virtual"><scope>gr::inets::frame_sync_cc</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

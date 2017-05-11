@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rssi__impl_8h" kind="file" language="C++">
+    <compoundname>rssi_impl.h</compoundname>
+    <includes local="no">boost/thread.hpp</includes>
+    <includes refid="rssi_8h" local="no">inets/rssi.h</includes>
+    <includes local="no">fstream</includes>
+    <incdepgraph>
+      <node id="70">
+        <label>inets/rssi.h</label>
+        <link refid="rssi_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="74">
+        <label>string</label>
+      </node>
+      <node id="69">
+        <label>boost/thread.hpp</label>
+      </node>
+      <node id="71">
+        <label>inets/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="75">
+        <label>fstream</label>
+      </node>
+      <node id="68">
+        <label>rssi_impl.h</label>
+        <link refid="rssi__impl_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1inets_1_1rssi__impl" prot="public">gr::inets::rssi_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1inets">gr::inets</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rssi__impl_8h_1a3e562599f00c4ad68e2c73450af5e7fa" prot="public" static="no">
+        <name>POW_WIN_LEN</name>
+        <initializer>640</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="12" column="13" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h"/>
+  </compounddef>
+</doxygen>

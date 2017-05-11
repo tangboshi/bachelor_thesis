@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1packetizer__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::packetizer_impl</compoundname>
+    <basecompoundref refid="classgr_1_1inets_1_1packetizer" prot="public" virt="non-virtual">gr::inets::packetizer</basecompoundref>
+    <includes refid="packetizer__impl_8h" local="no">packetizer_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1a6a56ea7716dd1e595f90527be582b366" prot="private" static="no" mutable="no">
+        <type>gr::digital::packet_header_default::sptr</type>
+        <definition>gr::digital::packet_header_default::sptr gr::inets::packetizer_impl::_header_generator</definition>
+        <argsstring></argsstring>
+        <name>_header_generator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="33" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1a8f0ebea6215e57888dfabbd2cfc5741c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned char &gt;</type>
+        <definition>std::vector&lt; unsigned char &gt; gr::inets::packetizer_impl::_random</definition>
+        <argsstring></argsstring>
+        <name>_random</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="34" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1ad9171969af968e3e984bc459943d1348" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned char &gt;</type>
+        <definition>std::vector&lt; unsigned char &gt; gr::inets::packetizer_impl::_preamble</definition>
+        <argsstring></argsstring>
+        <name>_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="35" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1af1f48ad4e00e002be6231379532ebcce" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned char &gt;</type>
+        <definition>std::vector&lt; unsigned char &gt; gr::inets::packetizer_impl::_preamble_packed</definition>
+        <argsstring></argsstring>
+        <name>_preamble_packed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="36" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1ad07a44f81b692363c60813b2d7ba0bf8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::packetizer_impl::_padding</definition>
+        <argsstring></argsstring>
+        <name>_padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1ad30ac6fa93a2cb943fc730b8b65fd0f2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::packetizer_impl::_last_tx_time</definition>
+        <argsstring></argsstring>
+        <name>_last_tx_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="38" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1aab6104f7005acad93fadaa11b3728b3f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::packetizer_impl::_bps</definition>
+        <argsstring></argsstring>
+        <name>_bps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="39" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1packetizer__impl_1a0f6708e474d742a406c2d98025f0ecdf" prot="private" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char gr::inets::packetizer_impl::_random_array[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>_random_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="40" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1packetizer__impl_1a0c405b3093283ad6f89fbf39f41e37e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::packetizer_impl::packetizer_impl</definition>
+        <argsstring>(const std::vector&lt; unsigned char &gt; &amp;preamble, int padding, double bps)</argsstring>
+        <name>packetizer_impl</name>
+        <param>
+          <type>const std::vector&lt; unsigned char &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1packetizer__impl_1ad1ff317b41361974a9c519f7b941a177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::packetizer_impl::~packetizer_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~packetizer_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1packetizer__impl_1a11e1e8599f4f7a110547ed73b02ccbce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::inets::packetizer_impl::receive</definition>
+        <argsstring>(pmt::pmt_t msg)</argsstring>
+        <name>receive</name>
+        <param>
+          <type>pmt::pmt_t</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>gr::inets::packetizer</label>
+        <link refid="classgr_1_1inets_1_1packetizer"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>block</label>
+      </node>
+      <node id="27">
+        <label>gr::inets::packetizer_impl</label>
+        <link refid="classgr_1_1inets_1_1packetizer__impl"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="31">
+        <label>gr::inets::packetizer</label>
+        <link refid="classgr_1_1inets_1_1packetizer"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>block</label>
+      </node>
+      <node id="30">
+        <label>gr::inets::packetizer_impl</label>
+        <link refid="classgr_1_1inets_1_1packetizer__impl"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" line="31" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/packetizer_impl.h" bodystart="30" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1aab6104f7005acad93fadaa11b3728b3f" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_bps</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1a6a56ea7716dd1e595f90527be582b366" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_header_generator</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1ad30ac6fa93a2cb943fc730b8b65fd0f2" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_last_tx_time</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1ad07a44f81b692363c60813b2d7ba0bf8" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_padding</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1ad9171969af968e3e984bc459943d1348" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_preamble</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1af1f48ad4e00e002be6231379532ebcce" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_preamble_packed</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1a8f0ebea6215e57888dfabbd2cfc5741c" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_random</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1a0f6708e474d742a406c2d98025f0ecdf" prot="private" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>_random_array</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" prot="public" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1a0c405b3093283ad6f89fbf39f41e37e3" prot="public" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>packetizer_impl</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1a11e1e8599f4f7a110547ed73b02ccbce" prot="public" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>receive</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" prot="public" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1inets_1_1packetizer__impl_1ad1ff317b41361974a9c519f7b941a177" prot="public" virt="non-virtual"><scope>gr::inets::packetizer_impl</scope><name>~packetizer_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

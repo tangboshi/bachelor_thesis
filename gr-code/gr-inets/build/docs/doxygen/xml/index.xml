@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1inets_1_1baseband__derotation" kind="class"><name>gr::inets::baseband_derotation</name>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a1f140c532e9434522c7c01e2e6c0fab2" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a52b832642b3c76881c4f9c96e86a4ea5" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1a67259e810468bf9a4e785294d9b9b8e0" kind="function"><name>set_mu</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation_1aac1bb262f8f22e4be13942e68d30da9f" kind="function"><name>mu</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1baseband__derotation__impl" kind="class"><name>gr::inets::baseband_derotation_impl</name>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a208f605ebb310ad2cde3f09d3022cac6" kind="variable"><name>_mu</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1aa94cac67c5437148d07f8adf87d5326f" kind="variable"><name>_error</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a120fa8229b9da84d64973136a7777c84" kind="variable"><name>_constellation</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1abcf8d0f5f1e53af93e4898553066a2db" kind="function"><name>baseband_derotation_impl</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a8be7dc5e073f807d3f80a04c359edbc8" kind="function"><name>~baseband_derotation_impl</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a431e7e882079d4a84fda537df5d8ef96" kind="function"><name>set_mu</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a73e155dba51753fdc5fc7916d9e66ac6" kind="function"><name>mu</name></member>
+    <member refid="classgr_1_1inets_1_1baseband__derotation__impl_1a0210cdeb9892a8864413b059452f6acf" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1frame__sync__cc" kind="class"><name>gr::inets::frame_sync_cc</name>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1aeaa3183b4ba0562b8b0683ebdfb7f3ce" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1a337e33767892786aac215d4d6e721658" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc_1a93a2da834912991f9fde50a60ec88fc7" kind="function"><name>set_constellation</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1frame__sync__cc__impl" kind="class"><name>gr::inets::frame_sync_cc_impl</name>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ab0dcedaa0f2e6c217799413a0f3c1c79" kind="variable"><name>_mod_preamble</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a4e4883c41de74070e77373bb5ec00aa0" kind="variable"><name>_preamble</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a3ebb805705900b183cb76e1c95c7eead" kind="variable"><name>_threshold</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a7fe6b6d77ad1ddf447fea24030748b1f" kind="variable"><name>_len_preamble</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aa5b97ce0ec472a4dbcbfe1dea4bfe30e" kind="variable"><name>_len_tag_key</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a72f8def6de16e25ec2f16aa93670606e" kind="variable"><name>_state</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a5f1aab5c684c5194b36a70a0ae8d462d" kind="variable"><name>_d_f</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a0b2d44ac2d0f6f90259c4a7f8728e610" kind="variable"><name>_d_phi</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ad337fadfd8c50bf51b4730dacbda18dc" kind="variable"><name>_last_corr</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a18f68246d5c19cae109b31e55cca96f1" kind="variable"><name>_diff</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a94ef7a54044757a4414600891681450a" kind="variable"><name>_constellation</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1afeea59e728ba3979cad27b88443e93ea" kind="variable"><name>_set_lock</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a837ec4a335b93e71d258483072aefcab" kind="variable"><name>rx_time_full_sec</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a15b88a837b1a15d6daa47909bfd29c5f" kind="variable"><name>rx_time_frac_sec</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a023a731ba676c4b30919d6cb408ce32b" kind="variable"><name>STATE_DETECT</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a21c8b60d8f152c6e630ac7f0513ebf0e" kind="variable"><name>STATE_PREAMBLE</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a90adda65061bb8310eea8c1765d86094" kind="variable"><name>STATE_PAYLOAD</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aaa92670210475117ff4452288fa7cd66" kind="variable"><name>STATE_PROCESS_PREAMBLE</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a48b37bb627d14cfa96dae5d435024625" kind="variable"><name>STATE_SET_TRIGGER</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1af8c36429b1708c52b9f4e533c817a6e0" kind="function"><name>calculate_fd</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ade806072a9915ebe997b4d7139c3f80f" kind="function"><name>calculate_R</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ab36e6ec54a98f64e15d610c81ff2cd8e" kind="function"><name>wrap_phase</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1ac89147dae493c01478f0f85ee3fead61" kind="function"><name>modulate_preamble</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a542cb99a9ee5910253b06bf3c4edf9ec" kind="function"><name>frame_sync_cc_impl</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1af5c7673e8bb240d312b931f898e332c9" kind="function"><name>~frame_sync_cc_impl</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1aac677f55826b24b6d26a92b35d21f226" kind="function"><name>set_constellation</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a6e7f6c93d7ee7eb5400dd3d51f37b47a" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1inets_1_1frame__sync__cc__impl_1a94cdb7cfa588bdca52641758d265f9b3" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1packetizer" kind="class"><name>gr::inets::packetizer</name>
+    <member refid="classgr_1_1inets_1_1packetizer_1a0449574b27b901e4a91ab80b30bc58b4" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer_1a1d59744708ac9d7d6bfe92f833fe099b" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1packetizer__impl" kind="class"><name>gr::inets::packetizer_impl</name>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1a6a56ea7716dd1e595f90527be582b366" kind="variable"><name>_header_generator</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1a8f0ebea6215e57888dfabbd2cfc5741c" kind="variable"><name>_random</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1ad9171969af968e3e984bc459943d1348" kind="variable"><name>_preamble</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1af1f48ad4e00e002be6231379532ebcce" kind="variable"><name>_preamble_packed</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1ad07a44f81b692363c60813b2d7ba0bf8" kind="variable"><name>_padding</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1ad30ac6fa93a2cb943fc730b8b65fd0f2" kind="variable"><name>_last_tx_time</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1aab6104f7005acad93fadaa11b3728b3f" kind="variable"><name>_bps</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1a0f6708e474d742a406c2d98025f0ecdf" kind="variable"><name>_random_array</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1a0c405b3093283ad6f89fbf39f41e37e3" kind="function"><name>packetizer_impl</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1ad1ff317b41361974a9c519f7b941a177" kind="function"><name>~packetizer_impl</name></member>
+    <member refid="classgr_1_1inets_1_1packetizer__impl_1a11e1e8599f4f7a110547ed73b02ccbce" kind="function"><name>receive</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1rssi" kind="class"><name>gr::inets::rssi</name>
+    <member refid="classgr_1_1inets_1_1rssi_1aa2e245e7f748c17a8f0936f4b1db09fe" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1ae29dcb1e14d2e05f42a32d2471ceb0ca" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a74d0e9c0cf64c46455f98ba73ffd413e" kind="function"><name>reset</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a74e64108040c185adecbe5bedccddfce" kind="function"><name>set_alpha</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a0fef109d5c7bf0ebdab1165058ddc432" kind="function"><name>get_pow_data</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1afeade22c1e2d2fda20b7cc176437867f" kind="function"><name>get_pow</name></member>
+    <member refid="classgr_1_1inets_1_1rssi_1a34adaf18caa9b981e68ebf803d3be394" kind="function"><name>get_last_sample_count</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1rssi__impl" kind="class"><name>gr::inets::rssi_impl</name>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a646e4a06f1aee1d1e35ecbed93fd12d4" kind="variable"><name>d_rssi_avg</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a22f73f3c8d7b50316c3b1f6d20b88c73" kind="variable"><name>d_num_of_samples</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a61439b12224bd194a9a5b70e974231c3" kind="variable"><name>last_num_samples</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1aedd4f52a201646f1d88e30be3650e68a" kind="variable"><name>d_active</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1afdc12325e940dfaddd71193a8d6c1487" kind="variable"><name>d_avg</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a10c7c6a6639d7318ed9b27c5d976b8dd" kind="variable"><name>d_beta</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a9a3037268534965ba49296e9330cdb1d" kind="variable"><name>d_alpha</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a71fa0c0caa0212940cf37eb1dc218db3" kind="variable"><name>in_pkt</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a982c7649cece1402c2c82098da09de91" kind="variable"><name>in_noise</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1abaa2c8bee4798352d016ff3f9e219bba" kind="variable"><name>th_low_counter</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ac5f43881c7546bfaf94f3caab1d6e943" kind="variable"><name>th_high_counter</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ab0977ab4c86bdae1041a884296ebec7c" kind="variable"><name>pow_win</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1aa01c01ddb99d840978810cb3601c6509" kind="variable"><name>store_counter</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a0abaf4b9f36f14cdef93f5b32f551349" kind="variable"><name>noise_counter</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ae670d7716e41c64c50808e8aedcda7e8" kind="variable"><name>pow_win_len</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a7e4f1bfc19434da60c2bf52f150dcb1e" kind="variable"><name>pow_win_wp</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ab36e1188dd59df3487ae6ace75d2006f" kind="variable"><name>th_low</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a4c47f6028a1e3128a286bb46be05d45e" kind="variable"><name>num_idle</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a23dfb4abf81dfbc6144cb7c5c0c58856" kind="variable"><name>mtx</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a1226bbeaa2d4cf5e51ba9308ed8a20db" kind="variable"><name>log_file</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ae6364f5d8d5b8d0a45e948a1de5e4115" kind="function"><name>rssi_impl</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a4add4febcea25827fafb4eabfe920dd9" kind="function"><name>~rssi_impl</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ab9e0f04d17ea1ce92d9630db1056fd07" kind="function"><name>reset</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1ab006fc27d6a7530852a2424d681e75ff" kind="function"><name>store</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a94c5125bef88ef22c2573670bf0852af" kind="function"><name>set_alpha</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a0e2948c5a82052a38a1dc0a8b487ea98" kind="function"><name>get_pow_data</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a0ef9c14f0f6866d6c019e307c82e182d" kind="function"><name>get_pow</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1a3d2286410cddd8f9aef6fbf12c78ca37" kind="function"><name>get_last_sample_count</name></member>
+    <member refid="classgr_1_1inets_1_1rssi__impl_1afbd8f5da2d0f375f02d8a3816bac142e" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1timing__recovery__cc" kind="class"><name>gr::inets::timing_recovery_cc</name>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc_1a1f8a0d34c06d8014c916251e0cf501e8" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc_1a1718efd48bf9f7f41e9a9336b08c6c97" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1timing__recovery__cc__impl" kind="class"><name>gr::inets::timing_recovery_cc_impl</name>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc__impl_1a58f25d57c2fa5348a1993eb19bf6e907" kind="variable"><name>_sps</name></member>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc__impl_1aa723184c16ad2155313467087123c5b5" kind="function"><name>timing_recovery_cc_impl</name></member>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc__impl_1ace5761861425d620513d70bd024470f4" kind="function"><name>~timing_recovery_cc_impl</name></member>
+    <member refid="classgr_1_1inets_1_1timing__recovery__cc__impl_1a3cc4e1b18882c62c2675f5530bc58d5d" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1variable__rotator" kind="class"><name>gr::inets::variable_rotator</name>
+    <member refid="classgr_1_1inets_1_1variable__rotator_1a1775c6fdeade808fd0fadde6783026ac" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator_1a5d843c6f8e1ceb49bf2788151c7c141f" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1inets_1_1variable__rotator__impl" kind="class"><name>gr::inets::variable_rotator_impl</name>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a80bc2ce2663c9bbca642507cf9675777" kind="variable"><name>_rot</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a8e092ec52bc7b0faf201c19c96249800" kind="variable"><name>_num_delay</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a41f19a91831d55aec32bbe0d7f2ae0ce" kind="function"><name>variable_rotator_impl</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1ada65f622aa478edb4ab09eaf5323e996" kind="function"><name>~variable_rotator_impl</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a1748ef8916147ff034e6b712c0d4e7f4" kind="function"><name>set_num_delay</name></member>
+    <member refid="classgr_1_1inets_1_1variable__rotator__impl_1a52fa13f704b0ecb6bc6d7366d7067a31" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1inets" kind="namespace"><name>gr::inets</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a7e5966e18f6b27dc867609731f1be879" kind="define"><name>INETS_API</name></member>
+  </compound>
+  <compound refid="baseband__derotation_8h" kind="file"><name>baseband_derotation.h</name>
+  </compound>
+  <compound refid="baseband__derotation__impl_8h" kind="file"><name>baseband_derotation_impl.h</name>
+  </compound>
+  <compound refid="frame__sync__cc_8h" kind="file"><name>frame_sync_cc.h</name>
+  </compound>
+  <compound refid="frame__sync__cc__impl_8h" kind="file"><name>frame_sync_cc_impl.h</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="packetizer_8h" kind="file"><name>packetizer.h</name>
+  </compound>
+  <compound refid="packetizer__impl_8h" kind="file"><name>packetizer_impl.h</name>
+  </compound>
+  <compound refid="rssi_8h" kind="file"><name>rssi.h</name>
+  </compound>
+  <compound refid="rssi__impl_8h" kind="file"><name>rssi_impl.h</name>
+    <member refid="rssi__impl_8h_1a3e562599f00c4ad68e2c73450af5e7fa" kind="define"><name>POW_WIN_LEN</name></member>
+  </compound>
+  <compound refid="timing__recovery__cc_8h" kind="file"><name>timing_recovery_cc.h</name>
+  </compound>
+  <compound refid="timing__recovery__cc__impl_8h" kind="file"><name>timing_recovery_cc_impl.h</name>
+  </compound>
+  <compound refid="variable__rotator_8h" kind="file"><name>variable_rotator.h</name>
+  </compound>
+  <compound refid="variable__rotator__impl_8h" kind="file"><name>variable_rotator_impl.h</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_06ae7070600e62babd2775f1fe0d47bf" kind="dir"><name>inets</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

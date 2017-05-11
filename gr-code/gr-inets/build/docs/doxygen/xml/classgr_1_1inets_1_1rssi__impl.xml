@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1inets_1_1rssi__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::inets::rssi_impl</compoundname>
+    <basecompoundref refid="classgr_1_1inets_1_1rssi" prot="public" virt="non-virtual">gr::inets::rssi</basecompoundref>
+    <includes refid="rssi__impl_8h" local="no">rssi_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a646e4a06f1aee1d1e35ecbed93fd12d4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::inets::rssi_impl::d_rssi_avg</definition>
+        <argsstring></argsstring>
+        <name>d_rssi_avg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="18" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a22f73f3c8d7b50316c3b1f6d20b88c73" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::d_num_of_samples</definition>
+        <argsstring></argsstring>
+        <name>d_num_of_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="19" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a61439b12224bd194a9a5b70e974231c3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::last_num_samples</definition>
+        <argsstring></argsstring>
+        <name>last_num_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="20" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1aedd4f52a201646f1d88e30be3650e68a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::inets::rssi_impl::d_active</definition>
+        <argsstring></argsstring>
+        <name>d_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="21" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1afdc12325e940dfaddd71193a8d6c1487" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::d_avg</definition>
+        <argsstring></argsstring>
+        <name>d_avg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="22" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a10c7c6a6639d7318ed9b27c5d976b8dd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::d_beta</definition>
+        <argsstring></argsstring>
+        <name>d_beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="23" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a9a3037268534965ba49296e9330cdb1d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::d_alpha</definition>
+        <argsstring></argsstring>
+        <name>d_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="24" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a71fa0c0caa0212940cf37eb1dc218db3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::inets::rssi_impl::in_pkt</definition>
+        <argsstring></argsstring>
+        <name>in_pkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="25" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a982c7649cece1402c2c82098da09de91" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::inets::rssi_impl::in_noise</definition>
+        <argsstring></argsstring>
+        <name>in_noise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="26" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1abaa2c8bee4798352d016ff3f9e219bba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::th_low_counter</definition>
+        <argsstring></argsstring>
+        <name>th_low_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="27" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1ac5f43881c7546bfaf94f3caab1d6e943" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::th_high_counter</definition>
+        <argsstring></argsstring>
+        <name>th_high_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="28" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1ab0977ab4c86bdae1041a884296ebec7c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::pow_win[POW_WIN_LEN]</definition>
+        <argsstring>[POW_WIN_LEN]</argsstring>
+        <name>pow_win</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="29" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1aa01c01ddb99d840978810cb3601c6509" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::store_counter</definition>
+        <argsstring></argsstring>
+        <name>store_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="30" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a0abaf4b9f36f14cdef93f5b32f551349" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::noise_counter</definition>
+        <argsstring></argsstring>
+        <name>noise_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="31" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1ae670d7716e41c64c50808e8aedcda7e8" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gr::inets::rssi_impl::pow_win_len</definition>
+        <argsstring></argsstring>
+        <name>pow_win_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="32" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a7e4f1bfc19434da60c2bf52f150dcb1e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::pow_win_wp</definition>
+        <argsstring></argsstring>
+        <name>pow_win_wp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="33" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1ab36e1188dd59df3487ae6ace75d2006f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::th_low</definition>
+        <argsstring></argsstring>
+        <name>th_low</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="34" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a4c47f6028a1e3128a286bb46be05d45e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::num_idle</definition>
+        <argsstring></argsstring>
+        <name>num_idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="35" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a23dfb4abf81dfbc6144cb7c5c0c58856" prot="private" static="no" mutable="no">
+        <type>boost::mutex</type>
+        <definition>boost::mutex gr::inets::rssi_impl::mtx</definition>
+        <argsstring></argsstring>
+        <name>mtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="36" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1inets_1_1rssi__impl_1a1226bbeaa2d4cf5e51ba9308ed8a20db" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream gr::inets::rssi_impl::log_file</definition>
+        <argsstring></argsstring>
+        <name>log_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="37" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1ae6364f5d8d5b8d0a45e948a1de5e4115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::rssi_impl::rssi_impl</definition>
+        <argsstring>(float alpha, float th_low_db, int num_samp_idle_det)</argsstring>
+        <name>rssi_impl</name>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>th_low_db</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_samp_idle_det</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1a4add4febcea25827fafb4eabfe920dd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::inets::rssi_impl::~rssi_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~rssi_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1ab9e0f04d17ea1ce92d9630db1056fd07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::inets::rssi_impl::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <reimplements refid="classgr_1_1inets_1_1rssi_1a74d0e9c0cf64c46455f98ba73ffd413e">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1ab006fc27d6a7530852a2424d681e75ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::inets::rssi_impl::store</definition>
+        <argsstring>()</argsstring>
+        <name>store</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1a94c5125bef88ef22c2573670bf0852af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::inets::rssi_impl::set_alpha</definition>
+        <argsstring>(float a)</argsstring>
+        <name>set_alpha</name>
+        <reimplements refid="classgr_1_1inets_1_1rssi_1a74e64108040c185adecbe5bedccddfce">set_alpha</reimplements>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1a0e2948c5a82052a38a1dc0a8b487ea98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::get_pow_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_pow_data</name>
+        <reimplements refid="classgr_1_1inets_1_1rssi_1a0fef109d5c7bf0ebdab1165058ddc432">get_pow_data</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1a0ef9c14f0f6866d6c019e307c82e182d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double gr::inets::rssi_impl::get_pow</definition>
+        <argsstring>()</argsstring>
+        <name>get_pow</name>
+        <reimplements refid="classgr_1_1inets_1_1rssi_1afeade22c1e2d2fda20b7cc176437867f">get_pow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1a3d2286410cddd8f9aef6fbf12c78ca37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::get_last_sample_count</definition>
+        <argsstring>()</argsstring>
+        <name>get_last_sample_count</name>
+        <reimplements refid="classgr_1_1inets_1_1rssi_1a34adaf18caa9b981e68ebf803d3be394">get_last_sample_count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1inets_1_1rssi__impl_1afbd8f5da2d0f375f02d8a3816bac142e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::inets::rssi_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="38">
+        <label>gr::inets::rssi_impl</label>
+        <link refid="classgr_1_1inets_1_1rssi__impl"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>gr::inets::rssi</label>
+        <link refid="classgr_1_1inets_1_1rssi"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="41">
+        <label>gr::inets::rssi_impl</label>
+        <link refid="classgr_1_1inets_1_1rssi__impl"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>gr::inets::rssi</label>
+        <link refid="classgr_1_1inets_1_1rssi"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" line="16" column="1" bodyfile="/home/alex/0_ba/gr-inets/gr-inets/lib/rssi_impl.h" bodystart="15" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1aedd4f52a201646f1d88e30be3650e68a" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_active</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a9a3037268534965ba49296e9330cdb1d" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_alpha</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1afdc12325e940dfaddd71193a8d6c1487" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_avg</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a10c7c6a6639d7318ed9b27c5d976b8dd" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_beta</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a22f73f3c8d7b50316c3b1f6d20b88c73" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_num_of_samples</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a646e4a06f1aee1d1e35ecbed93fd12d4" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>d_rssi_avg</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a3d2286410cddd8f9aef6fbf12c78ca37" prot="public" virt="virtual"><scope>gr::inets::rssi_impl</scope><name>get_last_sample_count</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a0ef9c14f0f6866d6c019e307c82e182d" prot="public" virt="virtual"><scope>gr::inets::rssi_impl</scope><name>get_pow</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a0e2948c5a82052a38a1dc0a8b487ea98" prot="public" virt="virtual"><scope>gr::inets::rssi_impl</scope><name>get_pow_data</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a982c7649cece1402c2c82098da09de91" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>in_noise</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a71fa0c0caa0212940cf37eb1dc218db3" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>in_pkt</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a61439b12224bd194a9a5b70e974231c3" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>last_num_samples</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a1226bbeaa2d4cf5e51ba9308ed8a20db" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>log_file</name></member>
+      <member refid="classgr_1_1inets_1_1rssi_1ae29dcb1e14d2e05f42a32d2471ceb0ca" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a23dfb4abf81dfbc6144cb7c5c0c58856" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>mtx</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a0abaf4b9f36f14cdef93f5b32f551349" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>noise_counter</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a4c47f6028a1e3128a286bb46be05d45e" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>num_idle</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ab0977ab4c86bdae1041a884296ebec7c" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>pow_win</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ae670d7716e41c64c50808e8aedcda7e8" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>pow_win_len</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a7e4f1bfc19434da60c2bf52f150dcb1e" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>pow_win_wp</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ab9e0f04d17ea1ce92d9630db1056fd07" prot="public" virt="virtual"><scope>gr::inets::rssi_impl</scope><name>reset</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ae6364f5d8d5b8d0a45e948a1de5e4115" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>rssi_impl</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a94c5125bef88ef22c2573670bf0852af" prot="public" virt="virtual"><scope>gr::inets::rssi_impl</scope><name>set_alpha</name></member>
+      <member refid="classgr_1_1inets_1_1rssi_1aa2e245e7f748c17a8f0936f4b1db09fe" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ab006fc27d6a7530852a2424d681e75ff" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>store</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1aa01c01ddb99d840978810cb3601c6509" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>store_counter</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ac5f43881c7546bfaf94f3caab1d6e943" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>th_high_counter</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1ab36e1188dd59df3487ae6ace75d2006f" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>th_low</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1abaa2c8bee4798352d016ff3f9e219bba" prot="private" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>th_low_counter</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1afbd8f5da2d0f375f02d8a3816bac142e" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1inets_1_1rssi__impl_1a4add4febcea25827fafb4eabfe920dd9" prot="public" virt="non-virtual"><scope>gr::inets::rssi_impl</scope><name>~rssi_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="variable__rotator_8h" kind="file" language="C++">
+    <compoundname>variable_rotator.h</compoundname>
+    <includes refid="api_8h" local="no">inets/api.h</includes>
+    <includes local="no">gnuradio/sync_block.h</includes>
+    <includedby refid="variable__rotator__impl_8h" local="no">variable_rotator_impl.h</includedby>
+    <incdepgraph>
+      <node id="92">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="90">
+        <label>inets/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="89">
+        <label>variable_rotator.h</label>
+        <link refid="variable__rotator_8h"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="93">
+        <label>variable_rotator.h</label>
+        <link refid="variable__rotator_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>variable_rotator_impl.h</label>
+        <link refid="variable__rotator__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1inets_1_1variable__rotator" prot="public">gr::inets::variable_rotator</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1inets">gr::inets</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/0_ba/gr-inets/gr-inets/include/inets/variable_rotator.h"/>
+  </compounddef>
+</doxygen>

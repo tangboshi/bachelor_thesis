@@ -25,7 +25,7 @@
 
 \begin{document}
 
-\title{CW 19 summary}
+\title{CW 19/20 summary}
 \author{Alexander Pastor}
 \date{08.05.2017}
 \maketitle
@@ -190,6 +190,12 @@ The passband is the frequency band that is not attenuated band of a filter, i.e.
 
 \bigskip
 
+\emph{baseband}
+
+The baseband, which has to be distinguished from the passband is a band ranging from 0 Hz to some higher cut-off frequency. 
+
+\bigskip
+
 \emph{filter tap}
 
 A filter tap is a (coefficient, delay) pair. The number of taps is often denoted as N. This number is a good mesaure for the amount of filtering, the required space and the amount of calculation required by the filter. 
@@ -228,6 +234,16 @@ A lost bit or an extra bit in the signal.
 [question] Why aren't Ethernet (and 802.11) using byte- or bitstuffing methods for frame synchronization? I thought maybe bit errors could corrupt the whole "synchronization complex", but one lost frame shouldn't be too bad? I guess that a big 56-bit preamble and 8-bit SFD might just be more robust against bit errors?
 \color{black}
 
+\subsubsection{Flowchart Components}
+
+\emph{Attack and Decay Time}
+
+The attack time and decay times are similar concepts to the rise and fall time of a signal. The attack time is a measure of how fast the AGC reacts to rising signal amplitude, while decay time is the adaption time when the signal amplitude is falling. 
+
+\medskip
+
+\href{https://electronics.stackexchange.com/questions/269223/attack-and-release-times-of-the-automatic-gain-control}{Source: Electronics Stackexchange thread}
+
 \subsection{FIR Filters vs. IIR Filters}
 
 \subsection{iNets PHY Layer}
@@ -244,7 +260,17 @@ Let me now describe how the two components work (let's think inside the box):
 
 \subsubsection{The Transmitter}
 
-The data from the UDP source is first packeted (optionally with CRC checksum). Then, the PDU is converted into a tagged stream, because GR does not have a "natural" packet concept, instead packets are delimited by tags as described later. The bits are repacked and then converted into symbols. The symbols are then outputted to a constellation diagram and passed to a root raised cosine filter. \_\_\_ Tagged Stream Multiply Length Tag \_\_\_. The signal then is multiplied with 0.6 (why?) and then serves as the input for a burst shaper.
+\begin{itemize}
+	\item The data from the UDP source is first packeted (optionally with CRC checksum).
+	\item Then, the PDU is converted into a tagged stream, because GR does not have a "natural" packet concept, instead packets are delimited by tags as described later.
+	\item The bits are repacked and then converted into symbols.
+	\item The symbols are then outputted to a constellation diagram and passed to a root raised cosine filter.
+	\item The tagged stream multiply length tag block specifies a multiplicative constant for the burst shaper to add zero-padding to the stream \hl{(why?)}.
+	\item The signal then is multiplied with 0.6 \hl{(why?)}
+	\item ... and then serves as the input for a burst shaper.
+\end{itemize}
+
+      
 
 \bigskip
 
@@ -254,25 +280,15 @@ The data from the UDP source is first packeted (optionally with CRC checksum). T
 
 \subsubsection{The Receiver}
 
-The received signal is adaptively amplified by the AGC (automatic gain control) to a certain level no matter what input signal magnitude (only constrained of a maximum amplifying factor).
-
-\bigskip
-
-The polyphase clock synchronizer filters and then minimizes the derivative of the filtered signal to maximize SNR and minimize ISI. The next step is frame synchronization (preamble synchronization). 
-
-\bigskip
-
-\hl{No idea what the variable derotator does}. The baseband derotator then performs derotation by $\phi$ simply by multiplying with $\exp(-j\phi)$ in order to compensate for carrier frequency offset (CFO) and sampling clock offset (SCO) caused by oscillator mismatch and the Doppler effect. 
-
-\bigskip
-
-The data then is passed to a demultiplexer whose job it is to separate the header from the payload. The payload is subsequently demodulated, repacked, parsed and fed beck to a dedicated port of the demux block. \hl{Probably to decide what to do with the payload?} The payload is handed to a constellation plot, a demodulator and a MPSK SNR estimator. The demodulated payload bitstream is repacked and converted back from a tagged stream to a protocol data unit.
-
-\bigskip
-
-\color{blue}
-[question] How does the polyphase clock synchronizer work?
-\color{black}
+\begin{itemize}
+	\item The received signal is adaptively amplified by the AGC (automatic gain control) to a certain level no matter what input signal magnitude (only constrained by a maximum amplifying factor).
+	\item The polyphase clock synchronizer filters (e.g. RRC filter) and then minimizes the derivative of the filtered signal to maximize SNR and minimize ISI (by removing the influence of timing offsets of receiver and transmitter clocks). This is actually achieved by having multiple filters in a filterbank and compare which filter has the lowest difference to zero at the optimal sampling point.
+	\item \hl{I didn't really get the implementation details of the above filter}.
+	\item The next step is frame synchronization (preamble synchronization).
+	\item \hl{No idea what the variable derotator does}.
+	\item  The baseband derotator then performs derotation by $\phi$ simply by multiplying with $\exp(-j\phi)$ in order to compensate for carrier frequency offset (CFO) and sampling clock offset (SCO) caused by oscillator mismatch and the Doppler effect. \hl{What does the variable $\mu$ do?}
+	\item The data then is passed to a demultiplexer whose job it is to separate the header from the payload. The payload is subsequently demodulated, repacked, parsed and fed beck to a dedicated port of the demux block. \hl{Probably to decide what to do with the payload?} The payload is handed to a constellation plot, a demodulator and a MPSK SNR estimator. The demodulated payload bitstream is repacked and converted back from a tagged stream to a protocol data unit.
+\end{itemize}
 
 \section{GNU Radio Techniques and Concepts}
 
@@ -336,7 +352,84 @@ For our networking stuff we need packets, but GNR only has streams. The solution
 
 \section{Good to Know...}
 
-\subsection{Python}
+\subsection{Git}
+
+\subsubsection{.gitignore}
+
+Create a \texttt{.gitignore} file in a directory. Files in this directory and all subdirectories specified in the \texttt{.gitignore} regex' will be ignored when committing.
+
+\subsection{Cleaning Up the Mess}
+
+Removing files from a remote repository is easy - executive summary:
+
+\begin{minted}[tabsize=4]{bash}
+#Add files to ignore into .gitignore or remove files from disk
+# touch .gitignore
+# OR
+# rm file
+
+#In the root directory
+git rm --cached -r ./
+# git commit -am string is a shortcut for
+# git add ./
+# git commit -m string
+git commit -am "removed files"
+git push
+ 
+\end{minted}
+
+\subsection{C++}
+
+\subsubsection{C++ Classes, Structs, Namespaces}
+
+The most important points summarized:
+
+\begin{itemize}
+	\item We're talking about C++ here. In C++ there's no difference between structs and classes, except that members and base classes are public in structs and private in classes by default.
+	\item The whole namespace and class fuss is about data encapsulation versus logical relation of functions.
+	\item Some argue that functions directly realted to a class should always be members of the functions.
+	\item Scott Meyers however suggests (where f is a function and C a class): 
+	\begin{minted}[tabsize=4]{cpp}
+		if (f needs to be virtual)
+			make f a member function of C;
+		else if (f is operator>> or operator<<)
+		{
+			make f a non-member function;
+			if (f needs access to non-public members of C)
+				make f a friend of C;
+		}
+		else if (f needs type conversions on its left-most argument)
+		{
+			make f a non-member function;
+			if (f needs access to non-public members of C)
+				make f a friend of C;
+		}
+		else if (f can be implemented via C's public interface)
+			make f a non-member function;
+		else
+			make f a member function of C;
+	\end{minted}
+	\item For then avoiding conflicts in big projects wrapping namespaces are advocated by Meyers.
+\end{itemize}
+
+\href{http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197}{Source: What Scott Meyers says.}
+
+\subsubsection{(Boost) Bind}
+
+The boost bind method is a generalization of the \mintinline{cpp}{std::bind1st( const F& f, const T& x )} and \mintinline{cpp}{std::bind2nd( const F& f, const T& x )} functions. 
+
+There is an excellent article on the topic \href{http://www-h.eng.cam.ac.uk/help/tpl/languages/C++/bind.html}{here}.
+
+\bigskip
+
+The most important points can be summarized as follows:
+\begin{itemize}
+	\item The Boost library generalizes the STL's binding methods by allowing the bind of an arbitrary amount of arguments to a function.
+	\item A \emph{functor} is a class in which the \mintinline{cpp}{operator()()} is implemented. One can think of the class as a function with an inner state.
+	\item The binding functions are \emph{adaptors} which effectively allow us to e.g. use binary functions when unary functions are expected.
+	\item As of C++11 this whole binding concept is deprecated. In C++17 this whole concept will be removed from the STL. 
+	\item Instead one should use $\lambda$-expressions (since C++11), inspired from implicit mathematical function declaration like this (mapping) $ x \mapsto 2x^2 $.
+\end{itemize}
 
 \subsection{\LaTeX}
 

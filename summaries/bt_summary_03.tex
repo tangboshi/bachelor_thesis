@@ -212,8 +212,8 @@ Repetitive pattern of all the same nibbles (and thus bytes). Marks an Ethernet f
 
 \emph{CRC-based framing}
 
-\color{blue}
-[question] CRC-based framing is used in ATM protocols by reusing the header CRC. How exactly does this work? Also, I wondered since 802.11 and Ethernet both also have a FCS (CRC) at the end of their frames, do they use some kind of CRC-based / syncword-based framing at the same time? As of now I think it is as follows: 802.11 and Ethernet frame synchronization is syncword-based and CRC is employed for error correction only.
+\color{red}
+[deferred] CRC-based framing is used in ATM protocols by reusing the header CRC. How exactly does this work? Also, I wondered since 802.11 and Ethernet both also have a FCS (CRC) at the end of their frames, do they use some kind of CRC-based / syncword-based framing at the same time? As of now I think it is as follows: 802.11 and Ethernet frame synchronization is syncword-based and CRC is employed for error correction only.
 \color{black}
 
 \bigskip
@@ -246,6 +246,16 @@ The attack time and decay times are similar concepts to the rise and fall time o
 
 \subsection{FIR Filters vs. IIR Filters}
 
+A short list of advantages and disadvantages of FIR filters compared to IIR filters.
+\begin{itemize}
+	\item FIR filter are less susceptible to quantization errors than IIR filters. 
+	\item Linear-phase filtering can be implemented with FIR filters.
+	\item FIR filters are always stable.
+	\item FIR filters are slower than IIR filters.
+	\item FIR filters require more memory and computation time on the hardware, because they tend to need more taps to implement the same functionality as IIR filters.
+	
+\end{itemize}
+
 \subsection{iNets PHY Layer}
 
 I received GRC flowcharts of a wireless transceiver and a test application.
@@ -270,12 +280,8 @@ Let me now describe how the two components work (let's think inside the box):
 	\item ... and then serves as the input for a burst shaper.
 \end{itemize}
 
-      
-
-\bigskip
-
-\color{blue}
-[confirmation required] How exactly does the repack bits block work? I mean what does output byte mean? I presume the following: example - bits per input byte 8, bits per output byte 2 - all bits of an input byte are relevant so they are split up into four bytes where only the first two bits are relevant and the rest is nonsense. The relevant bits are fed to a byte to symbol converter.
+\color{red}
+[confirmed How exactly does the repack bits block work? I mean what does output byte mean? I presume the following: example - bits per input byte 8, bits per output byte 2 - all bits of an input byte are relevant so they are split up into four bytes where only the first two bits are relevant and the rest is nonsense. The relevant bits are fed to a byte to symbol converter.
 \color{black}
 
 \subsubsection{The Receiver}
@@ -285,7 +291,7 @@ Let me now describe how the two components work (let's think inside the box):
 	\item The polyphase clock synchronizer filters (e.g. RRC filter) and then minimizes the derivative of the filtered signal to maximize SNR and minimize ISI (by removing the influence of timing offsets of receiver and transmitter clocks). This is actually achieved by having multiple filters in a filterbank and compare which filter has the lowest difference to zero at the optimal sampling point.
 	\item \hl{I didn't really get the implementation details of the above filter}.
 	\item The next step is frame synchronization (preamble synchronization).
-	\item \hl{No idea what the variable derotator does}.
+	\item  derotator seems to be a block for debugging purposes only.
 	\item  The baseband derotator then performs derotation by $\phi$ simply by multiplying with $\exp(-j\phi)$ in order to compensate for carrier frequency offset (CFO) and sampling clock offset (SCO) caused by oscillator mismatch and the Doppler effect. \hl{What does the variable $\mu$ do?}
 	\item The data then is passed to a demultiplexer whose job it is to separate the header from the payload. The payload is subsequently demodulated, repacked, parsed and fed beck to a dedicated port of the demux block. \hl{Probably to decide what to do with the payload?} The payload is handed to a constellation plot, a demodulator and a MPSK SNR estimator. The demodulated payload bitstream is repacked and converted back from a tagged stream to a protocol data unit.
 \end{itemize}

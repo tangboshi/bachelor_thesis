@@ -1,0 +1,159 @@
+% !TeX document-id = {11d8fae9-4ab4-415f-8574-09a217d6098d}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{enumitem}
+\usepackage{standalone}
+
+\graphicspath{{img/}}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+	
+\title{CW 21-25 Summary}
+\author{Alexander Pastor}
+\date{18.05.2017}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Flow Chart Details}
+\subsection{Theoretical ALOHA}
+
+Counter meanings:
+\begin{description}[leftmargin=!]
+	\item[Counter 1:] Counts received frames.
+	\item[Counter 2:] Counts good frames.
+	\item[Counter 3:] Counts bad frames.
+	\item[Counter 4:] Counts frames that aren't destined to this RX.
+	\item[Counter 5:] Counts frames that are destined to this RX.
+\end{description}
+
+\subsection{Theoretical CSMA}
+Counter meanings in the \_rx file are the same as for ALOHA.
+
+\section{Organizational}
+
+\subsection{Device Parameters}
+
+Remote PC IP-address: 134.130.223.135 \\
+USRPs: 10.0.0.16, 10.0.0.7
+
+\subsection{Measurement Plan}
+
+\section{GNU Radio Implementation Details}
+
+\subsection{A Closer Look at PMTs}
+
+\section{Good to Know...}
+
+It has been a good while now, but finally I learned enough feasible stuff to write down.
+
+\subsection{Using a static IP address for USRPs}
+\begin{minted}[tabsize=4]{bash}
+#Get to know your interface names
+ifconfig 
+#E.g. set eth0 interface IP to 10.0.0.100/24
+#Where up opens the eth0 interface 
+#and is not necessary if it showed up when using infconfig
+ifconfig eth0 10.0.0.100 netmask 255.255.255.0 up
+
+###Just FYI:
+#Shutdown network interface
+ifconfig eth0 down
+##List all interfaces
+ifconfig -a
+#OR
+ip link show
+\end{minted}
+
+\subsection{Efficient Remote Control}
+
+\begin{minted}[tabsize=4]{bash}
+##Opening a remote connection with X forwarding
+#Use -C to get it more stable (gzip-compression)
+#Optional -c aes128-ctr: for AES 128 encryption
+#Optional -4: forces the usage of IPv4 addresses
+ssh -XC4c aes-128ctr inets@134.130.223.135
+
+##In a second terminal mount file system to local folder
+#This has the advantage of the ability to treat files as though they were local
+mkdir -p mnt/134.130.223.135
+cd mnt/134.130.223.135
+
+#Tip: in the next line for the last argument type . and then expand with Tab :)
+#If it is necessary sshfs also allows user-mapping if file ownership is an issue
+sshfs inets@134.130.223.135:/home/inets /home/alex/mnt/134.130.223.135/
+
+#Then edit all you like as though the mounted partition was local
+cd source/gr-inets/lib
+atom *some_file*
+
+\end{minted}
+
+To further avoid any repetitive commands I added to my \href{http://alexander-pastor.de/convenient-linux-game-launcher/}{launcher tool}:
+
+\begin{minted}[tabsize=4]{bash}
+"inets")
+	if ( mount | grep inets  )
+		then
+		echo "The mount point is in use, confirm unmount with your password."
+		sudo umount /home/alex/mnt/134.130.223.135
+	fi
+	echo "Please enter the server password to mount the target directory."
+	sshfs inets@134.130.223.135:/home/inets /home/alex/mnt/134.130.223.135
+	gnome-terminal --tab -e "bash -c 'ssh -XC4 inets@134.130.223.135'" 
+	--tab --working-directory=/home/alex/mnt/134.130.223.135
+;;
+\end{minted}
+
+\subsection{Listing Directories Only}
+
+\href{https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash-an-examination}{Stackoverflow Source}
+
+\begin{minted}[tabsize=4]{bash}
+##Possibility 1 (fastest):
+echo */
+#List all subsubfolders as well:
+echo */*/
+
+##Possibility 2 (straightforward ls):
+ls -d */
+
+##Possibility 3
+#where ^ means beginning of a line
+ls -l | grep "^d"
+
+##Possibility 4
+#If you need to list and process all directories in a bash-script (slow)
+for i in $(ls -d */); do echo ${i%%/}; done
+\end{minted}
+
+\subsection{Redirecting GRC Stuff to Files}
+If one wants to do heavy analysis, built-in Linux console tools including, but not limited to utilities such as \verb|awk|, \verb|grep|, \verb|sed|, \verb|cat| might be a great help.
+
+Since executing a GRC flowgraph is running a generated python script, we can achieve our goal easily by the simple means of:
+
+\begin{minted}[tabsize=4]{bash}
+## Just as a concept
+#These could be some lines in my alohaTestSuite.sh
+mkdir -p logs
+time python2 theoretical_aloha_rx.py &> logs/theoretical_aloha_rx.log
+time python2 theoretical_aloha.py &> logs/theoretical_aloha.log
+\end{minted}
+
+\subsection{Atom: Folder-Wide Search for Substrings}
+Use the Ctrl+Shift+F shortcut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
+
+\end{document}

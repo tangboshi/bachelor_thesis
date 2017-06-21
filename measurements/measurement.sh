@@ -99,7 +99,7 @@ function measure
     done
 
     for ((y = $TIMER ; y > 0 ; y -= 1)); do
-      echo "Measurement $x/$MEASUREMENT_REPETITIONS completed in $y seconds."
+      echo "Measurement $x/$MEASUREMENT_REPETITIONS complete in $y seconds."
       if [ $CHECK_IF_PREMATURELY_ABORTED -eq 1 ];
         then
           if ps -p ${MEASUREMENT_SCRIPTS_PID[*]};

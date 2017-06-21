@@ -29,9 +29,9 @@
 \newpage
 
 \section{Flow Chart Details}
-\subsection{Theoretical ALOHA}
+\subsection{Counter Meanings}
 
-Counter meanings:
+In the theoretical CSMA and ALOHA files:
 \begin{description}[leftmargin=!]
 	\item[Counter 1:] Counts received frames.
 	\item[Counter 2:] Counts good frames.
@@ -39,9 +39,6 @@ Counter meanings:
 	\item[Counter 4:] Counts frames that aren't destined to this RX.
 	\item[Counter 5:] Counts frames that are destined to this RX.
 \end{description}
-
-\subsection{Theoretical CSMA}
-Counter meanings in the \_rx file are the same as for ALOHA.
 
 \section{Organizational}
 
@@ -51,6 +48,18 @@ Remote PC IP-address: 134.130.223.135 \\
 USRPs: 10.0.0.16, 10.0.0.7
 
 \subsection{Measurement Plan}
+
+For CW 25 the following measurement parameters were commissioned:
+
+\begin{itemize}
+	\item 2 sets of 5 measurements each with a duration of 5 minutes.
+	\item SIFS: 100$\mu s$ / 300$\mu s$ 
+	\item DIFS: 500$\mu s$  / 1500$\mu s$ 
+	\item Backoff slot: 200 $\mu s$ / 600 $\mu s$
+	\item The results should be plotted with either Matlab or Matplotlib
+\end{itemize}
+
+\textbf{Note:} The DIFS time in 802.11 can be calculated as twice the backoff time plus one SIFS time.
 
 \section{GNU Radio Implementation Details}
 
@@ -82,10 +91,11 @@ ip link show
 
 \begin{minted}[tabsize=4]{bash}
 ##Opening a remote connection with X forwarding
+#Using -X instead of -Y adds security check, but reduces performance
 #Use -C to get it more stable (gzip-compression)
 #Optional -c aes128-ctr: for AES 128 encryption
 #Optional -4: forces the usage of IPv4 addresses
-ssh -XC4c aes-128ctr inets@134.130.223.135
+ssh -YC4c aes-128ctr inets@134.130.223.135
 
 ##In a second terminal mount file system to local folder
 #This has the advantage of the ability to treat files as though they were local
@@ -113,8 +123,10 @@ To further avoid any repetitive commands I added to my \href{http://alexander-pa
 	fi
 	echo "Please enter the server password to mount the target directory."
 	sshfs inets@134.130.223.135:/home/inets /home/alex/mnt/134.130.223.135
-	gnome-terminal --tab -e "bash -c 'ssh -XC4 inets@134.130.223.135'" 
+	gnome-terminal --tab -e "bash -c 'ssh -YC4 inets@134.130.223.135'" 
 	--tab --working-directory=/home/alex/mnt/134.130.223.135
+	sleep 1
+	exit
 ;;
 \end{minted}
 

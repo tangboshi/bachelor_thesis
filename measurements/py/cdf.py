@@ -2,38 +2,52 @@ import numpy as np
 import os
 from pylab import *
 import matplotlib.pyplot as plt
+import subprocess
 
-# Create some test data
-dx = .01
-X  = np.arange(-2,2,dx)
-Y  = exp(-X**2)
+print("Hello from cdf.py!")
 
-# Normalize the data to a proper PDF
-Y /= (dx*Y).sum()
+## Get all required information from OS
+measurement         = os.environ["MEASUREMENT_COUNTER"]
+repetitions         = int(os.environ["MEASUREMENT_REPETITIONS"])
+data_source_path    = os.environ["DATA_SOURCE_PATH"]+"/"+measurement
+plot_path           = os.environ["PLOT_DIRECTORY_PATH"]
+trunk               = os.environ["PLOT_NAMES_TRUNK"]
+packet_size         = int(os.environ["PACKET_SIZE"])
+show_plot           = int(os.environ["SHOW_PLOT_AFTER_MEASUREMENT"])
 
-# Compute the CDF
-CY = np.cumsum(Y*dx)
+# Create a repetitions X 1 matrix aka row vector with measurement data
+data = np.zeros(shape=(repetitions))
 
-# Plot both
+for i in range(1,repetitions+1):
+    file_path = data_source_path+'/'+str(i)+'/'+'raw.dat'
+    linecount = subprocess.run(['wc', '-l', file_path], stdout=subprocess.PIPE)
+    linecount = linecount.stdout.decode('utf-8')
+    linecount = linecount.partition(" ")[0]
+    linecount = int(linecount)
+    data[i-1] = linecount*packet_size
+print(data)
+
+#************************************ PDF *************************************
 fig, ax = plt.subplots()
-ax.plot(X,Y, 'r', label="troughput pdf")
-ax.plot(X,CY,'b--', label="throughput cdf")
 
-legend = ax.legend(loc='upper left', shadow=False)
-
-plt.title("Troughput CDF 300s")
-plt.xlabel("throughput")
-
+n, bins, patches = ax.hist(x=data, bins=repetitions, normed=1, histtype='bar',
+                           cumulative=False, label='PDF')
 # Save figures to location
-if os.environ["PLOT_SAVE_ENABLED"] == "1":
-    path = os.environ["PLOT_DIRECTORY_PATH"]
-    measurement = os.environ["MEASUREMENT_COUNTER"]
-    trunk = os.environ["PLOT_NAMES_TRUNK"]
-    plt.savefig(path+"/"+measurement+"/"+trunk+".png")
-    plt.savefig(path+"/"+measurement+"/"+trunk+".pdf")
+#if os.environ["PLOT_SHOW"] == "1":
+fig.savefig(plot_path+"/"+measurement+"/"+trunk+"_pdf.png")
+fig.savefig(plot_path+"/"+measurement+"/"+trunk+"_pdf.pdf")
+if show_plot:
+    plt.show()
+#******************************************************************************
 
-print(path)
-print(measurement)
-print(trunk)
-
-#plt.show()
+#************************************ CDF *************************************
+fig2, ax2 = plt.subplots()
+n, bins, patches = ax2.hist(x=data, bins=repetitions, normed=1, histtype='step',
+                           cumulative=True, label='CDF')
+# Save figures to location
+#if os.environ["PLOT_SHOW"] == "1":
+fig2.savefig(plot_path+"/"+measurement+"/"+trunk+"_cdf.png")
+fig2.savefig(plot_path+"/"+measurement+"/"+trunk+"_cdf.pdf")
+if show_plot:
+    plt.show()
+#******************************************************************************

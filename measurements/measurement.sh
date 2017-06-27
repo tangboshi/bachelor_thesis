@@ -1,14 +1,13 @@
 #!/bin/bash
-
 #********************************* Options ************************************
 ## Path and remote options
 #Remote options
 REMOTE_MEASUREMENT=0
 REMOTE_IP=134.130.223.135
 REMOTE_FLAGS=YC4
-REMOTE_USER_NAME=inets
-REMOTE_TO_MOUNT_PATH=/home/inets
-REMOTE_MEASUREMENT_MOUNT_POINT=/home/alex/mnt/$REMOTE_IP
+REMOTE_USER=inets
+REMOTE_TO_MOUNT_PATH=/home/$REMOTE_USER
+REMOTE_MEASUREMENT_MOUNT_POINT=/home/$REMOTE_USER/mnt/$REMOTE_IP
 
 # Other paths
 THIS_PATH=$( cd $(dirname $0) ; pwd -P )
@@ -22,6 +21,7 @@ fi
 JOBS_OPEN_PATH=$THIS_PATH/jobs_open
 JOBS_DONE_PATH=$THIS_PATH/jobs_done
 PLOT_PY_PATH=$THIS_PATH/py
+LOG_PATH=$THIS_PATH/logs
 export PLOT_DIRECTORY_PATH=$THIS_PATH/plots
 export DATA_SOURCE_PATH=$THIS_PATH/data
 
@@ -40,7 +40,7 @@ PLOT_IF_PREMATURELY_ABORTED=0
 ## Python Version
 PLOT_PYTHON_VERSION=3
 MEASUREMENT_PYTHON_VERSION=2
-OS=ARCH
+OS=UBUNTU
 
 case $OS in
   "ARCH")
@@ -76,6 +76,7 @@ export PLOT_NAMES_TRUNK=throughput
 #    SET THIS TO 0 IF YOU WANT TO CARRY OUT MULTIPLE MEASUREMENTS IN A ROW!   *
 #******************************************************************************
 export SHOW_PLOT_AFTER_MEASUREMENT=0
+MOVE_AFTER_JOB_DONE=0
 ## Specific plot parameters
 # Required to have the correct values for some calculations (absolute values)
 export PACKET_SIZE=1000 #bytes
@@ -83,7 +84,7 @@ export PACKET_SIZE=1000 #bytes
 
 function setup_remote_connection
 {
-  if ( mount | grep $REMOTE_USER_NAME  )
+  if ( mount | grep $REMOTE_MEASUREMENT_MOUNT_POINT  )
   then
     echo "The mount point is in use, confirm unmount with your password."
     sudo umount $REMOTE_MEASUREMENT_MOUNT_POINT
@@ -117,9 +118,17 @@ function prepare_measurement
         cd $PLOT_DIRECTORY_PATH
         # create measurement directory
         while [ -d $MEASUREMENT_COUNTER ]; do
-            MEASUREMENT_COUNTER=$[$MEASUREMENT_COUNTER+1]
+            MEASUREMENT_COUNTER=$(($MEASUREMENT_COUNTER+1))
         done
         export MEASUREMENT_COUNTER;
+    fi
+
+    if [ -d $LOG_PATH ];
+      then
+        echo $LOG_PATH" already existed!"
+      else
+        mkdir -p $LOG_PATH
+        echo $LOG_PATH" directory created."
     fi
 
     mkdir -p $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER
@@ -153,7 +162,7 @@ function measure
     # Get pid to later kill it
     for i in "${MEASUREMENT_SCRIPTS[@]}"
     do
-      python $MEASUREMENT_SCRIPT_PATH/$i &
+      python $MEASUREMENT_SCRIPT_PATH/$i
       MEASUREMENT_SCRIPTS_PID+=($!)
     done
 
@@ -244,25 +253,33 @@ trap "cd $THIS_PATH" EXIT;
 
 function main
 {
-  # Prepare Measurement
-  prepare_measurement
-
+  # Clear up console
+  reset
   # Check if jobs_open directory is empty
   if [ ! "$(ls -A $JOBS_OPEN_PATH)" ]; then
     echo "There seem to be no open jobs. Measuring with default parameters."
+    prepare_measurement
     #Take measurements
-    measure
+    measure | tee -a $LOG_PATH/default_$MEASUREMENT_COUNTER.log
     # Create plot if desired
-    if [ $PLOT_ENABLED -eq 1 ]; then plot; fi
+    if [ $PLOT_ENABLED -eq 1 ]; then
+      plot | tee -a $LOG_PATH/default_$MEASUREMENT_COUNTER.log; fi
   else
+    prepare_measurement
     echo "Open jobs detected! Let's get to work..."
     JOBS=$JOBS_OPEN_PATH/*
     for job in $JOBS; do
       source $job;
-      measure
-      if [ $PLOT_ENABLED -eq 1 ]; then plot; fi
-      mv $job $JOBS_DONE_PATH/
-      MEASUREMENT_COUNTER=$MEASUREMENT_COUNTER+1
+      job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
+      #echo $job_name
+      measure | tee -a $LOG_PATH/$job_name.log
+      if [ $PLOT_ENABLED -eq 1 ]; then
+        plot | tee -a $LOG_PATH/$job_name.log;
+      fi
+      if [ $MOVE_AFTER_JOB_DONE -eq 1 ]; then
+        mv $job $JOBS_DONE_PATH/
+      fi
+      export MEASUREMENT_COUNTER=$((MEASUREMENT_COUNTER++))
     done
   fi
 

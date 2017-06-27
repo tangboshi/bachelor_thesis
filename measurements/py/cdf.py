@@ -19,7 +19,7 @@ show_plot           = int(os.environ["SHOW_PLOT_AFTER_MEASUREMENT"])
 data = np.zeros(shape=(repetitions))
 
 for i in range(1,repetitions+1):
-    file_path = data_source_path+'/'+str(i)+'/'+'raw.dat'
+    file_path = data_source_path+'/'+str(i)+'/'+'frames_sent.txt'
     linecount = subprocess.run(['wc', '-l', file_path], stdout=subprocess.PIPE)
     linecount = linecount.stdout.decode('utf-8')
     linecount = linecount.partition(" ")[0]

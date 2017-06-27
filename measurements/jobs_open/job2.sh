@@ -1,7 +1,7 @@
-TIMER=1
+TIMER=6
 export MEASUREMENT_REPETITIONS=3
-MEASUREMENT_SCRIPTS=( measure.py )
-#MEASUREMENT_SCRIPTS=( two_way_handshake_Rx.py  two_way_handshake_Tx.py )
+#MEASUREMENT_SCRIPTS=( measure.py )
+MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II.py )
 MEASUREMENT_OUTPUT_FILES=( t1DQ.txt t1CS.txt t2RXe.txt t2e.txt )
 export MEASUREMENT_OUTPUT_FILES=${MEASUREMENT_OUTPUT_FILES[*]}
 PLOT_SCRIPTS=( cdf.py )

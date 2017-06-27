@@ -3,19 +3,26 @@
 ## Path and remote options
 #Remote options
 REMOTE_MEASUREMENT=0
-REMOTE_IP=134.130.223.135
+REMOTE_IP=134.130.223.151
 REMOTE_FLAGS=YC4
 REMOTE_USER=inets
 REMOTE_TO_MOUNT_PATH=/home/$REMOTE_USER
 REMOTE_MEASUREMENT_MOUNT_POINT=/home/$REMOTE_USER/mnt/$REMOTE_IP
 
 # Other paths
-THIS_PATH=$( cd $(dirname $0) ; pwd -P )
+if [ $REMOTE_MEASUREMENT -eq 1 ]; then
+  THIS_PATH=$REMOTE_MEASUREMENT_MOUNT_POINT
+  else
+    THIS_PATH=$( cd $(dirname $0) ; pwd -P )
+fi
+
+echo "THIS_PATH is: "$THIS_PATH"."
 
 if [ $REMOTE_MEASUREMENT -eq 1 ]; then
-  LOCATE_BASE_PATH=$REMOTE_MEASUREMENT_MOUNT_POINT/source/gr-inets/examples/Tests
+  LOCATE_BASE_PATH=$REMOTE_MEASUREMENT_MOUNT_POINT/source/gr-inets/examples
 else
-  LOCATE_BASE_PATH=$THIS_PATH
+  #LOCATE_BASE_PATH=$THIS_PATH
+  LOCATE_BASE_PATH=/home/inets/source/gr-inets/examples/Tests
 fi
 
 JOBS_OPEN_PATH=$THIS_PATH/jobs_open
@@ -26,12 +33,13 @@ export PLOT_DIRECTORY_PATH=$THIS_PATH/plots
 export DATA_SOURCE_PATH=$THIS_PATH/data
 
 if [ $REMOTE_MEASUREMENT -eq 1 ]; then
-  MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH
+  MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH/Tests
   export RAW_DATA_SOURCE_PATH=$REMOTE_MEASUREMENT_MOUNT_POINT/source/gr-inets/results
 else
-  MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH/py/fake_measurements
-  export RAW_DATA_SOURCE_PATH=$MEASUREMENT_SCRIPT_PATH/measurement_raw
-    #export RAW_DATA_SOURCE_PATH=/home/inets/source/gr-inets/results
+  MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH
+    #MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH/py/fake_measurements
+  #export RAW_DATA_SOURCE_PATH=$MEASUREMENT_SCRIPT_PATH/measurement_raw
+    export RAW_DATA_SOURCE_PATH=/home/inets/source/gr-inets/results
 fi
 
 ## Premature death checks
@@ -75,7 +83,7 @@ export PLOT_NAMES_TRUNK=throughput
 #******************************************************************************
 #    SET THIS TO 0 IF YOU WANT TO CARRY OUT MULTIPLE MEASUREMENTS IN A ROW!   *
 #******************************************************************************
-export SHOW_PLOT_AFTER_MEASUREMENT=0
+export SHOW_PLOT_AFTER_MEASUREMENT=1
 MOVE_AFTER_JOB_DONE=0
 ## Specific plot parameters
 # Required to have the correct values for some calculations (absolute values)
@@ -84,33 +92,33 @@ export PACKET_SIZE=1000 #bytes
 
 function setup_remote_connection
 {
+  reset
+  echo "Setting up remote connection..."
   if ( mount | grep $REMOTE_MEASUREMENT_MOUNT_POINT  )
   then
     echo "The mount point is in use, confirm unmount with your password."
     sudo umount $REMOTE_MEASUREMENT_MOUNT_POINT
   fi
   echo "Please enter the server password to mount the target directory."
-  sshfs $REMOTE_USER_NAME@$REMOTE_IP:$REMOTE_TO_MOUNT_PATH $REMOTE_MEASUREMENT_MOUNT_POINT
-  ssh -$REMOTE_FLAGS $REMOTE_IP
+  mkdir -p $REMOTE_MEASUREMENT_MOUNT_POINT
+  #sshfs $REMOTE_USER@$REMOTE_IP:$REMOTE_TO_MOUNT_PATH $REMOTE_MEASUREMENT_MOUNT_POINT
+  #ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "$(typeset -f); main"
+  ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "bash -s" < remote_measurement.sh
 }
 
 function prepare_measurement
 {
-    if [ $REMOTE_MEASUREMENT -eq 1 ]; then
-      setup_remote_connection
-    fi
-
+    reset
     MEASUREMENT_COUNTER=0
     ## Let's make sure all the directories exist
     printf "\nChecking if paths exists...\n"
 
-    # Let's first make absolutely sure the raw data source path exists
-    #if [ ! -d $RAW_DATA_SOURCE_PATH ];
-    #  then
-    #    echo $RAW_DATA_SOURCE_PATH" is not a valid path."
-    #    echo "Terminated."
-    #    exit -1
-    #fi
+    #Let's first make absolutely sure the raw data source path exists
+    if [ ! -d $RAW_DATA_SOURCE_PATH ];
+      then
+        mkdir -p $RAW_DATA_SOURCE_PATH
+        echo $RAW_DATA_SOURCE_PATH" created."
+    fi
 
     if [ -d $PLOT_DIRECTORY_PATH ];
       then
@@ -137,6 +145,9 @@ function prepare_measurement
     mkdir -p $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER
     echo $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER" directory created."
 
+    mkdir -p $JOBS_OPEN_PATH
+    mkdir -p $JOBS_DONE_PATH
+
     ## Let's check if measurement script is defined
     # If $MEASUREMENT_SCRIPTS undefined:
     # Go through directory and list all python files
@@ -145,7 +156,7 @@ function prepare_measurement
         echo  "No measurement scripts set,
               going through files inside of $LOCATE_BASE_PATH."
         echo "Please add a the full path of one of the files to \$SCRITPS."
-        locate -r "$LOCATE_BASE_PATH" | grep "\.py$"
+        #locate -r "$LOCATE_BASE_PATH" | grep "\.py$"
         echo "Terminated."
         exit -1
     fi
@@ -162,14 +173,9 @@ function measure
     # Get pid to later kill it
     for i in "${MEASUREMENT_SCRIPTS[@]}"
     do
-      python $MEASUREMENT_SCRIPT_PATH/$i
-      MEASUREMENT_SCRIPTS_PID+=($!)
+      python $MEASUREMENT_SCRIPT_PATH/$i &
+      #MEASUREMENT_SCRIPTS_PID+=($!)
     done
-
-    # Counteract ssh and GR lag
-    if [ $REMOTE_MEASUREMENT -eq 1 ]; then
-      sleep 2
-    fi
 
     for ((y = $TIMER ; y > 0 ; y -= 1)); do
       echo "Measurement $x/$MEASUREMENT_REPETITIONS complete in $y second(s)."
@@ -190,10 +196,11 @@ function measure
 
     # Kill scripts if running
     #sleep 1
-    if {ps -p ${MEASUREMENT_SCRIPTS_PID[*]}} &>/dev/null;
-      then
-        kill ${MEASUREMENT_SCRIPTS_PID[*]}
-    fi
+    #if {ps -p ${MEASUREMENT_SCRIPTS_PID[*]}} &>/dev/null;
+    #  then
+    #    kill ${MEASUREMENT_SCRIPTS_PID[*]}
+    #fi
+    kill $(jobs -p)
 
     # Save this measurement's data to special folder
     mkdir -p $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x
@@ -228,6 +235,7 @@ function plot
 
   # Call the plotting scripts as data
   echo "Starting to generate plots..."
+  echo "Plotting Python is: "$PLOT_PY" ("$OS")."
   for i in ${PLOT_SCRIPTS[@]}; do
     bash -c "$PLOT_PY $PLOT_PY_PATH/$i"
   done
@@ -254,7 +262,7 @@ trap "cd $THIS_PATH" EXIT;
 function main
 {
   # Clear up console
-  reset
+  #reset
   # Check if jobs_open directory is empty
   if [ ! "$(ls -A $JOBS_OPEN_PATH)" ]; then
     echo "There seem to be no open jobs. Measuring with default parameters."
@@ -285,4 +293,9 @@ function main
 
 }
 
-main
+if [ $REMOTE_MEASUREMENT -eq 1 ]; then
+  # Call to main included here
+    setup_remote_connection
+  else
+    main
+fi

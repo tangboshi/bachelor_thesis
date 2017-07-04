@@ -1,5 +1,6 @@
 #!/bin/bash
 #********************************* Options ************************************
+DEBUG_MODE=1
 ## Path and remote options
 #Remote options
 REMOTE_MEASUREMENT=0
@@ -14,6 +15,11 @@ if [ $REMOTE_MEASUREMENT -eq 1 ]; then
   THIS_PATH=$REMOTE_MEASUREMENT_MOUNT_POINT
   else
     THIS_PATH=$( cd $(dirname $0) ; pwd -P )
+fi
+
+if [ $DEBUG_MODE -eq 1 ]; then
+  mkdir -p $THIS_PATH/debug
+  THIS_PATH=$THIS_PATH/debug
 fi
 
 echo "THIS_PATH is: "$THIS_PATH"."
@@ -31,6 +37,11 @@ PLOT_PY_PATH=$THIS_PATH/py
 LOG_PATH=$THIS_PATH/logs
 export PLOT_DIRECTORY_PATH=$THIS_PATH/plots
 export DATA_SOURCE_PATH=$THIS_PATH/data
+
+if [ $DEBUG_MODE -eq 1 ]; then
+  # Needed because in case of debug mode THIS_PATH=$THIS_PATH/debug
+  PLOT_PY_PATH=$( cd $(dirname $0) ; pwd -P )/py
+fi
 
 if [ $REMOTE_MEASUREMENT -eq 1 ]; then
   MEASUREMENT_SCRIPT_PATH=$LOCATE_BASE_PATH/Tests
@@ -79,7 +90,7 @@ PLOT_SCRIPTS=( cdf.py )
 PLOT_ENABLED=1
 export PLOT_SAVE_ENABLED=1
 # The name of the saved files
-export PLOT_NAMES_TRUNK=throughput
+export PLOT_NAMES_TRUNK=untitled
 #******************************************************************************
 #    SET THIS TO 0 IF YOU WANT TO CARRY OUT MULTIPLE MEASUREMENTS IN A ROW!   *
 #******************************************************************************
@@ -88,6 +99,8 @@ MOVE_AFTER_JOB_DONE=0
 ## Specific plot parameters
 # Required to have the correct values for some calculations (absolute values)
 export PACKET_SIZE=1000 #bytes
+#*****************************************************************************#
+#DUMMY VARIABLES
 #******************************************************************************
 
 function setup_remote_connection
@@ -234,8 +247,9 @@ function plot
   echo "Now processing results..."
 
   # Call the plotting scripts as data
-  echo "Starting to generate plots..."
-  echo "Plotting Python is: "$PLOT_PY" ("$OS")."
+  #echo "Starting to generate plots..."
+  echo "Plotting Python should be: "$PLOT_PY" ("$OS")."
+
   for i in ${PLOT_SCRIPTS[@]}; do
     bash -c "$PLOT_PY $PLOT_PY_PATH/$i"
   done
@@ -285,6 +299,7 @@ function main
         plot | tee -a $LOG_PATH/$job_name.log;
       fi
       if [ $MOVE_AFTER_JOB_DONE -eq 1 ]; then
+        cp $job $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER/
         mv $job $JOBS_DONE_PATH/
       fi
       export MEASUREMENT_COUNTER=$((MEASUREMENT_COUNTER++))

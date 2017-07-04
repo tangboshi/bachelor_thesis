@@ -13,6 +13,6 @@ PLOT_SCRIPTS=( throughput.py rtt.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################
-export MEASUREMENT_OUTPUT_FILES="sender_times.txt,receiver_times"
+export RTT_DATA_FILES="sender_times.txt,sender_ack_received_times"
 export PLOT_TYPE="pdf,cdf"
 export SHOW_PLOT_AFTER_MEASUREMENT=1

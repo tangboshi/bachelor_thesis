@@ -7,7 +7,7 @@ print("Hello from rtt.py!")
 try:
     from variables import (
         data_source_path,
-        data_source_files,
+        rtt_data_files,
         plot_path,
         plot_type,
         measurement,
@@ -15,23 +15,26 @@ try:
         show_plot
     )
 except ImportError:
-    print("Probably not all data were imported correctly.")
+    print("Probably not all data were imported correctly!")
 
 # ------------------------------ Calculations ---------------------------------#
 # Create a repetitions X 1 matrix aka row vector with measurement data
 data = np.zeros(shape=(repetitions))
 
 for i in range(1,repetitions+1):
-    data_sent_path       =   data_source_path+'/'+str(i)+'/'+data_source_files[0]
-    ack_received_path    =   data_source_path+'/'+str(i)+'/'+data_source_files[1]
+    path                = data_source_path+'/'+str(i)+'/'
+    data_sent_path      = path+rtt_data_files["data_sent"]
+    ack_received_path   = path+rtt_data_files["ack_received"]
 
-    with open(data_sent_path) as f
-        data_sent_raw      =   f.readlines()
-    with open(ack_received_path) as f
-        ack_received_raw   =   f.readlines()
+    with open(data_sent_path) as file
+        for line in file
+        line = line.strip(' ')
+        data_sent_times.append(float(line))
 
-    data_sent_times     = [x.strip('\n') for x in data_sent_raw]
-    ack_received_times  = [x.strip('\n') for x in ack_received_raw]
+    with open(ack_received_path) as file
+        for line in file
+        line = line.strip(' ')
+        data_sent_times.append(float(line))
 
     rtt[i-1] = ack_received_times[i-1] - data_sent_times[i-1]
 print(data)

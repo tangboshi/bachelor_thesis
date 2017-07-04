@@ -7,8 +7,8 @@
 # nodes = 2
 
 TIMER=4
-export MEASUREMENT_REPETITIONS=1
-MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II_1.py )
+export MEASUREMENT_REPETITIONS=3
+MEASUREMENT_SCRIPTS=( csma_80211_II_1.py csma_80211_I.py )
 PLOT_SCRIPTS=( throughput.py rtt.py )
 #################################################
 # first specify sender and then receiver output #

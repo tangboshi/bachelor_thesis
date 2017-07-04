@@ -218,7 +218,7 @@ function measure
     # Save this measurement's data to special folder
     mkdir -p $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x
     echo  "Measurement $x raw data directory created $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/."
-    mv $RAW_DATA_SOURCE_PATH/* $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/
+    mv -v $RAW_DATA_SOURCE_PATH/* $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/
     echo  "Measurement $x raw data moved to $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/."
     printf "\n"
 

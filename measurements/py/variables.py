@@ -10,6 +10,12 @@ packet_size         = int(os.environ["PACKET_SIZE"])
 show_plot           = int(os.environ["SHOW_PLOT_AFTER_MEASUREMENT"])
 plot_type           = os.environ["PLOT_TYPE"].split(",")
 
+#throughput
+throughput_data_files_array = os.environ["THROUGHPUT_DATA_FILES"].split(",")
+throughput_data_files = {
+    "receiver_data_received": throughput_data_files_array[0]
+}
+
 # RTT
 rtt_data_files_array  = os.environ["RTT_DATA_FILES"].split(",")
 rtt_data_files = {

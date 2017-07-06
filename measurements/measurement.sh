@@ -1,6 +1,6 @@
 #!/bin/bash
 #********************************* Options ************************************
-DEBUG_MODE=1
+DEBUG_MODE=0
 ## Path and remote options
 #Remote options
 REMOTE_MEASUREMENT=0

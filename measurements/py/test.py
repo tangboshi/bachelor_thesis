@@ -49,3 +49,7 @@ import myplot
 fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="cdf")
 fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
 fancyplot.show()
+
+mystring ="abc"
+result = mystring.split(",")
+print(result)

@@ -6,7 +6,7 @@ class myplot:
     def __init__(   self, plottype, data, bins, title="", xlabel="", ylabel="",
                     show=False, savepath=False
                 ):
-                
+
         print("Hello from myplot.py!")
         self.data           = data
         self.bins           = bins
@@ -19,6 +19,7 @@ class myplot:
         plottypes = {
             "cdf":      lambda: self.cdf(),
             "pdf":      lambda: self.pdf(),
+            "boxplot":  lambda: self.boxplot(),
             "debug":    lambda: self.debug()
         }
 
@@ -52,6 +53,9 @@ class myplot:
         self.setLabels(             xlabel=self.xlabel,
                                     ylabel="probability density",
                                     title=self.title)
+
+    def boxplot(self):
+        print("Boxplot not implemented yet!")
 
     def setLabels(self, xlabel="", ylabel="", title=""):
         self.ax.set_xlabel(xlabel)

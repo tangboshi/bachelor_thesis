@@ -46,10 +46,34 @@ myDict["Somerandomword"]()
 '''
 
 import myplot
-fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="cdf")
+fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
 fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
 fancyplot.show()
 
-mystring ="abc"
-result = mystring.split(",")
-print(result)
+#mystring ="abc"
+#result = mystring.split(",")
+#print(result)
+
+# a = [1,2]
+# b = a
+# a = []
+
+#a = [1,2]
+#b = a
+#del a[:]
+# print(a)
+# print(b)
+
+# a = [0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025]
+# mean = float(sum(a)) / len(a)
+# print(mean)
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+# x = np.random.normal(size=100)
+# n, bins, patches = plt.hist(x)
+# cm = plt.cm.get_cmap('jet')
+# for index, patch in enumerate(patches):
+#     plt.setp(patch, 'facecolor', cm(float(index/len(patches))))
+#
+# plt.show()

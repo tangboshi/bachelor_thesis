@@ -21,11 +21,10 @@ except ImportError:
 # ------------------------------ Calculations ---------------------------------#
 # Create a repetitions X 1 matrix aka row vector with measurement data
 data = np.zeros(shape=(repetitions))
-data_sent_times = np.zeros(shape=(repetitions))
-ack_received_times = np.zeros(shape=(repetitions))
+data_sent_times = []
+ack_received_times = []
 rtt_single_measurement = []
 rtt = np.zeros(shape=(repetitions))
-rtt_single_measurement = []
 
 for i in range(1,repetitions+1):
     path                = data_source_path+'/'+str(i)+'/'
@@ -37,29 +36,46 @@ for i in range(1,repetitions+1):
         for line in f:
             line = line.strip('\n')
             line = line.replace(' ', '.')
-            data_sent_times = np.append(data_sent_times, float(line))
+            data_sent_times += [float(line)]
             print("data_sent: "+line)
 
     with open(ack_received_path) as f:
         for line in f:
             line = line.strip('\n')
             line = line.replace(' ', '.')
-            ack_received_times = np.append(ack_received_times, float(line))
+            ack_received_times += [float(line)]
             print("ack_received: "+line)
 
     # If I wanted I could now plot packet loss as well...
     packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
     packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
-    packet_loss_percent = str((packet_loss_rel*100))+"%"
+    packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
     print("packet loss in %: "+packet_loss_percent)
 
     for index, ack_time in enumerate(ack_received_times):
         res = ack_time - data_sent_times[index]
-        rtt_single_measurement = np.append(rtt_single_measurement, res)
+        rtt_single_measurement += [round(res,5)]
+
+    print("\nThe resulting RTTs of this single measurement are:")
+    print(rtt_single_measurement)
+    print("\n")
 
     # Now calculate mean RTT for this measurement
-    rtt_single_measurement_mean = np.mean(rtt_single_measurement)
-    rtt[i-1] = rtt_single_measurement_mean
+    # print(str(float(sum(rtt_single_measurement))))
+    # print(str(len(rtt_single_measurement)))
+    rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
+    # rtt_single_mean seems to be calculated correctly, but source data is odd.
+    # print("\nThe resulting mean RTT of this single measurement is:")
+    # print(rtt_single_mean)
+    # print("\n")
+
+    rtt[i-1] = rtt_single_mean
+    
+    # Prepare next iteration
+    rtt_single_measurement = []
+    ack_received_times = []
+    data_sent_times = []
+
 print(rtt)
 #------------------------------------------------------------------------------#
 

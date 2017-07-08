@@ -52,10 +52,13 @@ for index, plot in enumerate(plot_type):
     }
 
     myplot.myplot(  data=data,
-            bins=repetitions,
-            plottype=plot,
-            title="Throughput "+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
-            savepath=plot_path+"/"+measurement+"/",
-            show=show_plot)
+        bins=np.arange(
+            min(data)-float(packet_size),
+            max(data)+float(packet_size),
+            packet_size/25),
+        plottype=plot,
+        title="Throughput "+titles[plot],
+        xlabel=xlabels[plot],
+        ylabel=ylabels[plot],
+        savepath=plot_path+"/"+measurement+"/",
+        show=show_plot)

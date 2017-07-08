@@ -8,6 +8,7 @@ class myplot:
                 ):
 
         print("Hello from myplot.py!")
+        print("I will print a "+plottype+" for you now!")
         self.data           = data
         self.bins           = bins
         self.plottype       = plottype
@@ -25,6 +26,8 @@ class myplot:
 
         plottypes[plottype]()
 
+        self.patches.fill = True;
+
         if(savepath):
             self.save(savepath)
 
@@ -33,26 +36,31 @@ class myplot:
 
     def cdf(self):
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
-                                    bins=self.bins,
-                                    normed=1,
-                                    histtype='step',
-                                    cumulative=True,
-                                    label='CDF')
-        self.setLabels(             xlabel=self.xlabel,
-                                    ylabel="cumulative density",
-                                    title=self.title)
-
+                        bins=self.bins,
+                        normed=1,
+                        histtype='step',
+                        cumulative=True,
+                        label='CDF')
+        self.setLabels( xlabel=self.xlabel,
+                        ylabel="cumulative density",
+                        title=self.title)
+        print(self.patches)
 
     def pdf(self):
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
-                                    bins=self.bins,
-                                    normed=1,
-                                    histtype='step',
-                                    cumulative=False,
-                                    label='CDF')
-        self.setLabels(             xlabel=self.xlabel,
-                                    ylabel="probability density",
-                                    title=self.title)
+                        bins=self.bins,
+                        align='left',
+                        fill='true',
+                        normed=1,
+                        cumulative=False,
+                        label='CDF')
+        self.setLabels( xlabel=self.xlabel,
+                        ylabel="probability density",
+                        title=self.title)
+
+        cm = plt.cm.get_cmap('jet')
+        for index, patch in enumerate(self.patches):
+            plt.setp(patch, 'facecolor', cm(float(index/len(self.patches))))
 
     def boxplot(self):
         print("Boxplot not implemented yet!")

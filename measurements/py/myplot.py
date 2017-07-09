@@ -3,7 +3,8 @@ import numpy as np
 import os
 
 class myplot:
-    def __init__(   self, plottype, data, bins, title="", xlabel="", ylabel="",
+    def __init__(   self, plottype, data, bins="",
+                    title="", xlabel="", ylabel="",
                     show=False, savepath=False
                 ):
 
@@ -26,8 +27,6 @@ class myplot:
 
         plottypes[plottype]()
 
-        self.patches.fill = True;
-
         if(savepath):
             self.save(savepath)
 
@@ -35,6 +34,9 @@ class myplot:
             self.show()
 
     def cdf(self):
+        if (self.bins == ""):
+            print("Error: bins undefined.")
+            return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         normed=1,
@@ -47,6 +49,9 @@ class myplot:
         print(self.patches)
 
     def pdf(self):
+        if(self.bins == ""):
+            print("Error: bins undefined.")
+            return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         align='left',
@@ -63,7 +68,8 @@ class myplot:
             plt.setp(patch, 'facecolor', cm(float(index/len(self.patches))))
 
     def boxplot(self):
-        print("Boxplot not implemented yet!")
+        self.plot = plt.boxplot(self.data)
+        #print("Whiskers: "+self.plot["whiskers"])
 
     def setLabels(self, xlabel="", ylabel="", title=""):
         self.ax.set_xlabel(xlabel)

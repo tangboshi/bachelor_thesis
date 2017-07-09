@@ -46,7 +46,8 @@ myDict["Somerandomword"]()
 '''
 
 import myplot
-fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
+#fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
+fancyplot = myplot.myplot(data=data, plottype="boxplot")
 fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
 fancyplot.show()
 

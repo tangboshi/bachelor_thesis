@@ -1,6 +1,19 @@
-from variables import *
+#from variables import *
 import numpy as np
 import lines
+
+# import subprocess
+# import os
+# source = os.path.dirname(__file__)
+# parent = os.path.join(source, '../')
+# script_path = os.path.join(parent, 'measurement.conf')
+#
+# subprocess.run([script_path], stdout=subprocess.PIPE)
+#
+
+
+
+print("Hello from process_file.py");
 
 '''
 Note that this script only generates a single data point each time it is called.
@@ -24,7 +37,7 @@ class process_file:
         return lines*packet_size
 
     def rtt(self):
-        data = np.zeros(shape=(repetitions))
+        data = []
         data_sent_times = []
         ack_received_times = []
         rtt_single_measurement = []

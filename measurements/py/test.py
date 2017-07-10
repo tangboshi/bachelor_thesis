@@ -45,11 +45,11 @@ myDict[1]()
 myDict["Somerandomword"]()
 '''
 
-import myplot
-#fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
-fancyplot = myplot.myplot(data=data, plottype="boxplot")
-fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
-fancyplot.show()
+# import myplot
+# #fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
+# fancyplot = myplot.myplot(data=data, plottype="boxplot")
+# fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
+# fancyplot.show()
 
 #mystring ="abc"
 #result = mystring.split(",")
@@ -78,3 +78,17 @@ fancyplot.show()
 #     plt.setp(patch, 'facecolor', cm(float(index/len(patches))))
 #
 # plt.show()
+
+# import subprocess
+# p = subprocess.run("./test.sh", stdout=subprocess.PIPE)
+# for line in p.stdout:
+#     print(line)
+
+import os
+
+if os.environ.get('Foo') is not None:
+    measurement         = os.environ["MEASUREMENT_COUNTER"]
+else:
+    measurement = "abc"
+
+print(measurement)

@@ -15,21 +15,24 @@ except ImportError:
     print("Probably not all data were imported correctly!")
     print(ImportError)
 
-
 # Modify these variables
-measurement = 9
+measurement = 95
 repetitions = 15 # be sure to have the correct value here
-data_file_names = ["sender_data_sent.txt", "sender_ack_received.txt"]
+data_file_names = ["sender_bfr_dq.txt", "sender_ack_received.txt"]
 plot_type = "pdf"
 processing_scheme = "rtt"
 xlabel = "fancyness"
 ylabel= "awesomeness"
 title = "super nice"
 show_plot = False
-savepath = plot_path+"/"+measurement+"/"
+savepath = plot_path+"/"+str(measurement)+"/"
 
 # Don't modify these variables
-# NO VARIABLES HERE ATM
+data_source_path += "/"+str(measurement)
+
+#Testing
+print(data_source_path)
+print(rtt_data_files)
 
 ## Trigger data processing
 data = []

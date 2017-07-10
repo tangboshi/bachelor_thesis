@@ -35,14 +35,20 @@ for i in range(1,repetitions+1):
     with open(data_sent_path) as f:
         for line in f:
             line = line.strip('\n')
-            line = line.replace(' ', '.')
+            secs, usecs = line.split(" ",1)
+            missing_zeros = 6 - len(usecs)
+            usecs = ("0" * missing_zeros) + usecs
+            line = ".".join([secs, usecs])
             data_sent_times += [float(line)]
             print("data_sent: "+line)
 
     with open(ack_received_path) as f:
         for line in f:
             line = line.strip('\n')
-            line = line.replace(' ', '.')
+            secs, usecs = line.split(" ",1)
+            missing_zeros = 6 - len(usecs)
+            usecs = ("0" * missing_zeros) + usecs
+            line = ".".join([secs, usecs])
             ack_received_times += [float(line)]
             print("ack_received: "+line)
 
@@ -65,12 +71,12 @@ for i in range(1,repetitions+1):
     # print(str(len(rtt_single_measurement)))
     rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
     # rtt_single_mean seems to be calculated correctly, but source data is odd.
-    # print("\nThe resulting mean RTT of this single measurement is:")
-    # print(rtt_single_mean)
-    # print("\n")
+    print("\nThe resulting mean RTT of this single measurement is:")
+    print(rtt_single_mean)
+    print("\n")
 
     rtt[i-1] = rtt_single_mean
-    
+
     # Prepare next iteration
     rtt_single_measurement = []
     ack_received_times = []

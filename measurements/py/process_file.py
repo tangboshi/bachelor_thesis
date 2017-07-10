@@ -30,7 +30,7 @@ class process_file:
             "rtt":          lambda: self.rtt()
         }
 
-        return modes[mode]()
+        self.result = modes[mode]()
 
     def throughput(self):
         lines = linecount(self.files[0])
@@ -78,8 +78,8 @@ class process_file:
                             len(rtt_single_measurement)
         # rtt_single_mean seems to be calculated correctly,
         # but source data is odd.
-        # print("\nThe resulting mean RTT of this single measurement is:")
-        # print(rtt_single_mean)
-        # print("\n")
+        print("\nThe resulting mean RTT of this single measurement is:")
+        print(rtt_single_mean)
+        print("\n")
 
         return rtt_single_mean

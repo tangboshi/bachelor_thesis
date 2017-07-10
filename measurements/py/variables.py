@@ -17,7 +17,7 @@ else:
 if os.environ.get('DATA_SOURCE_PATH') is not None:
     data_source_path    = os.environ["DATA_SOURCE_PATH"]+"/"+measurement
 else:
-    data_source_path    = "/home/inets/0_ba/git/measurement/data"
+    data_source_path    = "/home/inets/0_ba/bachelor_thesis/measurements/data"
 
 if os.environ.get('PLOT_DIRECTORY_PATH') is not None:
     plot_path           = os.environ["PLOT_DIRECTORY_PATH"]

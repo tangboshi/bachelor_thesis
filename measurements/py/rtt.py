@@ -103,7 +103,7 @@ for index, plot in enumerate(plot_type):
     }
 
     myplot.myplot(  data=data,
-            bins=repetitions,
+            bins=5,
             plottype=plot,
             title="RTT "+titles[plot],
             xlabel=xlabels[plot],

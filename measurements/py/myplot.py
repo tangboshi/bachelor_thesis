@@ -58,7 +58,7 @@ class myplot:
                         fill='true',
                         normed=1,
                         cumulative=False,
-                        label='CDF')
+                        label='PDF')
         self.setLabels( xlabel=self.xlabel,
                         ylabel="probability density",
                         title=self.title)

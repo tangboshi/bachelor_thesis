@@ -20,7 +20,6 @@ except ImportError:
 
 # ------------------------------ Calculations ---------------------------------#
 # Create a repetitions X 1 matrix aka row vector with measurement data
-data = np.zeros(shape=(repetitions))
 data_sent_times = []
 ack_received_times = []
 rtt_single_measurement = []
@@ -40,7 +39,7 @@ for i in range(1,repetitions+1):
             usecs = ("0" * missing_zeros) + usecs
             line = ".".join([secs, usecs])
             data_sent_times += [float(line)]
-            print("data_sent: "+line)
+            #print("data_sent: "+line)
 
     with open(ack_received_path) as f:
         for line in f:
@@ -50,21 +49,21 @@ for i in range(1,repetitions+1):
             usecs = ("0" * missing_zeros) + usecs
             line = ".".join([secs, usecs])
             ack_received_times += [float(line)]
-            print("ack_received: "+line)
+            #print("ack_received: "+line)
 
     # If I wanted I could now plot packet loss as well...
     packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
     packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
     packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
-    print("packet loss in %: "+packet_loss_percent)
+    #print("packet loss in %: "+packet_loss_percent)
 
     for index, ack_time in enumerate(ack_received_times):
         res = ack_time - data_sent_times[index]
         rtt_single_measurement += [round(res,5)]
 
-    print("\nThe resulting RTTs of this single measurement are:")
-    print(rtt_single_measurement)
-    print("\n")
+    #print("\nThe resulting RTTs of this single measurement are:")
+    #print(rtt_single_measurement)
+    #print("\n")
 
     # Now calculate mean RTT for this measurement
     # print(str(float(sum(rtt_single_measurement))))
@@ -89,28 +88,30 @@ for index, plot in enumerate(plot_type):
 
     xlabels = {
         "cdf": "rtt",
-        "pdf": "rtt"
+        "pdf": "rtt",
+        "boxplot": "",
+        "bar": ""
     }
 
     ylabels = {
         "pdf": "",
-        "cdf": ""
+        "cdf": "",
+        "boxplot": "rtt",
+        "bar":  "rtt"
     }
 
     titles = {
         "pdf":  "PDF",
-        "cdf":  "CDF"
+        "cdf":  "CDF",
+        "boxplot": "boxplot",
+        "bar":  "bar chart"
     }
 
-    myplot.myplot(  data=data,
-<<<<<<< HEAD
+    myplot.myplot(  data=rtt,
             bins=np.arange(
-                min(data),
-                max(data),
-                2),
-=======
-            bins=5,
->>>>>>> 2e585eb2991d69cf496cf76f8725673749ee3cc8
+                min(rtt)-0.002,
+                max(rtt)+0.002,
+                0.07/1000),
             plottype=plot,
             title="RTT "+titles[plot],
             xlabel=xlabels[plot],

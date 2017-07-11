@@ -47,10 +47,10 @@ if os.environ.get('THROUGHPUT_DATA_FILES') is not None:
     }
 else:
     throughput_data_files = {
-        "receiver_data_received": "invalid name"
+        "receiver_data_received": "invalid_file.txt"
     }
 
-# RTT
+#RTT
 if os.environ.get('RTT_DATA_FILES') is not None:
     rtt_data_files_array  = os.environ["RTT_DATA_FILES"].split(",")
     rtt_data_files = {
@@ -59,6 +59,32 @@ if os.environ.get('RTT_DATA_FILES') is not None:
     }
 else:
     rtt_data_files = {
-        "data_sent":    "invalid name",
-        "ack_received": "invalid name 2"
+        "data_sent":    "invalid_file.txt",
+        "ack_received": "invalid_file_2.txt"
+    }
+
+#retransmissions
+#ugly to have two environment variables for this, but w/e
+#gotta cover both acks and data, whatcha gonna do?
+if os.environ.get('RETXS_DATA_FILES') is not None:
+    retxs_data_files_array  = os.environ["RETXS_DATA_FILES"].split(",")
+    retxs_data_files = {
+        "retxs":       retxs_data_files_array[0],
+        "max_retxs":   retxs_data_files_array[1]
+    }
+else:
+    retxs_data_files = {
+        "retxs":       "invalid_file.txt",
+        "max_retxs":   "invalid_file_2.txt"
+    }
+if os.environ.get('RETXS2_DATA_FILES') is not None:
+    retxs2_data_files_array  = os.environ["RETXS2_DATA_FILES"].split(",")
+    retxs2_data_files = {
+        "retxs":       retxs2_data_files_array[0],
+        "max_retxs":   retxs2_data_files_array[1]
+    }
+else:
+    retxs2_data_files = {
+        "retxs":       "invalid_file.txt",
+        "max_retxs":   "invalid_file_2.txt"
     }

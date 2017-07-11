@@ -6,8 +6,8 @@
 # BACKOFF = 2ms
 # nodes = 2
 
-TIMER=8
-export MEASUREMENT_REPETITIONS=5
+TIMER=5
+export MEASUREMENT_REPETITIONS=4
 MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II.py )
 PLOT_SCRIPTS=( throughput.py rtt.py )
 #################################################
@@ -15,5 +15,5 @@ PLOT_SCRIPTS=( throughput.py rtt.py )
 #################################################
 export THROUGHPUT_DATA_FILES="receiver_data_received.txt"
 export RTT_DATA_FILES="sender_bfr_dq.txt,sender_ack_received.txt"
-export PLOT_TYPE="pdf,cdf"
+export PLOT_TYPE="pdf,cdf,boxplot,bar"
 export SHOW_PLOT_AFTER_MEASUREMENT=1

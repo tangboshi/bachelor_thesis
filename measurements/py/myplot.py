@@ -19,6 +19,8 @@ class myplot:
         self.fig, self.ax   = plt.subplots()
 
         plottypes = {
+            "bar":      lambda: self.bar(),
+            "line":     lambda: self.line(),
             "cdf":      lambda: self.cdf(),
             "pdf":      lambda: self.pdf(),
             "boxplot":  lambda: self.boxplot(),
@@ -27,16 +29,39 @@ class myplot:
 
         plottypes[plottype]()
 
+        no_sci_label = ["boxplot"]
+
+        if plottype not in no_sci_label:
+            plt.ticklabel_format(style='sci', scilimits=(0,0))
+
         if(savepath):
             self.save(savepath)
 
         if(show):
             self.show()
 
+    def bar(self):
+        # first rhv is an experimental value, choose what pleases your eye
+        data_points=len(self.data)
+        width=20/data_points
+        index=np.arange( data_points )
+
+        self.ax.bar(left=index + width,
+            height=self.data
+         )
+
+        #  self.setLabels(ylabel=self.ylabel
+        #     xlabel=self.xlabel
+        #     title=self.title
+        #  )
+
+    def line(self):
+        print("Line chart not yet implemented.")
+
     def cdf(self):
-        if (self.bins == ""):
-            print("Error: bins undefined.")
-            return
+        # if not self.bins:
+        #     print("Error: bins undefined.")
+        #     return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         normed=1,
@@ -49,9 +74,9 @@ class myplot:
         print(self.patches)
 
     def pdf(self):
-        if(self.bins == ""):
-            print("Error: bins undefined.")
-            return
+        # if not self.bins:
+        #     print("Error: bins undefined.")
+        #     return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         align='left',
@@ -69,6 +94,9 @@ class myplot:
 
     def boxplot(self):
         self.plot = plt.boxplot(self.data)
+        self.setLabels( xlabel="measurement",
+                        ylabel=self.ylabel,
+                        title=self.title)
         #print("Whiskers: "+self.plot["whiskers"])
 
     def setLabels(self, xlabel="", ylabel="", title=""):

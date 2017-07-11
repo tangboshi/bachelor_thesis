@@ -38,24 +38,31 @@ for index, plot in enumerate(plot_type):
 
     xlabels = {
         "cdf": "throughput",
-        "pdf": "throughput"
+        "pdf": "throughput",
+        "boxplot": "",
+        "bar": ""
     }
 
     ylabels = {
         "pdf": "",
-        "cdf": ""
+        "cdf": "",
+        "boxplot": "throughput",
+        "bar":  "throughput"
     }
 
     titles = {
         "pdf": "PDF",
-        "cdf":  "CDF"
+        "cdf":  "CDF",
+        "boxplot": "boxplot",
+        "bar": "bar chart"
     }
 
     myplot.myplot(  data=data,
         bins=np.arange(
             min(data)-float(packet_size),
             max(data)+float(packet_size),
-            packet_size/25),
+            (max(data)-min(data))/25),
+            #packet_size/25),
         plottype=plot,
         title="Throughput "+titles[plot],
         xlabel=xlabels[plot],

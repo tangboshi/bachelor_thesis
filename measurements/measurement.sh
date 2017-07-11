@@ -68,7 +68,7 @@ function prepare_measurement
         echo  "No measurement scripts set,
               going through files inside of $LOCATE_BASE_PATH."
         echo "Please add a the full path of one of the files to \$SCRITPS."
-        #locate -r "$LOCATE_BASE_PATH" | grep "\.py$"
+        locate -r "$LOCATE_BASE_PATH" | grep "\.py$"
         echo "Terminated."
         exit -1
     fi
@@ -193,9 +193,9 @@ function main
       source $job;
       job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
       #echo $job_name
-      measure | tee -a $LOG_PATH/$job_name.log
+      measure | tee -a $LOG_PATH/$job_name"_"$MEASUREMENT_COUNTER.log
       if [ $PLOT_ENABLED -eq 1 ]; then
-        plot | tee -a $LOG_PATH/$job_name.log;
+        plot | tee -a $LOG_PATH/$job_name"_"$MEASUREMENT_COUNTER.log;
       fi
       if [ $MOVE_AFTER_JOB_DONE -eq 1 ]; then
         cp $job $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER/
@@ -206,6 +206,13 @@ function main
   fi
 
 }
+
+if [ $DEBUG_MODE -eq 1 ]; then
+  printf "\n"
+  echo "+-----------------------------------------------------------+"
+  echo "| Debug mode is active, results are saved in the debug dirs |"
+  echo "+-----------------------------------------------------------+"
+fi
 
 if [ $REMOTE_MEASUREMENT -eq 1 ]; then
   # Call to main included here

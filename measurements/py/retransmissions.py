@@ -1,11 +1,15 @@
 import numpy as np
-import lines
+import myplot
 import os
 
+print("Hello from retransmissions.py!")
+
+## Get all required information from OS
 try:
     from variables import (
         data_source_path,
-        retransmission_data_files,
+        retxs_data_files,
+        retxs2_data_files,
         plot_path,
         plot_type,
         measurement,
@@ -13,63 +17,74 @@ try:
         show_plot
     )
 except ImportError:
-    print("Probably not all variables were loaded correctly.")
+    print("Probably not all data were imported correctly!")
 
 # ------------------------------ Calculations ---------------------------------#
 # Create a repetitions X 1 matrix aka row vector with measurement data
-data = np.zeros(shape=(repetitions))
-data_sent_times = []
-ack_received_times = []
+data = []
+data_retxs = []
+data_max_retxs = []
+ack_retxs = []
+ack_max_retxs = []
 
-# Calculate retransmitted
-for i in range(1,repetitions+1):
-    path                = data_source_path+'/'+str(i)+'/'
-    data_sent_path      = path+retransmissions_data_files["data_sent"]
-    data_resent_path    = path+retransmissions_data_files["data_resent"]
+for i in range(1, repetitions+1):
+    path                 = data_source_path+'/'+str(i)+'/'
+    data_retxs_path      = path+retxs_data_files["rtxs"]
+    data_max_retxs_path  = path+retxs_data_files["max_rtxs"]
+    ack_retxs_path       = path+retxs2_data_files["rtxs"]
+    ack_max_retxs_path   = path+retxs2_data_files["max_rtxs"]
 
-    with open(data_sent_path) as f:
-        for line in f:
-            line = line.strip('\n')
-            line = line.replace(' ', '.')
-            data_sent_times.append(float(line))
+    file_list = [
+        data_retxs_path,
+        data_max_retxs_path,
+        ack_retxs_path,
+        ack_max_retxs_path
+    ]
 
-    with open(ack_received_path) as f:
-        for line in f:
-            line = line.strip('\n')
-            line = line.replace(' ', '.')
-            ack_received_times.append(float(line))
+    for index, data_file in enumerate(file_list):
+        with open(data_file) as f:
+            for line in f:
+                line.strip("\n")
+                 = line.split(" ")
 
-    rtt[i-1] = ack_received_times[i-1] - data_sent_times[i-1]
-
-# Calculate # of retransmission tries per frame
-
-print(data)
 #------------------------------------------------------------------------------#
 
 for index, plot in enumerate(plot_type):
 
     xlabels = {
-        "cdf":      "retransmissions",
-        "pdf":      "retransmissions",
-        "boxplot":  "retransmissions"
+        "cdf": "rtt",
+        "pdf": "rtt"
     }
 
     ylabels = {
-        "pdf":      "",
-        "cdf":      "",
-        "boxplot":  ""
+        "pdf": "",
+        "cdf": ""
     }
 
     titles = {
-        "pdf":      "PDF",
-        "cdf":      "CDF",
-        "boxplot":  "Boxplot"
+        "pdf":  "PDF",
+        "cdf":  "CDF"
     }
 
-    myplot.myplot(  data=data,
-            bins=repetitions,
+    myplot.myplot(  data=rtt,
+            bins=np.arange(
+                min(rtt)-0.002,
+                max(rtt)+0.002,
+                (max(rtt)-min(rtt))/25,
             plottype=plot,
-            title="RTT "+titles[plot],
+            title="retransmissions (data)"+titles[plot],
+            xlabel=xlabels[plot],
+            ylabel=ylabels[plot],
+            savepath=plot_path+"/"+measurement+"/",
+            show=show_plot)
+
+    myplot.myplot(  data=rtt,
+            bins=np.arange(
+                min(rtt)-0.002,
+                max(rtt)+0.002,
+                0.07/1000),
+            plottype=plot,
+            title="retransmissions (acks)"+titles[plot],
             xlabel=xlabels[plot],
             ylabel=ylabels[plot],
             savepath=plot_path+"/"+measurement+"/",

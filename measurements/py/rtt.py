@@ -103,10 +103,14 @@ for index, plot in enumerate(plot_type):
     }
 
     myplot.myplot(  data=data,
+<<<<<<< HEAD
             bins=np.arange(
                 min(data),
                 max(data),
                 2),
+=======
+            bins=5,
+>>>>>>> 2e585eb2991d69cf496cf76f8725673749ee3cc8
             plottype=plot,
             title="RTT "+titles[plot],
             xlabel=xlabels[plot],

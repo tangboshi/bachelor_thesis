@@ -84,11 +84,17 @@ myDict["Somerandomword"]()
 # for line in p.stdout:
 #     print(line)
 
-import os
+# import os
+#
+# if os.environ.get('Foo') is not None:
+#     measurement         = os.environ["MEASUREMENT_COUNTER"]
+# else:
+#     measurement = "abc"
+#
+# print(measurement)
 
-if os.environ.get('Foo') is not None:
-    measurement         = os.environ["MEASUREMENT_COUNTER"]
-else:
-    measurement = "abc"
-
-print(measurement)
+import myplot
+#fancyplot = myplot.myplot(data=data, bins=repetitions, plottype="pdf")
+fancyplot = myplot.myplot(data=data, plottype="line")
+fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
+fancyplot.show()

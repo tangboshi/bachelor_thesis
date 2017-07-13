@@ -1,6 +1,7 @@
 import numpy as np
 import subprocess
 import myplot
+import os.path as pt
 
 print("Hello from throughput.py!")
 
@@ -26,11 +27,16 @@ data = np.zeros(shape=(repetitions))
 for i in range(1,repetitions+1):
     file_path = data_source_path+'/'+str(i)+'/'
     file_path = file_path+throughput_data_files["receiver_data_received"]
-    linecount = subprocess.run(['wc', '-l', file_path], stdout=subprocess.PIPE)
-    linecount = linecount.stdout.decode('utf-8')
-    linecount = linecount.partition(" ")[0]
-    linecount = int(linecount)
-    data[i-1] = linecount*packet_size
+    if pt.isfile(file_path):
+        linecount = subprocess.run(['wc', '-l', file_path], stdout=subprocess.PIPE)
+        linecount = linecount.stdout.decode('utf-8')
+        linecount = linecount.partition(" ")[0]
+        linecount = int(linecount)
+        data[i-1] = linecount*packet_size
+    else:
+        # no data put through
+        print("Data file not found. Probably zero throughput.")
+        data[i-1] = 0
 print(data)
 #------------------------------------------------------------------------------#
 

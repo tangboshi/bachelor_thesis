@@ -49,7 +49,7 @@ for i in range(1, repetitions+1):
                     data[index] = map(int, line.split(" "))
         else:
             print(index)
-            data[index] = [-1]
+            data[index] = [5]
 
 #------------------------------------------------------------------------------#
 
@@ -57,12 +57,16 @@ for index, plot in enumerate(plot_type):
 
     xlabels = {
         "cdf": "rtt",
-        "pdf": "rtt"
+        "pdf": "rtt",
+        "boxplot": "",
+        "bar": ""
     }
 
     ylabels = {
         "pdf": "",
-        "cdf": ""
+        "cdf": "",
+        "boxplot": "retransmissions",
+        "bar": "retransmissions"
     }
 
     titles1 = {
@@ -83,11 +87,11 @@ for index, plot in enumerate(plot_type):
 
     for index, data_set in enumerate(plot_data):
         myplot.myplot(  data=data_set,
-                bins=repetitions,
-                # bins=np.arange(
-                #     min(data_set)-1,
-                #     max(data_set)+1,
-                #     (max(data_set)-min(data_set))/25),
+                #bins=repetitions,
+                bins=np.arange(
+                    min(data_set)-1,
+                    max(data_set)+1,
+                    (max(data_set)-min(data_set))/25),
                 plottype=plot,
                 title=titles1[index]+titles2[plot],
                 xlabel=xlabels[plot],

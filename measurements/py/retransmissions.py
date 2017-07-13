@@ -29,10 +29,10 @@ ack_max_retxs = []
 
 for i in range(1, repetitions+1):
     path                 = data_source_path+'/'+str(i)+'/'
-    data_retxs_path      = path+retxs_data_files["rtxs"]
-    data_max_retxs_path  = path+retxs_data_files["max_rtxs"]
-    ack_retxs_path       = path+retxs2_data_files["rtxs"]
-    ack_max_retxs_path   = path+retxs2_data_files["max_rtxs"]
+    data_retxs_path      = path+retxs_data_files["retxs"]
+    data_max_retxs_path  = path+retxs_data_files["max_retxs"]
+    ack_retxs_path       = path+retxs2_data_files["retxs"]
+    ack_max_retxs_path   = path+retxs2_data_files["max_retxs"]
 
     file_list = [
         data_retxs_path,

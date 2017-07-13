@@ -49,7 +49,7 @@ for i in range(1, repetitions+1):
                     data[index] = map(int, line.split(" "))
         else:
             print(index)
-            data[index] = [0]
+            data[index] = [-1]
 
 #------------------------------------------------------------------------------#
 

@@ -97,21 +97,24 @@ for index, plot in enumerate(plot_type):
         "cdf": "rtt",
         "pdf": "rtt",
         "boxplot": "",
-        "bar": ""
+        "bar": "",
+        "line": ""
     }
 
     ylabels = {
         "pdf": "",
         "cdf": "",
         "boxplot": "rtt",
-        "bar":  "rtt"
+        "bar":  "rtt",
+        "line": "rtt"
     }
 
     titles = {
         "pdf":  "PDF",
         "cdf":  "CDF",
         "boxplot": "boxplot",
-        "bar":  "bar chart"
+        "bar":  "bar chart",
+        "line": "line chart"
     }
 
     myplot.myplot(data=rtt,

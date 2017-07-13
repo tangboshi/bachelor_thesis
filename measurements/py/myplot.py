@@ -55,7 +55,7 @@ class myplot:
             title=self.title
         )
 
-        self.ax.set_xticklabels(list(range(1,data_points+1)))
+        self.ax.set_xticklabels("1" "2" "3" "4")
 
     def line(self):
         print("Line chart not yet implemented.")

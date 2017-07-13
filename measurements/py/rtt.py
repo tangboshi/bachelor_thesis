@@ -31,37 +31,38 @@ for i in range(1,repetitions+1):
     ack_received_path   = path+rtt_data_files["ack_received"]
 
     # Calculate RTT for each packet
-    #if os.path.isfile(data_sent_path):
-    with open(data_sent_path) as f:
-        for line in f:
-            line = line.strip('\n')
-            secs, usecs = line.split(" ",1)
-            missing_zeros = 6 - len(usecs)
-            usecs = ("0" * missing_zeros) + usecs
-            line = ".".join([secs, usecs])
-            data_sent_times += [float(line)]
-            print("data_sent: "+line)
-    #else:
-        #print("File "+data_sent_path+" not found. Assuming not reached in GR.")
+    if os.path.isfile(data_sent_path):
+        with open(data_sent_path) as f:
+            for line in f:
+                line = line.strip('\n')
+                secs, usecs = line.split(" ",1)
+                missing_zeros = 6 - len(usecs)
+                usecs = ("0" * missing_zeros) + usecs
+                line = ".".join([secs, usecs])
+                data_sent_times += [float(line)]
+                print("data_sent: "+line)
+    else:
+        print("File "+data_sent_path+" not found. Assuming not reached in GR.")
 
-    #if os.path.isfile(ack_received_path):
-    with open(ack_received_path) as f:
-        for line in f:
-            line = line.strip('\n')
-            secs, usecs = line.split(" ",1)
-            missing_zeros = 6 - len(usecs)
-            usecs = ("0" * missing_zeros) + usecs
-            line = ".".join([secs, usecs])
-            ack_received_times += [float(line)]
-            print("ack_received: "+line)
-    #else:
-        #print("File "+ack_received_path+" not found. Assuming not reached in GR.")
+    if os.path.isfile(ack_received_path):
+        with open(ack_received_path) as f:
+            for line in f:
+                line = line.strip('\n')
+                secs, usecs = line.split(" ",1)
+                missing_zeros = 6 - len(usecs)
+                usecs = ("0" * missing_zeros) + usecs
+                line = ".".join([secs, usecs])
+                ack_received_times += [float(line)]
+                print("ack_received: "+line)
+    else:
+        print("File "+ack_received_path+" not found. Assuming not reached in GR.")
 
     # If I wanted I could now plot packet loss as well...
     packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
     packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
     packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
-    #print("packet loss in %: "+packet_loss_percent)
+    print("abs. packet loss: "+packet_loss_abs)
+    print("packet loss in %: "+packet_loss_percent)
 
     for index, ack_time in enumerate(ack_received_times):
         res = ack_time - data_sent_times[index]

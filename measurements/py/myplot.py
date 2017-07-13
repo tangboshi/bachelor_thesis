@@ -50,10 +50,10 @@ class myplot:
             height=self.data
          )
 
-        #  self.setLabels(ylabel=self.ylabel
-        #     xlabel=self.xlabel
-        #     title=self.title
-        #  )
+         self.setLabels(ylabel=self.ylabel
+            xlabel=self.xlabel
+            title=self.title
+         )
 
     def line(self):
         print("Line chart not yet implemented.")

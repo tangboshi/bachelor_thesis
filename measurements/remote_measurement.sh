@@ -13,5 +13,5 @@ echo "Pushing bachelor thesis files to github..."
 cd ~/0_ba/bachelor_thesis
 git add .
 git commit -m "automatic measurement push"
-ls
+cd measurements
 source remote_push.sh

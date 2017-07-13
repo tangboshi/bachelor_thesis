@@ -68,9 +68,9 @@ for i in range(1,repetitions+1):
         res = ack_time - data_sent_times[index]
         rtt_single_measurement += [round(res,5)]
 
-    #print("\nThe resulting RTTs of this single measurement are:")
-    #print(rtt_single_measurement)
-    #print("\n")
+    print("\nThe resulting RTTs of this single measurement are:")
+    print(rtt_single_measurement)
+    print("\n")
 
     # Now calculate mean RTT for this measurement
     # print(str(float(sum(rtt_single_measurement))))

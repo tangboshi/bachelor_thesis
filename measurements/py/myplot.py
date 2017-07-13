@@ -64,7 +64,7 @@ class myplot:
             #height = rect.get_height()
             self.ax.text(
                 rect.get_x() + rect.get_width()/2,
-                -10,
+                0,
                 label,
                 ha='center',
                 va='bottom')

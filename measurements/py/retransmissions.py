@@ -96,7 +96,7 @@ for index, plot in enumerate(plot_type):
                     max(data_set)+1,
                     (max(data_set)+0.1)/25),
                 plottype=plot,
-                title=titles1[index]+titles2[plot],
+                title=titles1[index]+" "+titles2[plot],
                 xlabel=xlabels[plot],
                 ylabel=ylabels[plot],
                 savepath=plot_path+"/"+measurement+"/",

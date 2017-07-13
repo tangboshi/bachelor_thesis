@@ -76,6 +76,10 @@ class myplot:
         f = interp1d(x,y)
         plt.plot(x, self.data, 'bo', x, f(x), 'k')
 
+        self.setLabels( xlabel="measurement",
+                        ylabel=self.ylabel,
+                        title=self.title
+        )
 
     def cdf(self):
         # if not self.bins:

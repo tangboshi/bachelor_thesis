@@ -40,7 +40,7 @@ for i in range(1,repetitions+1):
                 usecs = ("0" * missing_zeros) + usecs
                 line = ".".join([secs, usecs])
                 data_sent_times += [float(line)]
-                #print("data_sent: "+line)
+                print("data_sent: "+line)
     else:
         print("File "+data_sent_path+" not found. Assuming not reached in GR.")
 
@@ -53,7 +53,7 @@ for i in range(1,repetitions+1):
                 usecs = ("0" * missing_zeros) + usecs
                 line = ".".join([secs, usecs])
                 ack_received_times += [float(line)]
-                #print("ack_received: "+line)
+                print("ack_received: "+line)
     else:
         print("File "+ack_received_path+" not found. Assuming not reached in GR.")
 

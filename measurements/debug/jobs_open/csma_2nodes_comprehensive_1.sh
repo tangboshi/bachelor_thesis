@@ -6,10 +6,10 @@
 # BACKOFF = 2ms
 # nodes = 2
 
-TIMER=15
+TIMER=5
 export MEASUREMENT_REPETITIONS=3
 MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II.py )
-PLOT_SCRIPTS=( throughput.py rtt.py retransmissions.py )
+PLOT_SCRIPTS=( rtt.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################

@@ -21,7 +21,7 @@ except ImportError:
 
 # ------------------------------ Calculations ---------------------------------#
 # Create a repetitions X 1 matrix aka row vector with measurement data
-data = []
+data = np.zeros(shape=(4,2))
 data_retxs = []
 data_max_retxs = []
 ack_retxs = []
@@ -48,6 +48,7 @@ for i in range(1, repetitions+1):
                     line.strip("\n")
                     data[index] = map(int, line.split(" "))
         else:
+            print(index)
             data[index] = [0]
 
 #------------------------------------------------------------------------------#

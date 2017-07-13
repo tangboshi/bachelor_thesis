@@ -18,4 +18,4 @@ export RTT_DATA_FILES="sender_bfr_dq.txt,sender_ack_received.txt"
 export RETXS_DATA_FILES="sender_retransmissions.txt,sender_max_retransmissions.txt"
 export RETXS2_DATA_FILES="receiver_retransmissions.txt,receiver_max_retransmissions.txt"
 export PLOT_TYPE="pdf,cdf,boxplot,bar"
-export SHOW_PLOT_AFTER_MEASUREMENT=0
+export SHOW_PLOT_AFTER_MEASUREMENT=1

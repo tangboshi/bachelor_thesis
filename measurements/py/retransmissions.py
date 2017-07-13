@@ -86,6 +86,9 @@ for index, plot in enumerate(plot_type):
     plot_data = [ data[0], data[1], data[2], data[3] ]
 
     for index, data_set in enumerate(plot_data):
+        print(max(data_set))
+        print(min(data_set))
+        print((max(data_set)-min(data_set))/25)
         myplot.myplot(  data=data_set,
                 #bins=repetitions,
                 bins=np.arange(

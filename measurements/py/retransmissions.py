@@ -48,8 +48,8 @@ for i in range(1, repetitions+1):
                     line.strip("\n")
                     data[index] = map(int, line.split(" "))
         else:
-            print(index)
-            data[index] = [5]
+            print("File "+data_file+" not found. Assuming not reached in GR.")
+            data[index] = [0]
 
 #------------------------------------------------------------------------------#
 
@@ -94,7 +94,7 @@ for index, plot in enumerate(plot_type):
                 bins=np.arange(
                     min(data_set)-1,
                     max(data_set)+1,
-                    (max(data_set)-min(data_set)+0.1)/25),
+                    (max(data_set)+0.1)/25),
                 plottype=plot,
                 title=titles1[index]+titles2[plot],
                 xlabel=xlabels[plot],

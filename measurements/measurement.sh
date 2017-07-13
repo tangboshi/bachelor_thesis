@@ -5,14 +5,14 @@ source measurement.conf
 function setup_remote_connection
 {
   reset
-  echo "Setting up remote connection..."
-  if ( mount | grep $REMOTE_MEASUREMENT_MOUNT_POINT  )
-  then
-    echo "The mount point is in use, confirm unmount with your password."
-    sudo umount $REMOTE_MEASUREMENT_MOUNT_POINT
-  fi
-  echo "Please enter the server password to mount the target directory."
-  mkdir -p $REMOTE_MEASUREMENT_MOUNT_POINT
+  # echo "Setting up remote connection..."
+  # if ( mount | grep $REMOTE_MEASUREMENT_MOUNT_POINT  )
+  # then
+  #   echo "The mount point is in use, confirm unmount with your password."
+  #   sudo umount $REMOTE_MEASUREMENT_MOUNT_POINT
+  # fi
+  # echo "Please enter the server password to mount the target directory."
+  # mkdir -p $REMOTE_MEASUREMENT_MOUNT_POINT
   #sshfs $REMOTE_USER@$REMOTE_IP:$REMOTE_TO_MOUNT_PATH $REMOTE_MEASUREMENT_MOUNT_POINT
   #ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "$(typeset -f); main"
   sshpass -p "inets" ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "bash -s" < remote_measurement.sh

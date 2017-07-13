@@ -114,7 +114,7 @@ for index, plot in enumerate(plot_type):
         "bar":  "bar chart"
     }
 
-    myplot.myplot(  data=rtt,
+    myplot.myplot(data=rtt,
             bins=np.arange(
                 min(rtt)-0.002,
                 max(rtt)+0.002,

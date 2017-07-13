@@ -50,8 +50,8 @@ class myplot:
             height=self.data
          )
 
-        self.setLabels(ylabel=self.ylabel
-            xlabel=self.xlabel
+        self.setLabels(ylabel=self.ylabel,
+            xlabel=self.xlabel,
             title=self.title
         )
 

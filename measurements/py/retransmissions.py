@@ -61,28 +61,31 @@ for index, plot in enumerate(plot_type):
         "cdf": "rtt",
         "pdf": "rtt",
         "boxplot": "",
-        "bar": ""
+        "bar": "",
+        "line": ""
     }
 
     ylabels = {
         "pdf": "",
         "cdf": "",
         "boxplot": "retransmissions",
-        "bar": "retransmissions"
+        "bar": "retransmissions",
+        "line": "retransmissions"
     }
 
     titles1 = {
-        0: "Data Retransmissions",
-        1: "Data Max Retransmissions",
-        2: "Ack Retransmissions",
-        3: "Ack Max Retransmissions"
+        0: "Data retransmissions",
+        1: "Data max retransmissions",
+        2: "Ack retransmissions",
+        3: "Ack max retransmissions"
     }
 
     titles2 = {
         "pdf":  "PDF",
         "cdf":  "CDF",
         "boxplot": "boxplot",
-        "bar": "bar chart"
+        "bar": "bar chart",
+        "line": "line chart"
     }
 
     plot_data = [ data[0], data[1], data[2], data[3] ]

@@ -51,9 +51,11 @@ class myplot:
          )
 
         self.setLabels(ylabel=self.ylabel,
-            xlabel=self.xlabel,
+            xlabel="measurement",
             title=self.title
         )
+
+        self.ax.set_xticklabels(list(range(1,data_points+1)))
 
     def line(self):
         print("Line chart not yet implemented.")

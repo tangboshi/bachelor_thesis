@@ -531,3 +531,123 @@ Plotting Python should be: python3 (UBUNTU).
 +--------------------------------------------------------------+
 | Plotting completed. Until the next measurement session then! |
 +--------------------------------------------------------------+
+Measurement 1/2 complete in 4 second(s).
+Measurement 1/2 complete in 3 second(s).
+Measurement 1/2 complete in 2 second(s).
+Measurement 1/2 complete in 1 second(s).
+Measurement 1 raw data directory created /home/alex/0_ba/git/measurements/debug/data/0/1/.
+Measurement 1 raw data moved to /home/alex/0_ba/git/measurements/debug/data/0/1/.
+
+Measurement 2/2 complete in 4 second(s).
+Measurement 2/2 complete in 3 second(s).
+Measurement 2/2 complete in 2 second(s).
+Measurement 2/2 complete in 1 second(s).
+Measurement 2 raw data directory created /home/alex/0_ba/git/measurements/debug/data/0/2/.
+Measurement 2 raw data moved to /home/alex/0_ba/git/measurements/debug/data/0/2/.
+
+Now processing results...
+Plotting Python should be: python3 (UBUNTU).
+Hello from rtt.py!
+Hello from variables.py!
+data_sent: 1499936676.340217
+data_sent: 1499936676.511617
+data_sent: 1499936676.671364
+data_sent: 1499936676.808962
+data_sent: 1499936677.108454
+data_sent: 1499936677.269242
+data_sent: 1499936677.446605
+data_sent: 1499936677.595779
+data_sent: 1499936677.748045
+data_sent: 1499936677.926584
+data_sent: 1499936678.102892
+data_sent: 1499936678.267249
+data_sent: 1499936678.445594
+data_sent: 1499936678.594010
+data_sent: 1499936678.767293
+ack_received: 1499936676.413354
+ack_received: 1499936676.576075
+ack_received: 1499936676.739677
+ack_received: 1499936676.873954
+ack_received: 1499936677.181892
+ack_received: 1499936677.335215
+ack_received: 1499936677.517372
+ack_received: 1499936677.661689
+ack_received: 1499936677.815243
+ack_received: 1499936677.997549
+ack_received: 1499936678.169904
+ack_received: 1499936678.333209
+ack_received: 1499936678.515650
+ack_received: 1499936678.658913
+ack_received: 1499936678.833069
+abs. packet loss: 0.0
+packet loss in %: 0.0%
+
+The resulting RTTs of this single measurement are:
+[0.07314, 0.06446, 0.06831, 0.06499, 0.07344, 0.06597, 0.07077, 0.06591, 0.0672, 0.07097, 0.06701, 0.06596, 0.07006, 0.0649, 0.06578]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.06792466666666666
+
+
+data_sent: 1499936681.349551
+data_sent: 1499936681.540111
+data_sent: 1499936681.690443
+data_sent: 1499936681.852882
+data_sent: 1499936682.015034
+data_sent: 1499936682.194563
+data_sent: 1499936682.352048
+data_sent: 1499936682.504264
+data_sent: 1499936682.655536
+data_sent: 1499936682.838849
+data_sent: 1499936683.019675
+data_sent: 1499936683.188711
+data_sent: 1499936683.332181
+data_sent: 1499936683.516453
+data_sent: 1499936683.689881
+data_sent: 1499936683.870141
+ack_received: 1499936681.426671
+ack_received: 1499936681.609055
+ack_received: 1499936681.762496
+ack_received: 1499936681.925607
+ack_received: 1499936682.088172
+ack_received: 1499936682.270659
+ack_received: 1499936682.424746
+ack_received: 1499936682.578081
+ack_received: 1499936682.731476
+ack_received: 1499936682.914264
+ack_received: 1499936683.086387
+ack_received: 1499936683.259819
+ack_received: 1499936683.403129
+ack_received: 1499936683.585422
+ack_received: 1499936683.758734
+abs. packet loss: 1.0
+packet loss in %: 6.25%
+
+The resulting RTTs of this single measurement are:
+[0.07712, 0.06894, 0.07205, 0.07273, 0.07314, 0.0761, 0.0727, 0.07382, 0.07594, 0.07541, 0.06671, 0.07111, 0.07095, 0.06897, 0.06885]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.07230266666666667
+
+
+[ 0.06792467  0.07230267]
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from throughput.py!
+Hello from variables.py!
+[ 15000.  15000.]
+
++--------------------------------------------------------------+
+| Plotting completed. Until the next measurement session then! |
++--------------------------------------------------------------+

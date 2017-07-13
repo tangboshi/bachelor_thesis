@@ -14,4 +14,4 @@ cd ~/0_ba/bachelor_thesis
 git add .
 git commit -m "automatic measurement push"
 cd measurements
-source remote_push.sh
+#source remote_push.sh

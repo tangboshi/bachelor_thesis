@@ -85,7 +85,7 @@ for index, plot in enumerate(plot_type):
                 bins=np.arange(
                     min(data_set)-1,
                     max(data_set)+1,
-                    (max(data_set)-min(data_set))/25,
+                    (max(data_set)-min(data_set))/25),
                 plottype=plot,
                 title=titles1[index]+titles2[plot],
                 xlabel=xlabels[plot],

@@ -55,7 +55,17 @@ class myplot:
             title=self.title
         )
 
-        self.ax.set_xticklabels("1" "2" "3" "4")
+        rects = self.ax.patches
+        labels = ["%d" % i for i in range(len(rects))]
+
+        for rect, label in zip(rects, labels):
+            height = rect.get_height()
+            self.ax.text(
+                rect.get_x() + rect.get_width()/2,
+                height + 5,
+                label,
+                ha='center',
+                va='bottom')
 
     def line(self):
         print("Line chart not yet implemented.")

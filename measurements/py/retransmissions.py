@@ -42,10 +42,13 @@ for i in range(1, repetitions+1):
     ]
 
     for index, data_file in enumerate(file_list):
-        with open(data_file) as f:
-            for line in f:
-                line.strip("\n")
-                 = line.split(" ")
+        if os.path.isfile(data_file):
+            with open(data_file) as f:
+                for line in f:
+                    line.strip("\n")
+                    data[index] = map(int, line.split(" "))
+        else:
+            data[index] = [0]
 
 #------------------------------------------------------------------------------#
 
@@ -61,31 +64,31 @@ for index, plot in enumerate(plot_type):
         "cdf": ""
     }
 
-    titles = {
-        "pdf":  "PDF",
-        "cdf":  "CDF"
+    titles1 = {
+        0: "Data Retransmissions",
+        1: "Data Max Retransmissions",
+        2: "Ack Retransmissions",
+        3: "Ack Max Retransmissions"
     }
 
-    myplot.myplot(  data=rtt,
-            bins=np.arange(
-                min(rtt)-0.002,
-                max(rtt)+0.002,
-                (max(rtt)-min(rtt))/25,
-            plottype=plot,
-            title="retransmissions (data)"+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
-            savepath=plot_path+"/"+measurement+"/",
-            show=show_plot)
+    titles2 = {
+        "pdf":  "PDF",
+        "cdf":  "CDF",
+        "boxplot": "boxplot",
+        "bar": "bar chart"
+    }
 
-    myplot.myplot(  data=rtt,
-            bins=np.arange(
-                min(rtt)-0.002,
-                max(rtt)+0.002,
-                0.07/1000),
-            plottype=plot,
-            title="retransmissions (acks)"+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
-            savepath=plot_path+"/"+measurement+"/",
-            show=show_plot)
+    plot_data = [ data[0], data[1], data[2], data[3] ]
+
+    for index, data_set in enumerate(plot_data):
+        myplot.myplot(  data=data_set,
+                bins=np.arange(
+                    min(data_set)-1,
+                    max(data_set)+1,
+                    (max(data_set)-min(data_set))/25,
+                plottype=plot,
+                title=titles1[index]+titles2[plot],
+                xlabel=xlabels[plot],
+                ylabel=ylabels[plot],
+                savepath=plot_path+"/"+measurement+"/",
+                show=show_plot)

@@ -27,18 +27,19 @@ data_max_retxs = []
 ack_retxs = []
 ack_max_retxs = []
 
+# #ed lines are currently not obtainable with GR
 for i in range(1, repetitions+1):
     path                 = data_source_path+'/'+str(i)+'/'
     data_retxs_path      = path+retxs_data_files["retxs"]
-    data_max_retxs_path  = path+retxs_data_files["max_retxs"]
-    ack_retxs_path       = path+retxs2_data_files["retxs"]
-    ack_max_retxs_path   = path+retxs2_data_files["max_retxs"]
+    #data_max_retxs_path  = path+retxs_data_files["max_retxs"]
+    #ack_retxs_path       = path+retxs2_data_files["retxs"]
+    #ack_max_retxs_path   = path+retxs2_data_files["max_retxs"]
 
     file_list = [
-        data_retxs_path,
-        data_max_retxs_path,
-        ack_retxs_path,
-        ack_max_retxs_path
+        data_retxs_path#,
+        #data_max_retxs_path,
+        #ack_retxs_path,
+        #ack_max_retxs_path
     ]
 
     for index, data_file in enumerate(file_list):
@@ -47,6 +48,7 @@ for i in range(1, repetitions+1):
                 for line in f:
                     line.strip("\n")
                     data[index] = map(int, line.split(" "))
+                    print(data[index])
         else:
             print("File "+data_file+" not found. Assuming not reached in GR.")
             data[index] = [0]

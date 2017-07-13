@@ -55,7 +55,8 @@ class myplot:
             title=self.title
         )
 
-        plt.gca().axes.get_yaxis().set_visible(False)
+        plt.gca().axes.get_xaxis().set_visible(False)
+
         rects = self.ax.patches
         labels = ["%d" % i for i in range(1,len(rects)+1)]
 
@@ -63,7 +64,7 @@ class myplot:
             #height = rect.get_height()
             self.ax.text(
                 rect.get_x() + rect.get_width()/2,
-                -5,
+                -10,
                 label,
                 ha='center',
                 va='bottom')

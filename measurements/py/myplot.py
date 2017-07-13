@@ -55,14 +55,15 @@ class myplot:
             title=self.title
         )
 
+        plt.gca().axes.get_yaxis().set_visible(False)
         rects = self.ax.patches
-        labels = ["%d" % i for i in range(len(rects))]
+        labels = ["%d" % i for i in range(1,len(rects)+1)]
 
         for rect, label in zip(rects, labels):
-            height = rect.get_height()
+            #height = rect.get_height()
             self.ax.text(
                 rect.get_x() + rect.get_width()/2,
-                height + 5,
+                -5,
                 label,
                 ha='center',
                 va='bottom')

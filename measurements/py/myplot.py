@@ -71,7 +71,7 @@ class myplot:
 
     def line(self):
         from scipy.interpolate import interp1d
-        x = np.arange(0, len(self.data), 1)
+        x = np.arange(1, len(self.data)+1, 1)
         y = self.data
         f = interp1d(x,y)
         plt.plot(x, self.data, 'bo', x, f(x), 'k')

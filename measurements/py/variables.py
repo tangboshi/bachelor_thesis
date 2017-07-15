@@ -63,6 +63,14 @@ else:
         "ack_received": "invalid_file_2.txt"
     }
 
+if os.environ.get('RTT_MODE') is not None:
+    rtt_mode = os.environ['RTT_MODE']
+else:
+    #alternative rtt mode is delay, which takes retransmissions into account
+    #when calculating rtt, which actually then rather should be called packet
+    #delay
+    rtt_mode = "rtt"
+
 #retransmissions
 #ugly to have two environment variables for this, but w/e
 #gotta cover both acks and data, whatcha gonna do?

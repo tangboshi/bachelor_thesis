@@ -30,33 +30,46 @@ for i in range(1,repetitions+1):
     path                = data_source_path+'/'+str(i)+'/'
     data_sent_path      = path+rtt_data_files["data_sent"]
     ack_received_path   = path+rtt_data_files["ack_received"]
+    retransmissions_path= path+retxs_data_files["retxs"]
 
     # Calculate RTT for each packet
-    if os.path.isfile(data_sent_path):
-        with open(data_sent_path) as f:
-            for line in f:
-                line = line.strip('\n')
-                secs, usecs = line.split(" ",1)
-                missing_zeros = 6 - len(usecs)
-                usecs = ("0" * missing_zeros) + usecs
-                line = ".".join([secs, usecs])
-                data_sent_times += [float(line)]
-                print("data_sent: "+line)
-    else:
-        print("File "+data_sent_path+" not found. Assuming not reached in GR.")
+    if rtt_mode == "rtt":
+        # strip retransmissions-1 lines after each line
+        # for that purpose let's get #retransmissions from
+        # the throughput files
 
-    if os.path.isfile(ack_received_path):
-        with open(ack_received_path) as f:
-            for line in f:
-                line = line.strip('\n')
-                secs, usecs = line.split(" ",1)
-                missing_zeros = 6 - len(usecs)
-                usecs = ("0" * missing_zeros) + usecs
-                line = ".".join([secs, usecs])
-                ack_received_times += [float(line)]
-                print("ack_received: "+line)
-    else:
-        print("File "+ack_received_path+" not found. Assuming not reached in GR.")
+        if os.path.isfile(retransmissions_path):
+                        
+        if os.path.isfile(data_sent_path):
+            with open(data_sent_path) as f:
+                for line in f:
+
+                    line = line.strip('\n')
+                    secs, usecs = line.split(" ",1)
+                    missing_zeros = 6 - len(usecs)
+                    usecs = ("0" * missing_zeros) + usecs
+                    line = ".".join([secs, usecs])
+                    data_sent_times += [float(line)]
+                    print("data_sent: "+line)
+        else:
+            print(  "File "+data_sent_path+" not found. \
+                    Assuming not reached in GR.")
+
+        if os.path.isfile(ack_received_path):
+            with open(ack_received_path) as f:
+                for line in f:
+                    line = line.strip('\n')
+                    secs, usecs = line.split(" ",1)
+                    missing_zeros = 6 - len(usecs)
+                    usecs = ("0" * missing_zeros) + usecs
+                    line = ".".join([secs, usecs])
+                    ack_received_times += [float(line)]
+                    print("ack_received: "+line)
+        else:
+            print(  "File "+ack_received_path+" not found. \
+                    Assuming not reached in GR.")
+    else:#rtt_mode == delay
+
 
     # If I wanted I could now plot packet loss as well...
     packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )

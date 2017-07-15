@@ -15,15 +15,21 @@
 \usepackage{calc}
 \usepackage{enumitem}
 \usepackage{standalone}
+\usepackage{outlines}
+\usepackage{enumitem}
+
+\setenumerate[1]{label=\arabic*}
+\setenumerate[2]{label*=.\arabic*}
+\setenumerate[3]{label*=.\arabic*}
+\setenumerate[4]{label*=.\arabic*}
 
 \graphicspath{{img/}}
 \setlength{\parindent}{0pt}
 
 \begin{document}
 	
-\title{CW 21-25 Summary}
+\title{Summary 4}
 \author{Alexander Pastor}
-\date{18.05.2017}
 \maketitle
 \tableofcontents
 \newpage
@@ -37,24 +43,49 @@ git: Personal Access Tokens
 latex: input
 description of my work so far...
 
-\section{Flow Chart Details}
-\subsection{Counter Meanings}
-
-In the theoretical CSMA and ALOHA files:
-\begin{description}[leftmargin=!]
-	\item[Counter 1:] Counts received frames.
-	\item[Counter 2:] Counts good frames.
-	\item[Counter 3:] Counts bad frames.
-	\item[Counter 4:] Counts frames that aren't destined to this RX.
-	\item[Counter 5:] Counts frames that are destined to this RX.
-\end{description}
-
 \section{Organizational}
+
+\subsection{Thesis Outline}
+
+\begin{outline}[enumerate]
+	\1 Introduction
+		\2 Abstract
+		\2 Motivation and Context
+		
+	\1 Fundamentals and Preparation
+		\2 MAC Protocols
+			\3 MAC Introduction
+		 	\3 CSMA/CA
+		 	\3 CSMA/CA with CTS/RTS
+		 	\3 (Slotted) ALOHA
+		 	\3 ...
+		\2 GNU Radio 
+			\3 What is GR and GRC
+			\3 Motivation to use GR
+	
+	\1 Measurement Results and Interpretation
+		\2 Scenario Overview / Justification
+		\2 Scenario A
+		\2 Scenario B
+		\2 Scenario C
+		\2 ...
+		\2 Interpretation
+		
+	\1 Conclusions
+	
+	\1 Appendices
+		\2 How-to: Conduct Measurements Automatically
+		\2 "Good to Know" sections of these summaries
+		\2 Alphabetical Acronym Expansions
+		\2 Alphabetical Index
+		\2 Bibliography / References
+		\2 Statement of Authorship
+\end{outline}
 
 \subsection{Device Parameters}
 
-Remote PC IP-address: 134.130.223.135 \\
-USRPs: 10.0.0.16, 10.0.0.7
+Remote PC IP-address: 134.130.223.151 \\
+USRPs: 10.0.0.8, 10.0.0.10
 
 \subsection{Measurement Plan}
 
@@ -68,11 +99,11 @@ For CW 25 the following measurement parameters were commissioned:
 	\item The results should be plotted with either Matlab or Matplotlib
 \end{itemize}
 
+rest tbd \\
+
 \textbf{Note:} The DIFS time in 802.11 can be calculated as twice the backoff time plus one SIFS time.
 
-\section{GNU Radio Implementation Details}
-
-\subsection{A Closer Look at PMTs}
+\include{usrp_hardware_issues}
 
 \section{Good to Know...}
 
@@ -126,17 +157,22 @@ To further avoid any repetitive commands I added to my \href{http://alexander-pa
 \begin{minted}[tabsize=4]{bash}
 "inets")
 	if ( mount | grep inets  )
-		then
+	then
 		echo "The mount point is in use, confirm unmount with your password."
-		sudo umount /home/alex/mnt/134.130.223.135
+		sudo umount /home/alex/mnt/134.130.223.151
 	fi
 	echo "Please enter the server password to mount the target directory."
-	sshfs inets@134.130.223.135:/home/inets /home/alex/mnt/134.130.223.135
-	gnome-terminal --tab -e "bash -c 'ssh -YC4 inets@134.130.223.135'" 
-	--tab --working-directory=/home/alex/mnt/134.130.223.135
+	sshfs inets@134.130.223.151:/home/inets /home/alex/mnt/134.130.223.151
+	gnome-terminal --tab -e "bash -c 'ssh -YC4 inets@134.130.223.151'" \
+	--tab --working-directory=/home/alex/0_ba/git/measurements \
+	#--tab --working-directory=/home/alex/mnt/134.130.223.151 \
+	texstudio
 	sleep 1
-	exit
-;;
+	cd ~/0_ba/git
+	git pull
+	git fetch
+	atom ~/0_ba/git/measurements/measurement.sh
+	;;
 \end{minted}
 
 \subsection{Listing Directories Only}

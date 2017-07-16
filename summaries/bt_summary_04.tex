@@ -34,15 +34,6 @@
 \tableofcontents
 \newpage
 
-to do:
-Python: kwargs, map, zip, list comprehension
-GR: hardware problem, how to exclude retransmissions from rtt, how to calculate delay if including them
-GR Scenarios: think of scenarios
-send Andra \& Peng the plots
-git: Personal Access Tokens
-latex: input
-description of my work so far...
-
 \section{Organizational}
 
 \subsection{Thesis Outline}
@@ -51,6 +42,8 @@ description of my work so far...
 	\1 Introduction
 		\2 Abstract
 		\2 Motivation and Context
+			\3 LTE-U/LAA 
+			\3 Defining the scope
 		
 	\1 Fundamentals and Preparation
 		\2 MAC Protocols
@@ -62,6 +55,7 @@ description of my work so far...
 		\2 GNU Radio 
 			\3 What is GR and GRC
 			\3 Motivation to use GR
+			\3 Limitations of GR
 	
 	\1 Measurement Results and Interpretation
 		\2 Scenario Overview / Justification
@@ -75,7 +69,6 @@ description of my work so far...
 	
 	\1 Appendices
 		\2 How-to: Conduct Measurements Automatically
-		\2 "Good to Know" sections of these summaries
 		\2 Alphabetical Acronym Expansions
 		\2 Alphabetical Index
 		\2 Bibliography / References
@@ -107,27 +100,9 @@ rest tbd \\
 
 \section{Good to Know...}
 
-It has been a good while now, but finally I learned enough feasible stuff to write down.
+\subsection{Bash}
 
-\subsection{Using a static IP address for USRPs}
-\begin{minted}[tabsize=4]{bash}
-#Get to know your interface names
-ifconfig 
-#E.g. set eth0 interface IP to 10.0.0.100/24
-#Where up opens the eth0 interface 
-#and is not necessary if it showed up when using infconfig
-ifconfig eth0 10.0.0.100 netmask 255.255.255.0 up
-
-###Just FYI:
-#Shutdown network interface
-ifconfig eth0 down
-##List all interfaces
-ifconfig -a
-#OR
-ip link show
-\end{minted}
-
-\subsection{Efficient Remote Control}
+\subsubsection{Efficient Remote Control}
 
 \begin{minted}[tabsize=4]{bash}
 ##Opening a remote connection with X forwarding
@@ -175,7 +150,7 @@ To further avoid any repetitive commands I added to my \href{http://alexander-pa
 	;;
 \end{minted}
 
-\subsection{Listing Directories Only}
+\subsubsection{Listing Directories Only}
 
 \href{https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash-an-examination}{Stackoverflow Source}
 
@@ -197,7 +172,7 @@ ls -l | grep "^d"
 for i in $(ls -d */); do echo ${i%%/}; done
 \end{minted}
 
-\subsection{Redirecting GRC Stuff to Files}
+\subsubsection{Redirecting GRC Stuff to Files}
 If one wants to do heavy analysis, built-in Linux console tools including, but not limited to utilities such as \verb|awk|, \verb|grep|, \verb|sed|, \verb|cat| might be a great help.
 
 Since executing a GRC flowgraph is running a generated python script, we can achieve our goal easily by the simple means of:
@@ -210,7 +185,39 @@ time python2 theoretical_aloha_rx.py &> logs/theoretical_aloha_rx.log
 time python2 theoretical_aloha.py &> logs/theoretical_aloha.log
 \end{minted}
 
-\subsection{Atom: Folder-Wide Search for Substrings}
+\subsection{Python}
+
+\subsubsection{**kwargs}
+
+\subsubsection{List Comprehension}
+
+\subsubsection{map and zip}
+
+\subsection{Other}
+
+\subsubsection{Atom: Folder-Wide Search for Substrings}
 Use the Ctrl+Shift+F shortcut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
+
+\subsubsection{Using a static IP address for USRPs}
+\begin{minted}[tabsize=4]{bash}
+#Get to know your interface names
+ifconfig 
+#E.g. set eth0 interface IP to 10.0.0.100/24
+#Where up opens the eth0 interface 
+#and is not necessary if it showed up when using infconfig
+ifconfig eth0 10.0.0.100 netmask 255.255.255.0 up
+
+###Just FYI:
+#Shutdown network interface
+ifconfig eth0 down
+##List all interfaces
+ifconfig -a
+#OR
+ip link show
+\end{minted}
+
+\subsubsection{Git Personal Access Tokens}
+
+\subsubsection{Latex input and include}
 
 \end{document}

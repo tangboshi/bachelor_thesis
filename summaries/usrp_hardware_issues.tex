@@ -56,19 +56,24 @@ The following plots show the output of a successful measurement with two USRPs u
 \end{figure}
 
 \begin{figure}[h] \label{usrp-success-7}
-	\includegraphics[width=\textwidth]{usrp_success_tp_cdf}	
+	\includegraphics[width=\textwidth]{usrp_success_rtt_cdf}	
 \end{figure}
 
 \clearpage
 
 \subsection{Failure Pattern 1}
 
-The following six figures visualize an issue I'm experiencing with the USRPs whose origin I have difficulties to track down. In seemingly random patterns the devices fail for the rest of the transmission. To make matters worse, it is not obvious whether the problem is hardware-related or software-related. Let me first explain what happens in the following plots, though.
+The following six figures visualize an issue I'm experiencing with the USRPs whose origin I have difficulties to track down. In seemingly random patterns the devices fail for the rest of the transmission. To make matters worse, it is not obvious whether the problem is enitrely hardware-related or has some software-related component. Let me first explain what happens in the following plots, though.
 
 \bigskip
 
 In the throughput bar chart it is obvious the device failed during the measurements 2 and 20. The logs of the measurement and this suggest that this could very well be a software problem.
-After 17 seconds the sender doesn't send any frames anymore (frame\_probe 850 is not reached anymore.) Once the sender fails it doesn't recover until the measurement script and the next measurement is launched, which is a reason to suspect a software failure on either my side or Gnu Radio's. 
+After 17 seconds the sender doesn't send any frames anymore (frame\_probe 850 is not reached anymore). Once the sender fails it doesn't recover until the measurement script and the next measurement is launched, which is a reason to suspect a software failure on either my side or Gnu Radio's. 
+
+\bigskip
+
+Note that the obviously wrong RTT in measurement 18 is due to the fact that retransmissions are
+taken into account when calculating the RTT. A fix for that is yet to  be found. Alternatively, or as an alternative mode taking retransmissions into account with retransmission counters to calculate the frame delay instead of the RTT is being considered. However, at the moment there exist practical implementation barriers that are to be removed.
 
 \begin{figure}[h] \label{usrp-fails-4}
 	\includegraphics[width=\textwidth]{usrp_fail_tp_bar}	
@@ -138,5 +143,67 @@ Measurement 2/20 complete in 1 second(s).
 \clearpage
 
 \subsection{Failure Pattern 2}
+
+However, the failures are not permanent and show no repetitive pattern. Furthermore, during the problematic sections \texttt{uhd\_find\_devices} does not detect any USRPs anymore. From these two facts one can deduce the problem at least has a hardware component. Here are some plots of a typical measurement with hardware failure. 
+
+\bigskip
+
+Although for 7 out of 10 measurements the throughput seems reasonable a lot of ACKs got lost during the transmission. Note that due to the problem described in the previous section the RTT calculation is wrong, because lost ACKS affect the RTT value for all following data transmissions (continuous additive error on fail). 
+
+\bigskip
+
+Proof for lost ACKs can be found as mentioned in the RTT charts as well as in the logs. Note that the setup and parameters including receive and transmission gains were chosen no different from those in the previous paragraph, which is a strong indication of either hardware failure or external influence which in was avoided in preparation by choosing an unused sending frequency. 
+
+\begin{figure}[h] \label{usrp-fails2-1}
+	\includegraphics[width=\textwidth]{usrp_fail2_tp_bar}
+	
+\end{figure}
+
+\begin{figure}[h] \label{usrp-fails2-2}
+	\includegraphics[width=\textwidth]{usrp_fail2_tp_pdf}	
+\end{figure} 
+
+\begin{figure}[h] \label{usrp-fails2-3}
+	\includegraphics[width=\textwidth]{usrp_fail2_rtt_bar}
+	
+\end{figure} 
+
+\begin{figure}[h] \label{usrp-fails2-5}
+	\includegraphics[width=\textwidth]{usrp_fail2_rtt_boxplot}
+\end{figure} 
+
+\clearpage
+
+\subsection{Justification of Measurement Results}
+
+In the "flawless" measurement plots both the RTT and the throughput don't differ significantly from the theoretical calculation following:
+
+Theoretical:
+\begin{equation*}
+	RTT = a + b+ c
+\end{equation*} 
+
+Measured:~0.075s 
+
+\bigskip
+
+Theoretical:
+\begin{equation*}
+	TP = t*n*c
+\end{equation*}
+
+Measured: tbd
+
+\bigskip
+
+The RTT measurements can be further backed up by measuring the RTT with linear increasing SIFS. The expected RTT then would be a linear function of SIFS.
+
+\bigskip
+
+Analogously, throughput should be a linear function of packet size. 
+
+\bigskip
+
+Note that for both such measurements a sufficiently large measurement time must be chosen to counteract various random influences.
 
 \end{document}

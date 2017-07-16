@@ -152,7 +152,7 @@ Although for 7 out of 10 measurements the throughput seems reasonable a lot of A
 
 \bigskip
 
-Proof for lost ACKs can be found as mentioned in the RTT charts as well as in the logs. Note that the setup and parameters including receive and transmission gains were chosen no different from those in the previous paragraph, which is a strong indication of either hardware failure or external influence which in was avoided in preparation by choosing an unused sending frequency. 
+Proof for lost ACKs can be found as mentioned in the RTT charts as well as in the logs. Note that the setup and parameters including receive and transmission gains were chosen no different from those in the previous section, which is a strong indication of either hardware failure or external influence which in should have been covered by choosing an unused sending frequency. 
 
 \begin{figure}[h] \label{usrp-fails2-1}
 	\includegraphics[width=\textwidth]{usrp_fail2_tp_bar}
@@ -176,23 +176,43 @@ Proof for lost ACKs can be found as mentioned in the RTT charts as well as in th
 
 \subsection{Justification of Measurement Results}
 
+\subsubsection{RTT}
+
+The following section is concerns the CSMA/CA two-way handshake (no CTS/RTS).
+
 In the "flawless" measurement plots both the RTT and the throughput don't differ significantly from the theoretical calculation following:
 
 Theoretical:
 \begin{equation*}
-	RTT = a + b+ c
+\begin{split}
+	RTT & = 2 \cdot t_{prop}+t_{data}+t_{ack}+2\cdot t_{proc}+\text{DIFS}+\text{SIFS} \\
+		& = \delta_{prop}+0.04s+t_{ack}+2t_{proc}+0.018s+0.006s \\
+		& = 0.064s + \delta_{prop} + t_{proc} +t_{ack}
+\end{split}
 \end{equation*} 
 
-Measured:~0.075s 
+Where $\delta_{prop} \approx 10^{-7}s \approx 0 $
 
 \bigskip
 
-Theoretical:
+Measured:~0.075s 
+
+\subsubsection{Throughput}
+
+\bigskip
+
+Theoretical (assuming RTT is correctly determined):
 \begin{equation*}
-	TP = t*n*c
+\begin{split}
+	\text{throughput} & = \frac{s_{frame}}{t_{frame}} = \frac{\text{packet size}}{\text{RTT}} \\
+	& \approx \frac{1000B}{0.075s} \\
+	& \approx 13333B/s
+\end{split}
 \end{equation*}
 
-Measured: tbd
+So for a 100s measurement the theoretical throughput should be roughly $1.3\cdot 10^6$.
+
+Measured: $1 \cdot 10^5$
 
 \bigskip
 
@@ -205,5 +225,8 @@ Analogously, throughput should be a linear function of packet size.
 \bigskip
 
 Note that for both such measurements a sufficiently large measurement time must be chosen to counteract various random influences.
+
+\subsubsection{Retransmissions}
+Result can be roughly verified by comparing throughput versus theoretical throughput.
 
 \end{document}

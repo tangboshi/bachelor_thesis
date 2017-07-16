@@ -36,14 +36,14 @@
 
 \section{Organizational}
 
-\subsection{Thesis Outline}
+\subsection{Thesis Outline Proposal}
 
 \begin{outline}[enumerate]
 	\1 Introduction
 		\2 Abstract
 		\2 Motivation and Context
-			\3 LTE-U/LAA 
-			\3 Defining the scope
+			\3 The LTE-U/LAA Debate 
+			\3 Definition of Scope
 		
 	\1 Fundamentals and Preparation
 		\2 MAC Protocols
@@ -69,7 +69,7 @@
 	
 	\1 Appendices
 		\2 How-to: Conduct Measurements Automatically
-		\2 Alphabetical Acronym Expansions
+		\2 Alphabetical Glossary / Acronym Expansions
 		\2 Alphabetical Index
 		\2 Bibliography / References
 		\2 Statement of Authorship
@@ -187,16 +187,101 @@ time python2 theoretical_aloha.py &> logs/theoretical_aloha.log
 
 \subsection{Python}
 
-\subsubsection{**kwargs}
+\subsubsection{*args and **kwargs}
+
+\texttt{*args} can be used to pass an arbitrary amount of non-keyword arguments to a function like this:
+
+\begin{minted}[tabsize=4]{python}
+	def my_func(*args):
+		for index, value in enumerate(args):
+			print( "{0}: {1}".format(index,value) )
+	
+	# let's call the function
+	>>> my_func("this", "is", "an", "example")
+	
+	# output
+ 	0: this
+ 	1: is
+ 	2: an
+ 	3: example
+\end{minted} 
+
+\texttt{**kwargs} can be used to pass an arbitrary amount of keyword arguments to a function as follows below. Note that \texttt{**} is also used to convert dictionaries to the format specified used by \texttt{kwargs}, which is \mintinline{python}{keyword = value, keyword2 = value}.
+
+\begin{minted}[tabsize=4]{python}
+	def my_func(**kwargs):
+		for name, value in kwargs.items():
+			print( "{0} = {1}".format(name,value) )
+	
+	# let's cal this function
+	>>> my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
+	>>> my_func(**my_dict)
+	
+	# equivalent would be:
+	>>> my_func(fruits=["apple","banana"], vegetables=["tomato","cucumber"])
+	
+	# output
+	fruits = ["apple", "banana"]
+	vegetables = ["tomato", "cucumber"]
+\end{minted} 
+
+\textbf{Note:} \texttt{*args} and \texttt{**kwargs} are conventional, thus strongly recommended, but the real syntax just is \texttt{*varname} and \texttt{**varname}.
 
 \subsubsection{List Comprehension}
 
+List Comprehension is a powerful language feature of Python. It offers an elegant way to create lists with an easy syntax.
+
+\bigskip
+
+The examples below are taken from \href{http://www.secnetix.de/olli/Python/list_comprehensions.hawk}{here}.
+
+\bigskip
+
+\begin{minted}[tabsize=4]{python}
+	# Calculate powers of two
+	powers = [2**x for x in range(10)]
+	# Calculate cubic numbers
+	cubes = [x**2 for x in range(10)]
+	# Extract even numbers from cubes
+	even = [x for x in cubes if x%2 == 0]
+\end{minted}
+
+We can also create lists of lists with list comprehension. One can also nest list comprehensions. However, for readability's sake one should not exaggerate the nesting.
+
+\begin{minted}{python}
+	words = "This is an example sentence with fancy words".split()
+	cool_list = [[word.upper(), word.lower(), len(word)] for word in words]
+	
+	for item in cool_list:
+		print(item)
+	
+	# would create the following output:
+	["THIS", "this", 4]
+	["IS", "is", 2]
+	["AN", "an", 2]
+	["EXAMPLE", "example", 7]
+	["SENTENCE", "sentence", 8]
+	["WITH", "with", 4]
+	["FANCY", "fancy", 5]
+	["WORDS", "words", 5]
+\end{minted}
+
 \subsubsection{map and zip}
+
+The section summarizes \href{https://bradmontgomery.net/blog/pythons-zip-map-and-lambda/}{this source}.
+
+\bigskip
+
+\texttt{zip(*args)} takes equal length iterables and merges them into an iterable of tuples.
+
+\bigskip
+
+\texttt{map(function, iterable)} applies function to each element of iterable. It conducts the mathematical operation of mapping x to f(x). 
 
 \subsection{Other}
 
 \subsubsection{Atom: Folder-Wide Search for Substrings}
-Use the Ctrl+Shift+F shortcut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
+Use the Ctrl+Shift+F shocut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
 
 \subsubsection{Using a static IP address for USRPs}
 \begin{minted}[tabsize=4]{bash}
@@ -217,7 +302,34 @@ ip link show
 \end{minted}
 
 \subsubsection{Git Personal Access Tokens}
+Git access tokens are OAuth2 tokens that you can use instead of your password to perform any github operation. Furthermore, it also is possibly to restrict the permitted operations of a token on the github settings page. Let me walk you through the whole process:
+
+\bigskip
+
+\begin{enumerate}
+	\item Go to \href{https://github.com/settings/tokens}{https://github.com/settings/tokens}
+	\item Create your personal access token with the desired permissions.
+	\item E.g. use your token like this: \mint{bash}{git push https://username:token@github.com/username/project.git}
+\end{enumerate}
+
+\textbf{Note:} Don't include in any source code you upload to github. It will scan your code for tokens and immediately revoke any active token they find in your code.
 
 \subsubsection{Latex input and include}
+
+\href{https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include}{Here's the source}.
+
+\begin{quotation}
+	\texttt{\textbackslash input\{filename\}} imports the commands from filename.tex into the target file; it's equivalent to typing all the commands from filename.tex right into the current file where the \texttt{\textbackslash input} line is.
+	
+	\bigskip
+	
+	\texttt{\textbackslash include\{filename\}} essentially does a \texttt{\textbackslash clearpage} before and after \texttt{\textbackslash input\{filename\}}, together with some magic to switch to another .aux file, and omits the inclusion at all if you have an \texttt{\textbackslash includeonly} without the filename in the argument. This is primarily useful when you have a big project on a slow computer; changing one of the include targets won't force you to regenerate the outputs of all the rest.
+	
+	\bigskip
+	
+	\texttt{\textbackslash include\{filename\}} gets you the speed bonus, but it also can't be nested, can't appear in the preamble, and forces page breaks around the included text.
+\end{quotation}
+
+
 
 \end{document}

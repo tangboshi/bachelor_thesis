@@ -598,3 +598,1211 @@ I will print a bar for you now!
 +--------------------------------------------------------------+
 | Plotting completed. Until the next measurement session then! |
 +--------------------------------------------------------------+
+Measurement 1/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 1/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 1/10 complete in 2 second(s).
+node starts running at 0.005058
+node starts running at 0.005158
+++++ frame_probe ID: 850 receives a frame at time 0.235633s ++++
+++++ frame_probe ID: 860 receives a frame at time 0.277491s ++++
+++++ frame_probe ID: 1010 receives a frame at time 0.283218s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 0.306688s ++++
+++++ frame_probe ID: 883 receives a frame at time 0.306739s ++++
+++++ frame_probe ID: 890 receives a frame at time 0.30681s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 0.422139s ++++
+++++ frame_probe ID: 860 receives a frame at time 0.462986s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 0.474688s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 0.499284s ++++
+++++ frame_probe ID: 883 receives a frame at time 0.499322s ++++
+++++ frame_probe ID: 890 receives a frame at time 0.499381s ++++
+Measurement 1/10 complete in 1 second(s).
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 0.603759s ++++
+++++ frame_probe ID: 860 receives a frame at time 0.644534s ++++
+++++ frame_probe ID: 1010 receives a frame at time 0.647918s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 0.670755s ++++
+++++ frame_probe ID: 883 receives a frame at time 0.67079s ++++
+++++ frame_probe ID: 890 receives a frame at time 0.67085s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 0.784141s ++++
+++++ frame_probe ID: 860 receives a frame at time 0.825018s ++++
+++++ frame_probe ID: 1010 receives a frame at time 0.830243s ++++
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 0.853161s ++++
+++++ frame_probe ID: 883 receives a frame at time 0.853235s ++++
+++++ frame_probe ID: 890 receives a frame at time 0.853246s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 0.939582s ++++
+++++ frame_probe ID: 860 receives a frame at time 0.980535s ++++
+++++ frame_probe ID: 1010 receives a frame at time 0.984046s ++++
+++++ frame_probe ID: 882 receives a frame at time 1.00673s ++++
+++++ frame_probe ID: 883 receives a frame at time 1.00677s ++++
+++++ frame_probe ID: 890 receives a frame at time 1.00683s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 1.07521s ++++
+++++ frame_probe ID: 860 receives a frame at time 1.1161s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 1.12854s ++++
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 1.15153s ++++
+++++ frame_probe ID: 883 receives a frame at time 1.15156s ++++
+++++ frame_probe ID: 890 receives a frame at time 1.15164s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 1.26001s ++++
+++++ frame_probe ID: 860 receives a frame at time 1.30081s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 1.31061s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 1.33445s ++++
+++++ frame_probe ID: 883 receives a frame at time 1.33449s ++++
+++++ frame_probe ID: 890 receives a frame at time 1.33456s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 1.40499s ++++
+++++ frame_probe ID: 860 receives a frame at time 1.44576s ++++
+++++ frame_probe ID: 1010 receives a frame at time 1.45374s ++++
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 1.47737s ++++
+++++ frame_probe ID: 883 receives a frame at time 1.47741s ++++
+++++ frame_probe ID: 890 receives a frame at time 1.47747s ++++
+Measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/sender_data_sent.txt'
+Measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/1/.
+
+Measurement 2/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 2/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 2/10 complete in 2 second(s).
+node starts running at 3.91172
+node starts running at 3.92414
+++++ frame_probe ID: 850 receives a frame at time 4.23029s ++++
+++++ frame_probe ID: 860 receives a frame at time 4.27127s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 4.27976s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 4.29874s ++++
+++++ frame_probe ID: 883 receives a frame at time 4.29878s ++++
+++++ frame_probe ID: 890 receives a frame at time 4.2989s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 4.41423s ++++
+++++ frame_probe ID: 860 receives a frame at time 4.45503s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 4.46206s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 4.48099s ++++
+++++ frame_probe ID: 883 receives a frame at time 4.48102s ++++
+++++ frame_probe ID: 890 receives a frame at time 4.4811s ++++
+Measurement 2/10 complete in 1 second(s).
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 4.58236s ++++
+++++ frame_probe ID: 860 receives a frame at time 4.62303s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 4.63547s ++++
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 4.66234s ++++
+++++ frame_probe ID: 883 receives a frame at time 4.6624s ++++
+++++ frame_probe ID: 890 receives a frame at time 4.66246s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 4.76779s ++++
+++++ frame_probe ID: 860 receives a frame at time 4.80854s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 4.81766s ++++
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 4.83676s ++++
+++++ frame_probe ID: 883 receives a frame at time 4.83679s ++++
+++++ frame_probe ID: 890 receives a frame at time 4.83687s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 4.9332s ++++
+++++ frame_probe ID: 860 receives a frame at time 4.97383s ++++
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 4.98025s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 5.00328s ++++
+++++ frame_probe ID: 883 receives a frame at time 5.00332s ++++
+++++ frame_probe ID: 890 receives a frame at time 5.00339s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 5.07174s ++++
+++++ frame_probe ID: 860 receives a frame at time 5.11264s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 5.12465s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 5.14377s ++++
+++++ frame_probe ID: 883 receives a frame at time 5.14383s ++++
+++++ frame_probe ID: 890 receives a frame at time 5.14389s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 5.21522s ++++
+++++ frame_probe ID: 860 receives a frame at time 5.256s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 5.26798s ++++
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 5.28699s ++++
+++++ frame_probe ID: 883 receives a frame at time 5.28704s ++++
+++++ frame_probe ID: 890 receives a frame at time 5.28712s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 5.3935s ++++
+++++ frame_probe ID: 860 receives a frame at time 5.43436s ++++
+++++ frame_probe ID: 1010 receives a frame at time 5.44021s ++++
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 5.46009s ++++
+++++ frame_probe ID: 883 receives a frame at time 5.46014s ++++
+++++ frame_probe ID: 890 receives a frame at time 5.46023s ++++
+Measurement 2 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/sender_data_sent.txt'
+Measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/2/.
+
+Measurement 3/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 3/10 complete in 3 second(s).
+the 100th message counter is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+Measurement 3/10 complete in 2 second(s).
+node starts running at 7.87489
+node starts running at 7.89381
+++++ frame_probe ID: 850 receives a frame at time 7.91393s ++++
+++++ frame_probe ID: 860 receives a frame at time 7.95488s ++++
+++++ frame_probe ID: 1010 receives a frame at time 7.96105s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 7.98166s ++++
+++++ frame_probe ID: 883 receives a frame at time 7.98172s ++++
+++++ frame_probe ID: 890 receives a frame at time 7.98179s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 8.08911s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.12988s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.13413s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.15487s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.15494s ++++
+++++ frame_probe ID: 890 receives a frame at time 8.15502s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 8.22834s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.26908s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.27765s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.29846s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.29849s ++++
+++++ frame_probe ID: 890 receives a frame at time 8.29857s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 8.39094s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.43172s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.44089s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.46161s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.46164s ++++
+++++ frame_probe ID: 890 receives a frame at time 8.46172s ++++
+Measurement 3/10 complete in 1 second(s).
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 8.57105s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.61192s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.62362s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.64429s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.64432s ++++
+++++ frame_probe ID: 890 receives a frame at time 8.6444s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 8.76187s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.80277s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.80587s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.82603s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.82607s ++++
+++++ frame_probe ID: 890 receives a frame at time 8.82613s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 8.93252s ++++
+++++ frame_probe ID: 860 receives a frame at time 8.97339s ++++
+++++ frame_probe ID: 1010 receives a frame at time 8.97909s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 8.99991s ++++
+++++ frame_probe ID: 883 receives a frame at time 8.99995s ++++
+++++ frame_probe ID: 890 receives a frame at time 9s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 9.09744s ++++
+++++ frame_probe ID: 860 receives a frame at time 9.13822s ++++
+++++ frame_probe ID: 1010 receives a frame at time 9.14174s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 9.16312s ++++
+++++ frame_probe ID: 883 receives a frame at time 9.1632s ++++
+++++ frame_probe ID: 890 receives a frame at time 9.16323s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 9.23949s ++++
+++++ frame_probe ID: 860 receives a frame at time 9.28028s ++++
+++++ frame_probe ID: 1010 receives a frame at time 9.28598s ++++
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 9.30667s ++++
+++++ frame_probe ID: 883 receives a frame at time 9.30672s ++++
+++++ frame_probe ID: 890 receives a frame at time 9.30679s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 9.3961s ++++
+++++ frame_probe ID: 860 receives a frame at time 9.43701s ++++
+++++ frame_probe ID: 1010 receives a frame at time 9.4493s ++++
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 9.46989s ++++
+++++ frame_probe ID: 883 receives a frame at time 9.46996s ++++
+++++ frame_probe ID: 890 receives a frame at time 9.47s ++++
+the 100th message counter  has been visited 10 times  
+Measurement 3 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/sender_data_sent.txt'
+Measurement 3 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/3/.
+
+Measurement 4/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 4/10 complete in 3 second(s).
+the 100th message counter is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+Measurement 4/10 complete in 2 second(s).
+node starts running at 11.9493
+node starts running at 11.9631
+++++ frame_probe ID: 850 receives a frame at time 11.9902s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.0313s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.0388s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.0601s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.0602s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.0603s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 12.1637s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.2045s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.211s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.2314s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.2315s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.2315s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 12.3009s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.3419s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.3452s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.3665s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.3665s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.3666s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 12.4359s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.4768s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.4797s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.5009s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.501s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.501s ++++
+Measurement 4/10 complete in 1 second(s).
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 12.5904s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.6312s ++++
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 12.6429s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.6649s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.6649s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.665s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 12.7364s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.7772s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.7871s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.8082s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.8083s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.8083s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 12.8807s ++++
+++++ frame_probe ID: 860 receives a frame at time 12.9217s ++++
+++++ frame_probe ID: 1010 receives a frame at time 12.9306s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 12.9526s ++++
+++++ frame_probe ID: 883 receives a frame at time 12.9527s ++++
+++++ frame_probe ID: 890 receives a frame at time 12.9528s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 13.0442s ++++
+++++ frame_probe ID: 860 receives a frame at time 13.0853s ++++
+++++ frame_probe ID: 1010 receives a frame at time 13.0942s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 13.1159s ++++
+++++ frame_probe ID: 883 receives a frame at time 13.1159s ++++
+++++ frame_probe ID: 890 receives a frame at time 13.116s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 13.2204s ++++
+++++ frame_probe ID: 860 receives a frame at time 13.2613s ++++
+++++ frame_probe ID: 1010 receives a frame at time 13.2673s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 13.2878s ++++
+++++ frame_probe ID: 883 receives a frame at time 13.2878s ++++
+++++ frame_probe ID: 890 receives a frame at time 13.2879s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 13.3832s ++++
+++++ frame_probe ID: 860 receives a frame at time 13.4242s ++++
+++++ frame_probe ID: 1010 receives a frame at time 13.4308s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 13.4518s ++++
+++++ frame_probe ID: 883 receives a frame at time 13.4519s ++++
+++++ frame_probe ID: 890 receives a frame at time 13.452s ++++
+the 100th message counter  has been visited 10 times  
+++++ frame_probe ID: 850 receives a frame at time 13.5264s ++++
+Measurement 4 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/sender_data_sent.txt'
+Measurement 4 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/4/.
+
+Measurement 5/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 5/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 5/10 complete in 2 second(s).
+node starts running at 15.9328
+node starts running at 15.9446
+++++ frame_probe ID: 850 receives a frame at time 15.9672s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.0083s ++++
+++++ frame_probe ID: 1010 receives a frame at time 16.0146s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.0391s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.0392s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.0393s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 16.1436s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.1845s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 16.197s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.2201s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.2201s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.2202s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 16.3095s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.3504s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 16.3602s ++++
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.3835s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.3835s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.3836s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 16.4979s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.5389s ++++
+++++ frame_probe ID: 1010 receives a frame at time 16.5428s ++++
+Measurement 5/10 complete in 1 second(s).
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.5661s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.5662s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.5662s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 16.6557s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.6965s ++++
+++++ frame_probe ID: 1010 receives a frame at time 16.7058s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.7292s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.7292s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.7293s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 16.8106s ++++
+++++ frame_probe ID: 860 receives a frame at time 16.8513s ++++
+++++ frame_probe ID: 1010 receives a frame at time 16.8592s ++++
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 16.8827s ++++
+++++ frame_probe ID: 883 receives a frame at time 16.8828s ++++
+++++ frame_probe ID: 890 receives a frame at time 16.8828s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 16.9713s ++++
+++++ frame_probe ID: 860 receives a frame at time 17.0123s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 17.0226s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 17.0458s ++++
+++++ frame_probe ID: 883 receives a frame at time 17.0459s ++++
+++++ frame_probe ID: 890 receives a frame at time 17.0459s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 17.1403s ++++
+++++ frame_probe ID: 860 receives a frame at time 17.1811s ++++
+++++ frame_probe ID: 1010 receives a frame at time 17.1859s ++++
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 17.2086s ++++
+++++ frame_probe ID: 883 receives a frame at time 17.2086s ++++
+++++ frame_probe ID: 890 receives a frame at time 17.2087s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 17.308s ++++
+++++ frame_probe ID: 860 receives a frame at time 17.3487s ++++
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 17.3584s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 17.3828s ++++
+++++ frame_probe ID: 883 receives a frame at time 17.3828s ++++
+++++ frame_probe ID: 890 receives a frame at time 17.3829s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 17.4832s ++++
+++++ frame_probe ID: 860 receives a frame at time 17.5243s ++++
+++++ frame_probe ID: 1010 receives a frame at time 17.5309s ++++
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 17.5553s ++++
+++++ frame_probe ID: 883 receives a frame at time 17.5554s ++++
+++++ frame_probe ID: 890 receives a frame at time 17.5555s ++++
+Measurement 5 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/sender_data_sent.txt'
+Measurement 5 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/5/.
+
+Measurement 6/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 6/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 6/10 complete in 2 second(s).
+node starts running at 19.935
+node starts running at 19.9507
+++++ frame_probe ID: 850 receives a frame at time 19.9778s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.0189s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.0288s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.0523s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.0524s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.0524s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 20.1238s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.1646s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.1721s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.1956s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.1956s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.1957s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 20.279s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.3197s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.3263s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.3496s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.3496s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.3497s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 20.439s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.4797s ++++
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 20.4888s ++++
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.512s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.5121s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.5121s ++++
+Measurement 6/10 complete in 1 second(s).
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 20.5955s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.6362s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.6421s ++++
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.6655s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.6655s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.6656s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 20.7419s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.7826s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.7867s ++++
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.8101s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.8101s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.8102s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 20.9135s ++++
+++++ frame_probe ID: 860 receives a frame at time 20.9545s ++++
+++++ frame_probe ID: 1010 receives a frame at time 20.9598s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 20.9833s ++++
+++++ frame_probe ID: 883 receives a frame at time 20.9833s ++++
+++++ frame_probe ID: 890 receives a frame at time 20.9834s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 21.0838s ++++
+++++ frame_probe ID: 860 receives a frame at time 21.1245s ++++
+++++ frame_probe ID: 1010 receives a frame at time 21.1322s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 21.1555s ++++
+++++ frame_probe ID: 883 receives a frame at time 21.1556s ++++
+++++ frame_probe ID: 890 receives a frame at time 21.1557s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 21.228s ++++
+++++ frame_probe ID: 860 receives a frame at time 21.269s ++++
+++++ frame_probe ID: 1010 receives a frame at time 21.2764s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 21.3003s ++++
+++++ frame_probe ID: 883 receives a frame at time 21.3004s ++++
+++++ frame_probe ID: 890 receives a frame at time 21.3005s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 21.4138s ++++
+++++ frame_probe ID: 860 receives a frame at time 21.4545s ++++
+++++ frame_probe ID: 1010 receives a frame at time 21.4588s ++++
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 21.4822s ++++
+++++ frame_probe ID: 883 receives a frame at time 21.4823s ++++
+++++ frame_probe ID: 890 receives a frame at time 21.4823s ++++
+Measurement 6 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/sender_data_sent.txt'
+Measurement 6 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/6/.
+
+Measurement 7/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 7/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 7/10 complete in 2 second(s).
+node starts running at 23.9159
+node starts running at 23.9161
+++++ frame_probe ID: 850 receives a frame at time 24.0851s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.1258s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.1362s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.1575s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.1576s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.1576s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 24.268s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.3089s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.3188s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.3398s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.3399s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.3399s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 24.4314s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.4723s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.4821s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.5034s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.5035s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.5035s ++++
+the 100th message counter  has been visited 3 times  
+Measurement 7/10 complete in 1 second(s).
+++++ frame_probe ID: 850 receives a frame at time 24.582s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.6229s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.6262s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.6474s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.6475s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.6476s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 24.7209s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.7617s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.7705s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.7918s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.7918s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.7919s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 24.8742s ++++
+++++ frame_probe ID: 860 receives a frame at time 24.9151s ++++
+++++ frame_probe ID: 1010 receives a frame at time 24.924s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 24.9452s ++++
+++++ frame_probe ID: 883 receives a frame at time 24.9452s ++++
+++++ frame_probe ID: 890 receives a frame at time 24.9453s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 25.0206s ++++
+++++ frame_probe ID: 860 receives a frame at time 25.0614s ++++
+++++ frame_probe ID: 1010 receives a frame at time 25.0672s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 25.0892s ++++
+++++ frame_probe ID: 883 receives a frame at time 25.0892s ++++
+++++ frame_probe ID: 890 receives a frame at time 25.0893s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 25.1977s ++++
+++++ frame_probe ID: 860 receives a frame at time 25.2386s ++++
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 25.2498s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 25.272s ++++
+++++ frame_probe ID: 883 receives a frame at time 25.272s ++++
+++++ frame_probe ID: 890 receives a frame at time 25.2721s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 25.3494s ++++
+++++ frame_probe ID: 860 receives a frame at time 25.3903s ++++
+++++ frame_probe ID: 1010 receives a frame at time 25.394s ++++
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 25.4156s ++++
+++++ frame_probe ID: 883 receives a frame at time 25.4157s ++++
+++++ frame_probe ID: 890 receives a frame at time 25.4157s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 25.5061s ++++
+++++ frame_probe ID: 860 receives a frame at time 25.5473s ++++
+++++ frame_probe ID: 1010 receives a frame at time 25.5575s ++++
+INFO: Detected an invalid packet at item 800
+INFO: Parser returned #f
+Measurement 7 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/sender_data_sent.txt'
+Measurement 7 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/7/.
+
+Measurement 8/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 8/10 complete in 3 second(s).
+the 100th message counter is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+Measurement 8/10 complete in 2 second(s).
+node starts running at 27.9741
+node starts running at 27.9872
+++++ frame_probe ID: 850 receives a frame at time 28.1922s ++++
+++++ frame_probe ID: 860 receives a frame at time 28.2334s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 28.2425s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 28.2674s ++++
+++++ frame_probe ID: 883 receives a frame at time 28.2675s ++++
+++++ frame_probe ID: 890 receives a frame at time 28.2676s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 28.3749s ++++
+++++ frame_probe ID: 860 receives a frame at time 28.4159s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 28.4248s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 28.4496s ++++
+++++ frame_probe ID: 883 receives a frame at time 28.4496s ++++
+++++ frame_probe ID: 890 receives a frame at time 28.4497s ++++
+the 100th message counter  has been visited 2 times  
+Measurement 8/10 complete in 1 second(s).
+++++ frame_probe ID: 850 receives a frame at time 28.734s ++++
+++++ frame_probe ID: 860 receives a frame at time 28.775s ++++
+++++ frame_probe ID: 1010 receives a frame at time 28.7805s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 28.8045s ++++
+++++ frame_probe ID: 883 receives a frame at time 28.8046s ++++
+++++ frame_probe ID: 890 receives a frame at time 28.8047s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 28.891s ++++
+++++ frame_probe ID: 860 receives a frame at time 28.9317s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 28.9428s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 28.9675s ++++
+++++ frame_probe ID: 883 receives a frame at time 28.9675s ++++
+++++ frame_probe ID: 890 receives a frame at time 28.9676s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 29.055s ++++
+++++ frame_probe ID: 860 receives a frame at time 29.0957s ++++
+++++ frame_probe ID: 1010 receives a frame at time 29.106s ++++
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 29.1308s ++++
+++++ frame_probe ID: 883 receives a frame at time 29.1308s ++++
+++++ frame_probe ID: 890 receives a frame at time 29.1309s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 29.2332s ++++
+++++ frame_probe ID: 860 receives a frame at time 29.2738s ++++
+++++ frame_probe ID: 1010 receives a frame at time 29.2793s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 29.3043s ++++
+++++ frame_probe ID: 883 receives a frame at time 29.3044s ++++
+++++ frame_probe ID: 890 receives a frame at time 29.3044s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 29.3878s ++++
+++++ frame_probe ID: 860 receives a frame at time 29.4286s ++++
+++++ frame_probe ID: 1010 receives a frame at time 29.4327s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 29.4577s ++++
+++++ frame_probe ID: 883 receives a frame at time 29.4577s ++++
+++++ frame_probe ID: 890 receives a frame at time 29.4578s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 29.5712s ++++
+Measurement 8 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/sender_data_sent.txt'
+Measurement 8 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/8/.
+
+Measurement 9/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 9/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 9/10 complete in 2 second(s).
+node starts running at 31.9683
+node starts running at 31.9687
+++++ frame_probe ID: 850 receives a frame at time 32.2305s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.2719s ++++
+++++ frame_probe ID: 1010 receives a frame at time 32.276s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.2961s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.2961s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.2962s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 32.3655s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.4063s ++++
+++++ frame_probe ID: 1010 receives a frame at time 32.4101s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.4298s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.4299s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.4299s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 32.5443s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.5851s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 32.5926s ++++
+Measurement 9/10 complete in 1 second(s).
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.6127s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.6127s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.6128s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 32.72s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.7607s ++++
+++++ frame_probe ID: 1010 receives a frame at time 32.7649s ++++
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.7846s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.7847s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.7848s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 32.866s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.9068s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 32.9183s ++++
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.9381s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.9381s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.9382s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 33.0255s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.0662s ++++
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 33.0725s ++++
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.0925s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.0926s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.0926s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 33.193s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.2337s ++++
+++++ frame_probe ID: 1010 receives a frame at time 33.2449s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.2649s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.265s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.265s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 33.3814s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.4223s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 33.4275s ++++
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.4474s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.4474s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.4475s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 33.5479s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.5887s ++++
+Measurement 9 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/sender_data_sent.txt'
+Measurement 9 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/9/.
+
+Measurement 10/10 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 10/10 complete in 3 second(s).
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+Measurement 10/10 complete in 2 second(s).
+node starts running at 35.9716
+node starts running at 35.9753
+++++ frame_probe ID: 850 receives a frame at time 36.0555s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.0965s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 1010 receives a frame at time 36.1087s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.1292s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.1293s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.1293s ++++
+the 100th message counter  has been visited 1 times  
+++++ frame_probe ID: 850 receives a frame at time 36.2157s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.2566s ++++
+++++ frame_probe ID: 1010 receives a frame at time 36.262s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.2832s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.2832s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.2833s ++++
+the 100th message counter  has been visited 2 times  
+++++ frame_probe ID: 850 receives a frame at time 36.3696s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.4105s ++++
+++++ frame_probe ID: 1010 receives a frame at time 36.4165s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.436s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.4361s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.4361s ++++
+the 100th message counter  has been visited 3 times  
+++++ frame_probe ID: 850 receives a frame at time 36.5385s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.5794s ++++
+++++ frame_probe ID: 1010 receives a frame at time 36.5885s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+Measurement 10/10 complete in 1 second(s).
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.609s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.609s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.6091s ++++
+the 100th message counter  has been visited 4 times  
+++++ frame_probe ID: 850 receives a frame at time 36.7115s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.7523s ++++
+++++ frame_probe ID: 1010 receives a frame at time 36.7611s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.7822s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.7822s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.7823s ++++
+the 100th message counter  has been visited 5 times  
+++++ frame_probe ID: 850 receives a frame at time 36.8746s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.9155s ++++
+++++ frame_probe ID: 1010 receives a frame at time 36.9244s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.9454s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.9454s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.9455s ++++
+the 100th message counter  has been visited 6 times  
+++++ frame_probe ID: 850 receives a frame at time 37.0619s ++++
+++++ frame_probe ID: 860 receives a frame at time 37.1027s ++++
+++++ frame_probe ID: 1010 receives a frame at time 37.1067s ++++
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 37.1274s ++++
+++++ frame_probe ID: 883 receives a frame at time 37.1275s ++++
+++++ frame_probe ID: 890 receives a frame at time 37.1275s ++++
+the 100th message counter  has been visited 7 times  
+++++ frame_probe ID: 850 receives a frame at time 37.2078s ++++
+++++ frame_probe ID: 860 receives a frame at time 37.2486s ++++
+++++ frame_probe ID: 1010 receives a frame at time 37.261s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 37.2814s ++++
+++++ frame_probe ID: 883 receives a frame at time 37.2814s ++++
+++++ frame_probe ID: 890 receives a frame at time 37.2815s ++++
+the 100th message counter  has been visited 8 times  
+++++ frame_probe ID: 850 receives a frame at time 37.3578s ++++
+++++ frame_probe ID: 860 receives a frame at time 37.3986s ++++
+++++ frame_probe ID: 1010 receives a frame at time 37.4045s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 37.4259s ++++
+++++ frame_probe ID: 883 receives a frame at time 37.426s ++++
+++++ frame_probe ID: 890 receives a frame at time 37.4261s ++++
+the 100th message counter  has been visited 9 times  
+++++ frame_probe ID: 850 receives a frame at time 37.5094s ++++
+++++ frame_probe ID: 860 receives a frame at time 37.5503s ++++
+++++ frame_probe ID: 1010 receives a frame at time 37.5579s ++++
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 37.579s ++++
+++++ frame_probe ID: 883 receives a frame at time 37.579s ++++
+++++ frame_probe ID: 890 receives a frame at time 37.5791s ++++
+Measurement 10 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/.
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_ack_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/sender_ack_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/sender_data_sent.txt'
+Measurement 10 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/86/10/.
+
+Now processing results...
+Plotting Python should be: python3 (UBUNTU).

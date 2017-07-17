@@ -70,7 +70,7 @@ for index, plot in enumerate(plot_type):
         bins=np.arange(
             min(data)-float(packet_size),
             max(data)+float(packet_size),
-            (max(data)-min(data))/25),
+            (max(data)-min(data)+1)/25),
             #packet_size/25),
         plottype=plot,
         title="Throughput "+titles[plot],

@@ -15,46 +15,70 @@
 \usepackage{calc}
 \usepackage{enumitem}
 \usepackage{standalone}
+\usepackage{outlines}
+\usepackage{enumitem}
+
+\setenumerate[1]{label=\arabic*}
+\setenumerate[2]{label*=.\arabic*}
+\setenumerate[3]{label*=.\arabic*}
+\setenumerate[4]{label*=.\arabic*}
 
 \graphicspath{{img/}}
 \setlength{\parindent}{0pt}
 
 \begin{document}
 	
-\title{CW 21-25 Summary}
+\title{Summary 4}
 \author{Alexander Pastor}
-\date{18.05.2017}
 \maketitle
 \tableofcontents
 \newpage
 
-to do:
-Python: kwargs, map, zip, list comprehension
-GR: hardware problem, how to exclude retransmissions from rtt, how to calculate delay if including them
-GR Scenarios: think of scenarios
-send Andra \& Peng the plots
-git: Personal Access Tokens
-latex: input
-description of my work so far...
-
-\section{Flow Chart Details}
-\subsection{Counter Meanings}
-
-In the theoretical CSMA and ALOHA files:
-\begin{description}[leftmargin=!]
-	\item[Counter 1:] Counts received frames.
-	\item[Counter 2:] Counts good frames.
-	\item[Counter 3:] Counts bad frames.
-	\item[Counter 4:] Counts frames that aren't destined to this RX.
-	\item[Counter 5:] Counts frames that are destined to this RX.
-\end{description}
-
 \section{Organizational}
+
+\subsection{Thesis Outline Proposal}
+
+\begin{outline}[enumerate]
+	\1 Introduction
+		\2 Abstract
+		\2 Motivation and Context
+			\3 The LTE-U/LAA Debate 
+			\3 Definition of Scope
+		
+	\1 Fundamentals and Preparation
+		\2 MAC Protocols
+			\3 MAC in the OSI Model
+		 	\3 CSMA/CA
+		 	\3 CSMA/CA with CTS/RTS
+		 	\3 (Slotted) ALOHA
+		 	\3 ...
+		\2 GNU Radio 
+			\3 What is GR and GRC
+			\3 Motivation to use GR
+			\3 Limitations of GR
+	
+	\1 Measurement Results and Interpretation
+		\2 Scenario Overview / Justification
+		\2 Scenario A
+		\2 Scenario B
+		\2 Scenario C
+		\2 ...
+		\2 Interpretation
+		
+	\1 Conclusions
+	
+	\1 Appendices
+		\2 How-to: Conduct Measurements Automatically
+		\2 Alphabetical Glossary / Acronym Expansions
+		\2 Alphabetical Index
+		\2 Bibliography / References
+		\2 Statement of Authorship
+\end{outline}
 
 \subsection{Device Parameters}
 
-Remote PC IP-address: 134.130.223.135 \\
-USRPs: 10.0.0.16, 10.0.0.7
+Remote PC IP-address: 134.130.223.151 \\
+USRPs: 10.0.0.8, 10.0.0.10
 
 \subsection{Measurement Plan}
 
@@ -66,37 +90,22 @@ For CW 25 the following measurement parameters were commissioned:
 	\item DIFS: 5ms  / 15ms 
 	\item Backoff slot: 2s / 6ms
 	\item The results should be plotted with either Matlab or Matplotlib
+	\item \textbf{Update:}  Matplotlib was chosen, because it allows easy and performant integration in the automatic measurement script (python script).
 \end{itemize}
+
+\textbf{Thesis scenarios should be subject of the next meeting.}
+
+\bigskip
 
 \textbf{Note:} The DIFS time in 802.11 can be calculated as twice the backoff time plus one SIFS time.
 
-\section{GNU Radio Implementation Details}
-
-\subsection{A Closer Look at PMTs}
+\include{usrp_hardware_issues}
 
 \section{Good to Know...}
 
-It has been a good while now, but finally I learned enough feasible stuff to write down.
+\subsection{Bash}
 
-\subsection{Using a static IP address for USRPs}
-\begin{minted}[tabsize=4]{bash}
-#Get to know your interface names
-ifconfig 
-#E.g. set eth0 interface IP to 10.0.0.100/24
-#Where up opens the eth0 interface 
-#and is not necessary if it showed up when using infconfig
-ifconfig eth0 10.0.0.100 netmask 255.255.255.0 up
-
-###Just FYI:
-#Shutdown network interface
-ifconfig eth0 down
-##List all interfaces
-ifconfig -a
-#OR
-ip link show
-\end{minted}
-
-\subsection{Efficient Remote Control}
+\subsubsection{Efficient Remote Control}
 
 \begin{minted}[tabsize=4]{bash}
 ##Opening a remote connection with X forwarding
@@ -126,20 +135,25 @@ To further avoid any repetitive commands I added to my \href{http://alexander-pa
 \begin{minted}[tabsize=4]{bash}
 "inets")
 	if ( mount | grep inets  )
-		then
+	then
 		echo "The mount point is in use, confirm unmount with your password."
-		sudo umount /home/alex/mnt/134.130.223.135
+		sudo umount /home/alex/mnt/134.130.223.151
 	fi
 	echo "Please enter the server password to mount the target directory."
-	sshfs inets@134.130.223.135:/home/inets /home/alex/mnt/134.130.223.135
-	gnome-terminal --tab -e "bash -c 'ssh -YC4 inets@134.130.223.135'" 
-	--tab --working-directory=/home/alex/mnt/134.130.223.135
+	sshfs inets@134.130.223.151:/home/inets /home/alex/mnt/134.130.223.151
+	gnome-terminal --tab -e "bash -c 'ssh -YC4 inets@134.130.223.151'" \
+	--tab --working-directory=/home/alex/0_ba/git/measurements \
+	#--tab --working-directory=/home/alex/mnt/134.130.223.151 \
+	texstudio
 	sleep 1
-	exit
-;;
+	cd ~/0_ba/git
+	git pull
+	git fetch
+	atom ~/0_ba/git/measurements/measurement.sh
+	;;
 \end{minted}
 
-\subsection{Listing Directories Only}
+\subsubsection{Listing Directories Only}
 
 \href{https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash-an-examination}{Stackoverflow Source}
 
@@ -161,7 +175,7 @@ ls -l | grep "^d"
 for i in $(ls -d */); do echo ${i%%/}; done
 \end{minted}
 
-\subsection{Redirecting GRC Stuff to Files}
+\subsubsection{Redirecting GRC Stuff to Files}
 If one wants to do heavy analysis, built-in Linux console tools including, but not limited to utilities such as \verb|awk|, \verb|grep|, \verb|sed|, \verb|cat| might be a great help.
 
 Since executing a GRC flowgraph is running a generated python script, we can achieve our goal easily by the simple means of:
@@ -174,7 +188,151 @@ time python2 theoretical_aloha_rx.py &> logs/theoretical_aloha_rx.log
 time python2 theoretical_aloha.py &> logs/theoretical_aloha.log
 \end{minted}
 
-\subsection{Atom: Folder-Wide Search for Substrings}
-Use the Ctrl+Shift+F shortcut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
+\subsection{Python}
+
+\subsubsection{*args and **kwargs}
+
+\texttt{*args} can be used to pass an arbitrary amount of non-keyword arguments to a function like this:
+
+\begin{minted}[tabsize=4]{python}
+	def my_func(*args):
+		for index, value in enumerate(args):
+			print( "{0}: {1}".format(index,value) )
+	
+	# let's call the function
+	>>> my_func("this", "is", "an", "example")
+	
+	# output
+ 	0: this
+ 	1: is
+ 	2: an
+ 	3: example
+\end{minted} 
+
+\texttt{**kwargs} can be used to pass an arbitrary amount of keyword arguments to a function as follows below. Note that \texttt{**} is also used to convert dictionaries to the format specified used by \texttt{kwargs}, which is \mintinline{python}{keyword = value, keyword2 = value}.
+
+\begin{minted}[tabsize=4]{python}
+	def my_func(**kwargs):
+		for name, value in kwargs.items():
+			print( "{0} = {1}".format(name,value) )
+	
+	# let's cal this function
+	>>> my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
+	>>> my_func(**my_dict)
+	
+	# equivalent would be:
+	>>> my_func(fruits=["apple","banana"], vegetables=["tomato","cucumber"])
+	
+	# output
+	fruits = ["apple", "banana"]
+	vegetables = ["tomato", "cucumber"]
+\end{minted} 
+
+\textbf{Note:} \texttt{*args} and \texttt{**kwargs} are conventional, thus strongly recommended, but the real syntax just is \texttt{*varname} and \texttt{**varname}.
+
+\subsubsection{List Comprehension}
+
+List Comprehension is a powerful language feature of Python. It offers an elegant way to create lists with an easy syntax.
+
+\bigskip
+
+The examples below are taken from \href{http://www.secnetix.de/olli/Python/list_comprehensions.hawk}{here}.
+
+\bigskip
+
+\begin{minted}[tabsize=4]{python}
+	# Calculate powers of two
+	powers = [2**x for x in range(10)]
+	# Calculate cubic numbers
+	cubes = [x**2 for x in range(10)]
+	# Extract even numbers from cubes
+	even = [x for x in cubes if x%2 == 0]
+\end{minted}
+
+We can also create lists of lists with list comprehension. One can also nest list comprehensions. However, for readability's sake one should not exaggerate the nesting.
+
+\begin{minted}{python}
+	words = "This is an example sentence with fancy words".split()
+	cool_list = [[word.upper(), word.lower(), len(word)] for word in words]
+	
+	for item in cool_list:
+		print(item)
+	
+	# would create the following output:
+	["THIS", "this", 4]
+	["IS", "is", 2]
+	["AN", "an", 2]
+	["EXAMPLE", "example", 7]
+	["SENTENCE", "sentence", 8]
+	["WITH", "with", 4]
+	["FANCY", "fancy", 5]
+	["WORDS", "words", 5]
+\end{minted}
+
+\subsubsection{map and zip}
+
+The section summarizes \href{https://bradmontgomery.net/blog/pythons-zip-map-and-lambda/}{this source}.
+
+\bigskip
+
+\texttt{zip(*args)} takes equal length iterables and merges them into an iterable of tuples.
+
+\bigskip
+
+\texttt{map(function, iterable)} applies function to each element of iterable. It conducts the mathematical operation of mapping x to f(x). 
+
+\subsection{Other}
+
+\subsubsection{Atom: Folder-Wide Search for Substrings}
+Use the Ctrl+Shift+F shocut and all "project folders" will be searched. To add multiple folders use the Ctrl+Shift+A shortcut.
+
+\subsubsection{Using a static IP address for USRPs}
+\begin{minted}[tabsize=4]{bash}
+#Get to know your interface names
+ifconfig 
+#E.g. set eth0 interface IP to 10.0.0.100/24
+#Where up opens the eth0 interface 
+#and is not necessary if it showed up when using infconfig
+ifconfig eth0 10.0.0.100 netmask 255.255.255.0 up
+
+###Just FYI:
+#Shutdown network interface
+ifconfig eth0 down
+##List all interfaces
+ifconfig -a
+#OR
+ip link show
+\end{minted}
+
+\subsubsection{Git Personal Access Tokens}
+Git access tokens are OAuth2 tokens that you can use instead of your password to perform any github operation. Furthermore, it also is possibly to restrict the permitted operations of a token on the github settings page. Let me walk you through the whole process:
+
+\bigskip
+
+\begin{enumerate}
+	\item Go to \href{https://github.com/settings/tokens}{https://github.com/settings/tokens}
+	\item Create your personal access token with the desired permissions.
+	\item E.g. use your token like this: \mint{bash}{git push https://username:token@github.com/username/project.git}
+\end{enumerate}
+
+\textbf{Note:} Don't include in any source code you upload to github. It will scan your code for tokens and immediately revoke any active token they find in your code.
+
+\subsubsection{Latex input and include}
+
+\href{https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include}{Here's the source}.
+
+\begin{quotation}
+	\texttt{\textbackslash input\{filename\}} imports the commands from filename.tex into the target file; it's equivalent to typing all the commands from filename.tex right into the current file where the \texttt{\textbackslash input} line is.
+	
+	\bigskip
+	
+	\texttt{\textbackslash include\{filename\}} essentially does a \texttt{\textbackslash clearpage} before and after \texttt{\textbackslash input\{filename\}}, together with some magic to switch to another .aux file, and omits the inclusion at all if you have an \texttt{\textbackslash includeonly} without the filename in the argument. This is primarily useful when you have a big project on a slow computer; changing one of the include targets won't force you to regenerate the outputs of all the rest.
+	
+	\bigskip
+	
+	\texttt{\textbackslash include\{filename\}} gets you the speed bonus, but it also can't be nested, can't appear in the preamble, and forces page breaks around the included text.
+\end{quotation}
+
+
 
 \end{document}

@@ -9,7 +9,7 @@
 TIMER=4
 export MEASUREMENT_REPETITIONS=10
 MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II.py )
-PLOT_SCRIPTS=( rtt.py throughput.py )
+PLOT_SCRIPTS=( rtt_2.py throughput.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################

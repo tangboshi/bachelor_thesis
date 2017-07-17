@@ -39,6 +39,11 @@ if os.environ.get('PLOT_TYPE') is not None:
 else:
     plot_type           = "debug"
 
+if os.environ.get('MAX_RETXS') is not None:
+    max_retxs           = os.environ["MAX_RETXS"]
+else:
+    max_retxs           = 6
+
 #throughput
 if os.environ.get('THROUGHPUT_DATA_FILES') is not None:
     throughput_data_files_array = os.environ["THROUGHPUT_DATA_FILES"].split(",")
@@ -62,6 +67,14 @@ else:
         "data_sent":    "invalid_file.txt",
         "ack_received": "invalid_file_2.txt"
     }
+
+if os.environ.get('RTT_MODE') is not None:
+    rtt_mode = os.environ['RTT_MODE']
+else:
+    #alternative rtt mode is delay, which takes retransmissions into account
+    #when calculating rtt, which actually then rather should be called packet
+    #delay
+    rtt_mode = "rtt"
 
 #retransmissions
 #ugly to have two environment variables for this, but w/e

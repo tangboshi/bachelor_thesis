@@ -86,7 +86,7 @@ for i in range(1,repetitions+1):
             if len(ack_received_times) > idx:
                 total_retxs += counter
                 if counter > 0:
-                    if counter = max_retxs:
+                    if counter == max_retxs:
                         txs_fails += 1
                 else:
                     res = ack_received_times[idx] - data[idx+counter+total_retxs]

@@ -92,7 +92,7 @@ for i in range(1,repetitions+1):
                     if counter == max_retxs:
                         txs_fails += 1
                 else:
-                    res = ack_received_times[idx] - data[idx+counter+total_retxs]
+                    res = ack_received_times[idx] - data_sent_times[idx+counter+total_retxs]
                     rtt_single_measurement += [round(res,5)]
             else:
                 print(  "Last data frame wasnt acked (max tries). \

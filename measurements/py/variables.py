@@ -39,6 +39,11 @@ if os.environ.get('PLOT_TYPE') is not None:
 else:
     plot_type           = "debug"
 
+if os.environ.get('MAX_RETXS') is not None:
+    max_retxs           = os.environ["MAX_RETXS"]
+else:
+    max_retxs           = 6
+
 #throughput
 if os.environ.get('THROUGHPUT_DATA_FILES') is not None:
     throughput_data_files_array = os.environ["THROUGHPUT_DATA_FILES"].split(",")

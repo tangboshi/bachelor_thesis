@@ -99,10 +99,16 @@ myDict["Somerandomword"]()
 # fancyplot.setLabels(xlabel="awesomeness", ylabel="fancyness", title="Fancyplot")
 # fancyplot.show()
 
-def my_func(**kwargs):
-	for name, value in kwargs.items():
-		print( "{0} = {1}".format(name,value) )
+# def my_func(**kwargs):
+# 	for name, value in kwargs.items():
+# 		print( "{0} = {1}".format(name,value) )
+#
+# # let's cal this function
+# my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
+# my_func(**my_dict)
 
-# let's cal this function
-my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
-my_func(**my_dict)
+retxs_counters = []
+line = "1 3 5 2 0 1 2"
+line = [int(item) for item in line.split()]
+retxs_counters += [item for item in line]
+print(retxs_counters)

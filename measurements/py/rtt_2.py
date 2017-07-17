@@ -14,7 +14,8 @@ try:
         plot_type,
         measurement,
         repetitions,
-        show_plot
+        show_plot,
+        max_retxs
     )
 except ImportError:
     print("Probably not all data were imported correctly!")
@@ -25,62 +26,89 @@ data_sent_times = []
 ack_received_times = []
 rtt_single_measurement = []
 rtt = np.zeros(shape=(repetitions))
+retxs = []
+total_retxs = 0
+tx_fails = 0
 
 for i in range(1,repetitions+1):
     path                = data_source_path+'/'+str(i)+'/'
     data_sent_path      = path+rtt_data_files["data_sent"]
     ack_received_path   = path+rtt_data_files["ack_received"]
-    retransmissions_path= path+retxs_data_files["retxs"]
+    retxs_path          = path+retxs_data_files["retxs"]
+
+    if os.path.isfile(data_sent_path):
+        with open(data_sent_path) as f:
+            for line in f:
+                line = line.strip('\n')
+                secs, usecs = line.split(" ",1)
+                missing_zeros = 6 - len(usecs)
+                usecs = ("0" * missing_zeros) + usecs
+                line = ".".join([secs, usecs])
+                data_sent_times += [float(line)]
+                print("data_sent: "+line)
+    else:
+        print(  "File "+data_sent_path+" not found. \
+                Assuming not reached in GR.")
+
+    if os.path.isfile(ack_received_path):
+        with open(ack_received_path) as f:
+            for line in f:
+                line = line.strip('\n')
+                secs, usecs = line.split(" ",1)
+                missing_zeros = 6 - len(usecs)
+                usecs = ("0" * missing_zeros) + usecs
+                line = ".".join([secs, usecs])
+                ack_received_times += [float(line)]
+                print("ack_received: "+line)
+
+    else:
+        print(  "File "+ack_received_path+" not found. \
+                Assuming not reached in GR.")
+
+    if os.path.isfile(retxs_path):
+        with open(retxs_path) as f:
+            for line in f:
+                line.strip("\n")
+                line = [int(item) for item in line.split()]
+                retxs += [item for item in line]
+                # print(retxs)
+
+    else:
+        print(  "File "+retransmissions_path+" not found. \
+                Assuming not reached in GR.")
+
 
     # Calculate RTT for each packet
     if rtt_mode == "rtt":
-        # strip retransmissions-1 lines after each line
-        # for that purpose let's get #retransmissions from
-        # the throughput files
+        for idx, counter in enumerate(retxs):
+            # This check must be added to catch the case where the last data
+            # frame isnt followed up by an ACK (max retries)
+            if len(ack_received_times) > idx:
+                total_retxs += counter
+                if counter > 0:
+                    if counter = max_retxs:
+                        txs_fails += 1
+                else:
+                    res = ack_received_times[idx] - data[idx+counter+total_retxs]
+                    rtt_single_measurement += [round(res,5)]
+            else:
+                print(  "Last data frame wasnt acked (max tries). \
+                        Termintating calculation here.")
 
-        if os.path.isfile(retransmissions_path):
-                        
-        if os.path.isfile(data_sent_path):
-            with open(data_sent_path) as f:
-                for line in f:
-
-                    line = line.strip('\n')
-                    secs, usecs = line.split(" ",1)
-                    missing_zeros = 6 - len(usecs)
-                    usecs = ("0" * missing_zeros) + usecs
-                    line = ".".join([secs, usecs])
-                    data_sent_times += [float(line)]
-                    print("data_sent: "+line)
-        else:
-            print(  "File "+data_sent_path+" not found. \
-                    Assuming not reached in GR.")
-
-        if os.path.isfile(ack_received_path):
-            with open(ack_received_path) as f:
-                for line in f:
-                    line = line.strip('\n')
-                    secs, usecs = line.split(" ",1)
-                    missing_zeros = 6 - len(usecs)
-                    usecs = ("0" * missing_zeros) + usecs
-                    line = ".".join([secs, usecs])
-                    ack_received_times += [float(line)]
-                    print("ack_received: "+line)
-        else:
-            print(  "File "+ack_received_path+" not found. \
-                    Assuming not reached in GR.")
     else:#rtt_mode == delay
+        for idx, counter in enumerate(retxs):
+            if len(ack_received_times) > idx:
+                total_retxs += counter
+                if counter < max_retxs:
+                    res = ack_received_times[idx] - data[idx+counter+total_retxs]
+                    rtt_single_measurement += [round(res,5)]
+                else:
+                    # Probably not needed, but hey if we can get it for free...
+                    txs_fails += 1
+            else:
+                print(  "Last data frame wasnt acked (max tries). \
+                        Termintating calculation here.")
 
-
-    # If I wanted I could now plot packet loss as well...
-    packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
-    packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
-    packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
-    print("abs. packet loss: "+str(packet_loss_abs))
-    print("packet loss in %: "+packet_loss_percent)
-
-    for index, ack_time in enumerate(ack_received_times):
-        res = ack_time - data_sent_times[index]
-        rtt_single_measurement += [round(res,5)]
 
     print("\nThe resulting RTTs of this single measurement are:")
     print(rtt_single_measurement)
@@ -101,6 +129,16 @@ for i in range(1,repetitions+1):
     rtt_single_measurement = []
     ack_received_times = []
     data_sent_times = []
+    retxs = []
+    total_retxs = 0
+    tx_fails = 0
+
+    ### Packet loss ###
+    packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
+    packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
+    packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
+    print("abs. packet loss: "+str(packet_loss_abs))
+    print("packet loss in %: "+packet_loss_percent)
 
 print(rtt)
 #------------------------------------------------------------------------------#

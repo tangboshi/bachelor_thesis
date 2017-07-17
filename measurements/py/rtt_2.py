@@ -75,7 +75,7 @@ for i in range(1,repetitions+1):
                 # print(retxs)
 
     else:
-        print(  "File "+retransmissions_path+" not found. \
+        print(  "File "+retxs_path+" not found. \
                 Assuming not reached in GR.")
 
 

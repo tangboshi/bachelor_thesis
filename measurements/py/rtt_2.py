@@ -76,7 +76,9 @@ for i in range(1,repetitions+1):
 
     else:
         print(  "File "+retxs_path+" not found. \
-                Assuming not reached in GR.")
+                Assuming not reached in GR. Creating data for you...")
+        for index in range(ack_received_times):
+            retxs += [0]
 
 
     # Calculate RTT for each packet

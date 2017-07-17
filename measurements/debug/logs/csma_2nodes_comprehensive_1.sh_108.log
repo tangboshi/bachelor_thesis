@@ -1,0 +1,203 @@
+Measurement 1/2 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 1/2 complete in 3 second(s).
+develop mode of resend_check ID: 24 is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+develop_mode of random_filter ID: 1015 is activated.
+the 100th message counter is activated.
+Measurement 1/2 complete in 2 second(s).
+node starts running at 74.183
+node starts running at 74.1895
+++++ frame_probe ID: 850 receives a frame at time 74.237s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.2786s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 850 receives a frame at time 74.4092s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.4592s ++++
+a data frame with index 0 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 850 receives a frame at time 74.5893s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.6312s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 3th time
+++++ frame_probe ID: 850 receives a frame at time 74.7759s ++++
+Measurement 1/2 complete in 1 second(s).
+++++ frame_probe ID: 860 receives a frame at time 74.8169s ++++
+a data frame with index 0 from node: 3 has been transmitted 4th time
+++++ frame_probe ID: 850 receives a frame at time 74.9568s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.9977s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 5th time
+++++ frame_probe ID: 850 receives a frame at time 75.2781s ++++
+++++ frame_probe ID: 860 receives a frame at time 75.3191s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+frame: 0 from node: 3 is dropped because its max retransmission counter is reached. 
+counter ID 880 results at time +++++++++ frame_probe ID: 1 +++++++++9575.74 ---- data frame detected ----  is 5
+frame index is:            0;    destination address is:    1;    source address is:         3;    number of transmission is: 6;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    frame info contains a frame with length 852 bytes: input time_stamp is: 75.278
+++++ frame_probe ID: 850 receives a frame at time 75.7573s ++++
+Measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/.
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/sender_data_sent.txt'
+'/home/inets/source/gr-inets/results/sender_retransmissions.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/sender_retransmissions.txt'
+Measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/.
+
+Measurement 2/2 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+Measurement 2/2 complete in 3 second(s).
+develop mode of resend_check ID: 24 is activated.
+develop_mode of random_filter ID: 1015 is activated.
+the 100th message counter is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+Measurement 2/2 complete in 2 second(s).
+node starts running at 78.1782
+node starts running at 78.1815
+++++ frame_probe ID: 850 receives a frame at time 78.3989s ++++
+++++ frame_probe ID: 860 receives a frame at time 78.4403s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 850 receives a frame at time 78.5703s ++++
+++++ frame_probe ID: 860 receives a frame at time 78.6111s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 850 receives a frame at time 78.7412s ++++
+++++ frame_probe ID: 860 receives a frame at time 78.7819s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+Measurement 2/2 complete in 1 second(s).
+a data frame with index 0 from node: 3 has been transmitted 3th time
+++++ frame_probe ID: 850 receives a frame at time 78.9116s ++++
+++++ frame_probe ID: 860 receives a frame at time 78.9525s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 4th time
+++++ frame_probe ID: 850 receives a frame at time 79.1122s ++++
+++++ frame_probe ID: 860 receives a frame at time 79.1531s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 5th time
+++++ frame_probe ID: 850 receives a frame at time 79.3279s ++++
+++++ frame_probe ID: 860 receives a frame at time 79.3687s ++++
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+frame: 0 from node: 3 is dropped because its max retransmission counter is reached. 
+counter ID 880 results at time 9579.69 is 5
++++++++++ frame_probe ID: 1 +++++++++ ---- data frame detected ---- frame index is:            0;    destination address is:    1;    source address is:         3;    number of transmission is: 6;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    frame info contains a frame with length 852 bytes: input time_stamp is: 79.3278
+++++ frame_probe ID: 850 receives a frame at time 79.7091s ++++
+++++ frame_probe ID: 860 receives a frame at time 79.7506s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+Measurement 2 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/2/.
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/2/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/2/sender_data_sent.txt'
+'/home/inets/source/gr-inets/results/sender_retransmissions.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/2/sender_retransmissions.txt'
+Measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/2/.
+
+Now processing results...
+Plotting Python should be: python3 (UBUNTU).
+Hello from rtt.py!
+Hello from variables.py!
+data_sent: 1500299243.328335
+data_sent: 1500299243.504126
+data_sent: 1500299243.674961
+data_sent: 1500299243.870354
+data_sent: 1500299244.080946
+data_sent: 1500299244.277600
+data_sent: 1500299244.548976
+data_sent: 1500299244.720034
+data_sent: 1500299244.905847
+data_sent: 1500299245.112518
+data_sent: 1500299245.288760
+data_sent: 1500299245.499548
+data_sent: 1500299245.865961
+data_sent: 1500299246.042470
+data_sent: 1500299246.213682
+data_sent: 1500299246.399550
+data_sent: 1500299246.640988
+data_sent: 1500299246.932789
+data_sent: 1500299247.373607
+data_sent: 1500299247.544671
+data_sent: 1500299247.726257
+data_sent: 1500299247.917410
+data_sent: 1500299248.124234
+data_sent: 1500299248.335030
+data_sent: 1500299248.752560
+data_sent: 1500299248.929193
+data_sent: 1500299249.110355
+data_sent: 1500299249.281980
+data_sent: 1500299249.474359
+data_sent: 1500299249.725786
+data_sent: 1500299337.673473
+data_sent: 1500299337.849255
+data_sent: 1500299338.020814
+data_sent: 1500299338.222159
+data_sent: 1500299338.418950
+data_sent: 1500299338.715655
+data_sent: 1500299339.151680
+data_sent: 1500299339.322829
+data_sent: 1500299339.494887
+data_sent: 1500299339.680904
+data_sent: 1500299362.615436
+data_sent: 1500299362.787720
+data_sent: 1500299362.974523
+data_sent: 1500299363.161378
+data_sent: 1500299363.373028
+data_sent: 1500299363.633981
+data_sent: 1500299363.875643
+data_sent: 1500299364.047076
+data_sent: 1500299364.233376
+data_sent: 1500299364.430390
+data_sent: 1500299483.601349
+data_sent: 1500299483.777597
+data_sent: 1500299483.958891
+data_sent: 1500299484.135087
+data_sent: 1500299484.341057
+data_sent: 1500299484.616910
+data_sent: 1500299485.033030
+data_sent: 1500299485.209648
+data_sent: 1500299485.390988
+data_sent: 1500299524.757943
+data_sent: 1500299524.929950
+data_sent: 1500299525.110923
+data_sent: 1500299525.302615
+data_sent: 1500299525.474392
+data_sent: 1500299525.801026
+data_sent: 1500299526.227672
+data_sent: 1500299526.399688
+data_sent: 1500299526.570364
+data_sent: 1500299574.236955
+data_sent: 1500299574.409238
+data_sent: 1500299574.589325
+data_sent: 1500299574.775903
+data_sent: 1500299574.956760
+data_sent: 1500299575.278135
+data_sent: 1500299575.757275
+File /home/inets/0_ba/bachelor_thesis/measurements/debug/data/108/1/sender_ack_received.txt not found.                 Assuming not reached in GR.

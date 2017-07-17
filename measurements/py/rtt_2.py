@@ -128,6 +128,13 @@ for i in range(1,repetitions+1):
 
     rtt[i-1] = rtt_single_mean
 
+    ### Packet loss ###
+    packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
+    packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
+    packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
+    print("abs. packet loss: "+str(packet_loss_abs))
+    print("packet loss in %: "+packet_loss_percent)
+
     # Prepare next iteration
     rtt_single_measurement = []
     ack_received_times = []
@@ -135,13 +142,6 @@ for i in range(1,repetitions+1):
     retxs = []
     total_retxs = 0
     tx_fails = 0
-
-    ### Packet loss ###
-    packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
-    packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
-    packet_loss_percent = str((round(packet_loss_rel*100, 2)))+"%"
-    print("abs. packet loss: "+str(packet_loss_abs))
-    print("packet loss in %: "+packet_loss_percent)
 
 print(rtt)
 #------------------------------------------------------------------------------#

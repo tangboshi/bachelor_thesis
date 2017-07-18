@@ -1,0 +1,625 @@
+measurement 1/2 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 1/2 complete in 3 second(s).
+develop mode of resend_check ID: 24 is activated.
+develop_mode of random_filter ID: 1015 is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+the 100th message counter is activated.
+measurement 1/2 complete in 2 second(s).
+node starts running at 45.3465
+node starts running at 45.3467
+++++ frame_probe ID: 850 receives a frame at time 45.4048s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 45.4455s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 45.4507s ++++
+++++ frame_probe ID: 2 receives a frame at time 45.4507s ++++
+++++ frame_probe ID: 1010 receives a frame at time 45.4507s ++++
+generated random number is0.710602 and the threshold is 1. good luck. 
+++++ frame_probe ID: 1018 receives a frame at time 45.4508s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 850 receives a frame at time 45.5809s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 45.6217s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 45.6312s ++++
+++++ frame_probe ID: 2 receives a frame at time 45.6312s ++++
+++++ frame_probe ID: 1010 receives a frame at time 45.6312s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.330667 and the threshold is 1. good luck. 
+45.6313s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
++++++++++ frame_probe ID: 883 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    86;    source address is:         87;    number of transmission is: 254;    reserved field I is:       65217;    reserved field II is:      44019;    payload length is:           170;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50039e+09;    frame info contains a frame with length 15 bytes: 
+a data frame with index 0 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 850 receives a frame at time 45.7662s ++++
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 45.807s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 45.8141s ++++
+++++ frame_probe ID: 2 receives a frame at time 45.8142s ++++
+++++ frame_probe ID: 1010 receives a frame at time 45.8142s ++++
+generated random number is++++ frame_probe ID: 0.9812831018 and the threshold is  receives a frame at time 1. good luck. 
+45.8143s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 3th time
+++++ frame_probe ID: 850 receives a frame at time 45.9466s ++++
+measurement 1/2 complete in 1 second(s).
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 45.9875s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 45.9965s ++++
+++++ frame_probe ID: 2 receives a frame at time 45.9966s ++++
+++++ frame_probe ID: 1010 receives a frame at time 45.9966s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.374109 and the threshold is 1. good luck. 
+45.9967s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
++++++++++ frame_probe ID: 883 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    6;    source address is:         87;    number of transmission is: 94;    reserved field I is:       63681;    reserved field II is:      41638;    payload length is:           1280;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50039e+09;    frame info contains a frame with length 15 bytes: 
+a data frame with index 0 from node: 3 has been transmitted 4th time
+++++ frame_probe ID: 850 receives a frame at time 46.1624s ++++
+INFO: Detected an invalid packet at item 800
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 46.2032s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 46.2079s ++++
+++++ frame_probe ID: 2 receives a frame at time 46.208s ++++
+++++ frame_probe ID: 1010 receives a frame at time 46.208s ++++
+generated random number is0.677639 and the threshold is ++++ frame_probe ID: 1. good luck. 
+1018 receives a frame at time 46.2081s ++++
+INFO: Detected an invalid packet at item 864
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
++++++++++ frame_probe ID: 883 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    86;    source address is:         87;    number of transmission is: 254;    reserved field I is:       65217;    reserved field II is:      65011;    payload length is:           60159;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50039e+09;    frame info contains a frame with length 15 bytes: 
+a data frame with index 0 from node: 3 has been transmitted 5th time
+++++ frame_probe ID: 850 receives a frame at time 46.4885s ++++
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 46.5293s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 46.5336s ++++
+++++ frame_probe ID: 2 receives a frame at time 46.5337s ++++
+++++ frame_probe ID: 1010 receives a frame at time 46.5337s ++++
+generated random number is++++ frame_probe ID: 0.363235 and the threshold is 1018 receives a frame at time 1. good luck. 
+46.5338s ++++
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+frame: 0 from node: 3 is dropped because its max retransmission counter is reached. 
+counter ID 880 results at time 6346.91 is 5
+++++ frame_probe ID: 850 receives a frame at time 46.9243s ++++
+INFO: Detected an invalid packet at item 1152
+INFO: Parser returned #f
+measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/.
+'/home/inets/source/gr-inets/results/ack_not_filtered.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/ack_not_filtered.txt'
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/sender_data_sent.txt'
+'/home/inets/source/gr-inets/results/sender_retransmissions.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/sender_retransmissions.txt'
+measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/.
+
+measurement 2/2 complete in 4 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 2/2 complete in 3 second(s).
+develop mode of resend_check ID: 24 is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+develop_mode of random_filter ID: 1015 is activated.
+the 100th message counter is activated.
+measurement 2/2 complete in 2 second(s).
+node starts running at 49.3172
+node starts running at 49.3399
+++++ frame_probe ID: 850 receives a frame at time 49.3867s ++++
+++++ frame_probe ID: 860 receives a frame at time 49.4284s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 49.4376s ++++
+++++ frame_probe ID: 2 receives a frame at time 49.4377s ++++
+++++ frame_probe ID: 1010 receives a frame at time 49.4377s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.418091 and the threshold is 1. good luck. 
+49.4379s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 800
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 864
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 928
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1152
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1184
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1216
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1248
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1312
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1376
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1408
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1504
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1536
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1568
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1632
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1664
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1696
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1728
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1760
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1824
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1856
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1888
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1920
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1984
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2016
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2048
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2112
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2144
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2176
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2208
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2240
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2272
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2336
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2368
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2400
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2432
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2464
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2496
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2528
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2560
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2592
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2624
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2688
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2720
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2752
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2784
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2816
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2848
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2880
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2912
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2976
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3008
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3040
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3072
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3104
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3136
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3200
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3232
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3264
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3296
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3360
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3392
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3424
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3456
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3488
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3520
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3552
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3584
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3616
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3648
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3680
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3712
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3744
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3776
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3808
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3840
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3872
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3904
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3936
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3968
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4000
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 850 receives a frame at time 49.5582s ++++
+INFO: Detected an invalid packet at item 4064
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 49.5989s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 49.6035s ++++
+++++ frame_probe ID: 2 receives a frame at time 49.6035s ++++
+++++ frame_probe ID: 1010 receives a frame at time 49.6036s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.0638295 and the threshold is 1. good luck. 
+49.6037s ++++
+INFO: Detected an invalid packet at item 4128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4160
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
++++++++++ frame_probe ID: 883 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    22;    source address is:         87;    number of transmission is: 126;    reserved field I is:       65217;    reserved field II is:      60403;    payload length is:           41130;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50039e+09;    frame info contains a frame with length 15 bytes: 
+a data frame with index 0 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 850 receives a frame at time 49.7439s ++++
+++++ frame_probe ID: 860 receives a frame at time 49.7848s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 49.7961s ++++
+++++ frame_probe ID: 2 receives a frame at time 49.7961s ++++
+++++ frame_probe ID: 1010 receives a frame at time 49.7962s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.885159 and the threshold is 49.7962s ++++1
+. good luck. 
+INFO: Detected an invalid packet at item 4256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 3th time
+++++ frame_probe ID: 850 receives a frame at time 49.9495s ++++
+INFO: Detected an invalid packet at item 4352
+INFO: Parser returned #f
+measurement 2/2 complete in 1 second(s).
+++++ frame_probe ID: 860 receives a frame at time 49.9903s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48553e+07 s
+++++ frame_probe ID: 1 receives a frame at time 49.9965s ++++
+++++ frame_probe ID: 2 receives a frame at time 49.9965s ++++
+++++ frame_probe ID: 1010 receives a frame at time 49.9966s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 49.99660.420415s ++++
+ and the threshold is 1. good luck. 
+INFO: Detected an invalid packet at item 4416
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 4th time
+++++ frame_probe ID: 850 receives a frame at time 50.1452s ++++
+INFO: Detected an invalid packet at item 4512
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 50.1863s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48554e+07 s
+++++ frame_probe ID: 1 receives a frame at time 50.1979s ++++
+++++ frame_probe ID: 2 receives a frame at time 50.198s ++++
+++++ frame_probe ID: 1010 receives a frame at time 50.1981s ++++
+++++ frame_probe ID: 1018 receives a frame at time generated random number is0.8093850.1981 and the threshold is s ++++
+1. good luck. 
+INFO: Detected an invalid packet at item 4576
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4640
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
++++++++++ frame_probe ID: 883 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    22;    source address is:         87;    number of transmission is: 126;    reserved field I is:       59585;    reserved field II is:      33446;    payload length is:           5376;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50039e+09;    frame info contains a frame with length 15 bytes: 
+a data frame with index 0 from node: 3 has been transmitted 5th time
+++++ frame_probe ID: 850 receives a frame at time 50.4662s ++++
+INFO: Detected an invalid packet at item 4704
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 50.5073s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 0 at time 1.48554e+07 s
+++++ frame_probe ID: 1 receives a frame at time 50.5148s ++++
+++++ frame_probe ID: 2 receives a frame at time 50.5149s ++++
+++++ frame_probe ID: 1010 receives a frame at time 50.5149s ++++
+generated random number is++++ frame_probe ID: 1018 receives a frame at time 0.963918 and the threshold is 150.515. good luck. s ++++
+
+INFO: Detected an invalid packet at item 4768
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4800
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4832
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+frame: 0 from node: 3 is dropped because its max retransmission counter is reached. 
+counter ID 880 results at time 6350.82 is 5
+++++ frame_probe ID: 850 receives a frame at time 50.8422s ++++
+INFO: Detected an invalid packet at item 4896
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 50.8831s ++++
+* header analysis ID: 7 get the 1th transmission of data frame 1 at time 1.48554e+07 s
+++++ frame_probe ID: 1 receives a frame at time 50.8895s ++++
+++++ frame_probe ID: 2 receives a frame at time 50.8896s ++++
+++++ frame_probe ID: 1010 receives a frame at time 50.8896s ++++
+++++ frame_probe ID: 1018 receives a frame at time generated random number is50.8897s ++++
+0.0788928 and the threshold is 1. good luck. 
+INFO: Detected an invalid packet at item 4960
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4992
+INFO: Parser returned #f
++++++++++ frame_probe ID: 882 +++++++++Input mac frame has length: 15
+
+measurement 2 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/.
+'/home/inets/source/gr-inets/results/ack_not_filtered.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/ack_not_filtered.txt'
+'/home/inets/source/gr-inets/results/receiver_data_received.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/receiver_data_received.txt'
+'/home/inets/source/gr-inets/results/sender_bfr_dq.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/sender_bfr_dq.txt'
+'/home/inets/source/gr-inets/results/sender_data_sent.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/sender_data_sent.txt'
+'/home/inets/source/gr-inets/results/sender_retransmissions.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/sender_retransmissions.txt'
+measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/.
+
+now processing results...
+plotting python should be: python3 (ubuntu).
+Hello from throughput.py!
+hello from variables.py!
+Ack file not found. Probably zero throughput
+0
+6
+Ack file not found. Probably zero throughput
+0
+7
+[ 6000.  7000.]
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from rtt.py!
+hello from variables.py!
+data_sent: 1500386345.404784
+data_sent: 1500386345.580865
+data_sent: 1500386345.766155
+data_sent: 1500386345.946638
+data_sent: 1500386346.162409
+data_sent: 1500386346.488456
+data_sent: 1500386346.924267
+File /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/1/sender_ack_received.txt not found.                 Assuming not reached in GR.
+retx: [5]
+Last data frame wasnt acked (max tries).                         Termintating calculation here.
+
+The resulting RTTs of this single measurement are:
+[]
+
+
+
+The resulting mean RTT of this single measurement is:
+100
+
+
+abs. packet loss: 7.0
+packet loss in %: 100.0%
+data_sent: 1500386349.386673
+data_sent: 1500386349.558188
+data_sent: 1500386349.743887
+data_sent: 1500386349.949457
+data_sent: 1500386350.145230
+data_sent: 1500386350.466200
+data_sent: 1500386350.842191
+File /home/inets/0_ba/bachelor_thesis/measurements/debug/data/135/2/sender_ack_received.txt not found.                 Assuming not reached in GR.
+retx: [5]
+Last data frame wasnt acked (max tries).                         Termintating calculation here.
+
+The resulting RTTs of this single measurement are:
+[]
+
+
+
+The resulting mean RTT of this single measurement is:
+100
+
+
+abs. packet loss: 7.0
+packet loss in %: 100.0%
+[ 100.  100.]
+Hello from myplot.py!
+I will print a pdf for you now!
+
++--------------------------------------------------------------+
+| plotting completed. until the next measurement session then! |
++--------------------------------------------------------------+

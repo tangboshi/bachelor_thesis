@@ -16,7 +16,7 @@ class myplot:
         self.xlabel         = xlabel
         self.ylabel         = ylabel
         self.fig, self.ax   = plt.subplots()
-        self.kwargs         = list(kwargs.items().values())
+        self.kwargs         = kwargs
 
         titles = {
             "bar":      "Bar Chart",
@@ -69,7 +69,7 @@ class myplot:
 
         plt.gca().axes.get_xaxis().set_visible(False)
 
-        if not self.kwargs["number_bars"] == False:
+        if not kwargs.get("number_bars", True) == False:
             rects = self.ax.patches
             labels = ["%d" % i for i in range(1,len(rects)+1)]
 

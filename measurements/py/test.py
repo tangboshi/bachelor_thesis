@@ -107,22 +107,27 @@ myDict["Somerandomword"]()
 # my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
 # my_func(**my_dict)
 
-import myplot
-import numpy as np
+# import myplot
+# import numpy as np
+#
+# frames  =      100
+# data    =      []
+# line    =      "1 3 5 2 0 1 2 6 7 8 2"
+# line    =      [int(item) for item in line.split()]
+# data    +=     [item for item in line]
+# #print(data)
+#
+# myplot.myplot(data=data,
+#         bins=np.arange(
+#             min(data)-1,
+#             max(data)+1),
+#         plottype="pdf",
+#         title="fancy plot",
+#         xlabel="fancyness",
+#         ylabel="awesomeness",
+#         show=True)
 
-frames  =      100
-data    =      []
-line    =      "1 3 5 2 0 1 2 6 7 8 2"
-line    =      [int(item) for item in line.split()]
-data    +=     [item for item in line]
-#print(data)
+my_dict = { "A": 1, "B": 5, "C": 7}
+dict_deref = **my_dict
 
-myplot.myplot(data=data,
-        bins=np.arange(
-            min(data)-1,
-            max(data)+1),
-        plottype="pdf",
-        title="fancy plot",
-        xlabel="fancyness",
-        ylabel="awesomeness",
-        show=True)
+print(dict_deref.items())

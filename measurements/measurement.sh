@@ -69,7 +69,7 @@ function prepare_measurement
               going through files inside of $locate_base_path."
         echo "please add a the full path of one of the files to \$scritps."
         #locate -r "$locate_base_path" | grep "\.py$"
-        echo "terminated."
+        echo "terminated. ding dong"
         exit -1
     fi
 

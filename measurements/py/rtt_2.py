@@ -161,21 +161,21 @@ print(rtt)
 
 for index, plot in enumerate(plot_type):
 
-    xlabels = {
-        "cdf": "rtt",
-        "pdf": "rtt",
-        "boxplot": "",
-        "bar": "",
-        "line": ""
-    }
-
-    ylabels = {
-        "pdf": "",
-        "cdf": "",
-        "boxplot": "rtt",
-        "bar":  "rtt",
-        "line": "rtt"
-    }
+    # xlabels = {
+    #     "cdf": "rtt",
+    #     "pdf": "rtt",
+    #     "boxplot": "",
+    #     "bar": "",
+    #     "line": ""
+    # }
+    #
+    # ylabels = {
+    #     "pdf": "",
+    #     "cdf": "",
+    #     "boxplot": "rtt",
+    #     "bar":  "rtt",
+    #     "line": "rtt"
+    # }
 
     titles = {
         "pdf":  "PDF",
@@ -193,8 +193,8 @@ for index, plot in enumerate(plot_type):
                 (max(rtt)-min(rtt)+1)/100),
             plottype=plot,
             title="RTT "+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
+            xlabel="rtt",
+            ylabel="rtt",
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
@@ -205,8 +205,8 @@ for index, plot in enumerate(plot_type):
                 1),
             plottype=plot,
             title="Packet loss "+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
+            xlabel="packet loss [%]",
+            ylabel="packet loss [%]",
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
@@ -217,7 +217,7 @@ for index, plot in enumerate(plot_type):
                 0.1),
             plottype=plot,
             title="Retransmissions "+titles[plot],
-            xlabel=xlabels[plot],
-            ylabel=ylabels[plot],
+            xlabel="retransmissions",
+            ylabel="retransmissions",
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)

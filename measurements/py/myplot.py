@@ -128,11 +128,11 @@ class myplot:
         self.ax.set_title(title)
 
     def save(self, savepath):
-        savename = savepath+self.title+"_"+self.plottype
+        savename = self.title+"_"+self.plottype
         savename = savename.lower()
         savename = savename.replace(" ", "_")
-        self.fig.savefig(savename+".png")
-        self.fig.savefig(savename+".pdf")
+        self.fig.savefig(savepath+savename+".png")
+        self.fig.savefig(savename+"pdf/"+".pdf")
 
     def show(self):
         plt.show()

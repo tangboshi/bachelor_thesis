@@ -57,7 +57,8 @@ class myplot:
         index=np.arange( data_points )
 
         self.ax.bar(left=index + width,
-            height=self.data
+            height=self.data,
+            color="#80e5ff"
          )
 
         self.setLabels(ylabel=self.ylabel,

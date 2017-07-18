@@ -13,7 +13,7 @@ try:
         plot_path,
         plot_type,
         measurement,
-        repetitions,
+        repetition,
         show_plot,
         max_retxs,
         retxs_data_files

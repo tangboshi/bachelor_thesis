@@ -40,7 +40,7 @@ for i in range(1,repetitions+1):
         datacount = lines.linecount(file_path)
         print(ackcount)
         print(datacount)
-        data[i-1] = datacount*packet_size
+        data[i-1] = min(ackcount, datacount)*packet_size
     else:
         # no data sent off
         print("Data file not found. Probably zero throughput.")

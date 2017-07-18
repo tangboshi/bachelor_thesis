@@ -33,7 +33,7 @@ for i in range(1,repetitions+1):
         ackcount = lines.linecount(ack_file_path)
     else:
         # no acks found
-        print("ACK file not found. Probably zero throughput")
+        print("ACK file not found at "+ack_file_path+".")
         ackcount = 0
         data[i-1] = 0
     if pt.isfile(file_path):
@@ -43,7 +43,7 @@ for i in range(1,repetitions+1):
         data[i-1] = min(ackcount, datacount)*packet_size
     else:
         # no data sent off
-        print("Data file not found. Probably zero throughput.")
+        print("Data file not found at "+file_path+".")
         datacount = 0
         data[i-1] = 0
 

@@ -69,7 +69,7 @@ class myplot:
 
         plt.gca().axes.get_xaxis().set_visible(False)
 
-        if not kwargs["number_bars"] == False:
+        if not self.kwargs["number_bars"] == False:
             rects = self.ax.patches
             labels = ["%d" % i for i in range(1,len(rects)+1)]
 

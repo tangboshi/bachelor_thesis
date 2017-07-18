@@ -13,7 +13,7 @@ plot_scripts=( rtt_2.py throughput.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################
-export throughput_data_files="receiver_data_received.txt"
+export throughput_data_files="receiver_data_received.txt,sender_ack_received.txt"
 export rtt_data_files="sender_bfr_dq.txt,sender_ack_received.txt"
 export retxs_data_files="sender_retransmissions.txt,sender_max_retransmissions.txt"
 export retxs2_data_files="receiver_retransmissions.txt,receiver_max_retransmissions.txt"

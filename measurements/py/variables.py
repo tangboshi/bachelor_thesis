@@ -48,11 +48,13 @@ else:
 if os.environ.get('throughput_data_files') is not None:
     throughput_data_files_array = os.environ["throughput_data_files"].split(",")
     throughput_data_files = {
-        "receiver_data_received": throughput_data_files_array[0]
+        "receiver_data_received": throughput_data_files_array[0],
+        "sender_ack_received": throughput_data_files_array[1]
     }
 else:
     throughput_data_files = {
-        "receiver_data_received": "invalid_file.txt"
+        "receiver_data_received": "invalid_file.txt",
+        "sender_ack_received": "invalid_file_2.txt"
     }
 
 #rtt

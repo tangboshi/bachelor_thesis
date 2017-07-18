@@ -36,7 +36,7 @@ for i in range(1,repetitions+1):
         print("ACK file not found at "+ack_file_path+".")
         ackcount = 0
         data[i-1] = 0
-    if pt.isfile(file_path):
+    if pt.isfile(data_file_path):
         datacount = lines.linecount(file_path)
         print("ackcount: "+str(ackcount))
         print("datacount: "+str(datacount))

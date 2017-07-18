@@ -145,7 +145,8 @@ for i in range(1,repetitions+1):
 
     ### Average retransmissions per frame ###
     ### practically the same  as packet loss
-    avg_frame_txs += [sum(retxs) / len(retxs)]
+    if not sum(retxs) == 0 and not len(retxs) == 0:
+        avg_frame_txs += [sum(retxs) / len(retxs)]
 
     # Prepare next iteration
     rtt_single_measurement = []

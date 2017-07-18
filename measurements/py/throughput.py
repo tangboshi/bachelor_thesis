@@ -38,8 +38,9 @@ for i in range(1,repetitions+1):
         data[i-1] = 0
     if pt.isfile(file_path):
         datacount = lines.linecount(file_path)
-        else:
-            data[i-1] = max(ackcount, datacount)*packet_size
+        print(ackcount)
+        print(datacount)
+        data[i-1] = max(ackcount, datacount)*packet_size
     else:
         # no data sent off
         print("Data file not found. Probably zero throughput.")

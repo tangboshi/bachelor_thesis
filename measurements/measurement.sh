@@ -68,7 +68,7 @@ function prepare_measurement
         echo  "no measurement scripts set,
               going through files inside of $locate_base_path."
         echo "please add a the full path of one of the files to \$scritps."
-        locate -r "$locate_base_path" | grep "\.py$"
+        #locate -r "$locate_base_path" | grep "\.py$"
         echo "terminated."
         exit -1
     fi

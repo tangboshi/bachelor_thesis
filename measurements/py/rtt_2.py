@@ -28,6 +28,7 @@ ack_received_times = []
 rtt_single_measurement = []
 rtt = np.zeros(shape=(repetitions))
 retxs = []
+all_retxs = []
 total_retxs = 0
 tx_fails = 0
 packet_loss_percent = []
@@ -74,6 +75,7 @@ for i in range(1,repetitions+1):
                 line.strip("\n")
                 line = [int(item) for item in line.split()]
                 retxs += [item for item in line]
+                all_retxs += retxs
                 print("retx: "+str(retxs))
 
     else:
@@ -92,6 +94,7 @@ for i in range(1,repetitions+1):
                 total_retxs += counter
                 if counter > 0:
                     if counter == max_retxs:
+                        # Probably not needed, but hey if we can get it for free...
                         txs_fails += 1
                 else:
                     res = ack_received_times[idx] - data_sent_times[idx+counter+total_retxs]
@@ -141,6 +144,7 @@ for i in range(1,repetitions+1):
     print("packet loss in %: "+str(packet_loss_percent[-1])+"%")
 
     ### Average retransmissions per frame ###
+    ### practically the same  as packet loss
     avg_frame_txs += [sum(retxs) / len(retxs)]
 
     # Prepare next iteration
@@ -193,5 +197,26 @@ for index, plot in enumerate(plot_type):
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
-    # to plot:
-    # avg_frame_txs, packet_loss_percent
+    myplot.myplot(data=packet_loss,
+            bins=np.arange(
+                0,
+                100,
+                1),
+            plottype=plot,
+            title="Packet loss "+titles[plot],
+            xlabel=xlabels[plot],
+            ylabel=ylabels[plot],
+            savepath=plot_path+"/"+measurement+"/",
+            show=show_plot)
+
+    myplot.myplot(data=all_retxs,
+            bins=np.arange(
+                0,
+                max_retxs+1,
+                0.1),
+            plottype=plot,
+            title="Retransmissions "+titles[plot],
+            xlabel=xlabels[plot],
+            ylabel=ylabels[plot],
+            savepath=plot_path+"/"+measurement+"/",
+            show=show_plot)

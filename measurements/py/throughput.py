@@ -52,30 +52,6 @@ print(data)
 
 for index, plot in enumerate(plot_type):
 
-    xlabels = {
-        "cdf": "throughput",
-        "pdf": "throughput",
-        "boxplot": "",
-        "bar": "",
-        "line": ""
-    }
-
-    ylabels = {
-        "pdf": "",
-        "cdf": "",
-        "boxplot": "throughput",
-        "bar":  "throughput",
-        "line": "throughput"
-    }
-
-    titles = {
-        "pdf": "PDF",
-        "cdf":  "CDF",
-        "boxplot": "boxplot",
-        "bar": "bar chart",
-        "line": "line chart"
-    }
-
     myplot.myplot(  data=data,
         bins=np.arange(
             min(data)-float(packet_size),
@@ -83,8 +59,8 @@ for index, plot in enumerate(plot_type):
             (max(data)-min(data)+1)/25),
             #packet_size/25),
         plottype=plot,
-        title="Throughput "+titles[plot],
-        xlabel=xlabels[plot],
-        ylabel=ylabels[plot],
+        title="Throughput",
+        xlabel="throughput [B]",
+        ylabel="throughput [B]",
         savepath=plot_path+"/"+measurement+"/",
         show=show_plot)

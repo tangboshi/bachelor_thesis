@@ -13,10 +13,20 @@ class myplot:
         self.data           = data
         self.bins           = bins
         self.plottype       = plottype
-        self.title          = title
         self.xlabel         = xlabel
         self.ylabel         = ylabel
         self.fig, self.ax   = plt.subplots()
+
+        titles = {
+            "bar":      "Bar Chart",
+            "line":     "Line Chart",
+            "cdf":      "CDF",
+            "pdf":      "PDF",
+            "boxplot":  "Boxplot",
+            "debug":    "Debug"
+        }
+
+        self.title  = title+" "+titles[plottype]
 
         plottypes = {
             "bar":      lambda: self.bar(),

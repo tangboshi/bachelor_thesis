@@ -161,30 +161,6 @@ print(rtt)
 
 for index, plot in enumerate(plot_type):
 
-    # xlabels = {
-    #     "cdf": "rtt",
-    #     "pdf": "rtt",
-    #     "boxplot": "",
-    #     "bar": "",
-    #     "line": ""
-    # }
-    #
-    # ylabels = {
-    #     "pdf": "",
-    #     "cdf": "",
-    #     "boxplot": "rtt",
-    #     "bar":  "rtt",
-    #     "line": "rtt"
-    # }
-
-    titles = {
-        "pdf":  "PDF",
-        "cdf":  "CDF",
-        "boxplot": "boxplot",
-        "bar":  "bar chart",
-        "line": "line chart"
-    }
-
     myplot.myplot(data=rtt,
             bins=np.arange(
                 min(rtt)-0.002,
@@ -192,9 +168,9 @@ for index, plot in enumerate(plot_type):
                 #0.07/1000),
                 (max(rtt)-min(rtt))/100),
             plottype=plot,
-            title="RTT "+titles[plot],
-            xlabel="rtt",
-            ylabel="rtt",
+            title="RTT",
+            xlabel="rtt [s]",
+            ylabel="rtt [s]",
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
@@ -204,7 +180,7 @@ for index, plot in enumerate(plot_type):
                 100,
                 1),
             plottype=plot,
-            title="Packet loss "+titles[plot],
+            title="Packet loss",
             xlabel="packet loss [%]",
             ylabel="packet loss [%]",
             savepath=plot_path+"/"+measurement+"/",
@@ -216,7 +192,7 @@ for index, plot in enumerate(plot_type):
                 max_retxs+1,
                 0.1),
             plottype=plot,
-            title="Retransmissions "+titles[plot],
+            title="Retransmissions",
             xlabel="retransmissions",
             ylabel="retransmissions",
             savepath=plot_path+"/"+measurement+"/",

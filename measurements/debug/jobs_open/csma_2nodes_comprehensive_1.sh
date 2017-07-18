@@ -9,7 +9,7 @@
 timer=15
 export measurement_repetitions=2
 measurement_scripts=( csma_80211_III.py csma_80211_II.py )
-plot_scripts=( throughput.py rtt_2.py  )
+plot_scripts=( rtt_2.py throughput.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################

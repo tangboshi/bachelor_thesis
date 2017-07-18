@@ -27,7 +27,7 @@ data = np.zeros(shape=(repetitions))
 
 for i in range(1,repetitions+1):
     file_path = data_source_path+'/'+str(i)+'/'
-    file_path = file_path+throughput_data_files["receiver_data_received"]
+    data_file_path = file_path+throughput_data_files["receiver_data_received"]
     ack_file_path = file_path+throughput_data_files["sender_ack_received"]
     if pt.isfile(ack_file_path):
         ackcount = lines.linecount(ack_file_path)
@@ -43,7 +43,7 @@ for i in range(1,repetitions+1):
         data[i-1] = min(ackcount, datacount)*packet_size
     else:
         # no data sent off
-        print("Data file not found at "+file_path+".")
+        print("Data file not found at "+data_file_path+".")
         datacount = 0
         data[i-1] = 0
 

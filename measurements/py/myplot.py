@@ -132,7 +132,7 @@ class myplot:
         savename = savename.lower()
         savename = savename.replace(" ", "_")
         self.fig.savefig(savepath+savename+".png")
-        self.fig.savefig(savename+"pdf/"+".pdf")
+        self.fig.savefig(savepath+"pdf/"+savename+".pdf")
 
     def show(self):
         plt.show()

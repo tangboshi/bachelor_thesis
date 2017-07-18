@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source measurement.conf
-echo "remote_measurement is set to"$remote_measurement" ."
+echo "remote_measurement is set to "$remote_measurement" ."
 
 function setup_remote_connection
 {

@@ -37,7 +37,7 @@ for i in range(1,repetitions+1):
         ackcount = 0
         data[i-1] = 0
     if pt.isfile(data_file_path):
-        datacount = lines.linecount(file_path)
+        datacount = lines.linecount(data_file_path)
         print("ackcount: "+str(ackcount))
         print("datacount: "+str(datacount))
         data[i-1] = min(ackcount, datacount)*packet_size

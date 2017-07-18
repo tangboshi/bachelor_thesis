@@ -122,7 +122,10 @@ for i in range(1,repetitions+1):
     # Now calculate mean RTT for this measurement
     # print(str(float(sum(rtt_single_measurement))))
     # print(str(len(rtt_single_measurement)))
-    rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
+    if len(rtt_single_measurement) > 0:
+        rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
+    else:
+        rtt_single_mean =   100
     # rtt_single_mean seems to be calculated correctly, but source data is odd.
     print("\nThe resulting mean RTT of this single measurement is:")
     print(rtt_single_mean)

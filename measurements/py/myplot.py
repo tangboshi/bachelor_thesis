@@ -68,17 +68,18 @@ class myplot:
 
         plt.gca().axes.get_xaxis().set_visible(False)
 
-        rects = self.ax.patches
-        labels = ["%d" % i for i in range(1,len(rects)+1)]
+        if not kwargs["number_bars"] == False:
+            rects = self.ax.patches
+            labels = ["%d" % i for i in range(1,len(rects)+1)]
 
-        for rect, label in zip(rects, labels):
-            #height = rect.get_height()
-            self.ax.text(
-                rect.get_x() + rect.get_width()/2,
-                0,
-                label,
-                ha='center',
-                va='bottom')
+            for rect, label in zip(rects, labels):
+                #height = rect.get_height()
+                self.ax.text(
+                    rect.get_x() + rect.get_width()/2,
+                    0,
+                    label,
+                    ha='center',
+                    va='bottom')
 
     def line(self):
         from scipy.interpolate import interp1d

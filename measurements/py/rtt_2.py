@@ -186,6 +186,11 @@ for index, plot in enumerate(plot_type):
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
+    if len(all_retxs) <= 20:
+        number_bars = True
+    else:
+        number_bars = False
+
     myplot.myplot(data=all_retxs,
             bins=np.arange(
                 0,
@@ -196,4 +201,5 @@ for index, plot in enumerate(plot_type):
             xlabel="retransmissions",
             ylabel="retransmissions",
             savepath=plot_path+"/"+measurement+"/",
-            show=show_plot)
+            show=show_plot,
+            number_bars=number_bars)

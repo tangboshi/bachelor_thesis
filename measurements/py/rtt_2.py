@@ -180,7 +180,7 @@ for index, plot in enumerate(plot_type):
                 100,
                 1),
             plottype=plot,
-            title="Packet loss",
+            title="Packet Loss",
             xlabel="packet loss [%]",
             ylabel="packet loss [%]",
             savepath=plot_path+"/"+measurement+"/",

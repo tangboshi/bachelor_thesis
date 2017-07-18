@@ -1,21 +1,21 @@
-# Measurement 29
+# measurement 29
 # protocol: csma two way handshake
-# Measured entity: throughput
-# SIFS = 1ms
-# DIFS = 5ms
-# BACKOFF = 2ms
+# measured entity: throughput
+# sifs = 1ms
+# difs = 5ms
+# backoff = 2ms
 # nodes = 2
 
-TIMER=4
-export MEASUREMENT_REPETITIONS=2
-MEASUREMENT_SCRIPTS=( csma_80211_I.py csma_80211_II.py )
-PLOT_SCRIPTS=( rtt_2.py throughput.py )
+timer=4
+export measurement_repetitions=2
+measurement_scripts=( csma_80211_I.py csma_80211_II.py )
+plot_scripts=( rtt_2.py throughput.py )
 #################################################
 # first specify sender and then receiver output #
 #################################################
-export THROUGHPUT_DATA_FILES="receiver_data_received.txt"
-export RTT_DATA_FILES="sender_bfr_dq.txt,sender_ack_received.txt"
-export RETXS_DATA_FILES="sender_retransmissions.txt,sender_max_retransmissions.txt"
-export RETXS2_DATA_FILES="receiver_retransmissions.txt,receiver_max_retransmissions.txt"
-export PLOT_TYPE="pdf,cdf,boxplot,bar,line"
-export SHOW_PLOT_AFTER_MEASUREMENT=1
+export throughput_data_files="receiver_data_received.txt"
+export rtt_data_files="sender_bfr_dq.txt,sender_ack_received.txt"
+export retxs_data_files="sender_retransmissions.txt,sender_max_retransmissions.txt"
+export retxs2_data_files="receiver_retransmissions.txt,receiver_max_retransmissions.txt"
+export plot_type="pdf,cdf,boxplot,bar,line"
+export show_plot_after_measurement=1

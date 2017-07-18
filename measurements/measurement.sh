@@ -6,71 +6,71 @@ source measurement.conf
 function setup_remote_connection
 {
   reset
-  # echo "Setting up remote connection..."
-  # if ( mount | grep $REMOTE_MEASUREMENT_MOUNT_POINT  )
+  # echo "setting up remote connection..."
+  # if ( mount | grep $remote_measurement_mount_point  )
   # then
-  #   echo "The mount point is in use, confirm unmount with your password."
-  #   sudo umount $REMOTE_MEASUREMENT_MOUNT_POINT
+  #   echo "the mount point is in use, confirm unmount with your password."
+  #   sudo umount $remote_measurement_mount_point
   # fi
-  # echo "Please enter the server password to mount the target directory."
-  # mkdir -p $REMOTE_MEASUREMENT_MOUNT_POINT
-  #sshfs $REMOTE_USER@$REMOTE_IP:$REMOTE_TO_MOUNT_PATH $REMOTE_MEASUREMENT_MOUNT_POINT
-  #ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "$(typeset -f); main"
-  sshpass -p "inets" ssh -$REMOTE_FLAGS $REMOTE_USER@$REMOTE_IP "bash -s" < remote_measurement.sh
+  # echo "please enter the server password to mount the target directory."
+  # mkdir -p $remote_measurement_mount_point
+  #sshfs $remote_user@$remote_ip:$remote_to_mount_path $remote_measurement_mount_point
+  #ssh -$remote_flags $remote_user@$remote_ip "$(typeset -f); main"
+  sshpass -p "inets" ssh -$remote_flags $remote_user@$remote_ip "bash -s" < remote_measurement.sh
 }
 
 function prepare_measurement
 {
     reset
-    MEASUREMENT_COUNTER=0
-    ## Let's make sure all the directories exist
-    printf "\nChecking if paths exists...\n"
+    measurement_counter=0
+    ## let's make sure all the directories exist
+    printf "\nchecking if paths exists...\n"
 
-    #Let's first make absolutely sure the raw data source path exists
-    if [ ! -d $RAW_DATA_SOURCE_PATH ];
+    #let's first make absolutely sure the raw data source path exists
+    if [ ! -d $raw_data_source_path ];
       then
-        mkdir -p $RAW_DATA_SOURCE_PATH
-        echo $RAW_DATA_SOURCE_PATH" created."
+        mkdir -p $raw_data_source_path
+        echo $raw_data_source_path" created."
     fi
 
-    if [ -d $PLOT_DIRECTORY_PATH ];
+    if [ -d $plot_directory_path ];
       then
-        echo $PLOT_DIRECTORY_PATH" already existed!"
-        cd $PLOT_DIRECTORY_PATH
+        echo $plot_directory_path" already existed!"
+        cd $plot_directory_path
         # create measurement directory
-        while [ -d $MEASUREMENT_COUNTER ]; do
-            MEASUREMENT_COUNTER=$(($MEASUREMENT_COUNTER+1))
+        while [ -d $measurement_counter ]; do
+            measurement_counter=$(($measurement_counter+1))
         done
-        export MEASUREMENT_COUNTER;
+        export measurement_counter;
     fi
 
-    if [ -d $LOG_PATH ];
+    if [ -d $log_path ];
       then
-        echo $LOG_PATH" already existed!"
+        echo $log_path" already existed!"
       else
-        mkdir -p $LOG_PATH
-        echo $LOG_PATH" directory created."
+        mkdir -p $log_path
+        echo $log_path" directory created."
     fi
 
-    mkdir -p $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER
-    echo $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER" directory created."
+    mkdir -p $plot_directory_path/$measurement_counter
+    echo $plot_directory_path/$measurement_counter" directory created."
 
-    mkdir -p $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER
-    echo $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER" directory created."
+    mkdir -p $data_source_path/$measurement_counter
+    echo $data_source_path/$measurement_counter" directory created."
 
-    mkdir -p $JOBS_OPEN_PATH
-    mkdir -p $JOBS_DONE_PATH
+    mkdir -p $jobs_open_path
+    mkdir -p $jobs_done_path
 
-    ## Let's check if measurement script is defined
-    # If $MEASUREMENT_SCRIPTS undefined:
-    # Go through directory and list all python files
-    if [ -z ${MEASUREMENT_SCRIPTS+x} ];
+    ## let's check if measurement script is defined
+    # if $measurement_scripts undefined:
+    # go through directory and list all python files
+    if [ -z ${measurement_scripts+x} ];
       then
-        echo  "No measurement scripts set,
-              going through files inside of $LOCATE_BASE_PATH."
-        echo "Please add a the full path of one of the files to \$SCRITPS."
-        locate -r "$LOCATE_BASE_PATH" | grep "\.py$"
-        echo "Terminated."
+        echo  "no measurement scripts set,
+              going through files inside of $locate_base_path."
+        echo "please add a the full path of one of the files to \$scritps."
+        locate -r "$locate_base_path" | grep "\.py$"
+        echo "terminated."
         exit -1
     fi
 
@@ -79,144 +79,144 @@ function prepare_measurement
 
 function measure
 {
-  local PREMATURELY_ABORTED=0
+  local prematurely_aborted=0
 
-  for ((x = 1 ; x <= $MEASUREMENT_REPETITIONS ; x += 1)); do
+  for ((x = 1 ; x <= $measurement_repetitions ; x += 1)); do
 
-    # Get pid to later kill it
-    for i in "${MEASUREMENT_SCRIPTS[@]}"
+    # get pid to later kill it
+    for i in "${measurement_scripts[@]}"
     do
-      python $MEASUREMENT_SCRIPT_PATH/$i &
-      #MEASUREMENT_SCRIPTS_PID+=($!)
+      python $measurement_script_path/$i &
+      #measurement_scripts_pid+=($!)
     done
 
-    for ((y = $TIMER ; y > 0 ; y -= 1)); do
-      echo "Measurement $x/$MEASUREMENT_REPETITIONS complete in $y second(s)."
-      if [ $CHECK_IF_PREMATURELY_ABORTED -eq 1 ];
+    for ((y = $timer ; y > 0 ; y -= 1)); do
+      echo "measurement $x/$measurement_repetitions complete in $y second(s)."
+      if [ $check_if_prematurely_aborted -eq 1 ];
         then
-          if ps -p ${MEASUREMENT_SCRIPTS_PID[*]};
+          if ps -p ${measurement_scripts_pid[*]};
             then
               :
             else
-              PREMATURELY_ABORTED=1
-              echo  "Scripts were killed prematurely.
-                    Measurement may be incomplete."
+              prematurely_aborted=1
+              echo  "scripts were killed prematurely.
+                    measurement may be incomplete."
               break
           fi
       fi
       sleep 1
     done
 
-    # Kill scripts if running
+    # kill scripts if running
     #sleep 1
-    #if {ps -p ${MEASUREMENT_SCRIPTS_PID[*]}} &>/dev/null;
+    #if {ps -p ${measurement_scripts_pid[*]}} &>/dev/null;
     #  then
-    #    kill ${MEASUREMENT_SCRIPTS_PID[*]}
+    #    kill ${measurement_scripts_pid[*]}
     #fi
     kill $(jobs -p)
 
-    # Save this measurement's data to special folder
-    mkdir -p $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x
-    echo  "Measurement $x raw data directory created $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/."
-    mv -v $RAW_DATA_SOURCE_PATH/* $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/
-    echo  "Measurement $x raw data moved to $DATA_SOURCE_PATH/$MEASUREMENT_COUNTER/$x/."
+    # save this measurement's data to special folder
+    mkdir -p $data_source_path/$measurement_counter/$x
+    echo  "measurement $x raw data directory created $data_source_path/$measurement_counter/$x/."
+    mv -v $raw_data_source_path/* $data_source_path/$measurement_counter/$x/
+    echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
     printf "\n"
 
-    # Will only ever be true if $CHECK_IF_PREMATURELY_ABORTED is set to 1
-    if [ $PREMATURELY_ABORTED -eq 1 ];
+    # will only ever be true if $check_if_prematurely_aborted is set to 1
+    if [ $prematurely_aborted -eq 1 ];
       then
-        if [ $PLOT_IF_PREMATURELY_ABORTED -eq 0 ];
+        if [ $plot_if_prematurely_aborted -eq 0 ];
           then
-            echo "Plotting if measurement prematurely aborted set to false."
-            echo "Terminated."
+            echo "plotting if measurement prematurely aborted set to false."
+            echo "terminated."
             exit -1
         fi
     fi
 
   done
 
-  #Exit remote connection
-  if [ $REMOTE_MEASUREMENT -eq 1 ]; then
+  #exit remote connection
+  if [ $remote_measurement -eq 1 ]; then
     exit
   fi
 }
 
 function plot
 {
-  ## Plot the results
-  echo "Now processing results..."
+  ## plot the results
+  echo "now processing results..."
 
-  # Call the plotting scripts as data
-  #echo "Starting to generate plots..."
-  echo "Plotting Python should be: "$PLOT_PY" ("$OS")."
+  # call the plotting scripts as data
+  #echo "starting to generate plots..."
+  echo "plotting python should be: "$plot_py" ("$os")."
 
-  for i in ${PLOT_SCRIPTS[@]}; do
-    bash -c "$PLOT_PY $PLOT_PY_PATH/$i"
+  for i in ${plot_scripts[@]}; do
+    bash -c "$plot_py $plot_py_path/$i"
   done
 
   printf "\n"
   echo "+--------------------------------------------------------------+"
-  echo "| Plotting completed. Until the next measurement session then! |"
+  echo "| plotting completed. until the next measurement session then! |"
   echo "+--------------------------------------------------------------+"
 }
 
 function cleanup
 {
-    ##Cleaning up the mess you created!
-    #Kill all child proceesses
-    echo "Staring cleanup..."
-    echo "Killing all lingering child processes..."
+    ##cleaning up the mess you created!
+    #kill all child proceesses
+    echo "staring cleanup..."
+    echo "killing all lingering child processes..."
     killall -9 -g $0
-    cd $THIS_PATH
+    cd $this_path
     exit
 }
-trap cleanup SIGHUP SIGINT SIGKILL;
-trap "cd $THIS_PATH" EXIT;
+trap cleanup sighup sigint sigkill;
+trap "cd $this_path" exit;
 
 function main
 {
-  # Clear up console
+  # clear up console
   #reset
-  # Check if jobs_open directory is empty
-  if [ ! "$(ls -A $JOBS_OPEN_PATH)" ]; then
-    echo "There seem to be no open jobs. Measuring with default parameters."
+  # check if jobs_open directory is empty
+  if [ ! "$(ls -a $jobs_open_path)" ]; then
+    echo "there seem to be no open jobs. measuring with default parameters."
     prepare_measurement
-    #Take measurements
-    measure | tee -a $LOG_PATH/default_$MEASUREMENT_COUNTER.log
-    # Create plot if desired
-    if [ $PLOT_ENABLED -eq 1 ]; then
-      plot | tee -a $LOG_PATH/default_$MEASUREMENT_COUNTER.log; fi
+    #take measurements
+    measure | tee -a $log_path/default_$measurement_counter.log
+    # create plot if desired
+    if [ $plot_enabled -eq 1 ]; then
+      plot | tee -a $log_path/default_$measurement_counter.log; fi
   else
     prepare_measurement
-    echo "Open jobs detected! Let's get to work..."
-    JOBS=$JOBS_OPEN_PATH/*
-    for job in $JOBS; do
+    echo "open jobs detected! let's get to work..."
+    jobs=$jobs_open_path/*
+    for job in $jobs; do
       source $job;
       job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
       #echo $job_name
-      measure | tee -a $LOG_PATH/$job_name"_"$MEASUREMENT_COUNTER.log
-      if [ $PLOT_ENABLED -eq 1 ]; then
-        plot | tee -a $LOG_PATH/$job_name"_"$MEASUREMENT_COUNTER.log;
+      measure | tee -a $log_path/$job_name"_"$measurement_counter.log
+      if [ $plot_enabled -eq 1 ]; then
+        plot | tee -a $log_path/$job_name"_"$measurement_counter.log;
       fi
-      if [ $MOVE_AFTER_JOB_DONE -eq 1 ]; then
-        cp $job $PLOT_DIRECTORY_PATH/$MEASUREMENT_COUNTER/
-        mv $job $JOBS_DONE_PATH/
+      if [ $move_after_job_done -eq 1 ]; then
+        cp $job $plot_directory_path/$measurement_counter/
+        mv $job $jobs_done_path/
       fi
-      export MEASUREMENT_COUNTER=$((MEASUREMENT_COUNTER++))
+      export measurement_counter=$((measurement_counter++))
     done
   fi
 
 }
 
-if [ $DEBUG_MODE -eq 1 ]; then
+if [ $debug_mode -eq 1 ]; then
   printf "\n"
   echo "+-----------------------------------------------------------+"
-  echo "| Debug mode is active, results are saved in the debug dirs |"
+  echo "| debug mode is active, results are saved in the debug dirs |"
   echo "+-----------------------------------------------------------+"
 fi
 
-if [ $REMOTE_MEASUREMENT -eq 1 ]; then
-  # Call to main included here
+if [ $remote_measurement -eq 1 ]; then
+  # call to main included here
     setup_remote_connection
   else
     main

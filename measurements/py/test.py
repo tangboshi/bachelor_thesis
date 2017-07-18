@@ -107,8 +107,22 @@ myDict["Somerandomword"]()
 # my_dict = { "fruits": ["apple","banana"], "vegetables": ["tomato", "cucumber"]}
 # my_func(**my_dict)
 
-retxs_counters = []
-line = "1 3 5 2 0 1 2"
-line = [int(item) for item in line.split()]
-retxs_counters += [item for item in line]
-print(retxs_counters)
+import myplot
+import numpy as np
+
+frames  =      100
+data    =      []
+line    =      "1 3 5 2 0 1 2 6 7 8 2"
+line    =      [int(item) for item in line.split()]
+data    +=     [item for item in line]
+#print(data)
+
+myplot.myplot(data=data,
+        bins=np.arange(
+            min(data)-1,
+            max(data)+1),
+        plottype="pdf",
+        title="fancy plot",
+        xlabel="fancyness",
+        ylabel="awesomeness",
+        show=True)

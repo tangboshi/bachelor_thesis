@@ -197,7 +197,7 @@ for index, plot in enumerate(plot_type):
             savepath=plot_path+"/"+measurement+"/",
             show=show_plot)
 
-    myplot.myplot(data=packet_loss,
+    myplot.myplot(data=packet_loss_percent,
             bins=np.arange(
                 0,
                 100,

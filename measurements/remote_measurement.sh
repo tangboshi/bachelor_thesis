@@ -5,7 +5,7 @@ git pull
 git fetch
 cd measurements
 source measurement.conf
-export REMOTE_MEASUREMENT=0
+export remote_measurement=0
 source measurement.sh
 
 # Sync the changes

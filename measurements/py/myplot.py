@@ -5,7 +5,7 @@ import os
 class myplot:
     def __init__(   self, plottype, data, bins="",
                     title="", xlabel="", ylabel="",
-                    show=False, savepath=False
+                    show=False, savepath=False, **kwargs
                 ):
 
         print("Hello from myplot.py!")

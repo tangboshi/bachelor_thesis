@@ -16,6 +16,7 @@ class myplot:
         self.xlabel         = xlabel
         self.ylabel         = ylabel
         self.fig, self.ax   = plt.subplots()
+        self.kwargs         = kwargs.items()
 
         titles = {
             "bar":      "Bar Chart",

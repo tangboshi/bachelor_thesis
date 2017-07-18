@@ -128,7 +128,7 @@ class myplot:
         self.ax.set_title(title)
 
     def save(self, savepath):
-        savename = self.title+"_"+self.plottype
+        savename = self.title#+"_"+self.plottype
         savename = savename.lower()
         savename = savename.replace(" ", "_")
         self.fig.savefig(savepath+savename+".png")

@@ -34,13 +34,15 @@ for i in range(1,repetitions+1):
     else:
         # no acks found
         print("Ack file not found. Probably zero throughput")
+        ackcount = 0
         data[i-1] = 0
     if pt.isfile(file_path):
         datacount = lines.linecount(file_path)
         data[i-1] = max(ackcount, datacount)*packet_size
     else:
-        # no data put through
+        # no data sent off
         print("Data file not found. Probably zero throughput.")
+        datacount = 0
         data[i-1] = 0
 
 print(data)

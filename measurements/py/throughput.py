@@ -38,8 +38,8 @@ for i in range(1,repetitions+1):
         data[i-1] = 0
     if pt.isfile(file_path):
         datacount = lines.linecount(file_path)
-        print(ackcount)
-        print(datacount)
+        print("THE ACKCOUNT IS: "+ackcount)
+        print("THE DATACOUNT IS: "+datacount)
         data[i-1] = min(ackcount, datacount)*packet_size
     else:
         # no data sent off

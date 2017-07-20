@@ -5,7 +5,7 @@ print("hello from variables.py!")
 ## get all required information from os
 
 if os.environ.get('timer') is not None:
-    timer               = os.environ["timer"]
+    timer               = int(os.environ["timer"])
 else:
     timer               = 300
 

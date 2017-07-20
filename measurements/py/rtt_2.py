@@ -154,7 +154,7 @@ for i in range(1,repetitions+1):
     data_sent_times = []
     retxs = []
     total_retxs = 0
-    tx_fails = 0
+    txs_fails = 0
 
 print(rtt)
 #------------------------------------------------------------------------------#

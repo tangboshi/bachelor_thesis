@@ -1,6 +1,5 @@
 # measurement 29
 # protocol: csma two way handshake
-# measured entity: throughput
 # sifs = 1ms
 # difs = 5ms
 # backoff = 2ms

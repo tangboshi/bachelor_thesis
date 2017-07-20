@@ -4,6 +4,11 @@ print("hello from variables.py!")
 
 ## get all required information from os
 
+if os.environ.get('timer') is not None:
+    timer               = os.environ["timer"]
+else:
+    timer               = 300
+
 if os.environ.get('measurement_counter') is not None:
     measurement         = os.environ["measurement_counter"]
 else:

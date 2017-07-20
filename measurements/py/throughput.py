@@ -17,7 +17,7 @@ from variables import (
     measurement,
     repetitions,
     show_plot,
-    time
+    timer
 )
 #except ImportError:
     #print("Probably not all data were imported correctly.")

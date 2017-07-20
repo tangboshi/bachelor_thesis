@@ -127,7 +127,18 @@ myDict["Somerandomword"]()
 #         ylabel="awesomeness",
 #         show=True)
 
-my_dict = { "A": 1, "B": 5, "C": 7}
-dict_deref = **my_dict
+# my_dict = { "A": 1, "B": 5, "C": 7}
+#
+# print(dict_deref.items())
 
-print(dict_deref.items())
+import numpy as np
+import statsmodels.api as sm # recommended import according to the docs
+import matplotlib.pyplot as plt
+
+sample = np.random.uniform(0, 1, 50)
+ecdf = sm.distributions.ECDF(sample)
+
+x = np.linspace(min(sample), max(sample))
+y = ecdf(x)
+plt.step(x, y)
+plt.show()

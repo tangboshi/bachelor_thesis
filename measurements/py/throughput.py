@@ -16,7 +16,8 @@ from variables import (
     plot_type,
     measurement,
     repetitions,
-    show_plot
+    show_plot,
+    time
 )
 #except ImportError:
     #print("Probably not all data were imported correctly.")
@@ -40,7 +41,7 @@ for i in range(1,repetitions+1):
         datacount = lines.linecount(data_file_path)
         print("ackcount: "+str(ackcount))
         print("datacount: "+str(datacount))
-        data[i-1] = min(ackcount, datacount)*packet_size
+        data[i-1] = min(ackcount, datacount)*packet_size/time
     else:
         # no data sent off
         print("Data file not found at "+data_file_path+".")
@@ -60,7 +61,7 @@ for index, plot in enumerate(plot_type):
             #packet_size/25),
         plottype=plot,
         title="Throughput",
-        xlabel="throughput [B]",
-        ylabel="throughput [B]",
+        xlabel="throughput [B/s]",
+        ylabel="throughput [B/s]",
         savepath=plot_path+"/"+measurement+"/",
         show=show_plot)

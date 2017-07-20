@@ -6,8 +6,8 @@
 # backoff = 2ms
 # nodes = 2
 
-timer=30
-export measurement_repetitions=10
+timer=300
+export measurement_repetitions=5
 measurement_scripts=( csma_80211_III.py csma_80211_II.py )
 plot_scripts=( rtt_2.py throughput.py )
 #################################################

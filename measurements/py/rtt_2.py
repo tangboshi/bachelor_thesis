@@ -30,7 +30,7 @@ rtt = np.zeros(shape=(repetitions))
 retxs = []
 all_retxs = []
 total_retxs = 0
-tx_fails = 0
+txs_fails = 0
 packet_loss_percent = []
 avg_frame_txs = []
 

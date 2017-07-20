@@ -41,7 +41,7 @@ for i in range(1,repetitions+1):
         datacount = lines.linecount(data_file_path)
         print("ackcount: "+str(ackcount))
         print("datacount: "+str(datacount))
-        data[i-1] = min(ackcount, datacount)*packet_size/time
+        data[i-1] = min(ackcount, datacount)*packet_size/timer
     else:
         # no data sent off
         print("Data file not found at "+data_file_path+".")

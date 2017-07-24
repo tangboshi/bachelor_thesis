@@ -37,7 +37,7 @@ else:
 if os.environ.get('show_plot_after_measurement') is not None:
     show_plot           = int(os.environ["show_plot_after_measurement"])
 else:
-    show_plot           = true
+    show_plot           = True
 
 if os.environ.get('plot_type') is not None:
     plot_type           = os.environ["plot_type"].split(",")

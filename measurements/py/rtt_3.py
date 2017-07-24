@@ -1,205 +1,262 @@
 import numpy as np
-import myplot
+import myplot_2 as myplot
 import os
 
-print("Hello from rtt.py!")
+print("Hello from rtt_3.py!")
 
 class rtt:
     def __init__(self, **kwargs):
         #self.__dict__.update(kwargs)
-        self.data_source_path   =   kwargs.get("data_source_path","")
-        self.rtt_data_files     =   kwargs.get("rtt_data_files","")
-        self.rtt_mode           =   kwargs.get("rtt_mode","")
-        self.plot_path          =   kwargs.get("plot_path","")
-        self.plot_type          =   kwargs.get("plot_type","")
-        self.measurement        =   kwargs.get("measurement","")
-        self.repetitions        =   kwargs.get("repetitions","")
-        self.show_plot          =   kwargs.get("show_plot","")
-        self.max_retxs          =   kwargs.get("max_retxs","")
-        self.retxs_data_files   =   kwargs.get("retxs_data_files","")
-        self.timer              =   kwargs.get("timer","")
+        self.data_source_path   =   kwargs.get("data_source_path","/home/alex/0_ba/git/measurements/data")
+        self.rtt_data_files     =   kwargs.get("rtt_data_files", "sender_data_sent.txt,sender_ack_received.txt")
+        self.rtt_mode           =   kwargs.get("rtt_mode","frame_delay")
+        self.plot_path          =   kwargs.get("plot_path","/home/alex/0_ba/git/measurements/plots")
+        self.plot_type          =   kwargs.get("plot_type","all")
+        self.measurement        =   kwargs.get("measurement",[])
+        self.repetitions        =   kwargs.get("repetitions",5)
+        self.show_plot          =   kwargs.get("show_plot","False")
+        self.max_retxs          =   kwargs.get("max_retxs",6)
+        self.retxs_data_files   =   kwargs.get("retxs_data_files","sender_retransmissions.txt")
+        self.timer              =   kwargs.get("timer",300)
+
+        print ("Calculating "+self.rtt_mode+"...")
+        #for debugging purposes
+        #print(str(self.__dict__))
+        #print(self.repetitions)
 
     # ------------------------------ Calculations ---------------------------------#
-    # Create a repetitions X 1 matrix aka row vector with measurement data
     def calc(self):
-        data_sent_times = []
-        ack_received_times = []
-        rtt_single_measurement = []
-        rtt = np.zeros(shape=(self.repetitions))
-        retxs = []
-        all_retxs = []
-        total_retxs = 0
-        txs_fails = 0
-        packet_loss_percent = []
-        avg_frame_txs = []
 
-        for i in range(1,repetitions+1):
-            path                = self.data_source_path+'/'+str(i)+'/'
-            data_sent_path      = path+self.rtt_data_files["data_sent"]
-            ack_received_path   = path+self.rtt_data_files["ack_received"]
-            retxs_path          = path+self.retxs_data_files["retxs"]
+        print("Taking a look at the following measurements: "+str(self.measurement))
+        # The stuff we want to plot later
+        self.rtt = np.zeros(shape=(len(self.measurement),self.repetitions))
+        self.packet_loss_percent = []
+        self.avg_frame_txs = []
+        self.all_retxs = []
+        self.retxs_per_measurement = []
 
-            if os.path.isfile(data_sent_path):
-                with open(data_sent_path) as f:
-                    for line in f:
-                        line = line.strip('\n')
-                        secs, usecs = line.split(" ",1)
-                        missing_zeros = 6 - len(usecs)
-                        usecs = ("0" * missing_zeros) + usecs
-                        line = ".".join([secs, usecs])
-                        data_sent_times += [float(line)]
-                        print("data_sent: "+line)
-            else:
-                print(  "File "+data_sent_path+" not found. \
-                        Assuming not reached in GR.")
-
-            if os.path.isfile(ack_received_path):
-                with open(ack_received_path) as f:
-                    for line in f:
-                        line = line.strip('\n')
-                        secs, usecs = line.split(" ",1)
-                        missing_zeros = 6 - len(usecs)
-                        usecs = ("0" * missing_zeros) + usecs
-                        line = ".".join([secs, usecs])
-                        ack_received_times += [float(line)]
-                        print("ack_received: "+line)
-
-            else:
-                print(  "File "+ack_received_path+" not found. \
-                        Assuming not reached in GR.")
-
-            if os.path.isfile(retxs_path):
-                with open(retxs_path) as f:
-                    for line in f:
-                        line.strip("\n")
-                        line = [int(item) for item in line.split()]
-                        retxs += [item for item in line]
-                        all_retxs += retxs
-                        print("retx: "+str(retxs))
-
-            else:
-                print(  "File "+retxs_path+" not found. \
-                        Assuming not reached in GR. Creating data for you...")
-                for index in range(len(ack_received_times)):
-                    retxs += [0]
-
-
-            # Calculate RTT for each packet
-            if rtt_mode == "rtt":
-                for idx, counter in enumerate(retxs):
-                    # This check must be added to catch the case where the last data
-                    # frame isnt followed up by an ACK (max retries)
-                    if len(ack_received_times) > idx:
-                        total_retxs += counter
-                        if counter > 0:
-                            if counter == max_retxs:
-                                # Probably not needed, but hey if we can get it for free...
-                                txs_fails += 1
-                        else:
-                            res = ack_received_times[idx] - data_sent_times[idx+counter+total_retxs]
-                            rtt_single_measurement += [round(res,5)]
-                    else:
-                        print(  "Last data frame wasnt acked (max tries). \
-                                Termintating calculation here.")
-
-            else:#rtt_mode == delay
-                for idx, counter in enumerate(retxs):
-                    if len(ack_received_times) > idx:
-                        total_retxs += counter
-                        if counter < max_retxs:
-                            res = ack_received_times[idx] - data[idx+counter+total_retxs]
-                            rtt_single_measurement += [round(res,5)]
-                        else:
-                            # Probably not needed, but hey if we can get it for free...
-                            txs_fails += 1
-                    else:
-                        print(  "Last data frame wasnt acked (max tries). \
-                                Termintating calculation here.")
-
-
-            print("\nThe resulting RTTs of this single measurement are:")
-            print(rtt_single_measurement)
-            print("\n")
-
-            # Now calculate mean RTT for this measurement
-            # print(str(float(sum(rtt_single_measurement))))
-            # print(str(len(rtt_single_measurement)))
-            if len(rtt_single_measurement) > 0:
-                rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
-            else:
-                rtt_single_mean =   100
-            # rtt_single_mean seems to be calculated correctly, but source data is odd.
-            print("\nThe resulting mean RTT of this single measurement is:")
-            print(rtt_single_mean)
-            print("\n")
-
-            rtt[i-1] = rtt_single_mean
-
-            ### Packet loss ###
-            packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
-            packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
-            packet_loss_percent += [round(packet_loss_rel*100, 2)]
-            print("abs. packet loss: "+str(packet_loss_abs))
-            print("packet loss in %: "+str(packet_loss_percent[-1])+"%")
-
-            ### Average retransmissions per frame ###
-            ### practically the same  as packet loss
-            if not sum(retxs) == 0 and not len(retxs) == 0:
-                avg_frame_txs += [sum(retxs) / len(retxs)]
-
-            # Prepare next iteration
-            rtt_single_measurement = []
-            ack_received_times = []
+        for index,single_measurement in enumerate(self.measurement):
             data_sent_times = []
+            ack_received_times = []
+            rtt_single_measurement = []
             retxs = []
             total_retxs = 0
             txs_fails = 0
 
-        print(rtt)
+
+            print("index(measurement): "+str(index))
+            print("self.rtt before calc:"+str(self.rtt))
+
+            for i in range(self.repetitions):
+                path                = self.data_source_path+'/'+str(index+1)+'/'+str(i+1)+'/'
+                data_sent_path      = path+self.rtt_data_files.split(",")[0]
+                ack_received_path   = path+self.rtt_data_files.split(",")[1]
+                retxs_path          = path+self.retxs_data_files.split()[0]
+
+                print(str(i+1))
+                print("data_sent_path:"+data_sent_path)
+                print("ack_received_path:"+ack_received_path)
+
+                if os.path.isfile(data_sent_path):
+                    with open(data_sent_path) as f:
+                        for line in f:
+                            line = line.strip('\n')
+                            secs, usecs = line.split(" ",1)
+                            missing_zeros = 6 - len(usecs)
+                            usecs = ("0" * missing_zeros) + usecs
+                            line = ".".join([secs, usecs])
+                            data_sent_times += [float(line)]
+                            print("data_sent: "+line)
+                else:
+                    print(  "File "+data_sent_path+" not found. \
+                            Assuming not reached in GR.")
+
+                if os.path.isfile(ack_received_path):
+                    with open(ack_received_path) as f:
+                        for line in f:
+                            line = line.strip('\n')
+                            secs, usecs = line.split(" ",1)
+                            missing_zeros = 6 - len(usecs)
+                            usecs = ("0" * missing_zeros) + usecs
+                            line = ".".join([secs, usecs])
+                            ack_received_times += [float(line)]
+                            print("ack_received: "+line)
+
+                else:
+                    print(  "File "+ack_received_path+" not found. \
+                            Assuming not reached in GR.")
+
+                if os.path.isfile(retxs_path):
+                    with open(retxs_path) as f:
+                        for line in f:
+                            line.strip("\n")
+                            line = [int(item) for item in line.split()]
+                            retxs += [item for item in line]
+                            self.all_retxs += retxs
+                            print("retx: "+str(retxs))
+
+                else:
+                    print(  "File "+retxs_path+" not found. \
+                            Assuming not reached in GR. Creating data for you...")
+                    for index in range(len(ack_received_times)):
+                        retxs += [0]
+
+                # Calculate RTT for each packet
+                if self.rtt_mode == "rtt":
+                    for idx, counter in enumerate(retxs):
+                        # This check must be added to catch the case where the last data
+                        # frame isnt followed up by an ACK (max retries)
+                        if len(ack_received_times) > idx:
+                            total_retxs += counter
+                            if counter > 0:
+                                if counter == self.max_retxs:
+                                    # Probably not needed, but hey if we can get it for free...
+                                    txs_fails += 1
+                            else:
+                                res = ack_received_times[idx] - data_sent_times[idx+counter+total_retxs]
+                                rtt_single_measurement += [round(res,5)]
+                        else:
+                            print(  "Last data frame wasnt acked (max tries). \
+                                    Termintating calculation here.")
+
+                else:#self.rtt_mode == delay
+                    for idx, counter in enumerate(retxs):
+                        if len(ack_received_times) > idx:
+                            total_retxs += counter
+                            if counter < self.max_retxs:
+                                res = ack_received_times[idx] - data_sent_times[idx+counter+total_retxs]
+                                rtt_single_measurement += [round(res,5)]
+                            else:
+                                # Probably not needed, but hey if we can get it for free...
+                                txs_fails += 1
+                        else:
+                            print(  "Last data frame wasnt acked (max tries). \
+                                    Termintating calculation here.")
+
+
+                print("\nThe resulting RTTs of this single measurement are:")
+                print(rtt_single_measurement)
+                print("\n")
+
+                # Now calculate mean RTT for this measurement
+                # print(str(float(sum(rtt_single_measurement))))
+                # print(str(len(rtt_single_measurement)))
+                if len(rtt_single_measurement) > 0:
+                    rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
+                else:
+                    rtt_single_mean =   100
+                # rtt_single_mean seems to be calculated correctly, but source data is odd.
+                print("\nThe resulting mean RTT of this single measurement is:")
+                print(rtt_single_mean)
+                print("\n")
+
+                print("self.rtt is:"+str(self.rtt))
+                # FIXME: ofc the indizes are wrong here: should be index, i
+                self.rtt[index,i] = rtt_single_mean
+                print(str(self.rtt.shape))
+                print("index:"+str(index))
+                print("i:"+str(i))
+                #print("self.rtt[index][i]:"+str(self.rtt[index][i]))
+
+                ### Packet loss ###
+                packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
+                packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
+                self.packet_loss_percent += [round(packet_loss_rel*100, 2)]
+                print("abs. packet loss: "+str(packet_loss_abs))
+                print("packet loss in %: "+str(self.packet_loss_percent[-1])+"%")
+
+                ### Average retransmissions per frame ###
+                ### practically the same  as packet loss
+                if not sum(retxs) == 0 and not len(retxs) == 0:
+                    self.avg_frame_txs += [sum(retxs) / len(retxs)]
+
+                # Prepare next iteration
+                rtt_single_measurement = []
+                ack_received_times = []
+                data_sent_times = []
+                retxs = []
+                total_retxs = 0
+                txs_fails = 0
+
+            #print("retxs_per_measurement")
+            self.retxs_per_measurement.append(self.all_retxs)
+            #print(self.retxs_per_measurement)
+
+            print("self.rtt after calc:"+str(self.rtt))
+            print("****************************************")
+            print("\n\n\n\n")
+
     #------------------------------------------------------------------------------#
 
     def plot(self):
-        for index, plot in enumerate(plot_type):
 
-            myplot.myplot(data=rtt,
+        self.calc()
+        print (self.rtt)
+
+        if "all" in self.plot_type:
+            # Removed line, cause it is bugged atm.
+            self.plot_type  =   ["pdf","cdf","boxplot","bar"]
+
+        rtt_vals = []
+        for index, plot in enumerate(self.plot_type):
+
+            for item in self.rtt:
+                for val in item:
+                    rtt_vals += [round(val,5)]
+
+            myplot.myplot(data=self.rtt,
                     bins=np.arange(
-                        min(rtt)-0.002,
-                        max(rtt)+0.002,
+                        min(rtt_vals)-0.002,
+                        max(rtt_vals)+0.002,
                         #0.07/1000),
-                        (max(rtt)-min(rtt))/100),
-                    plottype=plot,
+                        (max(rtt_vals)-min(rtt_vals))/50),
+                    plottype=self.plot_type,
                     title="RTT",
                     xlabel="rtt [s]",
                     ylabel="rtt [s]",
-                    savepath=plot_path+"/"+measurement+"/",
-                    show=show_plot)
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot)
 
-            myplot.myplot(data=packet_loss_percent,
+            myplot.myplot(data=self.packet_loss_percent,
                     bins=np.arange(
                         0,
                         100,
                         1),
-                    plottype=plot,
+                    plottype=self.plot_type,
                     title="Packet Loss",
                     xlabel="packet loss [%]",
                     ylabel="packet loss [%]",
-                    savepath=plot_path+"/"+measurement+"/",
-                    show=show_plot)
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot)
 
-            if len(all_retxs) <= 20:
+            if len(self.all_retxs) <= 20:
                 number_bars = True
             else:
                 number_bars = False
 
-            myplot.myplot(data=all_retxs,
+            ### Probably uninteresting
+            # myplot.myplot(data=self.all_retxs,
+            #         bins=np.arange(
+            #             0,
+            #             self.max_retxs+1,
+            #             0.1),
+            #         plottype=self.plot_type,
+            #         title="Retransmissions Overall",
+            #         xlabel="retransmissions",
+            #         ylabel="retransmissions",
+            #         savepath=self.plot_path+"/",
+            #         show=self.show_plot,
+            #         number_bars=number_bars)
+
+            myplot.myplot(data=self.retxs_per_measurement,
                     bins=np.arange(
                         0,
-                        max_retxs+1,
+                        self.max_retxs+1,
                         0.1),
-                    plottype=plot,
-                    title="Retransmissions",
-                    xlabel="retransmissions",
-                    ylabel="retransmissions",
-                    savepath=plot_path+"/"+measurement+"/",
-                    show=show_plot,
+                    plottype=self.plot_type,
+                    title="Retransmissions per Frame",
+                    xlabel="retransmissions/frame",
+                    ylabel="retransmissions/frame",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
                     number_bars=number_bars)

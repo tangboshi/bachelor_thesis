@@ -131,14 +131,62 @@ myDict["Somerandomword"]()
 #
 # print(dict_deref.items())
 
-import numpy as np
-import statsmodels.api as sm # recommended import according to the docs
+# import numpy as np
+# import statsmodels.api as sm # recommended import according to the docs
+# import matplotlib.pyplot as plt
+#
+# sample = np.random.uniform(0, 1, 50)
+# ecdf = sm.distributions.ECDF(sample)
+#
+# x = np.linspace(min(sample), max(sample))
+# y = ecdf(x)
+# plt.step(x, y)
+# plt.show()
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+#
+# arr = [0,1,2,2]
+# plt.plot(np.sort(arr), np.linspace(0,1,len(arr), endpoint=False))
+# plt.show()
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# # Some fake data:
+# data = np.random.randn(1000)
+#
+# sorted_data = np.sort(data)  # Or data.sort(), if data can be modified
+#
+# # Cumulative distributions:
+# plt.step(np.concatenate([sorted_data, sorted_data[[-1]]]),
+#          np.arange(sorted_data.size+1))
+# plt.step(np.concatenate([sorted_data[::-1], sorted_data[[0]]]),
+#          np.arange(sorted_data.size+1))
+#
+# plt.show()
+
 import matplotlib.pyplot as plt
+import numpy as np
 
-sample = np.random.uniform(0, 1, 50)
-ecdf = sm.distributions.ECDF(sample)
+arr = np.zeros(shape=(2,8))
+arr[0,0] = 0
+arr[0,1] = 7
+arr[0,2] = 19
+arr[0,3] = 6
+arr[0,4] = -12
+arr[0,5] = 14
+arr[0,6] = 13
+arr[0,7] = 8
+arr[1,0] = 4
+arr[1,1] = 12
+arr[1,2] = 3
+arr[1,3] = 5
+arr[1,4] = 7
+arr[1,5] = 1
+arr[1,6] = -4
+arr[1,7] = 4
+print(arr)
 
-x = np.linspace(min(sample), max(sample))
-y = ecdf(x)
-plt.step(x, y)
+plt.boxplot(arr)
 plt.show()

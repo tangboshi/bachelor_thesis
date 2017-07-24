@@ -1,60 +1,28 @@
 import numpy as np
-import process_file
 import myplot
 
-## Get all required information from OS
-try:
-    from variables import (
-        data_source_path,
-        throughput_data_files,
-        rtt_data_files,
-        plot_path,
-        show_plot
-    )
-except ImportError:
-    print("Probably not all data were imported correctly!")
-    print(ImportError)
+import rtt_3 as rtt
 
-# Modify these variables
-measurement = 96
-repetitions = 15 # be sure to have the correct value here
-data_file_names = ["sender_bfr_dq.txt", "sender_ack_received.txt"]
-plot_type = "pdf"
-processing_scheme = "rtt"
-xlabel = "fancyness"
-ylabel= "awesomeness"
-title = "super nice"
-show_plot = False
-savepath = plot_path+"/"+str(measurement)+"/"
+### Parameters, change these to fit your needs
 
-# Don't modify these variables
-data_source_path += "/"+str(measurement)
+#measurement        = [x for x in range(5)] + [12] + [x for x in range (14,17)]
+measurement         = [x+1 for x in range(2)]
+repetitions         = 8
+data_source_path    = "/home/alex/Schreibtisch/data"
+plot_path           = "/home/alex/Schreibtisch/plots"
+plot_type           = ["pdf","cdf"]
 
-#Testing
-# print(data_source_path)
-# print(rtt_data_files)
+eval_dict = {
+    "measurement":          measurement,
+    "repetitions":          repetitions,
+    "data_source_path":     data_source_path,
+    "plot_path":            plot_path,
+    "plot_type":            plot_type,
+}
 
-## Trigger data processing
-data = []
-paths = []
-for i in range(1,repetitions+1):
-    for filename in data_file_names:
-        paths.append(data_source_path+"/"+str(i)+"/"+filename)
-    single_file = process_file.process_file(files=paths, mode=processing_scheme);
-    data += [single_file.result]
+# print (repetitions)
+# print (repetitions[0])
+# for item in repetitions:
+#     print (item)
 
-#Testing this file
-print("The data in belated_evaluation.py is:")
-print(data)
-
-## Trigger the plotting
-myplot.myplot(  data=data,
-                bins=np.arange(
-                        min(data),
-                        max(data)),
-                plottype=plot_type,
-                xlabel=xlabel,
-                ylabel=ylabel,
-                title=title,
-                show=show_plot,
-                savepath=savepath)
+rtt.rtt(**eval_dict).plot()

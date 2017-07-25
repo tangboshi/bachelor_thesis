@@ -10,7 +10,7 @@ measurement         = [x+1 for x in range(2)]
 repetitions         = 8
 data_source_path    = "/home/alex/Schreibtisch/data"
 plot_path           = "/home/alex/Schreibtisch/plots"
-plot_type           = ["pdf","cdf"]
+plot_type           = ["boxplot"]
 
 eval_dict = {
     "measurement":          measurement,

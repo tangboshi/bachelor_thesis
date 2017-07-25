@@ -51,7 +51,7 @@ class myplot:
         #     print(aplot)
         # Before calling plotting function
 
-        for aplot in plottype:
+        for index, aplot in enumerate(plottype):
             plottypes[aplot]()
 
 

@@ -192,11 +192,16 @@ function main
     jobs=$jobs_open_path/*
     for job in $jobs; do
       source $job;
+      log=$log_path/$job_name"_"$measurement_counter.log
       job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
       #echo $job_name
-      measure | tee -a $log_path/$job_name"_"$measurement_counter.log
+      $(echo Job Configuration:) | tee -a $log
+      $(cat $job) | tee -a $log
+      $(echo Measurement Configuration:) | tee -a $log
+      $(cat measurement.conf) | tee -a $log
+      measure | tee -a $log
       if [ $plot_enabled -eq 1 ]; then
-        plot | tee -a $log_path/$job_name"_"$measurement_counter.log;
+        plot | tee -a $log
       fi
       if [ $move_after_job_done -eq 1 ]; then
         cp $job $plot_directory_path/$measurement_counter/

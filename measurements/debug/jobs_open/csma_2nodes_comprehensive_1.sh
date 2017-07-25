@@ -1,7 +1,7 @@
 echo protocol = csma two way handshake
-echo sifs = 1ms
-echo difs = 5ms
-echo backoff = 2ms
+echo sifs = 3ms
+echo difs = 15ms
+echo backoff = 6ms
 echo nodes = 2
 echo timer = 300
 echo repetions = 5

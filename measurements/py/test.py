@@ -166,27 +166,45 @@ myDict["Somerandomword"]()
 #
 # plt.show()
 
+# import matplotlib.pyplot as plt
+# import numpy as np
+#
+# arr = np.zeros(shape=(2,8))
+# arr[0,0] = 0
+# arr[0,1] = 7
+# arr[0,2] = 19
+# arr[0,3] = 6
+# arr[0,4] = -12
+# arr[0,5] = 14
+# arr[0,6] = 13
+# arr[0,7] = 8
+# arr[1,0] = 4
+# arr[1,1] = 12
+# arr[1,2] = 3
+# arr[1,3] = 5
+# arr[1,4] = 7
+# arr[1,5] = 1
+# arr[1,6] = -4
+# arr[1,7] = 4
+# print(arr)
+#
+# plt.boxplot(arr)
+# plt.show()
+
 import matplotlib.pyplot as plt
-import numpy as np
 
-arr = np.zeros(shape=(2,8))
-arr[0,0] = 0
-arr[0,1] = 7
-arr[0,2] = 19
-arr[0,3] = 6
-arr[0,4] = -12
-arr[0,5] = 14
-arr[0,6] = 13
-arr[0,7] = 8
-arr[1,0] = 4
-arr[1,1] = 12
-arr[1,2] = 3
-arr[1,3] = 5
-arr[1,4] = 7
-arr[1,5] = 1
-arr[1,6] = -4
-arr[1,7] = 4
-print(arr)
+plt.subplot(211)
+plt.boxplot([1,2,3], label="test1")
+plt.boxplot([3,2,1], label="test2")
+# Place a legend above this subplot, expanding itself to
+# fully use the given bounding box.
+plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+           ncol=2, mode="expand", borderaxespad=0.)
 
-plt.boxplot(arr)
+plt.subplot(223)
+plt.plot([1,2,3], label="test1")
+plt.plot([3,2,1], label="test2")
+# Place a legend to the right of this smaller subplot.
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+
 plt.show()

@@ -1,14 +1,14 @@
 import numpy as np
-import myplot_2 as myplot
+import myplot_belated as myplot
 import os
 
-print("Hello from rtt_3.py!")
+print("Hello from rtt_belated.py!")
 
 class rtt:
     def __init__(self, **kwargs):
         #self.__dict__.update(kwargs)
         self.data_source_path   =   kwargs.get("data_source_path","/home/alex/0_ba/git/measurements/data")
-        self.rtt_data_files     =   kwargs.get("rtt_data_files", "sender_data_sent.txt,sender_ack_received.txt")
+        self.rtt_data_files     =   kwargs.get("rtt_data_files", "sender_bfr_dq.txt,sender_ack_received.txt")
         self.rtt_mode           =   kwargs.get("rtt_mode","frame_delay")
         self.plot_path          =   kwargs.get("plot_path","/home/alex/0_ba/git/measurements/plots")
         self.plot_type          =   kwargs.get("plot_type","all")
@@ -18,6 +18,12 @@ class rtt:
         self.max_retxs          =   kwargs.get("max_retxs",6)
         self.retxs_data_files   =   kwargs.get("retxs_data_files","sender_retransmissions.txt")
         self.timer              =   kwargs.get("timer",300)
+        self.grid               =   kwargs.get("grid",False)
+        self.legend             =   kwargs.get("legend", [])
+        self.xticks             =   kwargs.get("xticks", [])
+        self.legend_loc         =   kwargs.get("legend_loc", "best")
+        self.annotations_below  =   kwargs.get("annotations_below", [])
+        self.annotations_other  =   kwargs.get("annotations_other", [])
 
         print ("Calculating "+self.rtt_mode+"...")
         #for debugging purposes
@@ -48,7 +54,7 @@ class rtt:
             print("self.rtt before calc:"+str(self.rtt))
 
             for i in range(self.repetitions):
-                path                = self.data_source_path+'/'+str(index+1)+'/'+str(i+1)+'/'
+                path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 data_sent_path      = path+self.rtt_data_files.split(",")[0]
                 ack_received_path   = path+self.rtt_data_files.split(",")[1]
                 retxs_path          = path+self.retxs_data_files.split()[0]
@@ -198,65 +204,82 @@ class rtt:
             self.plot_type  =   ["pdf","cdf","boxplot","bar"]
 
         rtt_vals = []
-        for index, plot in enumerate(self.plot_type):
 
-            for item in self.rtt:
-                for val in item:
-                    rtt_vals += [round(val,5)]
+        for item in self.rtt:
+            for val in item:
+                rtt_vals += [round(val,5)]
 
-            myplot.myplot(data=self.rtt,
-                    bins=np.arange(
-                        min(rtt_vals)-0.002,
-                        max(rtt_vals)+0.002,
-                        #0.07/1000),
-                        (max(rtt_vals)-min(rtt_vals))/50),
-                    plottype=self.plot_type,
-                    title="RTT",
-                    xlabel="rtt [s]",
-                    ylabel="rtt [s]",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot)
+        myplot.myplot(data=self.rtt,
+                bins=np.arange(
+                    min(rtt_vals)-0.002,
+                    max(rtt_vals)+0.002,
+                    #0.07/1000),
+                    (max(rtt_vals)-min(rtt_vals))/50),
+                plottype=self.plot_type,
+                title="RTT",
+                xlabel="rtt [s]",
+                ylabel="rtt [s]",
+                savepath=self.plot_path+"/",
+                show=self.show_plot,
+                grid=self.grid,
+                xticks=self.xticks,
+                legend=self.legend,
+                legend_loc=self.legend_loc,
+                annotations_below=self.annotations_below,
+                annotations_other=self.annotations_other)
 
-            myplot.myplot(data=self.packet_loss_percent,
-                    bins=np.arange(
-                        0,
-                        100,
-                        1),
-                    plottype=self.plot_type,
-                    title="Packet Loss",
-                    xlabel="packet loss [%]",
-                    ylabel="packet loss [%]",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot)
+        myplot.myplot(data=self.packet_loss_percent,
+                bins=np.arange(
+                    0,
+                    100,
+                    1),
+                plottype=self.plot_type,
+                title="Packet Loss",
+                xlabel="packet loss [%]",
+                ylabel="packet loss [%]",
+                savepath=self.plot_path+"/",
+                show=self.show_plot,
+                grid=self.grid,
+                xticks=self.xticks,
+                legend=self.legend,
+                legend_loc=self.legend_loc,
+                annotations_below=self.annotations_below,
+                annotations_other=self.annotations_other)
 
-            if len(self.all_retxs) <= 20:
-                number_bars = True
-            else:
-                number_bars = False
+        if len(self.all_retxs) <= 20:
+            number_bars = True
+        else:
+            number_bars = False
 
-            ### Probably uninteresting
-            # myplot.myplot(data=self.all_retxs,
-            #         bins=np.arange(
-            #             0,
-            #             self.max_retxs+1,
-            #             0.1),
-            #         plottype=self.plot_type,
-            #         title="Retransmissions Overall",
-            #         xlabel="retransmissions",
-            #         ylabel="retransmissions",
-            #         savepath=self.plot_path+"/",
-            #         show=self.show_plot,
-            #         number_bars=number_bars)
+        ### Probably uninteresting
+        # myplot.myplot(data=self.all_retxs,
+        #         bins=np.arange(
+        #             0,
+        #             self.max_retxs+1,
+        #             0.1),
+        #         plottype=self.plot_type,
+        #         title="Retransmissions Overall",
+        #         xlabel="retransmissions",
+        #         ylabel="retransmissions",
+        #         savepath=self.plot_path+"/",
+        #         show=self.show_plot,
+        #         number_bars=number_bars)
 
-            myplot.myplot(data=self.retxs_per_measurement,
-                    bins=np.arange(
-                        0,
-                        self.max_retxs+1,
-                        0.1),
-                    plottype=self.plot_type,
-                    title="Retransmissions per Frame",
-                    xlabel="retransmissions/frame",
-                    ylabel="retransmissions/frame",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot,
-                    number_bars=number_bars)
+        myplot.myplot(data=self.retxs_per_measurement,
+                bins=np.arange(
+                    0,
+                    self.max_retxs+1,
+                    0.1),
+                plottype=self.plot_type,
+                title="Retransmissions per Frame",
+                xlabel="retransmissions/frame",
+                ylabel="retransmissions/frame",
+                savepath=self.plot_path+"/",
+                show=self.show_plot,
+                number_bars=number_bars,
+                grid=self.grid,
+                xticks=self.xticks,
+                legend=self.legend,
+                legend_loc=self.legend_loc,
+                annotations_below=self.annotations_below,
+                annotations_other=self.annotations_other)

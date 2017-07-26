@@ -18,7 +18,7 @@ measurement             = [x for x in range(207,212)]
 repetitions             = 5
 data_source_path        = "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               = "/home/alex/Schreibtisch/real/measurements/belated/plots"
-plot_type               = ["cdf","cdf2","boxplot"]
+plot_type               = ["boxplot", "cdf"]
 throughput_data_files   = ["sender_data_sent.txt","sender_ack_received.txt"]
 rtt_data_files          = "sender_bfr_dq.txt,sender_ack_received.txt"
 
@@ -27,12 +27,12 @@ boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
                         "SIFS=1ms\nDIFS=5ms\nBO=0ms",
                         "SIFS=1ms\nDIFS=5ms\nBO=0-100ms (rng)",
                         "SIFS=1ms\nDIFS=5ms\nBO=50ms"]
-legend_labels       = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
+legend_labels       = [ tick.replace("\n", ",") for tick in boxplot_xticks]
 legend_loc          = "upper left"
 annotations_below   = [ "Comments on this plot:",
                         "Timer: 300s",
                         "Repetitions: 5"]
-show_plot           = False
+
 #Unimplemented, use later
 annotations_other   = []
 
@@ -55,11 +55,8 @@ for index,a_plot_type in enumerate(plot_type):
         "annotations_below":        annotations_below,
         "annotations_other":        annotations_other,
         "throughput_data_files":    throughput_data_files,
-        "rtt_data_files":           rtt_data_files,
-        "show_plot":                show_plot
+        "rtt_data_files":           rtt_data_files
     }
 
     rtt.rtt(**eval_dict).plot()
     tp.tp(**eval_dict).plot()
-
-print("Done.")

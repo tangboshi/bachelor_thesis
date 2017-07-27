@@ -71,7 +71,7 @@ class myplot:
                 self.ax.legend(fancybox=True,loc=self.legend_loc)
             else:
                 print ( "len(self.data) = "
-                        + str(len(self.data))
+                        + str(len(np.asarray(self.data).transpose()))
                         + " and len(self.legend) = "
                         + str(len(self.legend))
                         +" don't match!")
@@ -86,6 +86,7 @@ class myplot:
                 self.show()
 
             self.fig.clear()
+            print(self.data)
 
     def line(self):
         #FIXME
@@ -152,7 +153,7 @@ class myplot:
                                 #notch=True,
                                 patch_artist=True)
 
-        colors = ['ivory','honeydew','mistyrose','lightskyblue','plum']
+        colors = ['ivory','honeydew','mistyrose','lightskyblue','plum','#00eacb']
         color_repetitions = math.ceil(len(self.data)/len(colors))
         colors = color_repetitions * colors
 
@@ -165,7 +166,7 @@ class myplot:
 
         # Only modify xticks if self.data has as many data sets as self.xticks
         # has labels. Else print warning.
-        if len(self.data) == len(self.xticks):
+        if len(np.asarray(self.data).transpose()) == len(self.xticks):
             plt.xticks([x+1 for x in range(len(self.xticks))],self.xticks)
         else:
             print ( "len(self.data) = "

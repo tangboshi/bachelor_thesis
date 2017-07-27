@@ -14,7 +14,7 @@ import throughput_belated as tp
 # rtt_data_files          = "sender_data_sent.txt,sender_ack_received.txt"
 
 # real data parameter set
-measurement             = [x for x in range(207,214)]
+measurement             = [x for x in range(207,212)] + [215]
 repetitions             = 5
 data_source_path        = "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               = "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -27,8 +27,8 @@ boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
                         "SIFS=1ms\nDIFS=5ms\nBO=0ms",
                         "SIFS=1ms\nDIFS=5ms\nBO=0-100ms (rng)",
                         "SIFS=1ms\nDIFS=5ms\nBO=50ms",
-                        "SIFS=1ms\nDIFS=5ms\nBO=2ms",
-                        "SIFS=0ms\nDIFS=0ms\nBO=0ms"]
+                        "SIFS=1ms\nDIFS=5ms\nBO=2ms"
+                        ]
 legend_labels       = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 legend_loc          = "upper left"
 show_plot           = False

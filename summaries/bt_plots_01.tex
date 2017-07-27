@@ -16,22 +16,63 @@
 \usepackage{enumitem}
 \usepackage{standalone}
 \usepackage[margin=0in]{geometry}
+\usepackage{rotating}
 
 \graphicspath{{img/plots_26_07/}}
 \setlength{\parindent}{0pt}
 
 \begin{document}
-	\includegraphics[width=\textwidth]{pdf/packet_loss_pdf}
-	\includegraphics[width=\textwidth]{pdf/retransmissions_per_frame_pdf}
+	
+\begin{sidewaysfigure}[h]
+		\includegraphics[width=\textwidth]{pdf/packet_loss_pdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+		\includegraphics[width=\textwidth]{pdf/retransmissions_per_frame_pdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{pdf/rtt_pdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{pdf/throughput_pdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{cdf/throughput_cdf}
-	\includegraphics[width=\textwidth]{cdf2/rtt_cdf2}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{cdf2/throughput_cdf2}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
 	\includegraphics[width=\textwidth]{boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
 \end{document}

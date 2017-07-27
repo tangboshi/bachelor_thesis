@@ -67,7 +67,7 @@ class myplot:
             #This will create a warning if you plot boxplots that you can
             #safely ignore (boxplots cannot be labeled).
             #As a workaround the xticks are labeled
-            if len(self.data) == len(self.legend):
+            if len(np.asarray(self.data).transpose()) == len(self.legend):
                 self.ax.legend(fancybox=True,loc=self.legend_loc)
             else:
                 print ( "len(self.data) = "

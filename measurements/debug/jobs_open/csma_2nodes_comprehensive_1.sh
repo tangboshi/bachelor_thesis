@@ -3,10 +3,10 @@ echo sifs = 1ms
 echo difs = 5ms
 echo backoff = 2ms
 echo nodes = 2
-echo timer = 300
+echo timer = 300ms
 echo repetions = 5
 
-export timer=30
+export timer=100
 export measurement_repetitions=5
 measurement_scripts=( csma_80211_IV.py csma_80211_V.py )
 plot_scripts=( rtt_2.py throughput.py )

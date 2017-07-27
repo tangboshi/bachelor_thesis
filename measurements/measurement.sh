@@ -195,9 +195,7 @@ function main
       log=$log_path/$job_name"_"$measurement_counter.log
       job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
       #echo $job_name
-      $(echo Job Configuration:) | tee -a $log
       $(cat $job) | tee -a $log
-      $(echo Measurement Configuration:) | tee -a $log
       $(cat measurement.conf) | tee -a $log
       measure | tee -a $log
       if [ $plot_enabled -eq 1 ]; then

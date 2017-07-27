@@ -41,7 +41,7 @@ class myplot:
         }
 
         titles = {
-            "cdf2":     "CDF",
+            "cdf2":     "CDF2",
             "line":     "Line Chart",
             "cdf":      "CDF",
             "pdf":      "PDF",
@@ -81,7 +81,7 @@ class myplot:
             # Save and show plot
             if(savepath):
                 print(savepath)
-                self.save(savepath)
+                self.save(savepath, aplot)
             if(show):
                 self.show()
 
@@ -116,16 +116,17 @@ class myplot:
         print(self.patches)
 
     def cdf2(self):
-        self.ax.hist(   self.data,
+        self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
+                        normed=1,
                         histtype='bar',
                         stacked=True,
                         cumulative=True,
-                        normed=1,
                         label=self.legend)
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)
+        print(self.patches)
 
     def pdf(self):
         # if not self.bins:
@@ -182,12 +183,12 @@ class myplot:
         self.ax.set_ylabel(ylabel)
         self.ax.set_title(title)
 
-    def save(self, savepath):
+    def save(self, savepath, plot_type):
         savename = self.title
         savename = savename.lower()
         savename = savename.replace(" ", "_")
-        self.fig.savefig(savepath+savename+".png")
-        self.fig.savefig(savepath+savename+".pdf")
+        self.fig.savefig(savepath+plot_type+"/"+savename+".png")
+        self.fig.savefig(savepath+plot_type+"/"+savename+".pdf")
 
     def show(self):
         plt.show()

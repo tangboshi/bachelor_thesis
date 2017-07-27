@@ -6,7 +6,7 @@ echo nodes = 2
 echo timer = 300
 echo repetions = 5
 
-export timer=300
+export timer=30
 export measurement_repetitions=5
 measurement_scripts=( csma_80211_IV.py csma_80211_V.py )
 plot_scripts=( rtt_2.py throughput.py )

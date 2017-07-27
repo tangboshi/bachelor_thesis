@@ -18,7 +18,7 @@ measurement             = [x for x in range(207,212)] + [x for x in range (218,2
 repetitions             = 5
 data_source_path        = "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               = "/home/alex/Schreibtisch/real/measurements/belated/plots"
-plot_type               = ["cdf","cdf2","boxplot", "pdf"]
+plot_type               = ["cdf"]
 throughput_data_files   = ["sender_data_sent.txt","sender_ack_received.txt"]
 rtt_data_files          = "sender_bfr_dq.txt,sender_ack_received.txt"
 

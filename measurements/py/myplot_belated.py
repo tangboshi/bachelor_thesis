@@ -68,7 +68,16 @@ class myplot:
             #safely ignore (boxplots cannot be labeled).
             #As a workaround the xticks are labeled
             if len(np.asarray(self.data).transpose()) == len(self.legend):
-                self.ax.legend(fancybox=True,loc=self.legend_loc)
+                box = self.ax.get_position()
+                self.ax.set_position([
+                    box.x0,
+                    box.y0+box.height*0.3,
+                    box.width,
+                    box.height*0.7
+                ])
+                self.ax.legend(fancybox=True,
+                            loc='upper center',
+                            bbox_to_anchor=(0.5, -0.15))
             else:
                 print ( "len(self.data) = "
                         + str(len(np.asarray(self.data).transpose()))

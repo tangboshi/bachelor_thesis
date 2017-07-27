@@ -1,10 +1,10 @@
-echo protocol = csma two way handshake
-echo sifs = 1ms
-echo difs = 5ms
-echo backoff = 2ms
-echo nodes = 2
-echo timer = 300ms
-echo repetions = 5
+protocol=csma two way handshake
+sifs=3ms
+difs=15ms
+backoff_slot=6ms
+nodes=2
+timer=300ms
+repetions=5
 
 export timer=300
 export measurement_repetitions=5

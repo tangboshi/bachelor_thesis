@@ -14,7 +14,7 @@ import throughput_belated as tp
 # rtt_data_files          = "sender_data_sent.txt,sender_ack_received.txt"
 
 # real data parameter set
-measurement             = [x for x in range(207,212)] + [215]
+measurement             = [x for x in range(207,212)] + [217]
 repetitions             = 5
 data_source_path        = "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               = "/home/alex/Schreibtisch/real/measurements/belated/plots"

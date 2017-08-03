@@ -148,8 +148,9 @@ class myplot:
         print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
-        markers = markers[:len(self.data)]
+        #markers = markers[:len(self.data)]
         for index,item in enumerate(np.asarray(self.data).transpose()):
+            #print(index)
             print("index:"+str(index))
             print("___markers____")
             print(markers[index])

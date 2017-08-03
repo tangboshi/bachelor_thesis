@@ -29,8 +29,8 @@ import throughput_belated as tp
 
 #real data parameter set
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
-measurement             = [237]
-repetitions             = 5
+measurement             = [236, 237]
+repetitions             = 2
 data_source_path        = "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               = "/home/alex/Schreibtisch/real/measurements/belated/plots"
 plot_type               = ["cdf", "boxplot"]
@@ -38,7 +38,7 @@ throughput_data_files   = ["sender_data_sent.txt","sender_ack_received.txt"]
 rtt_data_files          = "sender_bfr_dq.txt,sender_ack_received.txt"
 show_plot               = False
 
-boxplot_xticks = ["pling"]
+boxplot_xticks = ["pling", "plong"]
 custom_legend_coordinates = [[0,0,"lower left"]]
 
 # boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
@@ -49,7 +49,7 @@ custom_legend_coordinates = [[0,0,"lower left"]]
 #                         "SIFS=1ms\nDIFS=5ms\nBO=2ms",
 #                         "SIFS=0ms\nDIFS=0ms\nBO=0ms"
 #                         ]
-#
+
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 custom_legend_coordinates   = [
                                 [0,1,"upper left"],

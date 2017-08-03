@@ -14,10 +14,16 @@ mystr = mystr.split()
 print(mystr)
 '''
 
-data = [1,2,4,5,6,2,4,7,8,1,2,9,17,
-        2,3,5,6,8,2,6,12,19,16,13,8,
-        14,25,1,2,7,5,10,13,17,7,2]
-repetitions = len(data)
+data_1 =    [
+                1,2,4,5,6,2,4,7,8,1,2,9,17,2,3,5,6,8,2,6,12,19,16,
+                13,8,14,25,1,2,7,5,10,13,17,7,2,
+            ]
+data_2 =    [
+                9,5,12,25,24,6,7,2,0,9,13,17,2,18,5,4,17,19,13,10,4,
+                4,2,7,6,19,5,8,8,12,4,0,22,23
+            ]
+
+#repetitions = len(data)
 
 '''
 fig, ax = plt.subplots()
@@ -191,20 +197,53 @@ myDict["Somerandomword"]()
 # plt.boxplot(arr)
 # plt.show()
 
+# import matplotlib.pyplot as plt
+#
+# plt.subplot(211)
+# plt.boxplot([1,2,3], label="test1")
+# plt.boxplot([3,2,1], label="test2")
+# # Place a legend above this subplot, expanding itself to
+# # fully use the given bounding box.
+# plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+#            ncol=2, mode="expand", borderaxespad=0.)
+#
+# plt.subplot(223)
+# plt.plot([1,2,3], label="test1")
+# plt.plot([3,2,1], label="test2")
+# # Place a legend to the right of this smaller subplot.
+# plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+#
+# plt.show()
+
+#CDF!!
+import numpy as np
 import matplotlib.pyplot as plt
 
-plt.subplot(211)
-plt.boxplot([1,2,3], label="test1")
-plt.boxplot([3,2,1], label="test2")
-# Place a legend above this subplot, expanding itself to
-# fully use the given bounding box.
-plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-           ncol=2, mode="expand", borderaxespad=0.)
+data =  [
+            np.random.choice(100000,3) for x in range(3)
+        ]
 
-plt.subplot(223)
-plt.plot([1,2,3], label="test1")
-plt.plot([3,2,1], label="test2")
-# Place a legend to the right of this smaller subplot.
-plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+for index,item in enumerate(data):
+    x = np.sort(item)
+    y = np.arange(1,len(x)+1) / len(x)
+    plt.plot(x,y,marker='x')
 
+print(data)
+plt.margins(0.02)
 plt.show()
+
+# x1 = np.sort(data_1)
+# x2 = np.sort(data_2)
+# y1 = np.arange(1, len(x1)+1) / len(x1)
+# y2 = np.arange(1, len(x2)+1) / len(x2)
+# plt.plot(x1,y1, marker='x', color='r')
+# plt.plot(x2,y2, marker='x', color='b')
+# plt.margins(0.02)
+# plt.show()
+
+# arr1 = [0,2,2]
+# arr2 = [5,4,7]
+# data = []
+# data.append(arr1)
+# data.append(arr2)
+# print(data)

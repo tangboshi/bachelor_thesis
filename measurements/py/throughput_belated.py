@@ -24,6 +24,7 @@ class tp:
         self.legend_loc             =   kwargs.get("legend_loc", "best")
         self.annotations_below      =   kwargs.get("annotations_below", [])
         self.annotations_other      =   kwargs.get("annotations_other", [])
+        self.legend_coordinates     =   kwargs.get("legend_coordinates", False)
 
     def calc(self):
         # ------------------------------ Calculations ---------------------------------#
@@ -82,4 +83,5 @@ class tp:
             legend=self.legend,
             legend_loc=self.legend_loc,
             annotations_below=self.annotations_below,
-            annotations_other=self.annotations_other)
+            annotations_other=self.annotations_other,
+            legend_coordinates=self.legend_coordinates[3])

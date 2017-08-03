@@ -16,9 +16,9 @@ class myplot:
 
         self.data               = np.asarray(data).transpose()
 
+        print("Title is '"+title+"'.")
         # Kind of hackish, but who cares!
         if title == "Retransmissions per Frame":
-            print("Title is '"+title+"'.")
             self.data           = data
 
         self.bins               = bins

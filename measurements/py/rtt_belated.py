@@ -103,7 +103,7 @@ class rtt:
                             line = [int(item) for item in line.split()]
                             retxs += [item for item in line]
                             self.retxs_per_repetition += retxs
-                            print("retx: "+str(retxs))
+                        print("retx: "+str(retxs))
 
                 else:
                     print(  "File "+retxs_path+" not found. \

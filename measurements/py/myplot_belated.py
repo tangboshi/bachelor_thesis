@@ -15,6 +15,12 @@ class myplot:
         print("Hello from myplot_belated.py!")
 
         self.data               = np.asarray(data).transpose()
+
+        # Kind of hackish, but who cares!
+        if title == "Retransmissions per Frame":
+            print("Title is '"+title+"'.")
+            self.data           = data
+
         self.bins               = bins
         self.plottype           = plottype
         self.xlabel             = xlabel
@@ -28,11 +34,12 @@ class myplot:
         self.legend_loc         = kwargs.get("legend_loc", "best")
         self.annotations_below  = kwargs.get("annotations_below", [])
         self.annotations_other  = kwargs.get("annotations_other", [])
+        self.legend_coordinates = kwargs.get("legend_coordinates", False)
 
         #print(self.legend_loc)
 
         plottypes = {
-            "cdf2":     lambda: self.cdf2(),
+            "hist":     lambda: self.hist(),
             "line":     lambda: self.line(),
             "cdf":      lambda: self.cdf(),
             "pdf":      lambda: self.pdf(),
@@ -41,9 +48,9 @@ class myplot:
         }
 
         titles = {
-            "cdf2":     "CDF2",
-            "line":     "Line Chart",
             "cdf":      "CDF",
+            "line":     "Line Chart",
+            "hist":     "Histogram",
             "pdf":      "PDF",
             "boxplot":  "Boxplot",
             "debug":    "Debug"
@@ -67,28 +74,39 @@ class myplot:
             #This will create a warning if you plot boxplots that you can
             #safely ignore (boxplots cannot be labeled).
             #As a workaround the xticks are labeled
-            if len(np.asarray(self.data).transpose()) == len(self.legend):
-                box = self.ax.get_position()
-                self.ax.set_position([
-                    box.x0,
-                    box.y0+box.height*0.3,
-                    box.width,
-                    box.height*0.7
-                ])
-                self.ax.legend(fancybox=True,
-                            loc='upper center',
-                            bbox_to_anchor=(0.5, -0.15))
-            else:
-                print ( "len(self.data) = "
-                        + str(len(np.asarray(self.data).transpose()))
-                        + " and len(self.legend) = "
-                        + str(len(self.legend))
-                        +" don't match!")
+            if not aplot == "boxplot":
+                if len(np.asarray(self.data).transpose()) == len(self.legend):
+                    if self.legend_coordinates == False:
+                        box = self.ax.get_position()
+                        self.ax.set_position([
+                            box.x0,
+                            box.y0+box.height*0.3,
+                            box.width,
+                            box.height*0.7
+                        ])
+                        self.ax.legend(fancybox=True,
+                                    loc='upper center',
+                                    bbox_to_anchor=(0.5, -0.15))
+                    else:
+                        if self.legend_coordinates[2] != "best":
+                            self.ax.legend(fancybox=True,
+                                        loc=self.legend_coordinates[2],
+                                        bbox_to_anchor=(self.legend_coordinates[0],
+                                                        self.legend_coordinates[1]))
+                        else:
+                            self.ax.legend(fancybox=True)
+                else:
+                    print ( "len(self.data) = "
+                            + str(len(np.asarray(self.data).transpose()))
+                            + " and len(self.legend) = "
+                            + str(len(self.legend))
+                            +" don't match!")
             # Add anotations:
             for annotation in self.annotations_other:
-                self.ax.annotate(annotate)
+                self.ax.annotate(annotation)
             # Save and show plot
             if(savepath):
+                print("***savepath***")
                 print(savepath)
                 self.save(savepath, aplot)
             if(show):
@@ -110,7 +128,7 @@ class myplot:
                         title=self.title
         )
 
-    def cdf(self):
+    def hist(self):
         # if not self.bins:
         #     print("Error: bins undefined.")
         #     return
@@ -125,19 +143,25 @@ class myplot:
                         title=self.title)
         print(self.patches)
 
-    def cdf2(self):
-        self.n, self.bins, self.patches = self.ax.hist(x=self.data,
-                        bins=self.bins,
-                        normed=1,
-                        histtype='bar',
-                        stacked=True,
-                        cumulative=True,
-                        label=self.legend)
+    def cdf(self):
+        print("**cdf_data**")
+        print(self.data)
+        print(self.legend)
+        markers = ["x","v","o","^","8","s","p","+","D","*"]
+        markers = markers[:len(self.data)]
+        for index,item in enumerate(np.asarray(self.data).transpose()):
+            print("index:"+str(index))
+            print("___markers____")
+            print(markers[index])
+            x = np.sort(item)
+            y = np.arange(1,len(x)+1) / len(x)
+            plt.plot(x,
+                    y,
+                    marker=markers[index],
+                    label=self.legend[index])
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)
-        print(self.patches)
-
     def pdf(self):
         # if not self.bins:
         #     print("Error: bins undefined.")
@@ -158,9 +182,13 @@ class myplot:
             plt.setp(patch, 'facecolor', cm(float(index/len(self.patches))))
 
     def boxplot(self):
+        print("This statement was reached.")
+        print(self.data)
+
         self.plot = plt.boxplot(self.data,
                                 #notch=True,
-                                patch_artist=True)
+                                patch_artist=True,
+                                flierprops=dict(marker='x'))
 
         colors = ['ivory','honeydew','mistyrose','lightskyblue','plum','#00eacb']
         color_repetitions = math.ceil(len(self.data)/len(colors))
@@ -175,14 +203,36 @@ class myplot:
 
         # Only modify xticks if self.data has as many data sets as self.xticks
         # has labels. Else print warning.
-        if len(np.asarray(self.data).transpose()) == len(self.xticks):
-            plt.xticks([x+1 for x in range(len(self.xticks))],self.xticks)
-        else:
-            print ( "len(self.data) = "
-                    + str(len(self.data))
-                    + " and len(self.xticks) = "
-                    + str(len(self.xticks))
-                    +" don't match!")
+        # if len(np.asarray(self.data).transpose()) == len(self.xticks):
+        #     print("Yippie, the condition is true!")
+        #     print(self.xticks)
+        #     plt.xticks([x+1 for x in range(len(self.xticks))],self.xticks)
+        #     #self.ax.set_xticklabels(self.xticks);
+        # else:
+        #     print ( "len(self.data) = "
+        #             + str(len(self.data))
+        #             + " and len(self.xticks) = "
+        #             + str(len(self.xticks))
+        #             +" don't match!")
+
+        #Let's call the number of fliers :)
+
+        boxdict = self.ax.boxplot(self.data)
+        fliers  = boxdict["fliers"]
+
+        print("***self.data***")
+        print(self.data)
+
+        for j in range(len(fliers)):
+            # the y and x positions of the fliers
+            yfliers = boxdict['fliers'][j].get_ydata()
+            xfliers = boxdict['fliers'][j].get_xdata()
+            # the unique locations of fliers in y
+            ufliers = set(yfliers)
+            # loop over unique fliers
+            for i, uf in enumerate(ufliers):
+                # print number of fliers
+                self.ax.text(xfliers[i] + 0.03, uf + 0.03, list(yfliers).count(uf))
 
         #Diagnostic
         #print(self.plot)

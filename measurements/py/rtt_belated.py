@@ -24,6 +24,7 @@ class rtt:
         self.legend_loc         =   kwargs.get("legend_loc", "best")
         self.annotations_below  =   kwargs.get("annotations_below", [])
         self.annotations_other  =   kwargs.get("annotations_other", [])
+        self.legend_coordinates =   kwargs.get("legend_coordinates", False)
 
         print ("Calculating "+self.rtt_mode+"...")
         #for debugging purposes
@@ -40,8 +41,11 @@ class rtt:
         self.avg_frame_txs = []
         self.all_retxs = []
         self.retxs_per_measurement = []
+        self.retxs_per_repetition = []
+        self.plp_per_measurement = []
 
         for index,single_measurement in enumerate(self.measurement):
+            plp_per_measurement = []
             data_sent_times = []
             ack_received_times = []
             rtt_single_measurement = []
@@ -98,7 +102,7 @@ class rtt:
                             line.strip("\n")
                             line = [int(item) for item in line.split()]
                             retxs += [item for item in line]
-                            self.all_retxs += retxs
+                            self.retxs_per_repetition += retxs
                             print("retx: "+str(retxs))
 
                 else:
@@ -168,6 +172,7 @@ class rtt:
                 packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
                 packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
                 self.packet_loss_percent += [round(packet_loss_rel*100, 2)]
+                plp_per_measurement += [round(packet_loss_rel*100, 2)]
                 print("abs. packet loss: "+str(packet_loss_abs))
                 print("packet loss in %: "+str(self.packet_loss_percent[-1])+"%")
 
@@ -185,8 +190,12 @@ class rtt:
                 txs_fails = 0
 
             #print("retxs_per_measurement")
-            self.retxs_per_measurement.append(self.all_retxs)
-            #print(self.retxs_per_measurement)
+            self.plp_per_measurement.append(plp_per_measurement)
+            self.retxs_per_measurement.append(self.retxs_per_repetition)
+            self.retxs_per_repetition = []
+
+            print("***self.retxs_per_measurement***")
+            print(self.retxs_per_measurement)
 
             print("self.rtt after calc:"+str(self.rtt))
             print("****************************************")
@@ -197,6 +206,7 @@ class rtt:
     def plot(self):
 
         self.calc()
+        print("***self.rtt***")
         print (self.rtt)
 
         if "all" in self.plot_type:
@@ -226,9 +236,10 @@ class rtt:
                 legend=self.legend,
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other)
+                annotations_other=self.annotations_other,
+                legend_coordinates=self.legend_coordinates[0])
 
-        myplot.myplot(data=self.packet_loss_percent,
+        myplot.myplot(data=self.plp_per_measurement,
                 bins=np.arange(
                     0,
                     100,
@@ -244,7 +255,8 @@ class rtt:
                 legend=self.legend,
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other)
+                annotations_other=self.annotations_other,
+                legend_coordinates=self.legend_coordinates[1])
 
         if len(self.all_retxs) <= 20:
             number_bars = True
@@ -282,4 +294,5 @@ class rtt:
                 legend=self.legend,
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other)
+                annotations_other=self.annotations_other,
+                legend_coordinates=self.legend_coordinates[2])

@@ -4,10 +4,13 @@ import myplot_belated as myplot
 import os.path as pt
 import lines
 
-print("Hello from throughput_belated.py!")
+import pdb
+
+print("Hello from throughput_belated.py! Really, it's me!")
 
 class tp:
     def __init__(self,**kwargs):
+        print("Tp instance initialized!")
         #self.__dict__.update(kwargs)
         self.data_source_path       =   kwargs.get("data_source_path","/home/alex/0_ba/git/self.measurements/data")
         self.plot_path              =   kwargs.get("plot_path","/home/alex/0_ba/git/self.measurements/plots")
@@ -25,18 +28,24 @@ class tp:
         self.annotations_below      =   kwargs.get("annotations_below", [])
         self.annotations_other      =   kwargs.get("annotations_other", [])
         self.legend_coordinates     =   kwargs.get("legend_coordinates", False)
+        self.create_plots           =   kwargs.get("create_plots", True)
+        #pdb.set_trace()
 
     def calc(self):
         # ------------------------------ Calculations ---------------------------------#
         # Create a self.repetitions X 1 matrix aka row vector with self.measurement data
+        print("I'll create a numpy array!")
         self.data = np.zeros(shape=(len(self.measurement),self.repetitions))
+        print("Done.")
 
         for index,single_measurement in enumerate(self.measurement):
             for i in range(self.repetitions):
+                print("I'll open files from iteration "+str(i+1)+" for you!")
                 file_path = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 data_file_path = file_path+self.throughput_data_files[0]
                 ack_file_path = file_path+self.throughput_data_files[1]
                 if pt.isfile(ack_file_path):
+                    print("Let's count some ACKS!")
                     ackcount = lines.linecount(ack_file_path)
                 else:
                     # no acks found
@@ -44,6 +53,7 @@ class tp:
                     ackcount = 0
                     self.data[index,i] = 0
                 if pt.isfile(data_file_path):
+                    print("Let's count some data!")
                     datacount = lines.linecount(data_file_path)
                     print("ackcount: "+str(ackcount))
                     print("datacount: "+str(datacount))
@@ -64,24 +74,26 @@ class tp:
         for val in self.data:
             all_data.extend(val)
 
-        print("all_data:")
-        print(all_data)
+        #print("all_data:")
+        #print(all_data)
 
-        myplot.myplot(  data=self.data,
-            bins=np.arange(
-                min(all_data)-float(self.packet_size),
-                max(all_data)+float(self.packet_size),
-                (max(all_data)-min(all_data)+1)/25),
-            plottype=self.plot_type,
-            title="Throughput",
-            xlabel="throughput [B/s]",
-            ylabel="throughput [B/s]",
-            savepath=self.plot_path+"/",
-            show=self.show_plot,
-            grid=self.grid,
-            xticks=self.xticks,
-            legend=self.legend,
-            legend_loc=self.legend_loc,
-            annotations_below=self.annotations_below,
-            annotations_other=self.annotations_other,
-            legend_coordinates=self.legend_coordinates[3])
+        print("Let's plot! ;-)")
+        if self.create_plots == True or self.create_plots["throughput"] == True:
+            myplot.myplot(  data=self.data,
+                bins=np.arange(
+                    min(all_data)-float(self.packet_size),
+                    max(all_data)+float(self.packet_size),
+                    (max(all_data)-min(all_data)+1)/25),
+                plottype=self.plot_type,
+                title="Throughput",
+                xlabel="throughput [B/s]",
+                ylabel="throughput [B/s]",
+                savepath=self.plot_path+"/",
+                show=self.show_plot,
+                grid=self.grid,
+                xticks=self.xticks,
+                legend=self.legend,
+                legend_loc=self.legend_loc,
+                annotations_below=self.annotations_below,
+                annotations_other=self.annotations_other,
+                legend_coordinates=self.legend_coordinates["throughput"])

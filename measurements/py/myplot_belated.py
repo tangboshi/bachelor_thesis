@@ -3,6 +3,8 @@ import numpy as np
 import os
 import math
 
+import pdb
+
 '''
     Prints single plot with self.data
 '''
@@ -113,7 +115,7 @@ class myplot:
                 self.show()
 
             self.fig.clear()
-            print(self.data)
+            #print(self.data)
 
     def line(self):
         #FIXME
@@ -145,7 +147,7 @@ class myplot:
 
     def cdf(self):
         print("**cdf_data**")
-        print(self.data)
+        #print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         #markers = markers[:len(self.data)]
@@ -183,7 +185,7 @@ class myplot:
             plt.setp(patch, 'facecolor', cm(float(index/len(self.patches))))
 
     def boxplot(self):
-        print("This statement was reached.")
+        #print("boxplot() reached.")
         print(self.data)
 
         self.plot = plt.boxplot(self.data,
@@ -191,7 +193,8 @@ class myplot:
                                 patch_artist=True,
                                 flierprops=dict(marker='x'))
 
-        colors = ['ivory','honeydew','mistyrose','lightskyblue','plum','#00eacb']
+        colors = ['steelblue', 'peachpuff', 'green', 'red', 'purple', 'brown', 'pink']
+        #colors = ['ivory','honeydew','mistyrose','lightskyblue','plum','#00eacb']
         color_repetitions = math.ceil(len(self.data)/len(colors))
         colors = color_repetitions * colors
 
@@ -202,27 +205,13 @@ class myplot:
                         ylabel=self.ylabel,
                         title=self.title)
 
-        # Only modify xticks if self.data has as many data sets as self.xticks
-        # has labels. Else print warning.
-        # if len(np.asarray(self.data).transpose()) == len(self.xticks):
-        #     print("Yippie, the condition is true!")
-        #     print(self.xticks)
-        #     plt.xticks([x+1 for x in range(len(self.xticks))],self.xticks)
-        #     #self.ax.set_xticklabels(self.xticks);
-        # else:
-        #     print ( "len(self.data) = "
-        #             + str(len(self.data))
-        #             + " and len(self.xticks) = "
-        #             + str(len(self.xticks))
-        #             +" don't match!")
-
         #Let's call the number of fliers :)
 
         boxdict = self.ax.boxplot(self.data)
         fliers  = boxdict["fliers"]
 
-        print("***self.data***")
-        print(self.data)
+        #print("***self.data***:%")
+        #print(self.data)
 
         for j in range(len(fliers)):
             # the y and x positions of the fliers
@@ -233,11 +222,21 @@ class myplot:
             # loop over unique fliers
             for i, uf in enumerate(ufliers):
                 # print number of fliers
-                self.ax.text(xfliers[i] + 0.03, uf + 0.03, list(yfliers).count(uf))
+                self.ax.text(xfliers[i] + 0.05, uf, list(yfliers).count(uf))
 
-        #Diagnostic
-        #print(self.plot)
-        #print("Whiskers: "+self.plot["whiskers"])
+        # Only modify xticks if self.data has as many data sets as self.xticks
+        # has labels. Else print warning.
+        if len(np.asarray(self.data).transpose()) == len(self.xticks):
+            #print("Yippie, the condition is true!")
+            print(self.xticks)
+            plt.xticks([x+1 for x in range(len(self.xticks))],self.xticks)
+            #self.ax.set_xticklabels(self.xticks);
+        else:
+            print ( "len(self.data) = "
+                    + str(len(self.data))
+                    + " and len(self.xticks) = "
+                    + str(len(self.xticks))
+                    +" don't match!")
 
     def setLabels(self, xlabel="", ylabel="", title=""):
         self.ax.set_xlabel(xlabel)
@@ -245,6 +244,7 @@ class myplot:
         self.ax.set_title(title)
 
     def save(self, savepath, plot_type):
+        #pdb.set_trace()
         savename = self.title
         savename = savename.lower()
         savename = savename.replace(" ", "_")

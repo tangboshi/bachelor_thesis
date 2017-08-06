@@ -25,6 +25,7 @@ class rtt:
         self.annotations_below  =   kwargs.get("annotations_below", [])
         self.annotations_other  =   kwargs.get("annotations_other", [])
         self.legend_coordinates =   kwargs.get("legend_coordinates", False)
+        self.create_plots       =   kwargs.get("create_plots", True)
 
         print ("Calculating "+self.rtt_mode+"...")
         #for debugging purposes
@@ -40,8 +41,8 @@ class rtt:
         self.packet_loss_percent = []
         self.avg_frame_txs = []
         self.all_retxs = []
-        self.retxs_per_measurement = []
-        self.retxs_per_repetition = []
+        self.retxs_overall = []
+        retxs_per_measurement = []
         self.plp_per_measurement = []
 
         for index,single_measurement in enumerate(self.measurement):
@@ -49,7 +50,7 @@ class rtt:
             data_sent_times = []
             ack_received_times = []
             rtt_single_measurement = []
-            retxs = []
+            retxs_per_repetition = []
             total_retxs = 0
             txs_fails = 0
 
@@ -76,7 +77,7 @@ class rtt:
                             usecs = ("0" * missing_zeros) + usecs
                             line = ".".join([secs, usecs])
                             data_sent_times += [float(line)]
-                            print("data_sent: "+line)
+                            #print("data_sent: "+line)
                 else:
                     print(  "File "+data_sent_path+" not found. \
                             Assuming not reached in GR.")
@@ -90,7 +91,7 @@ class rtt:
                             usecs = ("0" * missing_zeros) + usecs
                             line = ".".join([secs, usecs])
                             ack_received_times += [float(line)]
-                            print("ack_received: "+line)
+                            #print("ack_received: "+line)
 
                 else:
                     print(  "File "+ack_received_path+" not found. \
@@ -101,9 +102,9 @@ class rtt:
                         for line in f:
                             line.strip("\n")
                             line = [int(item) for item in line.split()]
-                            retxs += [item for item in line]
-                            self.retxs_per_repetition += retxs
-                        print("retx: "+str(retxs))
+                            retxs_per_repetition += [item for item in line]
+                        print("len:retx: "+str(len(retxs_per_repetition)))
+                        #print("retx: "+str(retxs))
 
                 else:
                     print(  "File "+retxs_path+" not found. \
@@ -113,7 +114,7 @@ class rtt:
 
                 # Calculate RTT for each packet
                 if self.rtt_mode == "rtt":
-                    for idx, counter in enumerate(retxs):
+                    for idx, counter in enumerate(retxs_per_repetition):
                         # This check must be added to catch the case where the last data
                         # frame isnt followed up by an ACK (max retries)
                         if len(ack_received_times) > idx:
@@ -123,6 +124,9 @@ class rtt:
                                     # Probably not needed, but hey if we can get it for free...
                                     txs_fails += 1
                             else:
+                                # print("data_sent_times length:"+str(len(data_sent_times)))
+                                # print(idx)
+                                # print(total_retxs)
                                 res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
                                 rtt_single_measurement += [round(res,5)]
                         else:
@@ -130,12 +134,18 @@ class rtt:
                                     Termintating calculation here.")
 
                 else:#self.rtt_mode == delay
-                    for idx, counter in enumerate(retxs):
+                    for idx, counter in enumerate(retxs_per_repetition):
                         if len(ack_received_times) > idx:
                             total_retxs += counter
                             if counter < self.max_retxs:
-                                res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                                rtt_single_measurement += [round(res,5)]
+                                # print("data_sent_times length:"+str(len(data_sent_times)))
+                                # print(idx)
+                                # print(total_retxs)
+                                if idx+total_retxs < len(data_sent_times):
+                                    res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
+                                    rtt_single_measurement += [round(res,5)]
+                                else:
+                                    print("Rare error: idx+total_retxs >= data_sent_times!")
                             else:
                                 # Probably not needed, but hey if we can get it for free...
                                 txs_fails += 1
@@ -144,9 +154,9 @@ class rtt:
                                     Termintating calculation here.")
 
 
-                print("\nThe resulting RTTs of this single measurement are:")
-                print(rtt_single_measurement)
-                print("\n")
+                # print("\nThe resulting RTTs of this single measurement are:")
+                # print(rtt_single_measurement)
+                # print("\n")
 
                 # Now calculate mean RTT for this measurement
                 # print(str(float(sum(rtt_single_measurement))))
@@ -161,12 +171,10 @@ class rtt:
                 print("\n")
 
                 print("self.rtt is:"+str(self.rtt))
-                # FIXME: ofc the indizes are wrong here: should be index, i
                 self.rtt[index,i] = rtt_single_mean
                 print(str(self.rtt.shape))
                 print("index:"+str(index))
                 print("i:"+str(i))
-                #print("self.rtt[index][i]:"+str(self.rtt[index][i]))
 
                 ### Packet loss ###
                 packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
@@ -178,28 +186,32 @@ class rtt:
 
                 ### Average retransmissions per frame ###
                 ### practically the same  as packet loss
-                if not sum(retxs) == 0 and not len(retxs) == 0:
-                    self.avg_frame_txs += [sum(retxs) / len(retxs)]
+                if not sum(retxs_per_repetition) == 0 and not len(retxs_per_repetition) == 0:
+                    self.avg_frame_txs += [sum(retxs_per_repetition) / len(retxs_per_repetition)]
+
+                ## retransmissions
+                retxs_per_measurement += retxs_per_repetition
 
                 # Prepare next iteration
                 rtt_single_measurement = []
                 ack_received_times = []
                 data_sent_times = []
-                retxs = []
                 total_retxs = 0
                 txs_fails = 0
+                print("***len:self.retxs_per_repetition***")
+                print(len(retxs_per_repetition))
+                retxs_per_repetition = []
 
-            #print("retxs_per_measurement")
+            self.retxs_overall.append(retxs_per_measurement)
             self.plp_per_measurement.append(plp_per_measurement)
-            self.retxs_per_measurement.append(self.retxs_per_repetition)
-            self.retxs_per_repetition = []
 
-            print("***self.retxs_per_measurement***")
-            print(self.retxs_per_measurement)
+            print("***len:self.retxs_per_measurement***")
+            print(len(retxs_per_measurement))
+            retxs_per_measurement = []
 
-            print("self.rtt after calc:"+str(self.rtt))
-            print("****************************************")
-            print("\n\n\n\n")
+            #print("self.rtt after calc:"+str(self.rtt))
+            #print("****************************************")
+            #print("\n\n\n\n")
 
     #------------------------------------------------------------------------------#
 
@@ -219,44 +231,47 @@ class rtt:
             for val in item:
                 rtt_vals += [round(val,5)]
 
-        myplot.myplot(data=self.rtt,
-                bins=np.arange(
-                    min(rtt_vals)-0.002,
-                    max(rtt_vals)+0.002,
-                    #0.07/1000),
-                    (max(rtt_vals)-min(rtt_vals))/50),
-                plottype=self.plot_type,
-                title="RTT",
-                xlabel="rtt [s]",
-                ylabel="rtt [s]",
-                savepath=self.plot_path+"/",
-                show=self.show_plot,
-                grid=self.grid,
-                xticks=self.xticks,
-                legend=self.legend,
-                legend_loc=self.legend_loc,
-                annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates[0])
 
-        myplot.myplot(data=self.plp_per_measurement,
-                bins=np.arange(
-                    0,
-                    100,
-                    1),
-                plottype=self.plot_type,
-                title="Packet Loss",
-                xlabel="packet loss [%]",
-                ylabel="packet loss [%]",
-                savepath=self.plot_path+"/",
-                show=self.show_plot,
-                grid=self.grid,
-                xticks=self.xticks,
-                legend=self.legend,
-                legend_loc=self.legend_loc,
-                annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates[1])
+        if self.create_plots == True or self.create_plots["rtt"] == True:
+            myplot.myplot(data=self.rtt,
+                    bins=np.arange(
+                        min(rtt_vals)-0.002,
+                        max(rtt_vals)+0.002,
+                        #0.07/1000),
+                        (max(rtt_vals)-min(rtt_vals))/50),
+                    plottype=self.plot_type,
+                    title="RTT",
+                    xlabel="rtt [s]",
+                    ylabel="rtt [s]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["rtt"])
+
+        if self.create_plots == True or self.create_plots["packet_loss"] == True:
+            myplot.myplot(data=self.plp_per_measurement,
+                    bins=np.arange(
+                        0,
+                        100,
+                        1),
+                    plottype=self.plot_type,
+                    title="Packet Loss",
+                    xlabel="packet loss [%]",
+                    ylabel="packet loss [%]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["packet_loss"])
 
         if len(self.all_retxs) <= 20:
             number_bars = True
@@ -277,22 +292,23 @@ class rtt:
         #         show=self.show_plot,
         #         number_bars=number_bars)
 
-        myplot.myplot(data=self.retxs_per_measurement,
-                bins=np.arange(
-                    0,
-                    self.max_retxs+1,
-                    0.1),
-                plottype=self.plot_type,
-                title="Retransmissions per Frame",
-                xlabel="retransmissions/frame",
-                ylabel="retransmissions/frame",
-                savepath=self.plot_path+"/",
-                show=self.show_plot,
-                number_bars=number_bars,
-                grid=self.grid,
-                xticks=self.xticks,
-                legend=self.legend,
-                legend_loc=self.legend_loc,
-                annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates[2])
+        if self.create_plots == True or self.create_plots["retxs"] == True:
+            myplot.myplot(data=self.retxs_overall,
+                    bins=np.arange(
+                        0,
+                        self.max_retxs+1,
+                        0.1),
+                    plottype=self.plot_type,
+                    title="Retransmissions per Frame",
+                    xlabel="retransmissions/frame",
+                    ylabel="retransmissions/frame",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    number_bars=number_bars,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["retxs"])

@@ -2,6 +2,8 @@ import numpy as np
 import myplot
 import os
 
+import pdb
+
 print("Hello from rtt.py!")
 
 ## Get all required information from OS

@@ -28,7 +28,7 @@ import throughput_belated as tp
 #real data parameter set
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
-#measurement             =  [242,246,244]
+measurement             =  [242,246,244]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -42,14 +42,14 @@ boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
                         "SIFS=0ms\nDIFS=0ms\nBO=0ms"
                     ]
 
-boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
-                        "SIFS=3ms\nDIFS=15ms\nBO=0ms",
-                        "SIFS=1ms\nDIFS=5ms\nBO=0ms",
-                        "SIFS=1ms\nDIFS=5ms\nBO=0-100ms (rng)",
-                        "SIFS=1ms\nDIFS=5ms\nBO=50ms",
-                        "SIFS=1ms\nDIFS=5ms\nBO=2ms",
-                        "SIFS=0ms\nDIFS=0ms\nBO=0ms"
-                        ]
+# boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
+#                         "SIFS=3ms\nDIFS=15ms\nBO=0ms",
+#                         "SIFS=1ms\nDIFS=5ms\nBO=0ms",
+#                         "SIFS=1ms\nDIFS=5ms\nBO=0-100ms (rng)",
+#                         "SIFS=1ms\nDIFS=5ms\nBO=50ms",
+#                         "SIFS=1ms\nDIFS=5ms\nBO=2ms",
+#                         "SIFS=0ms\nDIFS=0ms\nBO=0ms"
+#                         ]
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 custom_legend_coordinates   = {
@@ -60,10 +60,10 @@ custom_legend_coordinates   = {
                             }
 
 create_plots                = {
-                                "rtt":          False,
-                                "packet_loss":  False,
+                                "rtt":          True,
+                                "packet_loss":  True,
                                 "retxs":        True,
-                                "throughput":   False
+                                "throughput":   True
                             }
 
 #Unimplemented, use later

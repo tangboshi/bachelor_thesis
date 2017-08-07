@@ -57,7 +57,8 @@ class tp:
                     datacount = lines.linecount(data_file_path)
                     print("ackcount: "+str(ackcount))
                     print("datacount: "+str(datacount))
-                    self.data[index,i] = min(ackcount, datacount)*self.packet_size/self.timer
+                    # *8 = bytes -> bits /1000 => 1 --> kilo
+                    self.data[index,i] = min(ackcount, datacount)*self.packet_size/self.timer*8/1000
                 else:
                     # no data sent off
                     print("Data file not found at "+data_file_path+".")
@@ -86,8 +87,8 @@ class tp:
                     (max(all_data)-min(all_data)+1)/25),
                 plottype=self.plot_type,
                 title="Throughput",
-                xlabel="throughput [B/s]",
-                ylabel="throughput [B/s]",
+                xlabel="throughput [kbit/s]",
+                ylabel="throughput [kbit/s]",
                 savepath=self.plot_path+"/",
                 show=self.show_plot,
                 grid=self.grid,

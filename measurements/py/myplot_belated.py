@@ -58,17 +58,23 @@ class myplot:
             "debug":    "Debug"
         }
 
-        no_sci_label = ["boxplot"]
+        # scientific axis scaling exceptions
+        #no_sci_label = ["boxplot"]
 
         # length of plottype is always 1, structure chosen for possible
         # future developments!
         for aplot in plottype:
             #print("single plot in plottype array is:"+str(aplot))
             self.title = title+" "+titles[aplot]
-            if aplot not in no_sci_label:
-                plt.ticklabel_format(style='sci', scilimits=(0,0))
+            # scientific axis scaling, deactivated because not liked by supervisors
+            # if aplot not in no_sci_label:
+            #     plt.ticklabel_format(style='sci', scilimits=(0,0))
             # Make plot
             plottypes[aplot]()
+            #set axis limits
+            self.ax.set_ylim(ymin=0)
+            #get rid of unloved margins
+            plt.tight_layout()
             # Optionally create grid
             self.ax.xaxis.grid(self.grid)
             self.ax.yaxis.grid(self.grid)
@@ -96,7 +102,7 @@ class myplot:
                                         bbox_to_anchor=(self.legend_coordinates[0],
                                                         self.legend_coordinates[1]))
                         else:
-                            self.ax.legend(fancybox=True)
+                            self.ax.legend(fancybox=True,loc="best")
                 else:
                     print ( "len(self.data) = "
                             + str(len(np.asarray(self.data).transpose()))
@@ -158,13 +164,15 @@ class myplot:
             print(markers[index])
             x = np.sort(item)
             y = np.arange(1,len(x)+1) / len(x)
-            plt.plot(x,
+            self.plot = plt.plot(x,
                     y,
                     marker=markers[index],
                     label=self.legend[index])
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)
+        self.ax.set_ylim(ymax=1)
+        
     def pdf(self):
         # if not self.bins:
         #     print("Error: bins undefined.")

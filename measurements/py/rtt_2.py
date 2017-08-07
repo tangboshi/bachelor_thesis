@@ -77,15 +77,14 @@ for i in range(1,repetitions+1):
                 line.strip("\n")
                 line = [int(item) for item in line.split()]
                 retxs += [item for item in line]
-                all_retxs += retxs
                 print("retx: "+str(retxs))
-
     else:
         print(  "File "+retxs_path+" not found. \
                 Assuming not reached in GR. Creating data for you...")
         for index in range(len(ack_received_times)):
             retxs += [0]
 
+    all_retxs += retxs
 
     # Calculate RTT for each packet
     if rtt_mode == "rtt":

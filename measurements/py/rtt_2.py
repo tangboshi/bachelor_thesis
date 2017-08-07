@@ -167,7 +167,7 @@ for index, plot in enumerate(plot_type):
                 min(rtt)-0.002,
                 max(rtt)+0.002,
                 #0.07/1000),
-                (max(rtt)-min(rtt))/100),
+                0.07/100),
             plottype=plot,
             title="RTT",
             xlabel="rtt [s]",

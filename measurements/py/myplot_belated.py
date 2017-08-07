@@ -162,6 +162,9 @@ class myplot:
             print("index:"+str(index))
             print("___markers____")
             print(markers[index])
+            item += [0]
+            print("***item***")
+            print(item)
             x = np.sort(item)
             y = np.arange(1,len(x)+1) / len(x)
             self.plot = plt.plot(x,
@@ -172,7 +175,7 @@ class myplot:
                         ylabel="cumulative density",
                         title=self.title)
         self.ax.set_ylim(ymax=1)
-        
+
     def pdf(self):
         # if not self.bins:
         #     print("Error: bins undefined.")

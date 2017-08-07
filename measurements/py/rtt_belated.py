@@ -112,6 +112,20 @@ class rtt:
                     for index in range(len(ack_received_times)):
                         retxs += [0]
 
+                # Let's get rid of the silly out index out of range bug by simply discarding
+                # the last frame in our calculations
+                # This also fixes wrong packet loss rate.
+                # Both bugs are due to the fact that the last ack might not be recevied when the
+                # transmission is interrupted due to the timer running out.
+                if len(data_sent_times) > len(ack_received_times) + sum(retxs_per_repetition):
+                    # print("len data_sent_times"+str(len(data_sent_times)))
+                    # print("len ack_received_times"+str(len(ack_received_times)))
+                    # print("len retxs_per_repetition"+str(len(retxs_per_repetition)))
+                    last_frame_retxs = retxs_per_repetition[-1]
+                    #print(last_frame_retxs+1)
+                    data_sent_times = data_sent_times[:-(last_frame_retxs+1)]
+                retxs_per_repetition = retxs_per_repetition[:-1]
+
                 # Calculate RTT for each packet
                 if self.rtt_mode == "rtt":
                     for idx, counter in enumerate(retxs_per_repetition):

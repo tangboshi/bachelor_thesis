@@ -16,7 +16,7 @@ function setup_remote_connection
   # mkdir -p $remote_measurement_mount_point
   #sshfs $remote_user@$remote_ip:$remote_to_mount_path $remote_measurement_mount_point
   #ssh -$remote_flags $remote_user@$remote_ip "$(typeset -f); main"
-  sshpass -p "inets" ssh -$remote_flags $remote_user@$remote_ip "bash -s" < remote_measurement.sh
+  sshpass -p "inets" ssh -$remote_flags $remote_user@$remote_ip "bash -s" < remote_measurement_2.sh
 }
 
 function prepare_measurement

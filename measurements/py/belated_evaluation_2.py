@@ -27,7 +27,8 @@ import throughput_belated as tp
 
 #real data parameter set
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
-measurement             =  [242,246,244]
+#baseline one link
+#measurement             =  [242,246,244]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -71,7 +72,7 @@ annotations_other   = []
 
 for index,a_plot_type in enumerate(plot_type):
     if plot_type[index] == "cdf":
-        grid                = False
+        grid                = True
     else:
         grid                = True
 

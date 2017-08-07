@@ -86,7 +86,6 @@ for i in range(1,repetitions+1):
 
     all_retxs += retxs
 
-    retxs = retxs[:-1]
     # Calculate RTT for each packet
     if rtt_mode == "rtt":
         for idx, counter in enumerate(retxs):

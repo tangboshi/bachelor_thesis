@@ -162,11 +162,10 @@ class myplot:
             print("index:"+str(index))
             print("___markers____")
             print(markers[index])
-            item += [0]
-            print("***item***")
-            print(item)
             x = np.sort(item)
             y = np.arange(1,len(x)+1) / len(x)
+            x = np.insert(x,0,0)
+            y = np.insert(y,0,0)
             self.plot = plt.plot(x,
                     y,
                     marker=markers[index],

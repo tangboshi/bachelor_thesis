@@ -77,7 +77,7 @@ for i in range(1,repetitions+1):
                 line.strip("\n")
                 line = [int(item) for item in line.split()]
                 retxs += [item for item in line]
-                print("retx: "+str(retxs))
+            print("retx: "+str(retxs))
     else:
         print(  "File "+retxs_path+" not found. \
                 Assuming not reached in GR. Creating data for you...")

@@ -156,6 +156,8 @@ class myplot:
         #print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
+        linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
+        linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
         #markers = markers[:len(self.data)]
         for index,item in enumerate(np.asarray(self.data).transpose()):
             #print(index)
@@ -169,6 +171,9 @@ class myplot:
             self.plot = plt.plot(x,
                     y,
                     marker=markers[index],
+                    linestyle=linestyles[index],
+                    linewidth=linewidths[index],
+                    markevery=range(1,len(x)),
                     label=self.legend[index])
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",

@@ -7,8 +7,8 @@ timer=300ms
 repetions=5
 
 export link=3
-export timer=10
-export measurement_repetitions=2
+export timer=300
+export measurement_repetitions=5
 measurement_scripts=( csma_80211_V.py csma_80211_VI.py )
 plot_scripts=( rtt_2.py throughput.py )
 #################################################

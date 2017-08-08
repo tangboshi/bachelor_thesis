@@ -6,8 +6,8 @@ nodes=2
 timer=300ms
 repetions=5
 
-export timer=300
-export measurement_repetitions=5
+export timer=20
+export measurement_repetitions=8
 measurement_scripts=( csma_80211_V.py csma_80211_VI.py )
 plot_scripts=( rtt_2.py throughput.py )
 #################################################

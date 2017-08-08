@@ -1,0 +1,671 @@
+measurement 1/5 complete in 300 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 1/5 complete in 299 second(s).
+develop mode of resend_check ID: 24 is activated.
+develop mode of resend_check ID: 24 is activated.
+the 100th message counter is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+measurement 1/5 complete in 298 second(s).
+node starts running at 29.5442
+node starts running at 29.5464
+++++ frame_probe ID: 1050 receives a frame at time 29.5987s ++++
+++++ frame_probe ID: 1060 receives a frame at time 29.64s ++++
+++++ frame_probe ID: 882 receives a frame at time 29.6511s ++++
+++++ frame_probe ID: 883 receives a frame at time 29.6512s ++++
+++++ frame_probe ID: 884 receives a frame at time 29.6512s ++++
+++++ frame_probe ID: 890 receives a frame at time 29.6513s ++++
+++++ frame_probe ID: 860 receives a frame at time 29.6618s ++++
+++++ frame_probe ID: 1082 receives a frame at time 29.6711s ++++
+++++ frame_probe ID: 1083 receives a frame at time 29.6712s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 3;    reserved field I is:       22376;    reserved field II is:      21593;    payload length is:           21845;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 29.6714s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 29.8951s ++++
+++++ frame_probe ID: 1060 receives a frame at time 29.936s ++++
+++++ frame_probe ID: 882 receives a frame at time 29.9395s ++++
+++++ frame_probe ID: 883 receives a frame at time 29.9395s ++++
+++++ frame_probe ID: 884 receives a frame at time 29.9395s ++++
+++++ frame_probe ID: 890 receives a frame at time 29.9396s ++++
+++++ frame_probe ID: 860 receives a frame at time 29.9499s ++++
+++++ frame_probe ID: 1082 receives a frame at time 29.9585s ++++
+++++ frame_probe ID: 1083 receives a frame at time 29.9587s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 3;    reserved field I is:       65192;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 29.9589s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 30.1252s ++++
+measurement 1/5 complete in 297 second(s).
+++++ frame_probe ID: 1060 receives a frame at time 30.166s ++++
+++++ frame_probe ID: 882 receives a frame at time 30.17s ++++
+++++ frame_probe ID: 883 receives a frame at time 30.17s ++++
+++++ frame_probe ID: 884 receives a frame at time 30.1701s ++++
+++++ frame_probe ID: 890 receives a frame at time 30.1701s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 30.1804s ++++
+++++ frame_probe ID: 882 receives a frame at time 30.1893s ++++
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 800
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 864
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 928
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1152
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1184
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1216
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1248
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1312
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1376
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1408
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1504
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1536
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1568
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1632
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1664
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1696
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1728
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1760
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1824
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1856
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1888
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1920
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1984
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2016
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2048
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2112
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2144
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2176
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2208
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2240
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2272
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2336
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2368
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2400
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2432
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2464
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2496
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2528
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2560
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2592
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2624
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2688
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2720
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2752
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2784
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2816
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2848
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2880
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2912
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2976
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3008
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3040
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3072
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3104
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3136
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3200
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3232
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3264
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3296
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3360
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3392
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3424
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3456
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3488
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3520
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3552
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3584
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3616
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3648
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3680
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3712
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3744
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3776
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3808
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3840
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3872
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3904
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3936
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3968
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4000
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4032
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4064
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4096
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4160
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4224
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4320
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4384
+INFO: Parser returned #f
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 30.4387s ++++
+++++ frame_probe ID: 1060 receives a frame at time 30.4796s ++++
+++++ frame_probe ID: 882 receives a frame at time 30.4857s ++++
+++++ frame_probe ID: 883 receives a frame at time 30.4858s ++++
+++++ frame_probe ID: 884 receives a frame at time 30.4858s ++++
+++++ frame_probe ID: 890 receives a frame at time 30.4858s ++++
+++++ frame_probe ID: 860 receives a frame at time 30.4961s ++++
+++++ frame_probe ID: 1082 receives a frame at time 30.5011s ++++
+++++ frame_probe ID: 1083 receives a frame at time 30.5011s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 3;    reserved field I is:       22376;    reserved field II is:      21593;    payload length is:           21845;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 30.5049s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 30.7227s ++++
+++++ frame_probe ID: 1060 receives a frame at time 30.7635s ++++
+INFO: Detected an invalid packet at item 4448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4480
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 30.7743s ++++
+++++ frame_probe ID: 883 receives a frame at time 30.7744s ++++
+++++ frame_probe ID: 884 receives a frame at time 30.7744s ++++
+++++ frame_probe ID: 890 receives a frame at time 30.7744s ++++
+++++ frame_probe ID: 860 receives a frame at time 30.7847s ++++
+INFO: Detected an invalid packet at item 4512
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 30.7937s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 31.0363s ++++
+++++ frame_probe ID: 1060 receives a frame at time 31.0773s ++++
+++++ frame_probe ID: 882 receives a frame at time 31.0811s ++++
+++++ frame_probe ID: 883 receives a frame at time 31.0812s ++++
+++++ frame_probe ID: 884 receives a frame at time 31.0813s ++++
+++++ frame_probe ID: 890 receives a frame at time 31.0813s ++++
+INFO: Detected an invalid packet at item 4544
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 31.0915s ++++
+INFO: Detected an invalid packet at item 4576
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 31.1004s ++++
+measurement 1/5 complete in 296 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 31.3802s ++++
+++++ frame_probe ID: 1060 receives a frame at time 31.421s ++++
+++++ frame_probe ID: 882 receives a frame at time 31.4268s ++++
+++++ frame_probe ID: 883 receives a frame at time 31.4269s ++++
+++++ frame_probe ID: 884 receives a frame at time 31.427s ++++
+++++ frame_probe ID: 890 receives a frame at time 31.427s ++++
+++++ frame_probe ID: 860 receives a frame at time 31.4372s ++++
+INFO: Detected an invalid packet at item 4608
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 31.4463s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 31.5978s ++++
+++++ frame_probe ID: 1060 receives a frame at time 31.6391s ++++
+++++ frame_probe ID: 882 receives a frame at time 31.6473s ++++
+++++ frame_probe ID: 883 receives a frame at time 31.6473s ++++
+++++ frame_probe ID: 884 receives a frame at time 31.6474s ++++
+++++ frame_probe ID: 890 receives a frame at time 31.6474s ++++
+++++ frame_probe ID: 860 receives a frame at time 31.6576s ++++
+INFO: Detected an invalid packet at item 4640
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 31.6669s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 31.816s ++++
+++++ frame_probe ID: 1060 receives a frame at time 31.857s ++++
+++++ frame_probe ID: 882 receives a frame at time 31.8687s ++++
+++++ frame_probe ID: 883 receives a frame at time 31.8688s ++++
+++++ frame_probe ID: 884 receives a frame at time 31.8688s ++++
+++++ frame_probe ID: 890 receives a frame at time 31.8689s ++++
+++++ frame_probe ID: 860 receives a frame at time 31.8794s ++++
+INFO: Detected an invalid packet at item 4704
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 31.8881s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 32.0882s ++++
+++++ frame_probe ID: 1060 receives a frame at time 32.1291s ++++
+++++ frame_probe ID: 882 receives a frame at time 32.1374s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.1374s ++++
+++++ frame_probe ID: 884 receives a frame at time 32.1375s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.1375s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.1477s ++++
+INFO: Detected an invalid packet at item 4736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.1567s ++++
+measurement 1/5 complete in 295 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 32.3421s ++++
+++++ frame_probe ID: 1060 receives a frame at time 32.3831s ++++
+++++ frame_probe ID: 882 receives a frame at time 32.3869s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.387s ++++
+++++ frame_probe ID: 884 receives a frame at time 32.387s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.387s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.3972s ++++
+++++ frame_probe ID: 1082 receives a frame at time 32.402s ++++
+++++ frame_probe ID: 1083 receives a frame at time 32.4021s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 7;    reserved field I is:       22376;    reserved field II is:      21593;    payload length is:           21845;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 32.4064s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 32.5421s ++++
+++++ frame_probe ID: 1060 receives a frame at time 32.5833s ++++
+++++ frame_probe ID: 882 receives a frame at time 32.5884s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.5884s ++++
+++++ frame_probe ID: 884 receives a frame at time 32.5885s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.5885s ++++
+INFO: Detected an invalid packet at item 4800
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 32.5988s ++++
+++++ frame_probe ID: 1082 receives a frame at time 32.6027s ++++
+++++ frame_probe ID: 1083 receives a frame at time 32.6028s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 1;    reserved field I is:       48702;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 32.6078s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 32.7187s ++++
+++++ frame_probe ID: 1060 receives a frame at time 32.7595s ++++
+INFO: Detected an invalid packet at item 4864
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 32.7708s ++++
+++++ frame_probe ID: 883 receives a frame at time 32.7709s ++++
+++++ frame_probe ID: 884 receives a frame at time 32.771s ++++
+++++ frame_probe ID: 890 receives a frame at time 32.771s ++++
+++++ frame_probe ID: 860 receives a frame at time 32.7812s ++++
+++++ frame_probe ID: 1082 receives a frame at time 32.7853s ++++
+++++ frame_probe ID: 1083 receives a frame at time 32.7854s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         1;    number of transmission is: 14;    reserved field I is:       65217;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 32.7902s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 33.0083s ++++
+++++ frame_probe ID: 1060 receives a frame at time 33.0492s ++++
+INFO: Detected an invalid packet at item 4928
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.0585s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.0586s ++++
+++++ frame_probe ID: 884 receives a frame at time 33.0586s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.0586s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.0688s ++++
+++++ frame_probe ID: 1082 receives a frame at time 33.074s ++++
+++++ frame_probe ID: 882 receives a frame at time 33.0779s ++++
+measurement 1/5 complete in 294 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 33.2083s ++++
+++++ frame_probe ID: 1060 receives a frame at time 33.2491s ++++
+++++ frame_probe ID: 882 receives a frame at time 33.2599s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.26s ++++
+++++ frame_probe ID: 884 receives a frame at time 33.26s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.2601s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.2702s ++++
+INFO: Detected an invalid packet at item 4992
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 5024
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.2802s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 33.516s ++++
+++++ frame_probe ID: 1060 receives a frame at time 33.5569s ++++
+++++ frame_probe ID: 882 receives a frame at time 33.5676s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.5677s ++++
+++++ frame_probe ID: 884 receives a frame at time 33.5677s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.5678s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.5779s ++++
+INFO: Detected an invalid packet at item 5056
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.587s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 33.698s ++++
+++++ frame_probe ID: 1060 receives a frame at time 33.7388s ++++
+++++ frame_probe ID: 882 receives a frame at time 33.7502s ++++
+++++ frame_probe ID: 883 receives a frame at time 33.7503s ++++
+++++ frame_probe ID: 884 receives a frame at time 33.7503s ++++
+++++ frame_probe ID: 890 receives a frame at time 33.7504s ++++
+++++ frame_probe ID: 860 receives a frame at time 33.7605s ++++
+INFO: Detected an invalid packet at item 5088
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 33.7694s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 33.9941s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.035s ++++
+++++ frame_probe ID: 882 receives a frame at time 34.0377s ++++
+++++ frame_probe ID: 883 receives a frame at time 34.0378s ++++
+++++ frame_probe ID: 884 receives a frame at time 34.0378s ++++
+++++ frame_probe ID: 890 receives a frame at time 34.0379s ++++
+++++ frame_probe ID: 860 receives a frame at time 34.0481s ++++
+INFO: Detected an invalid packet at item 5120
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 34.0572s ++++
+measurement 1/5 complete in 293 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 34.1882s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.2291s ++++
+INFO: Detected an invalid packet at item 5152
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 5184
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 34.2392s ++++
+++++ frame_probe ID: 883 receives a frame at time 34.2392s ++++
+++++ frame_probe ID: 884 receives a frame at time 34.2393s ++++
+++++ frame_probe ID: 890 receives a frame at time 34.2393s ++++
+++++ frame_probe ID: 860 receives a frame at time 34.2496s ++++
+INFO: Detected an invalid packet at item 5216
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 34.2595s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 34.4602s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.501s ++++
+++++ frame_probe ID: 882 receives a frame at time 34.5087s ++++
+++++ frame_probe ID: 883 receives a frame at time 34.5087s ++++
+++++ frame_probe ID: 884 receives a frame at time 34.5087s ++++
+++++ frame_probe ID: 890 receives a frame at time 34.5088s ++++
+++++ frame_probe ID: 860 receives a frame at time 34.5192s ++++
+++++ frame_probe ID: 1082 receives a frame at time 34.5234s ++++
+++++ frame_probe ID: 1083 receives a frame at time 34.5234s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    0;    source address is:         254;    number of transmission is: 254;    reserved field I is:       65217;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 34.5283s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 34.7079s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.7489s ++++
+INFO: Detected an invalid packet at item 5280
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 34.7582s ++++
+++++ frame_probe ID: 883 receives a frame at time 34.7583s ++++
+++++ frame_probe ID: 884 receives a frame at time 34.7583s ++++
+++++ frame_probe ID: 890 receives a frame at time 34.7583s ++++
+++++ frame_probe ID: 860 receives a frame at time 34.7687s ++++
+++++ frame_probe ID: 1082 receives a frame at time 34.7727s ++++
+++++ frame_probe ID: 1083 receives a frame at time 34.7727s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    2;    source address is:         87;    number of transmission is: 87;    reserved field I is:       22376;    reserved field II is:      21593;    payload length is:           21845;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 34.7777s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 34.9259s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.9668s ++++
+++++ frame_probe ID: 882 receives a frame at time 34.9791s ++++
+++++ frame_probe ID: 883 receives a frame at time 34.9791s ++++
+++++ frame_probe ID: 884 receives a frame at time 34.9792s ++++
+++++ frame_probe ID: 890 receives a frame at time 34.9792s ++++
+++++ frame_probe ID: 860 receives a frame at time 34.9894s ++++
+++++ frame_probe ID: 1082 receives a frame at time 34.9932s ++++
+++++ frame_probe ID: 1083 receives a frame at time 34.9933s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    3;    source address is:         10;    number of transmission is: 254;    reserved field I is:       65217;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 34.9982s ++++
+measurement 1/5 complete in 292 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 35.27s ++++
+++++ frame_probe ID: 1060 receives a frame at time 35.311s ++++
+++++ frame_probe ID: 882 receives a frame at time 35.3146s ++++
+++++ frame_probe ID: 883 receives a frame at time 35.3147s ++++
+++++ frame_probe ID: 884 receives a frame at time 35.3147s ++++
+++++ frame_probe ID: 890 receives a frame at time 35.3148s ++++
+INFO: Detected an invalid packet at item 5376
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 35.325s ++++
+INFO: Detected an invalid packet at item 5408
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 35.3338s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 35.5603s ++++
+++++ frame_probe ID: 1060 receives a frame at time 35.6011s ++++
+INFO: Detected an invalid packet at item 5440
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 5472
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 35.6122s ++++
+++++ frame_probe ID: 883 receives a frame at time 35.6122s ++++
+++++ frame_probe ID: 884 receives a frame at time 35.6123s ++++
+++++ frame_probe ID: 890 receives a frame at time 35.6123s ++++
+++++ frame_probe ID: 860 receives a frame at time 35.6225s ++++
+INFO: Detected an invalid packet at item 5504
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 35.6315s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 35.7481s ++++
+++++ frame_probe ID: 1060 receives a frame at time 35.7889s ++++
+++++ frame_probe ID: 882 receives a frame at time 35.7946s ++++
+++++ frame_probe ID: 883 receives a frame at time 35.7946s ++++
+++++ frame_probe ID: 884 receives a frame at time 35.7947s ++++
+++++ frame_probe ID: 890 receives a frame at time 35.7947s ++++
+++++ frame_probe ID: 860 receives a frame at time 35.805s ++++
+++++ frame_probe ID: 1082 receives a frame at time 35.8094s ++++
+++++ frame_probe ID: 882 receives a frame at time 35.8139s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 35.9717s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.0126s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.0152s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.0153s ++++
+++++ frame_probe ID: 884 receives a frame at time 36.0153s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.0154s ++++
+INFO: Detected an invalid packet at item 5568
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 36.0257s ++++
+++++ frame_probe ID: 1082 receives a frame at time 36.0308s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.0354s ++++
+measurement 1/5 complete in 291 second(s).
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 36.3096s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.3506s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.3613s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.3614s ++++
+++++ frame_probe ID: 884 receives a frame at time 36.3614s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.3615s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.3717s ++++
+INFO: Detected an invalid packet at item 5632
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.3805s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 36.4979s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.5387s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.5433s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.5433s ++++
+++++ frame_probe ID: 884 receives a frame at time 36.5434s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.5434s ++++
+INFO: Detected an invalid packet at item 5664
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 36.5536s ++++
+INFO: Detected an invalid packet at item 5696
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.5627s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 36.7517s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.793s ++++
+++++ frame_probe ID: 882 receives a frame at time 36.8027s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.8028s ++++
+++++ frame_probe ID: 884 receives a frame at time 36.8028s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.8029s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.813s ++++
+INFO: Detected an invalid packet at item 5728
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 36.8179s ++++
+++++ frame_probe ID: 1083 receives a frame at time 36.8179s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- ack frame detected ---- frame index is:            0;    destination address is:    60;    source address is:         254;    number of transmission is: 254;    reserved field I is:       65217;    reserved field II is:      65011;    payload length is:           65535;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50219e+09;    frame info contains a frame with length 15 bytes: 
+++++ frame_probe ID: 882 receives a frame at time 36.8221s ++++
+a data frame with index 0 from node: 3 has been transmitted 1th time
+++++ frame_probe ID: 1050 receives a frame at time 36.9341s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.9749s ++++
+INFO: Detected an invalid packet at item 5792
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 36.9852s ++++
+++++ frame_probe ID: 883 receives a frame at time 36.9852s ++++
+++++ frame_probe ID: 884 receives a frame at time 36.9853s ++++
+++++ frame_probe ID: 890 receives a frame at time 36.9853s ++++
+++++ frame_probe ID: 860 receives a frame at time 36.9955s ++++
+INFO: Detected an invalid packet at item 5824
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 37.0047s ++++

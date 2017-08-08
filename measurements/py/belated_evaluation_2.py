@@ -29,7 +29,7 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [0,1]
+measurement             =   [0,1,2]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -39,7 +39,8 @@ rtt_data_files          =   "sender_bfr_dq.txt,sender_ack_received.txt"
 show_plot               =   False
 
 boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 1",
-                        "SIFS=1ms\nDIFS=15ms\nBO=6ms\nNode 2"
+                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 2",
+                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 3"
                     ]
 
 # boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",

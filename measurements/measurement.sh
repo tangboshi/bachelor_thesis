@@ -122,7 +122,7 @@ function measure
     echo $raw_data_source_path
     echo $(ls $raw_data_source_path | egrep "*_$link.txt")
 
-    mv -v $(ls $raw_data_source_path | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
+    mv -v $raw_data_source_path/$(ls $raw_data_source_path | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
     echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
     printf "\n"
 

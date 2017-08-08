@@ -115,8 +115,13 @@ function measure
     # save this measurement's data to special folder
     mkdir -p $data_source_path/$measurement_counter/$x
     echo  "measurement $x raw data directory created $data_source_path/$measurement_counter/$x/."
+
+    #code for debugging
     echo "regex pattern is: _________________________________"
     echo "*_$link.txt"
+    echo $raw_data_source_path
+    echo $(ls $raw_data_source_path | egrep "*_$link.txt")
+
     mv -v $(ls $raw_data_source_path | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
     echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
     printf "\n"

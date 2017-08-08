@@ -109,8 +109,10 @@ for i in range(1,repetitions+1):
             if len(ack_received_times) > idx:
                 total_retxs += counter
                 if counter < max_retxs:
-                    res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                    rtt_single_measurement += [round(res,5)]
+                    # ! ! !  "HACK"
+                    if len(data_sent_times) >= idx+total_retxs-1:
+                        res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
+                        rtt_single_measurement += [round(res,5)]
                 else:
                     # Probably not needed, but hey if we can get it for free...
                     txs_fails += 1

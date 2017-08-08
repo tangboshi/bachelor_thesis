@@ -4,9 +4,9 @@ cd 0_ba/bachelor_thesis
 git pull
 git fetch
 cd measurements
-source measurement.conf
+source measurement_1.conf
 export remote_measurement=0
-source measurement.sh
+source measurement_1.sh
 
 # Sync the changes
 echo "Pushing bachelor thesis files to github..."

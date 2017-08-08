@@ -115,7 +115,7 @@ function measure
     # save this measurement's data to special folder
     mkdir -p $data_source_path/$measurement_counter/$x
     echo  "measurement $x raw data directory created $data_source_path/$measurement_counter/$x/."
-    mv -v $(ls -1 $raw_data_source_path/ | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
+    mv -v $(ls $raw_data_source_path/ | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
     echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
     printf "\n"
 

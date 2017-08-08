@@ -1,0 +1,23 @@
+protocol=csma_two_way_handshake
+sifs=3ms
+difs=15ms
+backoff_slot=6ms
+nodes=2
+timer=300ms
+repetions=5
+
+export link=2
+export timer=300
+export measurement_repetitions=5
+measurement_scripts=( csma_80211_III.py csma_80211_IV.py )
+plot_scripts=( rtt_2.py throughput.py )
+#################################################
+# first specify sender and then receiver output #
+#################################################
+export throughput_data_files="receiver_data_received_2.txt,sender_ack_received_2.txt"
+export rtt_data_files="sender_bfr_dq_2.txt,sender_ack_received_2.txt"
+export rtt_mode="frame_delay"
+export retxs_data_files="sender_retransmissions_2.txt,sender_max_retransmissions_2.txt"
+export retxs2_data_files="receiver_retransmissions_2.txt,receiver_max_retransmissions_2.txt"
+export plot_type="pdf,cdf,boxplot,bar,line"
+export show_plot_after_measurement=0

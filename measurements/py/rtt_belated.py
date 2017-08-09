@@ -120,55 +120,30 @@ class rtt:
                 # transmission is interrupted due to the timer running out.
                 if len(data_sent_times) > len(ack_received_times) + sum(retxs_per_repetition):
                     last_frame_retxs = retxs_per_repetition[-1]
-                    #print(last_frame_retxs+1)
                     data_sent_times = data_sent_times[:-(last_frame_retxs+1)]
-                    print("len data_sent_times"+str(len(data_sent_times)))
-                    print("len ack_received_times"+str(len(ack_received_times)))
-                    print("len retxs_per_repetition"+str(len(retxs_per_repetition)))
-
-                retxs_per_repetition = retxs_per_repetition[:-1]
+                    retxs_per_repetition = retxs_per_repetition[:-1]
+                    print("len data_sent_times:"+str(len(data_sent_times)))
+                    print("len ack_received_times:"+str(len(ack_received_times)))
+                    print("sum retxs_per_repetition:"+str(sum(retxs_per_repetition)))
+                    print("len retxs_per_repetition:"+str(len(retxs_per_repetition)))
 
                 # Calculate RTT for each packet
-                if self.rtt_mode == "rtt":
-                    for idx, counter in enumerate(retxs_per_repetition):
-                        # This check must be added to catch the case where the last data
-                        # frame isnt followed up by an ACK (max retries)
-                        if len(ack_received_times) > idx:
-                            total_retxs += counter
-                            if counter > 0:
-                                if counter == self.max_retxs:
-                                    # Probably not needed, but hey if we can get it for free...
-                                    txs_fails += 1
-                            else:
-                                # print("data_sent_times length:"+str(len(data_sent_times)))
-                                # print(idx)
-                                # print(total_retxs)
-                                if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
-                                    res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                                    rtt_single_measurement += [round(res,5)]
-                        else:
-                            print(  "Last data frame wasnt acked (max tries). \
-                                    Termintating calculation here.")
 
-                else:#self.rtt_mode == delay
-                    for idx, counter in enumerate(retxs_per_repetition):
-                        if len(ack_received_times) > idx:
-                            total_retxs += counter
-                            if counter < self.max_retxs:
-                                # print("data_sent_times length:"+str(len(data_sent_times)))
-                                # print(idx)
-                                # print(total_retxs)
-                                if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
-                                    res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                                    rtt_single_measurement += [round(res,5)]
-                                else:
-                                    print("Rare error: idx+total_retxs >= data_sent_times!")
-                            else:
-                                # Probably not needed, but hey if we can get it for free...
+                for idx, counter in enumerate(retxs_per_repetition):
+                    # This check must be added to catch the case where the last data
+                    # frame isnt followed up by an ACK (max retries)
+                    if len(ack_received_times) > idx:
+                        total_retxs += counter
+                        frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
+                        rtt_condition = self.rtt_mode == "rtt" and counter == 0
+                        if frame_delay_condition or rtt_condition:
+                            if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
+                                res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
+                                rtt_single_measurement += [round(res,5)]
+                            if counter == self.max_retxs:
                                 txs_fails += 1
-                        else:
-                            print(  "Last data frame wasnt acked (max tries). \
-                                    Termintating calculation here.")
+                    else:
+                        print("No corresponding ACK. Retransmission count was "+str(counter)+".")
 
 
                 # print("\nThe resulting RTTs of this single measurement are:")
@@ -181,7 +156,7 @@ class rtt:
                 if len(rtt_single_measurement) > 0:
                     rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
                 else:
-                    rtt_single_mean =   100
+                    rtt_single_mean =   0
                 # rtt_single_mean seems to be calculated correctly, but source data is odd.
                 print("\nThe resulting mean RTT of this single measurement is:")
                 print(rtt_single_mean)
@@ -250,6 +225,10 @@ class rtt:
 
 
         if self.create_plots == True or self.create_plots["rtt"] == True:
+            delay_titles = {
+                "rtt": "RTT",
+                "frame_delay": "Frame Delay"
+            }
             myplot.myplot(data=self.rtt,
                     bins=np.arange(
                         min(rtt_vals)-0.002,
@@ -257,9 +236,9 @@ class rtt:
                         #0.07/1000),
                         (max(rtt_vals)-min(rtt_vals))/50),
                     plottype=self.plot_type,
-                    title="RTT",
-                    xlabel="rtt [s]",
-                    ylabel="rtt [s]",
+                    title=delay_titles[self.rtt_mode],
+                    xlabel=self.rtt_mode.replace("_", " ")+" [s]",
+                    ylabel=self.rtt_mode.replace("_", " ")+" [s]",
                     savepath=self.plot_path+"/",
                     show=self.show_plot,
                     grid=self.grid,

@@ -1,0 +1,195 @@
+% !TeX document-id = {037646d7-4924-4eea-a1a8-a34c1158977c}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{enumitem}
+\usepackage{standalone}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{rotating}
+
+\graphicspath{{img/plots_10_08/}}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/cdf/throughput_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_single/boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
+
+% -------------------------------------------------------------------------
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/cdf/throughput_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_bo_single/boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
+% ------------------------------------------------------------------------------
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/cdf/throughput_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{no_wait_single/boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
+% ------------------------------------------------------------------------------
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/cdf/throughput_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_2/boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
+% ------------------------------------------------------------------------------
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/cdf/packet_loss_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/cdf/retransmissions_per_frame_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/cdf/rtt_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/cdf/throughput_cdf}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/boxplot/packet_loss_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/boxplot/retransmissions_per_frame_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/boxplot/rtt_boxplot}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\includegraphics[width=\textwidth]{rb_dual/link_1_3/boxplot/throughput_boxplot}
+\end{sidewaysfigure}
+
+\end{document}

@@ -112,8 +112,8 @@ for i in range(1,repetitions+1):
                         res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
                         rtt_single_measurement += [round(res,5)]
             else:
-                print(  "Last data frame wasnt acked (max tries). \
-                        Termintating calculation here.")
+                print("No corresponding ACK. Retransmission count was "+str(counter)+".")
+
 
     else:#rtt_mode == delay
         for idx, counter in enumerate(retxs):
@@ -127,8 +127,7 @@ for i in range(1,repetitions+1):
                     # Probably not needed, but hey if we can get it for free...
                     txs_fails += 1
             else:
-                print(  "Last data frame wasnt acked (max tries). \
-                        Termintating calculation here.")
+                print("No corresponding ACK. Retransmission count was "+str(counter)+".")
 
 
     print("\nThe resulting RTTs of this single measurement are:")

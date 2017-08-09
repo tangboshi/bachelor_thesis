@@ -29,9 +29,9 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [13,10,11]
+measurement             =   [40,41]
 #links used in the measurement
-links                   =   [1,2,3]
+links                   =   [1,3]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -42,14 +42,14 @@ retxs_data_files        =   "sender_retransmissions"
 show_plot               =   False
 rtt_mode                =   "frame_delay"
 
-# boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
-#                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
-#                         ]
-
 boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
-                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 420MHz",
-                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 3 @ 480MHz"
-                    ]
+                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 3 @ 450MHz"
+                         ]
+
+# boxplot_xticks      = [ "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+#                         "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 2 @ 420MHz",
+#                         "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 3 @ 480MHz"
+#                     ]
 
 # boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
 #                         "SIFS=1ms\nDIFS=5ms\nBO=2ms",
@@ -67,17 +67,17 @@ boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 custom_legend_coordinates   = {
-                                "rtt":          [0.52,0.5,"center"],
+                                "rtt":          [0.24,0.85,"upper left"],
                                 "packet_loss":  [1,0,"lower right"],
                                 "retxs":        [1,0,"lower right"],
-                                "throughput":   [0.5,0.5,"center"]
+                                "throughput":   [1,0,"lower right"]
                             }
 
 create_plots                = {
                                 "rtt":          True,
-                                "packet_loss":  True,
-                                "retxs":        True,
-                                "throughput":   True
+                                "packet_loss":  False,
+                                "retxs":        False,
+                                "throughput":   False
                             }
 
 #Unimplemented, use later

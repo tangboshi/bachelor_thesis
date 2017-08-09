@@ -137,9 +137,6 @@ class myplot:
         )
 
     def hist(self):
-        # if not self.bins:
-        #     print("Error: bins undefined.")
-        #     return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         normed=1,
@@ -158,9 +155,7 @@ class myplot:
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
         linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
-        #markers = markers[:len(self.data)]
         for index,item in enumerate(np.asarray(self.data).transpose()):
-            #print(index)
             print("index:"+str(index))
             print("___markers____")
             print(markers[index])
@@ -181,9 +176,6 @@ class myplot:
         self.ax.set_ylim(ymax=1)
 
     def pdf(self):
-        # if not self.bins:
-        #     print("Error: bins undefined.")
-        #     return
         self.n, self.bins, self.patches = self.ax.hist(x=self.data,
                         bins=self.bins,
                         align='left',
@@ -200,7 +192,6 @@ class myplot:
             plt.setp(patch, 'facecolor', cm(float(index/len(self.patches))))
 
     def boxplot(self):
-        #print("boxplot() reached.")
         print(self.data)
 
         self.plot = plt.boxplot(self.data,
@@ -209,7 +200,6 @@ class myplot:
                                 flierprops=dict(marker='x'))
 
         colors = ['steelblue', 'peachpuff', 'green', 'red', 'purple', 'brown', 'pink']
-        #colors = ['ivory','honeydew','mistyrose','lightskyblue','plum','#00eacb']
         color_repetitions = math.ceil(len(self.data)/len(colors))
         colors = color_repetitions * colors
 
@@ -220,13 +210,8 @@ class myplot:
                         ylabel=self.ylabel,
                         title=self.title)
 
-        #Let's call the number of fliers :)
-
         boxdict = self.ax.boxplot(self.data)
         fliers  = boxdict["fliers"]
-
-        #print("***self.data***:%")
-        #print(self.data)
 
         for j in range(len(fliers)):
             # the y and x positions of the fliers
@@ -259,7 +244,6 @@ class myplot:
         self.ax.set_title(title)
 
     def save(self, savepath, plot_type):
-        #pdb.set_trace()
         savename = self.title
         savename = savename.lower()
         savename = savename.replace(" ", "_")

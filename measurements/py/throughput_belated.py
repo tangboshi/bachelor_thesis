@@ -29,6 +29,7 @@ class tp:
         self.annotations_other      =   kwargs.get("annotations_other", [])
         self.legend_coordinates     =   kwargs.get("legend_coordinates", False)
         self.create_plots           =   kwargs.get("create_plots", True)
+        self.links                  =   kwargs.get("links", [1 for x in range(len(self.measurement))])
         #pdb.set_trace()
 
     def calc(self):
@@ -42,8 +43,8 @@ class tp:
             for i in range(self.repetitions):
                 print("I'll open files from iteration "+str(i+1)+" for you!")
                 file_path = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                data_file_path = file_path+self.throughput_data_files[0]
-                ack_file_path = file_path+self.throughput_data_files[1]
+                data_file_path = file_path+self.throughput_data_files[0]+"_"+str(self.links[index])+".txt"
+                ack_file_path = file_path+self.throughput_data_files[1]+"_"+str(self.links[index])+".txt"
                 if pt.isfile(ack_file_path):
                     print("Let's count some ACKS!")
                     ackcount = lines.linecount(ack_file_path)

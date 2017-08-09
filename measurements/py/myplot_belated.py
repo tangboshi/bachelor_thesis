@@ -166,9 +166,9 @@ class myplot:
             print(markers[index])
             x = np.sort(item)
             y = np.arange(1,len(x)+1) / len(x)
-            x = np.insert(x,0,0)
+            x = np.insert(x,0,x[0])
             y = np.insert(y,0,0)
-            self.plot = plt.plot(x,
+            self.plot = plt.step(x,
                     y,
                     marker=markers[index],
                     linestyle=linestyles[index],

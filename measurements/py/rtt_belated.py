@@ -16,7 +16,7 @@ class rtt:
         self.repetitions        =   kwargs.get("repetitions",5)
         self.show_plot          =   kwargs.get("show_plot","False")
         self.max_retxs          =   kwargs.get("max_retxs",6)
-        self.retxs_data_files   =   kwargs.get("retxs_data_files","sender_retransmissions.txt")
+        self.retxs_data_files   =   kwargs.get("retxs_data_files","sender_retransmissions")
         self.timer              =   kwargs.get("timer",300)
         self.grid               =   kwargs.get("grid",False)
         self.legend             =   kwargs.get("legend", [])
@@ -26,7 +26,9 @@ class rtt:
         self.annotations_other  =   kwargs.get("annotations_other", [])
         self.legend_coordinates =   kwargs.get("legend_coordinates", False)
         self.create_plots       =   kwargs.get("create_plots", True)
+        self.links              =   kwargs.get("links", [1 for x in range(len(self.measurement))])
 
+        print(self.links)
         print ("Calculating "+self.rtt_mode+"...")
         #for debugging purposes
         #print(str(self.__dict__))
@@ -34,7 +36,6 @@ class rtt:
 
     # ------------------------------ Calculations ---------------------------------#
     def calc(self):
-
         print("Taking a look at the following measurements: "+str(self.measurement))
         # The stuff we want to plot later
         self.rtt = np.zeros(shape=(len(self.measurement),self.repetitions))
@@ -60,9 +61,9 @@ class rtt:
 
             for i in range(self.repetitions):
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                data_sent_path      = path+self.rtt_data_files.split(",")[0]
-                ack_received_path   = path+self.rtt_data_files.split(",")[1]
-                retxs_path          = path+self.retxs_data_files.split()[0]
+                data_sent_path      = path+self.rtt_data_files.split(",")[0]+"_"+str(self.links[index])+".txt"
+                ack_received_path   = path+self.rtt_data_files.split(",")[1]+"_"+str(self.links[index])+".txt"
+                retxs_path          = path+self.retxs_data_files.split()[0]+"_"+str(self.links[index])+".txt"
 
                 print(str(i+1))
                 print("data_sent_path:"+data_sent_path)
@@ -142,8 +143,9 @@ class rtt:
                                 # print("data_sent_times length:"+str(len(data_sent_times)))
                                 # print(idx)
                                 # print(total_retxs)
-                                res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                                rtt_single_measurement += [round(res,5)]
+                                if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
+                                    res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
+                                    rtt_single_measurement += [round(res,5)]
                         else:
                             print(  "Last data frame wasnt acked (max tries). \
                                     Termintating calculation here.")
@@ -156,7 +158,7 @@ class rtt:
                                 # print("data_sent_times length:"+str(len(data_sent_times)))
                                 # print(idx)
                                 # print(total_retxs)
-                                if idx+total_retxs < len(data_sent_times):
+                                if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
                                     res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
                                     rtt_single_measurement += [round(res,5)]
                                 else:

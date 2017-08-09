@@ -29,19 +29,27 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [0,1,2]
+measurement             =   [17,18]
+#links used in the measurement
+links                   =   [1,2]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
 plot_type               =   ["cdf", "boxplot"]
-throughput_data_files   =   ["sender_data_sent.txt","sender_ack_received.txt"]
-rtt_data_files          =   "sender_bfr_dq.txt,sender_ack_received.txt"
+throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
+rtt_data_files          =   "sender_bfr_dq,sender_ack_received"
+retxs_data_files        =   "sender_retransmissions"
 show_plot               =   False
+rtt_mode                =   "frame_delay"
 
-boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 1",
-                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 2",
-                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nNode 3"
-                    ]
+boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
+                        "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
+                        ]
+
+# boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
+#                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 420MHz",
+#                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 3 @ 480MHz"
+#                     ]
 
 # boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
 #                         "SIFS=1ms\nDIFS=5ms\nBO=2ms",
@@ -94,10 +102,13 @@ for index,a_plot_type in enumerate(plot_type):
         "annotations_below":        annotations_below,
         "annotations_other":        annotations_other,
         "throughput_data_files":    throughput_data_files,
+        "retxs_data_files":         retxs_data_files,
         "rtt_data_files":           rtt_data_files,
         "show_plot":                show_plot,
         "legend_coordinates":       custom_legend_coordinates,
-        "create_plots":             create_plots
+        "create_plots":             create_plots,
+        "links":                    links,
+        "rtt_mode":                 rtt_mode
     }
 
     rtt.rtt(**eval_dict).plot()

@@ -4465,3 +4465,292 @@ measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/de
 
 now processing results...
 plotting python should be: python3 (ubuntu).
+Hello from rtt.py!
+hello from variables.py!
+data_sent: 1502355306.164265
+data_sent: 1502355306.459967
+data_sent: 1502355306.983620
+data_sent: 1502355307.245412
+data_sent: 1502355307.456990
+data_sent: 1502355307.560385
+data_sent: 1502355307.795605
+data_sent: 1502355308.265240
+data_sent: 1502355308.384403
+data_sent: 1502355308.584083
+data_sent: 1502355308.993440
+data_sent: 1502355309.325294
+data_sent: 1502355309.956814
+data_sent: 1502355310.144048
+data_sent: 1502355310.487237
+data_sent: 1502355310.752915
+data_sent: 1502355311.150319
+data_sent: 1502355312.160199
+data_sent: 1502355313.589611
+data_sent: 1502355313.753302
+data_sent: 1502355313.952915
+data_sent: 1502355314.106164
+data_sent: 1502355314.263842
+data_sent: 1502355314.437759
+data_sent: 1502355314.590148
+data_sent: 1502355314.829606
+data_sent: 1502355315.069978
+data_sent: 1502355315.243632
+data_sent: 1502355315.449583
+data_sent: 1502355315.663478
+data_sent: 1502355315.821180
+data_sent: 1502355315.954262
+data_sent: 1502355316.279727
+data_sent: 1502355316.575423
+data_sent: 1502355316.727088
+data_sent: 1502355316.844428
+data_sent: 1502355317.061685
+data_sent: 1502355317.186134
+data_sent: 1502355317.317181
+data_sent: 1502355317.421715
+data_sent: 1502355317.699082
+data_sent: 1502355317.843466
+data_sent: 1502355318.078947
+data_sent: 1502355318.203343
+data_sent: 1502355318.546959
+data_sent: 1502355319.040037
+data_sent: 1502355319.527369
+data_sent: 1502355319.713642
+data_sent: 1502355319.991419
+data_sent: 1502355320.102654
+data_sent: 1502355320.392134
+data_sent: 1502355320.555687
+data_sent: 1502355320.833291
+data_sent: 1502355321.644958
+data_sent: 1502355321.893505
+data_sent: 1502355321.987077
+data_sent: 1502355322.204654
+data_sent: 1502355322.294884
+data_sent: 1502355322.549131
+data_sent: 1502355322.742712
+data_sent: 1502355322.958460
+data_sent: 1502355323.076943
+data_sent: 1502355323.264466
+data_sent: 1502355323.458593
+data_sent: 1502355323.624154
+data_sent: 1502355323.751049
+ack_received: 1502355307.044087
+ack_received: 1502355307.303678
+ack_received: 1502355307.515078
+ack_received: 1502355308.321007
+ack_received: 1502355310.020816
+ack_received: 1502355313.648035
+ack_received: 1502355314.012814
+ack_received: 1502355314.320386
+ack_received: 1502355314.502933
+ack_received: 1502355314.646294
+ack_received: 1502355314.886647
+ack_received: 1502355315.126344
+ack_received: 1502355315.510140
+ack_received: 1502355315.884968
+ack_received: 1502355316.633648
+ack_received: 1502355316.787075
+ack_received: 1502355316.902359
+ack_received: 1502355317.122804
+ack_received: 1502355317.247982
+ack_received: 1502355317.382414
+ack_received: 1502355317.756194
+ack_received: 1502355318.140011
+ack_received: 1502355319.590345
+ack_received: 1502355320.051358
+ack_received: 1502355321.710215
+ack_received: 1502355321.959847
+ack_received: 1502355322.267557
+ack_received: 1502355322.353778
+ack_received: 1502355322.613305
+ack_received: 1502355322.805079
+ack_received: 1502355323.025567
+ack_received: 1502355323.141122
+ack_received: 1502355323.323276
+ack_received: 1502355323.524823
+ack_received: 1502355323.687795
+ack_received: 1502355323.812001
+retx: [2, 0, 0, 2, 4, 4, 1, 1, 1, 0, 0, 0, 0, 1, 1, 2, 0, 0, 0, 0, 0, 1, 1, 3, 1, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+No corresponding ACK. Retransmission count was 0.
+
+The resulting RTTs of this single measurement are:
+[0.06047, 0.05827, 0.05809, 0.05577, 0.064, 1.48784, 0.25951, 0.21422, 0.06517, 0.05615, 0.05704, 0.05637, 0.26651, 0.22149, 0.67939, 0.05999, 0.05793, 0.06112, 0.06185, 0.06523, 0.33448, 0.29655, 1.387, 0.33772, 1.60756, 0.06634, 0.28048, 0.05889, 0.06417, 0.06237, 0.06711, 0.06418, 0.05881, 0.06623, 0.06364, 0.06095]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.24563583333333336
+
+
+abs. packet loss: 30.0
+packet loss in %: 45.45%
+data_sent: 1502355326.520011
+data_sent: 1502355326.731234
+data_sent: 1502355327.212248
+data_sent: 1502355327.669521
+data_sent: 1502355327.907173
+data_sent: 1502355328.106134
+data_sent: 1502355328.629816
+data_sent: 1502355328.795055
+data_sent: 1502355328.964315
+data_sent: 1502355329.146089
+data_sent: 1502355329.717621
+data_sent: 1502355331.386954
+data_sent: 1502355333.650622
+data_sent: 1502355333.862775
+data_sent: 1502355334.018140
+data_sent: 1502355334.217628
+data_sent: 1502355334.469050
+data_sent: 1502355334.574748
+data_sent: 1502355334.893874
+data_sent: 1502355334.972495
+data_sent: 1502355335.219893
+data_sent: 1502355335.569614
+data_sent: 1502355335.738959
+data_sent: 1502355335.967516
+data_sent: 1502355336.286622
+data_sent: 1502355336.719759
+data_sent: 1502355336.838643
+data_sent: 1502355337.014112
+data_sent: 1502355337.453330
+data_sent: 1502355337.838816
+data_sent: 1502355338.040150
+data_sent: 1502355338.353311
+data_sent: 1502355338.554289
+data_sent: 1502355338.804710
+data_sent: 1502355339.009671
+data_sent: 1502355339.109070
+data_sent: 1502355339.229074
+data_sent: 1502355339.372269
+data_sent: 1502355339.571689
+data_sent: 1502355340.023134
+data_sent: 1502355340.240942
+data_sent: 1502355340.445570
+data_sent: 1502355340.662762
+data_sent: 1502355340.754397
+data_sent: 1502355341.037652
+data_sent: 1502355341.398938
+data_sent: 1502355341.637251
+data_sent: 1502355341.781536
+data_sent: 1502355342.101087
+data_sent: 1502355342.522992
+data_sent: 1502355342.784791
+data_sent: 1502355342.864428
+data_sent: 1502355343.114521
+data_sent: 1502355343.314243
+data_sent: 1502355343.487364
+data_sent: 1502355343.726738
+data_sent: 1502355343.864534
+ack_received: 1502355327.729932
+ack_received: 1502355328.707735
+ack_received: 1502355333.709482
+ack_received: 1502355333.930832
+ack_received: 1502355334.094334
+ack_received: 1502355334.285713
+ack_received: 1502355334.535355
+ack_received: 1502355334.957245
+ack_received: 1502355335.802219
+ack_received: 1502355336.781371
+ack_received: 1502355337.904865
+ack_received: 1502355338.413032
+ack_received: 1502355338.615468
+ack_received: 1502355339.075518
+ack_received: 1502355339.171727
+ack_received: 1502355339.297031
+ack_received: 1502355340.304347
+ack_received: 1502355340.727124
+ack_received: 1502355341.465983
+ack_received: 1502355341.706270
+ack_received: 1502355342.589586
+ack_received: 1502355342.849121
+ack_received: 1502355342.925221
+ack_received: 1502355343.184997
+ack_received: 1502355343.376195
+ack_received: 1502355343.549459
+ack_received: 1502355343.789283
+ack_received: 1502355343.933534
+retx: [3, 2, 4, 1, 0, 0, 0, 0, 1, 3, 2, 3, 1, 0, 1, 0, 0, 3, 1, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+No corresponding ACK. Retransmission count was 0.
+
+The resulting RTTs of this single measurement are:
+[0.06041, 0.07792, 2.32253, 0.06806, 0.07619, 0.06808, 0.06631, 0.3825, 0.82972, 0.81386, 1.06622, 0.37288, 0.06118, 0.27081, 0.06266, 0.06796, 0.93208, 0.28155, 0.71159, 0.06902, 0.80805, 0.06433, 0.06079, 0.07048, 0.06195, 0.06209, 0.06255, 0.069]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.35431321428571433
+
+
+abs. packet loss: 29.0
+packet loss in %: 50.88%
+[ 0.24563583  0.35431321]
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from throughput.py!
+hello from variables.py!
+Hi, I'm busy with numpy.
+Numpy zeros done.
+I'll do my best to count some ACKs!
+Done.
+ackcount: 36
+datacount: 41
+I'll do my best to count some ACKs!
+Done.
+ackcount: 28
+datacount: 31
+[ 1800.  1400.]
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a pdf for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a bar for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a line for you now!
+Congrats, plotting throughput put through!
+
++--------------------------------------------------------------+
+| plotting completed. until the next measurement session then! |
++--------------------------------------------------------------+

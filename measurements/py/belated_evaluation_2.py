@@ -29,9 +29,9 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [40,41]
+measurement             =   [17,18]
 #links used in the measurement
-links                   =   [1,3]
+links                   =   [1,2]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -40,10 +40,10 @@ throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
 rtt_data_files          =   "sender_bfr_dq,sender_ack_received"
 retxs_data_files        =   "sender_retransmissions"
 show_plot               =   False
-rtt_mode                =   "frame_delay"
+rtt_mode                =   "rtt"
 
 boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
-                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 3 @ 450MHz"
+                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
                          ]
 
 # boxplot_xticks      = [ "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
@@ -75,9 +75,9 @@ custom_legend_coordinates   = {
 
 create_plots                = {
                                 "rtt":          True,
-                                "packet_loss":  False,
-                                "retxs":        False,
-                                "throughput":   False
+                                "packet_loss":  True,
+                                "retxs":        True,
+                                "throughput":   True
                             }
 
 #Unimplemented, use later

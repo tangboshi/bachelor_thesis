@@ -1,0 +1,2639 @@
+measurement 1/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+develop_mode of timeout ID: 10 is activated.
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 1/2 complete in 19 second(s).
+develop_mode of general_timer ID: 1 is activated.
+measurement 1/2 complete in 18 second(s).
+node starts running at 47.3565
+general_timer 1 is triggered at time 47.3565 s
+timer start time: 47.3566
+++++ frame_probe ID: 1050 receives a frame at time 47.7569s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++47.7975s ++++
+timeout timer start time: 47.7976
+++++ frame_probe ID: 882 receives a frame at time 47.8019s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.8019s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.8019s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.802s ++++
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 47.809s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 47.8124s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.8125s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.8125s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 47.8126s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 47.8133 s.  actual timeout duration is: 0.015693 s
+++++ frame_probe ID: 882 receives a frame at time 47.8308s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 47.8972s ++++
+++++ frame_probe ID: 1060 receives a frame at time 47.9377s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 47.9377
+++++ frame_probe ID: 882 receives a frame at time 47.9461s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.9462s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.9462s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.9462s ++++
+INFO: Detected an invalid packet at item 96
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 47.9531s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.9558s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.9559s ++++
+++++ frame_probe ID: 1090 receives a frame at time 47.956s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1083 receives a frame at time 47.9561s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is killed  at time 47.9566 s.  actual timeout duration is: 0.01886 s
+++++ frame_probe ID: 882 receives a frame at time 47.9653s ++++
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+measurement 1/2 complete in 17 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 48.2362s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++48.2766s ++++
+timeout timer start time: 48.2766
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 48.2829s ++++
+++++ frame_probe ID: 883 receives a frame at time 48.2829s ++++
+++++ frame_probe ID: 884 receives a frame at time 48.2829s ++++
+++++ frame_probe ID: 890 receives a frame at time 48.283s ++++
+++++ frame_probe ID: 860 receives a frame at time 48.2899s ++++
+++++ frame_probe ID: 1082 receives a frame at time 48.3013s ++++
+++++ frame_probe ID: 1083 receives a frame at time 48.3013s ++++
+++++ frame_probe ID: 1084 receives a frame at time 48.3013s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 48.3014s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 48.3017 s.  actual timeout duration is: 0.025047 s
+++++ frame_probe ID: 882 receives a frame at time 48.3111s ++++
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+measurement 1/2 complete in 16 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 49.539s ++++
+++++ frame_probe ID: 1060 receives a frame at time 49.5796s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 49.5796
+++++ frame_probe ID: 882 receives a frame at time 49.5878s ++++
+++++ frame_probe ID: 883 receives a frame at time 49.5879s ++++
+++++ frame_probe ID: 884 receives a frame at time 49.5879s ++++
+++++ frame_probe ID: 890 receives a frame at time 49.5879s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 49.5949s ++++
+++++ frame_probe ID: 1082 receives a frame at time 49.5974s ++++
+++++ frame_probe ID: 1083 receives a frame at time 49.5975s ++++
+++++ frame_probe ID: 1084 receives a frame at time 49.5975s ++++
+++++ frame_probe ID: 1090 receives a frame at time 49.5975s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 49.5976 s.  actual timeout duration is: 0.017952 s
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 49.6079s ++++
+++++ frame_probe ID: 1050 receives a frame at time 49.6684s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 49.7091s ++++10 start timeout +++
+timeout timer start time: 49.7091
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 49.7131s ++++
+++++ frame_probe ID: 883 receives a frame at time 49.7131s ++++
+++++ frame_probe ID: 884 receives a frame at time 49.7131s ++++
+++++ frame_probe ID: 890 receives a frame at time 49.7132s ++++
+++++ frame_probe ID: 860 receives a frame at time 49.7201s ++++
+++++ frame_probe ID: 1082 receives a frame at time 49.7227s ++++
+++++ frame_probe ID: 1083 receives a frame at time 49.7228s ++++
+++++ frame_probe ID: 1084 receives a frame at time 49.7228s ++++
+++++ frame_probe ID: 1090 receives a frame at time 49.7229s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 49.7231s ++++
+* timeout ID: 10 timeout timer is killed  at time 49.7239 s.  actual timeout duration is: 0.014713 s
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 49.7411s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 49.7633s ++++
+10 start timeout +++timeout timer start time: 49.7634
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 49.9647 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++50.0053s ++++
+timeout timer start time: 50.0054
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.0107s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.0108s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.0108s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.0108s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.0177s ++++
+measurement 1/2 complete in 15 second(s).
+++++ frame_probe ID: 1082 receives a frame at time 50.0204s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.0205s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.0205s ++++
+++++ frame_probe ID: 1090 receives a frame at time 50.0205s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 50.0206s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.0211 s.  actual timeout duration is: 0.015744 s
++++ timeout ID: 10 start timeout +++++++ frame_probe ID: 1060 receives a frame at time timeout timer start time: 50.027650.0276
+s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.0679s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.068s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.068s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.0681s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.0749s ++++
+++++ frame_probe ID: 1082 receives a frame at time 50.0775s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.0776s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.0776s ++++
+++++ frame_probe ID: 1090 receives a frame at time 50.0776s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 50.0777s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.0779 s.  actual timeout duration is: 0.050299 s
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 50.0847s ++++
+10 start timeout +++timeout timer start time: 50.0848
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.126s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.126s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.126s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.126s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.1329s ++++
+++++ frame_probe ID: 1082 receives a frame at time 50.1356s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.1357s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.1357s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 50.1357s ++++
+++++ frame_probe ID: 1050 receives a frame at time 50.1358s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.1361 s.  actual timeout duration is: 0.051344 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 1050.1429 start timeout +++s ++++
+timeout timer start time: 50.1429
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.1831s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.1832s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.1832s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.1832s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.1901s ++++
+++++ frame_probe ID: 1082 receives a frame at time 50.1928s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.1928s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.1929s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 10 kill timeout  +++50.1929s ++++
+++++ frame_probe ID: 1050 receives a frame at time 50.193s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.1932 s.  actual timeout duration is: 0.050264 s
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 1050.2 start timeout +++s ++++
+timeout timer start time: 50.2001
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.2412s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.2412s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.2413s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.2413s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.2481s ++++
+++++ frame_probe ID: 1082 receives a frame at time 50.2509s ++++
+++++ frame_probe ID: 1084 receives a frame at time ++++ frame_probe ID: 1083 receives a frame at time 50.2509s ++++
+++++ frame_probe ID: 1090 receives a frame at time 50.2509s ++++
+50.251s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 50.2511s ++++
+* timeout ID: 10 timeout timer is killed  at time 50.2514 s.  actual timeout duration is: 0.051272 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++50.2584s ++++
+timeout timer start time: 50.2585
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.2984s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.2984s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.2984s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.2985s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.3054s ++++
+++++ frame_probe ID: 1082 receives a frame at time 50.3081s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.3082s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.3082s ++++
+++++ frame_probe ID: 1090 receives a frame at time 50.3082s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 50.3083s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.3085 s.  actual timeout duration is: 0.050086 s
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++50.3154s ++++
+timeout timer start time: 50.3154
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.3565s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.3566s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.3566s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.3566s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.3635s ++++
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 50.375s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.3751s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.3751s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 50.3752s ++++
+++++ frame_probe ID: 1050 receives a frame at time 50.3752s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.3762 s.  actual timeout duration is: 0.060743 s
+++++ frame_probe ID: 1060 receives a frame at time 50.3822s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 50.3823
+++++ frame_probe ID: 882 receives a frame at time 50.4227s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.4228s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.4228s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.4228s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.4297s ++++
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 50.4334s ++++
+++++ frame_probe ID: 1083 receives a frame at time 50.4335s ++++
+++++ frame_probe ID: 1084 receives a frame at time 50.4335s ++++
+++++ frame_probe ID: 1090 receives a frame at time 50.4335s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 50.4338 s.  actual timeout duration is: 0.051552 s
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 928
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.4517s ++++
+++++ frame_probe ID: 1050 receives a frame at time 50.6633s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++50.7038s ++++
+timeout timer start time: 50.7039
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.7113s ++++
+++++ frame_probe ID: 883 receives a frame at time 50.7114s ++++
+++++ frame_probe ID: 884 receives a frame at time 50.7114s ++++
+++++ frame_probe ID: 890 receives a frame at time 50.7115s ++++
+++++ frame_probe ID: 860 receives a frame at time 50.7184s ++++
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 50.7298s ++++
+++++ frame_probe ID: ++++ frame_probe ID: 1083 receives a frame at time 1084 receives a frame at time 50.7299s ++++
+50.7299s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1090 receives a frame at time 50.7299s ++++
+* timeout ID: 10 timeout timer is killed  at time 50.7302 s.  actual timeout duration is: 0.026337 s
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 50.7405s ++++
+++++ frame_probe ID: 1050 receives a frame at time 50.9795s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++51.0201s ++++
+timeout timer start time: 51.0201
+measurement 1/2 complete in 14 second(s).
+++++ frame_probe ID: 882 receives a frame at time 51.028s ++++
+++++ frame_probe ID: 883 receives a frame at time 51.0281s ++++
+++++ frame_probe ID: 884 receives a frame at time 51.0281s ++++
+++++ frame_probe ID: 890 receives a frame at time 51.0281s ++++
+++++ frame_probe ID: 860 receives a frame at time 51.0351s ++++
+INFO: Detected an invalid packet at item 1184
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 51.0465s ++++
+++++ frame_probe ID: 1083 receives a frame at time 51.0466s ++++
+++++ frame_probe ID: 1084 receives a frame at time 51.0466s ++++
+++++ frame_probe ID: 1090 receives a frame at time 51.0466s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 51.0474 s.  actual timeout duration is: 0.027281 s
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 51.0573s ++++
+++++ frame_probe ID: 1050 receives a frame at time 51.2128s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++51.2533s ++++
+timeout timer start time: 51.2534
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 51.2586s ++++
+++++ frame_probe ID: 883 receives a frame at time 51.2586s ++++
+++++ frame_probe ID: 884 receives a frame at time 51.2586s ++++
+++++ frame_probe ID: 890 receives a frame at time 51.2587s ++++
+++++ frame_probe ID: 860 receives a frame at time 51.2655s ++++
+++++ frame_probe ID: 1082 receives a frame at time 51.277s ++++
+++++ frame_probe ID: 1083 receives a frame at time 51.277s ++++
+++++ frame_probe ID: 1084 receives a frame at time 51.277s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 51.2771s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 51.2776 s.  actual timeout duration is: 0.024207 s
+++++ frame_probe ID: 882 receives a frame at time 51.2877s ++++
+++++ frame_probe ID: 1050 receives a frame at time 51.6829s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++51.7235s ++++
+timeout timer start time: 51.7235
+++++ frame_probe ID: 882 receives a frame at time 51.7286s ++++
+++++ frame_probe ID: 883 receives a frame at time ++++ frame_probe ID: 884 receives a frame at time 51.7287s ++++
+51.7287s ++++
+++++ frame_probe ID: 890 receives a frame at time 51.7288s ++++
+++++ frame_probe ID: 860 receives a frame at time 51.7357s ++++
+++++ frame_probe ID: 1082 receives a frame at time 51.7384s ++++
+++++ frame_probe ID: 1083 receives a frame at time 51.7384s ++++
+++++ frame_probe ID: 1084 receives a frame at time 51.7384s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 51.7385s ++++
+timeout is terminated by correctly received ack frame.
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is killed  at time 51.7393 s.  actual timeout duration is: 0.01576 s
+INFO: Detected an invalid packet at item 1216
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 51.7487s ++++
+measurement 1/2 complete in 13 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 52.683s ++++
+++++ frame_probe ID: 1060 receives a frame at time 52.7235s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 52.7236
+INFO: Detected an invalid packet at item 1248
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 52.7278s ++++
+++++ frame_probe ID: 884 receives a frame at time 52.7279s ++++
+++++ frame_probe ID: 883 receives a frame at time 52.7279s ++++
+++++ frame_probe ID: 890 receives a frame at time 52.7279s ++++
+++++ frame_probe ID: 860 receives a frame at time 52.7348s ++++
+++++ frame_probe ID: 1082 receives a frame at time 52.7464s ++++
+++++ frame_probe ID: 1084 receives a frame at time ++++ frame_probe ID: 1083 receives a frame at time 52.7465s ++++
+52.7465s ++++
+++++ frame_probe ID: 1090 receives a frame at time 52.7465s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 52.7467 s.  actual timeout duration is: 0.023072 s
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 52.7562s ++++
+INFO: Detected an invalid packet at item 1312
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 52.8751s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++52.9157s ++++
+timeout timer start time: 52.9157
+++++ frame_probe ID: 882 receives a frame at time 52.9193s ++++
+++++ frame_probe ID: 884 receives a frame at time 52.9193s ++++
+++++ frame_probe ID: 883 receives a frame at time 52.9193s ++++
+++++ frame_probe ID: 890 receives a frame at time 52.9194s ++++
+++++ frame_probe ID: 860 receives a frame at time 52.9264s ++++
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 52.9371s ++++
+++++ frame_probe ID: 1083 receives a frame at time 52.9372s ++++
+++++ frame_probe ID: 1084 receives a frame at time 52.9372s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 52.9373s ++++
+++++ frame_probe ID: 1050 receives a frame at time 52.9374s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 52.9376 s.  actual timeout duration is: 0.021888 s
+INFO: Detected an invalid packet at item 1568
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++52.9445s ++++
+timeout timer start time: 52.9445
+INFO: Detected an invalid packet at item 1408
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 52.9865s ++++
+++++ frame_probe ID: 883 receives a frame at time 52.9866s ++++
+++++ frame_probe ID: 884 receives a frame at time 52.9866s ++++
+++++ frame_probe ID: 890 receives a frame at time 52.9866s ++++
+++++ frame_probe ID: 860 receives a frame at time 52.9935s ++++
+INFO: Detected an invalid packet at item 1664
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 53.0043s ++++
+++++ frame_probe ID: 1083 receives a frame at time 53.0043s ++++
+++++ frame_probe ID: 1084 receives a frame at time 53.0044s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 53.0044s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 53.0054 s.  actual timeout duration is: 0.060876 s
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.0157s ++++
+measurement 1/2 complete in 12 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 53.1168s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++53.1574s ++++
+timeout timer start time: 53.1575
+INFO: Detected an invalid packet at item 1504
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.1689s ++++
+++++ frame_probe ID: 883 receives a frame at time 53.169s ++++
+++++ frame_probe ID: 884 receives a frame at time 53.169s ++++
+++++ frame_probe ID: 890 receives a frame at time 53.1691s ++++
+++++ frame_probe ID: 860 receives a frame at time 53.176s ++++
+INFO: Detected an invalid packet at item 1760
+INFO: Parser returned #f
+++++ frame_probe ID: ++++ frame_probe ID: 1083 receives a frame at time 1082 receives a frame at time 53.186953.1869s ++++s ++++
+
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1090 receives a frame at time 53.187s ++++
+++++ frame_probe ID: 1084 receives a frame at time 53.1869s ++++
+* timeout ID: 10 timeout timer is killed  at time 53.188 s.  actual timeout duration is: 0.030511 s
+++++ frame_probe ID: 1050 receives a frame at time 53.1949s ++++
+INFO: Detected an invalid packet at item 1568
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.1981s ++++
+++++ frame_probe ID: 1060 receives a frame at time 53.2354s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 53.2355
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.246s ++++
+++++ frame_probe ID: 883 receives a frame at time 53.246s ++++
+++++ frame_probe ID: 884 receives a frame at time 53.246s ++++
+++++ frame_probe ID: 890 receives a frame at time 53.2461s ++++
+++++ frame_probe ID: 860 receives a frame at time 53.253s ++++
+++++ frame_probe ID: 1082 receives a frame at time 53.2638s ++++
+++++ frame_probe ID: 1083 receives a frame at time 53.2639s ++++
+++++ frame_probe ID: 1084 receives a frame at time 53.2639s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 53.264s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 53.2649 s.  actual timeout duration is: 0.02938 s
+INFO: Detected an invalid packet at item 1856
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.2743s ++++
+INFO: Detected an invalid packet at item 1664
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 53.6317s ++++
++++ timeout ID: 10 start timeout +++++++ frame_probe ID: 1060 receives a frame at time 53.6722s ++++
+timeout timer start time: 53.6722
+++++ frame_probe ID: 882 receives a frame at time 53.678s ++++
+++++ frame_probe ID: 883 receives a frame at time 53.678s ++++
+++++ frame_probe ID: 884 receives a frame at time 53.6781s ++++
+++++ frame_probe ID: 890 receives a frame at time 53.6781s ++++
+++++ frame_probe ID: 860 receives a frame at time 53.685s ++++
+++++ frame_probe ID: 1082 receives a frame at time 53.6949s ++++
+++++ frame_probe ID: 1083 receives a frame at time 53.695s ++++
+++++ frame_probe ID: 1084 receives a frame at time 53.695s ++++
+++++ frame_probe ID: 1090 receives a frame at time 53.695s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 53.6953 s.  actual timeout duration is: 0.023079 s
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1984
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1728
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.7072s ++++
+++++ frame_probe ID: 1050 receives a frame at time 53.8575s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++53.8981s ++++
+timeout timer start time: 53.8982
+INFO: Detected an invalid packet at item 1760
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.9085s ++++
+++++ frame_probe ID: 883 receives a frame at time 53.9085s ++++
+++++ frame_probe ID: 884 receives a frame at time 53.9085s ++++
+++++ frame_probe ID: 890 receives a frame at time 53.9085s ++++
+++++ frame_probe ID: 860 receives a frame at time 53.9155s ++++
+++++ frame_probe ID: 1082 receives a frame at time 53.9254s ++++
+++++ frame_probe ID: 1083 receives a frame at time 53.9255s ++++
+++++ frame_probe ID: 1084 receives a frame at time 53.9255s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 53.9256s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 53.9264 s.  actual timeout duration is: 0.028154 s
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 53.9368s ++++
+++++ frame_probe ID: 1050 receives a frame at time 53.9834s ++++
+measurement 1/2 complete in 11 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++54.0239s ++++
+timeout timer start time: 54.0239
+INFO: Detected an invalid packet at item 1824
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 54.0328s ++++
+++++ frame_probe ID: 883 receives a frame at time 54.0328s ++++
+++++ frame_probe ID: 884 receives a frame at time 54.0329s ++++
+++++ frame_probe ID: 890 receives a frame at time 54.0329s ++++
+++++ frame_probe ID: 860 receives a frame at time 54.0398s ++++
+++++ frame_probe ID: 1082 receives a frame at time 54.0497s ++++
+++++ frame_probe ID: 1083 receives a frame at time 54.0498s ++++
+++++ frame_probe ID: 1084 receives a frame at time 54.0498s ++++
+++++ frame_probe ID: 1090 receives a frame at time 54.0499s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 54.0501 s.  actual timeout duration is: 0.026143 s
+INFO: Detected an invalid packet at item 2176
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1888
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 54.062s ++++
+++++ frame_probe ID: 1050 receives a frame at time 54.1555s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++54.196s ++++
+timeout timer start time: 54.1961
+++++ frame_probe ID: 882 receives a frame at time 54.2052s ++++
+++++ frame_probe ID: 883 receives a frame at time 54.2053s ++++
+++++ frame_probe ID: 884 receives a frame at time 54.2053s ++++
+++++ frame_probe ID: 890 receives a frame at time 54.2053s ++++
+++++ frame_probe ID: 860 receives a frame at time 54.2123s ++++
+INFO: Detected an invalid packet at item 2272
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 54.2232s ++++
+++++ frame_probe ID: 1083 receives a frame at time 54.2232s ++++
+++++ frame_probe ID: 1084 receives a frame at time 54.2233s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 54.2234s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 54.2234 s.  actual timeout duration is: 0.027363 s
+++++ frame_probe ID: 882 receives a frame at time 54.2344s ++++
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 54.3877s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++54.4284s ++++
+timeout timer start time: 54.4285
+INFO: Detected an invalid packet at item 1984
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 54.4366s ++++
+++++ frame_probe ID: 883 receives a frame at time 54.4367s ++++
+++++ frame_probe ID: 884 receives a frame at time 54.4367s ++++
+++++ frame_probe ID: 890 receives a frame at time 54.4367s ++++
+++++ frame_probe ID: 860 receives a frame at time 54.4437s ++++
+++++ frame_probe ID: 1082 receives a frame at time 54.4536s ++++
+++++ frame_probe ID: 1083 receives a frame at time 54.4537s ++++
+++++ frame_probe ID: 1084 receives a frame at time 54.4537s ++++
+++++ frame_probe ID: 1090 receives a frame at time 54.4538s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 54.4547 s.  actual timeout duration is: 0.026218 s
+INFO: Detected an invalid packet at item 2400
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 54.465s ++++
+INFO: Detected an invalid packet at item 2048
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 54.5523s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++54.5928s ++++
+timeout timer start time: 54.5929
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 54.599s ++++
+++++ frame_probe ID: 883 receives a frame at time 54.5991s ++++
+++++ frame_probe ID: 884 receives a frame at time 54.5991s ++++
+++++ frame_probe ID: 890 receives a frame at time 54.5992s ++++
+++++ frame_probe ID: 860 receives a frame at time 54.6061s ++++
+++++ frame_probe ID: 1082 receives a frame at time 54.6169s ++++
+++++ frame_probe ID: 1083 receives a frame at time 54.617s ++++
+++++ frame_probe ID: 1090 receives a frame at time 54.617s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1084 receives a frame at time 54.617s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 54.618 s.  actual timeout duration is: 0.02515 s
+++++ frame_probe ID: 882 receives a frame at time 54.6274s ++++
+INFO: Detected an invalid packet at item 2144
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 54.8941s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++54.9346s ++++
+timeout timer start time: 54.9346
+++++ frame_probe ID: 882 receives a frame at time 54.944s ++++
+++++ frame_probe ID: 883 receives a frame at time 54.944s ++++
+++++ frame_probe ID: 884 receives a frame at time 54.944s ++++
+++++ frame_probe ID: 890 receives a frame at time 54.9441s ++++
+++++ frame_probe ID: 860 receives a frame at time 54.951s ++++
+++++ frame_probe ID: 1082 receives a frame at time 54.9619s ++++
+++++ frame_probe ID: 1083 receives a frame at time 54.9619s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 54.962s ++++
+++++ frame_probe ID: 1084 receives a frame at time 54.962s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 54.9629 s.  actual timeout duration is: 0.028271 s
+++++ frame_probe ID: 882 receives a frame at time 54.9732s ++++
+INFO: Detected an invalid packet at item 2208
+INFO: Parser returned #f
+measurement 1/2 complete in 10 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 55.1263s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++55.167s ++++
+timeout timer start time: 55.167
+INFO: Detected an invalid packet at item 2240
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 55.1745s ++++
+++++ frame_probe ID: 883 receives a frame at time 55.1745s ++++
+++++ frame_probe ID: 884 receives a frame at time 55.1745s ++++
+++++ frame_probe ID: 890 receives a frame at time 55.1746s ++++
+++++ frame_probe ID: 860 receives a frame at time 55.1815s ++++
+INFO: Detected an invalid packet at item 2624
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 55.1923s ++++
+++++ frame_probe ID: 1083 receives a frame at time 55.1923s ++++
+++++ frame_probe ID: 1084 receives a frame at time 55.1923s ++++
+++++ frame_probe ID: 1090 receives a frame at time 55.1924s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 55.1932 s.  actual timeout duration is: 0.026158 s
+++++ frame_probe ID: 882 receives a frame at time 55.2037s ++++
+++++ frame_probe ID: 1050 receives a frame at time 55.3033s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++55.3439s ++++
+timeout timer start time: 55.344
+++++ frame_probe ID: 882 receives a frame at time 55.3478s ++++
+++++ frame_probe ID: 883 receives a frame at time 55.3478s ++++
+++++ frame_probe ID: 884 receives a frame at time 55.3478s ++++
+++++ frame_probe ID: 890 receives a frame at time 55.3479s ++++
+++++ frame_probe ID: 860 receives a frame at time 55.3548s ++++
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 55.3647s ++++
+++++ frame_probe ID: 1083 receives a frame at time 55.3647s ++++
+++++ frame_probe ID: 1084 receives a frame at time 55.3647s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 55.3648s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 55.365 s.  actual timeout duration is: 0.020975 s
+INFO: Detected an invalid packet at item 2368
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 55.377s ++++
+++++ frame_probe ID: 1050 receives a frame at time 55.465s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++55.5057s ++++
+timeout timer start time: 55.5058
+++++ frame_probe ID: 882 receives a frame at time 55.5111s ++++
+++++ frame_probe ID: 883 receives a frame at time 55.5112s ++++
+++++ frame_probe ID: 884 receives a frame at time 55.5112s ++++
+++++ frame_probe ID: 890 receives a frame at time 55.5112s ++++
+++++ frame_probe ID: 860 receives a frame at time 55.5182s ++++
+++++ frame_probe ID: 1082 receives a frame at time 55.5281s ++++
+++++ frame_probe ID: 1083 receives a frame at time 55.5281s ++++
+++++ frame_probe ID: 1084 receives a frame at time 55.5282s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 55.5282s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 55.5289 s.  actual timeout duration is: 0.023086 s
+INFO: Detected an invalid packet at item 2784
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 55.5403s ++++
+INFO: Detected an invalid packet at item 2432
+INFO: Parser returned #f
+measurement 1/2 complete in 9 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 56.1943s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.2349s ++++
+timeout timer start time: 56.2349
+INFO: Detected an invalid packet at item 2464
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.2407s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.2408s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.2408s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.2408s ++++
+++++ frame_probe ID: 860 receives a frame at time 56.2478s ++++
+INFO: Detected an invalid packet at item 2880
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 56.2568s ++++
+++++ frame_probe ID: 1083 receives a frame at time 56.2568s ++++
+++++ frame_probe ID: 1084 receives a frame at time 56.2569s ++++
+++++ frame_probe ID: 1090 receives a frame at time 56.2569s ++++
+++++ frame_probe ID: 1050 receives a frame at time 56.2569s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.258 s.  actual timeout duration is: 0.023026 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.264s ++++
+timeout timer start time: 56.264
+INFO: Detected an invalid packet at item 2528
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.3079s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.3079s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.308s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.308s ++++
+++++ frame_probe ID: 860 receives a frame at time 56.3149s ++++
+++++ frame_probe ID: ++++ frame_probe ID: 1083 receives a frame at time 1082 receives a frame at time 56.32556.325s ++++s ++++
+
+++++ frame_probe ID: 1084 receives a frame at time 56.325s ++++
+++++ frame_probe ID: 1090 receives a frame at time 56.325s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.3259 s.  actual timeout duration is: 0.061888 s
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2976
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.3362s ++++
+INFO: Detected an invalid packet at item 2592
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 56.3886s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.4292s ++++
+timeout timer start time: 56.4293
+++++ frame_probe ID: 882 receives a frame at time 56.4322s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.4323s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.4323s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.4323s ++++
+++++ frame_probe ID: 860 receives a frame at time 56.4393s ++++
+INFO: Detected an invalid packet at item 3072
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 56.4492s ++++
+++++ frame_probe ID: 1083 receives a frame at time 56.4492s ++++
+++++ frame_probe ID: 1084 receives a frame at time 56.4492s ++++
+++++ frame_probe ID: 1090 receives a frame at time 56.4493s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.4502 s.  actual timeout duration is: 0.020927 s
+++++ frame_probe ID: 882 receives a frame at time 56.4615s ++++
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 56.4799s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.5204s ++++
+timeout timer start time: 56.5204
+INFO: Detected an invalid packet at item 2688
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.5284s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.5285s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.5285s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.5286s ++++
+++++ frame_probe ID: 860 receives a frame at time 56.5355s ++++
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 56.5444s ++++
+++++ frame_probe ID: 1083 receives a frame at time 56.5445s ++++
+++++ frame_probe ID: 1084 receives a frame at time 56.5445s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 56.5446s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.5446 s.  actual timeout duration is: 0.024159 s
+++++ frame_probe ID: 882 receives a frame at time 56.5577s ++++
+INFO: Detected an invalid packet at item 2752
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 56.5823s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.6228s ++++
+timeout timer start time: 56.6228
+INFO: Detected an invalid packet at item 2784
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.6346s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.6346s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.6347s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.6347s ++++
+++++ frame_probe ID: 860 receives a frame at time 56.6417s ++++
+++++ frame_probe ID: 1082 receives a frame at time 56.6488s ++++
+++++ frame_probe ID: 1083 receives a frame at time 56.6488s ++++
+++++ frame_probe ID: 1084 receives a frame at time 56.649s ++++
+++++ frame_probe ID: 1090 receives a frame at time 56.649s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.6499 s.  actual timeout duration is: 0.027102 s
+INFO: Detected an invalid packet at item 2848
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 56.663s ++++
+++++ frame_probe ID: 1050 receives a frame at time 56.7918s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++56.8324s ++++
+timeout timer start time: 56.8325
+++++ frame_probe ID: 882 receives a frame at time 56.8361s ++++
+++++ frame_probe ID: 883 receives a frame at time 56.8362s ++++
+++++ frame_probe ID: 884 receives a frame at time 56.8362s ++++
+++++ frame_probe ID: 890 receives a frame at time 56.8362s ++++
+INFO: Detected an invalid packet at item 2880
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 56.8432s ++++
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 56.8512s ++++
+++++ frame_probe ID: 1083 receives a frame at time 56.8512s ++++
+++++ frame_probe ID: 1084 receives a frame at time 56.8513s ++++
+++++ frame_probe ID: 1090 receives a frame at time 56.8513s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 56.8514 s.  actual timeout duration is: 0.01884 s
+++++ frame_probe ID: 882 receives a frame at time 56.8653s ++++
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+measurement 1/2 complete in 8 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 57.0986s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.1392s ++++
+timeout timer start time: 57.1392
+++++ frame_probe ID: 882 receives a frame at time 57.1428s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.1428s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.1429s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.1429s ++++
+INFO: Detected an invalid packet at item 2976
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 57.1498s ++++
+INFO: Detected an invalid packet at item 3424
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 57.157s ++++
+++++ frame_probe ID: 1083 receives a frame at time 57.1571s ++++
+++++ frame_probe ID: 1084 receives a frame at time 57.1571s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.1577s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 57.1582 s.  actual timeout duration is: 0.018906 s
+++++ frame_probe ID: 882 receives a frame at time 57.1721s ++++
+++++ frame_probe ID: 1050 receives a frame at time 57.2015s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.242s ++++
+timeout timer start time: 57.2421
+++++ frame_probe ID: 882 receives a frame at time 57.249s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.249s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.2491s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.2491s ++++
+++++ frame_probe ID: 860 receives a frame at time 57.256s ++++
+++++ frame_probe ID: 1082 receives a frame at time 57.2632s ++++
+++++ frame_probe ID: 1083 receives a frame at time 57.2633s ++++
+++++ frame_probe ID: 1084 receives a frame at time 57.2633s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.2634s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 57.2641 s.  actual timeout duration is: 0.022024 s
+INFO: Detected an invalid packet at item 3520
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 57.2782s ++++
+INFO: Detected an invalid packet at item 3072
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 57.6707s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.7112s ++++
+timeout timer start time: 57.7112
+INFO: Detected an invalid packet at item 3104
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 57.7191s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.7191s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.7191s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.7192s ++++
+++++ frame_probe ID: 860 receives a frame at time 57.7261s ++++
+INFO: Detected an invalid packet at item 3616
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 57.7332s ++++
+++++ frame_probe ID: 1083 receives a frame at time ++++ frame_probe ID: 57.73331084 receives a frame at time s ++++
+57.7333s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.7333s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 57.7333s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 57.7342 s.  actual timeout duration is: 0.023027 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.7405s ++++
+timeout timer start time: 57.7405
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 57.7771s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.7772s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.7772s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.7772s ++++
+++++ frame_probe ID: 860 receives a frame at time 57.7842s ++++
+++++ frame_probe ID: 1082 receives a frame at time 57.7915s ++++
+++++ frame_probe ID: 1083 receives a frame at time 57.7915s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.7916s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1084 receives a frame at time 57.7916s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 57.792 s.  actual timeout duration is: 0.051483 s
+++++ frame_probe ID: 882 receives a frame at time 57.8064s ++++
+INFO: Detected an invalid packet at item 3232
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 57.8446s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.8852s ++++
+timeout timer start time: 57.8852
+++++ frame_probe ID: 882 receives a frame at time 57.8924s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.8924s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.8925s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.8925s ++++
+INFO: Detected an invalid packet at item 3264
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 57.8994s ++++
+++++ frame_probe ID: 1082 receives a frame at time 57.9066s ++++
+++++ frame_probe ID: 1083 receives a frame at time 57.9066s ++++
+++++ frame_probe ID: 1084 receives a frame at time 57.9066s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.9067s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 57.9067s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 57.9072 s.  actual timeout duration is: 0.022038 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++57.9137s ++++
+timeout timer start time: 57.9137
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 57.9496s ++++
+++++ frame_probe ID: 883 receives a frame at time 57.9496s ++++
+++++ frame_probe ID: 884 receives a frame at time 57.9496s ++++
+++++ frame_probe ID: 890 receives a frame at time 57.9496s ++++
+++++ frame_probe ID: 860 receives a frame at time 57.9565s ++++
+INFO: Detected an invalid packet at item 3776
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 57.9629s ++++
+++++ frame_probe ID: 1083 receives a frame at time 57.9629s ++++
+++++ frame_probe ID: 1084 receives a frame at time 57.9629s ++++
+++++ frame_probe ID: 1090 receives a frame at time 57.9629s ++++
++++  timeout ID: 10 kill timeout  +++* timeout ID: 10 timeout timer is killed  at time timeout is terminated by correctly received ack frame.
+57.963 s.  actual timeout duration is: 0.049242 s
+INFO: Detected an invalid packet at item 3392
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 57.9788s ++++
+measurement 1/2 complete in 7 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 58.3361s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++58.3767s ++++
+timeout timer start time: 58.3767
+++++ frame_probe ID: 882 receives a frame at time 58.3826s ++++
+++++ frame_probe ID: 883 receives a frame at time 58.3826s ++++
+++++ frame_probe ID: 884 receives a frame at time 58.3826s ++++
+++++ frame_probe ID: 890 receives a frame at time 58.3826s ++++
+INFO: Detected an invalid packet at item 3424
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 58.3896s ++++
+++++ frame_probe ID: 1082 receives a frame at time 58.3957s ++++
+++++ frame_probe ID: 1083 receives a frame at time 58.3957s ++++
+++++ frame_probe ID: 1084 receives a frame at time 58.3957s ++++
+++++ frame_probe ID: 1090 receives a frame at time 58.3958s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 58.3959s ++++
+* timeout ID: 10 timeout timer is killed  at time 58.3966 s.  actual timeout duration is: 0.019921 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++58.4029s ++++
+timeout timer start time: 58.4029
+INFO: Detected an invalid packet at item 3488
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 58.4396s ++++
+++++ frame_probe ID: 883 receives a frame at time 58.4396s ++++
+++++ frame_probe ID: 884 receives a frame at time 58.4397s ++++
+++++ frame_probe ID: 890 receives a frame at time 58.4397s ++++
+++++ frame_probe ID: 860 receives a frame at time 58.4466s ++++
+++++ frame_probe ID: 1082 receives a frame at time 58.4529s ++++
+++++ frame_probe ID: 1083 receives a frame at time 58.4529s ++++
+++++ frame_probe ID: 1084 receives a frame at time 58.4529s ++++
+++++ frame_probe ID: 1090 receives a frame at time 58.4529s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 58.4532 s.  actual timeout duration is: 0.050315 s
+INFO: Detected an invalid packet at item 3904
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3936
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 58.4679s ++++
+INFO: Detected an invalid packet at item 3552
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 58.5892s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++58.6297s ++++
+timeout timer start time: 58.6298
+INFO: Detected an invalid packet at item 3584
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 58.6411s ++++
+++++ frame_probe ID: 883 receives a frame at time 58.6411s ++++
+++++ frame_probe ID: 884 receives a frame at time 58.6411s ++++
+++++ frame_probe ID: 890 receives a frame at time 58.6412s ++++
+++++ frame_probe ID: 860 receives a frame at time 58.6481s ++++
+INFO: Detected an invalid packet at item 4032
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 58.6534s ++++
+++++ frame_probe ID: 1083 receives a frame at time 58.6535s ++++
+++++ frame_probe ID: 1084 receives a frame at time 58.6535s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 58.6535s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 58.6538 s.  actual timeout duration is: 0.024039 s
+INFO: Detected an invalid packet at item 3648
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 58.6703s ++++
+++++ frame_probe ID: 1050 receives a frame at time 58.8602s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++58.9007s ++++
+timeout timer start time: 58.9008
+++++ frame_probe ID: 882 receives a frame at time 58.9097s ++++
+++++ frame_probe ID: 883 receives a frame at time 58.9097s ++++
+++++ frame_probe ID: 884 receives a frame at time 58.9097s ++++
+++++ frame_probe ID: 890 receives a frame at time 58.9098s ++++
+++++ frame_probe ID: 860 receives a frame at time 58.9167s ++++
+++++ frame_probe ID: 1082 receives a frame at time 58.9221s ++++
+++++ frame_probe ID: 1084 receives a frame at time 58.9221s ++++
+++++ frame_probe ID: 1083 receives a frame at time 58.9221s ++++
+++++ frame_probe ID: 1090 receives a frame at time 58.9222s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 58.9222s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 58.9228 s.  actual timeout duration is: 0.022008 s
+INFO: Detected an invalid packet at item 4128
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time 58.9292s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 58.9293
+INFO: Detected an invalid packet at item 3712
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 58.9678s ++++
+++++ frame_probe ID: 883 receives a frame at time 58.9678s ++++
+++++ frame_probe ID: 884 receives a frame at time 58.9678s ++++
+++++ frame_probe ID: 890 receives a frame at time 58.9679s ++++
+++++ frame_probe ID: 860 receives a frame at time 58.9748s ++++
+++++ frame_probe ID: 1082 receives a frame at time 58.9801s ++++
+++++ frame_probe ID: 1083 receives a frame at time 58.9802s ++++
+++++ frame_probe ID: 1084 receives a frame at time 58.9802s ++++
+++++ frame_probe ID: 1090 receives a frame at time 58.9802s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 58.9803s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 58.9807 s.  actual timeout duration is: 0.051457 s
+INFO: Detected an invalid packet at item 4192
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time 58.9873s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 58.9874
+INFO: Detected an invalid packet at item 3776
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.025s ++++
+++++ frame_probe ID: 883 receives a frame at time 59.025s ++++
+++++ frame_probe ID: 884 receives a frame at time 59.0251s ++++
+++++ frame_probe ID: 890 receives a frame at time 59.0251s ++++
+measurement 1/2 complete in 6 second(s).
+++++ frame_probe ID: 860 receives a frame at time 59.032s ++++
+++++ frame_probe ID: 1082 receives a frame at time 59.0374s ++++
+++++ frame_probe ID: 1083 receives a frame at time 59.0374s ++++
+++++ frame_probe ID: 1084 receives a frame at time 59.0374s ++++
+++++ frame_probe ID: 1090 receives a frame at time 59.0375s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 59.0379 s.  actual timeout duration is: 0.050513 s
+INFO: Detected an invalid packet at item 4256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3840
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.0532s ++++
+++++ frame_probe ID: 1050 receives a frame at time 59.2951s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++59.3358s ++++
+timeout timer start time: 59.3358
+++++ frame_probe ID: 882 receives a frame at time 59.3416s ++++
+++++ frame_probe ID: 883 receives a frame at time 59.3417s ++++
+++++ frame_probe ID: 884 receives a frame at time 59.3417s ++++
+++++ frame_probe ID: 890 receives a frame at time 59.3417s ++++
+INFO: Detected an invalid packet at item 3872
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 59.3487s ++++
+++++ frame_probe ID: 1082 receives a frame at time 59.354s ++++
+++++ frame_probe ID: 1083 receives a frame at time 59.3541s ++++
+++++ frame_probe ID: 1084 receives a frame at time 59.3541s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 59.3541s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 59.3548 s.  actual timeout duration is: 0.01896 s
+INFO: Detected an invalid packet at item 4384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3936
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.3699s ++++
+++++ frame_probe ID: 1050 receives a frame at time 59.4856s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++59.5261s ++++
+timeout timer start time: 59.5262
+++++ frame_probe ID: 882 receives a frame at time 59.5332s ++++
+++++ frame_probe ID: 883 receives a frame at time 59.5332s ++++
+++++ frame_probe ID: 884 receives a frame at time 59.5332s ++++
+++++ frame_probe ID: 890 receives a frame at time 59.5333s ++++
+INFO: Detected an invalid packet at item 3968
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 59.5402s ++++
+++++ frame_probe ID: 1082 receives a frame at time 59.5464s ++++
+++++ frame_probe ID: 1083 receives a frame at time 59.5464s ++++
+++++ frame_probe ID: 1084 receives a frame at time 59.5465s ++++
+++++ frame_probe ID: 1090 receives a frame at time 59.5465s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 59.5472 s.  actual timeout duration is: 0.021078 s
+INFO: Detected an invalid packet at item 4032
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.5624s ++++
+++++ frame_probe ID: 1050 receives a frame at time 59.5732s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++59.6137s ++++
+timeout timer start time: 59.6137
+++++ frame_probe ID: 882 receives a frame at time 59.6194s ++++
+++++ frame_probe ID: 883 receives a frame at time 59.6194s ++++
+++++ frame_probe ID: 884 receives a frame at time 59.6194s ++++
+++++ frame_probe ID: 890 receives a frame at time 59.6195s ++++
+INFO: Detected an invalid packet at item 4064
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 59.6263s ++++
+++++ frame_probe ID: 1082 receives a frame at time 59.6326s ++++
+++++ frame_probe ID: 1083 receives a frame at time 59.6326s ++++
+++++ frame_probe ID: 1084 receives a frame at time 59.6327s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 59.6328s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 59.6336 s.  actual timeout duration is: 0.019925 s
+INFO: Detected an invalid packet at item 4128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.6485s ++++
+++++ frame_probe ID: 1050 receives a frame at time 59.7966s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++59.8372s ++++
+timeout timer start time: 59.8372
+++++ frame_probe ID: 882 receives a frame at time 59.8399s ++++
+++++ frame_probe ID: 883 receives a frame at time 59.8399s ++++
+++++ frame_probe ID: 884 receives a frame at time 59.8399s ++++
+++++ frame_probe ID: 890 receives a frame at time 59.84s ++++
+INFO: Detected an invalid packet at item 4160
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 59.8469s ++++
+INFO: Detected an invalid packet at item 4608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4640
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 59.8532s ++++
+++++ frame_probe ID: 1083 receives a frame at time 59.8532s ++++
+++++ frame_probe ID: 1084 receives a frame at time 59.8533s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 10 kill timeout  +++59.8533s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 59.8539 s.  actual timeout duration is: 0.016722 s
+INFO: Detected an invalid packet at item 4224
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 59.8692s ++++
+measurement 1/2 complete in 5 second(s).
+measurement 1/2 complete in 4 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 61.7722s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++61.8126s ++++
+timeout timer start time: 61.8127
+++++ frame_probe ID: 882 receives a frame at time 61.8182s ++++
+++++ frame_probe ID: 883 receives a frame at time 61.8182s ++++
+++++ frame_probe ID: 884 receives a frame at time 61.8183s ++++
+++++ frame_probe ID: 890 receives a frame at time 61.8183s ++++
+INFO: Detected an invalid packet at item 4256
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 61.8252s ++++
+INFO: Detected an invalid packet at item 4736
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 61.8315s ++++
+++++ frame_probe ID: 1083 receives a frame at time 61.8315s ++++
+++++ frame_probe ID: 1084 receives a frame at time 61.8315s ++++
+++++ frame_probe ID: 1090 receives a frame at time 61.8316s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 61.8326 s.  actual timeout duration is: 0.019883 s
+++++ frame_probe ID: 882 receives a frame at time 61.8475s ++++
+INFO: Detected an invalid packet at item 4320
+INFO: Parser returned #f
+measurement 1/2 complete in 3 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 62.0438s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++62.0843s ++++
+timeout timer start time: 62.0844
+++++ frame_probe ID: 882 receives a frame at time 62.0868s ++++
+++++ frame_probe ID: 883 receives a frame at time 62.0869s ++++
+++++ frame_probe ID: 884 receives a frame at time 62.0869s ++++
+++++ frame_probe ID: 890 receives a frame at time 62.0869s ++++
+INFO: Detected an invalid packet at item 4352
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 62.0938s ++++
+INFO: Detected an invalid packet at item 4832
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 62.0992s ++++
+++++ frame_probe ID: 1083 receives a frame at time 62.0992s ++++
+++++ frame_probe ID: 1084 receives a frame at time 62.0993s ++++
+++++ frame_probe ID: 1090 receives a frame at time 62.0993s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 62.1 s.  actual timeout duration is: 0.015631 s
+INFO: Detected an invalid packet at item 4416
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 62.1161s ++++
+++++ frame_probe ID: 1050 receives a frame at time 63.0197s ++++
+measurement 1/2 complete in 2 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.0603s ++++
+timeout timer start time: 63.0603
+++++ frame_probe ID: 882 receives a frame at time 63.066s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.0661s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.0661s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.0661s ++++
+INFO: Detected an invalid packet at item 4448
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 63.0731s ++++
+INFO: Detected an invalid packet at item 4928
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 63.0784s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.0785s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.0785s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 63.0786s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 63.0792 s.  actual timeout duration is: 0.018932 s
+INFO: Detected an invalid packet at item 4512
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.0953s ++++
+++++ frame_probe ID: 1050 receives a frame at time 63.251s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.2916s ++++
+timeout timer start time: 63.2917
+++++ frame_probe ID: 882 receives a frame at time 63.2966s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.2966s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.2967s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.2967s ++++
+INFO: Detected an invalid packet at item 4544
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 63.3036s ++++
+INFO: Detected an invalid packet at item 5024
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 63.3089s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.3089s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.3089s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.309s ++++
+++++ frame_probe ID: 1050 receives a frame at time 63.309s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 63.3095 s.  actual timeout duration is: 0.017839 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 63.316s ++++
+10 start timeout +++timeout timer start time: 63.3161
+INFO: Detected an invalid packet at item 4608
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.3547s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.3547s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.3547s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.3548s ++++
+++++ frame_probe ID: 860 receives a frame at time 63.3616s ++++
+++++ frame_probe ID: 1082 receives a frame at time 63.367s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.3671s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.3671s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.3671s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 63.3674 s.  actual timeout duration is: 0.051345 s
+INFO: Detected an invalid packet at item 5088
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.383s ++++
+++++ frame_probe ID: 1050 receives a frame at time 63.564s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.6045s ++++
+timeout timer start time: 63.6046
+++++ frame_probe ID: 882 receives a frame at time 63.6132s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.6133s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.6133s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.6133s ++++
+INFO: Detected an invalid packet at item 4672
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 63.6202s ++++
+INFO: Detected an invalid packet at item 5184
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 63.6257s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.6257s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.6257s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.6258s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 63.6259s ++++
+* timeout ID: 10 timeout timer is killed  at time 63.6264 s.  actual timeout duration is: 0.021861 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.6328s ++++
+timeout timer start time: 63.6329
+INFO: Detected an invalid packet at item 4736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.6705s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 63.6705s ++++
+63.6705s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.6706s ++++
+++++ frame_probe ID: 860 receives a frame at time 63.6774s ++++
+INFO: Detected an invalid packet at item 5248
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 63.6837s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.6838s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.6838s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.6838s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 63.6841 s.  actual timeout duration is: 0.051222 s
+INFO: Detected an invalid packet at item 5280
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.6997s ++++
+++++ frame_probe ID: 1050 receives a frame at time 63.7744s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.815s ++++
+timeout timer start time: 63.815
+INFO: Detected an invalid packet at item 4800
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.8247s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.8248s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.8248s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.8248s ++++
+++++ frame_probe ID: 860 receives a frame at time 63.8317s ++++
+INFO: Detected an invalid packet at item 5376
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 63.8371s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.8371s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.8372s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.8372s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time timeout is terminated by correctly received ack frame.
+63.8373s ++++
+* timeout ID: 10 timeout timer is killed  at time 63.8381 s.  actual timeout duration is: 0.023071 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++63.8442s ++++
+timeout timer start time: 63.8443
+INFO: Detected an invalid packet at item 4864
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 63.8819s ++++
+++++ frame_probe ID: 884 receives a frame at time 63.882s ++++
+++++ frame_probe ID: 883 receives a frame at time 63.882s ++++
+++++ frame_probe ID: 890 receives a frame at time 63.882s ++++
+++++ frame_probe ID: 860 receives a frame at time 63.8889s ++++
+++++ frame_probe ID: 1082 receives a frame at time 63.8943s ++++
+++++ frame_probe ID: 1083 receives a frame at time 63.8943s ++++
+++++ frame_probe ID: 1084 receives a frame at time 63.8943s ++++
+++++ frame_probe ID: 1090 receives a frame at time 63.8944s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 63.8946 s.  actual timeout duration is: 0.050351 s
+++++ frame_probe ID: 882 receives a frame at time 63.9111s ++++
+INFO: Detected an invalid packet at item 4928
+INFO: Parser returned #f
+measurement 1/2 complete in 1 second(s).
+measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/.
+regex pattern is: _________________________________
+*_1.txt
+/home/inets/source/gr-inets/results
+receiver_ack_sent_1.txt receiver_data_received_1.txt receiver_frame_analyzed_1.txt receiver_frame_received_1.txt sender_ack_received_1.txt sender_bfr_dq_1.txt sender_data_sent_1.txt sender_frame_analyzed_1.txt sender_frame_checked_good_1.txt sender_frame_received_1.txt sender_retransmissions_1.txt
+'receiver_ack_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/receiver_ack_sent_1.txt'
+'receiver_data_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/receiver_data_received_1.txt'
+'receiver_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/receiver_frame_analyzed_1.txt'
+'receiver_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/receiver_frame_received_1.txt'
+'sender_ack_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_ack_received_1.txt'
+'sender_bfr_dq_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_bfr_dq_1.txt'
+'sender_data_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_data_sent_1.txt'
+'sender_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_frame_analyzed_1.txt'
+'sender_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_frame_checked_good_1.txt'
+'sender_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_frame_received_1.txt'
+'sender_retransmissions_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/sender_retransmissions_1.txt'
+measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/1/.
+
+measurement 2/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+develop_mode of timeout ID: 10 is activated.
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 2/2 complete in 19 second(s).
+develop_mode of general_timer ID: 1 is activated.
+measurement 2/2 complete in 18 second(s).
+node starts running at 67.3715
+general_timer 1 is triggered at time 67.3716 s
+timer start time: 67.3717
+++++ frame_probe ID: 1050 receives a frame at time 67.9906s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++68.0313s ++++
+timeout timer start time: 68.0313
+++++ frame_probe ID: 882 receives a frame at time 68.0388s ++++
+++++ frame_probe ID: 883 receives a frame at time 68.0389s ++++
+++++ frame_probe ID: 884 receives a frame at time 68.0389s ++++
+++++ frame_probe ID: 890 receives a frame at time 68.0389s ++++
+measurement 2/2 complete in 17 second(s).
+++++ frame_probe ID: 860 receives a frame at time 68.0459s ++++
+++++ frame_probe ID: 1082 receives a frame at time 68.0526s ++++
+++++ frame_probe ID: 1083 receives a frame at time 68.0526s ++++
+++++ frame_probe ID: 1084 receives a frame at time 68.0526s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1090 receives a frame at time 68.0527s ++++
+* timeout ID: 10 timeout timer is killed  at time 68.0533 s.  actual timeout duration is: 0.021923 s
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 68.0671s ++++
+++++ frame_probe ID: 1050 receives a frame at time 68.1833s ++++
+++++ frame_probe ID: +++ timeout ID: 1060 receives a frame at time 10 start timeout +++68.2239s ++++
+timeout timer start time: 68.2239
+++++ frame_probe ID: 882 receives a frame at time 68.2294s ++++
+++++ frame_probe ID: 883 receives a frame at time 68.2294s ++++
+++++ frame_probe ID: 884 receives a frame at time 68.2295s ++++
+++++ frame_probe ID: 890 receives a frame at time 68.2295s ++++
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 68.2365s ++++
+++++ frame_probe ID: 1082 receives a frame at time 68.2449s ++++
+++++ frame_probe ID: 1083 receives a frame at time 68.2449s ++++
+++++ frame_probe ID: 1084 receives a frame at time 68.245s ++++
+++++ frame_probe ID: 1090 receives a frame at time 68.245s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 68.2459 s.  actual timeout duration is: 0.02197 s
+++++ frame_probe ID: 882 receives a frame at time 68.2586s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 68.3694s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++68.4099s ++++
+timeout timer start time: 68.41
+INFO: Detected an invalid packet at item 160
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 68.4218s ++++
+++++ frame_probe ID: 883 receives a frame at time 68.4218s ++++
+++++ frame_probe ID: 884 receives a frame at time 68.4218s ++++
+++++ frame_probe ID: 890 receives a frame at time 68.4219s ++++
+++++ frame_probe ID: 860 receives a frame at time 68.4288s ++++
+++++ frame_probe ID: 1082 receives a frame at time 68.4363s ++++
+++++ frame_probe ID: 1084 receives a frame at time ++++ frame_probe ID: 1083 receives a frame at time 68.436468.4364s ++++
+s ++++
+++++ frame_probe ID: 1090 receives a frame at time 68.4364s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 68.4369 s.  actual timeout duration is: 0.026975 s
+++++ frame_probe ID: 882 receives a frame at time 68.451s ++++
+INFO: Detected an invalid packet at item 224
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 68.5917s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++68.6321s ++++
+timeout timer start time: 68.6322
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 68.6424s ++++
+++++ frame_probe ID: 883 receives a frame at time 68.6424s ++++
+++++ frame_probe ID: 884 receives a frame at time 68.6424s ++++
+++++ frame_probe ID: 890 receives a frame at time 68.6425s ++++
+++++ frame_probe ID: 860 receives a frame at time 68.6495s ++++
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 68.656s ++++
+++++ frame_probe ID: 1084 receives a frame at time 68.656s ++++
+++++ frame_probe ID: 1083 receives a frame at time 68.656s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 68.65610s ++++ kill timeout  +++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 68.6563 s.  actual timeout duration is: 0.024137 s
+INFO: Detected an invalid packet at item 320
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 68.6715s ++++
+measurement 2/2 complete in 16 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 69.1685s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++69.209s ++++
+timeout timer start time: 69.209
+++++ frame_probe ID: 882 receives a frame at time 69.2185s ++++
+++++ frame_probe ID: 883 receives a frame at time 69.2185s ++++
+++++ frame_probe ID: 884 receives a frame at time 69.2186s ++++
+++++ frame_probe ID: 890 receives a frame at time 69.2186s ++++
+++++ frame_probe ID: 860 receives a frame at time 69.2255s ++++
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 69.2322s ++++
+++++ frame_probe ID: 1083 receives a frame at time 69.2323s ++++
+++++ frame_probe ID: 1084 receives a frame at time 69.2323s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 69.2323s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 69.2331 s.  actual timeout duration is: 0.02414 s
+++++ frame_probe ID: 882 receives a frame at time 69.2477s ++++
+++++ frame_probe ID: 1050 receives a frame at time 70.0296s ++++
+measurement 2/2 complete in 15 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++70.0701s ++++
+timeout timer start time: 70.0702
+++++ frame_probe ID: 882 receives a frame at time 70.0734s ++++
+++++ frame_probe ID: 883 receives a frame at time 70.0734s ++++
+++++ frame_probe ID: 884 receives a frame at time 70.0735s ++++
+++++ frame_probe ID: 890 receives a frame at time 70.0735s ++++
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 70.0805s ++++
+++++ frame_probe ID: 1082 receives a frame at time 70.0862s ++++
+++++ frame_probe ID: 1083 receives a frame at time 70.0862s ++++
+++++ frame_probe ID: 1084 receives a frame at time 70.0862s ++++
+++++ frame_probe ID: 1090 receives a frame at time 70.0863s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 70.0869 s.  actual timeout duration is: 0.016749 s
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 70.1026s ++++
+++++ frame_probe ID: 1050 receives a frame at time 70.2596s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++70.3002s ++++
+timeout timer start time: 70.3002
+++++ frame_probe ID: 882 receives a frame at time 70.304s ++++
+++++ frame_probe ID: 883 receives a frame at time 70.304s ++++
+++++ frame_probe ID: 884 receives a frame at time 70.304s ++++
+++++ frame_probe ID: 890 receives a frame at time 70.304s ++++
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 70.311s ++++
+++++ frame_probe ID: 1082 receives a frame at time 70.3167s ++++
+++++ frame_probe ID: 1084 receives a frame at time 70.3168s ++++
+++++ frame_probe ID: 1083 receives a frame at time 70.3168s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 10 kill timeout  +++70.3168s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 70.317 s.  actual timeout duration is: 0.016753 s
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 70.3322s ++++
+++++ frame_probe ID: 1050 receives a frame at time 70.4771s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++70.5178s ++++
+timeout timer start time: 70.5178
+++++ frame_probe ID: 882 receives a frame at time 70.5244s ++++
+++++ frame_probe ID: 883 receives a frame at time 70.5245s ++++
+++++ frame_probe ID: 884 receives a frame at time 70.5245s ++++
+++++ frame_probe ID: 890 receives a frame at time 70.5245s ++++
+++++ frame_probe ID: 860 receives a frame at time 70.5314s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 70.5381s ++++
+++++ frame_probe ID: 1083 receives a frame at time 70.5381s ++++
+++++ frame_probe ID: 1084 receives a frame at time 70.5382s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 70.538210s ++++
+ kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 70.5388 s.  actual timeout duration is: 0.021042 s
+++++ frame_probe ID: 882 receives a frame at time 70.5536s ++++
+++++ frame_probe ID: 1050 receives a frame at time 70.6639s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++70.7045s ++++
+timeout timer start time: 70.7045
+++++ frame_probe ID: 882 receives a frame at time 70.7069s ++++
+++++ frame_probe ID: 883 receives a frame at time 70.7069s ++++
+++++ frame_probe ID: 884 receives a frame at time 70.707s ++++
+++++ frame_probe ID: 890 receives a frame at time 70.707s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 70.7139s ++++
+++++ frame_probe ID: 1082 receives a frame at time 70.7205s ++++
+++++ frame_probe ID: 1083 receives a frame at time 70.7205s ++++
+++++ frame_probe ID: 1084 receives a frame at time 70.7205s ++++
+++++ frame_probe ID: 1090 receives a frame at time 70.7206s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 70.7212 s.  actual timeout duration is: 0.016748 s
+++++ frame_probe ID: 882 receives a frame at time 70.7361s ++++
+++++ frame_probe ID: 1050 receives a frame at time 70.8909s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++70.9314s ++++
+timeout timer start time: 70.9314
+++++ frame_probe ID: 882 receives a frame at time 70.9373s ++++
+++++ frame_probe ID: 883 receives a frame at time 70.9374s ++++
+++++ frame_probe ID: 884 receives a frame at time 70.9374s ++++
+++++ frame_probe ID: 890 receives a frame at time 70.9374s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 70.9444s ++++
+++++ frame_probe ID: 1082 receives a frame at time 70.9502s ++++
+++++ frame_probe ID: 1083 receives a frame at time 70.9502s ++++
+++++ frame_probe ID: 1084 receives a frame at time 70.9502s ++++
+++++ frame_probe ID: 1090 receives a frame at time 70.9503s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 70.9503 s.  actual timeout duration is: 0.018889 s
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 70.9666s ++++
+measurement 2/2 complete in 14 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 71.469s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++71.5097s ++++
+timeout timer start time: 71.5097
+++++ frame_probe ID: 882 receives a frame at time 71.5136s ++++
+++++ frame_probe ID: 883 receives a frame at time 71.5136s ++++
+++++ frame_probe ID: 884 receives a frame at time 71.5137s ++++
+++++ frame_probe ID: 890 receives a frame at time 71.5137s ++++
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 71.5206s ++++
+++++ frame_probe ID: 1082 receives a frame at time 71.5264s ++++
+++++ frame_probe ID: 1083 receives a frame at time 71.5264s ++++
+++++ frame_probe ID: 1084 receives a frame at time 71.5264s ++++
+++++ frame_probe ID: 1090 receives a frame at time 71.5265s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 71.5265 s.  actual timeout duration is: 0.016809 s
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 864
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 71.5419s ++++
+measurement 2/2 complete in 13 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 72.1611s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++72.2017s ++++
+timeout timer start time: 72.2017
+++++ frame_probe ID: 882 receives a frame at time 72.2042s ++++
+++++ frame_probe ID: 883 receives a frame at time 72.2042s ++++
+++++ frame_probe ID: 884 receives a frame at time 72.2043s ++++
+++++ frame_probe ID: 890 receives a frame at time 72.2043s ++++
+++++ frame_probe ID: 860 receives a frame at time 72.2112s ++++
+++++ frame_probe ID: 1082 receives a frame at time 72.218s ++++
+++++ frame_probe ID: 1083 receives a frame at time 72.218s ++++
+++++ frame_probe ID: 1084 receives a frame at time 72.218s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 72.2181s ++++10
+ kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 72.2181s ++++
+* timeout ID: 10 timeout timer is killed  at time 72.2185 s.  actual timeout duration is: 0.01681 s
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++72.2252s ++++
+timeout timer start time: 72.2253
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 72.2614s ++++
+++++ frame_probe ID: 883 receives a frame at time 72.2614s ++++
+++++ frame_probe ID: 884 receives a frame at time 72.2615s ++++
+++++ frame_probe ID: 890 receives a frame at time 72.2615s ++++
+++++ frame_probe ID: 860 receives a frame at time 72.2684s ++++
+++++ frame_probe ID: 1082 receives a frame at time 72.2751s ++++
+++++ frame_probe ID: 1083 receives a frame at time 72.2752s ++++
+++++ frame_probe ID: 1084 receives a frame at time 72.2752s ++++
+++++ frame_probe ID: 1090 receives a frame at time 72.2753s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 72.2755 s.  actual timeout duration is: 0.050238 s
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 72.2897s ++++
+++++ frame_probe ID: 1050 receives a frame at time 72.6857s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++72.7264s ++++
+timeout timer start time: 72.7265
+++++ frame_probe ID: 882 receives a frame at time 72.7315s ++++
+++++ frame_probe ID: 884 receives a frame at time 72.7315s ++++
+++++ frame_probe ID: 883 receives a frame at time 72.7315s ++++
+++++ frame_probe ID: 890 receives a frame at time 72.7316s ++++
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 72.7385s ++++
+++++ frame_probe ID: 1082 receives a frame at time 72.7461s ++++
+++++ frame_probe ID: 1083 receives a frame at time 72.7461s ++++
+++++ frame_probe ID: 1084 receives a frame at time 72.7461s ++++
+++++ frame_probe ID: 1090 receives a frame at time 72.7462s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 72.7464 s.  actual timeout duration is: 0.019927 s
+++++ frame_probe ID: 882 receives a frame at time 72.7607s ++++
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 72.818s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++72.8587s ++++
+timeout timer start time: 72.8587
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 72.8658s ++++
+++++ frame_probe ID: 883 receives a frame at time 72.8659s ++++
+++++ frame_probe ID: 884 receives a frame at time 72.8659s ++++
+++++ frame_probe ID: 890 receives a frame at time 72.8659s ++++
+++++ frame_probe ID: 860 receives a frame at time 72.8729s ++++
+++++ frame_probe ID: 1082 receives a frame at time 72.8804s ++++
+++++ frame_probe ID: 1083 receives a frame at time 72.8804s ++++
+++++ frame_probe ID: 1084 receives a frame at time 72.8804s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 72.8805s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 72.8808 s.  actual timeout duration is: 0.022099 s
+++++ frame_probe ID: 882 receives a frame at time 72.8951s ++++
+++++ frame_probe ID: 1050 receives a frame at time 72.9108s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++72.9513s ++++
+timeout timer start time: 72.9513
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 72.962s ++++
+++++ frame_probe ID: 883 receives a frame at time 72.962s ++++
+++++ frame_probe ID: 884 receives a frame at time 72.9621s ++++
+++++ frame_probe ID: 890 receives a frame at time 72.9621s ++++
+++++ frame_probe ID: 860 receives a frame at time 72.969s ++++
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 72.9766s ++++
+++++ frame_probe ID: 1083 receives a frame at time 72.9766s ++++
+++++ frame_probe ID: 1084 receives a frame at time 72.9766s ++++
+++++ frame_probe ID: 1090 receives a frame at time 72.9767s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 72.9775 s.  actual timeout duration is: 0.026192 s
+++++ frame_probe ID: 882 receives a frame at time 72.9912s ++++
+INFO: Detected an invalid packet at item 1184
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 73.0031s ++++
+measurement 2/2 complete in 12 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++73.0438s ++++
+timeout timer start time: 73.0438
+++++ frame_probe ID: 882 receives a frame at time 73.0483s ++++
+++++ frame_probe ID: 883 receives a frame at time 73.0483s ++++
+++++ frame_probe ID: 884 receives a frame at time 73.0483s ++++
+++++ frame_probe ID: 890 receives a frame at time 73.0483s ++++
+INFO: Detected an invalid packet at item 1216
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 73.0553s ++++
+INFO: Detected an invalid packet at item 1376
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 73.0619s ++++
+++++ frame_probe ID: 1083 receives a frame at time 73.0619s ++++
+++++ frame_probe ID: 1084 receives a frame at time 73.062s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 73.062s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 73.0627 s.  actual timeout duration is: 0.018838 s
+++++ frame_probe ID: 882 receives a frame at time 73.0774s ++++
+++++ frame_probe ID: 1050 receives a frame at time 73.1079s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++73.1484s ++++
+timeout timer start time: 73.1484
+++++ frame_probe ID: 882 receives a frame at time 73.1545s ++++
+++++ frame_probe ID: 883 receives a frame at time 73.1545s ++++
+++++ frame_probe ID: 884 receives a frame at time 73.1545s ++++
+++++ frame_probe ID: 890 receives a frame at time 73.1545s ++++
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 73.1615s ++++
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 73.1681s ++++
+++++ frame_probe ID: 1083 receives a frame at time 73.1681s ++++
+++++ frame_probe ID: 1084 receives a frame at time 73.1681s ++++
+++++ frame_probe ID: 1090 receives a frame at time 73.1682s ++++
+++++ frame_probe ID: 1050 receives a frame at time 73.1682s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 73.1684 s.  actual timeout duration is: 0.019903 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++73.1753s ++++
+timeout timer start time: 73.1753
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 73.2116s ++++
+++++ frame_probe ID: 883 receives a frame at time 73.2116s ++++
+++++ frame_probe ID: 884 receives a frame at time 73.2116s ++++
+++++ frame_probe ID: 890 receives a frame at time 73.2117s ++++
+++++ frame_probe ID: 860 receives a frame at time 73.2185s ++++
+++++ frame_probe ID: 1082 receives a frame at time 73.2252s ++++
+++++ frame_probe ID: 1083 receives a frame at time 73.2252s ++++
+++++ frame_probe ID: 1084 receives a frame at time 73.2253s ++++
+++++ frame_probe ID: 1090 receives a frame at time 73.2253s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 73.2256 s.  actual timeout duration is: 0.050287 s
+++++ frame_probe ID: 882 receives a frame at time 73.2491s ++++
+INFO: Detected an invalid packet at item 1408
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 73.6525s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++73.693s ++++
+timeout timer start time: 73.693
+++++ frame_probe ID: 882 receives a frame at time 73.7016s ++++
+++++ frame_probe ID: 883 receives a frame at time 73.7017s ++++
+++++ frame_probe ID: 884 receives a frame at time 73.7017s ++++
+++++ frame_probe ID: 890 receives a frame at time 73.7017s ++++
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 73.7086s ++++
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 73.7153s ++++
+++++ frame_probe ID: 1083 receives a frame at time 73.7153s ++++
+++++ frame_probe ID: 1084 receives a frame at time 73.7153s ++++
+++++ frame_probe ID: 1090 receives a frame at time 73.7153s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 73.7162 s.  actual timeout duration is: 0.023133 s
+++++ frame_probe ID: 882 receives a frame at time 73.7308s ++++
+INFO: Detected an invalid packet at item 1504
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 73.9637s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++74.0043s ++++
+timeout timer start time: 74.0044
+++++ frame_probe ID: 882 receives a frame at time 74.0092s ++++
+++++ frame_probe ID: 883 receives a frame at time 74.0092s ++++
+++++ frame_probe ID: 884 receives a frame at time 74.0093s ++++
+++++ frame_probe ID: 890 receives a frame at time 74.0093s ++++
+INFO: Detected an invalid packet at item 1536
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 74.0162s ++++
+++++ frame_probe ID: 1082 receives a frame at time 74.022s ++++
+++++ frame_probe ID: 1083 receives a frame at time 74.022s ++++
+++++ frame_probe ID: 1084 receives a frame at time 74.022s ++++
+++++ frame_probe ID: 1090 receives a frame at time 74.0221s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 74.0222 s.  actual timeout duration is: 0.017837 s
+INFO: Detected an invalid packet at item 1696
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 74.0375s ++++
+measurement 2/2 complete in 11 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 74.1786s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++74.2192s ++++
+timeout timer start time: 74.2193
+INFO: Detected an invalid packet at item 1632
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 74.2289s ++++
+++++ frame_probe ID: 883 receives a frame at time 74.2289s ++++
+++++ frame_probe ID: 884 receives a frame at time 74.229s ++++
+++++ frame_probe ID: 890 receives a frame at time 74.229s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.2359s ++++
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 74.2426s ++++
+++++ frame_probe ID: 1083 receives a frame at time 74.2426s ++++
+++++ frame_probe ID: 1084 receives a frame at time 74.2426s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 74.2427s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 74.2433 s.  actual timeout duration is: 0.02399 s
+INFO: Detected an invalid packet at item 1824
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 1696
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 74.2581s ++++
+++++ frame_probe ID: 1050 receives a frame at time 74.2633s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++74.3038s ++++
+timeout timer start time: 74.3038
+INFO: Detected an invalid packet at item 1728
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 74.316s ++++
+++++ frame_probe ID: 883 receives a frame at time 74.3161s ++++
+++++ frame_probe ID: 884 receives a frame at time 74.3161s ++++
+++++ frame_probe ID: 890 receives a frame at time 74.3161s ++++
+++++ frame_probe ID: 860 receives a frame at time 74.3231s ++++
+++++ frame_probe ID: 1082 receives a frame at time 74.3296s ++++
+++++ frame_probe ID: 1083 receives a frame at time 74.3297s ++++
+++++ frame_probe ID: 1084 receives a frame at time 74.3297s ++++
+++++ frame_probe ID: 1090 receives a frame at time 74.3297s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 74.33 s.  actual timeout duration is: 0.026167 s
+INFO: Detected an invalid packet at item 1920
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 74.3442s ++++
+++++ frame_probe ID: 1050 receives a frame at time 74.9428s ++++
+++++ frame_probe ID: 1060 receives a frame at time 74.9835s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 74.9836
+++++ frame_probe ID: 882 receives a frame at time 74.9875s ++++
+++++ frame_probe ID: 883 receives a frame at time 74.9876s ++++
+++++ frame_probe ID: 884 receives a frame at time 74.9876s ++++
+++++ frame_probe ID: 890 receives a frame at time 74.9876s ++++
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 74.9945s ++++
+INFO: Detected an invalid packet at item 2016
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 75.0013s ++++
+++++ frame_probe ID: 1083 receives a frame at time 75.0013s ++++
+++++ frame_probe ID: 1084 receives a frame at time 75.0013s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 75.0014s ++++
+* timeout ID: 10 timeout timer is killed  at time 75.0014 s.  actual timeout duration is: 0.017826 s
+timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 882 receives a frame at time 75.0168s ++++
+measurement 2/2 complete in 10 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 75.8176s ++++
+++++ frame_probe ID: 1060 receives a frame at time 75.8581s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 75.8582
+++++ frame_probe ID: 882 receives a frame at time 75.8615s ++++
+++++ frame_probe ID: 883 receives a frame at time 75.8615s ++++
+++++ frame_probe ID: 884 receives a frame at time 75.8615s ++++
+++++ frame_probe ID: 890 receives a frame at time 75.8616s ++++
+INFO: Detected an invalid packet at item 1856
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 75.8685s ++++
+++++ frame_probe ID: 1082 receives a frame at time 75.8753s ++++
+++++ frame_probe ID: 1083 receives a frame at time 75.8753s ++++
+++++ frame_probe ID: 1084 receives a frame at time 75.8753s ++++
+++++ frame_probe ID: 1090 receives a frame at time 75.8754s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 75.876 s.  actual timeout duration is: 0.017802 s
+INFO: Detected an invalid packet at item 2112
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 75.8897s ++++
+INFO: Detected an invalid packet at item 1920
+INFO: Parser returned #f
+measurement 2/2 complete in 9 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 76.7992s ++++
+++++ frame_probe ID: 1060 receives a frame at time 76.8398s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 76.8399
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 76.8498s ++++
+++++ frame_probe ID: 883 receives a frame at time 76.8498s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 890 receives a frame at time 76.8498s ++++
+76.8499s ++++
+++++ frame_probe ID: 860 receives a frame at time 76.8568s ++++
+INFO: Detected an invalid packet at item 2208
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 76.8634s ++++
+++++ frame_probe ID: 1083 receives a frame at time 76.8635s ++++
+++++ frame_probe ID: 1084 receives a frame at time 76.8635s ++++
+++++ frame_probe ID: 1090 receives a frame at time 76.8635s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 76.864 s.  actual timeout duration is: 0.024142 s
+++++ frame_probe ID: 882 receives a frame at time 76.8789s ++++
+++++ frame_probe ID: 1050 receives a frame at time 76.895s ++++
+++++ frame_probe ID: 1060 receives a frame at time 76.9354s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 76.9355
+INFO: Detected an invalid packet at item 2016
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 76.946s ++++
+++++ frame_probe ID: 883 receives a frame at time 76.946s ++++
+++++ frame_probe ID: 884 receives a frame at time 76.946s ++++
+++++ frame_probe ID: 890 receives a frame at time 76.9461s ++++
+++++ frame_probe ID: 860 receives a frame at time 76.953s ++++
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 76.9596s ++++
+++++ frame_probe ID: 1083 receives a frame at time 76.9597s ++++
+++++ frame_probe ID: 1084 receives a frame at time 76.9597s ++++
+++++ frame_probe ID: 1090 receives a frame at time +++  timeout ID: 10 kill timeout  +++76.9597s ++++
+timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 76.9598s ++++
+* timeout ID: 10 timeout timer is killed  at time 76.9606 s.  actual timeout duration is: 0.025113 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 76.9671s ++++
+10 start timeout +++timeout timer start time: 76.9671
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.0041s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.0041s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.0041s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.0042s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.011s ++++
+++++ frame_probe ID: 1082 receives a frame at time 77.0168s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.0168s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.0169s ++++
+++++ frame_probe ID: 1090 receives a frame at time 77.0169s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 77.0169s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 77.0178 s.  actual timeout duration is: 0.050759 s
+INFO: Detected an invalid packet at item 2368
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++77.0239s ++++
+timeout timer start time: 77.024
+INFO: Detected an invalid packet at item 2144
+INFO: Parser returned #f
+measurement 2/2 complete in 8 second(s).
+++++ frame_probe ID: 882 receives a frame at time 77.0612s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.0612s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.0613s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.0613s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.0682s ++++
+INFO: Detected an invalid packet at item 2432
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 77.0749s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.0749s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.075s ++++
+++++ frame_probe ID: 1090 receives a frame at time 77.075s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 77.0752 s.  actual timeout duration is: 0.051214 s
+++++ frame_probe ID: 882 receives a frame at time 77.0905s ++++
+++++ frame_probe ID: 1050 receives a frame at time 77.4333s ++++
+++++ frame_probe ID: 1060 receives a frame at time 77.4739s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 77.474
+INFO: Detected an invalid packet at item 2208
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.4832s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.4832s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.4833s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.4833s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.4902s ++++
+++++ frame_probe ID: 1082 receives a frame at time 77.4969s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.4969s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.4969s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 77.497s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 77.497 s.  actual timeout duration is: 0.023065 s
+INFO: Detected an invalid packet at item 2272
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.5124s ++++
+++++ frame_probe ID: 1050 receives a frame at time 77.6605s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++77.7011s ++++
+timeout timer start time: 77.7011
+++++ frame_probe ID: 882 receives a frame at time 77.7046s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.7047s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.7047s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.7047s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.7116s ++++
+++++ frame_probe ID: 1082 receives a frame at time 77.7183s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.7183s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.7183s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 77.7184s ++++
+timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 77.7185s ++++
+* timeout ID: 10 timeout timer is killed  at time 77.7189 s.  actual timeout duration is: 0.017834 s
+INFO: Detected an invalid packet at item 2592
+INFO: Parser returned #f
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++77.7255s ++++
+timeout timer start time: 77.7255
+INFO: Detected an invalid packet at item 2336
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.7617s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.7618s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.7618s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.7618s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.7688s ++++
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 77.7746s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.7747s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.7747s ++++
+++++ frame_probe ID: 1090 receives a frame at time 77.7747s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 77.7748s ++++
+* timeout ID: 10 timeout timer is killed  at time 77.7749 s.  actual timeout duration is: 0.049367 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++77.7819s ++++
+timeout timer start time: 77.7819
+INFO: Detected an invalid packet at item 2400
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.8199s ++++
+++++ frame_probe ID: 883 receives a frame at time 77.8199s ++++
+++++ frame_probe ID: 884 receives a frame at time 77.8199s ++++
+++++ frame_probe ID: 890 receives a frame at time 77.82s ++++
+++++ frame_probe ID: 860 receives a frame at time 77.8269s ++++
+++++ frame_probe ID: 1082 receives a frame at time 77.8326s ++++
+++++ frame_probe ID: 1083 receives a frame at time 77.8326s ++++
+++++ frame_probe ID: 1084 receives a frame at time 77.8326s ++++
+++++ frame_probe ID: 1090 receives a frame at time 77.8327s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 77.8333 s.  actual timeout duration is: 0.051459 s
+INFO: Detected an invalid packet at item 2720
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 2752
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 77.8482s ++++
+INFO: Detected an invalid packet at item 2464
+INFO: Parser returned #f
+measurement 2/2 complete in 7 second(s).
+measurement 2/2 complete in 6 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 79.2311s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++79.2716s ++++
+timeout timer start time: 79.2717
+++++ frame_probe ID: 882 receives a frame at time 79.2791s ++++
+++++ frame_probe ID: 884 receives a frame at time 79.2792s ++++
+++++ frame_probe ID: 883 receives a frame at time 79.2792s ++++
+++++ frame_probe ID: 890 receives a frame at time 79.2792s ++++
+INFO: Detected an invalid packet at item 2496
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 79.2861s ++++
+++++ frame_probe ID: 1082 receives a frame at time 79.2919s ++++
+++++ frame_probe ID: 1083 receives a frame at time 79.2919s ++++
+++++ frame_probe ID: 1084 receives a frame at time 79.2919s ++++
+++++ frame_probe ID: 1090 receives a frame at time 79.292s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 79.2926 s.  actual timeout duration is: 0.020963 s
+INFO: Detected an invalid packet at item 2848
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 79.3074s ++++
+INFO: Detected an invalid packet at item 2560
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 79.4543s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++79.4948s ++++
+timeout timer start time: 79.4948
+++++ frame_probe ID: 882 receives a frame at time 79.4988s ++++
+++++ frame_probe ID: 884 receives a frame at time 79.4988s ++++
+++++ frame_probe ID: 883 receives a frame at time 79.4988s ++++
+++++ frame_probe ID: 890 receives a frame at time 79.4988s ++++
+INFO: Detected an invalid packet at item 2592
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 79.5057s ++++
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 79.5124s ++++
+++++ frame_probe ID: 1083 receives a frame at time 79.5124s ++++
+++++ frame_probe ID: 1084 receives a frame at time 79.5125s ++++
+++++ frame_probe ID: 1090 receives a frame at time 79.5125s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 79.5125s ++++
+* timeout ID: 10 timeout timer is killed  at time 79.5126 s.  actual timeout duration is: 0.017719 s
+timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1060+++ timeout ID:  receives a frame at time 10 start timeout +++79.5195s ++++
+timeout timer start time: 79.5196
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 79.5568s ++++
+++++ frame_probe ID: 883 receives a frame at time 79.5569s ++++
+++++ frame_probe ID: 884 receives a frame at time 79.5569s ++++
+++++ frame_probe ID: 890 receives a frame at time 79.5569s ++++
+++++ frame_probe ID: 860 receives a frame at time 79.5638s ++++
+INFO: Detected an invalid packet at item 3008
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 79.5705s ++++
+++++ frame_probe ID: 1083 receives a frame at time 79.5705s ++++
+++++ frame_probe ID: 1084 receives a frame at time 79.5706s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 79.5706s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 79.5709 s.  actual timeout duration is: 0.051354 s
+++++ frame_probe ID: 882 receives a frame at time 79.5861s ++++
+INFO: Detected an invalid packet at item 2720
+INFO: Parser returned #f
+measurement 2/2 complete in 5 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 80.3134s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++80.354s ++++
+timeout timer start time: 80.354
+++++ frame_probe ID: 882 receives a frame at time 80.3636s ++++
+++++ frame_probe ID: 883 receives a frame at time 80.3636s ++++
+++++ frame_probe ID: 884 receives a frame at time 80.3637s ++++
+++++ frame_probe ID: 890 receives a frame at time 80.3637s ++++
+INFO: Detected an invalid packet at item 2752
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 80.3706s ++++
+INFO: Detected an invalid packet at item 3104
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 80.3754s ++++
+++++ frame_probe ID: 1083 receives a frame at time 80.3754s ++++
+++++ frame_probe ID: 1084 receives a frame at time 80.3755s ++++
+++++ frame_probe ID: 1090 receives a frame at time 80.3755s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1050 receives a frame at time 80.3755s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 80.376 s.  actual timeout duration is: 0.021959 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++80.3829s ++++
+timeout timer start time: 80.3829
+INFO: Detected an invalid packet at item 2816
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 80.4217s ++++
+++++ frame_probe ID: 883 receives a frame at time 80.4217s ++++
+++++ frame_probe ID: 884 receives a frame at time 80.4218s ++++
+++++ frame_probe ID: 890 receives a frame at time 80.4218s ++++
+++++ frame_probe ID: 860 receives a frame at time 80.4287s ++++
+++++ frame_probe ID: 1082 receives a frame at time 80.4335s ++++
+++++ frame_probe ID: 1083 receives a frame at time 80.4336s ++++
+++++ frame_probe ID: 1084 receives a frame at time 80.4336s ++++
+++++ frame_probe ID: 1090 receives a frame at time 80.4336s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 80.4343 s.  actual timeout duration is: 0.051369 s
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 80.45s ++++
+INFO: Detected an invalid packet at item 2880
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 80.6235s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++80.664s ++++
+timeout timer start time: 80.664
+++++ frame_probe ID: 882 receives a frame at time 80.6694s ++++
+++++ frame_probe ID: 883 receives a frame at time 80.6695s ++++
+++++ frame_probe ID: 884 receives a frame at time 80.6695s ++++
+++++ frame_probe ID: 890 receives a frame at time 80.6695s ++++
+INFO: Detected an invalid packet at item 2912
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 80.6765s ++++
+++++ frame_probe ID: 1082 receives a frame at time 80.6822s ++++
+++++ frame_probe ID: 1083 receives a frame at time 80.6822s ++++
+++++ frame_probe ID: 1084 receives a frame at time 80.6822s ++++
+++++ frame_probe ID: 1090 receives a frame at time 80.6823s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 80.6829 s.  actual timeout duration is: 0.018894 s
+INFO: Detected an invalid packet at item 2976
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 80.6988s ++++
+++++ frame_probe ID: 1050 receives a frame at time 80.7767s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++80.8174s ++++
+timeout timer start time: 80.8174
+++++ frame_probe ID: 882 receives a frame at time 80.8229s ++++
+++++ frame_probe ID: 883 receives a frame at time 80.823s ++++
+++++ frame_probe ID: 884 receives a frame at time 80.823s ++++
+++++ frame_probe ID: 890 receives a frame at time 80.823s ++++
+INFO: Detected an invalid packet at item 3008
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 80.8299s ++++
+++++ frame_probe ID: 1082 receives a frame at time 80.8355s ++++
+++++ frame_probe ID: 1083 receives a frame at time 80.8356s ++++
+++++ frame_probe ID: 1084 receives a frame at time 80.8356s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 80.8356s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 80.8363 s.  actual timeout duration is: 0.018912 s
+INFO: Detected an invalid packet at item 3072
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 80.8521s ++++
+++++ frame_probe ID: 1050 receives a frame at time 81.0446s ++++
+measurement 2/2 complete in 4 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++81.0851s ++++
+timeout timer start time: 81.0851
+++++ frame_probe ID: 882 receives a frame at time 81.0923s ++++
+++++ frame_probe ID: 883 receives a frame at time 81.0924s ++++
+++++ frame_probe ID: 884 receives a frame at time 81.0924s ++++
+++++ frame_probe ID: 890 receives a frame at time 81.0924s ++++
+INFO: Detected an invalid packet at item 3104
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 81.0993s ++++
+++++ frame_probe ID: 1082 receives a frame at time 81.1051s ++++
+++++ frame_probe ID: 1083 receives a frame at time 81.1051s ++++
+++++ frame_probe ID: 1084 receives a frame at time 81.1051s ++++
+++++ frame_probe ID: 1090 receives a frame at time 81.1052s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 81.1061 s.  actual timeout duration is: 0.02097 s
+INFO: Detected an invalid packet at item 3392
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 81.1206s ++++
+++++ frame_probe ID: 1050 receives a frame at time 81.2384s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++81.2788s ++++
+timeout timer start time: 81.2789
+++++ frame_probe ID: 882 receives a frame at time 81.2838s ++++
+++++ frame_probe ID: 883 receives a frame at time 81.2838s ++++
+++++ frame_probe ID: 884 receives a frame at time 81.2839s ++++
+++++ frame_probe ID: 890 receives a frame at time 81.2839s ++++
+INFO: Detected an invalid packet at item 3168
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 81.2908s ++++
+++++ frame_probe ID: 1082 receives a frame at time 81.2965s ++++
+++++ frame_probe ID: 1083 receives a frame at time 81.2966s ++++
+++++ frame_probe ID: 1084 receives a frame at time 81.2966s ++++
+++++ frame_probe ID: 1090 receives a frame at time 81.2966s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 81.2977 s.  actual timeout duration is: 0.018842 s
+++++ frame_probe ID: 882 receives a frame at time 81.3122s ++++
+INFO: Detected an invalid packet at item 3232
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 81.3454s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++81.3859s ++++
+timeout timer start time: 81.386
+++++ frame_probe ID: 882 receives a frame at time 81.3891s ++++
+++++ frame_probe ID: 883 receives a frame at time 81.3891s ++++
+++++ frame_probe ID: 884 receives a frame at time 81.3892s ++++
+++++ frame_probe ID: 890 receives a frame at time 81.3892s ++++
+INFO: Detected an invalid packet at item 3264
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 81.3961s ++++
+INFO: Detected an invalid packet at item 3552
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 81.4018s ++++
+++++ frame_probe ID: 1083 receives a frame at time 81.4019s ++++++++ frame_probe ID: 
+1084 receives a frame at time 81.4019s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 81.4019s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 81.4027 s.  actual timeout duration is: 0.016733 s
+++++ frame_probe ID: 882 receives a frame at time 81.4184s ++++
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+++++ frame_probe ID: 1050 receives a frame at time 81.7642s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++81.8048s ++++
+timeout timer start time: 81.8049
+++++ frame_probe ID: 882 receives a frame at time 81.8119s ++++
+++++ frame_probe ID: 883 receives a frame at time 81.812s ++++
+++++ frame_probe ID: 884 receives a frame at time 81.812s ++++
+++++ frame_probe ID: 890 receives a frame at time 81.812s ++++
+INFO: Detected an invalid packet at item 3360
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 81.819s ++++
+++++ frame_probe ID: 1082 receives a frame at time 81.8239s ++++
+++++ frame_probe ID: 1083 receives a frame at time 81.8239s ++++
+++++ frame_probe ID: 1084 receives a frame at time 81.824s ++++
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time 81.824s ++++
+timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 81.8248 s.  actual timeout duration is: 0.019856 s
+INFO: Detected an invalid packet at item 3424
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 81.8403s ++++
+++++ frame_probe ID: 1050 receives a frame at time 81.8577s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++81.8982s ++++
+timeout timer start time: 81.8982
+INFO: Detected an invalid packet at item 3456
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 81.9073s ++++
+++++ frame_probe ID: 884 receives a frame at time 81.9074s ++++
+++++ frame_probe ID: 883 receives a frame at time 81.9074s ++++
+++++ frame_probe ID: 890 receives a frame at time 81.9074s ++++
+++++ frame_probe ID: 860 receives a frame at time 81.9144s ++++
+INFO: Detected an invalid packet at item 3712
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 81.92s ++++
+++++ frame_probe ID: 1083 receives a frame at time 81.9201s ++++
+++++ frame_probe ID: 1084 receives a frame at time 81.9201s ++++
+++++ frame_probe ID: 1090 receives a frame at time 81.9201s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 81.9212 s.  actual timeout duration is: 0.022982 s
+INFO: Detected an invalid packet at item 3744
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 3520
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 81.9365s ++++
+measurement 2/2 complete in 3 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 82.1781s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++82.2187s ++++
+timeout timer start time: 82.2188
+++++ frame_probe ID: 882 receives a frame at time 82.2241s ++++
+++++ frame_probe ID: 883 receives a frame at time 82.2241s ++++
+++++ frame_probe ID: 884 receives a frame at time 82.2241s ++++
+++++ frame_probe ID: 890 receives a frame at time 82.2242s ++++
+INFO: Detected an invalid packet at item 3552
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 82.2311s ++++
+INFO: Detected an invalid packet at item 3840
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 82.2368s ++++
+++++ frame_probe ID: 1084 receives a frame at time 82.2368s ++++
+++++ frame_probe ID: 1083 receives a frame at time 82.2368s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1090 receives a frame at time 82.2369s ++++
+++++ frame_probe ID: 1050 receives a frame at time 82.237s ++++
+* timeout ID: 10 timeout timer is killed  at time 82.2377 s.  actual timeout duration is: 0.018888 s
+++++ frame_probe ID: 882 receives a frame at time 82.2532s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++82.2773s ++++
+timeout timer start time: 82.2774
+INFO: Detected an invalid packet at item 3616
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 82.4787 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++82.5195s ++++
+timeout timer start time: 82.5196
+++++ frame_probe ID: 882 receives a frame at time 82.5226s ++++
+++++ frame_probe ID: 883 receives a frame at time 82.5226s ++++
+++++ frame_probe ID: 884 receives a frame at time 82.5227s ++++
+++++ frame_probe ID: 890 receives a frame at time 82.5227s ++++
+INFO: Detected an invalid packet at item 3648
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 82.5296s ++++
+INFO: Detected an invalid packet at item 3936
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 82.5344s ++++
+INFO: Detected an invalid packet at item 3968
+++++ frame_probe ID: 1083 receives a frame at time 82.5344s ++++
+++++ frame_probe ID: 1084 receives a frame at time 82.5344s ++++
+INFO: Parser returned #f
++++  timeout ID: 10 kill timeout  +++++++ frame_probe ID: 1090 receives a frame at time timeout is terminated by correctly received ack frame.
+82.5345s ++++
+++++ frame_probe ID: 1050 receives a frame at time 82.5346s ++++
+INFO: Detected an invalid packet at item 4000
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4032
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4064
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4096
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4128
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4160
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4192
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4224
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is killed  at time 82.5354 s.  actual timeout duration is: 0.015811 s
+INFO: Detected an invalid packet at item 4256
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4288
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4320
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4352
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4384
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4416
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4448
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4480
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4512
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4544
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4576
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4608
+INFO: Parser returned #f
+INFO: Detected an invalid packet at item 4640
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 82.5454s ++++
+INFO: Detected an invalid packet at item 3712
+INFO: Parser returned #f
+measurement 2/2 complete in 2 second(s).
+measurement 2/2 complete in 1 second(s).
+measurement 2 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/.
+regex pattern is: _________________________________
+*_1.txt
+/home/inets/source/gr-inets/results
+receiver_ack_sent_1.txt receiver_data_received_1.txt receiver_frame_analyzed_1.txt receiver_frame_received_1.txt sender_ack_received_1.txt sender_bfr_dq_1.txt sender_data_sent_1.txt sender_frame_analyzed_1.txt sender_frame_checked_good_1.txt sender_frame_received_1.txt sender_retransmissions_1.txt
+'receiver_ack_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/receiver_ack_sent_1.txt'
+'receiver_data_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/receiver_data_received_1.txt'
+'receiver_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/receiver_frame_analyzed_1.txt'
+'receiver_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/receiver_frame_received_1.txt'
+'sender_ack_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_ack_received_1.txt'
+'sender_bfr_dq_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_bfr_dq_1.txt'
+'sender_data_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_data_sent_1.txt'
+'sender_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_frame_analyzed_1.txt'
+'sender_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_frame_checked_good_1.txt'
+'sender_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_frame_received_1.txt'
+'sender_retransmissions_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/sender_retransmissions_1.txt'
+measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/90/2/.
+
+now processing results...
+plotting python should be: python3 (ubuntu).
+Hello from rtt.py!
+hello from variables.py!
+data_sent: 1502362147.756895
+data_sent: 1502362147.897172
+data_sent: 1502362148.236151
+data_sent: 1502362149.538990
+data_sent: 1502362149.668384
+data_sent: 1502362149.723097
+data_sent: 1502362150.020589
+data_sent: 1502362150.077665
+data_sent: 1502362150.135804
+data_sent: 1502362150.192955
+data_sent: 1502362150.251059
+data_sent: 1502362150.308266
+data_sent: 1502362150.375178
+data_sent: 1502362150.663329
+data_sent: 1502362150.979522
+data_sent: 1502362151.212808
+data_sent: 1502362151.682856
+data_sent: 1502362152.682994
+data_sent: 1502362152.875084
+data_sent: 1502362152.937371
+data_sent: 1502362153.116842
+data_sent: 1502362153.194926
+data_sent: 1502362153.631659
+data_sent: 1502362153.857507
+data_sent: 1502362153.983385
+data_sent: 1502362154.155500
+data_sent: 1502362154.387706
+data_sent: 1502362154.552333
+data_sent: 1502362154.894088
+data_sent: 1502362155.126281
+data_sent: 1502362155.303335
+data_sent: 1502362155.464973
+data_sent: 1502362156.194324
+data_sent: 1502362156.256915
+data_sent: 1502362156.388574
+data_sent: 1502362156.479876
+data_sent: 1502362156.582301
+data_sent: 1502362156.791786
+data_sent: 1502362157.098646
+data_sent: 1502362157.201488
+data_sent: 1502362157.670679
+data_sent: 1502362157.733341
+data_sent: 1502362157.844636
+data_sent: 1502362157.906725
+data_sent: 1502362158.336147
+data_sent: 1502362158.395852
+data_sent: 1502362158.589222
+data_sent: 1502362158.860205
+data_sent: 1502362158.922216
+data_sent: 1502362158.980259
+data_sent: 1502362159.295072
+data_sent: 1502362159.485593
+data_sent: 1502362159.573242
+data_sent: 1502362159.796619
+data_sent: 1502362161.772157
+data_sent: 1502362162.043820
+data_sent: 1502362163.019728
+data_sent: 1502362163.251023
+data_sent: 1502362163.309011
+data_sent: 1502362163.563966
+data_sent: 1502362163.625854
+data_sent: 1502362163.774426
+data_sent: 1502362163.837258
+len63
+ack_received: 1502362147.812567
+ack_received: 1502362147.955956
+ack_received: 1502362148.301371
+ack_received: 1502362149.597519
+ack_received: 1502362149.722859
+ack_received: 1502362150.020538
+ack_received: 1502362150.077613
+ack_received: 1502362150.135734
+ack_received: 1502362150.192900
+ack_received: 1502362150.250960
+ack_received: 1502362150.308234
+ack_received: 1502362150.375171
+ack_received: 1502362150.433528
+ack_received: 1502362150.729941
+ack_received: 1502362151.046622
+ack_received: 1502362151.277105
+ack_received: 1502362151.738488
+ack_received: 1502362152.746528
+ack_received: 1502362152.937303
+ack_received: 1502362153.004424
+ack_received: 1502362153.186972
+ack_received: 1502362153.263957
+ack_received: 1502362153.695035
+ack_received: 1502362153.925555
+ack_received: 1502362154.049902
+ack_received: 1502362154.223361
+ack_received: 1502362154.453781
+ack_received: 1502362154.617042
+ack_received: 1502362154.961958
+ack_received: 1502362155.192447
+ack_received: 1502362155.364785
+ack_received: 1502362155.528248
+ack_received: 1502362156.256882
+ack_received: 1502362156.325045
+ack_received: 1502362156.449288
+ack_received: 1502362156.544571
+ack_received: 1502362156.648993
+ack_received: 1502362156.851329
+ack_received: 1502362157.157680
+ack_received: 1502362157.263371
+ack_received: 1502362157.733305
+ack_received: 1502362157.791570
+ack_received: 1502362157.906676
+ack_received: 1502362157.962939
+ack_received: 1502362158.395771
+ack_received: 1502362158.452942
+ack_received: 1502362158.653538
+ack_received: 1502362158.922168
+ack_received: 1502362158.980224
+ack_received: 1502362159.037477
+ack_received: 1502362159.354117
+ack_received: 1502362159.546505
+ack_received: 1502362159.632758
+ack_received: 1502362159.853298
+ack_received: 1502362161.831594
+ack_received: 1502362162.099298
+ack_received: 1502362163.078583
+ack_received: 1502362163.308977
+ack_received: 1502362163.367143
+ack_received: 1502362163.625764
+ack_received: 1502362163.683827
+ack_received: 1502362163.837182
+ack_received: 1502362163.894361
+len:63
+retx: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+The resulting RTTs of this single measurement are:
+[0.05567, 0.05878, 0.06522, 0.05853, 0.05447, 0.29744, 0.05702, 0.05807, 0.0571, 0.05801, 0.05717, 0.06691, 0.05835, 0.06661, 0.0671, 0.0643, 0.05563, 0.06353, 0.06222, 0.06705, 0.07013, 0.06903, 0.06338, 0.06805, 0.06652, 0.06786, 0.06607, 0.06471, 0.06787, 0.06617, 0.06145, 0.06328, 0.06256, 0.06813, 0.06071, 0.06469, 0.06669, 0.05954, 0.05903, 0.06188, 0.06263, 0.05823, 0.06204, 0.05621, 0.05962, 0.05709, 0.06432, 0.06196, 0.05801, 0.05722, 0.05904, 0.06091, 0.05952, 0.05668, 0.05944, 0.05548, 0.05886, 0.05795, 0.05813, 0.0618, 0.05797, 0.06276, 0.0571]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.06523650793650793
+
+
+abs. packet loss: 0.0
+packet loss in %: 0.0%
+data_sent: 1502362167.990649
+data_sent: 1502362168.183306
+data_sent: 1502362168.369356
+data_sent: 1502362168.591673
+data_sent: 1502362169.168524
+data_sent: 1502362170.029632
+data_sent: 1502362170.259600
+data_sent: 1502362170.477062
+data_sent: 1502362170.663906
+data_sent: 1502362170.890860
+data_sent: 1502362171.468981
+data_sent: 1502362172.161121
+data_sent: 1502362172.218140
+data_sent: 1502362172.685707
+data_sent: 1502362172.817961
+data_sent: 1502362172.910806
+data_sent: 1502362173.003118
+data_sent: 1502362173.107878
+data_sent: 1502362173.168205
+data_sent: 1502362173.652520
+data_sent: 1502362173.963716
+data_sent: 1502362174.178636
+data_sent: 1502362174.263316
+data_sent: 1502362174.942788
+data_sent: 1502362175.817556
+data_sent: 1502362176.799184
+data_sent: 1502362176.894956
+data_sent: 1502362176.959818
+data_sent: 1502362177.016949
+data_sent: 1502362177.433302
+data_sent: 1502362177.660521
+data_sent: 1502362177.718466
+data_sent: 1502362177.774818
+data_sent: 1502362179.231078
+data_sent: 1502362179.454255
+data_sent: 1502362179.512535
+data_sent: 1502362180.313446
+data_sent: 1502362180.375543
+data_sent: 1502362180.623525
+data_sent: 1502362180.776663
+data_sent: 1502362181.044561
+data_sent: 1502362181.238361
+data_sent: 1502362181.345426
+data_sent: 1502362181.764234
+data_sent: 1502362181.857688
+data_sent: 1502362182.178097
+data_sent: 1502362182.236967
+data_sent: 1502362182.534575
+len48
+ack_received: 1502362168.052719
+ack_received: 1502362168.245028
+ack_received: 1502362168.436435
+ack_received: 1502362168.656048
+ack_received: 1502362169.232348
+ack_received: 1502362170.086280
+ack_received: 1502362170.316811
+ack_received: 1502362170.538206
+ack_received: 1502362170.720552
+ack_received: 1502362170.950267
+ack_received: 1502362171.526473
+ack_received: 1502362172.218054
+ack_received: 1502362172.275271
+ack_received: 1502362172.746191
+ack_received: 1502362172.880495
+ack_received: 1502362172.976684
+ack_received: 1502362173.062000
+ack_received: 1502362173.168183
+ack_received: 1502362173.225303
+ack_received: 1502362173.715346
+ack_received: 1502362174.022079
+ack_received: 1502362174.242664
+ack_received: 1502362174.329733
+ack_received: 1502362175.001389
+ack_received: 1502362175.875405
+ack_received: 1502362176.863512
+ack_received: 1502362176.959746
+ack_received: 1502362177.016892
+ack_received: 1502362177.075015
+ack_received: 1502362177.496991
+ack_received: 1502362177.718387
+ack_received: 1502362177.774744
+ack_received: 1502362177.832683
+ack_received: 1502362179.291987
+ack_received: 1502362179.512483
+ack_received: 1502362179.570607
+ack_received: 1502362180.375507
+ack_received: 1502362180.433637
+ack_received: 1502362180.682283
+ack_received: 1502362180.835649
+ack_received: 1502362181.105162
+ack_received: 1502362181.296643
+ack_received: 1502362181.401933
+ack_received: 1502362181.824020
+ack_received: 1502362181.920136
+ack_received: 1502362182.236897
+ack_received: 1502362182.534501
+len:47
+retx: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+The resulting RTTs of this single measurement are:
+[0.06207, 0.06172, 0.06708, 0.06438, 0.06382, 0.05665, 0.05721, 0.06114, 0.05665, 0.05941, 0.05749, 0.05693, 0.05713, 0.06048, 0.06253, 0.06588, 0.05888, 0.06031, 0.0571, 0.06283, 0.05836, 0.06403, 0.06642, 0.0586, 0.05785, 0.06433, 0.06479, 0.05707, 0.05807, 0.06369, 0.05787, 0.05628, 0.05787, 0.06091, 0.05823, 0.05807, 0.06206, 0.05809, 0.05876, 0.05899, 0.0606, 0.05828, 0.05651, 0.05979, 0.06245, 0.0588, 0.29753]
+
+
+
+The resulting mean RTT of this single measurement is:
+0.06519127659574467
+
+
+abs. packet loss: 0.0
+packet loss in %: 0.0%
+[ 0.06523651  0.06519128]
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a pdf for you now!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a bar for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from myplot.py!
+I will print a line for you now!
+Hello from throughput.py!
+hello from variables.py!
+Hi, I'm busy with numpy.
+Numpy zeros done.
+I'll do my best to count some ACKs!
+Done.
+ackcount: 63
+datacount: 63
+I'll do my best to count some ACKs!
+Done.
+ackcount: 47
+datacount: 47
+[ 3150.  2350.]
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a pdf for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a bar for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a line for you now!
+Congrats, plotting throughput put through!
+
++--------------------------------------------------------------+
+| plotting completed. until the next measurement session then! |
++--------------------------------------------------------------+

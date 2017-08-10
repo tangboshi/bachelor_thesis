@@ -1,0 +1,1431 @@
+measurement 1/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+Using Volk machine: avx_64_mmx
+develop_mode of timeout ID: 10 is activated.
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 1/2 complete in 19 second(s).
+develop_mode of general_timer ID: 1 is activated.
+develop_mode of general_timer ID: 1 is activated.
+measurement 1/2 complete in 18 second(s).
+node starts running at 22.674
+general_timer 1 is triggered at time 22.674 s
+timer start time: 22.6742
+node starts running at 22.6781
+general_timer 1 is triggered at time 22.6782 s
+timer start time: 22.6782
+general_timer ID: 1 is expired at time 22.6862 s.  actual duration is: 0.0120499 [s]. the time bias is: 4.99134e-05
+* general timer ID: 1 output new command
+++++ frame_probe ID: 1050 receives a frame at time 22.7847s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++22.8256s ++++
+timeout timer start time: 22.8257
+INFO: Detected an invalid packet at item 0
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 23.0272 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 23.0682s ++++10
+ start timeout +++timeout timer start time: 23.0682
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 23.2701 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++23.3108s ++++
+timeout timer start time: 23.3109
+measurement 1/2 complete in 17 second(s).
+* timeout ID: 10 timeout timer is expired at time 23.5124 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++23.5531s ++++
+timeout timer start time: 23.5532
+INFO: Detected an invalid packet at item 64
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 23.5746s ++++
+++++ frame_probe ID: 1083 receives a frame at time 23.5746s ++++
+++++ frame_probe ID: 1084 receives a frame at time 23.5747s ++++
+++++ frame_probe ID: 1090 receives a frame at time 23.5748s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 23.5749s ++++
+* timeout ID: 10 timeout timer is killed  at time 23.5756 s.  actual timeout duration is: 0.022436 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++23.6165s ++++
+timeout timer start time: 23.6166
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 23.6508s ++++
+++++ frame_probe ID: 1083 receives a frame at time 23.6508s ++++
+++++ frame_probe ID: 1084 receives a frame at time 23.6509s ++++
+++++ frame_probe ID: 1090 receives a frame at time 23.651s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1050 receives a frame at time 23.6511s ++++
+* timeout ID: 10 timeout timer is killed  at time 23.6511 s.  actual timeout duration is: 0.034546 s
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++23.6918s ++++
+timeout timer start time: 23.6918
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 23.7186s ++++
+++++ frame_probe ID: 1083 receives a frame at time 23.7186s ++++
+++++ frame_probe ID: 1084 receives a frame at time 23.7187s ++++
+++++ frame_probe ID: 1090 receives a frame at time 23.7187s ++++
+++++ frame_probe ID: 1050 receives a frame at time 23.7188s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 23.72 s.  actual timeout duration is: 0.028205 s
+++++ frame_probe ID: 1060 receives a frame at time 23.7597s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 23.7597
+INFO: Detected an invalid packet at item 256
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 23.7859s ++++
+++++ frame_probe ID: 1083 receives a frame at time 23.786s ++++
+++++ frame_probe ID: 1084 receives a frame at time 23.7861s ++++
+++++ frame_probe ID: 1090 receives a frame at time 23.7862s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+* timeout ID: 10 timeout timer is killed  at time 23.7868 s.  actual timeout duration is: 0.027106 s
+++++ frame_probe ID: 1050 receives a frame at time 23.899s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++23.9396s ++++
+timeout timer start time: 23.9397
+++++ frame_probe ID: 1082 receives a frame at time 23.9593s ++++
+++++ frame_probe ID: 1084 receives a frame at time 23.9593s ++++
+++++ frame_probe ID: 1083 receives a frame at time 23.9594s ++++
++++  timeout ID: 10 kill timeout  +++timeout is terminated by correctly received ack frame.
+++++ frame_probe ID: 1090 receives a frame at time 23.9594s ++++
+* timeout ID: 10 timeout timer is killed  at time 23.9596 s.  actual timeout duration is: 0.019893 s
+measurement 1/2 complete in 16 second(s).
+++++ frame_probe ID: 1050 receives a frame at time 24.5329s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++24.5734s ++++
+timeout timer start time: 24.5735
+INFO: Detected an invalid packet at item 352
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 24.7746 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++24.8154s ++++
+timeout timer start time: 24.8154
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 25.0174 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++25.0582s ++++
+timeout timer start time: 25.0582
+INFO: Detected an invalid packet at item 416
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 25.2598 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++25.3005s ++++
+timeout timer start time: 25.3005
+INFO: Detected an invalid packet at item 448
+INFO: Parser returned #f
+measurement 1/2 complete in 15 second(s).
+* timeout ID: 10 timeout timer is expired at time 25.5017 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 1025.5424 start timeout +++s ++++
+timeout timer start time: 25.5424
+INFO: Detected an invalid packet at item 480
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 25.7438 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 25.744s ++++
++++ timeout ID: 10 start timeout +++++++ frame_probe ID: 1060 receives a frame at time 25.7848s ++++
+timeout timer start time: 25.7848
+INFO: Detected an invalid packet at item 512
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 25.9867 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 26.0275s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 26.0276
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 26.2286 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++26.2695s ++++
+timeout timer start time: 26.2696
+INFO: Detected an invalid packet at item 576
+INFO: Parser returned #f
+measurement 1/2 complete in 14 second(s).
+* timeout ID: 10 timeout timer is expired at time 26.4712 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 26.5119s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 26.5119
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 26.7137 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 26.7546s ++++10
+ start timeout +++timeout timer start time: 26.7546
+INFO: Detected an invalid packet at item 640
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 26.956 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 26.9563s ++++
+++++ frame_probe ID: 1060 receives a frame at time 26.9968s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 26.9969
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 27.1984 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++27.2391s ++++
+timeout timer start time: 27.2392
+INFO: Detected an invalid packet at item 704
+INFO: Parser returned #f
+measurement 1/2 complete in 13 second(s).
+* timeout ID: 10 timeout timer is expired at time 27.4412 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 27.4819s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 27.482
+INFO: Detected an invalid packet at item 736
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 27.6833 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++27.724s ++++
+timeout timer start time: 27.724
+* timeout ID: 10 timeout timer is expired at time 27.9261 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++27.9671s ++++
+timeout timer start time: 27.9671
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 28.1682 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 28.1685s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++28.2092s ++++
+timeout timer start time: 28.2092
+measurement 1/2 complete in 12 second(s).
+* timeout ID: 10 timeout timer is expired at time 28.4103 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 28.4511s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 28.4511
+INFO: Detected an invalid packet at item 800
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 28.6528 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++28.6935s ++++
+timeout timer start time: 28.6935
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 28.8948 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 28.9355s ++++10
+ start timeout +++timeout timer start time: 28.9355
+* timeout ID: 10 timeout timer is expired at time 29.1366 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++29.1773s ++++
+timeout timer start time: 29.1773
+INFO: Detected an invalid packet at item 864
+INFO: Parser returned #f
+measurement 1/2 complete in 11 second(s).
+* timeout ID: 10 timeout timer is expired at time 29.3787 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 29.3789s ++++
+++++ frame_probe ID: 1060 receives a frame at time 29.4195s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 29.4196
+INFO: Detected an invalid packet at item 896
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 29.6208 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++29.6616s ++++
+timeout timer start time: 29.6616
+INFO: Detected an invalid packet at item 928
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 29.8628 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++29.9036s ++++
+timeout timer start time: 29.9036
+INFO: Detected an invalid packet at item 960
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 30.1053 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 30.1461s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 30.1462
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+measurement 1/2 complete in 10 second(s).
+* timeout ID: 10 timeout timer is expired at time 30.3483 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++30.389s ++++
+timeout timer start time: 30.389
+INFO: Detected an invalid packet at item 1024
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 30.591 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 30.5912s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++30.6317s ++++
+timeout timer start time: 30.6317
+INFO: Detected an invalid packet at item 1056
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 30.8338 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++30.8745s ++++
+timeout timer start time: 30.8746
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 31.076 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 31.1167s ++++10 start timeout +++
+timeout timer start time: 31.1167
+* timeout ID: 10 timeout timer is expired at time 31.3188 s.  timeout duration is: 200 [ms]
+measurement 1/2 complete in 9 second(s).
+++++ frame_probe ID: 1060 receives a frame at time 31.3595s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 31.3595
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 31.5606 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 31.6013s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 31.6013
+INFO: Detected an invalid packet at item 1152
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 31.803 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 31.8032s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++31.8438s ++++
+timeout timer start time: 31.8439
+INFO: Detected an invalid packet at item 1184
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 32.045 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 32.0858s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 32.0858
+INFO: Detected an invalid packet at item 1216
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 32.2869 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++32.3276s ++++
+timeout timer start time: 32.3277
+INFO: Detected an invalid packet at item 1248
+INFO: Parser returned #f
+measurement 1/2 complete in 8 second(s).
+* timeout ID: 10 timeout timer is expired at time 32.5297 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++32.5704s ++++
+timeout timer start time: 32.5705
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 32.7721 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 32.8128s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 32.8128
+* timeout ID: 10 timeout timer is expired at time 33.0144 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 33.0146s ++++
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++33.0553s ++++
+timeout timer start time: 33.0553
+INFO: Detected an invalid packet at item 1312
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 33.2574 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++33.298s ++++
+timeout timer start time: 33.2981
+INFO: Detected an invalid packet at item 1344
+INFO: Parser returned #f
+measurement 1/2 complete in 7 second(s).
+* timeout ID: 10 timeout timer is expired at time 33.4998 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 33.5407s ++++
+10 start timeout +++timeout timer start time: 33.5407
+INFO: Detected an invalid packet at item 1376
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 33.7423 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++33.7831s ++++
+timeout timer start time: 33.7831
+INFO: Detected an invalid packet at item 1408
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 33.9847 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++34.0255s ++++
+timeout timer start time: 34.0255
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 34.2271 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 34.2273s ++++
+++++ frame_probe ID: 1060 receives a frame at time 34.2679s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 34.268
+INFO: Detected an invalid packet at item 1472
+INFO: Parser returned #f
+measurement 1/2 complete in 6 second(s).
+* timeout ID: 10 timeout timer is expired at time 34.4692 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++34.5101s ++++
+timeout timer start time: 34.5102
+* timeout ID: 10 timeout timer is expired at time 34.7117 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++34.7523s ++++
+timeout timer start time: 34.7523
+INFO: Detected an invalid packet at item 1504
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 34.9539 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++34.9946s ++++
+timeout timer start time: 34.9946
+INFO: Detected an invalid packet at item 1536
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 35.1965 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++35.2386s ++++
+timeout timer start time: 35.2387
+INFO: Detected an invalid packet at item 1568
+INFO: Parser returned #f
+measurement 1/2 complete in 5 second(s).
+* timeout ID: 10 timeout timer is expired at time 35.4405 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 35.4408s ++++
+++++ frame_probe ID: 1060 receives a frame at time 35.4813s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 35.4813
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 35.6825 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++35.7232s ++++
+timeout timer start time: 35.7233
+INFO: Detected an invalid packet at item 1632
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 35.9253 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++35.9662s ++++
+timeout timer start time: 35.9662
+INFO: Detected an invalid packet at item 1664
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 36.1681 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++36.2089s ++++
+timeout timer start time: 36.209
+measurement 1/2 complete in 4 second(s).
+* timeout ID: 10 timeout timer is expired at time 36.4107 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++36.4514s ++++
+timeout timer start time: 36.4514
+* timeout ID: 10 timeout timer is expired at time 36.6531 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 36.6533s ++++
+++++ frame_probe ID: 1060 receives a frame at time 36.6938s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 36.6939
+INFO: Detected an invalid packet at item 1696
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 36.8956 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++36.9364s ++++
+timeout timer start time: 36.9364
+* timeout ID: 10 timeout timer is expired at time 37.1381 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 37.1788s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 37.1806
+INFO: Detected an invalid packet at item 1728
+INFO: Parser returned #f
+measurement 1/2 complete in 3 second(s).
+* timeout ID: 10 timeout timer is expired at time 37.3825 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++37.4233s ++++
+timeout timer start time: 37.4233
+* timeout ID: 10 timeout timer is expired at time 37.6244 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 37.6652s ++++10 start timeout +++
+timeout timer start time: 37.6652
+INFO: Detected an invalid packet at item 1760
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 37.867 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 37.8673s ++++
+++++ frame_probe ID: 1060 receives a frame at time 37.9079s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 37.908
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 38.1093 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 38.15s ++++
+10 start timeout +++timeout timer start time: 38.15
+INFO: Detected an invalid packet at item 1824
+INFO: Parser returned #f
+measurement 1/2 complete in 2 second(s).
+* timeout ID: 10 timeout timer is expired at time 38.3515 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time 38.3923s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 38.3924
+INFO: Detected an invalid packet at item 1856
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 38.5944 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++38.6352s ++++
+timeout timer start time: 38.6352
+* timeout ID: 10 timeout timer is expired at time 38.8373 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++38.878s ++++
+timeout timer start time: 38.878
+INFO: Detected an invalid packet at item 1888
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 39.0796 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 39.0798s ++++
+++++ frame_probe ID: 1060 receives a frame at time 39.1203s +++++++ timeout ID: 
+10 start timeout +++timeout timer start time: 39.1203
+INFO: Detected an invalid packet at item 1920
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 39.3215 s.  timeout duration is: 200 [ms]
+measurement 1/2 complete in 1 second(s).
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++39.3626s ++++
+timeout timer start time: 39.3626
+INFO: Detected an invalid packet at item 1952
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 39.564 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++39.6047s ++++
+timeout timer start time: 39.6048
+INFO: Detected an invalid packet at item 1984
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 39.8065 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++39.8473s ++++
+timeout timer start time: 39.8473
+INFO: Detected an invalid packet at item 2016
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 40.0491 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1060 receives a frame at time +++ timeout ID: 10 start timeout +++40.0899s ++++
+timeout timer start time: 40.09
+INFO: Detected an invalid packet at item 2048
+INFO: Parser returned #f
+* timeout ID: 10 timeout timer is expired at time 40.2912 s.  timeout duration is: 200 [ms]
+++++ frame_probe ID: 1050 receives a frame at time 40.2914s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.332s ++++
++++ timeout ID: 10 start timeout +++timeout timer start time: 40.3321
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/.
+regex pattern is: _________________________________
+*_1.txt
+/home/inets/source/gr-inets/results
+receiver_ack_sent_1.txt receiver_data_received_1.txt receiver_frame_analyzed_1.txt receiver_frame_anlyzed_1.txt receiver_frame_checked_good_1.txt receiver_frame_received_1.txt sender_ack_received_1.txt sender_bfr_dq_1.txt sender_data_sent_1.txt sender_frame_analyzed_1.txt sender_frame_anlyzed_1.txt sender_frame_checked_bad_1.txt sender_frame_checked_good_1.txt sender_frame_received_1.txt sender_retransmissions_1.txt
+'receiver_ack_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_ack_sent_1.txt'
+'receiver_data_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_data_received_1.txt'
+'receiver_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_frame_analyzed_1.txt'
+'receiver_frame_anlyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_frame_anlyzed_1.txt'
+'receiver_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_frame_checked_good_1.txt'
+'receiver_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/receiver_frame_received_1.txt'
+'sender_ack_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_ack_received_1.txt'
+'sender_bfr_dq_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_bfr_dq_1.txt'
+'sender_data_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_data_sent_1.txt'
+'sender_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_frame_analyzed_1.txt'
+'sender_frame_anlyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_frame_anlyzed_1.txt'
+'sender_frame_checked_bad_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_frame_checked_bad_1.txt'
+'sender_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_frame_checked_good_1.txt'
+'sender_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_frame_received_1.txt'
+'sender_retransmissions_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/sender_retransmissions_1.txt'
+measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/1/.
+
+measurement 2/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+Using Volk machine: avx_64_mmx
+develop_mode of timeout ID: 10 is activated.
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 2/2 complete in 19 second(s).
+develop_mode of general_timer ID: 1 is activated.
+develop_mode of general_timer ID: 1 is activated.
+++++ frame_probe ID: 882 receives a frame at time 41.8175s ++++
+++++ frame_probe ID: 883 receives a frame at time 41.8176s ++++
+++++ frame_probe ID: 884 receives a frame at time 41.8177s ++++
+++++ frame_probe ID: 890 receives a frame at time 41.8177s ++++
+++++ frame_probe ID: 860 receives a frame at time 41.8249s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 41.8315s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.8316s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.8317s ++++
+measurement 2/2 complete in 18 second(s).
+node starts running at 42.6934
+general_timer 1 is triggered at time 42.6935 s
+timer start time: 42.6935
+general_timer ID: 1 is expired at time 42.7056 s.  actual duration is: 0.0120342 [s]. the time bias is: 3.41778e-05
+* general timer ID: 1 output new command
+measurement 2/2 complete in 17 second(s).
+measurement 2/2 complete in 16 second(s).
+measurement 2/2 complete in 15 second(s).
+measurement 2/2 complete in 14 second(s).
+measurement 2/2 complete in 13 second(s).
+measurement 2/2 complete in 12 second(s).
+measurement 2/2 complete in 11 second(s).
+measurement 2/2 complete in 10 second(s).
+measurement 2/2 complete in 9 second(s).
+measurement 2/2 complete in 8 second(s).
+measurement 2/2 complete in 7 second(s).
+measurement 2/2 complete in 6 second(s).
+measurement 2/2 complete in 5 second(s).
+measurement 2/2 complete in 4 second(s).
+measurement 2/2 complete in 3 second(s).
+measurement 2/2 complete in 2 second(s).
+measurement 2/2 complete in 1 second(s).
+measurement 2 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/.
+regex pattern is: _________________________________
+*_1.txt
+/home/inets/source/gr-inets/results
+receiver_ack_sent_1.txt receiver_data_received_1.txt receiver_frame_analyzed_1.txt receiver_frame_received_1.txt sender_frame_analyzed_1.txt sender_frame_checked_good_1.txt sender_frame_received_1.txt sender_retransmissions_1.txt
+'receiver_ack_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/receiver_ack_sent_1.txt'
+'receiver_data_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/receiver_data_received_1.txt'
+'receiver_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/receiver_frame_analyzed_1.txt'
+'receiver_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/receiver_frame_received_1.txt'
+'sender_frame_analyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_frame_analyzed_1.txt'
+'sender_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_frame_checked_good_1.txt'
+'sender_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_frame_received_1.txt'
+'sender_retransmissions_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_retransmissions_1.txt'
+measurement 2 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/.
+
+now processing results...
+plotting python should be: python3 (ubuntu).
+Hello from rtt.py!
+hello from variables.py!
+data_sent: 1502371099.855863
+data_sent: 1502371100.037083
+data_sent: 1502371100.299540
+data_sent: 1502371100.515078
+data_sent: 1502371100.648335
+data_sent: 1502371100.788006
+data_sent: 1502371100.932357
+data_sent: 1502371101.058485
+data_sent: 1502371101.158730
+data_sent: 1502371101.243003
+data_sent: 1502371101.461589
+data_sent: 1502371101.580670
+data_sent: 1502371101.731798
+data_sent: 1502371101.975192
+data_sent: 1502371102.161195
+data_sent: 1502371102.269171
+data_sent: 1502371102.446587
+data_sent: 1502371102.588866
+data_sent: 1502371102.673172
+data_sent: 1502371102.795328
+data_sent: 1502371102.968702
+data_sent: 1502371103.063108
+data_sent: 1502371103.221226
+data_sent: 1502371103.372804
+data_sent: 1502371103.550234
+data_sent: 1502371103.670753
+data_sent: 1502371103.817739
+data_sent: 1502371103.992153
+data_sent: 1502371104.069499
+data_sent: 1502371104.283632
+data_sent: 1502371104.468266
+data_sent: 1502371104.686552
+data_sent: 1502371104.841953
+data_sent: 1502371469.089711
+data_sent: 1502371470.304641
+data_sent: 1502371471.518589
+data_sent: 1502371472.732651
+data_sent: 1502371473.946965
+data_sent: 1502371475.162268
+data_sent: 1502371476.377938
+data_sent: 1502371477.592145
+data_sent: 1502371478.807911
+data_sent: 1502371480.024455
+data_sent: 1502371481.238357
+data_sent: 1502371482.453369
+data_sent: 1502371483.668376
+data_sent: 1502371484.883052
+data_sent: 1502371486.101857
+data_sent: 1502371487.316193
+data_sent: 1502371488.530774
+data_sent: 1502371489.745009
+data_sent: 1502371490.966307
+data_sent: 1502371492.181435
+data_sent: 1502371493.396176
+data_sent: 1502371500.417530
+data_sent: 1502371501.633022
+data_sent: 1502371502.849352
+data_sent: 1502371504.065317
+data_sent: 1502371505.279735
+data_sent: 1502371506.494072
+data_sent: 1502371507.709619
+data_sent: 1502371508.923261
+data_sent: 1502371510.136505
+data_sent: 1502371645.084157
+data_sent: 1502371645.311510
+data_sent: 1502371645.439951
+data_sent: 1502371645.649196
+data_sent: 1502371645.813068
+data_sent: 1502371646.061690
+data_sent: 1502371646.189082
+data_sent: 1502371646.467257
+data_sent: 1502371646.919056
+data_sent: 1502371647.145404
+data_sent: 1502371647.465023
+data_sent: 1502371647.651105
+data_sent: 1502371647.911354
+data_sent: 1502371648.025980
+data_sent: 1502371648.296615
+data_sent: 1502371648.462394
+data_sent: 1502371648.637318
+data_sent: 1502371648.794831
+data_sent: 1502371648.906394
+data_sent: 1502371648.993951
+data_sent: 1502371649.265597
+data_sent: 1502371649.379069
+data_sent: 1502371649.527978
+data_sent: 1502371649.787786
+data_sent: 1502371649.919548
+data_sent: 1502371650.053595
+data_sent: 1502371650.265412
+data_sent: 1502371650.490136
+data_sent: 1502371650.741188
+data_sent: 1502371650.975275
+data_sent: 1502371651.295063
+data_sent: 1502371651.566825
+data_sent: 1502371651.789950
+data_sent: 1502371651.999334
+data_sent: 1502371652.258200
+data_sent: 1502371652.503226
+data_sent: 1502371652.739489
+data_sent: 1502371653.124938
+data_sent: 1502371653.240410
+data_sent: 1502371653.469444
+data_sent: 1502371653.715268
+data_sent: 1502371653.826359
+data_sent: 1502371654.044628
+data_sent: 1502371654.159404
+data_sent: 1502371654.238085
+data_sent: 1502371654.408155
+data_sent: 1502371654.586276
+data_sent: 1502371654.917970
+data_sent: 1502371655.145998
+data_sent: 1502371655.401667
+data_sent: 1502371655.697555
+data_sent: 1502371655.773578
+data_sent: 1502371655.863124
+data_sent: 1502371656.094499
+data_sent: 1502371656.420486
+data_sent: 1502371656.913991
+data_sent: 1502371656.998789
+data_sent: 1502371657.336722
+data_sent: 1502371657.463057
+data_sent: 1502371657.686571
+data_sent: 1502371657.935037
+data_sent: 1502371658.555080
+data_sent: 1502371658.721663
+data_sent: 1502371658.914583
+data_sent: 1502371659.005012
+data_sent: 1502371659.097609
+data_sent: 1502371659.234449
+data_sent: 1502371659.411665
+data_sent: 1502371659.673881
+data_sent: 1502371659.887900
+data_sent: 1502371660.153588
+data_sent: 1502371660.235823
+data_sent: 1502371660.484540
+data_sent: 1502371660.649697
+data_sent: 1502371671.177978
+data_sent: 1502371672.393980
+data_sent: 1502371673.613846
+data_sent: 1502371674.828059
+data_sent: 1502371676.047126
+data_sent: 1502371677.264681
+data_sent: 1502371678.481051
+data_sent: 1502371679.034956
+data_sent: 1502371679.102583
+data_sent: 1502371679.169390
+data_sent: 1502371679.239901
+data_sent: 1502371679.304077
+data_sent: 1502371679.371253
+data_sent: 1502371679.438466
+data_sent: 1502371679.504945
+data_sent: 1502371679.572318
+data_sent: 1502371679.639441
+data_sent: 1502371679.709005
+data_sent: 1502371679.774577
+data_sent: 1502371679.842461
+data_sent: 1502371679.909161
+data_sent: 1502371679.980854
+data_sent: 1502371680.043569
+data_sent: 1502371680.111542
+data_sent: 1502371680.177802
+data_sent: 1502371680.244830
+data_sent: 1502371680.311698
+data_sent: 1502371680.379189
+data_sent: 1502371680.445963
+data_sent: 1502371680.513921
+data_sent: 1502371680.580577
+data_sent: 1502371680.768050
+data_sent: 1502371680.831327
+data_sent: 1502371680.888289
+data_sent: 1502371680.955662
+data_sent: 1502371681.022591
+data_sent: 1502371681.089972
+data_sent: 1502371681.849424
+data_sent: 1502371681.921968
+data_sent: 1502371682.117500
+data_sent: 1502371682.549300
+data_sent: 1502371682.661231
+data_sent: 1502371682.867154
+data_sent: 1502371682.938995
+data_sent: 1502371683.960435
+data_sent: 1502371684.063926
+data_sent: 1502371684.649919
+data_sent: 1502371684.735095
+data_sent: 1502371684.979169
+data_sent: 1502371685.152986
+data_sent: 1502371685.217863
+data_sent: 1502371685.629494
+data_sent: 1502371685.720305
+data_sent: 1502371686.063313
+data_sent: 1502371686.475824
+data_sent: 1502371687.242979
+data_sent: 1502371687.664702
+data_sent: 1502371687.789913
+data_sent: 1502371687.945463
+data_sent: 1502371688.531703
+data_sent: 1502371688.818066
+data_sent: 1502371688.996636
+data_sent: 1502371689.306095
+data_sent: 1502371689.372192
+data_sent: 1502371689.766308
+data_sent: 1502371689.909780
+data_sent: 1502371690.162151
+data_sent: 1502371690.813303
+data_sent: 1502371690.949114
+data_sent: 1502371691.393415
+data_sent: 1502371691.493560
+data_sent: 1502371691.656320
+data_sent: 1502371691.723383
+data_sent: 1502371692.031603
+data_sent: 1502371692.127737
+data_sent: 1502371692.195504
+data_sent: 1502371692.261572
+data_sent: 1502371692.329408
+data_sent: 1502371692.395201
+data_sent: 1502371692.613963
+data_sent: 1502371692.923331
+data_sent: 1502371692.990521
+data_sent: 1502371693.115829
+data_sent: 1502371693.452888
+data_sent: 1502371693.517830
+data_sent: 1502371693.585530
+data_sent: 1502371693.820711
+data_sent: 1502371694.373196
+data_sent: 1502371694.607543
+data_sent: 1502371694.670337
+data_sent: 1502371694.969198
+data_sent: 1502371695.035432
+data_sent: 1502371695.200020
+data_sent: 1502371695.300377
+data_sent: 1502371695.411513
+data_sent: 1502371695.490684
+data_sent: 1502371695.817736
+data_sent: 1502371696.448667
+data_sent: 1502371696.513271
+data_sent: 1502371696.580563
+data_sent: 1502371696.810148
+data_sent: 1502371696.963939
+data_sent: 1502371697.031613
+data_sent: 1502371697.412215
+data_sent: 1502371697.483047
+data_sent: 1502371697.659401
+data_sent: 1502371698.098076
+data_sent: 1502371698.190552
+data_sent: 1502371698.459253
+data_sent: 1502371698.529090
+data_sent: 1502371699.166412
+data_sent: 1502371699.229363
+data_sent: 1502371699.355832
+data_sent: 1502371699.486764
+data_sent: 1502371699.828664
+data_sent: 1502371700.069346
+data_sent: 1502371700.312065
+data_sent: 1502371700.409491
+data_sent: 1502371700.559318
+data_sent: 1502371701.111539
+data_sent: 1502371701.178987
+data_sent: 1502371701.246083
+data_sent: 1502371701.313079
+data_sent: 1502371701.380114
+data_sent: 1502371701.447316
+data_sent: 1502371701.586612
+data_sent: 1502371702.553306
+data_sent: 1502371702.618832
+data_sent: 1502371702.739938
+data_sent: 1502371702.801532
+data_sent: 1502371702.868521
+data_sent: 1502371702.935992
+data_sent: 1502371703.009630
+data_sent: 1502371703.097502
+data_sent: 1502371703.603771
+data_sent: 1502371703.931849
+data_sent: 1502371704.306479
+data_sent: 1502371704.568967
+data_sent: 1502371705.367895
+data_sent: 1502371705.476873
+data_sent: 1502371705.785306
+data_sent: 1502371706.316088
+data_sent: 1502371707.528243
+data_sent: 1502371708.740451
+data_sent: 1502371742.327333
+data_sent: 1502371742.449736
+data_sent: 1502371742.666758
+data_sent: 1502371742.846215
+data_sent: 1502371742.944706
+data_sent: 1502371743.124662
+data_sent: 1502371743.279464
+data_sent: 1502371743.474991
+data_sent: 1502371743.604031
+data_sent: 1502371743.747743
+data_sent: 1502371743.975556
+data_sent: 1502371744.157095
+data_sent: 1502371744.285543
+data_sent: 1502371744.477048
+data_sent: 1502371744.741280
+data_sent: 1502371744.914022
+data_sent: 1502371745.158355
+data_sent: 1502371745.338714
+data_sent: 1502371745.509146
+data_sent: 1502371745.735580
+data_sent: 1502371745.842102
+data_sent: 1502372050.225767
+data_sent: 1502372051.440118
+data_sent: 1502372052.655671
+data_sent: 1502372052.964393
+data_sent: 1502372053.060494
+data_sent: 1502372053.150469
+data_sent: 1502372053.223446
+data_sent: 1502372053.290523
+data_sent: 1502372053.359102
+data_sent: 1502372053.427608
+data_sent: 1502372053.540709
+data_sent: 1502372053.705028
+data_sent: 1502372053.771907
+data_sent: 1502372053.829664
+data_sent: 1502372054.191496
+data_sent: 1502372054.418515
+data_sent: 1502372055.634424
+data_sent: 1502372056.848111
+data_sent: 1502372058.064352
+data_sent: 1502372059.278884
+data_sent: 1502372060.496996
+data_sent: 1502372061.712607
+data_sent: 1502372062.928106
+data_sent: 1502372064.142776
+data_sent: 1502372065.356675
+data_sent: 1502372114.186535
+data_sent: 1502372114.629941
+data_sent: 1502372115.009193
+data_sent: 1502372115.440849
+data_sent: 1502372116.658805
+data_sent: 1502372117.877407
+data_sent: 1502372119.090432
+data_sent: 1502372120.309659
+data_sent: 1502372121.524775
+data_sent: 1502372122.740184
+data_sent: 1502372123.954221
+data_sent: 1502372125.168886
+data_sent: 1502372126.385145
+data_sent: 1502372127.601068
+data_sent: 1502372128.815765
+data_sent: 1502372130.032885
+data_sent: 1502372131.245725
+data_sent: 1502372132.460541
+data_sent: 1502372133.675067
+data_sent: 1502372134.890279
+data_sent: 1502372136.106196
+data_sent: 1502372137.321207
+data_sent: 1502372138.537563
+data_sent: 1502372139.763107
+data_sent: 1502372140.980647
+data_sent: 1502372142.197308
+data_sent: 1502372143.424557
+data_sent: 1502372144.639332
+data_sent: 1502372145.854719
+data_sent: 1502372147.070051
+data_sent: 1502372148.284756
+data_sent: 1502372149.503011
+data_sent: 1502372150.730598
+data_sent: 1502372151.945933
+data_sent: 1502372153.159690
+data_sent: 1502372154.374601
+data_sent: 1502372155.588034
+data_sent: 1502372156.802588
+data_sent: 1502372158.027486
+data_sent: 1502372159.242679
+data_sent: 1502372160.463469
+data_sent: 1502372161.679249
+data_sent: 1502372162.895684
+data_sent: 1502372164.112429
+data_sent: 1502372165.328902
+data_sent: 1502372166.548874
+data_sent: 1502372167.764056
+data_sent: 1502372168.978504
+data_sent: 1502372170.195762
+data_sent: 1502372171.412780
+data_sent: 1502372172.627740
+data_sent: 1502372173.843594
+data_sent: 1502372175.058311
+data_sent: 1502372176.274593
+data_sent: 1502372177.489529
+data_sent: 1502372178.703648
+data_sent: 1502372179.923505
+data_sent: 1502372181.139156
+data_sent: 1502372182.355525
+data_sent: 1502372183.574796
+data_sent: 1502372184.789315
+data_sent: 1502372186.004562
+data_sent: 1502372187.224210
+data_sent: 1502372188.440156
+data_sent: 1502372189.656017
+data_sent: 1502372190.871646
+data_sent: 1502372192.087067
+data_sent: 1502372193.303678
+data_sent: 1502372194.519973
+data_sent: 1502372195.732937
+data_sent: 1502372196.948893
+data_sent: 1502372222.784689
+data_sent: 1502372223.574903
+data_sent: 1502372223.651059
+data_sent: 1502372223.718766
+data_sent: 1502372223.899020
+data_sent: 1502372224.532892
+data_sent: 1502372225.743990
+data_sent: 1502372226.956268
+data_sent: 1502372228.168471
+data_sent: 1502372229.378910
+data_sent: 1502372230.591195
+data_sent: 1502372231.803201
+data_sent: 1502372233.014637
+data_sent: 1502372234.227314
+data_sent: 1502372235.440816
+data_sent: 1502372236.653292
+data_sent: 1502372237.867347
+data_sent: 1502372239.079800
+data_sent: 1502372240.291434
+len417
+ack_received: 1502371099.925740
+ack_received: 1502371100.098093
+ack_received: 1502371100.367632
+ack_received: 1502371100.578804
+ack_received: 1502371100.712614
+ack_received: 1502371100.857012
+ack_received: 1502371101.001085
+ack_received: 1502371101.125412
+ack_received: 1502371101.221602
+ack_received: 1502371101.308131
+ack_received: 1502371101.529337
+ack_received: 1502371101.644471
+ack_received: 1502371101.797827
+ack_received: 1502371102.037821
+ack_received: 1502371102.229837
+ack_received: 1502371102.335267
+ack_received: 1502371102.507531
+ack_received: 1502371102.651825
+ack_received: 1502371102.738015
+ack_received: 1502371102.863338
+ack_received: 1502371103.035743
+ack_received: 1502371103.132366
+ack_received: 1502371103.285416
+ack_received: 1502371103.438776
+ack_received: 1502371103.612060
+ack_received: 1502371103.736368
+ack_received: 1502371103.880662
+ack_received: 1502371104.053990
+ack_received: 1502371104.130246
+ack_received: 1502371104.350745
+ack_received: 1502371104.533140
+ack_received: 1502371104.754638
+ack_received: 1502371104.907940
+ack_received: 1502371645.145974
+ack_received: 1502371645.376361
+ack_received: 1502371645.501685
+ack_received: 1502371646.125537
+ack_received: 1502371646.125682
+ack_received: 1502371646.979929
+ack_received: 1502371647.527489
+ack_received: 1502371647.709913
+ack_received: 1502371647.718745
+ack_received: 1502371647.968263
+ack_received: 1502371647.981068
+ack_received: 1502371648.095099
+ack_received: 1502371648.095812
+ack_received: 1502371648.362838
+ack_received: 1502371648.537992
+ack_received: 1502371648.538020
+ack_received: 1502371648.860594
+ack_received: 1502371648.860753
+ack_received: 1502371648.966452
+ack_received: 1502371649.321527
+ack_received: 1502371649.331204
+ack_received: 1502371649.446623
+ack_received: 1502371649.598273
+ack_received: 1502371649.599871
+ack_received: 1502371649.849719
+ack_received: 1502371649.859288
+ack_received: 1502371649.983857
+ack_received: 1502371650.348258
+ack_received: 1502371650.348422
+ack_received: 1502371650.545714
+ack_received: 1502371650.555350
+ack_received: 1502371650.804275
+ack_received: 1502371650.814157
+ack_received: 1502371651.630387
+ack_received: 1502371651.640030
+ack_received: 1502371651.851793
+ack_received: 1502371651.861041
+ack_received: 1502371652.062782
+ack_received: 1502371652.072690
+ack_received: 1502371652.313725
+ack_received: 1502371652.331524
+ack_received: 1502371653.194824
+ack_received: 1502371653.309963
+ack_received: 1502371653.531534
+ack_received: 1502371653.541487
+ack_received: 1502371653.780851
+ack_received: 1502371654.114900
+ack_received: 1502371654.129800
+ack_received: 1502371654.222404
+ack_received: 1502371654.232129
+ack_received: 1502371654.462670
+ack_received: 1502371654.484624
+ack_received: 1502371654.980703
+ack_received: 1502371654.989678
+ack_received: 1502371655.211892
+ack_received: 1502371655.212028
+ack_received: 1502371655.758119
+ack_received: 1502371655.767457
+ack_received: 1502371655.841175
+ack_received: 1502371655.844569
+ack_received: 1502371655.922758
+ack_received: 1502371655.930782
+ack_received: 1502371656.977313
+ack_received: 1502371656.987291
+ack_received: 1502371657.399417
+ack_received: 1502371657.409232
+ack_received: 1502371658.628197
+ack_received: 1502371658.791102
+ack_received: 1502371658.983524
+ack_received: 1502371659.070035
+ack_received: 1502371659.170452
+ack_received: 1502371659.300246
+ack_received: 1502371659.496312
+ack_received: 1502371659.740357
+ack_received: 1502371659.952157
+ack_received: 1502371660.220452
+ack_received: 1502371660.306977
+ack_received: 1502371660.556305
+ack_received: 1502371679.034866
+ack_received: 1502371679.102404
+ack_received: 1502371679.169031
+ack_received: 1502371679.239812
+ack_received: 1502371679.304063
+ack_received: 1502371679.371240
+ack_received: 1502371679.438373
+ack_received: 1502371679.504846
+ack_received: 1502371679.572307
+ack_received: 1502371679.639361
+ack_received: 1502371679.709846
+ack_received: 1502371679.774471
+ack_received: 1502371679.842355
+ack_received: 1502371679.909058
+ack_received: 1502371679.980599
+ack_received: 1502371680.043605
+ack_received: 1502371680.111339
+ack_received: 1502371680.177710
+ack_received: 1502371680.244661
+ack_received: 1502371680.311567
+ack_received: 1502371680.379016
+ack_received: 1502371680.445885
+ack_received: 1502371680.512896
+ack_received: 1502371680.580532
+ack_received: 1502371680.767862
+ack_received: 1502371680.831045
+ack_received: 1502371680.888165
+ack_received: 1502371680.955442
+ack_received: 1502371681.022192
+ack_received: 1502371681.089345
+ack_received: 1502371681.156672
+ack_received: 1502371681.915803
+ack_received: 1502371682.117443
+ack_received: 1502371682.126027
+ack_received: 1502371682.329891
+ack_received: 1502371682.338459
+ack_received: 1502371682.395197
+ack_received: 1502371682.472512
+ack_received: 1502371682.472540
+ack_received: 1502371682.616868
+ack_received: 1502371682.725631
+ack_received: 1502371682.732729
+ack_received: 1502371682.938852
+ack_received: 1502371683.009974
+ack_received: 1502371684.027475
+ack_received: 1502371684.130274
+ack_received: 1502371684.138099
+ack_received: 1502371684.719117
+ack_received: 1502371684.805482
+ack_received: 1502371685.152820
+ack_received: 1502371685.217917
+ack_received: 1502371685.284121
+ack_received: 1502371685.696618
+ack_received: 1502371685.783416
+ack_received: 1502371686.129210
+ack_received: 1502371686.674980
+ack_received: 1502371686.790139
+ack_received: 1502371687.308375
+ack_received: 1502371687.731413
+ack_received: 1502371687.856049
+ack_received: 1502371688.009897
+ack_received: 1502371688.595393
+ack_received: 1502371688.882863
+ack_received: 1502371689.306035
+ack_received: 1502371689.372073
+ack_received: 1502371689.439350
+ack_received: 1502371689.833035
+ack_received: 1502371689.977489
+ack_received: 1502371690.227084
+ack_received: 1502371690.879259
+ack_received: 1502371691.014420
+ack_received: 1502371691.455204
+ack_received: 1502371691.656222
+ack_received: 1502371691.723311
+ack_received: 1502371691.790583
+ack_received: 1502371692.098139
+ack_received: 1502371692.195251
+ack_received: 1502371692.261296
+ack_received: 1502371692.328272
+ack_received: 1502371692.395092
+ack_received: 1502371692.463412
+ack_received: 1502371692.923224
+ack_received: 1502371692.990328
+ack_received: 1502371693.057438
+ack_received: 1502371693.183446
+ack_received: 1502371693.517633
+ack_received: 1502371693.585420
+ack_received: 1502371693.658486
+ack_received: 1502371693.882895
+ack_received: 1502371694.439638
+ack_received: 1502371694.670258
+ack_received: 1502371694.737307
+ack_received: 1502371695.035236
+ack_received: 1502371695.102584
+ack_received: 1502371695.265449
+ack_received: 1502371695.370608
+ack_received: 1502371695.475938
+ack_received: 1502371695.555172
+ack_received: 1502371695.879811
+ack_received: 1502371696.513190
+ack_received: 1502371696.580427
+ack_received: 1502371696.647872
+ack_received: 1502371696.878112
+ack_received: 1502371697.031517
+ack_received: 1502371697.099020
+ack_received: 1502371697.482968
+ack_received: 1502371697.549629
+ack_received: 1502371697.722879
+ack_received: 1502371698.163908
+ack_received: 1502371698.260649
+ack_received: 1502371698.529001
+ack_received: 1502371698.595869
+ack_received: 1502371699.229279
+ack_received: 1502371699.296531
+ack_received: 1502371699.421631
+ack_received: 1502371699.555937
+ack_received: 1502371700.017338
+ack_received: 1502371700.133415
+ack_received: 1502371700.382209
+ack_received: 1502371700.478089
+ack_received: 1502371701.111417
+ack_received: 1502371701.178817
+ack_received: 1502371701.245881
+ack_received: 1502371701.312970
+ack_received: 1502371701.380074
+ack_received: 1502371701.447206
+ack_received: 1502371701.514423
+ack_received: 1502371701.648646
+ack_received: 1502371702.618773
+ack_received: 1502371702.685903
+ack_received: 1502371702.801445
+ack_received: 1502371702.868422
+ack_received: 1502371702.935550
+ack_received: 1502371703.002707
+ack_received: 1502371703.078946
+ack_received: 1502371703.166096
+ack_received: 1502371703.667134
+ack_received: 1502371704.000775
+ack_received: 1502371704.378781
+ack_received: 1502371704.634046
+ack_received: 1502371705.430975
+ack_received: 1502371705.546381
+ack_received: 1502371705.853008
+ack_received: 1502371742.398934
+ack_received: 1502371742.513163
+ack_received: 1502371742.734723
+ack_received: 1502371742.917200
+ack_received: 1502371743.013065
+ack_received: 1502371743.185655
+ack_received: 1502371743.207615
+ack_received: 1502371743.339320
+ack_received: 1502371743.349204
+ack_received: 1502371743.540450
+ack_received: 1502371743.665913
+ack_received: 1502371743.810053
+ack_received: 1502371744.039581
+ack_received: 1502371744.221994
+ack_received: 1502371744.347423
+ack_received: 1502371744.357351
+ack_received: 1502371744.539555
+ack_received: 1502371744.808439
+ack_received: 1502371744.980717
+ack_received: 1502371745.221252
+ack_received: 1502371745.403615
+ack_received: 1502371745.576047
+ack_received: 1502371745.796597
+ack_received: 1502371745.806444
+ack_received: 1502371745.902853
+ack_received: 1502371745.911946
+ack_received: 1502372052.964298
+ack_received: 1502372053.060482
+ack_received: 1502372053.150159
+ack_received: 1502372053.222899
+ack_received: 1502372053.290399
+ack_received: 1502372053.358674
+ack_received: 1502372053.425896
+ack_received: 1502372053.540654
+ack_received: 1502372053.704820
+ack_received: 1502372053.771772
+ack_received: 1502372053.829443
+ack_received: 1502372053.895243
+ack_received: 1502372054.262243
+ack_received: 1502372114.494452
+ack_received: 1502372114.690205
+ack_received: 1502372115.065134
+ack_received: 1502372223.574782
+ack_received: 1502372223.650973
+ack_received: 1502372223.718722
+ack_received: 1502372223.786171
+ack_received: 1502372223.959449
+len:301
+retx: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 2, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 1.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 1.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 3.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 0.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+No corresponding ACK. Retransmission count was 4.
+
+The resulting RTTs of this single measurement are:
+[0.06988, 0.06101, 0.06809, 0.06373, 0.06428, 0.06901, 0.06873, 0.06693, 0.06287, 0.06513, 0.06775, 0.0638, 0.06603, 0.06263, 0.06864, 0.0661, 0.06094, 0.06296, 0.06484, 0.06801, 0.06704, 0.06926, 0.06419, 0.06597, 0.06183, 0.06561, 0.06292, 0.06184, 0.06075, 0.06711, 0.06487, 0.06809, 0.06599, 171.19901, 165.35191, 159.39983, 153.9441, 142.06037, 136.84342, 1.71442, 0.56451, -0.57787, -1.02569, -1.93848, -2.88018, -4.16239, -5.10661, -5.70009, -6.86365, -7.55989, -8.82582, -10.03856, -10.56637, -21.84677, -27.81806, -29.64163, -29.97245, -30.05944, -30.38554, -30.59672, -30.67433, -30.74155, -31.30371, -31.36662, -31.85696, -32.053, -32.43354, -33.09507, -33.12738, -33.29194, -33.15508, -33.5568, -33.40658, -33.73179, -33.281, -33.93302, -34.13317, -34.40398, -34.75085, -34.70317, -35.17629, -35.14979, -35.53418, -35.44711, -35.67753, -35.8326, -35.95944, -36.18152, -36.44429, -35.96526, -36.26415, -36.28656, -36.35093, -36.33881, -36.68318, -35.94602, -36.00323, -35.71641, -36.04366, -34.88963, -34.79443, -34.83719, -35.6003, -35.79875, -35.73519, -35.70371, -35.56002, -35.53853, -35.59728, -36.14169, -35.95697, -17.77528, -17.86153, -18.24318, -18.24324, -18.35534, -18.72684, -19.02088, -19.02424, -19.59411, -19.59, -19.64599, -19.71229, -20.46971, -20.50043, -21.13094, -21.13538, -21.33598, -21.4089, -22.30865, -22.30727, -22.36092, -22.35565, -22.35562, -22.35546, -22.24177, -22.26646, -22.71561, -22.97641, -24.76311, -61.36039, -62.12279, -62.24129, -63.04091, -368.09974, -370.6345, -370.72203, -370.75527, -370.75093, -370.81798, -370.74223, -370.70198, -370.80798, -370.76618, -370.76193, -369.80219, -370.06122, -370.28042, -370.91531, -372.04263, -372.91153, -374.06097, -375.21287, -376.01599, -377.14469, -378.01357, -378.68169, -427.3964, -427.32157, -427.27778, -428.80276, -429.86751, -430.49504, -431.4268, -432.21874, -433.36811, -434.51487, -435.33585, -436.40766, -438.58868, -439.15363, -440.2313, -442.21986, -443.23406, -444.38288, -445.53062, -446.43942, -447.56786, -448.71935, -449.86904, -451.02946, -452.17592, -452.93149, -454.07972, -455.22732, -456.31957, -458.4283, -459.57427, -460.71611, -461.70514, -462.36295, -464.57242, -465.72616, -466.64401, -467.7931, -468.84698, -469.95829, -471.07294, -473.42333, -474.31595, -474.89959, -476.04731, -477.19572, -478.1802, -479.24308, -480.39051, -481.22068, -482.37388, -483.41628, -485.41089, -486.52867, -487.47556, -488.62834, -489.21088, -490.35949, -491.45001, -493.74774, -494.50264, -495.59952, -496.56668, -522.3066, -522.46349, -522.47224, -522.47288, -522.58605, -523.15282, -524.29678, -525.44185, -526.51982, -526.76014, -527.90529, -529.00176, -530.14621, -531.29176, -532.43811, -533.57435, -534.70125, -535.41267, -536.29066]
+
+
+
+The resulting mean RTT of this single measurement is:
+-199.03490771084344
+
+
+abs. packet loss: 116.0
+packet loss in %: 27.82%
+File /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_bfr_dq_1.txt not found.                 Assuming not reached in GR.
+File /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_ack_received_1.txt not found.                 Assuming not reached in GR.
+retx: []
+
+The resulting RTTs of this single measurement are:
+[]
+
+
+
+The resulting mean RTT of this single measurement is:
+100
+
+
+Hello from throughput.py!
+hello from variables.py!
+Hi, I'm busy with numpy.
+Numpy zeros done.
+I'll do my best to count some ACKs!
+Done.
+ackcount: 301
+datacount: 300
+ACK file not found at /home/inets/0_ba/bachelor_thesis/measurements/debug/data/136/2/sender_ack_received_1.txt.
+ackcount: 0
+datacount: 1
+[ 15000.      0.]
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a pdf for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a cdf for you now!
+<a list of 1 Patch objects>
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a boxplot for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a bar for you now!
+Congrats, plotting throughput put through!
+I'll plot some nice stuff for you!
+Hello from myplot.py!
+I will print a line for you now!
+Congrats, plotting throughput put through!
+
++--------------------------------------------------------------+
+| plotting completed. until the next measurement session then! |
++--------------------------------------------------------------+

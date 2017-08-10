@@ -52,6 +52,7 @@ for i in range(1,repetitions+1):
                 line = ".".join([secs, usecs])
                 data_sent_times += [float(line)]
                 print("data_sent: "+line)
+            print("len"+str(len(data_sent_times)))
     else:
         print(  "File "+data_sent_path+" not found. \
                 Assuming not reached in GR.")
@@ -66,6 +67,7 @@ for i in range(1,repetitions+1):
                 line = ".".join([secs, usecs])
                 ack_received_times += [float(line)]
                 print("ack_received: "+line)
+            print("len:"+str(len(ack_received_times)))
 
     else:
         print(  "File "+ack_received_path+" not found. \

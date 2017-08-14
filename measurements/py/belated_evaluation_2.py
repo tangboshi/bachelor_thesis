@@ -29,27 +29,27 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [17,18]
+measurement             =   [6,12,8]
 #links used in the measurement
-links                   =   [1,2]
-repetitions             =   5
+links                   =   [1,2,3]
+repetitions             =   2
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
-plot_type               =   ["cdf", "boxplot"]
+plot_type               =   ["cdf", "boxplot","bar","pdf"]
 throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
 rtt_data_files          =   "sender_bfr_dq,sender_ack_received"
 retxs_data_files        =   "sender_retransmissions"
 show_plot               =   False
 rtt_mode                =   "rtt"
 
-boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
-                         "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
-                         ]
+# boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
+#                          "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
+#                          ]
 
-# boxplot_xticks      = [ "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-#                         "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 2 @ 420MHz",
-#                         "SIFS=0ms\nDIFS=0ms\nBO=0ms\nLink 3 @ 480MHz"
-#                     ]
+boxplot_xticks      = [ "ALOHA\nLink 1 @ 450MHz",
+                        "ALOHA\nLink 2 @ 420MHz",
+                        "ALOHA\nLink 3 @ 480MHz"
+                    ]
 
 # boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms",
 #                         "SIFS=1ms\nDIFS=5ms\nBO=2ms",

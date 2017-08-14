@@ -20,8 +20,8 @@ class myplot:
 
         print("Title is '"+title+"'.")
         # Kind of hackish, but who cares!
-        if title == "Retransmissions per Frame":
-            self.data           = data
+        if title == "Retransmissions per Frame" or "bar" in plottype or "hist" in plottype:
+            self.data               = data
 
         self.bins               = bins
         self.plottype           = plottype
@@ -46,7 +46,8 @@ class myplot:
             "cdf":      lambda: self.cdf(),
             "pdf":      lambda: self.pdf(),
             "boxplot":  lambda: self.boxplot(),
-            "debug":    lambda: self.debug()
+            "debug":    lambda: self.debug(),
+            "bar":      lambda: self.bar()
         }
 
         titles = {
@@ -55,7 +56,8 @@ class myplot:
             "hist":     "Histogram",
             "pdf":      "PDF",
             "boxplot":  "Boxplot",
-            "debug":    "Debug"
+            "debug":    "Debug",
+            "bar":      "Bar Chart"
         }
 
         # scientific axis scaling exceptions
@@ -122,6 +124,42 @@ class myplot:
 
             self.fig.clear()
             #print(self.data)
+
+    def bar(self):
+
+        colors = ['steelblue', 'orange', 'green', 'red', 'purple', 'brown', 'pink']
+        color_repetitions = math.ceil(len(self.data)/len(colors))
+        colors = color_repetitions * colors
+
+        for idx,val in enumerate(self.data):
+            data_points=len(self.data[idx])
+            width=5/data_points
+            index=np.arange( data_points )
+
+            self.ax.bar(left=index+idx*width,
+                height=val,
+                color=colors[idx]
+             )
+
+            self.setLabels(ylabel=self.ylabel,
+                xlabel="measurement",
+                title=self.title
+            )
+
+        # plt.gca().axes.get_xaxis().set_visible(False)
+        #
+        # if not self.kwargs.get("number_bars", True) == False:
+        #     rects = self.ax.patches
+        #     labels = ["%d" % i for i in range(1,len(rects)+1)]
+        #
+        #     for rect, label in zip(rects, labels):
+        #         #height = rect.get_height()
+        #         self.ax.text(
+        #             rect.get_x() + rect.get_width()/2,
+        #             0,
+        #             label,
+        #             ha='center',
+        #             va='bottom')
 
     def line(self):
         #FIXME

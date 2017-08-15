@@ -25,17 +25,20 @@ boxplot_xticks              = [ "measurement "+str(index) for index in measureme
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 
 custom_legend_coordinates   = {
-                                "rtt":          [1,0,"lower right"],
-                                "packet_loss":  [1,0,"lower right"],
-                                "retxs":        [1,0,"lower right"],
-                                "throughput":   [1,0,"lower right"]
+                                "rtt":                  [1,0,"lower right"],
+                                "packet_loss":          [1,0,"lower right"],
+                                "retxs":                [1,0,"lower right"],
+                                "throughput":           [1,0,"lower right"],
+                                "diagnosis_sender":     [1,0,"lower right"],
+                                "diagnosis_receiver":   [1,0,"lower right"]
                             }
 
 create_plots                = {
                                 "rtt":          True,
                                 "packet_loss":  True,
                                 "retxs":        False,
-                                "throughput":   True
+                                "throughput":   True,
+                                "diagnosis":    True
                             }
 
 #Unimplemented, use later

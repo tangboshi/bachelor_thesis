@@ -15,7 +15,7 @@ plot_type               =   ["cdf", "boxplot"]
 throughput_data_files   =   os.environ["throughput_data_files"]
 rtt_data_files          =   os.environ["rtt_data_files"]
 retxs_data_files        =   os.environ["retxs_data_files"]
-show_plot               =   os.environ["show_plot"]
+show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
 
 boxplot_xticks      = [ "measurement "+str(idx+1) for idx in range(repetitions)]

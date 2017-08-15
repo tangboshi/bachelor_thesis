@@ -207,7 +207,7 @@ class myplot:
                     linestyle=linestyles[index],
                     linewidth=linewidths[index],
                     markevery=range(1,len(x)),
-                    label=self.legend[index])
+                    label=self.legend[0])
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)

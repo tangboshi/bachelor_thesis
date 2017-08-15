@@ -195,7 +195,7 @@ class myplot:
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
         linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
 
-        if self.eval_mode = "belated":
+        if self.eval_mode == "belated":
             for index,item in enumerate(np.asarray(self.data).transpose()):
                 print("index:"+str(index))
                 print("___markers____")

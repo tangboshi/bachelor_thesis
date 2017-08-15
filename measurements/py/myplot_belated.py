@@ -214,7 +214,7 @@ class myplot:
         else:#live
             # print(self.data)
             # print(np.asarray(self.data).transpose())
-            x = np.sort(np.asarray(self.data).transpose())
+            x = np.sort(np.asarray(self.data))
             y = np.arange(1,len(x)+1) / len(x)
             x = np.insert(x,0,x[0])
             y = np.insert(y,0,0)

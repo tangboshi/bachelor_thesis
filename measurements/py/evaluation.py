@@ -17,6 +17,7 @@ rtt_data_files          =   os.environ["rtt_data_files"]
 retxs_data_files        =   os.environ["retxs_data_files"]
 show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
+max_retxs               =   6
 
 boxplot_xticks      = [ "measurement "+str(idx+1) for idx in range(repetitions)]
 
@@ -64,7 +65,8 @@ for index,a_plot_type in enumerate(plot_type):
         "legend_coordinates":       custom_legend_coordinates,
         "create_plots":             create_plots,
         "links":                    links,
-        "rtt_mode":                 rtt_mode
+        "rtt_mode":                 rtt_mode,
+        "max_retxs":                max_retxs
     }
 
     rtt.rtt(**eval_dict).plot()

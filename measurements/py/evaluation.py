@@ -10,7 +10,7 @@ measurement             =   [int(os.environ["measurement_counter"])]
 links                   =   [int(os.environ["link"])]
 repetitions             =   int(os.environ["measurement_repetitions"])
 data_source_path        =   os.environ["data_source_path"]
-plot_path               =   os.environ["plot_directory_path"]
+plot_path               =   os.environ["plot_directory_path"]+"/"+os.environ["measurement_counter"]+"/"
 plot_type               =   ["cdf", "boxplot"]
 throughput_data_files   =   os.environ["throughput_data_files"].split(",")
 rtt_data_files          =   os.environ["rtt_data_files"].split(",")
@@ -19,7 +19,7 @@ show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
 max_retxs               =   6
 
-boxplot_xticks      = [ "measurement "+str(idx+1) for idx in range(repetitions)]
+boxplot_xticks              = [ "measurement" ]
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 

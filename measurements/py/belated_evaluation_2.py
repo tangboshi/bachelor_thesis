@@ -99,7 +99,7 @@ for index,a_plot_type in enumerate(plot_type):
         "measurement":              measurement,
         "repetitions":              repetitions,
         "data_source_path":         data_source_path,
-        "plot_path":                plot_path,
+        "plot_path":                plot_path+"/"+plot_type[index],
         "plot_type":                [plot_type[index]],
         "grid":                     grid,
         "xticks":                   boxplot_xticks,

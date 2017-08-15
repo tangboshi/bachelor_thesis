@@ -8,7 +8,7 @@ class rtt:
     def __init__(self, **kwargs):
         #self.__dict__.update(kwargs)
         self.data_source_path   =   kwargs.get("data_source_path","/home/alex/0_ba/git/measurements/data")
-        self.rtt_data_files     =   kwargs.get("rtt_data_files", "sender_bfr_dq.txt,sender_ack_received.txt")
+        self.rtt_data_files     =   kwargs.get("rtt_data_files", ["sender_bfr_dq.txt","sender_ack_received.txt"])
         self.rtt_mode           =   kwargs.get("rtt_mode","frame_delay")
         self.plot_path          =   kwargs.get("plot_path","/home/alex/0_ba/git/measurements/plots")
         self.plot_type          =   kwargs.get("plot_type","all")
@@ -16,7 +16,7 @@ class rtt:
         self.repetitions        =   kwargs.get("repetitions",5)
         self.show_plot          =   kwargs.get("show_plot","False")
         self.max_retxs          =   kwargs.get("max_retxs",6)
-        self.retxs_data_files   =   kwargs.get("retxs_data_files","sender_retransmissions")
+        self.retxs_data_files   =   kwargs.get("retxs_data_files",["sender_retransmissions"])
         self.timer              =   kwargs.get("timer",300)
         self.grid               =   kwargs.get("grid",False)
         self.legend             =   kwargs.get("legend", [])
@@ -61,9 +61,9 @@ class rtt:
 
             for i in range(self.repetitions):
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                data_sent_path      = path+self.rtt_data_files.split(",")[0]+"_"+str(self.links[index])+".txt"
-                ack_received_path   = path+self.rtt_data_files.split(",")[1]+"_"+str(self.links[index])+".txt"
-                retxs_path          = path+self.retxs_data_files.split()[0]+"_"+str(self.links[index])+".txt"
+                data_sent_path      = path+self.rtt_data_files[0]+"_"+str(self.links[index])+".txt"
+                ack_received_path   = path+self.rtt_data_files[1]+"_"+str(self.links[index])+".txt"
+                retxs_path          = path+self.retxs_data_files[0]+"_"+str(self.links[index])+".txt"
 
                 print(str(i+1))
                 print("data_sent_path:"+data_sent_path)

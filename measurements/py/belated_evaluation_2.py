@@ -38,8 +38,9 @@ plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/p
 plot_type               =   ["cdf", "boxplot"]
 throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
 diagnosis_files         =   ["receiver_data_received","receiver_ack_sent"]
-rtt_data_files          =   "sender_bfr_dq,sender_ack_received"
-retxs_data_files        =   "sender_retransmissions"
+#changed the following 2 from string to list
+rtt_data_files          =   ["sender_bfr_dq","sender_ack_received"]
+retxs_data_files        =   ["sender_retransmissions"]
 show_plot               =   False
 rtt_mode                =   "rtt"
 

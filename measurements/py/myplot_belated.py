@@ -193,7 +193,7 @@ class myplot:
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
         linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
-        print("_____________________________"+str(len(np.asarray(self.data).transpose)))
+        print("_____________________________"+str(len(np.asarray(self.data).transpose())))
         for index,item in enumerate(np.asarray(self.data).transpose()):
             print("index:"+str(index))
             print("___markers____")

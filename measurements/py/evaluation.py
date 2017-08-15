@@ -38,7 +38,7 @@ create_plots                = {
                                 "packet_loss":  True,
                                 "retxs":        False,
                                 "throughput":   True,
-                                "diagnosis":    True
+                                "diagnostic":   True
                             }
 
 #Unimplemented, use later

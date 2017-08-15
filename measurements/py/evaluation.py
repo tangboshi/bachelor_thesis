@@ -19,6 +19,7 @@ show_plot               =   int(os.environ["show_plot_after_measurement"])
 rtt_mode                =   os.environ["rtt_mode"]
 max_retxs               =   6
 eval_mode               =   "live"
+timer                   =   int(os.environ["timer"])
 
 boxplot_xticks              = [ "measurement "+str(index) for index in measurement ]
 
@@ -71,7 +72,8 @@ for index,a_plot_type in enumerate(plot_type):
         "links":                    links,
         "rtt_mode":                 rtt_mode,
         "max_retxs":                max_retxs,
-        "eval_mode":                eval_mode
+        "eval_mode":                eval_mode,
+        "timer":                    timer
     }
 
     rtt.rtt(**eval_dict).plot()

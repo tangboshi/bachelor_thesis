@@ -1,0 +1,1052 @@
+measurement 1/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 1/2 complete in 19 second(s).
+develop mode of resend_check ID: 24 is activated.
+develop mode of resend_check ID: 24 is activated.
+the 100th message counter is activated.
+develop_mode of backoff ID 8 is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+develop_mode of backoff ID 100 is activated.
+develop_mode of backoff ID 10 is activated.
+measurement 1/2 complete in 18 second(s).
+node starts running at 30.9389
+measurement 1/2 complete in 17 second(s).
+measurement 1/2 complete in 16 second(s).
+measurement 1/2 complete in 15 second(s).
+measurement 1/2 complete in 14 second(s).
+measurement 1/2 complete in 13 second(s).
+measurement 1/2 complete in 12 second(s).
+measurement 1/2 complete in 11 second(s).
+measurement 1/2 complete in 10 second(s).
+measurement 1/2 complete in 9 second(s).
+node starts running at 40
+++++ frame_probe ID: 1050 receives a frame at time 40.0184s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.0555s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.0557s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            0;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 40.0591s ++++
+INFO: Detected an invalid packet at item 32
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 40.0664s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 40.0665s ++++
+40.0665s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.0666s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.0771s ++++
+++++ frame_probe ID: 1083++++ frame_probe ID:  receives a frame at time 1082 receives a frame at time 40.084740.0847s ++++s ++++
+
+++++ frame_probe ID: 1084 receives a frame at time 40.0847s ++++
+counter results at time 2540.08 is 0
+++++ frame_probe ID: 1090 receives a frame at time 40.0848s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 40.0858s ++++
+++++ backoff ID: 100 is expired at time 0.096966 s.  actual duration is: 0.012002s and the timer bias is 6.31809e-05s
+the 100th message counter node3_acked has been visited 1 times  
+++++ frame_probe ID: 1050 receives a frame at time 40.1123s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.1531s ++++
+++++ frame_probe ID: 882 receives a frame at time 40.1618s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.1618s ++++
+++++ frame_probe ID: 884 receives a frame at time 40.1619s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.1619s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.1721s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.1809s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.1809s ++++
+++++ frame_probe ID: 1083 receives a frame at time counter results at time 40.181s ++++
+2540.18 is 0
+++++ frame_probe ID: 1090 receives a frame at time 40.181s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 40.1818s ++++
+++++ backoff ID: 100 is expired at time 0.22325 s.  actual duration is: 0.0420389s and the timer bias is 4.60148e-05s
+the 100th message counter node3_acked has been visited 2 times  
+++++ frame_probe ID: 1050 receives a frame at time 40.2386s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.2792s ++++
+INFO: Detected an invalid packet at item 128
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 40.2868s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.2868s ++++
+++++ frame_probe ID: 884 receives a frame at time 40.2869s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.2869s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.2973s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.3053s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.3053s ++++
+counter results at time 2540.31 is 0
+++++ frame_probe ID: 1083 receives a frame at time 40.3054s ++++
+++++ frame_probe ID: 1090 receives a frame at time 40.3054s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 40.3061s ++++
+++++ backoff ID: 100 is expired at time 0.353684 s.  actual duration is: 0.0480471s and the timer bias is 6.19888e-05s
+the 100th message counter node3_acked has been visited 3 times  
+++++ frame_probe ID: 1050 receives a frame at time 40.369s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.4097s ++++
+INFO: Detected an invalid packet at item 192
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 40.421s ++++
+++++ frame_probe ID: 884 receives a frame at time 40.4211s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.4211s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.4212s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.4314s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.4394s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.4396s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.4396s ++++
+counter results at time 2540.44 is 0
+++++ frame_probe ID: 1090 receives a frame at time 40.4404s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 40.4407s ++++
+measurement 1/2 complete in 8 second(s).
+++++ backoff ID: 100 is expired at time 0.530653 s.  actual duration is: 0.0900421s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 4 times  
+++++ frame_probe ID: 1082 receives a frame at time 40.5354s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.5355s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.5355s ++++
+++++ frame_probe ID: 1050 receives a frame at time 40.546s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.5868s ++++
+INFO: Detected an invalid packet at item 288
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 40.5935s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.5935s ++++
+++++ frame_probe ID: 885 receives a frame at time 40.5936s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.6608s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.6608s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.6608s ++++
+++++ backoff ID: 10 starts the 5th backoff. 
+++++ backoff ID: 10 is expired at time 0.694213 s.  actual duration is: 0.00597692s and the timer bias is 6.10352e-05s
+a data frame with index 4 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 1050 receives a frame at time 40.7096s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.7179s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.7179s ++++
+++++ frame_probe ID: 1084 receives a frame at time 40.7179s ++++
+++++ frame_probe ID: 1060 receives a frame at time 40.7504s ++++
+INFO: Detected an invalid packet at item 384
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 40.7568s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.7569s ++++
+++++ frame_probe ID: 884 receives a frame at time 40.7569s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.7569s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.767s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.7752s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.7753s ++++
+counter results at time 2540.78 is 1
+++++ frame_probe ID: 1090 receives a frame at time 40.7755s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 1084 receives a frame at time 40.7757s ++++
+++++ frame_probe ID: 882 receives a frame at time 40.7763s ++++
+++++ backoff ID: 100 is expired at time 0.925635 s.  actual duration is: 0.150012s and the timer bias is 6.38962e-05s
+the 100th message counter node3_acked has been visited 5 times  
+++++ frame_probe ID: 1050 receives a frame at time 40.941s ++++
+++++ frame_probe ID: 1082 receives a frame at time 40.9573s ++++
+++++ frame_probe ID: 1083 receives a frame at time 40.9574s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            3;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 40.9816s ++++
+++++ frame_probe ID: 882 receives a frame at time 40.9874s ++++
+++++ frame_probe ID: 883 receives a frame at time 40.9874s ++++
+++++ frame_probe ID: 884 receives a frame at time 40.9874s ++++
+++++ frame_probe ID: 890 receives a frame at time 40.9875s ++++
+++++ frame_probe ID: 860 receives a frame at time 40.9976s ++++
+++++ frame_probe ID: 1083 receives a frame at time ++++ frame_probe ID: 1082 receives a frame at time 41.006841.0068s ++++
+s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.0068s ++++
+counter results at time 2541.01 is 0
+++++ frame_probe ID: 1090 receives a frame at time 41.0069s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 41.0075s ++++
+++++ backoff ID: 100 is expired at time 1.19343 s.  actual duration is: 0.186412s and the timer bias is 0.00652909s
+the 100th message counter node3_acked has been visited 6 times  
+++++ frame_probe ID: 1082 receives a frame at time 41.1978s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.1979s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.1979s ++++
+++++ frame_probe ID: 1050 receives a frame at time 41.2088s ++++
+++++ frame_probe ID: 1060 receives a frame at time 41.2495s ++++
+INFO: Detected an invalid packet at item 544
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 41.256s ++++
+++++ frame_probe ID: 883 receives a frame at time 41.2561s ++++
+++++ frame_probe ID: 884 receives a frame at time 41.2561s ++++
+++++ frame_probe ID: 890 receives a frame at time 41.2561s ++++
+++++ frame_probe ID: 860 receives a frame at time 41.2663s ++++
+++++ frame_probe ID: 1082 receives a frame at time 41.2752s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.2753s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.2753s ++++
+counter results at time 2541.28 is 0
+++++ frame_probe ID: 1090 receives a frame at time 41.2754s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 41.2762s ++++
+++++ backoff ID: 100 is expired at time 1.41372 s.  actual duration is: 0.13802s and the timer bias is 6.19888e-05s
+the 100th message counter node3_acked has been visited 7 times  
+++++ frame_probe ID: 1050 receives a frame at time 41.4335s ++++
+++++ frame_probe ID: 1060 receives a frame at time 41.4743s ++++
+++++ frame_probe ID: 882 receives a frame at time 41.4774s ++++
+++++ frame_probe ID: 884 receives a frame at time 41.4774s ++++
+++++ frame_probe ID: 883 receives a frame at time 41.4775s ++++
+++++ frame_probe ID: 890 receives a frame at time 41.4776s ++++
+INFO: Detected an invalid packet at item 608
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 41.4877s ++++
+++++ frame_probe ID: 1082 receives a frame at time 41.4957s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.4957s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.4957s ++++
+counter results at time 2541.5 is 0
+++++ frame_probe ID: 1090 receives a frame at time 41.4959s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 41.4967s ++++
+measurement 1/2 complete in 7 second(s).
+++++ backoff ID: 100 is expired at time 1.66398 s.  actual duration is: 0.168012s and the timer bias is 3.19481e-05s
+the 100th message counter node3_acked has been visited 8 times  
+++++ frame_probe ID: 1050 receives a frame at time 41.6792s ++++
+++++ frame_probe ID: 1060 receives a frame at time 41.7199s ++++
+INFO: Detected an invalid packet at item 672
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 41.7269s ++++
+++++ frame_probe ID: 883 receives a frame at time 41.727s ++++
+++++ frame_probe ID: 884 receives a frame at time 41.727s ++++
+++++ frame_probe ID: 890 receives a frame at time 41.727s ++++
+++++ frame_probe ID: 860 receives a frame at time 41.7372s ++++
+++++ frame_probe ID: 1082 receives a frame at time 41.7454s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.7454s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.7454s ++++
+counter results at time 2541.75 is 0
+++++ frame_probe ID: 1090 receives a frame at time 41.7455s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 41.7463s ++++
+++++ backoff ID: 100 is expired at time 1.9017 s.  actual duration is: 0.156055s and the timer bias is 6.8903e-05s
+the 100th message counter node3_acked has been visited 9 times  
+++++ frame_probe ID: 1050 receives a frame at time 41.9171s ++++
+++++ frame_probe ID: 1060 receives a frame at time 41.9636s ++++
+++++ frame_probe ID: 883 receives a frame at time 41.9672s ++++
+++++ frame_probe ID: 884 receives a frame at time 41.9672s ++++
+++++ frame_probe ID: 890 receives a frame at time 41.9674s ++++
+++++ frame_probe ID: 882 receives a frame at time 41.9676s ++++
+++++ frame_probe ID: 860 receives a frame at time 41.9775s ++++
+++++ frame_probe ID: 1082 receives a frame at time 41.9849s ++++
+++++ frame_probe ID: 1083 receives a frame at time 41.985s ++++
+++++ frame_probe ID: 1084 receives a frame at time 41.9851s ++++
+counter results at time 2541.99 is 0
+++++ frame_probe ID: 1090 receives a frame at time 41.9852s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 41.9859s ++++
+++++ backoff ID: 100 is expired at time 1.99143 s.  actual duration is: 0.00604796s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 10 times  
+++++ frame_probe ID: 1050 receives a frame at time 42.0067s ++++
+++++ frame_probe ID: 1060 receives a frame at time 42.0475s ++++
+INFO: Detected an invalid packet at item 768
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 42.0528s ++++
+++++ frame_probe ID: 883 receives a frame at time 42.0528s ++++
+++++ frame_probe ID: 884 receives a frame at time 42.0529s ++++
+++++ frame_probe ID: 890 receives a frame at time 42.0529s ++++
+++++ frame_probe ID: 860 receives a frame at time 42.0631s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.0716s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.0717s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.0717s ++++
+counter results at time 2542.07 is 0
+++++ frame_probe ID: 1090 receives a frame at time 42.0717s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ backoff ID: 100 is expired at time 2.07189 s.  actual duration is: 7.86781e-06s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 11 times  
+++++ frame_probe ID: 882 receives a frame at time 42.0757s ++++
+++++ frame_probe ID: 1050 receives a frame at time 42.0871s ++++
+++++ frame_probe ID: 1060 receives a frame at time 42.1278s ++++
+INFO: Detected an invalid packet at item 832
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 42.1399s ++++
+++++ frame_probe ID: 883 receives a frame at time 42.1399s ++++
+++++ frame_probe ID: 884 receives a frame at time 42.1399s ++++
+++++ frame_probe ID: 890 receives a frame at time 42.14s ++++
+++++ frame_probe ID: 860 receives a frame at time 42.1501s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.1583s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.1583s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.1584s ++++
+++++ frame_probe ID: 1090 receives a frame at time 42.1584s ++++
+counter results at time 2542.16 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 42.1592s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.2342s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.2343s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.2343s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.3014s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.3014s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.3015s ++++
+++++ backoff ID: 100 is expired at time 2.31455 s.  actual duration is: 0.156028s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 12 times  
+++++ frame_probe ID: 1050 receives a frame at time 42.3298s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.3686s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.3686s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            6;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 42.3708s ++++
+INFO: Detected an invalid packet at item 992
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 42.3794s ++++
+++++ frame_probe ID: 883 receives a frame at time 42.3795s ++++
+++++ frame_probe ID: 884 receives a frame at time 42.3795s ++++
+++++ frame_probe ID: 890 receives a frame at time 42.3795s ++++
+++++ frame_probe ID: 860 receives a frame at time 42.3897s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.3979s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.3981s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.3982s ++++
+counter results at time 2542.4 is 0
+++++ frame_probe ID: 1090 receives a frame at time 42.3983s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 42.399s ++++
+measurement 1/2 complete in 6 second(s).
+++++ backoff ID: 100 is expired at time 2.55458 s.  actual duration is: 0.156016s and the timer bias is 6.10352e-05s
+the 100th message counter node3_acked has been visited 13 times  
+++++ frame_probe ID: 1050 receives a frame at time 42.5701s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.609s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.609s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            6;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 42.6109s ++++
+INFO: Detected an invalid packet at item 1088
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 42.62s ++++
+++++ frame_probe ID: 883 receives a frame at time 42.62s ++++
+++++ frame_probe ID: 884 receives a frame at time 42.6201s ++++
+++++ frame_probe ID: 890 receives a frame at time 42.6201s ++++
+++++ frame_probe ID: 860 receives a frame at time 42.6302s ++++
+INFO: Detected an invalid packet at item 1120
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 42.6388s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.6388s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.6389s ++++
+counter results at time 2542.64 is 0
+++++ frame_probe ID: 1090 receives a frame at time 42.639s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 42.6393s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.7433s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.7435s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.7434s ++++
+++++ backoff ID: 100 is expired at time 2.76515 s.  actual duration is: 0.12599s and the timer bias is 5.57899e-05s
+the 100th message counter node3_acked has been visited 14 times  
+++++ frame_probe ID: 1050 receives a frame at time 42.7804s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.8125s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            9;    destination address is:    2;    source address is:         4;    ++++ frame_probe ID: number of transmission is: 10831 receives a frame at time ;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             42.8127s ++++
+1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 42.8213s ++++
+++++ frame_probe ID: 882 receives a frame at time 42.8342s ++++
+++++ frame_probe ID: 883 receives a frame at time 42.8342s ++++
+++++ frame_probe ID: 884 receives a frame at time 42.8343s ++++
+++++ frame_probe ID: 890 receives a frame at time 42.8343s ++++
+++++ frame_probe ID: 860 receives a frame at time 42.8445s ++++
+++++ frame_probe ID: 1082 receives a frame at time 42.8489s ++++
+++++ frame_probe ID: 1084 receives a frame at time 42.849s ++++
+++++ frame_probe ID: 1083 receives a frame at time 42.849s ++++
+++++ frame_probe ID: 1090 receives a frame at time 42.8491s ++++
+counter results at time 2542.85 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 42.8502s ++++
+++++ backoff ID: 100 is expired at time 2.9393 s.  actual duration is: 0.0900311s and the timer bias is 2.59876e-05s
+the 100th message counter node3_acked has been visited 15 times  
+++++ frame_probe ID: 1050 receives a frame at time 42.9546s ++++
+++++ frame_probe ID: 1060 receives a frame at time 42.9953s ++++
+INFO: Detected an invalid packet at item 1280
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 43.0039s ++++
+++++ frame_probe ID: 883 receives a frame at time 43.0039s ++++
+++++ frame_probe ID: 884 receives a frame at time 43.0039s ++++
+++++ frame_probe ID: 890 receives a frame at time 43.0041s ++++
+++++ frame_probe ID: 860 receives a frame at time 43.0143s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.0222s ++++
+++++ frame_probe ID: 1084 receives a frame at time ++++ frame_probe ID: 1083 receives a frame at time 43.0223s ++++
+43.0223s ++++
+counter results at time 2543.02 is 0
+++++ frame_probe ID: 1090 receives a frame at time 43.0224s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 43.0233s ++++
+++++ backoff ID: 100 is expired at time 3.05852 s.  actual duration is: 0.0360119s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 16 times  
+++++ frame_probe ID: 1050 receives a frame at time 43.0738s ++++
+++++ frame_probe ID: 1060 receives a frame at time 43.1145s ++++
+++++ frame_probe ID: 882 receives a frame at time 43.1191s ++++
+++++ frame_probe ID: 883 receives a frame at time 43.1191s ++++
+++++ frame_probe ID: 884 receives a frame at time 43.1192s ++++
+++++ frame_probe ID: 890 receives a frame at time 43.1192s ++++
+++++ frame_probe ID: 860 receives a frame at time 43.1296s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.1374s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.1375s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.1375s ++++
+counter results at time 2543.14 is 0
+++++ frame_probe ID: 1090 receives a frame at time 43.1377s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 43.1385s ++++
+++++ backoff ID: 100 is expired at time 3.28181 s.  actual duration is: 0.144001s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 17 times  
+++++ frame_probe ID: 1050 receives a frame at time 43.297s ++++
+++++ frame_probe ID: 1060 receives a frame at time 43.3378s ++++
+INFO: Detected an invalid packet at item 1376
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 43.3496s ++++
+++++ frame_probe ID: 883 receives a frame at time 43.3497s ++++
+++++ frame_probe ID: 884 receives a frame at time 43.3498s ++++
+++++ frame_probe ID: 890 receives a frame at time 43.3498s ++++
+++++ frame_probe ID: 860 receives a frame at time 43.3599s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.3679s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.3679s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.368s ++++
+counter results at time 2543.37 is 0
+++++ frame_probe ID: 1090 receives a frame at time 43.3681s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 43.3691s ++++
+++++ backoff ID: 100 is expired at time 3.4822 s.  actual duration is: 0.114032s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 18 times  
+++++ frame_probe ID: 1050 receives a frame at time 43.4975s ++++
+measurement 1/2 complete in 5 second(s).
+++++ frame_probe ID: 1060 receives a frame at time 43.5383s ++++
+++++ frame_probe ID: 882 receives a frame at time 43.5411s ++++
+++++ frame_probe ID: 883 receives a frame at time 43.5411s ++++
+++++ frame_probe ID: 884 receives a frame at time 43.5411s ++++
+++++ frame_probe ID: 890 receives a frame at time 43.5412s ++++
+INFO: Detected an invalid packet at item 1440
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 43.5513s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.5594s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.5595s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.5595s ++++
+counter results at time 2543.56 is 0
+++++ frame_probe ID: 1090 receives a frame at time 43.5596s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 43.5607s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.5973s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.5974s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            10;    destination address is:    2;    source address is:         4;    number of transmission is: 3;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1082 receives a frame at time 43.6645s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.6646s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.6646s ++++
+++++ backoff ID: 100 is expired at time 3.7038 s.  actual duration is: 0.14408s and the timer bias is 6.60419e-05s
+the 100th message counter node3_acked has been visited 19 times  
+++++ frame_probe ID: 1050 receives a frame at time 43.7192s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.7317s ++++
+++++ frame_probe ID: 1083 receives a frame at time +++++++++ frame_probe ID: 1085 +++++++++43.7317s ++++
+ ---- data frame detected ---- frame index is:            12;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 43.7598s ++++
+INFO: Detected an invalid packet at item 1600
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 43.7716s ++++
+++++ frame_probe ID: 884 receives a frame at time 43.7717s ++++
+++++ frame_probe ID: 890 receives a frame at time 43.7717s ++++
+++++ frame_probe ID: 883 receives a frame at time 43.7718s ++++
+++++ frame_probe ID: 860 receives a frame at time 43.7818s ++++
+++++ frame_probe ID: 1082 receives a frame at time 43.7901s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.7902s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.7902s ++++
+counter results at time 2543.79 is 0
+++++ frame_probe ID: 1090 receives a frame at time 43.7904s ++++
+++++ frame_probe ID: 882 receives a frame at time 43.7911s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ backoff ID: 100 is expired at time 3.97152 s.  actual duration is: 0.180009s and the timer bias is 6.10352e-05s
+the 100th message counter node3_acked has been visited 20 times  
+++++ frame_probe ID: 1082 receives a frame at time 43.9721s ++++
+++++ frame_probe ID: 1083 receives a frame at time 43.9722s ++++
+++++ frame_probe ID: 1084 receives a frame at time 43.9722s ++++
+++++ frame_probe ID: 1050 receives a frame at time 43.9869s ++++
+++++ frame_probe ID: 1060 receives a frame at time 44.0277s ++++
+++++ frame_probe ID: 882 receives a frame at time 44.0313s ++++
+++++ frame_probe ID: 883 receives a frame at time 44.0314s ++++
+++++ frame_probe ID: 884 receives a frame at time 44.0314s ++++
+++++ frame_probe ID: 890 receives a frame at time 44.0314s ++++
+++++ frame_probe ID: 860 receives a frame at time 44.0416s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.0488s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.0488s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.0489s ++++
+counter results at time 2544.05 is 0
+++++ frame_probe ID: 1090 receives a frame at time 44.0489s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 44.0505s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.1066s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.1067s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.1068s ++++
+++++ backoff ID: 100 is expired at time 4.12105 s.  actual duration is: 0.072011s and the timer bias is 6.00815e-05s
+the 100th message counter node3_acked has been visited 21 times  
+++++ frame_probe ID: 1050 receives a frame at time 44.1364s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.1735s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.1736s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            15;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 44.1776s ++++
+INFO: Detected an invalid packet at item 1792
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 44.1845s ++++
+++++ frame_probe ID: 885 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 44.184644.1846s ++++s ++++
+
+++++ frame_probe ID: 1082 receives a frame at time 44.2407s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.2408s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.2408s ++++
+++++ backoff ID: 10 starts the 5th backoff. 
+++++ frame_probe ID: 1082 receives a frame at time 44.3079s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.3079s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.308s ++++
+++++ backoff ID: 10 is expired at time 4.34499 s.  actual duration is: 0.0660088s and the timer bias is 6.22272e-05s
+a data frame with index 21 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 1050 receives a frame at time 44.3603s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.375s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.375s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            18;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 44.4012s ++++
+++++ frame_probe ID: 882 receives a frame at time 44.405s ++++
+++++ frame_probe ID: 883 receives a frame at time 44.4051s ++++
+++++ frame_probe ID: 884 receives a frame at time 44.4051s ++++
+++++ frame_probe ID: 890 receives a frame at time 44.4051s ++++
+++++ frame_probe ID: 860 receives a frame at time 44.4152s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.4235s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.4236s ++++
+++++ frame_probe ID: 1083 receives a frame at time counter results at time 2544.42 is 1
+++++ frame_probe ID: 1090 receives a frame at time 44.4237s ++++
+44.4236s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 44.4245s ++++
+++++ backoff ID: 100 is expired at time 4.49579 s.  actual duration is: 0.0720019s and the timer bias is 4.91142e-05s
+the 100th message counter node3_acked has been visited 22 times  
+++++ frame_probe ID: 1050 receives a frame at time 44.5111s ++++
+measurement 1/2 complete in 4 second(s).
+++++ frame_probe ID: 1060 receives a frame at time 44.5519s ++++
+++++ frame_probe ID: 883 receives a frame at time 44.5585s ++++
+++++ frame_probe ID: 884 receives a frame at time 44.5585s ++++
+++++ frame_probe ID: 890 receives a frame at time 44.5585s ++++
+++++ frame_probe ID: 882 receives a frame at time 44.5586s ++++
+++++ frame_probe ID: 860 receives a frame at time 44.5687s ++++
+++++ frame_probe ID: ++++ frame_probe ID: 1082 receives a frame at time 1083 receives a frame at time 44.576944.5769s ++++s ++++
+
+counter results at time 2544.58 is 0
+++++ frame_probe ID: 1090 receives a frame at time ++++ frame_probe ID: 1084 receives a frame at time 44.57744.5769s ++++
+s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 44.579s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.6146s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.6146s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.6147s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.6818s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.6819s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.6819s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.7489s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.749s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.749s ++++
+++++ backoff ID: 100 is expired at time 4.75106 s.  actual duration is: 0.173974s and the timer bias is 0.000146151s
+the 100th message counter node3_acked has been visited 23 times  
+++++ frame_probe ID: 1050 receives a frame at time 44.7664s ++++
+++++ frame_probe ID: 1060 receives a frame at time 44.8071s ++++
+INFO: Detected an invalid packet at item 2080
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 44.8179s ++++
+++++ frame_probe ID: 883 receives a frame at time 44.818s ++++
+++++ frame_probe ID: 884 receives a frame at time 44.818s ++++
+++++ frame_probe ID: 890 receives a frame at time 44.8183s ++++
+++++ frame_probe ID: 860 receives a frame at time 44.8284s ++++
+INFO: Detected an invalid packet at item 2112
+INFO: Parser returned #f
+++++ frame_probe ID: 1082 receives a frame at time 44.8359s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.8359s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.836s ++++
+counter results at time 2544.84 is 0
+++++ frame_probe ID: 1090 receives a frame at time 44.8361s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 44.8371s ++++
+++++ backoff ID: 100 is expired at time 4.89621 s.  actual duration is: 0.0600529s and the timer bias is 8.89301e-05s
+the 100th message counter node3_acked has been visited 24 times  
+++++ frame_probe ID: 1050 receives a frame at time 44.9116s ++++
+++++ frame_probe ID: 1060 receives a frame at time 44.9526s ++++
+INFO: Detected an invalid packet at item 2176
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 44.9622s ++++
+++++ frame_probe ID: 884 receives a frame at time 44.9623s ++++
+++++ frame_probe ID: 883 receives a frame at time 44.9623s ++++
+++++ frame_probe ID: 890 receives a frame at time 44.9624s ++++
+++++ frame_probe ID: 860 receives a frame at time 44.9725s ++++
+++++ frame_probe ID: 1082 receives a frame at time 44.9798s ++++
+++++ frame_probe ID: 1084 receives a frame at time 44.9801s ++++
+++++ frame_probe ID: 1083 receives a frame at time 44.9801s ++++
+counter results at time 2544.98 is 0
+++++ frame_probe ID: 1090 receives a frame at time 44.9801s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 44.9817s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.0557s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.0558s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.0558s ++++
+++++ backoff ID: 100 is expired at time 5.09428 s.  actual duration is: 0.114054s and the timer bias is 6.19888e-05s
+the 100th message counter node3_acked has been visited 25 times  
+++++ frame_probe ID: 1050 receives a frame at time 45.1097s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.1228s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.1228s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            22;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 45.1504s ++++
+++++ frame_probe ID: 882 receives a frame at time 45.1538s ++++
+++++ frame_probe ID: 883 receives a frame at time 45.1539s ++++
+++++ frame_probe ID: 884 receives a frame at time 45.154s ++++
+++++ frame_probe ID: 890 receives a frame at time 45.154s ++++
+INFO: Detected an invalid packet at item 2304
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 45.1642s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.1712s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.1713s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.1713s ++++
+counter results at time 2545.17 is 0
+++++ frame_probe ID: 1090 receives a frame at time 45.1714s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 45.1736s ++++
+++++ backoff ID: 100 is expired at time 5.26944 s.  actual duration is: 0.097954s and the timer bias is 0.00254798s
+the 100th message counter node3_acked has been visited 26 times  
+++++ frame_probe ID: 1050 receives a frame at time 45.2847s ++++
+++++ frame_probe ID: 1060 receives a frame at time 45.3256s ++++
+INFO: Detected an invalid packet at item 2368
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 45.3361s ++++
+++++ frame_probe ID: 883 receives a frame at time 45.3361s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 890 receives a frame at time 45.3362s ++++
+45.3362s ++++
+++++ frame_probe ID: 860 receives a frame at time 45.3464s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.3535s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.3536s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.3537s ++++
+counter results at time 2545.35 is 0++++ frame_probe ID: 
+1090 receives a frame at time 45.3537s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 45.3554s ++++
+++++ backoff ID: 100 is expired at time 5.43788 s.  actual duration is: 0.0840099s and the timer bias is 6.19888e-05s
+the 100th message counter node3_acked has been visited 27 times  
+++++ frame_probe ID: 1050 receives a frame at time 45.4533s ++++
+++++ frame_probe ID: 1060 receives a frame at time 45.494s ++++
+++++ frame_probe ID: 882 receives a frame at time 45.4996s ++++
+++++ frame_probe ID: 883 receives a frame at time ++++ frame_probe ID: 884 receives a frame at time 45.4997s ++++
+45.4997s ++++
+++++ frame_probe ID: 890 receives a frame at time 45.4999s ++++
+++++ frame_probe ID: 860 receives a frame at time 45.5099s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.517s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.5171s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.5172s ++++
+++++ frame_probe ID: 1090 receives a frame at time 45.5173s ++++
+counter results at time 2545.52 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 45.5189s ++++
+measurement 1/2 complete in 3 second(s).
+++++ backoff ID: 100 is expired at time 5.54742 s.  actual duration is: 0.0299981s and the timer bias is 7.58171e-05s
+the 100th message counter node3_acked has been visited 28 times  
+++++ frame_probe ID: 1050 receives a frame at time 45.5627s ++++
+++++ frame_probe ID: 1060 receives a frame at time 45.6034s ++++
+INFO: Detected an invalid packet at item 2464
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 45.6149s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 45.6149s ++++
+45.6149s ++++
+++++ frame_probe ID: 890 receives a frame at time 45.615s ++++
+++++ frame_probe ID: 860 receives a frame at time 45.6251s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.6323s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.6323s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.6323s ++++
+counter results at time 2545.63 is 0
+++++ frame_probe ID: 1090 receives a frame at time 45.6324s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 45.6345s ++++
+++++ backoff ID: 100 is expired at time 5.68051 s.  actual duration is: 0.0480578s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 29 times  
+++++ frame_probe ID: 1050 receives a frame at time 45.6957s ++++
+++++ frame_probe ID: 1060 receives a frame at time 45.7363s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.7381s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.7382s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            24;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 885 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 45.7402s ++++
+45.7402s ++++
+++++ frame_probe ID: 882 receives a frame at time 45.7403s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.8054s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.8054s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.8055s ++++
+++++ backoff ID: 10 starts the 5th backoff. 
+++++ frame_probe ID: 1082 receives a frame at time 45.8725s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.8726s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.8726s ++++
+++++ backoff ID: 10 is expired at time 5.90395 s.  actual duration is: 0.066047s and the timer bias is 6.19888e-05s
+a data frame with index 29 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 1050 receives a frame at time 45.9193s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.9396s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            27;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1083 receives a frame at time 45.9397s ++++
+++++ frame_probe ID: 1060 receives a frame at time 45.9601s ++++
+INFO: Detected an invalid packet at item 2656
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 45.9695s ++++
+++++ frame_probe ID: 883 receives a frame at time 45.9695s ++++
+++++ frame_probe ID: 884 receives a frame at time 45.9696s ++++
+++++ frame_probe ID: 890 receives a frame at time 45.9696s ++++
+++++ frame_probe ID: 860 receives a frame at time 45.9797s ++++
+++++ frame_probe ID: 1082 receives a frame at time 45.9879s ++++
+++++ frame_probe ID: 1084 receives a frame at time 45.9879s ++++
+++++ frame_probe ID: 1083 receives a frame at time 45.988s ++++
+counter results at time ++++ frame_probe ID: 1090 receives a frame at time 2545.9945.9882s ++++ is 
+1
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 45.9898s ++++
+++++ backoff ID: 100 is expired at time 6.06047 s.  actual duration is: 0.072011s and the timer bias is 7.51019e-05s
+the 100th message counter node3_acked has been visited 30 times  
+++++ frame_probe ID: 1050 receives a frame at time 46.0757s ++++
+++++ frame_probe ID: 1060 receives a frame at time 46.1164s ++++
+INFO: Detected an invalid packet at item 2720
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 46.1239s ++++
+++++ frame_probe ID: 883 receives a frame at time ++++ frame_probe ID: 884 receives a frame at time 46.124s ++++
+46.124s ++++
+++++ frame_probe ID: 890 receives a frame at time 46.124s ++++
+++++ frame_probe ID: 860 receives a frame at time 46.1343s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.1421s ++++
+++++ frame_probe ID: 1084 receives a frame at time ++++ frame_probe ID: 1083 receives a frame at time 46.142146.1421s ++++s ++++
+
+++++ frame_probe ID: 1090 receives a frame at time 46.1423s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 46.1436s ++++
+counter results at time 2546.15 is 0
+++++ frame_probe ID: 1082 receives a frame at time 46.1792s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.1792s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            27;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      520;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1082 receives a frame at time 46.2463s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.2464s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.2464s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.3135s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.3135s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.3137s ++++
+++++ backoff ID: 100 is expired at time 6.31645 s.  actual duration is: 0.174014s and the timer bias is 7.60555e-05s
+the 100th message counter node3_acked has been visited 31 times  
+++++ frame_probe ID: 1050 receives a frame at time 46.3317s ++++
+++++ frame_probe ID: 1060 receives a frame at time 46.3726s ++++
+++++ frame_probe ID: 882 receives a frame at time 46.3826s ++++
+++++ frame_probe ID: 883 receives a frame at time 46.3826s ++++
+++++ frame_probe ID: 884 receives a frame at time 46.3826s ++++
+++++ frame_probe ID: 890 receives a frame at time 46.3827s ++++
+++++ frame_probe ID: 860 receives a frame at time 46.3929s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.3999s ++++
+++++ frame_probe ID: 1083 receives a frame at time ++++ frame_probe ID: 1084 receives a frame at time 46.4002s ++++
+46.4001s ++++
+counter results at time 2546.4 is 0
+++++ frame_probe ID: 1090 receives a frame at time 46.4003s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 46.4021s ++++
+++++ backoff ID: 100 is expired at time 6.43641 s.  actual duration is: 0.0360401s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 32 times  
+++++ frame_probe ID: 1082 receives a frame at time 46.4479s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.4479s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.448s ++++
+++++ frame_probe ID: 1050 receives a frame at time 46.4517s ++++
+++++ frame_probe ID: 1060 receives a frame at time 46.4925s ++++
+INFO: Detected an invalid packet at item 2944
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 46.4977s ++++
+++++ frame_probe ID: 883 receives a frame at time 46.4977s ++++
+++++ frame_probe ID: 884 receives a frame at time 46.4978s ++++
+++++ frame_probe ID: 890 receives a frame at time 46.4978s ++++
+++++ frame_probe ID: 860 receives a frame at time 46.5079s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.5151s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.5152s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.5158s ++++
+++++ frame_probe ID: 1090 receives a frame at time 46.5159s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+counter results at time 2546.52 is 0
+++++ frame_probe ID: 882 receives a frame at time 46.5172s ++++
+measurement 1/2 complete in 2 second(s).
+++++ backoff ID: 100 is expired at time 6.57602 s.  actual duration is: 0.0600419s and the timer bias is 6.50883e-05s
+the 100th message counter node3_acked has been visited 33 times  
+++++ frame_probe ID: 1050 receives a frame at time 46.5913s ++++
+++++ frame_probe ID: 1060 receives a frame at time 46.6381s ++++
+++++ frame_probe ID: 882 receives a frame at time 46.6421s ++++
+++++ frame_probe ID: 883 receives a frame at time 46.6422s ++++
+++++ frame_probe ID: 890 receives a frame at time 46.6423s ++++
+++++ frame_probe ID: 884 receives a frame at time 46.6423s ++++
+++++ frame_probe ID: 860 receives a frame at time 46.6591s ++++
+++++ frame_probe ID: 882 receives a frame at time 46.6616s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.6877s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            31;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1083 receives a frame at time 46.6879s ++++
+++++ backoff ID: 10 starts the 5th backoff. 
+++++ frame_probe ID: 1082 receives a frame at time 46.7545s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.7546s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.7547s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.8218s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.8219s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.8219s ++++
+++++ backoff ID: 10 is expired at time 6.84169 s.  actual duration is: 0.102017s and the timer bias is 9.39369e-05s
+a data frame with index 33 from node: 3 has been transmitted 2th time
+++++ frame_probe ID: 1050 receives a frame at time 46.8571s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.8887s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.8888s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            34;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 46.8978s ++++
+++++ frame_probe ID: 882 receives a frame at time 46.9015s ++++
+++++ frame_probe ID: 883 receives a frame at time 46.9016s ++++
+++++ frame_probe ID: 884 receives a frame at time 46.9017s ++++
+++++ frame_probe ID: 890 receives a frame at time 46.9017s ++++
+INFO: Detected an invalid packet at item 3136
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 46.9117s ++++
+++++ frame_probe ID: 1082 receives a frame at time 46.9182s ++++
+++++ frame_probe ID: 1083 receives a frame at time 46.9183s ++++
+++++ frame_probe ID: 1084 receives a frame at time 46.9183s ++++
+++++ frame_probe ID: 1090 receives a frame at time 46.9184s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+counter results at time 2546.92 is 1
+++++ frame_probe ID: 882 receives a frame at time 46.9208s ++++
+++++ backoff ID: 100 is expired at time 7.03855 s.  actual duration is: 0.120026s and the timer bias is 6.38962e-05s
+the 100th message counter node3_acked has been visited 34 times  
+++++ frame_probe ID: 1050 receives a frame at time 47.0539s ++++
+++++ frame_probe ID: 1060 receives a frame at time 47.0947s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.1031s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.1032s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.1032s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.1033s ++++
+++++ frame_probe ID: 860 receives a frame at time 47.1137s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.1225s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.1264s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.1264s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.1265s ++++
+++++ frame_probe ID: 1090 receives a frame at time 47.1265s ++++
+counter results at time 2547.13 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ backoff ID: 100 is expired at time 7.24663 s.  actual duration is: 0.12003s and the timer bias is 9.10759e-05s
+the 100th message counter node3_acked has been visited 35 times  
+++++ frame_probe ID: 1050 receives a frame at time 47.262s ++++
+++++ frame_probe ID: 1060 receives a frame at time 47.3028s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.3135s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.3135s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.3136s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.3136s ++++
+++++ frame_probe ID: 860 receives a frame at time 47.3237s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.3312s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.3312s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.3313s ++++
+counter results at time ++++ frame_probe ID: 1090 receives a frame at time 2547.33 is 47.33130s ++++
+
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 47.3339s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.369s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.369s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.3691s ++++
+++++ backoff ID: 100 is expired at time 7.39745 s.  actual duration is: 0.065928s and the timer bias is 0.00255799s
+the 100th message counter node3_acked has been visited 36 times  
+++++ frame_probe ID: 1050 receives a frame at time 47.413s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.4364s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.4364s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            35;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 47.4537s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.4578s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.4579s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.4579s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.4579s ++++
+INFO: Detected an invalid packet at item 3328
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 47.4681s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.4756s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.4756s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.4757s ++++
+++++ frame_probe ID: 1090 receives a frame at time counter results at time 47.4757s ++++
+2547.48 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 47.4771s ++++
+measurement 1/2 complete in 1 second(s).
+++++ backoff ID: 100 is expired at time 7.52982 s.  actual duration is: 0.0540049s and the timer bias is 6.31809e-05s
+the 100th message counter node3_acked has been visited 37 times  
+++++ frame_probe ID: 1050 receives a frame at time 47.5451s ++++
+++++ frame_probe ID: 1060 receives a frame at time 47.5858s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.5922s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.5922s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.5923s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.5924s ++++
+++++ frame_probe ID: 860 receives a frame at time 47.6026s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.6098s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.6098s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.6099s ++++
+counter results at time 2547.61 is 0
+++++ frame_probe ID: 1090 receives a frame at time 47.61s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 47.6115s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.6857s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.6857s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.6858s ++++
+++++ backoff ID: 100 is expired at time 7.74217 s.  actual duration is: 0.13203s and the timer bias is 5.88894e-05s
+the 100th message counter node3_acked has been visited 38 times  
+++++ frame_probe ID: 1082 receives a frame at time 47.7527s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.7528s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.7528s ++++
+++++ frame_probe ID: 1050 receives a frame at time 47.7574s ++++
+++++ frame_probe ID: 1060 receives a frame at time 47.7981s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.8027s ++++
+++++ frame_probe ID: 883 receives a frame at time 47.8027s ++++
+++++ frame_probe ID: 884 receives a frame at time 47.8028s ++++
+++++ frame_probe ID: 890 receives a frame at time 47.803s ++++
+++++ frame_probe ID: 860 receives a frame at time 47.8131s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.8203s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.8204s ++++
+counter results at time 2547.82 is 0
+++++ frame_probe ID: 1090 receives a frame at time 47.8205s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 1082 receives a frame at time 47.8207s ++++
+++++ frame_probe ID: 882 receives a frame at time 47.822s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.888s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.8881s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.8882s ++++
+++++ frame_probe ID: 1082 receives a frame at time 47.9553s ++++
+++++ frame_probe ID: 1083 receives a frame at time 47.9554s ++++
+++++ frame_probe ID: 1084 receives a frame at time 47.9555s ++++
+++++ backoff ID: 100 is expired at time 7.9887 s.  actual duration is: 0.168057s and the timer bias is 6.60419e-05s
+the 100th message counter node3_acked has been visited 39 times  
+++++ frame_probe ID: 1050 receives a frame at time 48.004s ++++
+++++ frame_probe ID: 1082 receives a frame at time 48.0224s ++++
+++++ frame_probe ID: 1083 receives a frame at time 48.0225s ++++
++++++++++ frame_probe ID: 1085 +++++++++ ---- data frame detected ---- frame index is:            40;    destination address is:    2;    source address is:         4;    number of transmission is: 1;    reserved field I is:       318;    reserved field II is:      524;    payload length is:           837;    header length is:          11;    address check is:          0;    good frame is:             0;    analysis time is:             1.50272e+09;    frame info contains a frame with length 852 bytes: 
+++++ frame_probe ID: 1060 receives a frame at time 48.0449s ++++
+++++ frame_probe ID: 882 receives a frame at time 48.0522s ++++
+++++ frame_probe ID: 883 receives a frame at time 48.0522s ++++
+++++ frame_probe ID: 884 receives a frame at time 48.0523s ++++
+++++ frame_probe ID: 890 receives a frame at time 48.0523s ++++
+++++ frame_probe ID: 860 receives a frame at time 48.0625s ++++
+++++ frame_probe ID: 1082 receives a frame at time 48.0708s ++++
+++++ frame_probe ID: 1083 receives a frame at time 48.0708s ++++
+++++ frame_probe ID: 1084 receives a frame at time 48.0708s ++++
+counter results at time ++++ frame_probe ID: 1090 receives a frame at time 2548.07 is 0
+48.0709s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 48.0717s ++++
+++++ backoff ID: 100 is expired at time 8.18506 s.  actual duration is: 0.114076s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 40 times  
+++++ frame_probe ID: 1050 receives a frame at time 48.2004s ++++
+++++ frame_probe ID: 1060 receives a frame at time 48.2411s ++++
+++++ frame_probe ID: 882 receives a frame at time 48.2448s ++++
+++++ frame_probe ID: 884 receives a frame at time ++++ frame_probe ID: 883 receives a frame at time 48.2449s ++++
+++++ frame_probe ID: 890 receives a frame at time 48.2451s ++++
+48.2448s ++++
+INFO: Detected an invalid packet at item 3648
+INFO: Parser returned #f
+++++ frame_probe ID: 860 receives a frame at time 48.2565s ++++
+++++ frame_probe ID: ++++ frame_probe ID: 10821083 receives a frame at time  receives a frame at time 48.262248.2622s ++++s ++++
+
+++++ frame_probe ID: 1084 receives a frame at time 48.2622s ++++
+counter results at time 2548.26 is 0
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 1090 receives a frame at time 48.2623s ++++
+++++ frame_probe ID: 882 receives a frame at time 48.2639s ++++
+++++ backoff ID: 100 is expired at time 8.31046 s.  actual duration is: 0.048039s and the timer bias is 5.19753e-05s
+the 100th message counter node3_acked has been visited 41 times  
+++++ frame_probe ID: 1050 receives a frame at time 48.3258s ++++
+++++ frame_probe ID: 1060 receives a frame at time 48.3665s ++++
+++++ frame_probe ID: 882 receives a frame at time 48.3691s ++++
+++++ frame_probe ID: 884 receives a frame at time 48.3692s ++++
+++++ frame_probe ID: 890 receives a frame at time 48.3693s ++++
+++++ frame_probe ID: 883 receives a frame at time 48.3695s ++++
+++++ frame_probe ID: 860 receives a frame at time 48.3795s ++++
+++++ frame_probe ID: 1082 receives a frame at time 48.3873s ++++
+++++ frame_probe ID: 1084 receives a frame at time 48.3874s ++++
+counter results at time 2548.39 is 0
+++++ frame_probe ID: 1090 receives a frame at time 48.3875s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ frame_probe ID: 1083 receives a frame at time 48.3875s ++++
+++++ backoff ID: 100 starts the 5th backoff. 
+++++ frame_probe ID: 882 receives a frame at time 48.3893s ++++
+++++ backoff ID: 100 is expired at time 8.42357 s.  actual duration is: 0.0360019s and the timer bias is 6.29425e-05s
+the 100th message counter node3_acked has been visited 42 times  
+++++ frame_probe ID: 1050 receives a frame at time 48.4389s ++++
+++++ frame_probe ID: 1060 receives a frame at time 48.4798s ++++
+INFO: Detected an invalid packet at item 3744
+INFO: Parser returned #f
+++++ frame_probe ID: 882 receives a frame at time 48.4843s ++++
+++++ frame_probe ID: 883 receives a frame at time 48.4843s ++++
+++++ frame_probe ID: 884 receives a frame at time 48.4845s ++++
+++++ frame_probe ID: 890 receives a frame at time 48.4845s ++++
+++++ frame_probe ID: 860 receives a frame at time 48.4947s ++++
+++++ frame_probe ID: 1082 receives a frame at time 48.5045s ++++
+++++ frame_probe ID: 1083 receives a frame at time 48.5046s ++++
+++++ frame_probe ID: 1084 receives a frame at time 48.5047s ++++
+++++ frame_probe ID: 1090 receives a frame at time 48.5048s ++++
+backoff ID 100 is trigger by ACK frame means the last DATA frame is successfully acked. 
+++++ backoff ID: 100 starts the 5th backoff. 
+counter results at time 2548.51 is 0
+++++ frame_probe ID: 882 receives a frame at time 48.5058s ++++
+++++ backoff ID: 100 is expired at time 8.51097 s.  actual duration is: 0.00581598s and the timer bias is 0.000340939s
+the 100th message counter node3_acked has been visited 43 times  
+measurement 1 raw data directory created /home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/.
+regex pattern is: _________________________________
+*_1.txt
+/home/inets/source/gr-inets/results
+receiver_ack_sent_1.txt receiver_data_received_1.txt receiver_frame_anlyzed_1.txt receiver_frame_checked_bad_1.txt receiver_frame_checked_good_1.txt receiver_frame_received_1.txt sender_ack_received_1.txt sender_bfr_dq_1.txt sender_data_sent_1.txt sender_frame_anlyzed_1.txt sender_frame_checked_good_1.txt sender_frame_received_1.txt sender_retransmissions_1.txt
+'receiver_ack_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_ack_sent_1.txt'
+'receiver_data_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_data_received_1.txt'
+'receiver_frame_anlyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_frame_anlyzed_1.txt'
+'receiver_frame_checked_bad_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_frame_checked_bad_1.txt'
+'receiver_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_frame_checked_good_1.txt'
+'receiver_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/receiver_frame_received_1.txt'
+'sender_ack_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_ack_received_1.txt'
+'sender_bfr_dq_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_bfr_dq_1.txt'
+'sender_data_sent_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_data_sent_1.txt'
+'sender_frame_anlyzed_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_frame_anlyzed_1.txt'
+'sender_frame_checked_good_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_frame_checked_good_1.txt'
+'sender_frame_received_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_frame_received_1.txt'
+'sender_retransmissions_1.txt' -> '/home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/sender_retransmissions_1.txt'
+measurement 1 raw data moved to /home/inets/0_ba/bachelor_thesis/measurements/debug/data/225/1/.
+
+measurement 2/2 complete in 20 second(s).
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.009.005-45-g6768a615
+
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+Using Volk machine: avx_64_mmx
+-- Opening a USRP2/N-Series device...
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+-- Current recv frame size: 1472 bytes
+-- Current send frame size: 1472 bytes
+measurement 2/2 complete in 19 second(s).
+develop mode of resend_check ID: 24 is activated.
+develop mode of resend_check ID: 24 is activated.
+the 880th message counter is activated.
+the 100th message counter is activated.
+develop_mode of backoff ID 100 is activated.
+develop_mode of backoff ID 10 is activated.
+the 100th message counter is activated.
+develop_mode of backoff ID 8 is activated.
+measurement 2/2 complete in 18 second(s).
+node starts running at 51.1266
+measurement 2/2 complete in 17 second(s).
+measurement 2/2 complete in 16 second(s).
+measurement 2/2 complete in 15 second(s).

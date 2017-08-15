@@ -27,6 +27,7 @@ class rtt:
         self.legend_coordinates =   kwargs.get("legend_coordinates", False)
         self.create_plots       =   kwargs.get("create_plots", True)
         self.links              =   kwargs.get("links", [1 for x in range(len(self.measurement))])
+        self.eval_mode          =   kwargs.get("eval_mode", "belated")
 
         print(self.links)
         print ("Calculating "+self.rtt_mode+"...")
@@ -247,7 +248,8 @@ class rtt:
                     legend_loc=self.legend_loc,
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["rtt"])
+                    legend_coordinates=self.legend_coordinates["rtt"],
+                    eval_mode=self.eval_mode)
 
         if self.create_plots == True or self.create_plots["packet_loss"] == True:
             myplot.myplot(data=self.plp_per_measurement,
@@ -267,7 +269,8 @@ class rtt:
                     legend_loc=self.legend_loc,
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["packet_loss"])
+                    legend_coordinates=self.legend_coordinates["packet_loss"],
+                    eval_mode=self.eval_mode)
 
         if len(self.all_retxs) <= 20:
             number_bars = True
@@ -307,4 +310,5 @@ class rtt:
                     legend_loc=self.legend_loc,
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["retxs"])
+                    legend_coordinates=self.legend_coordinates["retxs"],
+                    eval_mode=self.eval_mode)

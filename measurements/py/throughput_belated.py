@@ -31,6 +31,7 @@ class tp:
         self.legend_coordinates     =   kwargs.get("legend_coordinates", False)
         self.create_plots           =   kwargs.get("create_plots", True)
         self.links                  =   kwargs.get("links", [1 for x in range(len(self.measurement))])
+        self.eval_mode              =   kwargs.get("eval_mode", "belated")
         #pdb.set_trace()
 
     def calc(self):
@@ -119,7 +120,8 @@ class tp:
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
                 annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates["throughput"])
+                legend_coordinates=self.legend_coordinates["throughput"],
+                eval_mode=self.eval_mode)
 
         if self.create_plots == True or self.create_plots["diagnostic"] == True:
             myplot.myplot(  data=self.receiver_diagnosis,
@@ -139,7 +141,8 @@ class tp:
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
                 annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates["diagnosis_receiver"])
+                legend_coordinates=self.legend_coordinates["diagnosis_receiver"],
+                eval_mode=self.eval_mode)
 
             myplot.myplot(  data=self.sender_diagnosis,
                 bins=np.arange(
@@ -158,4 +161,5 @@ class tp:
                 legend_loc=self.legend_loc,
                 annotations_below=self.annotations_below,
                 annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates["diagnosis_sender"])
+                legend_coordinates=self.legend_coordinates["diagnosis_sender"],
+                eval_mode=self.eval_mode)

@@ -37,6 +37,7 @@ class myplot:
         self.annotations_below  = kwargs.get("annotations_below", [])
         self.annotations_other  = kwargs.get("annotations_other", [])
         self.legend_coordinates = kwargs.get("legend_coordinates", False)
+        self.eval_mode          = kwargs.get("eval_mode", "belated")
 
         #print(self.legend_loc)
 
@@ -193,22 +194,36 @@ class myplot:
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
         linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
-        print("_____________________________"+str(len(np.asarray(self.data).transpose())))
-        for index,item in enumerate(np.asarray(self.data).transpose()):
-            print("index:"+str(index))
-            print("___markers____")
-            print(markers[index])
-            x = np.sort(item)
+
+        if self.eval_mode = "belated":
+            for index,item in enumerate(np.asarray(self.data).transpose()):
+                print("index:"+str(index))
+                print("___markers____")
+                print(markers[index])
+                x = np.sort(item)
+                y = np.arange(1,len(x)+1) / len(x)
+                x = np.insert(x,0,x[0])
+                y = np.insert(y,0,0)
+                self.plot = plt.step(x,
+                        y,
+                        marker=markers[index],
+                        linestyle=linestyles[index],
+                        linewidth=linewidths[index],
+                        markevery=range(1,len(x)),
+                        label=self.legend[index])
+        else:#live
+            x = np.sort(self.data)
             y = np.arange(1,len(x)+1) / len(x)
             x = np.insert(x,0,x[0])
             y = np.insert(y,0,0)
             self.plot = plt.step(x,
                     y,
-                    marker=markers[index],
-                    linestyle=linestyles[index],
-                    linewidth=linewidths[index],
+                    marker=markers[0],
+                    linestyle=linestyles[0],
+                    linewidth=linewidths[0],
                     markevery=range(1,len(x)),
-                    label=self.legend[index])
+                    label=self.legend[0])
+
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)

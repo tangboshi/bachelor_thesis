@@ -198,7 +198,7 @@ class myplot:
         if self.eval_mode == "belated":
             cdf_data = np.asarray(self.data).transpose()
         if self.eval_mode == "live":
-            cdf_data = [np.asarray(self.data).transpose()]
+            cdf_data = [self.data]
 
         for index,item in enumerate(cdf_data):
             print("index:"+str(index))

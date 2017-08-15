@@ -199,6 +199,8 @@ class myplot:
             cdf_data = np.asarray(self.data).transpose()
         if self.eval_mode == "live":
             cdf_data = np.asarray(self.data).transpose()
+            if self.title == "Retransmissions per Frame":
+                cdf_data = [cdf_data]
 
         for index,item in enumerate(cdf_data):
             print("index:"+str(index))

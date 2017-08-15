@@ -6,8 +6,8 @@ import rtt_belated as rtt
 import throughput_belated as tp
 
 
-measurement             =   [int(os.environ["measurement_counter"])]*2
-links                   =   [int(os.environ["link"])]*2
+measurement             =   [int(os.environ["measurement_counter"]), int(os.environ["measurement_counter"])]
+links                   =   [int(os.environ["link"]), int(os.environ["link"])]
 repetitions             =   int(os.environ["measurement_repetitions"])
 data_source_path        =   os.environ["data_source_path"]
 plot_path               =   os.environ["plot_directory_path"]+"/"+os.environ["measurement_counter"]+"/"

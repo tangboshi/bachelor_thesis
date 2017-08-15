@@ -8,7 +8,7 @@ import throughput_belated as tp
 
 measurement             =   [int(os.environ["measurement_counter"])]
 links                   =   [int(os.environ["link"])]
-repetitions             =   os.environ["measurement_repetitions"]
+repetitions             =   int(os.environ["measurement_repetitions"])
 data_source_path        =   os.environ["data_source_path"]+"/"+str(measurement[0])
 plot_path               =   os.environ["plot_directory_path"]
 plot_type               =   ["cdf", "boxplot"]
@@ -18,7 +18,7 @@ retxs_data_files        =   os.environ["retxs_data_files"]
 show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
 
-boxplot_xticks      = [ "measurement "+str(idx+1) for idx in range(int(repetitions))]
+boxplot_xticks      = [ "measurement "+str(idx+1) for idx in range(repetitions)]
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 

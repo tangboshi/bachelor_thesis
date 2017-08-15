@@ -19,7 +19,7 @@ show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
 max_retxs               =   6
 
-boxplot_xticks              = [ "measurement" ]
+boxplot_xticks              = [ "measurement "+measurement[0] ]
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 

@@ -9,7 +9,7 @@ import throughput_belated as tp
 measurement             =   [int(os.environ["measurement_counter"])]
 links                   =   [int(os.environ["link"])]
 repetitions             =   int(os.environ["measurement_repetitions"])
-data_source_path        =   os.environ["data_source_path"]+"/"+str(measurement[0])
+data_source_path        =   os.environ["data_source_path"]
 plot_path               =   os.environ["plot_directory_path"]
 plot_type               =   ["cdf", "boxplot"]
 throughput_data_files   =   os.environ["throughput_data_files"]

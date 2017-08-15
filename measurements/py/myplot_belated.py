@@ -196,37 +196,26 @@ class myplot:
         linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
 
         if self.eval_mode == "belated":
-            for index,item in enumerate(np.asarray(self.data).transpose()):
-                print("index:"+str(index))
-                print("___markers____")
-                print(markers[index])
-                x = np.sort(item)
-                y = np.arange(1,len(x)+1) / len(x)
-                x = np.insert(x,0,x[0])
-                y = np.insert(y,0,0)
-                self.plot = plt.step(x,
-                        y,
-                        marker=markers[index],
-                        linestyle=linestyles[index],
-                        linewidth=linewidths[index],
-                        markevery=range(1,len(x)),
-                        label=self.legend[index])
-        else:#live
-            # print(self.data)
-            # print(np.asarray(self.data).transpose())
-            x = np.sort(self.data)
+            cdf_data = np.asarray(self.data).transpose()
+        if self.eval_mode == "live":
+            cdf_data = [np.asarray(self.data).transpose()]
+
+        for index,item in enumerate(cdf_data):
+            print("index:"+str(index))
+            print("___markers____")
+            print(markers[index])
+            x = np.sort(item)
             y = np.arange(1,len(x)+1) / len(x)
             x = np.insert(x,0,x[0])
             y = np.insert(y,0,0)
-            print(x)
-            print(y)
             self.plot = plt.step(x,
                     y,
-                    marker=markers[0],
-                    linestyle=linestyles[0],
-                    linewidth=linewidths[0],
+                    marker=markers[index],
+                    linestyle=linestyles[index],
+                    linewidth=linewidths[index],
                     markevery=range(1,len(x)),
-                    label=self.legend[0])
+                    label=self.legend[index])
+
 
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",

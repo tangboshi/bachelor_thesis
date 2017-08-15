@@ -6,8 +6,8 @@ import rtt_belated as rtt
 import throughput_belated as tp
 
 
-measurement             =   [int(os.environ["measurement_counter"])]
-links                   =   [int(os.environ["link"])]
+measurement             =   [int(os.environ["measurement_counter"])]*2
+links                   =   [int(os.environ["link"])]*2
 repetitions             =   int(os.environ["measurement_repetitions"])
 data_source_path        =   os.environ["data_source_path"]
 plot_path               =   os.environ["plot_directory_path"]+"/"+os.environ["measurement_counter"]+"/"
@@ -19,7 +19,7 @@ show_plot               =   os.environ["show_plot_after_measurement"]
 rtt_mode                =   os.environ["rtt_mode"]
 max_retxs               =   6
 
-boxplot_xticks              = [ "measurement "+str(measurement[0]), "a", "b", "c", "d", "e", "f" ]
+boxplot_xticks              = [ "measurement "+str(measurement[0]) ]
 
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 

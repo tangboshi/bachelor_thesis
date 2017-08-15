@@ -29,9 +29,9 @@ import throughput_belated as tp
 #measurement             = [x for x in range(207,212)] + [x for x in range (218,220)]
 #baseline one link
 # measurement             =  [242,246,244]
-measurement             =   [201,202,203]
+measurement             =   [201,202]
 #links used in the measurement
-links                   =   [1,2,3]
+links                   =   [1,2]
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"

@@ -137,7 +137,6 @@ class tp:
                 eval_mode=self.eval_mode)
 
             myplot.myplot(  data=self.sender_diagnosis,
-                bins=np.arange(
                 plottype=self.plot_type,
                 title="Sender Receiving Score (Inverse = ACK Loss)",
                 xlabel="score [%]",

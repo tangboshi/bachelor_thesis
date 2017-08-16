@@ -231,11 +231,6 @@ class rtt:
                 "frame_delay": "Frame Delay"
             }
             myplot.myplot(data=self.rtt,
-                    bins=np.arange(
-                        min(rtt_vals)-0.002,
-                        max(rtt_vals)+0.002,
-                        #0.07/1000),
-                        (max(rtt_vals)-min(rtt_vals))/50),
                     plottype=self.plot_type,
                     title=delay_titles[self.rtt_mode],
                     xlabel=self.rtt_mode.replace("_", " ")+" [s]",
@@ -253,10 +248,6 @@ class rtt:
 
         if self.create_plots == True or self.create_plots["packet_loss"] == True:
             myplot.myplot(data=self.plp_per_measurement,
-                    bins=np.arange(
-                        0,
-                        100,
-                        1),
                     plottype=self.plot_type,
                     title="Packet Loss",
                     xlabel="packet loss [%]",
@@ -293,10 +284,6 @@ class rtt:
 
         if self.create_plots == True or self.create_plots["retxs"] == True:
             myplot.myplot(data=self.retxs_overall,
-                    bins=np.arange(
-                        0,
-                        self.max_retxs+1,
-                        0.1),
                     plottype=self.plot_type,
                     title="Retransmissions per Frame",
                     xlabel="retransmissions/frame",

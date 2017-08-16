@@ -104,10 +104,6 @@ class tp:
         print("Let's plot! ;-)")
         if self.create_plots == True or self.create_plots["throughput"] == True:
             myplot.myplot(  data=self.data,
-                bins=np.arange(
-                    min(all_data)-float(self.packet_size),
-                    max(all_data)+float(self.packet_size),
-                    (max(all_data)-min(all_data)+1)/25),
                 plottype=self.plot_type,
                 title="Throughput",
                 xlabel="throughput [kbit/s]",
@@ -125,10 +121,6 @@ class tp:
 
         if self.create_plots == True or self.create_plots["diagnostic"] == True:
             myplot.myplot(  data=self.receiver_diagnosis,
-                bins=np.arange(
-                    min(all_data)-float(self.packet_size),
-                    max(all_data)+float(self.packet_size),
-                    (max(all_data)-min(all_data)+1)/25),
                 plottype=self.plot_type,
                 title="Receiver Receiving Score (Inverse = Data Loss)",
                 xlabel="score [%]",
@@ -146,9 +138,6 @@ class tp:
 
             myplot.myplot(  data=self.sender_diagnosis,
                 bins=np.arange(
-                    min(all_data)-float(self.packet_size),
-                    max(all_data)+float(self.packet_size),
-                    (max(all_data)-min(all_data)+1)/25),
                 plottype=self.plot_type,
                 title="Sender Receiving Score (Inverse = ACK Loss)",
                 xlabel="score [%]",

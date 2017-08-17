@@ -76,6 +76,7 @@ class myplot:
             plottypes[aplot]()
             #set axis limits
             self.ax.set_ylim(ymin=0)
+            self.ax.set_xlim(xmin=0)
             #get rid of unloved margins
             plt.tight_layout()
             # Optionally create grid

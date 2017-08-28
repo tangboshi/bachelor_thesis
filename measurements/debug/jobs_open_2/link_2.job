@@ -7,10 +7,10 @@ timer=300ms
 repetions=5
 
 export link=2
-export timer=20
-export measurement_repetitions=1
-measurement_scripts=( csma_80211_III.py csma_80211_IV.py )
-#measurement_scripts=( theoretical_aloha_III.py theoretical_aloha_IV.py )
+export timer=300
+export measurement_repetitions=5
+#measurement_scripts=( csma_80211_III.py csma_80211_IV.py )
+measurement_scripts=( theoretical_aloha_III.py theoretical_aloha_IV.py )
 plot_scripts=( evaluation.py )
 export throughput_data_files="receiver_data_received,sender_ack_received"
 export rtt_data_files="sender_bfr_dq,sender_ack_received"

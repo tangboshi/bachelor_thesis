@@ -70,7 +70,7 @@ class backoff:
 
         self.calc()
         print("***self.backoff***")
-        print (self.backoff_csfail)
+        print (self.backoff_csfail_sum)
 
         if "all" in self.plot_type:
             # Removed line, cause it is bugged atm.

@@ -31,7 +31,8 @@ custom_legend_coordinates   = {
                                 "retxs":                [1,0,"lower right"],
                                 "throughput":           [1,0,"lower right"],
                                 "diagnosis_sender":     [1,0,"lower right"],
-                                "diagnosis_receiver":   [1,0,"lower right"]
+                                "diagnosis_receiver":   [1,0,"lower right"],
+                                "backoff_csfail":       [1,0,"lower right"]
                             }
 
 create_plots                = {
@@ -79,5 +80,6 @@ for index,a_plot_type in enumerate(plot_type):
 
     rtt.rtt(**eval_dict).plot()
     tp.tp(**eval_dict).plot()
+    backoff.backoff(**eval_dict).plot()
 
 print("Done.")

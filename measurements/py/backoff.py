@@ -43,6 +43,7 @@ class backoff:
             for i in range(self.repetitions):
                 path                    = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 backoff_csfail_path     = path+self.backoff_data_files[0]+"_"+str(self.links[index])+".txt"
+                backoff_csfail_times    = []
 
                 print(str(i+1))
                 print("backoff_csfail_path:"+backoff_csfail_path)

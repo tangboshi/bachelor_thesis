@@ -2,7 +2,6 @@ echo "remote_measurement is set to "$remote_measurement"."
 
 function setup_remote_connection
 {
-  echo "Line 5 here, I'm really executed!"
   reset
   # echo "setting up remote connection..."
   # if ( mount | grep $remote_measurement_mount_point  )
@@ -20,7 +19,6 @@ function setup_remote_connection
 function prepare_measurement
 {
     reset
-    echo "Line 23 here, I'm really executed!"
     measurement_counter=0
     ## let's make sure all the directories exist
     printf "\nchecking if paths exists...\n"
@@ -30,6 +28,8 @@ function prepare_measurement
       then
         mkdir -p $raw_data_source_path
         echo $raw_data_source_path" created."
+      else
+        rm -r $raw_data_source_path/*
     fi
 
     if [ -d $plot_directory_path ];
@@ -78,7 +78,6 @@ function prepare_measurement
 
 function measure
 {
-  echo "Line 81 here, I'm really executed!"
   local prematurely_aborted=0
 
   for ((x = 1 ; x <= $measurement_repetitions ; x += 1)); do
@@ -152,7 +151,6 @@ function measure
 
 function plot
 {
-  echo "Line 382 here, I'm really executed!"
   ## plot the results
   echo "now processing results..."
 
@@ -185,7 +183,6 @@ trap "cd $this_path" exit;
 
 function main
 {
-  echo "Line 327 here, I'm really executed!"
   # clear up console
   #reset
   # check if jobs_open directory is empty

@@ -150,45 +150,6 @@ function measure
   fi
 }
 
-function main
-{
-  echo "Line 327 here, I'm really executed!"
-  # clear up console
-  #reset
-  # check if jobs_open directory is empty
-  if [ ! "$(ls -a $jobs_open_path)" ]; then
-    echo "there seem to be no open jobs. measuring with default parameters."
-    prepare_measurement
-    #take measurements
-    measure | tee -a $log_path/default_$measurement_counter.log
-    # create plot if desired
-    if [ $plot_enabled -eq 1 ]; then
-      plot | tee -a $log_path/default_$measurement_counter.log; fi
-  else
-    prepare_measurement
-    echo "open jobs detected! let's get to work..."
-    jobs=$jobs_open_path/*
-    for job in $jobs; do
-      source $job;
-      job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
-      log=$log_path/$job_name"_"$measurement_counter.log
-      #echo $job_name
-      $(cat $job) | tee -a $log
-      $(cat measurement_2.conf) | tee -a $log
-      measure | tee -a $log
-      if [ $plot_enabled -eq 1 ]; then
-        plot | tee -a $log
-      fi
-      if [ $move_after_job_done -eq 1 ]; then
-        cp $job $plot_directory_path/$measurement_counter/
-        mv $job $jobs_done_path/
-      fi
-      export measurement_counter=$((measurement_counter++))
-    done
-  fi
-
-}
-
 if [ $debug_mode -eq 1 ]; then
   printf "\n"
   echo "+-----------------------------------------------------------+"
@@ -202,7 +163,6 @@ if [ $remote_measurement -eq 1 ]; then
   else
     main
 fi
-}
 
 function plot
 {

@@ -202,7 +202,6 @@ if [ $remote_measurement -eq 1 ]; then
   else
     main
 fi
-  fi
 }
 
 function plot

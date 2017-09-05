@@ -150,20 +150,6 @@ function measure
   fi
 }
 
-if [ $debug_mode -eq 1 ]; then
-  printf "\n"
-  echo "+-----------------------------------------------------------+"
-  echo "| debug mode is active, results are saved in the debug dirs |"
-  echo "+-----------------------------------------------------------+"
-fi
-
-if [ $remote_measurement -eq 1 ]; then
-  # call to main included here
-    setup_remote_connection
-  else
-    main
-fi
-
 function plot
 {
   echo "Line 382 here, I'm really executed!"
@@ -199,7 +185,7 @@ trap "cd $this_path" exit;
 
 function main
 {
-  echo "Line 416 here, I'm really executed!"
+  echo "Line 327 here, I'm really executed!"
   # clear up console
   #reset
   # check if jobs_open directory is empty
@@ -233,7 +219,6 @@ function main
       export measurement_counter=$((measurement_counter++))
     done
   fi
-
 }
 
 if [ $debug_mode -eq 1 ]; then

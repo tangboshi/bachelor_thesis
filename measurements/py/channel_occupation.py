@@ -85,6 +85,7 @@ class channel_occupation:
             data_sent_times = []
         ###
 
+        print("len(busy_starting_times):")
         print(len(busy_starting_times))
         print("ack_received_times:")
         #print(ack_received_times)

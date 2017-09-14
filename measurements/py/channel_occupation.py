@@ -34,6 +34,7 @@ class channel_occupation:
     def calc(self):
         print("self.measurement")
         print(self.measurement)
+        print(self.repetitions)
 
         busy_starting_times = []
 
@@ -82,7 +83,7 @@ class channel_occupation:
             ack_received_times = []
             data_sent_times = []
         ###
-        
+
         print(len(busy_starting_times))
         print("ack_received_times:")
         #print(ack_received_times)

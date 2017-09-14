@@ -216,21 +216,21 @@ myDict["Somerandomword"]()
 # plt.show()
 
 #CDF!!
-import numpy as np
-import matplotlib.pyplot as plt
-
-data =  [
-            np.random.choice(100000,3) for x in range(3)
-        ]
-
-for index,item in enumerate(data):
-    x = np.sort(item)
-    y = np.arange(1,len(x)+1) / len(x)
-    plt.plot(x,y,marker='x')
-
-print(data)
-plt.margins(0.02)
-plt.show()
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# data =  [
+#             np.random.choice(100000,3) for x in range(3)
+#         ]
+#
+# for index,item in enumerate(data):
+#     x = np.sort(item)
+#     y = np.arange(1,len(x)+1) / len(x)
+#     plt.plot(x,y,marker='x')
+#
+# print(data)
+# plt.margins(0.02)
+# plt.show()
 
 # x1 = np.sort(data_1)
 # x2 = np.sort(data_2)
@@ -247,3 +247,123 @@ plt.show()
 # data.append(arr1)
 # data.append(arr2)
 # print(data)
+
+# import numpy as np
+# import matplotlib
+# from matplotlib.patches import Circle, Wedge, Polygon
+# from matplotlib.collections import PatchCollection
+# import matplotlib.pyplot as plt
+#
+# # Fixing random state for reproducibility
+# np.random.seed(1223141536)
+#
+#
+# fig, ax = plt.subplots()
+#
+# resolution = 50  # the number of vertices
+# N = 3
+# x = np.random.rand(N)
+# y = np.random.rand(N)
+# radii = 0.1*np.random.rand(N)
+# patches = []
+# for x1, y1, r in zip(x, y, radii):
+#     circle = Circle((x1, y1), r)
+#     patches.append(circle)
+#
+# x = np.random.rand(N)
+# y = np.random.rand(N)
+# radii = 0.1*np.random.rand(N)
+# theta1 = 360.0*np.random.rand(N)
+# theta2 = 360.0*np.random.rand(N)
+# for x1, y1, r, t1, t2 in zip(x, y, radii, theta1, theta2):
+#     wedge = Wedge((x1, y1), r, t1, t2)
+#     patches.append(wedge)
+#
+# # Some limiting conditions on Wedge
+# patches += [
+#     Wedge((.3, .7), .1, 0, 360),             # Full circle
+#     Wedge((.7, .8), .2, 0, 360, width=0.05),  # Full ring
+#     Wedge((.8, .3), .2, 0, 45),              # Full sector
+#     Wedge((.8, .3), .2, 45, 90, width=0.10),  # Ring sector
+# ]
+#
+# for i in range(N):
+#     polygon = Polygon(np.random.rand(N, 2), True)
+#     patches.append(polygon)
+#
+# colors = 100*np.random.rand(len(patches))
+# p = PatchCollection(patches, alpha=0.4)
+# p.set_array(np.array(colors))
+# ax.add_collection(p)
+# fig.colorbar(p, ax=ax)
+#
+# plt.show()
+
+
+# Get channel occupation data from files
+# busy_starting_times = [
+#                         [5.0,7.0,10.0],
+#                         [7.05],
+#                     ]
+#
+# # Normalize the x-axis to start at 0
+# # 'cause UNIX-time isnt really a nice human-readable format
+# offset_candidates = [item[0] for item in busy_starting_times]
+# offset = min(offset_candidates)
+#
+# for index,process in enumerate(busy_starting_times):
+#     busy_starting_times[index] = [time-offset for time in process]
+#
+# # prepare lists for data for graphical representation
+# busy_end_times = []
+# busy_durations = []
+#
+# for index,process in enumerate(busy_starting_times):
+#     # KISS: process = (data,ack)
+#     # data channel occupation time is estimated as 0.04s
+#     # ack channel occupation time is estimated as 0.01s
+#     if index % 2 == 0:
+#         process_time = 0.04
+#     else:
+#         process_time = 0.01
+#     process     = [time+process_time for time in process]
+#     occupation  = [process_time for time in range(len(process))]
+#     busy_end_times.append(process)
+#     busy_durations.append(occupation)
+#
+# # Now let's unify the lists for data and acks of the same process
+# # Not really necessary if we do something about the coloring of each n sets
+# # if len(busy_starting_times) % 2 == 0:
+# #     tmp = []
+# #     for index in range(int(len(busy_starting_times)/2)):
+# #         tmp += busy_starting_times[2*index]+busy_starting_times[2*index+1]
+# #     busy_starting_times = tmp
+#
+# print("busy_starting_times:")
+# print(busy_starting_times)
+# print("busy_end_times:")
+# print(busy_end_times)
+# print("busy_durations:")
+# print(busy_durations)
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.broken_barh([(110, 30), (150, 10)], (10, 9), facecolors='blue')
+ax.broken_barh([(10, 50), (100, 20), (130, 10)], (20, 9),
+               facecolors=('red', 'yellow', 'green'))
+ax.broken_barh([(10, 50), (100, 20), (130, 10)], (30, 9),
+              facecolors=('red', 'yellow', 'green'))
+ax.set_ylim(5, 75)
+ax.set_xlim(0, 200)
+ax.set_xlabel('seconds since start')
+ax.set_yticks([15, 25, 35, 45, 55])
+ax.set_yticklabels(['Bill', 'Jim', 'Hank', 'Luke', 'Mojo'])
+ax.grid(True)
+ax.annotate('race interrupted', (61, 25),
+            xytext=(0.8, 0.9), textcoords='axes fraction',
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            fontsize=16,
+            horizontalalignment='right', verticalalignment='top')
+
+plt.show()

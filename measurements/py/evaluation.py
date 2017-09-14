@@ -27,22 +27,24 @@ boxplot_xticks              = [ "measurement "+str(index) for index in measureme
 legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 
 custom_legend_coordinates   = {
-                                "rtt":                  [1,0,"lower right"],
-                                "packet_loss":          [1,0,"lower right"],
-                                "retxs":                [1,0,"lower right"],
-                                "throughput":           [1,0,"lower right"],
-                                "diagnosis_sender":     [1,0,"lower right"],
-                                "diagnosis_receiver":   [1,0,"lower right"],
-                                "backoff_csfail":       [1,0,"lower right"]
+                                "rtt":                 [0.24,0.85,"upper left"],
+                                "packet_loss":         [1,0,"lower right"],
+                                "retxs":               [1,0,"lower right"],
+                                "throughput":          [1,0,"lower right"],
+                                "diagnosis_sender":    [1,0,"lower right"],
+                                "diagnosis_receiver":  [1,0,"lower right"],
+                                "backoff_csfail":      [1,0,"lower right"],
+                                "channel_occupation":  [1,0,"lower right"]
                             }
 
 create_plots                = {
-                                "rtt":              True,
-                                "packet_loss":      True,
-                                "retxs":            False,
-                                "throughput":       True,
-                                "diagnostic":       True,
-                                "backoff_csfail":   True
+                                "rtt":                  False,
+                                "packet_loss":          True,
+                                "retxs":                False,
+                                "throughput":           False,
+                                "diagnostic":           True,
+                                "backoff_csfail":       False,
+                                "channel_occupation":   True
                             }
 
 #Unimplemented, use later
@@ -79,8 +81,26 @@ for index,a_plot_type in enumerate(plot_type):
         "timer":                    timer
     }
 
-    rtt.rtt(**eval_dict).plot()
-    tp.tp(**eval_dict).plot()
-    backoff.backoff(**eval_dict).plot()
+    if create_plots["backoff_csfail"] == True:
+        print("_______________________________________________________________")
+        print("Creating backoff (cs fail) plot!")
+        print("***************************************************************")
+        backoff.backoff(**eval_dict).plot()
+    # FIXME: diagnostic, packet_loss and retxs plots can only be created if rtt is True.
+    if create_plots["rtt"] == True:
+        print("_______________________________________________________________")
+        print("Creating rtt plot!")
+        print("***************************************************************")
+        rtt.rtt(**eval_dict).plot()
+    if create_plots["throughput"] == True:
+        print("_______________________________________________________________")
+        print("Creating throughput plot!")
+        print("***************************************************************")
+        tp.tp(**eval_dict).plot()
+    if create_plots["channel_occupation"] == True:
+        print("_______________________________________________________________")
+        print("Creating channel occupation plot!")
+        print("***************************************************************")
+        channel_occupation.channel_occupation(**eval_dict)
 
 print("Done.")

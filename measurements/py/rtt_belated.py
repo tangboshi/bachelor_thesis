@@ -202,6 +202,7 @@ class rtt:
             print(len(retxs_per_measurement))
             retxs_per_measurement = []
 
+            return data_sent_times,ack_received_times
             #print("self.rtt after calc:"+str(self.rtt))
             #print("****************************************")
             #print("\n\n\n\n")

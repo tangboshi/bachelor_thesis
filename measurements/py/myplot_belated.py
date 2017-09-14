@@ -1,8 +1,8 @@
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 import math
-
 import pdb
 
 '''
@@ -20,7 +20,10 @@ class myplot:
 
         print("Title is '"+title+"'.")
         # Kind of hackish, but who cares!
-        if title == "Retransmissions per Frame" or "bar" in plottype or "hist" in plottype:
+        if  (title == "Retransmissions per Frame"
+            or "bar"  in plottype
+            or "hist" in plottype
+            or "broken_barh" in plottype):
             self.data               = data
 
         self.bins               = bins
@@ -37,28 +40,32 @@ class myplot:
         self.annotations_below  = kwargs.get("annotations_below", [])
         self.annotations_other  = kwargs.get("annotations_other", [])
         self.legend_coordinates = kwargs.get("legend_coordinates", False)
+        self.timer              = kwargs.get("timer", 300)
+        self.repetitions        = kwargs.get("repetitions", 5)
         self.eval_mode          = kwargs.get("eval_mode", "belated")
 
         #print(self.legend_loc)
 
         plottypes = {
-            "hist":     lambda: self.hist(),
-            "line":     lambda: self.line(),
-            "cdf":      lambda: self.cdf(),
-            "pdf":      lambda: self.pdf(),
-            "boxplot":  lambda: self.boxplot(),
-            "debug":    lambda: self.debug(),
-            "bar":      lambda: self.bar()
+            "hist":         lambda: self.hist(),
+            "line":         lambda: self.line(),
+            "cdf":          lambda: self.cdf(),
+            "pdf":          lambda: self.pdf(),
+            "boxplot":      lambda: self.boxplot(),
+            "debug":        lambda: self.debug(),
+            "bar":          lambda: self.bar(),
+            "broken_barh":  lambda: self.broken_barh()
         }
 
         titles = {
-            "cdf":      "CDF",
-            "line":     "Line Chart",
-            "hist":     "Histogram",
-            "pdf":      "PDF",
-            "boxplot":  "Boxplot",
-            "debug":    "Debug",
-            "bar":      "Bar Chart"
+            "cdf":          "CDF",
+            "line":         "Line Chart",
+            "hist":         "Histogram",
+            "pdf":          "PDF",
+            "boxplot":      "Boxplot",
+            "debug":        "Debug",
+            "bar":          "Bar Chart",
+            "broken_barh":  "Gantt Chart"
         }
 
         # scientific axis scaling exceptions
@@ -86,7 +93,7 @@ class myplot:
             #This will create a warning if you plot boxplots that you can
             #safely ignore (boxplots cannot be labeled).
             #As a workaround the xticks are labeled
-            if not aplot == "boxplot":
+            if not aplot == "boxplot" and not aplot == "broken_barh":
                 if len(np.asarray(self.data).transpose()) == len(self.legend):
                     if self.legend_coordinates == False:
                         box = self.ax.get_position()
@@ -162,6 +169,51 @@ class myplot:
         #             label,
         #             ha='center',
         #             va='bottom')
+
+    def broken_barh(self):
+        plot_data = []
+        for index,item in enumerate(self.data["occupation_starting"]):
+            plot_data.append(list(zip(self.data["occupation_starting"][index], self.data["occupation_durations"][index])))
+
+        print("plot_data:")
+        #print(plot_data)
+        data_len = len(plot_data)
+        print(data_len)
+
+        self.ax.set_ylim(5, 5*data_len+15)
+        self.ax.set_xlim(0, self.timer*self.repetitions)
+        self.ax.xaxis.grid(self.grid)
+        self.ax.yaxis.grid(self.grid)
+
+        # FIXME: Now ACKS are absolutely required, or data_len/2 doesn't make sense!
+        self.ax.set_yticks([x*10+15 for x in range(int(data_len/2))])
+        #self.ax.set_yticklabels(["measurement "+str(self.measurement[index]) for index in range(int(data_len/2))])
+
+        self.setLabels(
+            xlabel="time[s]",
+            title=self.title
+        )
+
+        blue_patch  = mpatches.Patch(color='blue', label="Data")
+        red_patch   = mpatches.Patch(color='red', label='Acks')
+
+        if self.legend_coordinates[2] != "best":
+            self.ax.legend( handles=[red_patch, blue_patch],
+                            fancybox=True,
+                            loc=self.legend_coordinates[2],
+                            bbox_to_anchor=(self.legend_coordinates[0],
+                                            self.legend_coordinates[1]))
+        else:
+            self.ax.legend( handles=[red_patch, blue_patch],
+                            fancybox=True,
+                            loc="best")
+
+        for index,item in enumerate(plot_data):
+            print("Added index "+str(index)+" to plot.")
+            if index % 2 == 0:
+                self.ax.broken_barh(item,((index+1)*5+5, 9), facecolors='blue')
+            elif (index-1) % 2 == 0:
+                self.ax.broken_barh(item,(index*5+5,9), facecolors='red')
 
     def line(self):
         #FIXME

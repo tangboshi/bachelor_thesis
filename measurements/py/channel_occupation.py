@@ -34,6 +34,7 @@ class channel_occupation:
     def calc(self):
         print("self.measurement")
         print(self.measurement)
+        print("self.repetitions")
         print(self.repetitions)
 
         busy_starting_times = []
@@ -169,4 +170,5 @@ class channel_occupation:
                     annotations_other=self.annotations_other,
                     legend_coordinates=self.legend_coordinates["channel_occupation"],
                     eval_mode=self.eval_mode,
-                    timer=self.timer)
+                    timer=self.timer,
+                    repetitions=self.repetitions)

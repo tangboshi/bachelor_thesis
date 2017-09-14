@@ -187,7 +187,7 @@ class myplot:
 
         # FIXME: Now ACKS are absolutely required, or data_len/2 doesn't make sense!
         self.ax.set_yticks([x*10+15 for x in range(int(data_len/2))])
-        #self.ax.set_yticklabels(["measurement "+str(self.measurement[index]) for index in range(int(data_len/2))])
+        self.ax.set_yticklabels([self.legend_labels[index] for index in range(int(data_len/2))])
 
         self.setLabels(
             xlabel="time[s]",

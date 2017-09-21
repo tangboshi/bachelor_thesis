@@ -85,7 +85,8 @@ eval_dict = {
     "channel_occupation_mode":  channel_occupation_mode,
     "co_data_files":            co_data_files,
     "sniffer_data_files":       sniffer_data_files,
-    "sniffer_settings":         sniffer_settings
+    "sniffer_settings":         sniffer_settings,
+    "timer":                    timer
 }
 
 for index,a_plot_type in enumerate(plot_type):

@@ -11,12 +11,13 @@ import pdb
 class myplot:
     def __init__(   self, plottype, data, bins="",
                     title="", xlabel="", ylabel="",
-                    show=False, savepath=False, **kwargs
+                    show=False, savepath=False, data_x=None, **kwargs
                 ):
 
         print("Hello from myplot_belated.py!")
 
         self.data               = np.asarray(data).transpose()
+        self.data_x             = data_x
 
         print("Title is '"+title+"'.")
         # Kind of hackish, but who cares!
@@ -43,6 +44,8 @@ class myplot:
         self.timer              = kwargs.get("timer", 300)
         self.repetitions        = kwargs.get("repetitions", 5)
         self.eval_mode          = kwargs.get("eval_mode", "belated")
+        self.xlims              = kwargs.get("xlims", False)
+        self.savepath           = savepath
 
         #print(self.legend_loc)
 
@@ -54,12 +57,14 @@ class myplot:
             "boxplot":      lambda: self.boxplot(),
             "debug":        lambda: self.debug(),
             "bar":          lambda: self.bar(),
-            "broken_barh":  lambda: self.broken_barh()
+            "broken_barh":  lambda: self.broken_barh(),
+            "line_xy":      lambda: self.line_xy()
         }
 
         titles = {
             "cdf":          "CDF",
             "line":         "Line Chart",
+            "line_xy":      "Line Chart",
             "hist":         "Histogram",
             "pdf":          "PDF",
             "boxplot":      "Boxplot",
@@ -83,7 +88,8 @@ class myplot:
             plottypes[aplot]()
             #set axis limits
             self.ax.set_ylim(ymin=0)
-            self.ax.set_xlim(xmin=0)
+            if self.xlims == False:
+                self.ax.set_xlim(xmin=0)
             #get rid of unloved margins
             plt.tight_layout()
             # Optionally create grid
@@ -179,15 +185,26 @@ class myplot:
         #print(plot_data)
         data_len = len(plot_data)
         print(data_len)
+        print("data and ack lengths:")
+        for index,item in enumerate(plot_data):
+            if index % 2 == 0:
+                print("data index "+str(index)+":")
+            else:
+                print("ack index "+str(index)+":")
+            print(len(item))
 
-        self.ax.set_ylim(5, 5*data_len+15)
-        self.ax.set_xlim(0, self.timer*self.repetitions)
+        self.ax.set_ylim(10, 5*data_len+20)
+        if self.xlims != False:
+            self.ax.set_xlim(self.xlims[0], self.xlims[1])
+        else:
+            self.ax.set_xlim(0, self.timer*self.repetitions)
         self.ax.xaxis.grid(self.grid)
         self.ax.yaxis.grid(self.grid)
 
         # FIXME: Now ACKS are absolutely required, or data_len/2 doesn't make sense!
         self.ax.set_yticks([x*10+15 for x in range(int(data_len/2))])
-        self.ax.set_yticklabels([self.legend_labels[index] for index in range(int(data_len/2))])
+        self.xticks = [tick.replace(",", ",\n") for tick in self.xticks]
+        self.ax.set_yticklabels([self.xticks[index] for index in range(int(data_len/2))])
 
         self.setLabels(
             xlabel="time[s]",
@@ -211,9 +228,16 @@ class myplot:
         for index,item in enumerate(plot_data):
             print("Added index "+str(index)+" to plot.")
             if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5, 9), facecolors='blue')
-            elif (index-1) % 2 == 0:
-                self.ax.broken_barh(item,(index*5+5,9), facecolors='red')
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='blue', alpha=0.5)
+            elif (index-1) % 2 == 0: # well else should be enough here :)
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors='red', alpha=0.5)
+
+        plt.tight_layout()
+
+        # if(self.savepath):
+        #     print("***savepath***")
+        #     print(self.savepath)
+        #     self.save(self.savepath, "gantt")
 
     def line(self):
         #FIXME
@@ -224,6 +248,18 @@ class myplot:
         plt.plot(x, self.data, 'bo', x, f(x), 'k')
 
         self.setLabels( xlabel="measurement",
+                        ylabel=self.ylabel,
+                        title=self.title
+        )
+
+    def line_xy(self):
+        from scipy.interpolate import interp1d
+        x = self.data_x
+        y = self.data
+        f = interp1d(x,y)
+        plt.plot(x, self.data, 'bo', x, f(x), 'k')
+
+        self.setLabels( xlabel=self.xlabel,
                         ylabel=self.ylabel,
                         title=self.title
         )
@@ -350,7 +386,7 @@ class myplot:
         savename = savename.lower()
         savename = savename.replace(" ", "_")
         self.fig.savefig(savepath+savename+".png")
-        #self.fig.savefig(savepath+savename+".pdf")
+        self.fig.savefig(savepath+savename+".pdf")
 
     def show(self):
         plt.show()

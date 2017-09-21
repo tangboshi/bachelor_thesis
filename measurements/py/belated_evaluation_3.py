@@ -4,6 +4,8 @@ import myplot
 import rtt_belated as rtt
 import throughput_belated as tp
 import channel_occupation
+import backoff
+import sniffer
 
 # custom legend_coordinates
 # [0] = rtt
@@ -77,19 +79,19 @@ import channel_occupation
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 420MHz",
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 3 @ 480MHz"
 #                  ]
-# ALOHA + RB LOW
+#ALOHA + RB LOW
 measurement     =       [349,348]
 links           =       [1,2]
 boxplot_xticks  = [
                     "ALOHA\nLink 1 @ 450MHz",
-                    "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1 @ 450MHz"
+                    "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
                 ]
 # # ALOHA + RB HIGH
-# measurement     =       [416]#,415]
-# links           =       [1]#,2]
+# measurement     =       [416,415]
+# links           =       [1,2]
 # boxplot_xticks  = [
-#                      "ALOHA\nLink 1 @ 450MHz"#,
-#                      #"SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz"
+#                      "ALOHA\nLink 1 @ 450MHz",
+#                      "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz"
 #                  ]
 # # # ALOHA + NO BACKOFF
 # measurement     =       #[352,351]
@@ -105,13 +107,13 @@ boxplot_xticks  = [
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1 @ 450MHz",
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
 #                 ]
-# RB HIGH DUAL
+#RB HIGH DUAL
 # measurement     =       [341,342]
 # links           =       [1,2]
 # boxplot_xticks  = [
 #                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz",
 #                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 2 @ 450MHz"
-#                 ]
+#                  ]
 # # NO BACKOFF DUAL
 # measurement     =       [?,?]
 # links           =       [1,2]
@@ -134,7 +136,9 @@ plot_type               =   ["cdf", "boxplot", "bar"]
 throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
 diagnosis_files         =   ["receiver_data_received","receiver_ack_sent"]
 #changed the following 2 from string to list
-rtt_data_files          =   ["sender_bfr_dq","sender_ack_received"]
+rtt_data_files          =   ["sender_bfr_dq","sender_ack_received","receiver_ack_sent"]
+co_data_files           =   ["sender_bfr_dq","receiver_ack_sent"]
+sniffer_data_files      =   ["sniffer"]
 retxs_data_files        =   ["sender_retransmissions"]
 show_plot               =   True
 rtt_mode                =   "rtt"
@@ -157,22 +161,59 @@ custom_legend_coordinates   = {
                                 "diagnosis_sender":    [1,0,"lower right"],
                                 "diagnosis_receiver":  [1,0,"lower right"],
                                 "backoff_csfail":      [1,0,"lower right"],
-                                "channel_occupation":  [1,0,"lower right"]
+                                "channel_occupation":  [1,0,"lower right"],
+                                "sniffer":             [1,0,"lower right"]
                             }
 
 create_plots                = {
                                 "rtt":                  False,
-                                "packet_loss":          True,
+                                "packet_loss":          False,
                                 "retxs":                False,
                                 "throughput":           False,
-                                "diagnostic":           True,
+                                "diagnostic":           False,
                                 "backoff_csfail":       False,
-                                "channel_occupation":   True
+                                "channel_occupation":   True,
+                                "sniffer":              True
                             }
+
+channel_occupation_mode     =   {
+                                    "occupation_mode":  ["overview", "zoom"],
+                                    "zoom":             [534,538]
+                                }
+
+# FIXME: Link does NOT actually refer to the "link" used for the receiver,
+# but to one of the N other used links in order to be moved from the
+# shell script!
+sniffer_settings            =   {
+                                    "link":     2
+                                }
+
 
 #Unimplemented, use later
 annotations_below   = []
 annotations_other   = []
+
+eval_dict = {
+    "measurement":              measurement,
+    "repetitions":              repetitions,
+    "data_source_path":         data_source_path,
+    "xticks":                   boxplot_xticks,
+    "legend":                   legend_labels,
+    "annotations_below":        annotations_below,
+    "annotations_other":        annotations_other,
+    "throughput_data_files":    throughput_data_files,
+    "retxs_data_files":         retxs_data_files,
+    "rtt_data_files":           rtt_data_files,
+    "show_plot":                show_plot,
+    "legend_coordinates":       custom_legend_coordinates,
+    "create_plots":             create_plots,
+    "links":                    links,
+    "rtt_mode":                 rtt_mode,
+    "channel_occupation_mode":  channel_occupation_mode,
+    "co_data_files":            co_data_files,
+    "sniffer_data_files":       sniffer_data_files,
+    "sniffer_settings":         sniffer_settings
+}
 
 for index,a_plot_type in enumerate(plot_type):
     if plot_type[index] == "cdf":
@@ -180,26 +221,9 @@ for index,a_plot_type in enumerate(plot_type):
     else:
         grid                = True
 
-    eval_dict = {
-        "measurement":              measurement,
-        "repetitions":              repetitions,
-        "data_source_path":         data_source_path,
-        "plot_path":                plot_path+"/"+plot_type[index],
-        "plot_type":                [plot_type[index]],
-        "grid":                     grid,
-        "xticks":                   boxplot_xticks,
-        "legend":                   legend_labels,
-        "annotations_below":        annotations_below,
-        "annotations_other":        annotations_other,
-        "throughput_data_files":    throughput_data_files,
-        "retxs_data_files":         retxs_data_files,
-        "rtt_data_files":           rtt_data_files,
-        "show_plot":                show_plot,
-        "legend_coordinates":       custom_legend_coordinates,
-        "create_plots":             create_plots,
-        "links":                    links,
-        "rtt_mode":                 rtt_mode
-    }
+    eval_dict["plot_type"]  = [plot_type[index]]
+    eval_dict["plot_path"]  = plot_path+"/"+plot_type[index]
+    eval_dict["grid"]       = grid
 
     if create_plots["backoff_csfail"] == True:
         print("_______________________________________________________________")
@@ -217,10 +241,17 @@ for index,a_plot_type in enumerate(plot_type):
         print("Creating throughput plot!")
         print("***************************************************************")
         tp.tp(**eval_dict).plot()
-    if create_plots["channel_occupation"] == True:
-        print("_______________________________________________________________")
-        print("Creating channel occupation plot!")
-        print("***************************************************************")
-        channel_occupation.channel_occupation(**eval_dict)
+
+# The plots with only one plot type!
+if create_plots["channel_occupation"] == True:
+    print("_______________________________________________________________")
+    print("Creating channel occupation plot!")
+    print("***************************************************************")
+    channel_occupation.channel_occupation(**eval_dict)
+if create_plots["sniffer"] == True:
+    print("_______________________________________________________________")
+    print("Creating sniffer energy plot!")
+    print("***************************************************************")
+    sniffer.sniffer(**eval_dict)
 
 print("Done.")

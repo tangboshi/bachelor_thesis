@@ -52,35 +52,37 @@ create_plots                = {
 annotations_below   = []
 annotations_other   = []
 
+eval_dict = {
+    "measurement":              measurement,
+    "repetitions":              repetitions,
+    "data_source_path":         data_source_path,
+    "xticks":                   boxplot_xticks,
+    "legend":                   legend_labels,
+    "annotations_below":        annotations_below,
+    "annotations_other":        annotations_other,
+    "throughput_data_files":    throughput_data_files,
+    "retxs_data_files":         retxs_data_files,
+    "rtt_data_files":           rtt_data_files,
+    "show_plot":                show_plot,
+    "legend_coordinates":       custom_legend_coordinates,
+    "create_plots":             create_plots,
+    "links":                    links,
+    "rtt_mode":                 rtt_mode,
+    "channel_occupation_mode":  channel_occupation_mode,
+    "co_data_files":            co_data_files,
+    "sniffer_data_files":       sniffer_data_files,
+    "sniffer_settings":         sniffer_settings
+}
+
 for index,a_plot_type in enumerate(plot_type):
     if plot_type[index] == "cdf":
         grid                = True
     else:
         grid                = True
 
-    eval_dict = {
-        "measurement":              measurement,
-        "repetitions":              repetitions,
-        "data_source_path":         data_source_path,
-        "plot_path":                plot_path,
-        "plot_type":                [plot_type[index]],
-        "grid":                     grid,
-        "xticks":                   boxplot_xticks,
-        "legend":                   legend_labels,
-        "annotations_below":        annotations_below,
-        "annotations_other":        annotations_other,
-        "throughput_data_files":    throughput_data_files,
-        "retxs_data_files":         retxs_data_files,
-        "rtt_data_files":           rtt_data_files,
-        "show_plot":                show_plot,
-        "legend_coordinates":       custom_legend_coordinates,
-        "create_plots":             create_plots,
-        "links":                    links,
-        "rtt_mode":                 rtt_mode,
-        "max_retxs":                max_retxs,
-        "eval_mode":                eval_mode,
-        "timer":                    timer
-    }
+    eval_dict["plot_type"]  = [plot_type[index]]
+    eval_dict["plot_path"]  = plot_path+"/"+plot_type[index]
+    eval_dict["grid"]       = grid
 
     if create_plots["backoff_csfail"] == True:
         print("_______________________________________________________________")
@@ -98,10 +100,17 @@ for index,a_plot_type in enumerate(plot_type):
         print("Creating throughput plot!")
         print("***************************************************************")
         tp.tp(**eval_dict).plot()
-    if create_plots["channel_occupation"] == True:
-        print("_______________________________________________________________")
-        print("Creating channel occupation plot!")
-        print("***************************************************************")
-        channel_occupation.channel_occupation(**eval_dict)
+
+# The plots with only one plot type!
+if create_plots["channel_occupation"] == True:
+    print("_______________________________________________________________")
+    print("Creating channel occupation plot!")
+    print("***************************************************************")
+    channel_occupation.channel_occupation(**eval_dict)
+if create_plots["sniffer"] == True:
+    print("_______________________________________________________________")
+    print("Creating sniffer energy plot!")
+    print("***************************************************************")
+    sniffer.sniffer(**eval_dict)
 
 print("Done.")

@@ -128,7 +128,7 @@ class channel_occupation:
                 process_time = 0.04
                 #process_time = 10
             else:
-                process_time = 0.012
+                process_time = 0.007
                 #process_time = 5
             # Uncomment next two code comments if end of channel occupation
             # is of any interest

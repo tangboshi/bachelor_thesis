@@ -251,9 +251,9 @@ class myplot:
 
         for index,item in enumerate(debug_data):
             if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='yellow', alpha=0.5)
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='green', alpha=0.5)
             elif (index-1) % 2 == 0:
-                self.ax.broken_barh(item,((index)*5+5,13), facecolors='yellow', alpha=0.5)
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors='green', alpha=0.5)
 
         plt.tight_layout()
 

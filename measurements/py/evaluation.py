@@ -61,7 +61,7 @@ channel_occupation_mode     =   {
 sniffer_settings            =   {
                                     "link":     2
                                 }
-                                
+
 #Unimplemented, use later
 annotations_below   = []
 annotations_other   = []
@@ -95,7 +95,7 @@ for index,a_plot_type in enumerate(plot_type):
         grid                = True
 
     eval_dict["plot_type"]  = [plot_type[index]]
-    eval_dict["plot_path"]  = plot_path+"/"+plot_type[index]
+    eval_dict["plot_path"]  = plot_path
     eval_dict["grid"]       = grid
 
     if create_plots["backoff_csfail"] == True:

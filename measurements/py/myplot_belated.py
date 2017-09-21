@@ -227,9 +227,9 @@ class myplot:
             title=self.title
         )
 
-        blue_patch  = mpatches.Patch(color='blue', label="Data")
-        red_patch   = mpatches.Patch(color='red', label='Acks')
-        yellow_patch = mpatches.Patch(color='yellow', label="Ack received by sender")
+        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="Data")
+        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='Acks')
+        yellow_patch = mpatches.Patch(color='yellow', alpha=0.5, label="Ack received by sender")
 
         if self.legend_coordinates[2] != "best":
             self.ax.legend( handles=[red_patch, blue_patch,yellow_patch],

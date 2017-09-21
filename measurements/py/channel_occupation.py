@@ -50,7 +50,7 @@ class channel_occupation:
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 data_sent_path      = path+self.co_data_files[0]+"_"+str(self.links[index])+".txt"
                 ack_sent_path       = path+self.co_data_files[1]+"_"+str(self.links[index])+".txt"
-                ack_received_path   = path+self.co_data_files[2]+"_"+str(self.links[index])+."txt"
+                ack_received_path   = path+self.co_data_files[2]+"_"+str(self.links[index])+".txt"
 
                 if os.path.isfile(data_sent_path):
                     with open(data_sent_path) as f:
@@ -113,7 +113,8 @@ class channel_occupation:
             ack_received_times = []
             data_sent_times = []
         # ###
-
+        print("len(acks_received):")
+        print(len(acks_received))
         print("len(busy_starting_times):")
         print(len(busy_starting_times))
         print("ack_received_times:")
@@ -162,7 +163,13 @@ class channel_occupation:
             #busy_end_times.append(process)
             busy_durations.append(occupation)
 
-        acks_received_bar_width = [0.001 for len(acks_received)]
+        acks_received_bar_width = []
+        for index,process in enumerate(acks_received):
+            acks_received_bar_width.append([0.004 for x in range(len(process))])
+
+        print("acks_received_bar_width:")
+        print(acks_received_bar_width)
+
 
         print("busy_starting_times:")
         #print(busy_starting_times)
@@ -216,10 +223,12 @@ class channel_occupation:
                     process_time = 0.01
                 occupation  = [process_time for time in range(len(process))]
                 print("len(process):")
-                print(process)
+                print(len(process))
                 busy_zoomed_durations.append(occupation)
 
-            acks_received_zoomed_bar_width = [0.001 for len(acks_received_zoomed)]
+            acks_received_zoomed_bar_width = []
+            for index,process in enumerate(acks_received_zoomed):
+                acks_received_zoomed_bar_width.append([0.001 for time in range(len(process))])
 
             print("busy_zoomed_durations:")
             print (busy_zoomed_durations)

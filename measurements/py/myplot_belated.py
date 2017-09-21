@@ -178,13 +178,24 @@ class myplot:
 
     def broken_barh(self):
         plot_data = []
+        debug_data = []
         for index,item in enumerate(self.data["occupation_starting"]):
             plot_data.append(list(zip(self.data["occupation_starting"][index], self.data["occupation_durations"][index])))
 
+        for index,item in enumerate(self.data["acks_received"]):
+            debug_data.append(list(zip(self.data["acks_received"][index], self.data["acks_received_bar_width"][index])))
+
         print("plot_data:")
         #print(plot_data)
+        print("debug_data:")
+        #print(debug_data)
+        print("data_len:")
         data_len = len(plot_data)
         print(data_len)
+        debug_len = len(debug_data)
+        print("debug_len:")
+        print(debug_len)
+
         print("data and ack lengths:")
         for index,item in enumerate(plot_data):
             if index % 2 == 0:
@@ -192,6 +203,11 @@ class myplot:
             else:
                 print("ack index "+str(index)+":")
             print(len(item))
+
+        for index, item in enumerate(debug_data):
+            print ("debug data index "+str(index)+":")
+            print(len(item))
+            #print(item)
 
         self.ax.set_ylim(10, 5*data_len+20)
         if self.xlims != False:
@@ -213,15 +229,16 @@ class myplot:
 
         blue_patch  = mpatches.Patch(color='blue', label="Data")
         red_patch   = mpatches.Patch(color='red', label='Acks')
+        green_patch = mpatches.Patch(color='green', label="Ack received by sender")
 
         if self.legend_coordinates[2] != "best":
-            self.ax.legend( handles=[red_patch, blue_patch],
+            self.ax.legend( handles=[red_patch, blue_patch,green_patch],
                             fancybox=True,
                             loc=self.legend_coordinates[2],
                             bbox_to_anchor=(self.legend_coordinates[0],
                                             self.legend_coordinates[1]))
         else:
-            self.ax.legend( handles=[red_patch, blue_patch],
+            self.ax.legend( handles=[red_patch, blue_patch, green_patch],
                             fancybox=True,
                             loc="best")
 
@@ -231,6 +248,12 @@ class myplot:
                 self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='blue', alpha=0.5)
             elif (index-1) % 2 == 0: # well else should be enough here :)
                 self.ax.broken_barh(item,((index)*5+5,13), facecolors='red', alpha=0.5)
+
+        for index,item in enumerate(debug_data):
+            if index % 2 == 0:
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='green', alpha=0.5)
+            elif (index-1) % 2 == 0:
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors='green', alpha=0.5)
 
         plt.tight_layout()
 

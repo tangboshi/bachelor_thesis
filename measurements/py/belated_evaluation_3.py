@@ -137,7 +137,7 @@ throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
 diagnosis_files         =   ["receiver_data_received","receiver_ack_sent"]
 #changed the following 2 from string to list
 rtt_data_files          =   ["sender_bfr_dq","sender_ack_received","receiver_ack_sent"]
-co_data_files           =   ["sender_bfr_dq","receiver_ack_sent"]
+co_data_files           =   ["sender_bfr_dq","receiver_ack_sent","sender_ack_received"]
 sniffer_data_files      =   ["sniffer"]
 retxs_data_files        =   ["sender_retransmissions"]
 show_plot               =   True

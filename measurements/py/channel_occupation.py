@@ -213,6 +213,8 @@ class channel_occupation:
                             break;
                     else:
                         ack_times.append(time)
+                        print(time)
+                        print("\´\___/`/")
                 acks_received_zoomed.append(ack_times)
                 ack_times = []
 

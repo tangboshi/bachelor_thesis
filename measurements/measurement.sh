@@ -203,8 +203,8 @@ function main
       job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
       log=$log_path/$job_name"_"$measurement_counter.log
       #echo $job_name
-      $(cat $job) | tee -a $log
-      $(cat measurement_2.conf) | tee -a $log
+      cat $job | tee -a $log
+      cat measurement_$link.conf | tee -a $log
       measure | tee -a $log
       if [ $plot_enabled -eq 1 ]; then
         plot | tee -a $log

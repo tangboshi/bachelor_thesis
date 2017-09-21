@@ -142,6 +142,8 @@ class channel_occupation:
         for index,process in enumerate(acks_received):
             acks_received[index] = [time-offset for time in process]
 
+        print("acks_received")
+        print(acks_received)
         # prepare lists for data for graphical representation
         busy_end_times = []
         busy_durations = []
@@ -213,8 +215,7 @@ class channel_occupation:
                             break;
                     else:
                         ack_times.append(time)
-                        print(time)
-                        print("\´\___/`/")
+                        #print(time)
                 acks_received_zoomed.append(ack_times)
                 ack_times = []
 
@@ -233,11 +234,13 @@ class channel_occupation:
                 acks_received_zoomed_bar_width.append([0.001 for time in range(len(process))])
 
             print("busy_zoomed_durations:")
-            print (busy_zoomed_durations)
+            print(len(busy_zoomed_starting_times))
+            print(len(busy_zoomed_durations))
 
             print("acks zoomed stuff:")
-            print(acks_received_zoomed)
-            print(acks_received_zoomed_bar_width)
+            print(len(acks_received_zoomed))
+            print(len(acks_received_zoomed_bar_width))
+
             self.zoomed_occupation_data = {
                 "occupation_starting":      busy_zoomed_starting_times,
                 "occupation_durations":     busy_zoomed_durations,

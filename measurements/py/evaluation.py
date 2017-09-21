@@ -6,6 +6,7 @@ import rtt_belated as rtt
 import throughput_belated as tp
 import channel_occupation as channel_occupation
 import backoff
+import sniffer
 
 
 measurement             =   [int(os.environ["measurement_counter"])]
@@ -35,7 +36,8 @@ custom_legend_coordinates   = {
                                 "diagnosis_sender":    [1,0,"lower right"],
                                 "diagnosis_receiver":  [1,0,"lower right"],
                                 "backoff_csfail":      [1,0,"lower right"],
-                                "channel_occupation":  [1,0,"lower right"]
+                                "channel_occupation":  [1,0,"lower right"],
+                                "sniffer":             [1,0,"lower right"]
                             }
 
 create_plots                = {
@@ -45,8 +47,14 @@ create_plots                = {
                                 "throughput":           True,
                                 "diagnostic":           True,
                                 "backoff_csfail":       True,
-                                "channel_occupation":   True
+                                "channel_occupation":   True,
+                                "sniffer":              True
                             }
+
+channel_occupation_mode     =   {
+                                    "occupation_mode":  ["overview", "zoom"],
+                                    "zoom":             [534,538]
+                                }
 
 #Unimplemented, use later
 annotations_below   = []

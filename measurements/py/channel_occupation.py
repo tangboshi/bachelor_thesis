@@ -25,7 +25,7 @@ class channel_occupation:
         self.links                      =   kwargs.get("links", [1 for x in range(len(self.measurement))])
         self.eval_mode                  =   kwargs.get("eval_mode", "belated")
         self.channel_occupation_mode    =   kwargs.get("channel_occupation_mode", {"occupation_mode": ["overview, zoom"], "zoom": [5,6]})
-        self.co_data_files              =   kwargs.get("co_data_files", ["sender_bfr_dq.txt","receiver_ack_sent.txt","sniffer"])
+        self.co_data_files              =   kwargs.get("co_data_files", ["sender_bfr_dq.txt","receiver_ack_sent.txt","sender_ack_received"])
 
         # debugging:
         self.calc()
@@ -38,16 +38,19 @@ class channel_occupation:
         print(self.repetitions)
 
         busy_starting_times = []
+        acks_received = []
 
         # FIXME: let's try to avoid this repetition of code from rtt! (until ###)
         for index,single_measurement in enumerate(self.measurement):
+            ack_received_times = []
             data_sent_times = []
             ack_sent_times = []
 
             for i in range(self.repetitions):
-                path            = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                data_sent_path  = path+self.co_data_files[0]+"_"+str(self.links[index])+".txt"
-                ack_sent_path   = path+self.co_data_files[1]+"_"+str(self.links[index])+".txt"
+                path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
+                data_sent_path      = path+self.co_data_files[0]+"_"+str(self.links[index])+".txt"
+                ack_sent_path       = path+self.co_data_files[1]+"_"+str(self.links[index])+".txt"
+                ack_received_path   = path+self.co_data_files[2]+"_"+str(self.links[index])+."txt"
 
                 if os.path.isfile(data_sent_path):
                     with open(data_sent_path) as f:
@@ -84,10 +87,30 @@ class channel_occupation:
                     # depiction of results
                     ack_sent_times += [0.0]
 
+                if os.path.isfile(ack_received_path):
+                    with open(ack_received_path) as f:
+                        for line in f:
+                            line = line.strip('\n')
+                            secs, usecs = line.split(" ",1)
+                            missing_zeros = 6 - len(usecs)
+                            usecs = ("0" * missing_zeros) + usecs
+                            line = ".".join([secs, usecs])
+                            ack_received_times += [float(line)]
+                            #print("ack_sent: "+line)
+
+                else:
+                    print(  "File "+ack_received_path+" not found. \
+                            Assuming not reached in GR.")
+                    # Preventing these arrays from being empty to prevent wrong
+                    # depiction of results
+                    ack_received_times += [0.0]
+
             busy_starting_times += [data_sent_times]
             busy_starting_times += [ack_sent_times]
+            acks_received += [ack_received_times]
             # Prepare next iteration
             ack_sent_times = []
+            ack_received_times = []
             data_sent_times = []
         # ###
 
@@ -115,6 +138,8 @@ class channel_occupation:
 
         for index,process in enumerate(busy_starting_times):
             busy_starting_times[index] = [time-offset for time in process]
+        for index,process in enumerate(acks_received):
+            acks_received[index] = [time-offset for time in process]
 
         # prepare lists for data for graphical representation
         busy_end_times = []
@@ -137,6 +162,8 @@ class channel_occupation:
             #busy_end_times.append(process)
             busy_durations.append(occupation)
 
+        acks_received_bar_width = [0.001 for len(acks_received)]
+
         print("busy_starting_times:")
         #print(busy_starting_times)
         print("busy_end_times:")
@@ -146,12 +173,16 @@ class channel_occupation:
 
         self.occupation_data = {
             "occupation_starting":      busy_starting_times,
-            "occupation_durations":     busy_durations
+            "occupation_durations":     busy_durations,
+            "acks_received":            acks_received,
+            "acks_received_bar_width":  acks_received_bar_width
         }
 
         # Let's prepare the zoomed-in data set
         busy_zoomed_starting_times = []
+        acks_received_zoomed = []
         starting_times = [] # temporary variable;
+        ack_times = [] # temporary variable
         busy_zoomed_durations = []
 
         print("self.channel_occupation_mode:")
@@ -168,6 +199,16 @@ class channel_occupation:
                 busy_zoomed_starting_times.append(starting_times)
                 starting_times = []
 
+            for process in acks_received:
+                for time in process:
+                    if time > self.channel_occupation_mode["zoom"][0]:
+                        if time > self.channel_occupation_mode["zoom"][1]:
+                            break;
+                    else:
+                        ack_times.append(time)
+                acks_received_zoomed.append(ack_times)
+                ack_times = []
+
             for index,process in enumerate(busy_zoomed_starting_times):
                 if index % 2 == 0:
                     process_time = 0.04
@@ -178,12 +219,16 @@ class channel_occupation:
                 print(process)
                 busy_zoomed_durations.append(occupation)
 
+            acks_received_zoomed_bar_width = [0.001 for len(acks_received_zoomed)]
+
             print("busy_zoomed_durations:")
             print (busy_zoomed_durations)
 
             self.zoomed_occupation_data = {
-                "occupation_starting":  busy_zoomed_starting_times,
-                "occupation_durations": busy_zoomed_durations
+                "occupation_starting":      busy_zoomed_starting_times,
+                "occupation_durations":     busy_zoomed_durations,
+                "acks_received":            acks_received_zoomed,
+                "acks_received_bar_width":  acks_received_zoomed_bar_width
             }
 
     def plot(self):

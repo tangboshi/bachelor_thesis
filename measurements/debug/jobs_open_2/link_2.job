@@ -12,4 +12,4 @@ export retxs2_data_files="receiver_retransmissions,receiver_max_retransmissions"
 export co_data_files="sender_bfr_dq,receiver_ack_sent"
 export sniffer_data_files="sniffer"
 export plot_type="boxplot,cdf"
-export show_plot_after_measurement=0
+export show_plot_after_measurement=1

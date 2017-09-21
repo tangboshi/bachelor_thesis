@@ -58,6 +58,10 @@ channel_occupation_mode     =   {
                                     "zoom":             [534,538]
                                 }
 
+sniffer_settings            =   {
+                                    "link":     2
+                                }
+                                
 #Unimplemented, use later
 annotations_below   = []
 annotations_other   = []

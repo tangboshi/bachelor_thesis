@@ -229,16 +229,16 @@ class myplot:
 
         blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="data sent")
         red_patch   = mpatches.Patch(color='red', alpha=0.5, label='ack sent')
-        orange_patch = mpatches.Patch(color='orange', alpha=0.5, label="ack received")
+        fuchsia_patch = mpatches.Patch(color='fuchsia', alpha=0.5, label="ack received")
 
         if self.legend_coordinates[2] != "best":
-            self.ax.legend( handles=[red_patch, blue_patch,orange_patch],
+            self.ax.legend( handles=[red_patch, blue_patch,fuchsia_patch],
                             fancybox=True,
                             loc=self.legend_coordinates[2],
                             bbox_to_anchor=(self.legend_coordinates[0],
                                             self.legend_coordinates[1]))
         else:
-            self.ax.legend( handles=[red_patch, blue_patch, orange_patch],
+            self.ax.legend( handles=[red_patch, blue_patch, fuchsia_patch],
                             fancybox=True,
                             loc="best")
 
@@ -252,9 +252,9 @@ class myplot:
         for index,item in enumerate(debug_data):
             print("Added (debug) set with index "+str(index)+" to plot.")
             if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='orange', alpha=0.5)
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='fuchsia', alpha=0.5)
             elif (index-1) % 2 == 0:
-                self.ax.broken_barh(item,((index)*5+5,13), facecolors='orange', alpha=0.5)
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors='fuchsia', alpha=0.5)
 
         plt.tight_layout()
 

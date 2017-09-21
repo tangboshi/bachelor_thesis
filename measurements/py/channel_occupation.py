@@ -167,7 +167,7 @@ class channel_occupation:
 
         acks_received_bar_width = []
         for index,process in enumerate(acks_received):
-            acks_received_bar_width.append([0.004 for x in range(len(process))])
+            acks_received_bar_width.append([0.01 for x in range(len(process))])
 
         print("acks_received_bar_width:")
         #print(acks_received_bar_width)
@@ -235,7 +235,7 @@ class channel_occupation:
 
             acks_received_zoomed_bar_width = []
             for index,process in enumerate(acks_received_zoomed):
-                acks_received_zoomed_bar_width.append([0.004 for time in range(len(process))])
+                acks_received_zoomed_bar_width.append([0.01 for time in range(len(process))])
 
             print("busy_zoomed_durations:")
             print(len(busy_zoomed_starting_times))

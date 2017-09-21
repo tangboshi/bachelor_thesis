@@ -143,7 +143,7 @@ class channel_occupation:
             acks_received[index] = [time-offset for time in process]
 
         print("acks_received")
-        print(acks_received)
+        #print(acks_received)
         # prepare lists for data for graphical representation
         busy_end_times = []
         busy_durations = []
@@ -212,22 +212,22 @@ class channel_occupation:
                 for time in process:
                     if time > self.channel_occupation_mode["zoom"][0]:
                         if time > self.channel_occupation_mode["zoom"][1]:
+                            print("time:"+str(time)+" break")
                             break;
-                    else:
-                        ack_times.append(time)
-                        #print(time)
+                        else:
+                            print("time:"+str(time))
+                            ack_times.append(time)
                 acks_received_zoomed.append(ack_times)
                 ack_times = []
 
-            print("***********************")
             print("acks_received_zoomed:")
-            print(acks_received_zoomed)
+            #print(acks_received_zoomed)
 
             for index,process in enumerate(busy_zoomed_starting_times):
                 if index % 2 == 0:
                     process_time = 0.04
                 else:
-                    process_time = 0.01
+                    process_time = 0.007
                 occupation  = [process_time for time in range(len(process))]
                 print("len(process):")
                 print(len(process))

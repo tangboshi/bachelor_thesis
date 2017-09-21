@@ -227,34 +227,37 @@ class myplot:
             title=self.title
         )
 
-        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="data sent")
-        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='ack sent')
-        fuchsia_patch = mpatches.Patch(color='fuchsia', alpha=0.5, label="ack received")
+        colors = ['blue','red','black']
+        transparency=0.7
+
+        patch_a  = mpatches.Patch(color=colors[0], alpha=transparency, label="data sent")
+        patch_b  = mpatches.Patch(color=colors[1], alpha=transparency, label='ack sent')
+        patch_c  = mpatches.Patch(color=colors[2], alpha=transparency, label="ack received")
 
         if self.legend_coordinates[2] != "best":
-            self.ax.legend( handles=[red_patch, blue_patch,fuchsia_patch],
+            self.ax.legend( handles=[patch_a,patch_b,patch_c],
                             fancybox=True,
                             loc=self.legend_coordinates[2],
                             bbox_to_anchor=(self.legend_coordinates[0],
                                             self.legend_coordinates[1]))
         else:
-            self.ax.legend( handles=[red_patch, blue_patch, fuchsia_patch],
+            self.ax.legend( handles=[patch_a,patch_b,patch_c],
                             fancybox=True,
                             loc="best")
 
         for index,item in enumerate(plot_data):
             print("Added (data) set with index "+str(index)+" to plot.")
             if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='blue', alpha=0.5)
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors=colors[0], alpha=0.5)
             elif (index-1) % 2 == 0: # well else should be enough here :)
-                self.ax.broken_barh(item,((index)*5+5,13), facecolors='red', alpha=0.5)
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors=colors[1], alpha=0.5)
 
         for index,item in enumerate(debug_data):
             print("Added (debug) set with index "+str(index)+" to plot.")
             if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='fuchsia', alpha=0.5)
+                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors=colors[2], alpha=0.5)
             elif (index-1) % 2 == 0:
-                self.ax.broken_barh(item,((index)*5+5,13), facecolors='fuchsia', alpha=0.5)
+                self.ax.broken_barh(item,((index)*5+5,13), facecolors=colors[2], alpha=0.5)
 
         plt.tight_layout()
 

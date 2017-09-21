@@ -173,7 +173,7 @@ create_plots                = {
                                 "diagnostic":           False,
                                 "backoff_csfail":       False,
                                 "channel_occupation":   True,
-                                "sniffer":              True
+                                "sniffer":              False
                             }
 
 channel_occupation_mode     =   {

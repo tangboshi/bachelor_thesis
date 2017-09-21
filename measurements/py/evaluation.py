@@ -18,6 +18,7 @@ plot_type               =   ["cdf", "boxplot", "bar"]
 throughput_data_files   =   os.environ["throughput_data_files"].split(",")
 rtt_data_files          =   os.environ["rtt_data_files"].split(",")
 co_data_files           =   os.environ["co_data_files"].split(",")
+sniffer_data_files      =   os.environ["sniffer_data_files"].split(",")
 retxs_data_files        =   os.environ["retxs_data_files"].split(",")
 show_plot               =   int(os.environ["show_plot_after_measurement"])
 rtt_mode                =   os.environ["rtt_mode"]

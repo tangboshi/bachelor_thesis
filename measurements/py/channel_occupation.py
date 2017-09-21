@@ -219,6 +219,10 @@ class channel_occupation:
                 acks_received_zoomed.append(ack_times)
                 ack_times = []
 
+            print("***********************")
+            print("acks_received_zoomed:")
+            print(acks_received_zoomed)
+
             for index,process in enumerate(busy_zoomed_starting_times):
                 if index % 2 == 0:
                     process_time = 0.04

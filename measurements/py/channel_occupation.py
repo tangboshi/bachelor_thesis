@@ -168,7 +168,7 @@ class channel_occupation:
             acks_received_bar_width.append([0.004 for x in range(len(process))])
 
         print("acks_received_bar_width:")
-        print(acks_received_bar_width)
+        #print(acks_received_bar_width)
 
 
         print("busy_starting_times:")

@@ -227,9 +227,9 @@ class myplot:
             title=self.title
         )
 
-        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="Data sent")
-        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='Ack sent')
-        orange_patch = mpatches.Patch(color='orange', alpha=0.5, label="Ack received")
+        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="data sent")
+        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='ack sent')
+        orange_patch = mpatches.Patch(color='orange', alpha=0.5, label="ack received")
 
         if self.legend_coordinates[2] != "best":
             self.ax.legend( handles=[red_patch, blue_patch,orange_patch],
@@ -243,13 +243,14 @@ class myplot:
                             loc="best")
 
         for index,item in enumerate(plot_data):
-            print("Added index "+str(index)+" to plot.")
+            print("Added (data) set with index "+str(index)+" to plot.")
             if index % 2 == 0:
                 self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='blue', alpha=0.5)
             elif (index-1) % 2 == 0: # well else should be enough here :)
                 self.ax.broken_barh(item,((index)*5+5,13), facecolors='red', alpha=0.5)
 
         for index,item in enumerate(debug_data):
+            print("Added (debug) set with index "+str(index)+" to plot.")
             if index % 2 == 0:
                 self.ax.broken_barh(item,((index+1)*5+5,13), facecolors='orange', alpha=0.5)
             elif (index-1) % 2 == 0:

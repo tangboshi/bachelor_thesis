@@ -55,7 +55,7 @@ create_plots                = {
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [0.5,1.5]
+                                    "zoom":             [0.5,2.5]
                                 }
 
 sniffer_settings            =   {

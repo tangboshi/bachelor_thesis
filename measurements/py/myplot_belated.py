@@ -93,8 +93,8 @@ class myplot:
             #get rid of unloved margins
             plt.tight_layout()
             # Optionally create grid
-            self.ax.xaxis.grid(self.grid)
-            self.ax.yaxis.grid(self.grid)
+            self.ax.xaxis.grid(self.grid, linestyle="dashdot")
+            self.ax.yaxis.grid(self.grid, linestyle="dashdot")
             #Create legend
             #This will create a warning if you plot boxplots that you can
             #safely ignore (boxplots cannot be labeled).
@@ -198,8 +198,8 @@ class myplot:
             self.ax.set_xlim(self.xlims[0], self.xlims[1])
         else:
             self.ax.set_xlim(0, self.timer*self.repetitions)
-        self.ax.xaxis.grid(self.grid)
-        self.ax.yaxis.grid(self.grid)
+        self.ax.xaxis.grid(self.grid, linestyle="dashdot")
+        self.ax.yaxis.grid(self.grid, linestyle="dashdot")
 
         # FIXME: Now ACKS are absolutely required, or data_len/2 doesn't make sense!
         self.ax.set_yticks([x*10+15 for x in range(int(data_len/2))])

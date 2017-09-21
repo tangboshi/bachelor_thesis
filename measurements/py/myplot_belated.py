@@ -227,8 +227,8 @@ class myplot:
             title=self.title
         )
 
-        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="Data")
-        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='Acks')
+        blue_patch  = mpatches.Patch(color='blue', alpha=0.5, label="Data sent")
+        red_patch   = mpatches.Patch(color='red', alpha=0.5, label='Ack sent')
         orange_patch = mpatches.Patch(color='orange', alpha=0.5, label="Ack received")
 
         if self.legend_coordinates[2] != "best":

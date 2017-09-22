@@ -2,6 +2,8 @@ import numpy as np
 import myplot
 import os
 
+print("Hello from sniffer.py!")
+
 class sniffer:
     def __init__(self, **kwargs):
         self.data_source_path           =   kwargs.get("data_source_path","/home/alex/0_ba/git/measurements/data")

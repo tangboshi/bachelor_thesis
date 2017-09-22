@@ -4,7 +4,7 @@ import myplot
 import os.path as pt
 import lines
 
-print("Hello from throughput_belated.py! Really, it's me!")
+print("Hello from throughput.py!")
 
 class tp:
     def __init__(self,**kwargs):

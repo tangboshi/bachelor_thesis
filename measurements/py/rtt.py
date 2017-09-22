@@ -2,7 +2,7 @@ import numpy as np
 import myplot
 import os
 
-print("Hello from rtt_belated.py!")
+print("Hello from rtt.py!")
 
 class rtt:
     def __init__(self, **kwargs):

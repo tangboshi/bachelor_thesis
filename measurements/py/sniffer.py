@@ -130,7 +130,7 @@ class sniffer:
                     delta_y = sniffer_energy_levels[index+1] - value
                     delta_x = sniffer_times[index+1] - sniffer_times[index]
                     if (delta_y < self.sniffer_settings["smoothing_difference"]
-                        or delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
+                        and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
                         or value == 0):
                         tmp.append(value)
                         tmp2.append(sniffer_times[index])

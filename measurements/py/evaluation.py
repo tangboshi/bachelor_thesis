@@ -64,6 +64,7 @@ sniffer_settings            =   {
                                     "zoom":                     [1.2,1.8],
                                     "smoothing_difference":     0.0001,
                                     "smoothing_derivative":     1.1
+                                    "smoothing_range":          [0.0010,0.0013]
                                 }
 
 #Unimplemented, use later

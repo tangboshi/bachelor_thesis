@@ -120,7 +120,10 @@ class sniffer:
 
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
-
+            print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
+            print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
+            print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
+            print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
             tmp, tmp2 = [], []
             for index,value in enumerate(sniffer_energy_levels):
                 if index+1 < len(sniffer_times):
@@ -170,6 +173,10 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
+            print("Taram Taram Taram, pling plong pling!")
+            print("Taram Taram Taram, pling plong pling!")
+            print("Taram Taram Taram, pling plong pling!")
+            print("Taram Taram Taram, pling plong pling!")
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],

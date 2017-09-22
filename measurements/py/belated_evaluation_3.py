@@ -185,7 +185,8 @@ channel_occupation_mode     =   {
 # but to one of the N other used links in order to be moved from the
 # shell script!
 sniffer_settings            =   {
-                                    "link":     2
+                                    "link":     2,
+                                    "zoom":     [0.2,0.4]
                                 }
 
 

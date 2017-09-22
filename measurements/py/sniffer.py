@@ -90,7 +90,7 @@ class sniffer:
         # post-processing variables
         # unit: seconds
         # maximum time difference of energies that belong to the same packet
-        time_threshold = 0.002
+        time_threshold = 0.003
 
         # Set energy level of two points to zero if they are too far from each other
         for index,item in enumerate(sniffer_times):

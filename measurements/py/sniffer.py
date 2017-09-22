@@ -124,11 +124,14 @@ class sniffer:
             print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
             print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
             print("Hey Hey Hey, this is acutally reached. Wooohoooohooo!")
-            tmp, tmp2 = [], []
+            tmp, tmp2, deltas_x, deltas_y = [], [], [], []
             for index,value in enumerate(sniffer_energy_levels):
                 if index+1 < len(sniffer_times):
                     delta_y = sniffer_energy_levels[index+1] - value
                     delta_x = sniffer_times[index+1] - sniffer_times[index]
+                    deltas_x.append(delta_x)
+                    deltas_y.append(delta_y)
+                    #get experimental values from printout of this
                     print("delta_x:"+str(delta_x))
                     print("delta_y:"+str(delta_y))
                     if (delta_y < self.sniffer_settings["smoothing_difference"]
@@ -138,6 +141,10 @@ class sniffer:
                         tmp2.append(sniffer_times[index])
                     else:
                         continue
+            print(min(deltas_x))
+            print(max(deltas_x))
+            print(min(deltas_y))
+            print(max(deltas_y))
             sniffer_energy_levels = tmp
             sniffer_times = tmp2
 

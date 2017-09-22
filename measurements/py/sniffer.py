@@ -131,9 +131,6 @@ class sniffer:
                     delta_x = abs(sniffer_times[index+1] - sniffer_times[index])
                     deltas_x.append(delta_x)
                     deltas_y.append(delta_y)
-                    #get experimental values from printout of this
-                    print("delta_x:"+str(delta_x))
-                    print("delta_y:"+str(delta_y))
                     if (delta_y < self.sniffer_settings["smoothing_difference"]
                         and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
                         or value == 0):
@@ -141,10 +138,9 @@ class sniffer:
                         tmp2.append(sniffer_times[index])
                     else:
                         continue
-            print(min(deltas_y))
-            print(max(deltas_y))
-            print(min(deltas_y)/max(deltas_x))
-            print(min(deltas_y)/max(deltas_x))
+            #get experimental values from printout of this
+            print("difference upper bound:"+str(max(deltas_y)))
+            print("derivative upper bound:"+str(max(deltas_y)/min(deltas_x)))
             sniffer_energy_levels = tmp
             sniffer_times = tmp2
 

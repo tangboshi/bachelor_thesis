@@ -61,7 +61,7 @@ class sniffer:
                             usecs = ("0" * missing_zeros) + usecs
                             time = ".".join([secs, usecs])
                             energy_detected_times   += [float(time)]
-                            enegery_levels          += [float(energy)]
+                            energy_levels          += [float(energy)]
                             #print("data_sent: "+line)
                 else:
                     print(  "File "+sniffer_data_path+" not found. \

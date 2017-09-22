@@ -60,7 +60,7 @@ channel_occupation_mode     =   {
 
 sniffer_settings            =   {
                                     "link":     2,
-                                    "zoom":     [0.2,0.4]
+                                    "zoom":     [0.5,1.2]
                                 }
 
 #Unimplemented, use later

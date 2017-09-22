@@ -63,7 +63,7 @@ sniffer_settings            =   {
                                     "link":                     2,
                                     "zoom":                     [1.2,1.8],
                                     "smoothing_difference":     0.0001,
-                                    "smoothing_derivative":     2
+                                    "smoothing_derivative":     1.1
                                 }
 
 #Unimplemented, use later

@@ -119,7 +119,7 @@ class sniffer:
         print(self.sniffer_data)
 
         # Smoothing algorithm
-        if "smoothed" in self.sniffer_settings["mode"]:
+        if "smoothed" in self.sniffer_settings["sniffer_mode"]:
             from scipy.interpolate import spline
 
             smoothed_times          = np.linspace(sniffer_times.min(), sniffer_times.max(), 5*len(sniffer_times))

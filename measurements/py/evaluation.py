@@ -2,9 +2,9 @@ import numpy as np
 import myplot
 import os
 
-import rtt_belated as rtt
-import throughput_belated as tp
-import channel_occupation as channel_occupation
+import rtt
+import throughput as tp
+import channel_occupation
 import backoff
 import sniffer
 
@@ -25,6 +25,7 @@ rtt_mode                =   os.environ["rtt_mode"]
 max_retxs               =   6
 eval_mode               =   "live"
 timer                   =   int(os.environ["timer"])
+receiver_mode           =   os.environ["receiver_mode"]
 
 boxplot_xticks              = [ "measurement "+str(index) for index in measurement ]
 
@@ -43,12 +44,12 @@ custom_legend_coordinates   = {
                             }
 
 create_plots                = {
-                                "rtt":                  False,
-                                "packet_loss":          False,
+                                "rtt":                  True,
+                                "packet_loss":          True,
                                 "retxs":                False,
-                                "throughput":           False,
-                                "diagnostic":           False,
-                                "backoff_csfail":       False,
+                                "throughput":           True,
+                                "diagnostic":           True,
+                                "backoff_csfail":       True,
                                 "channel_occupation":   True,
                                 "sniffer":              True
                             }

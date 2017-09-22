@@ -1,5 +1,5 @@
 import numpy as np
-import myplot_belated as myplot
+import myplot
 import os
 
 class sniffer:

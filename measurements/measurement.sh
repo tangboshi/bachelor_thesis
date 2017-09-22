@@ -126,7 +126,7 @@ function measure
 
     cd $raw_data_source_path
     mv -v $(ls | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
-    if [ $receiver_mode -eq "single" ];
+    if [ ""$receiver_mode" == "single" ];
       then
         cp -v $(ls | egrep "receiver*") $data_source_path/$measurement_counter/$x/
     fi

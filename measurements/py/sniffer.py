@@ -118,15 +118,49 @@ class sniffer:
         print("self.sniffer_data:")
         print(self.sniffer_data)
 
+        # Smoothing algorithm
+        if "smoothed" in self.sniffer_settings["mode"]:
+            from scipy.interpolate import spline
+
+            smoothed_times          = np.linspace(sniffer_times.min(), sniffer_times.max(), 5*len(sniffer_times))
+            sniffer_energy_levels   = spline(sniffer_times,sniffer_energy_levels,smoothed_times)
+
+            self.sniffer_smoothed_data = {
+                "sniffer_energy_levels":    sniffer_energy_levels,
+                "sniffer_times":            smoothed_times
+            }
+
     def plot(self):
 
         print("Let's plot.")
-        #print(self.occupation_data)
 
-        #Prefered object-oriented approach
         if  (self.create_plots == True
-            or self.create_plots["sniffer"] == True):
+            or self.create_plots["sniffer"] == True)
+            and "physical" in self.sniffer_settings["sniffer_mode"]:
             myplot.myplot(data=self.sniffer_data["sniffer_energy_levels"],
+                    data_x=self.sniffer_data["sniffer_times"],
+                    plottype=["line_xy"],
+                    title="Channel Energy Level",
+                    xlabel="time [s]",
+                    ylabel="energy [PU]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["sniffer"],
+                    eval_mode=self.eval_mode,
+                    timer=self.timer,
+                    repetitions=self.repetitions,
+                    xlims=self.sniffer_settings["zoom"])
+
+        if  (self.create_plots == True
+            or self.create_plots["sniffer"] == True)
+            and "smoothed" in self.sniffer_settings["sniffer_mode"]:
+            myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],
                     title="Channel Energy Level",

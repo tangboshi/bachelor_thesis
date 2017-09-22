@@ -135,8 +135,8 @@ class sniffer:
         print("Let's plot.")
 
         if  (self.create_plots == True
-            or self.create_plots["sniffer"] == True)
-            and "physical" in self.sniffer_settings["sniffer_mode"]:
+            or self.create_plots["sniffer"] == True
+            and "physical" in self.sniffer_settings["sniffer_mode"]):
             myplot.myplot(data=self.sniffer_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],
@@ -158,8 +158,8 @@ class sniffer:
                     xlims=self.sniffer_settings["zoom"])
 
         if  (self.create_plots == True
-            or self.create_plots["sniffer"] == True)
-            and "smoothed" in self.sniffer_settings["sniffer_mode"]:
+            or self.create_plots["sniffer"] == True
+            and "smoothed" in self.sniffer_settings["sniffer_mode"]):
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],

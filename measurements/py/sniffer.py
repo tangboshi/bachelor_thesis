@@ -135,6 +135,8 @@ class sniffer:
                         tmp2.append(sniffer_times[index])
                     else:
                         continue
+            print(len(tmp))
+            print(len(tmp2))
             sniffer_energy_levels = tmp
             sniffer_times = tmp2
 
@@ -173,10 +175,6 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
-            print("Taram Taram Taram, pling plong pling!")
-            print("Taram Taram Taram, pling plong pling!")
-            print("Taram Taram Taram, pling plong pling!")
-            print("Taram Taram Taram, pling plong pling!")
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],

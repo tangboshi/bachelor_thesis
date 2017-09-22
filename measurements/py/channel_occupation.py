@@ -26,6 +26,7 @@ class channel_occupation:
         self.eval_mode                  =   kwargs.get("eval_mode", "belated")
         self.channel_occupation_mode    =   kwargs.get("channel_occupation_mode", {"occupation_mode": ["overview, zoom"], "zoom": [5,6]})
         self.co_data_files              =   kwargs.get("co_data_files", ["sender_bfr_dq.txt","receiver_ack_sent.txt","sender_ack_received"])
+        self.receiver_mode              =   kwargs.get("receiver_mode", "single")
 
         self.calc()
         self.plot()

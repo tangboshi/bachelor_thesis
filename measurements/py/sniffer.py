@@ -129,6 +129,8 @@ class sniffer:
                 if index+1 < len(sniffer_times):
                     delta_y = sniffer_energy_levels[index+1] - value
                     delta_x = sniffer_times[index+1] - sniffer_times[index]
+                    print(delta_x)
+                    print(delta_y)
                     if (delta_y < self.sniffer_settings["smoothing_difference"]
                         and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
                         or value == 0):

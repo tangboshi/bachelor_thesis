@@ -137,10 +137,15 @@ class channel_occupation:
         offset_candidates = [item[0] for item in busy_starting_times]
         offset = min(offset_candidates)
 
+        # barwidths in seconds
+        data_width = 0.04
+        ack_width = 0.007
+        ack_received_width = 0.004
+
         for index,process in enumerate(busy_starting_times):
             busy_starting_times[index] = [time-offset for time in process]
         for index,process in enumerate(acks_received):
-            acks_received[index] = [time-offset for time in process]
+            acks_received[index] = [time - offset - ack_received_width for time in process]
 
         print("acks_received")
         #print(acks_received)
@@ -153,10 +158,10 @@ class channel_occupation:
             # data channel occupation time is estimated as 0.04s
             # ack channel occupation time is estimated as 0.01s
             if index % 2 == 0:
-                process_time = 0.04
+                process_time = data_width
                 #process_time = 10
             else:
-                process_time = 0.007
+                process_time = ack_width
                 #process_time = 5
             # Uncomment next two code comments if end of channel occupation
             # is of any interest
@@ -167,7 +172,7 @@ class channel_occupation:
 
         acks_received_bar_width = []
         for index,process in enumerate(acks_received):
-            acks_received_bar_width.append([0.004 for x in range(len(process))])
+            acks_received_bar_width.append([ack_received_width for x in range(len(process))])
 
         print("acks_received_bar_width:")
         #print(acks_received_bar_width)
@@ -225,9 +230,9 @@ class channel_occupation:
 
             for index,process in enumerate(busy_zoomed_starting_times):
                 if index % 2 == 0:
-                    process_time = 0.04
+                    process_time = data_width
                 else:
-                    process_time = 0.007
+                    process_time = ack_width
                 occupation  = [process_time for time in range(len(process))]
                 print("len(process):")
                 print(len(process))
@@ -235,7 +240,7 @@ class channel_occupation:
 
             acks_received_zoomed_bar_width = []
             for index,process in enumerate(acks_received_zoomed):
-                acks_received_zoomed_bar_width.append([0.004 for time in range(len(process))])
+                acks_received_zoomed_bar_width.append([ack_received_width for time in range(len(process))])
 
             print("busy_zoomed_durations:")
             print(len(busy_zoomed_starting_times))

@@ -1,8 +1,8 @@
 export link=1
 export timer=8
 export measurement_repetitions=1
-#measurement_scripts=( csma_80211_I.py csma_80211_II.py )
-measurement_scripts=( theoretical_aloha_II.py theoretical_aloha_I.py )
+measurement_scripts=( csma_80211_II.py )
+#measurement_scripts=( theoretical_aloha_II.py theoretical_aloha_I.py )
 plot_scripts=( evaluation.py )
 export throughput_data_files="receiver_data_received,sender_ack_received"
 export rtt_data_files="sender_bfr_dq,sender_ack_received"

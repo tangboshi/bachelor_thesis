@@ -120,14 +120,24 @@ class sniffer:
 
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
-            from scipy.interpolate import spline
 
-            smoothed_times          = np.linspace(sniffer_times.min(), sniffer_times.max(), 5*len(sniffer_times))
-            sniffer_energy_levels   = spline(sniffer_times,sniffer_energy_levels,smoothed_times)
+            tmp, tmp2 = [], []
+            for index,value in enumerate(sniffer_energy_levels):
+                if index+1 < len(sniffer_times):
+                    delta_y = sniffer_energy_levels[index+1] - value
+                    delta_x = sniffer_times[index+1] - sniffer_times[index]
+                    if (delta_y < self.sniffer_settings["smoothing_difference"]
+                        or delta_y/delta_x < self.sniffer_settings["smoothing_derivative"] ):
+                        tmp.append(value)
+                        tmp2.append(sniffer_times[index])
+                    else:
+                        continue
+            sniffer_energy_levels = tmp
+            sniffer_times = tmp2
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":    sniffer_energy_levels,
-                "sniffer_times":            smoothed_times
+                "sniffer_times":            sniffer_times
             }
 
     def plot(self):

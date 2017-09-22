@@ -13,4 +13,4 @@ export co_data_files="sender_bfr_dq,receiver_ack_sent,sender_ack_received"
 export sniffer_data_files="sniffer"
 export plot_type="boxplot,cdf"
 export show_plot_after_measurement=0
-export receiver_mode = single
+export receiver_mode="single"

@@ -51,7 +51,7 @@ class tp:
             for i in range(self.repetitions):
                 print("I'll open files from iteration "+str(i+1)+" for you!")
                 file_path = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                data_sent_file_path = file_path+self.throughput_data_files[0]+"_"+str(self.links[index])+".txt"
+                data_sent_file_path = file_path+self.throughput_data_files[0]+link+".txt"
                 ack_received_file_path = file_path+self.throughput_data_files[1]+"_"+str(self.links[index])+".txt"
 
                 data_received_file_path = file_path+self.diagnosis_files[0]+link+".txt"

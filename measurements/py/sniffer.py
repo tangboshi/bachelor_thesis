@@ -163,7 +163,7 @@ class sniffer:
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
                     data_x=self.sniffer_data["sniffer_times"],
                     plottype=["line_xy"],
-                    title="Channel Energy Level",
+                    title="Smoothed Channel Energy Level",
                     xlabel="time [s]",
                     ylabel="energy [PU]",
                     savepath=self.plot_path+"/",

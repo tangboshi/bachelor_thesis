@@ -136,9 +136,12 @@ class sniffer:
                     else:
                         continue
             #get experimental values from printout of this
+            #comment to make the program faster...
+            print("difference lower bound:"+str(min([x for x in deltas_y if x != 0])))
             print("difference upper bound:"+str(max(deltas_y)))
             print("derivative lower bound:"+str(min([x for x in deltas_y if x != 0])/max(deltas_x)))
             print("derivative upper bound:"+str(max(deltas_y)/min(deltas_x)))
+
             sniffer_energy_levels = tmp
             sniffer_times = tmp2
 

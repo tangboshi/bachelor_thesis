@@ -143,4 +143,5 @@ class sniffer:
                     legend_coordinates=self.legend_coordinates["sniffer"],
                     eval_mode=self.eval_mode,
                     timer=self.timer,
-                    repetitions=self.repetitions)
+                    repetitions=self.repetitions,
+                    xlims=self.sniffer_settings["zoom"])

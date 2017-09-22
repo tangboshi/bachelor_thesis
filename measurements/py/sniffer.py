@@ -44,6 +44,7 @@ class sniffer:
         sniffer_times           = []
         sniffer_energy_levels  = []
 
+
         # FIXME: let's try to avoid this repetition of code from rtt! (until ###)
         for index,single_measurement in enumerate(self.measurement):
             energy_detected_times = []
@@ -51,7 +52,7 @@ class sniffer:
 
             for i in range(self.repetitions):
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
-                sniffer_data_path   = path+self.sniffer_data_files[0]+"_"+str(self.sniffer_settings["link"])+".txt"
+                sniffer_data_path   = path+self.sniffer_data_files[0]+".txt"
 
                 if os.path.isfile(sniffer_data_path):
                     with open(sniffer_data_path) as f:

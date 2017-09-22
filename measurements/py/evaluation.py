@@ -49,18 +49,18 @@ create_plots                = {
                                 "throughput":           False,
                                 "diagnostic":           False,
                                 "backoff_csfail":       False,
-                                "channel_occupation":   False,
+                                "channel_occupation":   True,
                                 "sniffer":              True
                             }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [0.5,1.2]
+                                    "zoom":             [1.2,1.8]
                                 }
 
 sniffer_settings            =   {
                                     "link":     2,
-                                    "zoom":     [1.2,2.5]
+                                    "zoom":     [1.2,1.8]
                                 }
 
 #Unimplemented, use later

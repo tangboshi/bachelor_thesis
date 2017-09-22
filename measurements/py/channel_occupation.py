@@ -27,7 +27,6 @@ class channel_occupation:
         self.channel_occupation_mode    =   kwargs.get("channel_occupation_mode", {"occupation_mode": ["overview, zoom"], "zoom": [5,6]})
         self.co_data_files              =   kwargs.get("co_data_files", ["sender_bfr_dq.txt","receiver_ack_sent.txt","sender_ack_received"])
 
-        # debugging:
         self.calc()
         self.plot()
 
@@ -40,6 +39,11 @@ class channel_occupation:
         busy_starting_times = []
         acks_received = []
 
+        if self.receiver_mode == "single":
+            link = ""
+        else:
+            link = "_"+str(self.links[index])
+
         # FIXME: let's try to avoid this repetition of code from rtt! (until ###)
         for index,single_measurement in enumerate(self.measurement):
             ack_received_times = []
@@ -49,7 +53,7 @@ class channel_occupation:
             for i in range(self.repetitions):
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 data_sent_path      = path+self.co_data_files[0]+"_"+str(self.links[index])+".txt"
-                ack_sent_path       = path+self.co_data_files[1]+"_"+str(self.links[index])+".txt"
+                ack_sent_path       = path+self.co_data_files[1]+link+".txt"
                 ack_received_path   = path+self.co_data_files[2]+"_"+str(self.links[index])+".txt"
 
                 if os.path.isfile(data_sent_path):

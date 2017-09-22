@@ -1,10 +1,8 @@
 import numpy as np
 import subprocess
-import myplot_belated as myplot
+import myplot
 import os.path as pt
 import lines
-
-import pdb
 
 print("Hello from throughput_belated.py! Really, it's me!")
 

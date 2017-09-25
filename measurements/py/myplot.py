@@ -90,7 +90,9 @@ class myplot:
             plottypes[aplot]()
             #set axis limits
             self.ax.set_ylim(ymin=0)
-            if self.xlims == False:
+            if self.xlims != False:
+                self.ax.set_xlim(self.xlims[0], self.xlims[1])
+            else:
                 self.ax.set_xlim(xmin=0)
             #get rid of unloved margins
             plt.tight_layout()
@@ -212,9 +214,7 @@ class myplot:
             #print(item)
 
         self.ax.set_ylim(10, 5*data_len+20)
-        if self.xlims != False:
-            self.ax.set_xlim(self.xlims[0], self.xlims[1])
-        else:
+        if self.xlims == False:
             self.ax.set_xlim(0, self.timer*self.repetitions)
         self.ax.xaxis.grid(self.grid, linestyle="dashdot")
         self.ax.yaxis.grid(self.grid, linestyle="dashdot")

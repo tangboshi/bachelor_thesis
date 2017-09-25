@@ -141,7 +141,7 @@ class myplot:
             if(show):
                 self.show()
 
-            plt.close(self.fig)
+            #plt.close(self.fig)
             #self.fig.clear()
             #print(self.data)
 

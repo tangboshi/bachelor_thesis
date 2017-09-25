@@ -114,8 +114,10 @@ class sniffer:
             for index,time in enumerate(sniffer_times):
                 if time > interval_lower_bound:
                     if time > interval_upper_bound:
+                        print("Yippie, yippie, yay!")
                         sniffer_times           +=[tmp]
                         sniffer_energy_levels   +=[tmp2]
+                        tmp, tmp2 = [], []
                         if interval_upper_bound + zoom_interval < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound
                             interval_upper_bound += zoom_interval

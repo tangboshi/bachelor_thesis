@@ -81,9 +81,9 @@ class sniffer:
         print("len(sniffer_times):")
         print(len(sniffer_times))
         print("sniffer_times:")
-        print(sniffer_times)
+        #print(sniffer_times)
         print("sniffer_energy_levels:")
-        print(sniffer_energy_levels)
+        #print(sniffer_energy_levels)
 
         ## FIXME: post processing
         ## FIXME: fix possible energy chart not covering gantt chart property

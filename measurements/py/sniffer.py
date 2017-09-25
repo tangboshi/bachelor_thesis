@@ -226,8 +226,7 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=[xlim_lower_bound,xlim_upper_bound],
-                        kwargs)
+                        xlims=[xlim_lower_bound,xlim_upper_bound])
 
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
@@ -254,5 +253,4 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=[xlim_lower_bound,xlim_upper_bound],
-                        kwargs)
+                        xlims=[xlim_lower_bound,xlim_upper_bound])

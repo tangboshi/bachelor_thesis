@@ -163,7 +163,7 @@ class sniffer:
                             or value == 0
                             or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
                             tmp.append(value)
-                            tmp2.append(sniffer_times[index])
+                            tmp2.append(sniffer_times[interval_index][index])
                         else:
                             continue
                 tmp3 += [tmp]

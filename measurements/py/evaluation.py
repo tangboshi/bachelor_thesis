@@ -62,7 +62,7 @@ channel_occupation_mode     =   {
 sniffer_settings            =   {
                                     "sniffer_mode":             ["physical", "smoothed"],
                                     "link":                     2,
-                                    "zoom":                     [3.8,5.6],
+                                    "zoom":                     [0.0,6.0],
                                     "zoom_mode":                "interval",
                                     "zoom_interval":            0.6,
                                     "smoothing_difference":     0.0001,

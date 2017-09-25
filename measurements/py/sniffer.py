@@ -112,6 +112,7 @@ class sniffer:
             interval_upper_bound = interval_lower_bound+zoom_interval
 
             for index,time in enumerate(sniffer_times):
+                print("zoom_interval:"+str(zoom_interval))
                 print("interval_lower_bound:"+str(interval_lower_bound))
                 if time > interval_lower_bound:
                     print("interval_lower_bound:"+str(interval_lower_bound))

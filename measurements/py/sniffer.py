@@ -182,15 +182,15 @@ class sniffer:
             sniffer_times = tmp4
 
             print("len(sniffer_energy_levels) (smoothed):")
-            for index in range(len(sniffer_energy_levels)):
-                print((index,len(sniffer_energy_levels[index])))
+            #for index in range(len(sniffer_energy_levels)):
+                #print((index,len(sniffer_energy_levels[index])))
             print("len(sniffer_times) (smoothed):")
-            for index in range(len(sniffer_times)):
-                print((index,len(sniffer_times[index])))
+            #for index in range(len(sniffer_times)):
+                #print((index,len(sniffer_times[index])))
             print("sniffer_energy_levels (smoothed):")
-            print(tmp3)
+            #print(tmp3)
             print("sniffer_times (smoothed):")
-            print(tmp4)
+            #print(tmp4)
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":    sniffer_energy_levels,
@@ -231,10 +231,10 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
-            #zoom_interval = self.sniffer_settings["zoom_interval"]
+            zoom_interval = self.sniffer_settings["zoom_interval"]
             for index,interval in enumerate(self.sniffer_smoothed_data["sniffer_times"]):
-                #xlim_lower_bound = self.sniffer_settings["zoom"][0]+zoom_interval*index
-                #xlim_upper_bound = xlim_lower_bound+zoom_interval
+                xlim_lower_bound = self.sniffer_settings["zoom"][0]+zoom_interval*index
+                xlim_upper_bound = xlim_lower_bound+zoom_interval
                 myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"][index],
                         data_x=interval,
                         plottype=["line_xy"],
@@ -252,5 +252,5 @@ class sniffer:
                         legend_coordinates=self.legend_coordinates["sniffer"],
                         eval_mode=self.eval_mode,
                         timer=self.timer,
-                        repetitions=self.repetitions)#,
-                        #xlims=[xlim_lower_bound,xlim_upper_bound])
+                        repetitions=self.repetitions,
+                        xlims=[xlim_lower_bound,xlim_upper_bound])

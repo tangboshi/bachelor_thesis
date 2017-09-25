@@ -8,7 +8,7 @@ import channel_occupation
 import backoff
 import sniffer
 
-
+# From Bash
 measurement             =   [int(os.environ["measurement_counter"])]
 links                   =   [int(os.environ["link"])]
 repetitions             =   int(os.environ["measurement_repetitions"])
@@ -27,9 +27,10 @@ eval_mode               =   "live"
 timer                   =   int(os.environ["timer"])
 receiver_mode           =   os.environ["receiver_mode"]
 
-boxplot_xticks              = [ "measurement "+str(index) for index in measurement ]
-
-legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
+#From Python
+plot_pdf                =   False
+boxplot_xticks          =   [ "measurement "+str(index) for index in measurement ]
+legend_labels           =   [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
 
 custom_legend_coordinates   = {
                                 "rtt":                 [0.24,0.85,"upper left"],
@@ -94,7 +95,8 @@ eval_dict = {
     "co_data_files":            co_data_files,
     "sniffer_data_files":       sniffer_data_files,
     "sniffer_settings":         sniffer_settings,
-    "timer":                    timer
+    "timer":                    timer,
+    "plot_pdf":                 plot_pdf
 }
 
 for index,a_plot_type in enumerate(plot_type):

@@ -27,6 +27,7 @@ class myplot:
             or "broken_barh" in plottype):
             self.data               = data
 
+        self.kwargs             = dict(kwargs)
         self.bins               = bins
         self.plottype           = plottype
         self.xlabel             = xlabel
@@ -45,7 +46,8 @@ class myplot:
         self.repetitions        = kwargs.get("repetitions", 5)
         self.eval_mode          = kwargs.get("eval_mode", "belated")
         self.xlims              = kwargs.get("xlims", False)
-        self.savepath           = savepath
+        self.savepath           = savepath,
+        self.plot_pdf           = kwargs.get("plot_pdf", False)
 
         #print(self.legend_loc)
 
@@ -413,7 +415,8 @@ class myplot:
         savename = savename.lower()
         savename = savename.replace(" ", "_")
         self.fig.savefig(savepath+savename+".png")
-        self.fig.savefig(savepath+savename+".pdf")
+        if self.plot_pdf:
+            self.fig.savefig(savepath+savename+".pdf")
 
     def show(self):
         plt.show()

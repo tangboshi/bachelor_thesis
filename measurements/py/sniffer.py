@@ -102,17 +102,37 @@ class sniffer:
                     sniffer_energy_levels[index]    = 0
                     sniffer_energy_levels[index+1]  = 0
 
-        # Onto cropping the data... let's zoom into a specified area
+        # Onto data cropping...
+        # TEMP: determine zoom invterval, if zoom mode is interval
         tmp, tmp2 = [], []
-        for index,time in enumerate(sniffer_times):
-            if time > self.sniffer_settings["zoom"][0]:
-                if time > self.sniffer_settings["zoom"][1]:
-                    break;
-                else:
-                    tmp.append(time)
-                    tmp2.append(sniffer_energy_levels[index])
-        sniffer_times=tmp
-        sniffer_energy_levels=tmp2
+
+        if self.sniffer_settings["zoom_mode"] == "interval":
+            zoom_interval = self.sniffer_settings["zoom_interval"]
+            interval_lower_bound = self.sniffer_settings["zoom"][0]
+            interval_upper_bound = interval_lower_bound+zoom_interval
+
+            for index,time in enumerate(sniffer_times):
+                if time > interval_lower_bound
+                    if time > interval_upper_bound:
+                        sniffer_times           +=[tmp]
+                        sniffer_energy_levels   +=[tmp2]
+                        if interval_upper_bound + zoom_interval < self.sniffer_settings["zoom"][1]:
+                            interval_lower_bound = interval_upper_bound
+                            interval_upper_bound += zoom_interval
+                    else:
+                        tmp.append(time)
+                        tmp2.append(sniffer_energy_levels[index])
+
+        else:
+            for index,time in enumerate(sniffer_times):
+                if time > self.sniffer_settings["zoom"][0]:
+                    if time > self.sniffer_settings["zoom"][1]:
+                        break;
+                    else:
+                        tmp.append(time)
+                        tmp2.append(sniffer_energy_levels[index])
+            sniffer_times=tmp
+            sniffer_energy_levels=tmp2
 
         self.sniffer_data = {
             "sniffer_energy_levels":    sniffer_energy_levels,
@@ -123,21 +143,25 @@ class sniffer:
 
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
-            tmp, tmp2, deltas_x, deltas_y = [], [], [], []
-            for index,value in enumerate(sniffer_energy_levels):
-                if index+1 < len(sniffer_times):
-                    delta_y = abs(sniffer_energy_levels[index+1] - value)
-                    delta_x = abs(sniffer_times[index+1] - sniffer_times[index])
-                    deltas_x.append(delta_x)
-                    deltas_y.append(delta_y)
-                    if (delta_y < self.sniffer_settings["smoothing_difference"]
-                        and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
-                        or value == 0
-                        or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
-                        tmp.append(value)
-                        tmp2.append(sniffer_times[index])
-                    else:
-                        continue
+            tmp, tmp2, tmp3, tmp4, deltas_x, deltas_y = [], [], [], [], [], []
+            for interval in sniffer_energy_levels:
+                for index,value in enumerate(interval):
+                    if index+1 < len(sniffer_times):
+                        delta_y = abs(sniffer_energy_levels[index+1] - value)
+                        delta_x = abs(sniffer_times[index+1] - sniffer_times[index])
+                        deltas_x.append(delta_x)
+                        deltas_y.append(delta_y)
+                        if (delta_y < self.sniffer_settings["smoothing_difference"]
+                            and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
+                            or value == 0
+                            or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
+                            tmp.append(value)
+                            tmp2.append(sniffer_times[index])
+                        else:
+                            continue
+                tmp3 += [tmp]
+                tmp4 += [tmp2]
+
             #get experimental values from printout of this
             #comment to make the program faster...
             print("difference lower bound:"+str(min([x for x in deltas_y if x != 0])))
@@ -145,8 +169,8 @@ class sniffer:
             print("derivative lower bound:"+str(min([x for x in deltas_y if x != 0])/max(deltas_x)))
             print("derivative upper bound:"+str(max(deltas_y)/min(deltas_x)))
 
-            sniffer_energy_levels = tmp
-            sniffer_times = tmp2
+            sniffer_energy_levels = tmp3
+            sniffer_times = tmp4
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":    sniffer_energy_levels,
@@ -160,45 +184,47 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "physical" in self.sniffer_settings["sniffer_mode"]):
-            myplot.myplot(data=self.sniffer_data["sniffer_energy_levels"],
-                    data_x=self.sniffer_data["sniffer_times"],
-                    plottype=["line_xy"],
-                    title="Channel Energy Level",
-                    xlabel="time [s]",
-                    ylabel="energy [PU]",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot,
-                    grid=self.grid,
-                    xticks=self.xticks,
-                    legend=self.legend,
-                    legend_loc=self.legend_loc,
-                    annotations_below=self.annotations_below,
-                    annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["sniffer"],
-                    eval_mode=self.eval_mode,
-                    timer=self.timer,
-                    repetitions=self.repetitions,
-                    xlims=self.sniffer_settings["zoom"])
+            for index,interval in enumerate(self.sniffer_data["sniffer_times"]:
+                myplot.myplot(data=self.sniffer_data["sniffer_energy_levels"][index],
+                        data_x=interval,
+                        plottype=["line_xy"],
+                        title="Channel Energy Level "+str(index),
+                        xlabel="time [s]",
+                        ylabel="energy [PU]",
+                        savepath=self.plot_path+"/",
+                        show=self.show_plot,
+                        grid=self.grid,
+                        xticks=self.xticks,
+                        legend=self.legend,
+                        legend_loc=self.legend_loc,
+                        annotations_below=self.annotations_below,
+                        annotations_other=self.annotations_other,
+                        legend_coordinates=self.legend_coordinates["sniffer"],
+                        eval_mode=self.eval_mode,
+                        timer=self.timer,
+                        repetitions=self.repetitions,
+                        xlims=self.sniffer_settings["zoom"])
 
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
-            myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"],
-                    data_x=self.sniffer_smoothed_data["sniffer_times"],
-                    plottype=["line_xy"],
-                    title="Smoothed Channel Energy Level",
-                    xlabel="time [s]",
-                    ylabel="energy [PU]",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot,
-                    grid=self.grid,
-                    xticks=self.xticks,
-                    legend=self.legend,
-                    legend_loc=self.legend_loc,
-                    annotations_below=self.annotations_below,
-                    annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["sniffer"],
-                    eval_mode=self.eval_mode,
-                    timer=self.timer,
-                    repetitions=self.repetitions,
-                    xlims=self.sniffer_settings["zoom"])
+            for index,interval in enumerate(self.sniffer_data["sniffer_times"]:
+                myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"][index],
+                        data_x=interval,
+                        plottype=["line_xy"],
+                        title="Smoothed Channel Energy Level "+str(index),
+                        xlabel="time [s]",
+                        ylabel="energy [PU]",
+                        savepath=self.plot_path+"/",
+                        show=self.show_plot,
+                        grid=self.grid,
+                        xticks=self.xticks,
+                        legend=self.legend,
+                        legend_loc=self.legend_loc,
+                        annotations_below=self.annotations_below,
+                        annotations_other=self.annotations_other,
+                        legend_coordinates=self.legend_coordinates["sniffer"],
+                        eval_mode=self.eval_mode,
+                        timer=self.timer,
+                        repetitions=self.repetitions,
+                        xlims=self.sniffer_settings["zoom"])

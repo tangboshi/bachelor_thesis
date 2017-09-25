@@ -8,7 +8,6 @@ print("Hello from throughput.py!")
 
 class tp:
     def __init__(self,**kwargs):
-        print("Tp instance initialized!")
         #self.__dict__.update(kwargs)
         self.data_source_path       =   kwargs.get("data_source_path","/home/alex/0_ba/git/self.measurements/data")
         self.plot_path              =   kwargs.get("plot_path","/home/alex/0_ba/git/self.measurements/plots")
@@ -78,18 +77,21 @@ class tp:
                     datacount = 0
                     self.data[index,i] = 0
 
-                if pt.isfile(data_received_file_path) and pt.isfile(ack_sent_file_path) and datacount > 0 and ackcount > 0:
-                    print("Hoorray, diagnosis files found!")
-                    receiver_datacount = lines.linecount(data_received_file_path)
-                    receiver_ackcount = lines.linecount(ack_sent_file_path)
-                    # the term diagnosis is concerning the sender's or receiver's receiving capability
-                    # this assumes that sent-off frames are good frames
-                    # *100 => %
-                    self.sender_diagnosis[index,i] = 100 - (receiver_ackcount - ackcount)/receiver_ackcount*100
-                    self.receiver_diagnosis[index,i] = 100 - (datacount - receiver_datacount)/datacount*100
+                if not self.receiver_mode == "single":
+                    if pt.isfile(data_received_file_path) and pt.isfile(ack_sent_file_path) and datacount > 0 and ackcount > 0:
+                        print("Hoorray, diagnosis files found!")
+                        receiver_datacount = lines.linecount(data_received_file_path)
+                        receiver_ackcount = lines.linecount(ack_sent_file_path)
+                        # the term diagnosis is concerning the sender's or receiver's receiving capability
+                        # this assumes that sent-off frames are good frames
+                        # *100 => %
+                        self.sender_diagnosis[index,i] = 100 - (receiver_ackcount - ackcount)/receiver_ackcount*100
+                        self.receiver_diagnosis[index,i] = 100 - (datacount - receiver_datacount)/datacount*100
+                    else:
+                        print("Diagnosis files incomplete or missing :( \
+                        (or no sender-side received acks/ receiver-side received data)!")
                 else:
-                    print("Diagnosis files incomplete or missing :( \
-                    (or no sender-side received acks/ receiver-side received data)!")
+                    print("Diagnosis based on receiver is not possible in a single receiver, multiple snder scenario.")
 
 
         print(self.data)
@@ -123,22 +125,23 @@ class tp:
                 legend_coordinates=self.legend_coordinates["throughput"],
                 eval_mode=self.eval_mode)
 
-        if self.create_plots == True or self.create_plots["diagnostic"] == True:
-            myplot.myplot(  data=self.receiver_diagnosis,
-                plottype=self.plot_type,
-                title="Receiver Receiving Score (Inverse = Data Loss)",
-                xlabel="score [%]",
-                ylabel="score [%]",
-                savepath=self.plot_path+"/",
-                show=self.show_plot,
-                grid=self.grid,
-                xticks=self.xticks,
-                legend=self.legend,
-                legend_loc=self.legend_loc,
-                annotations_below=self.annotations_below,
-                annotations_other=self.annotations_other,
-                legend_coordinates=self.legend_coordinates["diagnosis_receiver"],
-                eval_mode=self.eval_mode)
+        if not self.receiver_mode == "single":
+            if self.create_plots == True or self.create_plots["diagnostic"] == True:
+                myplot.myplot(  data=self.receiver_diagnosis,
+                    plottype=self.plot_type,
+                    title="Receiver Receiving Score (Inverse = Data Loss)",
+                    xlabel="score [%]",
+                    ylabel="score [%]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["diagnosis_receiver"],
+                    eval_mode=self.eval_mode)
 
             myplot.myplot(  data=self.sender_diagnosis,
                 plottype=self.plot_type,

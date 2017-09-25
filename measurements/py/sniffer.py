@@ -113,8 +113,10 @@ class sniffer:
 
             for index,time in enumerate(sniffer_times):
                 if time > interval_lower_bound:
+                    print("interval_lower_bound:"+str(interval_lower_bound))
+                    print("time:"+str(time))
+                    print("interval_upper_bound:"+str(interval_upper_bound))
                     if time > interval_upper_bound:
-                        print("Yippie, yippie, yay!")
                         sniffer_times.append(tmp)
                         sniffer_energy_levels.append(tmp2)
                         tmp, tmp2 = [], []
@@ -125,16 +127,16 @@ class sniffer:
                         tmp.append(time)
                         tmp2.append(sniffer_energy_levels[index])
 
-        #else:
-            # for index,time in enumerate(sniffer_times):
-            #     if time > self.sniffer_settings["zoom"][0]:
-            #         if time > self.sniffer_settings["zoom"][1]:
-            #             break;
-            #         else:
-            #             tmp.append(time)
-            #             tmp2.append(sniffer_energy_levels[index])
-            # sniffer_times=tmp
-            # sniffer_energy_levels=tmp2
+        else:
+            for index,time in enumerate(sniffer_times):
+                if time > self.sniffer_settings["zoom"][0]:
+                    if time > self.sniffer_settings["zoom"][1]:
+                        break;
+                    else:
+                        tmp.append(time)
+                        tmp2.append(sniffer_energy_levels[index])
+            sniffer_times=tmp
+            sniffer_energy_levels=tmp2
 
         self.sniffer_data = {
             "sniffer_energy_levels":    sniffer_energy_levels,

@@ -45,12 +45,12 @@ custom_legend_coordinates   = {
                             }
 
 create_plots                = {
-                                "rtt":                  True,
-                                "packet_loss":          True,
+                                "rtt":                  False,
+                                "packet_loss":          False,
                                 "retxs":                False,
-                                "throughput":           True,
-                                "diagnostic":           True,
-                                "backoff_csfail":       True,
+                                "throughput":           False,
+                                "diagnostic":           False,
+                                "backoff_csfail":       False,
                                 "channel_occupation":   True,
                                 "sniffer":              True
                             }

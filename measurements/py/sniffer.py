@@ -175,7 +175,7 @@ class sniffer:
                             continue
                 tmp3.append(tmp)
                 tmp4.append(tmp2)
-                tmp, tmp2 = [0], [0]
+                tmp, tmp2 = [], []
 
             #get experimental values from printout of this
             #comment to make the program faster...

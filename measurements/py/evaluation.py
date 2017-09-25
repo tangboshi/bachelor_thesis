@@ -48,7 +48,7 @@ create_plots                = {
                                 "rtt":                  False,
                                 "packet_loss":          False,
                                 "retxs":                False,
-                                "throughput":           False,
+                                "throughput":           True,
                                 "diagnostic":           False,
                                 "backoff_csfail":       False,
                                 "channel_occupation":   True,

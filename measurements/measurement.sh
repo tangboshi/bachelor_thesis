@@ -98,8 +98,7 @@ function measure
               :
             else
               prematurely_aborted=1
-              echo  "scripts were killed prematurely.
-                    measurement may be incomplete."
+              echo  "Scripts were killed prematurely. Measurement may be incomplete."
               break
           fi
       fi

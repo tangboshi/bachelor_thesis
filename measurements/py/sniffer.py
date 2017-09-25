@@ -125,7 +125,7 @@ class sniffer:
                         tmp.append(time)
                         tmp2.append(sniffer_energy_levels[index])
 
-        else:
+        #else:
             # for index,time in enumerate(sniffer_times):
             #     if time > self.sniffer_settings["zoom"][0]:
             #         if time > self.sniffer_settings["zoom"][1]:

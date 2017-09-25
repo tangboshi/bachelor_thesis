@@ -166,8 +166,9 @@ class sniffer:
                             tmp2.append(sniffer_times[interval_index][index])
                         else:
                             continue
-                tmp3 += [tmp]
-                tmp4 += [tmp2]
+                tmp3.append(tmp)
+                tmp4.append(tmp2)
+                tmp, tmp2 = [], []
 
             #get experimental values from printout of this
             #comment to make the program faster...

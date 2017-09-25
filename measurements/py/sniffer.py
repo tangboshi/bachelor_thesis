@@ -112,7 +112,7 @@ class sniffer:
             interval_upper_bound = interval_lower_bound+zoom_interval
 
             for index,time in enumerate(sniffer_times):
-                if time > interval_lower_bound
+                if time > interval_lower_bound:
                     if time > interval_upper_bound:
                         sniffer_times           +=[tmp]
                         sniffer_energy_levels   +=[tmp2]

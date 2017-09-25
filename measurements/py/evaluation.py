@@ -50,7 +50,7 @@ create_plots                = {
                                 "retxs":                False,
                                 "throughput":           True,
                                 "diagnostic":           False,
-                                "backoff_csfail":       False,
+                                "backoff_csfail":       True,
                                 "channel_occupation":   True,
                                 "sniffer":              True
                             }

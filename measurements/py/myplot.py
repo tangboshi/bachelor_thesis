@@ -141,7 +141,8 @@ class myplot:
             if(show):
                 self.show()
 
-            self.fig.clear()
+            plt.close(self.fig)
+            #self.fig.clear()
             #print(self.data)
 
     def bar(self):

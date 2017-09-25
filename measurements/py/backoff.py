@@ -54,8 +54,6 @@ class backoff:
                             line = line.strip('\n')
                             backoff_csfail_times += [float(line)]
                             #print("data_sent: "+line)
-                    # Let's make sure that the list exists.
-                    # Probably superfluous though.
                     backoff_csfail_times += [0]
                     self.backoff_csfail_sum[index,i] = sum(backoff_csfail_times)
                 else:

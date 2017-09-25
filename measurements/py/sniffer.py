@@ -119,6 +119,9 @@ class sniffer:
                         if tmp and tmp2:
                             tmp3.append(tmp)
                             tmp4.append(tmp2)
+                        else:
+                            tmp3.append(interval_lower_bound)
+                            tmp4.append(0)
                         tmp, tmp2 = [], []
                         if interval_upper_bound < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound

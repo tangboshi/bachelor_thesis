@@ -116,8 +116,12 @@ class sniffer:
                     #print("time:"+str(time)+" exceeds lower bound.")
                     if time > interval_upper_bound:
                         #print("time:"+str(time)+" exceeds upper bound.")
-                        tmp3.append(tmp)
-                        tmp4.append(tmp2)
+                        if tmp and tmp2:
+                            tmp3.append(tmp)
+                            tmp4.append(tmp2)
+                        else:
+                            tmp3.append(interval_lower_bound)
+                            tmp4.append(0)
                         tmp, tmp2 = [], []
                         if interval_upper_bound < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound
@@ -130,7 +134,7 @@ class sniffer:
             sniffer_energy_levels   = tmp4
 
         else:
-            tmp,tmp2 = [],[]
+            tmp, tmp2 = [],[]
             for index,time in enumerate(sniffer_times):
                 if time > self.sniffer_settings["zoom"][0]:
                     if time > self.sniffer_settings["zoom"][1]:

@@ -179,6 +179,10 @@ class sniffer:
             sniffer_energy_levels = tmp3
             sniffer_times = tmp4
 
+            print("len(sniffer_energy_levels) (smoothed):")
+            print(len(tmp3))
+            print("len(sniffer_times) (smoothed):")
+            print(len(tmp4))
             print("sniffer_energy_levels (smoothed):")
             print(tmp3)
             print("sniffer_times (smoothed):")

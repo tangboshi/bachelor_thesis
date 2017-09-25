@@ -116,10 +116,9 @@ class sniffer:
                     #print("time:"+str(time)+" exceeds lower bound.")
                     if time > interval_upper_bound:
                         #print("time:"+str(time)+" exceeds upper bound.")
-                        if tmp and tmp2:
-                            tmp3.append(tmp)
-                            tmp4.append(tmp2)
-                        tmp, tmp2 = [], []
+                        tmp3.append(tmp)
+                        tmp4.append(tmp2)
+                        tmp, tmp2 = [0], [0]
                         if interval_upper_bound < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound
                             interval_upper_bound += zoom_interval
@@ -131,6 +130,7 @@ class sniffer:
             sniffer_energy_levels   = tmp4
 
         else:
+            tmp,tmp2 = [],[]
             for index,time in enumerate(sniffer_times):
                 if time > self.sniffer_settings["zoom"][0]:
                     if time > self.sniffer_settings["zoom"][1]:
@@ -150,7 +150,7 @@ class sniffer:
 
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
-            tmp, tmp2, tmp3, tmp4, deltas_x, deltas_y = [], [], [], [], [], []
+            tmp, tmp2, tmp3, tmp4, deltas_x, deltas_y = [0], [0], [], [], [], []
             for interval_index,interval in enumerate(sniffer_energy_levels):
                 for index,value in enumerate(interval):
                     if index+1 < len(interval):
@@ -168,7 +168,7 @@ class sniffer:
                             continue
                 tmp3.append(tmp)
                 tmp4.append(tmp2)
-                tmp, tmp2 = [], []
+                tmp, tmp2 = [0], [0]
 
             #get experimental values from printout of this
             #comment to make the program faster...

@@ -203,7 +203,10 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "physical" in self.sniffer_settings["sniffer_mode"]):
+            zoom_interval = self.sniffer_settings["zoom_interval"]
             for index,interval in enumerate(self.sniffer_data["sniffer_times"]):
+                xlim_lower_bound = self.sniffer_settings["zoom"][0]+zoom_interval*index
+                xlim_upper_bound = xlim_lower_bound+zoom_interval
                 myplot.myplot(data=self.sniffer_data["sniffer_energy_levels"][index],
                         data_x=interval,
                         plottype=["line_xy"],
@@ -222,12 +225,15 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=self.sniffer_settings["zoom"])
+                        xlims=[xlim_lower_bound,xlim_upper_bound])
 
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
+            zoom_interval = self.sniffer_settings["zoom_interval"]
             for index,interval in enumerate(self.sniffer_smoothed_data["sniffer_times"]):
+                xlim_lower_bound = self.sniffer_settings["zoom"][0]+zoom_interval*index
+                xlim_upper_bound = xlim_lower_bound+zoom_interval
                 myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"][index],
                         data_x=interval,
                         plottype=["line_xy"],
@@ -246,4 +252,4 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=self.sniffer_settings["zoom"])
+                        xlims=[xlim_lower_bound,xlim_upper_bound])

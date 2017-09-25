@@ -151,11 +151,11 @@ class sniffer:
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
             tmp, tmp2, tmp3, tmp4, deltas_x, deltas_y = [], [], [], [], [], []
-            for interval in sniffer_energy_levels:
+            for interval_index,interval in enumerate(sniffer_energy_levels):
                 for index,value in enumerate(interval):
                     if index+1 < len(sniffer_times):
-                        delta_y = abs(sniffer_energy_levels[index+1] - value)
-                        delta_x = abs(sniffer_times[index+1] - sniffer_times[index])
+                        delta_y = abs(interval[index+1] - value)
+                        delta_x = abs(sniffer_times[interval_index][index+1] - sniffer_times[interval_index][index])
                         deltas_x.append(delta_x)
                         deltas_y.append(delta_y)
                         if (delta_y < self.sniffer_settings["smoothing_difference"]

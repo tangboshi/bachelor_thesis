@@ -104,7 +104,7 @@ class sniffer:
 
         # Onto data cropping...
         # TEMP: determine zoom invterval, if zoom mode is interval
-        tmp, tmp2 = [], []
+        tmp, tmp2, tmp3, tmp4 = [], [], [], []
 
         if self.sniffer_settings["zoom_mode"] == "interval":
             zoom_interval = self.sniffer_settings["zoom_interval"]
@@ -119,8 +119,8 @@ class sniffer:
                     print("time:"+str(time))
                     print("interval_upper_bound:"+str(interval_upper_bound))
                     if time > interval_upper_bound:
-                        sniffer_times.append(tmp)
-                        sniffer_energy_levels.append(tmp2)
+                        tmp3.append(tmp)
+                        tmp4.append(tmp2)
                         tmp, tmp2 = [], []
                         if interval_upper_bound + zoom_interval < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound
@@ -128,6 +128,8 @@ class sniffer:
                     else:
                         tmp.append(time)
                         tmp2.append(sniffer_energy_levels[index])
+            sniffer_times           = tmp3
+            sniffer_energy_levels   = tmp4
 
         else:
             for index,time in enumerate(sniffer_times):

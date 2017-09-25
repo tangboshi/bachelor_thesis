@@ -142,7 +142,7 @@ class myplot:
                 self.show()
 
             #plt.close(self.fig)
-            #self.fig.clear()
+            self.fig.clear()
             #print(self.data)
 
     def bar(self):

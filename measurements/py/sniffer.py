@@ -166,7 +166,7 @@ class sniffer:
                         deltas_x.append(delta_x)
                         deltas_y.append(delta_y)
                         if (delta_y < self.sniffer_settings["smoothing_difference"]
-                            and delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
+                            or delta_y/delta_x < self.sniffer_settings["smoothing_derivative"]
                             or value == 0
                             or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
                             tmp.append(value)

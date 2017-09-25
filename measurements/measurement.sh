@@ -93,7 +93,7 @@ function measure
       echo "measurement $x/$measurement_repetitions complete in $y second(s)."
       if [ $check_if_prematurely_aborted -eq 1 ];
         then
-          if ps -p ${measurement_scripts_pid[*]};
+          if $(ps -p ${measurement_scripts_pid[*]}) | grep ${measurement_scripts_pid[*]};
             then
               :
             else

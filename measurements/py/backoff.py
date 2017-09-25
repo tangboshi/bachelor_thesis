@@ -53,7 +53,7 @@ class backoff:
                         for line in f:
                             line = line.strip('\n')
                             backoff_csfail_times += [float(line)]
-                            #print("data_sent: "+line)
+                            #print("backoff: "+line)
                     backoff_csfail_times += [0]
                     self.backoff_csfail_sum[index,i] = sum(backoff_csfail_times)
                 else:

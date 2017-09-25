@@ -227,7 +227,7 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
-            for index,interval in enumerate(self.sniffer_data["sniffer_times"]):
+            for index,interval in enumerate(self.sniffer_smoothed_data["sniffer_times"]):
                 myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels"][index],
                         data_x=interval,
                         plottype=["line_xy"],

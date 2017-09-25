@@ -27,7 +27,6 @@ class myplot:
             or "broken_barh" in plottype):
             self.data               = data
 
-        self.kwargs             = dict(kwargs)
         self.bins               = bins
         self.plottype           = plottype
         self.xlabel             = xlabel

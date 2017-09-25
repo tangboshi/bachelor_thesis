@@ -6,7 +6,6 @@ print("Hello from sniffer.py!")
 
 class sniffer:
     def __init__(self, **kwargs):
-        self.kwargs                     =   dict(kwargs)
         self.data_source_path           =   kwargs.get("data_source_path","/home/alex/0_ba/git/measurements/data")
         self.rtt_data_files             =   kwargs.get("rtt_data_files", ["sender_bfr_dq.txt","sender_ack_received.txt"])
         self.plot_path                  =   kwargs.get("plot_path","/home/alex/0_ba/git/measurements/plots")

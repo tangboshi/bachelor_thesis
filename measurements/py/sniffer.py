@@ -122,11 +122,12 @@ class sniffer:
                         else:
                             tmp3.append([interval_lower_bound, interval_upper_bound])
                             tmp4.append([0,0])
-
                         tmp, tmp2 = [], []
                         if interval_upper_bound < self.sniffer_settings["zoom"][1]:
                             interval_lower_bound = interval_upper_bound
                             interval_upper_bound += zoom_interval
+                        else:
+                            break
                         continue
                     else:
                         #print("time:"+str(time)+" within bounds.")

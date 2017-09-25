@@ -39,7 +39,7 @@ custom_legend_coordinates   = {
                                 "throughput":          [1,0,"lower right"],
                                 "diagnosis_sender":    [1,0,"lower right"],
                                 "diagnosis_receiver":  [1,0,"lower right"],
-                                "backoff_csfail":      [1,0,"lower right"],
+                                "backoff":             [1,0,"lower right"],
                                 "channel_occupation":  [1,0,"lower right"],
                                 "sniffer":             [1,0,"lower right"]
                             }
@@ -50,7 +50,7 @@ create_plots                = {
                                 "retxs":                False,
                                 "throughput":           True,
                                 "diagnostic":           False,
-                                "backoff_csfail":       True,
+                                "backoff":              True,
                                 "channel_occupation":   True,
                                 "sniffer":              True
                             }
@@ -109,9 +109,9 @@ for index,a_plot_type in enumerate(plot_type):
     eval_dict["plot_path"]  = plot_path
     eval_dict["grid"]       = grid
 
-    if create_plots["backoff_csfail"] == True:
+    if create_plots["backoff"] == True:
         print("_______________________________________________________________")
-        print("Creating backoff (cs fail) plot!")
+        print("Creating backoff plot!")
         print("***************************************************************")
         backoff.backoff(**eval_dict).plot()
     # FIXME: diagnostic, packet_loss and retxs plots can only be created if rtt is True.

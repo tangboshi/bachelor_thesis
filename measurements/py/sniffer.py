@@ -179,6 +179,11 @@ class sniffer:
             sniffer_energy_levels = tmp3
             sniffer_times = tmp4
 
+            print("sniffer_energy_levels (smoothed):")
+            print(tmp3)
+            print("sniffer_times (smoothed):")
+            print(tmp4)
+
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":    sniffer_energy_levels,
                 "sniffer_times":            sniffer_times

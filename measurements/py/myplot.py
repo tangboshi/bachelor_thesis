@@ -345,11 +345,11 @@ class myplot:
             y = np.insert(y,0,0)
             self.plot = plt.step(x,
                     y,
-                    marker=markers[index],
-                    linestyle=linestyles[index],
-                    linewidth=linewidths[index],
+                    marker=markers[0],
+                    linestyle=linestyles[0],
+                    linewidth=linewidths[0],
                     markevery=range(1,len(x)),
-                    label=self.legend[index])
+                    label=self.legend[0])
 
 
         self.setLabels( xlabel=self.xlabel,

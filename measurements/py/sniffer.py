@@ -247,6 +247,24 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
+            
+            myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels_cdf"],
+                    plottype=["cdf"],
+                    title="Smoothed Channel Energy",
+                    xlabel="energy [PU]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["sniffer"],
+                    eval_mode=self.eval_mode,
+                    timer=self.timer,
+                    repetitions=self.repetitions)
+
             zoom_interval = self.sniffer_settings["zoom_interval"]
             for index,interval in enumerate(self.sniffer_smoothed_data["sniffer_times"]):
                 xlim_lower_bound = self.sniffer_settings["zoom"][0]+zoom_interval*index
@@ -270,21 +288,3 @@ class sniffer:
                         timer=self.timer,
                         repetitions=self.repetitions,
                         xlims=[xlim_lower_bound,xlim_upper_bound])
-
-
-            myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels_cdf"],
-                    plottype=["cdf"],
-                    title="Smoothed Channel Energy",
-                    xlabel="energy [PU]",
-                    savepath=self.plot_path+"/",
-                    show=self.show_plot,
-                    grid=self.grid,
-                    xticks=self.xticks,
-                    legend=self.legend,
-                    legend_loc=self.legend_loc,
-                    annotations_below=self.annotations_below,
-                    annotations_other=self.annotations_other,
-                    legend_coordinates=self.legend_coordinates["sniffer"],
-                    eval_mode=self.eval_mode,
-                    timer=self.timer,
-                    repetitions=self.repetitions)

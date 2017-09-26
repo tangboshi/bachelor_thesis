@@ -286,5 +286,4 @@ class sniffer:
                     legend_coordinates=self.legend_coordinates["sniffer"],
                     eval_mode=self.eval_mode,
                     timer=self.timer,
-                    repetitions=self.repetitions,
-                    xlims=[xlim_lower_bound,xlim_upper_bound])
+                    repetitions=self.repetitions)

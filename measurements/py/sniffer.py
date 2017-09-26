@@ -159,7 +159,7 @@ class sniffer:
             tmp, tmp2, tmp3, tmp4, deltas_x, deltas_y = [0], [0], [], [], [], []
             for interval_index,interval in enumerate(sniffer_energy_levels):
                 for index,value in enumerate(interval):
-                    if index+1 < len(interval):
+                    if index < len(interval):
                         delta_y = abs(interval[index+1] - value)
                         delta_x = abs(sniffer_times[interval_index][index+1] - sniffer_times[interval_index][index])
                         deltas_x.append(delta_x)
@@ -170,8 +170,6 @@ class sniffer:
                             or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
                             tmp.append(value)
                             tmp2.append(sniffer_times[interval_index][index])
-                        else:
-                            continue
                 tmp3.append(tmp)
                 tmp4.append(tmp2)
                 tmp, tmp2 = [], []

@@ -170,6 +170,16 @@ class sniffer:
                             or (value > self.sniffer_settings["smoothing_range"][0] and value < self.sniffer_settings["smoothing_range"][1])):
                             tmp.append(value)
                             tmp2.append(sniffer_times[interval_index][index])
+                    if len(interval) == 2:
+                        print("Empty interval found.")
+                        if zoom_interval:
+                            tmp.append(0)
+                            tmp2.append((interval_index+1)*zoom_interval)
+                        else:
+                            print("zoom_interval not defined.")
+                            print("Defaulting to adding (zoom[1],0) to plot!")
+                            tmp.append(0)
+                            tmp2.append(self.sniffer_settings["zoom"][1])
                 tmp3.append(tmp)
                 tmp4.append(tmp2)
                 tmp, tmp2 = [], []
@@ -247,7 +257,7 @@ class sniffer:
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
             and "smoothed" in self.sniffer_settings["sniffer_mode"]):
-            
+
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels_cdf"],
                     plottype=["cdf"],
                     title="Smoothed Channel Energy",

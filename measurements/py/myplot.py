@@ -335,8 +335,8 @@ class myplot:
                     marker=markers[index],
                     linestyle=linestyles[index],
                     linewidth=linewidths[index],
-                    markevery=range(1,len(x)),
-                    label=self.legend[index])
+                    markevery=range(1,len(x)))#,
+                    #label=self.legend[index])
 
 
         self.setLabels( xlabel=self.xlabel,

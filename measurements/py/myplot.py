@@ -332,12 +332,12 @@ class myplot:
                 x = np.insert(x,0,x[0])
                 y = np.insert(y,0,0)
                 self.plot = plt.step(x,
-                        y,
-                        marker=markers[index],
-                        linestyle=linestyles[index],
-                        linewidth=linewidths[index],
-                        markevery=range(1,len(x))),
-                        label=self.legend[index])
+                    y,
+                    marker=markers[index],
+                    linestyle=linestyles[index],
+                    linewidth=linewidths[index],
+                    markevery=range(1,len(x)),
+                    label=self.legend[index])
         else:
             x = np.sort(cdf_data[0])
             y = np.arange(1,len(x)+1) / len(x)

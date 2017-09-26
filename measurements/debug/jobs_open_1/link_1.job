@@ -1,6 +1,6 @@
 export link=1
 export timer=10
-export measurement_repetitions=2
+export measurement_repetitions=1
 measurement_scripts=( theoretical_aloha_III.py theoretical_aloha_I.py csma_80211_II.py )
 #measurement_scripts=( theoretical_aloha_II.py theoretical_aloha_I.py )
 plot_scripts=( evaluation.py )

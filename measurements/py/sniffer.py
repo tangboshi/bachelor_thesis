@@ -184,6 +184,11 @@ class sniffer:
             sniffer_energy_levels = tmp3
             sniffer_times = tmp4
 
+            sniffer_energy_levels_cdf = []
+            for interval in sniffer_energy_levels:
+                for energy in interval:
+                    sniffer_energy_levels_cdf += energy
+
             print("len(sniffer_energy_levels) (smoothed):")
             #for index in range(len(sniffer_energy_levels)):
                 #print((index,len(sniffer_energy_levels[index])))
@@ -196,8 +201,9 @@ class sniffer:
             #print(tmp4)
 
             self.sniffer_smoothed_data = {
-                "sniffer_energy_levels":    sniffer_energy_levels,
-                "sniffer_times":            sniffer_times
+                "sniffer_energy_levels":        sniffer_energy_levels,
+                "sniffer_times":                sniffer_times,
+                "sniffer_energy_levels_cdf":    sniffer_energy_levels_cdf
             }
 
     def plot(self):
@@ -257,3 +263,22 @@ class sniffer:
                         timer=self.timer,
                         repetitions=self.repetitions,
                         xlims=[xlim_lower_bound,xlim_upper_bound])
+
+
+            myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels_cdf"],
+                    plottype=["cdf"],
+                    title="Smoothed Channel Energy Level",
+                    xlabel="energy [PU]",
+                    savepath=self.plot_path+"/",
+                    show=self.show_plot,
+                    grid=self.grid,
+                    xticks=self.xticks,
+                    legend=self.legend,
+                    legend_loc=self.legend_loc,
+                    annotations_below=self.annotations_below,
+                    annotations_other=self.annotations_other,
+                    legend_coordinates=self.legend_coordinates["sniffer"],
+                    eval_mode=self.eval_mode,
+                    timer=self.timer,
+                    repetitions=self.repetitions,
+                    xlims=[xlim_lower_bound,xlim_upper_bound])

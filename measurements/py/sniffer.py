@@ -199,7 +199,7 @@ class sniffer:
             for interval in sniffer_energy_levels:
                 print (interval)
                 for energy in interval:
-                    sniffer_energy_levels_cdf += energy
+                    sniffer_energy_levels_cdf.append(energy)
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":        sniffer_energy_levels,
@@ -268,7 +268,7 @@ class sniffer:
 
             myplot.myplot(data=self.sniffer_smoothed_data["sniffer_energy_levels_cdf"],
                     plottype=["cdf"],
-                    title="Smoothed Channel Energy Level",
+                    title="Smoothed Channel Energy",
                     xlabel="energy [PU]",
                     savepath=self.plot_path+"/",
                     show=self.show_plot,

@@ -200,6 +200,8 @@ class sniffer:
                 print (interval)
                 for energy in interval:
                     sniffer_energy_levels_cdf.append(energy)
+            # getting it into the right format for myplot.cdf()
+            sniffer_energy_levels_cdf = [sniffer_energy_levels_cdf]
 
             print("sniffer_energy_levels_cdf:")
             print(sniffer_energy_levels_cdf)

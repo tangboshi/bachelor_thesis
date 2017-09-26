@@ -307,7 +307,7 @@ class myplot:
 
     def cdf(self):
         print("**cdf_data**")
-        #print(self.data)
+        print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]

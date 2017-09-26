@@ -22,7 +22,7 @@ class myplot:
         print("Title is '"+title+"'.")
         # FIXME: Very hackish, but who cares!
         if  (title == "Retransmissions per Frame"
-            or title == "Smoothed Channel Energy"
+            or len(data) == 1
             or "bar"  in plottype
             or "hist" in plottype
             or "broken_barh" in plottype):

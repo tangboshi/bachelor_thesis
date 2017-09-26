@@ -321,8 +321,10 @@ class myplot:
             cdf_data = np.asarray(self.data).transpose()
             if self.title == "Retransmissions per Frame":
                 cdf_data = [cdf_data]
+        if self.title == "Smoothed Channel Energy":
+            cdf_data = self.data
 
-        if len(self.data) > 1:
+        if len(cdf_data) > 1:
             for index,item in enumerate(cdf_data):
                 print("index:"+str(index))
                 print("___markers____")

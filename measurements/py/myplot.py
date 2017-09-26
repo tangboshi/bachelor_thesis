@@ -276,7 +276,8 @@ class myplot:
         x = np.arange(1, len(self.data)+1, 1)
         y = self.data
         f = interp1d(x,y)
-        plt.plot(x, self.data, 'bo', x, f(x), 'k')
+        #plt.plot(x, self.data, 'bo')
+        plt.plot(x, f(x), 'k')
 
         self.setLabels( xlabel="measurement",
                         ylabel=self.ylabel,
@@ -288,7 +289,9 @@ class myplot:
         x = self.data_x
         y = self.data
         f = interp1d(x,y)
-        plt.plot(x, self.data, 'bo', x, f(x), 'k')
+
+        #plt.plot(x, self.data, 'bo')
+        plt.plot(x, f(x), 'k')
 
         self.setLabels( xlabel=self.xlabel,
                         ylabel=self.ylabel,

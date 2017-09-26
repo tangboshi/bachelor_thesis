@@ -77,7 +77,7 @@ class backoff:
         if self.create_plots == True or self.create_plots["backoff"] == True:
             myplot.myplot(data=self.backoff_sum,
                     plottype=self.plot_type,
-                    title="Backoff Sum, (Measurement Time:"+str(self.timer)+u"\u00b1"+"5s)",
+                    title="Backoff Sum, (Measurement Time:"+str(self.timer)+")",
                     xlabel="time [s]",
                     ylabel="time [s]",
                     savepath=self.plot_path+"/",

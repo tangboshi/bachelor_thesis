@@ -128,7 +128,6 @@ class sniffer:
                             interval_upper_bound += zoom_interval
                         else:
                             break
-                        continue
                     else:
                         #print("time:"+str(time)+" within bounds.")
                         tmp.append(time)

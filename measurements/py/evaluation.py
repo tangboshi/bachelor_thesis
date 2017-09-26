@@ -65,7 +65,7 @@ sniffer_settings            =   {
                                     "link":                     1,
                                     "zoom":                     [0.0,timer],
                                     "zoom_mode":                "interval",
-                                    "zoom_interval":            0.8,
+                                    "zoom_interval":            2,
                                     "smoothing_difference":     0.0001,
                                     "smoothing_derivative":     0.01,
                                     "smoothing_range":          [0.0010,0.0013]

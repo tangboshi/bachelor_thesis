@@ -197,6 +197,7 @@ class sniffer:
 
             sniffer_energy_levels_cdf = []
             for interval in sniffer_energy_levels:
+                print (interval)
                 for energy in interval:
                     sniffer_energy_levels_cdf += energy
 

@@ -309,7 +309,7 @@ class myplot:
 
     def cdf(self):
         print("**cdf_data**")
-        print(self.data)
+        #print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
         linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
@@ -322,6 +322,7 @@ class myplot:
             if self.title == "Retransmissions per Frame":
                 cdf_data = [cdf_data]
         if self.title == "Smoothed Channel Energy":
+            print("Hooray, my title is "+self.title+".")
             cdf_data = self.data
 
         if len(cdf_data) > 1:

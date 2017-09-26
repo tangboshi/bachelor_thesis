@@ -342,10 +342,13 @@ class myplot:
                     markevery=range(1,len(x)),
                     label=self.legend[index])
         else:
+            print("I'm really executed")
             x = np.sort(cdf_data[0])
             y = np.arange(1,len(x)+1) / len(x)
             x = np.insert(x,0,x[0])
             y = np.insert(y,0,0)
+            print(x)
+            print(y)
             self.plot = plt.step(x,
                     y,
                     marker=markers[0],

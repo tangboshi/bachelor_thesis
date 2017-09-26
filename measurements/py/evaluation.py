@@ -57,13 +57,15 @@ create_plots                = {
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [3,7]
+                                    "zoom":             [3,7],
+                                    "zoom_mode":        "interval",
+                                    "zoom_interval":    2
                                 }
 
 sniffer_settings            =   {
                                     "sniffer_mode":             ["physical", "smoothed"],
                                     "link":                     1,
-                                    "zoom":                     [0.0,timer],
+                                    "zoom":                     [0.0,timer*repetitions],
                                     "zoom_mode":                "interval",
                                     "zoom_interval":            2,
                                     "smoothing_difference":     0.0001,

@@ -196,7 +196,8 @@ class sniffer:
             #print(tmp4)
 
             sniffer_energy_levels_cdf = []
-            for energy in sniffer_energy_levels:
+            for interval in sniffer_energy_levels:
+                for energy in interval:
                     sniffer_energy_levels_cdf += energy
 
             self.sniffer_smoothed_data = {

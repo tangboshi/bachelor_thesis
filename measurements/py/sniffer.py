@@ -152,7 +152,7 @@ class sniffer:
             "sniffer_times":            sniffer_times
         }
         print("self.sniffer_data:")
-        print(self.sniffer_data)
+        #print(self.sniffer_data)
 
         # Smoothing algorithm
         if "smoothed" in self.sniffer_settings["sniffer_mode"]:
@@ -215,7 +215,7 @@ class sniffer:
             sniffer_energy_levels_cdf = [sniffer_energy_levels_cdf]
 
             print("sniffer_energy_levels_cdf:")
-            print(sniffer_energy_levels_cdf)
+            #print(sniffer_energy_levels_cdf)
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":        sniffer_energy_levels,

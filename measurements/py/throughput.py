@@ -49,9 +49,12 @@ class tp:
         for index,single_measurement in enumerate(self.measurement):
             for i in range(self.repetitions):
                 print("I'll open files from iteration "+str(i+1)+" for you!")
+                print("file_path:")
                 file_path = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 data_sent_file_path = file_path+self.throughput_data_files[0]+link+".txt"
                 ack_received_file_path = file_path+self.throughput_data_files[1]+"_"+str(self.links[index])+".txt"
+                print(data_sent_file_path)
+                print(ack_received_file_path)
 
                 data_received_file_path = file_path+self.diagnosis_files[0]+link+".txt"
                 ack_sent_file_path = file_path+self.diagnosis_files[1]+link+".txt"

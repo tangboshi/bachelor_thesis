@@ -20,11 +20,13 @@ class myplot:
         self.data_x             = data_x
 
         print("Title is '"+title+"'.")
-        # Kind of hackish, but who cares!
+        # FIXME: Very hackish, but who cares!
         if  (title == "Retransmissions per Frame"
+            or title == "Smoothed Channel Energy"
             or "bar"  in plottype
             or "hist" in plottype
             or "broken_barh" in plottype):
+            print("Keeping original data format instead of transposing.")
             self.data               = data
 
         self.bins               = bins

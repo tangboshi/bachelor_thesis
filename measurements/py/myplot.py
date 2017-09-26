@@ -321,7 +321,7 @@ class myplot:
             cdf_data = np.asarray(self.data).transpose()
             if self.title == "Retransmissions per Frame":
                 cdf_data = [cdf_data]
-        if self.title == "Smoothed Channel Energy":
+        if len(self.data) == 1:
             print("Hooray, my title is "+self.title+".")
             cdf_data = self.data
 

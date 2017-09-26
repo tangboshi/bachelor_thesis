@@ -184,11 +184,6 @@ class sniffer:
             sniffer_energy_levels = tmp3
             sniffer_times = tmp4
 
-            sniffer_energy_levels_cdf = []
-            for interval in sniffer_energy_levels:
-                for energy in interval:
-                    sniffer_energy_levels_cdf += energy
-
             print("len(sniffer_energy_levels) (smoothed):")
             #for index in range(len(sniffer_energy_levels)):
                 #print((index,len(sniffer_energy_levels[index])))
@@ -196,9 +191,13 @@ class sniffer:
             #for index in range(len(sniffer_times)):
                 #print((index,len(sniffer_times[index])))
             print("sniffer_energy_levels (smoothed):")
-            #print(tmp3)
+            print(tmp3)
             print("sniffer_times (smoothed):")
             #print(tmp4)
+
+            sniffer_energy_levels_cdf = []
+            for energy in sniffer_energy_levels:
+                    sniffer_energy_levels_cdf += energy
 
             self.sniffer_smoothed_data = {
                 "sniffer_energy_levels":        sniffer_energy_levels,

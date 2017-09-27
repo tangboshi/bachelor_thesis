@@ -146,6 +146,8 @@ class myplot:
             self.fig.clear()
             #print(self.data)
 
+            self.annotate()
+
     def bar(self):
 
         colors = ['steelblue', 'orange', 'green', 'red', 'purple', 'brown', 'pink']
@@ -444,6 +446,8 @@ class myplot:
     def show(self):
         plt.show()
 
+    def annotate(self):
+        pass
     ''' uncomment if these functions should become a necessity.
     def getFig(self):
         return self.fig

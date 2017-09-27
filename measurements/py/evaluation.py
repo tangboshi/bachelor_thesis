@@ -57,7 +57,7 @@ create_plots                = {
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [3,7],
+                                    "zoom":             [5,7],
                                     "zoom_mode":        "interval",
                                     "zoom_interval":    2
                                 }

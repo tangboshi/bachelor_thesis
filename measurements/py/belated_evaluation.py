@@ -129,6 +129,8 @@ boxplot_xticks  = [
 #                     "ALOHA\nLink 2 @ 450MHz"
 #                 ]
 ############ ~~~~~~~~~~~~~~~~~~~  ############
+
+#From "Bash"
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
 plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
@@ -144,16 +146,11 @@ show_plot               =   True
 rtt_mode                =   "rtt"
 receiver_mode           =   "single"
 
-# boxplot_xticks      = [ "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 1 @ 450MHz",
-#                          "SIFS=3ms\nDIFS=15ms\nBO=6ms\nLink 2 @ 450MHz"
-#                       ]
+#From Python
+plot_pdf                =   False
+boxplot_xticks          =   [ "measurement "+str(index) for index in measurement ]
+legend_labels           =   [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
 
-# boxplot_xticks      = [ "ALOHA\nLink 1 @ 450MHz",
-#                         "ALOHA\nLink 2 @ 450MHz",
-#                         "ALOHA\nLink 3 @ 450MHz"
-#                     ]
-
-legend_labels               = [ tick.replace("\n", ", ") for tick in boxplot_xticks]
 custom_legend_coordinates   = {
                                 "rtt":                 [0.24,0.85,"upper left"],
                                 "packet_loss":         [1,0,"lower right"],
@@ -161,7 +158,7 @@ custom_legend_coordinates   = {
                                 "throughput":          [1,0,"lower right"],
                                 "diagnosis_sender":    [1,0,"lower right"],
                                 "diagnosis_receiver":  [1,0,"lower right"],
-                                "backoff_csfail":      [1,0,"lower right"],
+                                "backoff":             [1,0,"lower right"],
                                 "channel_occupation":  [1,0,"lower right"],
                                 "sniffer":             [1,0,"lower right"]
                             }
@@ -170,26 +167,31 @@ create_plots                = {
                                 "rtt":                  False,
                                 "packet_loss":          False,
                                 "retxs":                False,
-                                "throughput":           False,
-                                "diagnostic":           False,
-                                "backoff_csfail":       False,
+                                "throughput":           True,
+                                "diagnostic":           True,
+                                "backoff":              True,
                                 "channel_occupation":   True,
-                                "sniffer":              False
+                                "sniffer":              True
                             }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [534,538]
+                                    "zoom":             [5,7],
+                                    "zoom_mode":        "interval",
+                                    "zoom_interval":    2
                                 }
 
-# FIXME: Link does NOT actually refer to the "link" used for the receiver,
-# but to one of the N other used links in order to be moved from the
-# shell script!
+#FIXME: link obsolete, remove
 sniffer_settings            =   {
-                                    "link":     2,
-                                    "zoom":     [0.2,0.4]
+                                    "sniffer_mode":             ["physical", "smoothed"],
+                                    "link":                     1,
+                                    "zoom":                     [0.0,timer*repetitions],
+                                    "zoom_mode":                "interval",
+                                    "zoom_interval":            2,
+                                    "smoothing_difference":     0.0001,
+                                    "smoothing_derivative":     0.01,
+                                    "smoothing_range":          [0.0010,0.0013]
                                 }
-
 
 #Unimplemented, use later
 annotations_below   = []
@@ -214,7 +216,8 @@ eval_dict = {
     "channel_occupation_mode":  channel_occupation_mode,
     "co_data_files":            co_data_files,
     "sniffer_data_files":       sniffer_data_files,
-    "sniffer_settings":         sniffer_settings
+    "sniffer_settings":         sniffer_settings,
+    "plot_pdf":                 plot_pdf
 }
 
 for index,a_plot_type in enumerate(plot_type):
@@ -224,7 +227,7 @@ for index,a_plot_type in enumerate(plot_type):
         grid                = True
 
     eval_dict["plot_type"]  = [plot_type[index]]
-    eval_dict["plot_path"]  = plot_path+"/"+plot_type[index]
+    eval_dict["plot_path"]  = plot_path
     eval_dict["grid"]       = grid
 
     if create_plots["backoff_csfail"] == True:

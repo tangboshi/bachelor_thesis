@@ -157,7 +157,7 @@ class myplot:
             width=5/data_points
             index=np.arange( data_points )
 
-            self.ax.bar(left=index+idx*width,
+            self.ax.bar(left=index+idx*width+width/2,
                 height=val,
                 color=colors[idx]
              )
@@ -271,7 +271,6 @@ class myplot:
         #     self.save(self.savepath, "gantt")
 
     def line(self):
-        #FIXME
         from scipy.interpolate import interp1d
         x = np.arange(1, len(self.data)+1, 1)
         y = self.data

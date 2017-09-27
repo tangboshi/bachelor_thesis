@@ -79,7 +79,7 @@ class sniffer:
         # ###
 
         print("len(sniffer_times):")
-        print(len(sniffer_times))
+        #print(len(sniffer_times))
         print("sniffer_times:")
         #print(sniffer_times)
         print("sniffer_energy_levels:")
@@ -207,7 +207,7 @@ class sniffer:
 
             sniffer_energy_levels_cdf = []
             for interval in sniffer_energy_levels:
-                print (interval)
+                #print (interval)
                 for energy in interval:
                     if energy != 0:
                         sniffer_energy_levels_cdf.append(energy)

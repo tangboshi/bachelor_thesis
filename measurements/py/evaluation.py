@@ -47,7 +47,7 @@ custom_legend_coordinates   = {
 create_plots                = {
                                 "rtt":                  True,
                                 "packet_loss":          True,
-                                "retxs":                False,
+                                "retxs":                True,
                                 "throughput":           True,
                                 "diagnostic":           True,
                                 "backoff":              True,

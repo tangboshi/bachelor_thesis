@@ -35,13 +35,12 @@ class backoff:
     def calc(self):
         print("Taking a look at the following measurements: "+str(self.measurement))
         # The stuff we want to plot later
+        self.backoff_cs_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
+        self.backoff_ack_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
+        self.backoff_joint_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
 
         for index,single_measurement in enumerate(self.measurement):
             print("index(measurement): "+str(index))
-            self.backoff_cs_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
-            self.backoff_ack_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
-            self.backoff_joint_sum = np.zeros(shape=(len(self.measurement),self.repetitions))
-
             for i in range(self.repetitions):
                 path                = self.data_source_path+'/'+str(self.measurement[index])+'/'+str(i+1)+'/'
                 backoff_cs_path     = path+self.backoff_data_files[0]+"_"+str(self.links[index])+".txt"
@@ -75,12 +74,18 @@ class backoff:
                             Assuming not reached in GR.")
                     self.backoff_ack_sum[index,i] = 0
 
+                # print("backoff cs:"+str(sum(backoff_cs_times)))
+                # print("backoff ack:"+str(sum(backoff_ack_times)))
+                # print("backoff joint:"+str(sum(backoff_cs_times)+sum(backoff_ack_times)))
+
                 sum_backoff_cs_times = sum(backoff_cs_times)
                 sum_backoff_ack_times = sum(backoff_ack_times)
                 self.backoff_cs_sum[index,i] = sum_backoff_cs_times
                 self.backoff_ack_sum[index,i] = sum_backoff_ack_times
                 self.backoff_joint_sum[index,i] = sum_backoff_cs_times+sum_backoff_ack_times
-
+                # print(self.backoff_cs_sum)
+                # print(self.backoff_ack_sum)
+                # print(self.backoff_joint_sum)
 
     #------------------------------------------------------------------------------#
 

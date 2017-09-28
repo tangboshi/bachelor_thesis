@@ -154,14 +154,16 @@ class myplot:
         color_repetitions = math.ceil(len(self.data)/len(colors))
         colors = color_repetitions * colors
 
+        print(self.data)
         for idx,val in enumerate(self.data):
             data_points=len(self.data[idx])
             width=5/data_points
             index=np.arange( data_points )
 
-            self.ax.bar(left=index+idx*width+width/2,
+            self.ax.bar(left=idx*width+width/2,
                 height=val,
-                color=colors[idx]
+                color=colors[idx],
+                alpha=0.5
              )
 
             self.setLabels(ylabel=self.ylabel,

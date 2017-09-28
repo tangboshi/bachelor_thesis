@@ -80,12 +80,12 @@ import sniffer
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 3 @ 480MHz"
 #                  ]
 #ALOHA + RB LOW
-measurement     =       [349,348]
-links           =       [1,2]
-boxplot_xticks  = [
-                    "ALOHA\nLink 1 @ 450MHz",
-                    "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
-                ]
+# measurement     =       [349,348]
+# links           =       [1,2]
+# boxplot_xticks  = [
+#                     "ALOHA\nLink 1 @ 450MHz",
+#                     "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
+#                 ]
 # # ALOHA + RB HIGH
 # measurement     =       [416,415]
 # links           =       [1,2]
@@ -130,25 +130,102 @@ boxplot_xticks  = [
 #                 ]
 ############ ~~~~~~~~~~~~~~~~~~~  ############
 
+# measurement     =       [630,631]
+# links           =       [1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [619,620]
+# links           =       [1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [638,639]
+# links           =       [1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [644,643]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "ALOHA saturated\nLink 2 @ 450MHz"
+#                 ]
+
+measurement     =       [648,647]
+links           =       [2,1]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+                    "ALOHA unsaturated\nLink 2 @ 450MHz"
+                ]
+
+# measurement     =       [667,666]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [661,660]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA unsaturated\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [665,664]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA unsaturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [632,633]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                 ]
+
+# measurement     =       [634,635]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=7.5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                 ]
+#
+# measurement     =       [637,636]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                 ]
 #From "Bash"
 repetitions             =   5
-data_source_path        =   "/home/alex/Schreibtisch/real/measurements/debug/data"
-plot_path               =   "/home/alex/Schreibtisch/real/measurements/belated/plots"
-plot_type               =   ["cdf", "boxplot", "bar"]
-throughput_data_files   =   ["sender_data_sent","sender_ack_received"]
+data_source_path        =   "/home/alex/Schreibtisch/teebs/measurements/debug/data"
+plot_path               =   "/home/alex/Schreibtisch/teebs/measurements/belated/plots"
+plot_type               =   ["cdf", "boxplot"]
+throughput_data_files   =   ["receiver_data_received","sender_ack_received"]
 diagnosis_files         =   ["receiver_data_received","receiver_ack_sent"]
 #changed the following 2 from string to list
 rtt_data_files          =   ["sender_bfr_dq","sender_ack_received","receiver_ack_sent"]
 co_data_files           =   ["sender_bfr_dq","receiver_ack_sent","sender_ack_received"]
 sniffer_data_files      =   ["sniffer"]
 retxs_data_files        =   ["sender_retransmissions"]
-show_plot               =   True
+show_plot               =   False
 rtt_mode                =   "rtt"
 receiver_mode           =   "single"
+timer                   =   100
 
 #From Python
 plot_pdf                =   False
-boxplot_xticks          =   [ "measurement "+str(index) for index in measurement ]
+#boxplot_xticks          =   [ "measurement "+str(index) for index in measurement ]
 legend_labels           =   [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
 
 custom_legend_coordinates   = {
@@ -163,15 +240,26 @@ custom_legend_coordinates   = {
                                 "sniffer":             [1,0,"lower right"]
                             }
 
+# create_plots                = {
+#                                 "rtt":                  False,
+#                                 "packet_loss":          False,
+#                                 "retxs":                False,
+#                                 "throughput":           True,
+#                                 "diagnostic":           False,
+#                                 "backoff":              True,
+#                                 "channel_occupation":   True,
+#                                 "sniffer":              True
+#                             }
+
 create_plots                = {
-                                "rtt":                  False,
+                                "rtt":                  True,
                                 "packet_loss":          False,
                                 "retxs":                False,
                                 "throughput":           True,
-                                "diagnostic":           True,
+                                "diagnostic":           False,
                                 "backoff":              True,
                                 "channel_occupation":   True,
-                                "sniffer":              True
+                                "sniffer":              False
                             }
 
 channel_occupation_mode     =   {
@@ -183,7 +271,7 @@ channel_occupation_mode     =   {
 
 #FIXME: link obsolete, remove
 sniffer_settings            =   {
-                                    "sniffer_mode":             ["physical", "smoothed"],
+                                    "sniffer_mode":             ["smoothed"],
                                     "link":                     1,
                                     "zoom":                     [0.0,timer*repetitions],
                                     "zoom_mode":                "interval",
@@ -217,7 +305,8 @@ eval_dict = {
     "co_data_files":            co_data_files,
     "sniffer_data_files":       sniffer_data_files,
     "sniffer_settings":         sniffer_settings,
-    "plot_pdf":                 plot_pdf
+    "plot_pdf":                 plot_pdf,
+    "timer":                    timer
 }
 
 for index,a_plot_type in enumerate(plot_type):
@@ -230,7 +319,7 @@ for index,a_plot_type in enumerate(plot_type):
     eval_dict["plot_path"]  = plot_path
     eval_dict["grid"]       = grid
 
-    if create_plots["backoff_csfail"] == True:
+    if create_plots["backoff"] == True:
         print("_______________________________________________________________")
         print("Creating backoff (cs fail) plot!")
         print("***************************************************************")

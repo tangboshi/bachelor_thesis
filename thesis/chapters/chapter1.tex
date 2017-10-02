@@ -1,0 +1,74 @@
+\chapter{First Chapter Heading}
+
+Use\footnote{This is a footnote to the word ``use''.}
+\emph{The Not So Short Introduction to \LaTeXe}~\cite{Oetiker00}
+to familiarize yourself with \LaTeX. When citing research papers, use a protected space ($\sim$) in front of the \texttt{cite} command, e.g. see this reference~\cite{inproceedings}.
+
+For tables, see \url{http://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf} on how to design them nicely. We are also giving an example in Table~\ref{tab:example}.
+
+Learn how to properly manage your bibliography and ensure that if you cite~\cite{Achtzehn2015,ETSI2015,FCC,Fraga-Lamas2015} you use the right types and fields. Copying BibTeX blobs from the Internet is generally not a good idea.
+\section{First Section Heading}
+
+You can simply list a number of items as
+\begin{itemize}
+\item Bullet Item
+\item Bullet Item
+\end{itemize}
+
+\noindent You can also enumerate them as
+\begin{enumerate}
+\item Bullet Item 
+\item Bullet Item
+\end{enumerate}
+\subsection{First SubSection Heading}
+
+Use the acronym package like this: \ac{SNR} % also \acs{}, acp{}, \acf{}, acl{}
+You will need to specify each acronym in the abbreviations.tex file in the appendix. For more information, see \url{http://mirrors.ctan.org/macros/latex/contrib/acronym/acronym.pdf}.
+
+\subsubsection{First SubSubSection Heading}
+
+Referencing of figures: Use capital notation, e.g. ``In Figure~\ref{fig:inets-logo} we show the logo of the institute.''. Same applies for tables, e.g. ``Table~\ref{tab:example} lists the parameters we used in our simulation.'' However, do not capitalize in (non-numbered) case, e.g. ``It becomes apparent from the figure that\dots'' or ``The parameters listed in the table have been selected\dots''.
+\begin{figure}\begin{center}
+  \includegraphics[width=\textwidth]{pictures/inets_new} % width can be fractional, e.g. width=0.45\textwidth.
+  \caption{iNETS logo.}\label{fig:inets-logo}
+\end{center}\end{figure}
+
+With numbering and alignment for all equations:
+\begin{eqnarray}
+\lambda&=&0.25 x^0 + 0.0001\\
+       &=&2.5\cdot10^{-10} x^3 + 0.0001.
+\end{eqnarray}
+
+
+With partial numbering for equations:
+\begin{eqnarray}
+\lambda&=&0.25 x^0 + 0.0001 \nonumber \\
+       &=&2.5\cdot10^{-10} x^3 + 0.0001.
+\end{eqnarray}
+
+\begin{table}
+\centering
+ \begin{center}
+\begin{tabular}{p{2.8cm}p{0.2cm}p{1cm}rp{0.2cm}p{1cm}r}
+\toprule
+&&\multicolumn{2}{c}{set 1}&&\multicolumn{2}{c}{set 2}\\
+\cmidrule{3-4}\cmidrule{6-7}
+parameter &&value&precision&&value&precision\\
+\midrule
+param 1 [MHz]&& 1 & $\pm$1 && 2 & $\pm$1 \\
+param 2 [s]&& 1 & $\pm$0.1 && 2 & $\pm$0.2 \\
+\bottomrule
+ \end{tabular}\caption{Table example.} \label{tab:example}
+ \end{center}
+
+\end{table}
+
+\unit[25]{$\mu m$} = \unit[25\,000]{nm},
+\unit[0]{$^\circ \text{C}$} = \unit[273.15]{K}, and
+\unit[1]{Mbit/s} = \unit[$1\,024$]{kbit/s}. Always use SI prefixes (\url{http://physics.nist.gov/cuu/Units/prefixes.html}) in text, in comparative tables use engineering notation (\url{http://www.augustatech.edu/math/molik/notation.pdf})!
+
+ When defining symbols, make sure to put multi-letter symbols/indexes into a proper text statement, e.g.
+ \begin{eqnarray}
+S_\text{off} \ge S_\text{on} \\
+ \text{SINR} \le \text{SNR} 
+ \end{eqnarray} 

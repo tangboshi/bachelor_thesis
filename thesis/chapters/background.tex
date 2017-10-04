@@ -1,7 +1,7 @@
 \chapter{Background}
 
 In this chapter the theoretical foundations and tools for the succeeding work are treated.
-Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing weaknesses with respect to the challenges coming up in wireless transmission. The chapter concludes with naming the advantages of software-defined radio.   
+Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing weaknesses with respect to the challenges coming up in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.  
 
 \bigskip
 
@@ -9,7 +9,7 @@ Firstly, the MAC layer is introduced in the context of the OSI reference model. 
 
 \subsection{MAC Layer in the OSI Model}
 
-The OSI model is a layered architecture that divides a telecommunication system into several manageable layers. The original model features seven layers, where the focus in this thesis is on the MAC layer. Nevertheless, each layer's responsibilities is briefly listed. Then, a closer look on different realizations of the MAC layer is taken. Note that the data link layer has been split into two sublayers: the medium access and the logical link control sublayers.
+The OSI model is a layered architecture that divides a telecommunication system into several manageable layers. The original model features seven layers, where the focus in this thesis is on the MAC layer. Note that the data link layer has been split into two sublayers: the medium access and the logical link control sublayers.
 
 % Sketch of ISO/OSI-model
 
@@ -22,7 +22,7 @@ The OSI model is a layered architecture that divides a telecommunication system 
 			\midrule
 				Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
 				MAC Sublayer & controlling medium access and frame synchronization \\
-				LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control.  \\
+				LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control \\
 				Network Layer & routing and congestion control \\
 				Transport Layer & transmission reliability, same-order-delivery, congestion avoidance  \\
 				Session Layer & token management, dialog control, synchronization \\
@@ -101,17 +101,17 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 
 \begin{figure}[htp] \label{fig:csma-flavors}
 	\begin{center}
-		\subfloat[1-persitent CSMA]{\includegraphics[width=0.22\textwidth]{pictures/csma_1_persistent}}
+		\subfloat[1-persitent CSMA]{\includegraphics[width=0.22\textwidth,valign=c]{pictures/csma_1_persistent}}
 		\qquad
-		\subfloat[non-persistent CSMA]{\includegraphics[width=0.31\textwidth]{pictures/csma_non_persistent}}
+		\subfloat[non-persistent CSMA]{\includegraphics[width=0.31\textwidth,valign=c]{pictures/csma_non_persistent}}
 		\qquad
-		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth]{pictures/csma_p_persistent}}
+		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth,valign=c]{pictures/csma_p_persistent}}
 	\end{center}
 \caption{The three flavors of CSMA}
 \end{figure}
 
 
-\subsubsection{1-persistent CSMA}
+\subsubsection{1-Persistent CSMA}
 
 % 1-persistent CSMA flowchart
 
@@ -124,16 +124,16 @@ Despite being a substantial improvement over ALOHA, this protocol has at least t
 \begin{itemize}
 	\item Provided propagation delay is zero or negligible, collisions can still occur.  Imagine a three-node-scenario with nodes $A$, $B$ and $C$. $A$ is transmitting, while $B$ and $C$ are waiting for their turn. Once $A$ finished transmission $B$ and $C$ will lunge onto the channel like a pack of wolves leading to collision.
 	
-	\item If propagation delay is not negligible the protocol suffers from another problem. In this scenario $A$ has just begun sending. $B$ will assume the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper this protocol's performance.
+	\item If propagation delay is not negligible the protocol suffers from an additional problem. In this scenario $A$ has just begun sending. $B$ will assume the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper this protocol's performance.
 \end{itemize}  
 
-\subsubsection{Non-persistent CSMA}
+\subsubsection{Non-Persistent CSMA}
 
 % non-persistent CSMA flowchart 
 
 In order to alleviate 1-persistent CSMA's problem with several nodes trying to seize the channel as soon as it becomes idle a less greedy attempt is made with non-persistent CSMA. Instead of continuously sensing the channel until it becomes idle nodes wait a random backoff time until they listen again. As a result, this protocol leads to better channel utilization with the downside of higher delays.
 
-\subsubsection{P-persistent CSMA}
+\subsubsection{P-Persistent CSMA}
 
 % p-persistent CSMA flowchart
 
@@ -153,7 +153,7 @@ CSMA/CD is used on wired LANs and serves as basis of the wide-spread Ethernet. H
 
 \bigskip
 
-This condition mostly is not met for wireless nodes, which are half-duplex. The reason for this lies in the conservation of energy.
+This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy.
 
 \begin{equation}
 	P = \int_{A} I(\vec{x}) \, dA
@@ -173,7 +173,7 @@ Another, and more common quantity in telecommunications is signal-to-noise ratio
 	SNR [dB] = 10 \, log \left( \frac{P}{N} \right)
 \end{equation}
 
-Equations \ref{eqn:intensity} and \ref{eqn:snr} imply if we increase the distance $r$ by $\sqrt{2}$ the signal's intensity halves or lose 3dB in SNR, respectively. To make up for the loss in signal strength we would have to employ expensive signal processing hardware making wireless equipment less affordable. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.  
+Equations \ref{eqn:intensity} and \ref{eqn:snr} imply if we increase the distance $r$ by $\sqrt{2}$ the signal's intensity halves or lose 3dB in SNR, respectively. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.  
 
 \subsection{Challenges for Wireless MAC Protocols}
 
@@ -200,7 +200,7 @@ For the same configuration, in another scenario $B$ would like to send to $A$ an
 \subsubsection{Further Challenges}
 
 % Citation needed for verification
-Further challenges to MAC protocol design include the power conservation when faced with constrained power resources, as in wireless sensor networks (WSN) where devices rely on batteries for their supply with power. Attempts to mitigate waste of energy have been made in several specialized, duty-cycle based MACs such as Sensor MAC, Timeout MAC and Berkley MAC.
+Further challenges to MAC protocol design include the power conservation when faced with constrained power resources, as in wireless sensor networks (WSN) where devices rely on batteries for their supply with power. Attempts to mitigate waste of energy have been made in several specialized, duty-cycle based MACs such as Sensor MAC, Timeout MAC and Berkeley MAC as in more detail shown in section \ref{sec:duty-cycle-mac}.
 
 \bigskip
 
@@ -235,29 +235,90 @@ $A$ wants to send to $B$, hence issues a request to send (RTS). Every node recei
 As further depicted in figure \ref{fig:virtual_carrier_sensing} there are named intervals of specified length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others. 
 
 \medskip
-The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one party out of the two parties in dialog send off their frame without interference by another node. 
+The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one party out of the two parties in dialog send off their frame without interference by another node. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
 \medskip
-The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
-
-\medskip
-For the sake of completeness, we briefly mention two consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operated in an alternative mode of operation, where a base station acts as a coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
+For the sake of completeness, we briefly mention two previously consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operates in an alternative mode of operation, where a base station acts as the coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
 
 \bigskip
 
 As a remark on the exposed node problem: MAC protocols such as MACA that feature the RTS/CTS exchange, but no ACK from the receiver also solve the exposed station problem. The inclusion of the ACK however "resurrects" the exposed station problem, since the receiver's ACK can now interfere with node's that are out of the sender's range. However, renouncing on ACKs was dropped in the revised version MACAW, because the absence of lost frames was not noticed until much later in the transport layer, causing huge drops in throughput.
 
-\subsection{Duty-Cycle-Based MAC Protocols}  
+\subsection{Duty-Cycle-Based MAC Protocols} \label{sec:duty-cycle-mac}  
 
-... Sensor MAC, Timeout MAC, Berkley MAC ...
+\subsubsection{Sensor MAC}
+
+\subsubsection{Timeout MAC}
+
+\subsubsection{Berekeley MAC}
 
 \section{Software Defined Radio}
  
 \subsection{Purpose of Software Defined Radio}
 
-% figure of fm/am radio electrical circuits
-Traditional radio equipment is "hardware-defined", i.e. that the signal processing runs on a specialized electrical circuit.
+Traditional radio equipment is "hardware-defined", i.e. that the signal processing runs on a specialized electrical circuit. This has the potential advantages of efficient energy use and cheap building at the cost of very limited flexibility in operation. 
 
-\subsection{GNU Radio}
+\bigskip
 
+In contrast to hardware-defined radio there is SDR, where components such as filters, amplifiers, modulators, detectors and many more are implemented in software and run on general-purpose processors.
 
+\bigskip
+
+While the limitations of hardware-defined radios are acceptable for a number of applications, such as e.g. self-made radio receivers as shown in figure \ref{fig:radio-receiver-circuits}, it is very desirable to get rid of these limitations for rapid prototyping of new technologies including but not limited to cognitive radio, software-defined antennas and wireless mesh networks. In this thesis SDR enables the variation of different MAC mechanisms' parameters.
+
+\begin{figure}[ht]
+	\label{fig:radio-receiver-circuits}
+	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
+	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
+	\begin{center}
+		\subfloat[FM Receiver]{\includegraphics[width=0.5\textwidth,valign=c]{pictures/fm_radio_receiver_circuit}}
+		\qquad
+		\subfloat[AM Receiver]{\includegraphics[width=0.4\textwidth,valign=c]{pictures/am_radio_receiver_circuit}}
+	\end{center}
+	\caption{Simple DIY Radio Receiver Circuit Diagrams}
+\end{figure}
+
+\subsection{What is GNU Radio?}
+
+\label{sec:gnu-radio}
+
+The GNU Radio (GR) project is dedicated to the evolution of a free and open-source software development kit enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flow charts simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.      
+
+\begin{figure}[ht]
+	\label{fig:gnuradio}
+	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
+	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
+	\begin{center}
+		\subfloat[GNU Radio Logo]{\includesvg[width=0.4\textwidth]{pictures/gnuradio_logo}}
+		\qquad
+		\subfloat[GRC GUI]{\includegraphics[width=0.5\textwidth,valign=c]{pictures/grc_ui}}
+	\end{center}
+	\caption{GNU Radio \& GNU Radio Companion}
+\end{figure}
+
+\subsection{Core Concepts of GNU Radio}
+
+\subsubsection{Flowcharts and Blocks}
+
+The two most basic concepts of GNU Radio are flowcharts and blocks. As mentioned in \ref{sec:gnu-radio} flowcharts are directed graphs, whose nodes are functional blocks and whose vertices determine the direction of data flow. 
+
+\bigskip
+
+The behavior of these blocks is programmed in either Python or C++, where the latter is recommended for performance-critical applications, which is also why the blocks in our flowgraphs are all written in C++. If performance is less critical Python is a superior choice since it is more concise and allows faster prototyping as there is no need for compilation. Each block generally serves exactly one purpose for the sake of modularity. Blocks in turn can be composed of an arbitrary number of inner blocks, making extensive use of the modularity and hiding implementation complexity from the user, much like a blackbox in electrical circuits. These composed blocks are called hierarchical blocks. In our case the complete PHY layer is hidden in hierarchical blocks called "sending" and "receiving".
+
+\bigskip
+
+Blocks are connected through ports, which can either be input or output ports. Depending on which types of ports a block has, it can either be a source, sink or neither of the former. 
+Each input port only consumes data of a specific data type. Similarly, each output port only produces data of a specific data type. The set of types ranges from integers, floating point and complex numbers to messages and a bunch of others. Since each block implements a certain function these ports can be regarded as input parameters and return values of a function, respectively.
+
+\subsubsection{Message Passing and Stream Tags}
+
+When designing packet-based protocols, such as MAC protocols it is of tremendous importance to be able to detect packet data unit (PDU) boundaries. For this purpose GR provides an asynchronous message passing system. A synchronous alternative is to attach so-called stream tags to the "infinite" stream of data. The former method is the right choice when designing MAC protocols due to the asynchronous nature of packet delivery.  
+
+\subsubsection{Polymorphic Types and SWIG} 
+
+Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic container of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing.
+
+\bigskip
+
+SWIG (simplified wrapper and interface generator) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.

@@ -1,0 +1,359 @@
+\chapter{Bash and Python Scripts}
+
+This appendix aims at giving in-depth insight in the scripts used in the three phases of the measuring, data processing and plotting process. The basic principle, however, is depicted in section \ref{sec:script-system}. Minor edits were made for format and aesthetic reasons.
+
+\begin{lstlisting}[language=Bash,caption=measure.sh]
+echo "remote_measurement is set to "$remote_measurement"."
+
+function setup_remote_connection
+{
+  reset
+  sshpass -p "inets" ssh -$remote_flags $remote_user@$remote_ip "bash -s" < remote_measurement_$link.sh
+}
+
+function prepare_measurement
+{
+    reset
+    measurement_counter=0
+    ## let's make sure all the directories exist
+    printf "\nchecking if paths exists...\n"
+
+    #let's first make absolutely sure the raw data source path exists
+    if [ ! -d $raw_data_source_path ];
+      then
+        mkdir -p $raw_data_source_path
+        echo $raw_data_source_path" created."
+      else
+        rm -r $raw_data_source_path/*
+    fi
+
+    if [ -d $plot_directory_path ];
+      then
+        echo $plot_directory_path" already existed!"
+        cd $plot_directory_path
+        # create measurement directory
+        while [ -d $measurement_counter ]; do
+            measurement_counter=$(($measurement_counter+1))
+        done
+        export measurement_counter;
+    fi
+
+    if [ -d $log_path ];
+      then
+        echo $log_path" already existed!"
+      else
+        mkdir -p $log_path
+        echo $log_path" directory created."
+    fi
+
+    mkdir -p $plot_directory_path/$measurement_counter
+    echo $plot_directory_path/$measurement_counter" directory created."
+
+    mkdir -p $data_source_path/$measurement_counter
+    echo $data_source_path/$measurement_counter" directory created."
+
+    mkdir -p $jobs_open_path
+    mkdir -p $jobs_done_path
+
+    ## let's check if measurement script is defined
+    # if $measurement_scripts undefined:
+    # go through directory and list all python files
+    if [ -z ${measurement_scripts+x} ];
+      then
+        echo  "no measurement scripts set,
+              going through files inside of $locate_base_path."
+        echo "please add a the full path of one of the files to \$scritps."
+        #locate -r "$locate_base_path" | grep "\.py$"
+        echo "terminated. ding dong"
+        exit -1
+    fi
+
+    printf "\n"
+}
+
+function measure
+{
+  local prematurely_aborted=0
+
+  for ((x = 1 ; x <= $measurement_repetitions ; x += 1)); do
+
+    # get pid to later kill it
+    for i in "${measurement_scripts[@]}"
+    do
+      python $measurement_script_path/$i &
+      #measurement_scripts_pid+=($!)
+    done
+
+    for ((y = $timer ; y > 0 ; y -= 1)); do
+      echo "measurement $x/$measurement_repetitions complete in $y second(s)."
+      if [ $check_if_prematurely_aborted -eq 1 ];
+        then
+          if $(ps -p ${measurement_scripts_pid[*]}) | grep ${measurement_scripts_pid[*]};
+            then
+              :
+            else
+              prematurely_aborted=1
+              echo  "Scripts were killed prematurely. Measurement may be incomplete."
+              break
+          fi
+      fi
+      sleep 1
+    done
+
+    kill $(jobs -p)
+
+    # save this measurement's data to special folder
+    mkdir -p $data_source_path/$measurement_counter/$x
+    echo  "measurement $x raw data directory created $data_source_path/$measurement_counter/$x/."
+
+    echo $raw_data_source_path
+    echo $(ls $raw_data_source_path | egrep "*_$link.txt")
+
+    cd $raw_data_source_path
+    mv -v $(ls | egrep "*_$link.txt") $data_source_path/$measurement_counter/$x/
+    cp -v $(ls | egrep "sniffer") $data_source_path/$measurement_counter/$x/
+    if [ "$receiver_mode" == "single" ];
+      then
+        cp -v $(ls | egrep "receiver") $data_source_path/$measurement_counter/$x/
+    fi
+    echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
+    printf "\n"
+    # will only ever be true if $check_if_prematurely_aborted is set to 1
+    if [ $prematurely_aborted -eq 1 ];
+      then
+        if [ $plot_if_prematurely_aborted -eq 0 ];
+          then
+            echo "plotting if measurement prematurely aborted set to false."
+            echo "terminated."
+            exit -1
+        fi
+    fi
+
+  done
+
+  #exit remote connection
+  if [ $remote_measurement -eq 1 ]; then
+    echo "remote_measurement is set to "$remote_measurement"."
+    exit
+  fi
+}
+
+function plot
+{
+  ## plot the results
+  echo "now processing results..."
+
+  # call the plotting scripts as data
+  #echo "starting to generate plots..."
+  echo "plotting python should be: "$plot_py" ("$os")."
+
+  for i in ${plot_scripts[@]}; do
+    bash -c "$plot_py $plot_py_path/$i"
+  done
+
+  printf "\n"
+  echo "+--------------------+"
+  echo "| plotting completed |"
+  echo "+--------------------+"
+}
+
+function cleanup
+{
+    ##cleaning up the mess you created!
+    #kill all child proceesses
+    echo "staring cleanup..."
+    echo "killing all lingering child processes..."
+    killall -9 -g $0
+    cd $this_path
+    exit
+}
+trap cleanup sighup sigint sigkill;
+trap "cd $this_path" exit;
+
+function main
+{
+  # clear up console
+  #reset
+  # check if jobs_open directory is empty
+  if [ ! "$(ls -a $jobs_open_path)" ]; then
+    echo "there seem to be no open jobs. measuring with default parameters."
+    prepare_measurement
+    #take measurements
+    measure | tee -a $log_path/default_$measurement_counter.log
+    # create plot if desired
+    if [ $plot_enabled -eq 1 ]; then
+      plot | tee -a $log_path/default_$measurement_counter.log; fi
+  else
+    prepare_measurement
+    echo "open jobs detected! let's get to work..."
+    jobs=$jobs_open_path/*
+    for job in $jobs; do
+      source $job;
+      job_name=$(echo $job | rev | cut -d"/" -f1 | rev )
+      log=$log_path/$job_name"_"$measurement_counter.log
+      #echo $job_name
+      cat $job | tee -a $log
+      cat measurement_$link.conf | tee -a $log
+      measure | tee -a $log
+      if [ $plot_enabled -eq 1 ]; then
+        plot | tee -a $log
+      fi
+      if [ $move_after_job_done -eq 1 ]; then
+        cp $job $plot_directory_path/$measurement_counter/
+        mv $job $jobs_done_path/
+      fi
+      export measurement_counter=$((measurement_counter++))
+    done
+  fi
+}
+
+if [ $debug_mode -eq 1 ]; then
+  printf "\n"
+  echo "+----------------------+"
+  echo "| debug mode is active.|"
+  echo "+----------------------+"
+fi
+
+if [ $remote_measurement -eq 1 ]; then
+  # call to main included here
+    setup_remote_connection
+  else
+    main
+fi
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,caption=evaluation.py]
+import numpy as np
+import myplot
+import os
+
+import rtt
+import throughput as tp
+import channel_occupation
+import backoff
+import sniffer
+
+# From Bash
+measurement = [int(os.environ["measurement_counter"])]
+links = [int(os.environ["link"])]
+repetitions = int(os.environ["measurement_repetitions"])
+data_source_path = os.environ["data_source_path"]
+plot_path = os.environ["plot_directory_path"]+"/"+os.environ["measurement_counter"]+"/"
+plot_type = ["cdf", "boxplot"]
+throughput_data_files = os.environ["throughput_data_files"].split(",")
+rtt_data_files = os.environ["rtt_data_files"].split(",")
+co_data_files = os.environ["co_data_files"].split(",")
+sniffer_data_files = os.environ["sniffer_data_files"].split(",")
+retxs_data_files = os.environ["retxs_data_files"].split(",")
+show_plot = int(os.environ["show_plot_after_measurement"])
+rtt_mode = os.environ["rtt_mode"]
+max_retxs = 6
+eval_mode = "live"
+timer = int(os.environ["timer"])
+receiver_mode = os.environ["receiver_mode"]
+
+#From Python
+plot_pdf = False
+boxplot_xticks = [ "measurement "+str(index) for index in measurement ]
+legend_labels = [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
+
+custom_legend_coordinates = {
+    "rtt":                 [0.24,0.85,"upper left"],
+    "packet_loss":         [1,0,"lower right"],
+    "retxs":               [1,0,"lower right"],
+    "throughput":          [1,0,"lower right"],
+    "diagnosis_sender":    [1,0,"lower right"],
+    "diagnosis_receiver":  [1,0,"lower right"],
+    "backoff":             [1,0,"lower right"],
+    "channel_occupation":  [1,0,"lower right"],
+    "sniffer":             [1,0,"lower right"]
+}
+
+create_plots = {
+    "rtt":                  False,
+    "packet_loss":          False,
+    "retxs":                False,
+    "throughput":           True,
+    "diagnostic":           True,
+    "backoff":              True,
+    "channel_occupation":   True,
+    "sniffer":              True
+}
+
+channel_occupation_mode = {
+    "occupation_mode":  ["overview", "zoom"],
+    "zoom":             [5,7],
+    "zoom_mode":        "interval",
+    "zoom_interval":    2
+}
+
+sniffer_settings =  {
+    "sniffer_mode":             ["physical", "smoothed"],
+    "link":                     1,
+    "zoom":                     [0.0,timer*repetitions],
+    "zoom_mode":                "interval",
+    "zoom_interval":            2,
+    "smoothing_difference":     0.0001,
+    "smoothing_derivative":     0.01,
+    "smoothing_range":          [0.0010,0.0013]
+}
+
+#Unimplemented, use later
+annotations_below   = []
+annotations_other   = []
+
+eval_dict = {
+    "measurement":              measurement,
+    "repetitions":              repetitions,
+    "data_source_path":         data_source_path,
+    "xticks":                   boxplot_xticks,
+    "legend":                   legend_labels,
+    "annotations_below":        annotations_below,
+    "annotations_other":        annotations_other,
+    "throughput_data_files":    throughput_data_files,
+    "retxs_data_files":         retxs_data_files,
+    "rtt_data_files":           rtt_data_files,
+    "show_plot":                show_plot,
+    "legend_coordinates":       custom_legend_coordinates,
+    "create_plots":             create_plots,
+    "links":                    links,
+    "rtt_mode":                 rtt_mode,
+    "channel_occupation_mode":  channel_occupation_mode,
+    "co_data_files":            co_data_files,
+    "sniffer_data_files":       sniffer_data_files,
+    "sniffer_settings":         sniffer_settings,
+    "timer":                    timer,
+    "plot_pdf":                 plot_pdf
+}
+
+for index,a_plot_type in enumerate(plot_type):
+    if plot_type[index] == "cdf":
+        grid                = True
+    else:
+        grid                = True
+
+    eval_dict["plot_type"]  = [plot_type[index]]
+    eval_dict["plot_path"]  = plot_path
+    eval_dict["grid"]       = grid
+
+    if create_plots["backoff"] == True:
+        print("Creating backoff plot!")
+        backoff.backoff(**eval_dict).plot()
+    if create_plots["rtt"] == True:
+        print("Creating rtt plot!")
+        rtt.rtt(**eval_dict).plot()
+    if create_plots["throughput"] == True:
+        print("Creating throughput plot!")
+        tp.tp(**eval_dict).plot()
+
+# The plots with only one plot type!
+if create_plots["channel_occupation"] == True:
+    print("Creating channel occupation plot!")
+    channel_occupation.channel_occupation(**eval_dict)
+if create_plots["sniffer"] == True:
+    print("Creating sniffer energy plot!")
+    sniffer.sniffer(**eval_dict)
+
+print("Done.")
+\end{lstlisting}

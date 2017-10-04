@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  3 OCT 2017 01:26
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 01:26
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.085 seconds
+luaotfload | main : initialization completed in 0.086 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2048,9 +2048,298 @@ Package: xparse 2017/07/19 L3 Experimental document command parser
 . 
 . Defining command \homework with sig. '' on line 764.
 .................................................
+) (/usr/share/texmf-dist/tex/latex/svg/svg.sty
+Package: svg 2017/05/23 v2.00b (include SVG pictures)
+
+(/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-independent b
+asics and keyval usage)
+
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2017/04/13 v3.23 KOMA-Script package (loading files)
+
+Package scrlfile, 2017/04/13 v3.23 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+
+LaTeX Warning: Command \InputIfFileExists  has changed.
+               Check if current package is valid.
+
+)) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 69.
+)
+\c@svg@param@lastpage=\count343
+\c@svg@param@currpage=\count344
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/transparent.sty
+Package: transparent 2016/05/16 v1.1 Transparency via pdfTeX's color stack (HO)
+)
+(/usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks41
+\XKV@tempa@toks=\toks42
+)
+\XKV@depth=\count345
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@thesisday=\count343
- (./Thesis.aux (./chapters/introduction.aux) (./chapters/background.aux)
+(/usr/share/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-
+ends (calc, etex, pgfmath)
+)
+(/usr/share/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box54
+)
+\tc@llx=\dimen270
+\tc@lly=\dimen271
+\tc@urx=\dimen272
+\tc@ury=\dimen273
+
+(/usr/share/texmf-dist/tex/latex/adjustbox/tc-pgf.def
+File: tc-pgf.def 2012/05/13 v1.0 trimclip fall-back clipping driver using PGF
+
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks43
+\pgfutil@tempdima=\dimen274
+\pgfutil@tempdimb=\dimen275
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box55
+
+(/usr/share/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks44
+\pgfkeys@temptoks=\toks45
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks46
+))
+\pgf@x=\dimen276
+\pgf@y=\dimen277
+\pgf@xa=\dimen278
+\pgf@ya=\dimen279
+\pgf@xb=\dimen280
+\pgf@yb=\dimen281
+\pgf@xc=\dimen282
+\pgf@yc=\dimen283
+\w@pgf@writea=\write5
+\r@pgf@reada=\read2
+\c@pgf@counta=\count346
+\c@pgf@countb=\count347
+\c@pgf@countc=\count348
+\c@pgf@countd=\count349
+\t@pgf@toka=\toks47
+\t@pgf@tokb=\toks48
+\t@pgf@tokc=\toks49
+
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2014/10/11  (rcs-revision 1.35)
+
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count350
+\pgfsyssoftpath@bigbuffer@items=\count351
+)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen284
+\pgfmath@count=\count352
+\pgfmath@box=\box56
+\pgfmath@toks=\toks50
+\pgfmath@stack@operand=\toks51
+\pgfmath@stack@operation=\toks52
+)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count353
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen285
+\pgf@picmaxx=\dimen286
+\pgf@picminy=\dimen287
+\pgf@picmaxy=\dimen288
+\pgf@pathminx=\dimen289
+\pgf@pathmaxx=\dimen290
+\pgf@pathminy=\dimen291
+\pgf@pathmaxy=\dimen292
+\pgf@xx=\dimen293
+\pgf@xy=\dimen294
+\pgf@yx=\dimen295
+\pgf@yy=\dimen296
+\pgf@zx=\dimen297
+\pgf@zy=\dimen298
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen299
+\pgf@path@lasty=\dimen300
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen301
+\pgf@shorten@start@additional=\dimen302
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count354
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen303
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen304
+\pgf@pt@y=\dimen305
+\pgf@pt@temp=\dimen306
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen307
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen308
+\pgf@sys@shading@range@num=\count355
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box60
+))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box61
+)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen309
+\pgf@nodesepend=\dimen310
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)))
+Package trimclip Info: No clipping driver 'tc-luatex.def' available.
+(trimclip)             Using fall-back PGF driver.
+)
+\adjbox@Width=\dimen311
+\adjbox@Height=\dimen312
+\adjbox@Depth=\dimen313
+\adjbox@Totalheight=\dimen314
+(/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count356
+LaTeX Info: Redefining \checkoddpage on input line 45.
+)
+(/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box62
+\sift@deathcycles=\count357
+\@vwid@loff=\dimen315
+\@vwid@roff=\dimen316
+))
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count358
+\lst@gtempboxa=\box63
+\lst@token=\toks53
+\lst@length=\count359
+\lst@currlwidth=\dimen317
+\lst@column=\count360
+\lst@pos=\count361
+\lst@lostspace=\dimen318
+\lst@width=\dimen319
+\lst@newlines=\count362
+\lst@lineno=\count363
+\lst@maxwidth=\dimen320
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count364
+\lst@skipnumbers=\count365
+\lst@framebox=\box64
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+)
+\c@thesisday=\count366
+ (./Thesis.aux
+(./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/methodology.aux) (./chapters/results.aux)
 (./chapters/conclusions.aux) (./appendices/scripts.aux)
 (./appendices/abbreviations.aux))
@@ -2086,17 +2375,17 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count344
-\scratchdimen=\dimen270
-\scratchbox=\box54
-\nofMPsegments=\count345
-\nofMParguments=\count346
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count347
-\MPscratchDim=\dimen271
-\MPnumerator=\count348
-\makeMPintoPDFobject=\count349
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count367
+\scratchdimen=\dimen321
+\scratchbox=\box65
+\nofMPsegments=\count368
+\nofMParguments=\count369
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen322
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
+\everyMPtoPDFconversion=\toks55
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2117,7 +2406,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box55
+\AtBeginShipoutBox=\box66
 Package hyperref Info: Link coloring OFF on input line 26.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -2126,18 +2415,15 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count350
+\c@section@level=\count373
 )
-Redoing nameref's sectioning
-Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 26.
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
-(./Thesis.out) (./Thesis.out)
-\@outlinefile=\write5
+ (./Thesis.out) (./Thesis.out)
+\@outlinefile=\write6
 
-\openout5 = Thesis.out
+\openout6 = Thesis.out
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 26.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 26.
 Package hyperref Info: Option `plainpages' set `false' on input line 26.
@@ -2146,12 +2432,13 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 26.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
-<pictures/inets_new.pdf, id=107, pagebox=cropbox, 3424.795pt x 477.785pt>
+<pictures/inets_new.pdf, id=186, pagebox=cropbox, 3424.795pt x 477.785pt>
 File: pictures/inets_new.pdf Graphic file (type pdf)
 <use pictures/inets_new.pdf>
 Package luatex.def Info: pictures/inets_new.pdf  used on input line 26. on input
@@ -2178,22 +2465,25 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 ] (./Thesis.toc
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 1.
-) [4
+ [4
 
-] (./abstract.tex) [5
+]) [5] (./abstract.tex) [6
 
 
 ]
-\openout2 = chapters/introduction.aux
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count374
 
-(./chapters/introduction.tex) [1
+\openout2 = chapters/introduction.aux
+ (./chapters/introduction.tex) [1
 
 
 
 
 ]
 \openout2 = chapters/background.aux
- (./chapters/background.tex
+
+(./chapters/background.tex
 Overfull \hbox (5.69336pt too wide) in paragraph at lines 3--5
 \T1/ppl/m/n/10.95 In this chap-ter the the-o-ret-i-cal foun-da-tions and tools 
 for the suc-ceed-ing work are treated.
@@ -2210,7 +2500,7 @@ es-tion
 
 
 ] [3]
-<pictures/aloha_performance.png, id=203, pagebox=cropbox, 462.528pt x 346.896pt>
+<pictures/aloha_performance.png, id=306, pagebox=cropbox, 462.528pt x 346.896pt>
 
 File: pictures/aloha_performance.png Graphic file (type png)
 <use pictures/aloha_performance.png>
@@ -2218,7 +2508,7 @@ Package luatex.def Info: pictures/aloha_performance.png  used on input line 91.
 on input line 91.
 Package luatex.def Info: Requested size: 369.88582pt x 277.42719pt on input line
  91.
-<pictures/csma_1_persistent.png, id=206, pagebox=cropbox, 272.01625pt x 375.4025
+<pictures/csma_1_persistent.png, id=309, pagebox=cropbox, 272.01625pt x 375.4025
 pt>
 File: pictures/csma_1_persistent.png Graphic file (type png)
 <use pictures/csma_1_persistent.png>
@@ -2226,7 +2516,7 @@ Package luatex.def Info: pictures/csma_1_persistent.png  used on input line 104.
  on input line 104.
 Package luatex.def Info: Requested size: 90.6405pt x 125.09184pt on input line 1
 04.
-<pictures/csma_non_persistent.png, id=207, pagebox=cropbox, 403.5075pt x 375.402
+<pictures/csma_non_persistent.png, id=310, pagebox=cropbox, 403.5075pt x 375.402
 5pt>
 File: pictures/csma_non_persistent.png Graphic file (type png)
 <use pictures/csma_non_persistent.png>
@@ -2234,7 +2524,7 @@ Package luatex.def Info: pictures/csma_non_persistent.png  used on input line 10
 6. on input line 106.
 Package luatex.def Info: Requested size: 127.719pt x 118.81949pt on input line 1
 06.
-<pictures/csma_p_persistent.png, id=208, pagebox=cropbox, 452.69125pt x 579.1637
+<pictures/csma_p_persistent.png, id=311, pagebox=cropbox, 452.69125pt x 579.1637
 6pt>
 File: pictures/csma_p_persistent.png Graphic file (type png)
 <use pictures/csma_p_persistent.png>
@@ -2255,7 +2545,7 @@ pt is made with non-persistent
 
 [5<./pictures/csma_1_persistent.png><./pictures/csma_non_persistent.png><./pictu
 res/csma_p_persistent.png>] [6]
-<pictures/hidden_exposed_node_problem.png, id=243, pagebox=cropbox, 642.4pt x 22
+<pictures/hidden_exposed_node_problem.png, id=347, pagebox=cropbox, 642.4pt x 22
 0.825pt>
 File: pictures/hidden_exposed_node_problem.png Graphic file (type png)
 <use pictures/hidden_exposed_node_problem.png>
@@ -2264,7 +2554,7 @@ Package luatex.def Info: pictures/hidden_exposed_node_problem.png  used on input
 Package luatex.def Info: Requested size: 341.43306pt x 117.37025pt on input line
  187.
  [7<./pictures/hidden_exposed_node_problem.png>]
-<pictures/virtual_carrier_sensing.png, id=255, pagebox=cropbox, 689.57625pt x 23
+<pictures/virtual_carrier_sensing.png, id=360, pagebox=cropbox, 689.57625pt x 23
 6.885pt>
 File: pictures/virtual_carrier_sensing.png Graphic file (type png)
 <use pictures/virtual_carrier_sensing.png>
@@ -2272,38 +2562,203 @@ Package luatex.def Info: pictures/virtual_carrier_sensing.png  used on input lin
 e 226. on input line 226.
 Package luatex.def Info: Requested size: 398.33858pt x 136.84036pt on input line
  226.
- [8<./pictures/virtual_carrier_sensing.png>]) [9]
+ [8<./pictures/virtual_carrier_sensing.png>]
+<pictures/fm_radio_receiver_circuit.jpg, id=370, pagebox=cropbox, 803.0pt x 326.
+21875pt>
+File: pictures/fm_radio_receiver_circuit.jpg Graphic file (type jpg)
+<use pictures/fm_radio_receiver_circuit.jpg>
+Package luatex.def Info: pictures/fm_radio_receiver_circuit.jpg  used on input l
+ine 274. on input line 274.
+Package luatex.def Info: Requested size: 206.0pt x 83.68494pt on input line 274.
+
+<pictures/am_radio_receiver_circuit.jpg, id=371, pagebox=cropbox, 648.17157pt x 
+387.69844pt>
+File: pictures/am_radio_receiver_circuit.jpg Graphic file (type jpg)
+<use pictures/am_radio_receiver_circuit.jpg>
+Package luatex.def Info: pictures/am_radio_receiver_circuit.jpg  used on input l
+ine 276. on input line 276.
+Package luatex.def Info: Requested size: 164.79749pt x 98.56895pt on input line 
+276.
+ [9]
+Package svg Info: Last page of `./svg-inkscape/gnuradio_logo_svg-tex.pdf' is 1 o
+n input line 292.
+
+(./svg-inkscape/gnuradio_logo_svg-tex.pdf_tex
+<./svg-inkscape/gnuradio_logo_svg-tex.pdf, id=382, page=1, pagebox=cropbox, 465.
+30232pt x 100.49287pt>
+File: ./svg-inkscape/gnuradio_logo_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/gnuradio_logo_svg-tex.pdf, page 1>
+Package luatex.def Info: ./svg-inkscape/gnuradio_logo_svg-tex.pdf , page1 used o
+n input line 52. on input line 52.
+Package luatex.def Info: Requested size: 164.79749pt x 35.59164pt on input line 
+52.
+)
+<pictures/grc_ui.png, id=383, pagebox=cropbox, 1394.96156pt x 767.86874pt>
+File: pictures/grc_ui.png Graphic file (type png)
+<use pictures/grc_ui.png>
+Package luatex.def Info: pictures/grc_ui.png  used on input line 294. on input l
+ine 294.
+Package luatex.def Info: Requested size: 206.0pt x 113.3944pt on input line 294.
+
+ [10<./pictures/fm_radio_receiver_circuit.jpg><./pictures/am_radio_receiver_circ
+uit.jpg><./svg-inkscape/gnuradio_logo_svg-tex.pdf><./pictures/grc_ui.png>]) [11
+]
 \openout2 = chapters/methodology.aux
- (./chapters/methodology.tex) 
-[10
+ (./chapters/methodology.tex
+
+! LaTeX Error: File `pictures/grc_common_variables' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ....5\textwidth]{pictures/grc_common_variables}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pictures/grc_receiver_flowchart' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...\textwidth]{pictures/grc_receiver_flowchart}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pictures/grc_aloha_flowchart' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 ...0.9\textwidth]{pictures/grc_aloha_flowchart}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pictures/grc_aloha_flowchart' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...0.9\textwidth]{pictures/grc_aloha_flowchart}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: File `pictures/grc_sniffer' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...s[width=0.5\textwidth]{pictures/grc_sniffer}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12
 
 
 
 ]
+
+! LaTeX Error: File `pictures/measurement_setup' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...h=0.9\textwidth]{pictures/measurement_setup}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pictures/script_system' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 ...width=0.9\textwidth]{pictures/script_system}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) [13]
 \openout2 = chapters/results.aux
- (./chapters/results.tex) [11
+ (./chapters/results.tex) [14
 
 
 
 ]
 \openout2 = chapters/conclusions.aux
- (./chapters/conclusions.tex) [12
+ (./chapters/conclusions.tex) [15
 
 
 
 ]
 \openout2 = appendices/scripts.aux
 
-No file appendices/scripts.tex.
+(./appendices/scripts.tex
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
+put line 5.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 5.
 
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [16
+
+
+
+] [17] [18] [19]
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [20]
+Overfull \hbox (58.0pt too wide) in paragraph at lines 242--243
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][]  
+ []
+
+[21] [22]) [23]
 \openout2 = appendices/abbreviations.aux
-(./appendices/abbreviations.tex) [13
+ (./appendices/abbreviations.tex [24
 
 
 
-
-
-] (./Thesis.bbl
+]) [25] (./Thesis.bbl
 bibitemlist
 
 LaTeX Warning: Empty `thebibliography' environment on input line 24.
@@ -2312,7 +2767,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 24.
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=305, pagebox=cropb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=861, pagebox=cropb
 ox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -2340,7 +2795,7 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=308, page=1, pageb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=864, page=1, pageb
 ox=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -2356,7 +2811,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 40. on input line 40.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  40.
-[14
+[26
 
 
 
@@ -2382,10 +2837,10 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 40. on input line 40.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  40.
- [15<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
-\tf@toc=\write6
+ [27<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+\tf@toc=\write7
 
-\openout6 = Thesis.toc
+\openout7 = Thesis.toc
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
 
@@ -2396,34 +2851,36 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AB741925DD56B043E71DF18924415E94;1717.
+(rerunfilecheck)             Checksum: 28C260DB41CA964FC2C0CEB6BFFED4F0;3331.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
 )
 
 Here is how much of LuaTeX's memory you used:
- 22841 strings out of 494472
- 100000,662416 words of node,token memory allocated
- 2108 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 132 kern, 69 attribute, 200 glue_spec, 69 a
+ 34096 strings out of 494472
+ 305240,794899 words of node,token memory allocated
+ 2520 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 192 kern, 97 attribute, 200 glue_spec, 97 a
 ttribute_list, 2 write nodes
-   avail lists: 1:1,2:625,3:164,4:49,5:77,6:2434,7:763,8:72,9:239,10:14,11:207
- 25878 multiletter control sequences out of 65536+600000
- 84 fonts using 9931263 bytes
- 51i,18n,51p,959b,515s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:2,2:7210,3:189,4:606,5:8599,6:3137,7:5296,8:4691,9:10626,10:25
+,11:605
+ 35899 multiletter control sequences out of 65536+600000
+ 90 fonts using 10413991 bytes
+ 85i,18n,101p,959b,1093s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-</usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dis
-t/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pal
-atino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (21 pages, 1163547 bytes).
+msfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pala
+tino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
+/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Thesis.pdf (34 pages, 1503864 bytes).
 
-PDF statistics: 373 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 131072)
- 209 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 944 PDF objects out of 1000 (max. 8388607)
+ 856 compressed objects within 9 object streams
+ 505 named destinations out of 1000 (max. 131072)
+ 376 words of extra memory for PDF output out of 10000 (max. 100000000)
 

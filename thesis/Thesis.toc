@@ -1,31 +1,56 @@
 \contentsline {chapter}{Acknowledgements}{III}{chapter*.1}
 \contentsline {chapter}{Contents}{IV}{section*.2}
-\contentsline {chapter}{Abstract}{V}{chapter*.3}
+\contentsline {chapter}{Abstract}{VI}{chapter*.3}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\chapternumberline {2}Background}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}MAC Protocols}{2}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}MAC Layer in the OSI Model}{2}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}ALOHA}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}ALOHA}{2}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}CSMA}{4}{subsection.2.1.3}
-\contentsline {subsubsection}{\numberline {2.1.3.1}1-persistent CSMA}{4}{subsubsection.2.1.3.1}
-\contentsline {subsubsection}{\numberline {2.1.3.2}Non-persistent CSMA}{5}{subsubsection.2.1.3.2}
-\contentsline {subsubsection}{\numberline {2.1.3.3}P-persistent CSMA}{5}{subsubsection.2.1.3.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}1-Persistent CSMA}{4}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.2}Non-Persistent CSMA}{5}{subsubsection.2.1.3.2}
+\contentsline {subsubsection}{\numberline {2.1.3.3}P-Persistent CSMA}{5}{subsubsection.2.1.3.3}
 \contentsline {subsection}{\numberline {2.1.4}CSMA with Collision Detection}{6}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Challenges for Wireless MAC Protocols}{7}{subsection.2.1.5}
 \contentsline {subsubsection}{\numberline {2.1.5.1}The Hidden Node and the Exposed Node Problem}{7}{subsubsection.2.1.5.1}
 \contentsline {subsubsection}{\numberline {2.1.5.2}Further Challenges}{7}{subsubsection.2.1.5.2}
 \contentsline {subsection}{\numberline {2.1.6}CSMA with Collision Avoidance}{8}{subsection.2.1.6}
 \contentsline {subsection}{\numberline {2.1.7}Duty-Cycle-Based MAC Protocols}{9}{subsection.2.1.7}
+\contentsline {subsubsection}{\numberline {2.1.7.1}Sensor MAC}{9}{subsubsection.2.1.7.1}
+\contentsline {subsubsection}{\numberline {2.1.7.2}Timeout MAC}{9}{subsubsection.2.1.7.2}
+\contentsline {subsubsection}{\numberline {2.1.7.3}Berekeley MAC}{9}{subsubsection.2.1.7.3}
 \contentsline {section}{\numberline {2.2}Software Defined Radio}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Purpose of Software Defined Radio}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}GNU Radio}{9}{subsection.2.2.2}
-\contentsline {chapter}{\chapternumberline {3}Measurement Methodology}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}GNU Radio Flowcharts}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Measurement Metrics}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Measurement Script System}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Measurement Setup}{10}{section.3.4}
-\contentsline {chapter}{\chapternumberline {4}Measurement Results}{11}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Conclusions and Future Work}{12}{chapter.5}
-\contentsline {appendix}{\chapternumberline {A}Abbreviations}{13}{appendix.A}
-\contentsline {chapter}{Bibliography}{14}{section*.5}
-\contentsline {chapter}{Declaration}{14}{section*.5}
+\contentsline {subsection}{\numberline {2.2.2}What is GNU Radio?}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Core Concepts of GNU Radio}{10}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Flowcharts and Blocks}{10}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Message Passing and Stream Tags}{11}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Polymorphic Types and SWIG}{11}{subsubsection.2.2.3.3}
+\contentsline {chapter}{\chapternumberline {3}Measurement Methodology}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}GNU Radio Flowcharts}{12}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Common Variables}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Common Receiver}{12}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Pure ALOHA Transmitter}{12}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Non-Persistent CSMA Transmitter}{13}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Sniffer}{13}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Measurement Metrics}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Measurement Setup}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Measurement Script System}{13}{section.3.4}
+\contentsline {chapter}{\chapternumberline {4}Measurement Results}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Same Protocol Combinations}{14}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Pure ALOHA}{14}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Non-Persistent CSMA With Large Parameter Set}{14}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Non-Persistent CSMA With Small Parameter Set}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Non-Persistent CSMA With Medium Parameter Set}{14}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}DIFS-Only}{14}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Different Protocol Combinations}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}ALOHA and Non-Persistent CSMA}{14}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Unsaturated ALOHA and Non-Persistent CSMA}{14}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Inhomogeneous Non-Persistent CSMA }{14}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}DIFS-Only and ALOHA}{14}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}DIFS-Only and Non-Persistent CSMA}{14}{subsection.4.2.5}
+\contentsline {chapter}{\chapternumberline {5}Conclusions and Future Work}{15}{chapter.5}
+\contentsline {appendix}{\chapternumberline {A}Bash and Python Scripts}{16}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Abbreviations}{24}{appendix.B}
+\contentsline {chapter}{Bibliography}{26}{section*.5}
+\contentsline {chapter}{Declaration}{26}{section*.5}

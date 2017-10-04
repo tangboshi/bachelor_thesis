@@ -1,11 +1,80 @@
 \chapter{Measurement Methodology}
 
-This chapter is dedicated to answering the questions of what was measured and how results were obtained. Firstly, the GNU Radio flowcharts are explained. Secondly, with reference to the flowcharts measurement metrics are formally defined. Subsequently follows an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and plotting the results. Lastly, the measurement setup is discussed in the view of the necessity of data verification.
+This chapter is dedicated to answering the questions of what was measured and how results were obtained. Firstly, the GNU Radio flowcharts are explained. Secondly, with reference to the flowcharts measurement metrics are formally defined. Subsequently, the measurement setup is discussed in view of the necessity to verify the recorded data. Lastly, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given.
 
 \section{GNU Radio Flowcharts}
 
+\subsection{Common Variables}
+
+Our GNU Radio pure ALOHA and non-persistent CSMA implementations are placed on top of a common PHY layer warranting comparability. The specific PHY layer implementation is beyond this work's scope, but a few parameters common to all flowcharts shall be discussed nonetheless. Hereinafter, these variables and their values will not be mentioned unless they are important concerning the interpretation of results.
+
+\begin{figure}[ht]
+	\label{fig:grc-common-variables}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{pictures/grc_common_variables}
+	\end{center}
+\caption{Variables Common to All Flowcharts}
+\end{figure}     
+
+\subsection{Common Receiver}
+
+\begin{figure}[ht]
+	\label{fig:grc-receiver}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{pictures/grc_receiver_flowchart}
+	\end{center}
+	\caption{GRC Common Receiver Flowchart}
+\end{figure}
+
+\subsection{Pure ALOHA Transmitter}
+
+\begin{figure}[h]
+	\label{fig:grc-aloha-sender}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{pictures/grc_aloha_flowchart}
+\end{center}
+\caption{GRC Pure ALOHA Transmitter Flowchart}
+\end{figure}
+
+\subsection{Non-Persistent CSMA Transmitter}
+
+\begin{figure}[h]
+	\label{fig:grc-csma-sender}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{pictures/grc_aloha_flowchart}
+\end{center}
+\caption{GRC Non-Persistent CSMA Transmitter Flowchart}
+\end{figure}
+
+\subsection{Sniffer}
+
+\begin{figure}[h]
+	\label{fig:grc-sniffer}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{pictures/grc_sniffer}
+	\end{center}
+	\caption{GRC Sniffer Flowchart}
+\end{figure}
+
 \section{Measurement Metrics}
 
-\section{Measurement Script System}
-
 \section{Measurement Setup}
+
+\begin{figure}[ht]
+	\label{fig:measurement-setup}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{pictures/measurement_setup}
+	\end{center}
+	\caption{Photo of the Measurement Setup}
+\end{figure}
+
+\section{Measurement Script System}
+\label{sec:script-system}
+
+\begin{figure}[ht]
+	\label{fig:script-system}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{pictures/script_system}
+	\end{center}
+	\caption{The Three-phased Measurement Script System}
+\end{figure}

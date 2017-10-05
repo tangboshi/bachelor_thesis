@@ -250,10 +250,10 @@
 \thesistitle\\
 \vspace{15mm}\\
 \thesistype\\
-\vspace{40mm}\\
+\vspace{35mm}\\
 presented by\\
 \thesisauthor\\
-\vspace{40mm}\\
+\vspace{35mm}\\
 \firstexaminername \\
 \secondexaminername\\
 \vspace{20mm}\\

@@ -81,7 +81,6 @@ function measure
     for i in "${measurement_scripts[@]}"
     do
       python $measurement_script_path/$i &
-      #measurement_scripts_pid+=($!)
     done
 
     for ((y = $timer ; y > 0 ; y -= 1)); do
@@ -118,7 +117,6 @@ function measure
     fi
     echo  "measurement $x raw data moved to $data_source_path/$measurement_counter/$x/."
     printf "\n"
-    # will only ever be true if $check_if_prematurely_aborted is set to 1
     if [ $prematurely_aborted -eq 1 ];
       then
         if [ $plot_if_prematurely_aborted -eq 0 ];
@@ -151,10 +149,9 @@ function plot
     bash -c "$plot_py $plot_py_path/$i"
   done
 
-  printf "\n"
-  echo "+--------------------+"
-  echo "| plotting completed |"
-  echo "+--------------------+"
+  echo "+------------------+"
+  echo "|plotting completed|"
+  echo "+------------------+"
 }
 
 function cleanup
@@ -208,10 +205,9 @@ function main
 }
 
 if [ $debug_mode -eq 1 ]; then
-  printf "\n"
-  echo "+----------------------+"
-  echo "| debug mode is active.|"
-  echo "+----------------------+"
+  echo "+-----------------+"
+  echo "|debug mode active|"
+  echo "+-----------------+"
 fi
 
 if [ $remote_measurement -eq 1 ]; then

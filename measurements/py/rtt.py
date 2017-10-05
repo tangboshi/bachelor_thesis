@@ -105,8 +105,9 @@ class rtt:
                             line.strip("\n")
                             line = [int(item) for item in line.split()]
                             retxs_per_repetition += [item for item in line]
-                        print("len:retx: "+str(len(retxs_per_repetition)))
-                        #print("retx: "+str(retxs))
+                            print("retx: "+str(line))
+                        #print("len:retx: "+str(len(retxs_per_repetition)))
+
 
                 else:
                     print(  "File "+retxs_path+" not found. \
@@ -135,6 +136,7 @@ class rtt:
                     # frame isnt followed up by an ACK (max retries)
                     if len(ack_received_times) > idx:
                         total_retxs += counter
+                        print("total_retxs"+str(total_retxs))
                         frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
                         rtt_condition = self.rtt_mode == "rtt" and counter == 0
                         if frame_delay_condition or rtt_condition:
@@ -147,13 +149,13 @@ class rtt:
                         print("No corresponding ACK. Retransmission count was "+str(counter)+".")
 
 
-                # print("\nThe resulting RTTs of this single measurement are:")
-                # print(rtt_single_measurement)
-                # print("\n")
+                print("\nThe resulting RTTs of this single measurement are:")
+                print(rtt_single_measurement)
+                print("\n")
 
-                # Now calculate mean RTT for this measurement
-                # print(str(float(sum(rtt_single_measurement))))
-                # print(str(len(rtt_single_measurement)))
+                #Now calculate mean RTT for this measurement
+                print(str(float(sum(rtt_single_measurement))))
+                print(str(len(rtt_single_measurement)))
                 if len(rtt_single_measurement) > 0:
                     rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
                 else:

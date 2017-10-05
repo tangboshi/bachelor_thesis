@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 11:37
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  5 OCT 2017 09:51
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.079 seconds
+luaotfload | main : initialization completed in 0.118 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2336,13 +2336,21 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
-)
-\c@thesisday=\count366
+
+(/usr/share/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count366
+\rotFPtop=\skip280
+\rotFPbot=\skip281
+\rot@float@box=\box65
+\rot@mess@toks=\toks54
+))
+\c@thesisday=\count367
  (./Thesis.aux
 (./chapters/introduction.aux) (./chapters/background.aux)
-(./chapters/methodology.aux) (./chapters/results.aux)
-(./chapters/conclusions.aux) (./appendices/scripts.aux)
-(./appendices/abbreviations.aux))
+(./chapters/related_work.aux) (./chapters/methodology.aux)
+(./chapters/results.aux) (./chapters/conclusions.aux) (./appendices/scripts.aux
+) (./appendices/abbreviations.aux))
 \openout1 = Thesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -2375,17 +2383,17 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count367
+\scratchcounter=\count368
 \scratchdimen=\dimen321
-\scratchbox=\box65
-\nofMPsegments=\count368
-\nofMParguments=\count369
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count370
+\scratchbox=\box66
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count371
 \MPscratchDim=\dimen322
-\MPnumerator=\count371
-\makeMPintoPDFobject=\count372
-\everyMPtoPDFconversion=\toks55
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks56
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2406,7 +2414,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box66
+\AtBeginShipoutBox=\box67
 Package hyperref Info: Link coloring OFF on input line 26.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -2415,7 +2423,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count373
+\c@section@level=\count374
 )
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
@@ -2438,7 +2446,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
-<pictures/inets_new.pdf, id=186, pagebox=cropbox, 3424.795pt x 477.785pt>
+<pictures/inets_new.pdf, id=190, pagebox=cropbox, 3424.795pt x 477.785pt>
 File: pictures/inets_new.pdf Graphic file (type pdf)
 <use pictures/inets_new.pdf>
 Package luatex.def Info: pictures/inets_new.pdf  used on input line 26. on input
@@ -2458,21 +2466,21 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
  [1
 
-] [2]
-(./acknowledgements.tex) [3
+] (./acknowledgements.tex)
+[2
 
 
 ] (./Thesis.toc
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 1.
- [4
+ [3
 
-]) [5] (./abstract.tex) [6
+]) [4] (./abstract.tex) [5
 
 
 ]
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count374
+\c@lstlisting=\count375
 
 \openout2 = chapters/introduction.aux
  (./chapters/introduction.tex) [1
@@ -2484,13 +2492,7 @@ ABD: EveryShipout initializing macros
 \openout2 = chapters/background.aux
 
 (./chapters/background.tex
-Overfull \hbox (5.69336pt too wide) in paragraph at lines 3--5
-\T1/ppl/m/n/10.95 In this chap-ter the the-o-ret-i-cal foun-da-tions and tools 
-for the suc-ceed-ing work are treated.
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 27--28
+Underfull \hbox (badness 1371) in paragraph at lines 26--27
 []|\T1/ppl/m/n/10.95 trans-mis-sion re-li-a-bil-ity, same-order-delivery, con-g
 es-tion
  []
@@ -2499,229 +2501,190 @@ es-tion
 
 
 
-] [3]
-<pictures/aloha_performance.png, id=306, pagebox=cropbox, 462.528pt x 346.896pt>
+]
+<pictures/aloha_performance.png, id=298, pagebox=cropbox, 462.528pt x 346.896pt>
 
 File: pictures/aloha_performance.png Graphic file (type png)
 <use pictures/aloha_performance.png>
-Package luatex.def Info: pictures/aloha_performance.png  used on input line 91. 
-on input line 91.
+Package luatex.def Info: pictures/aloha_performance.png  used on input line 78. 
+on input line 78.
 Package luatex.def Info: Requested size: 369.88582pt x 277.42719pt on input line
- 91.
-<pictures/csma_1_persistent.png, id=309, pagebox=cropbox, 272.01625pt x 375.4025
+ 78.
+ [3]
+<pictures/csma_1_persistent.png, id=317, pagebox=cropbox, 272.01625pt x 375.4025
 pt>
 File: pictures/csma_1_persistent.png Graphic file (type png)
 <use pictures/csma_1_persistent.png>
-Package luatex.def Info: pictures/csma_1_persistent.png  used on input line 104.
- on input line 104.
-Package luatex.def Info: Requested size: 90.6405pt x 125.09184pt on input line 1
-04.
-<pictures/csma_non_persistent.png, id=310, pagebox=cropbox, 403.5075pt x 375.402
+Package luatex.def Info: pictures/csma_1_persistent.png  used on input line 91. 
+on input line 91.
+Package luatex.def Info: Requested size: 90.6405pt x 125.09184pt on input line 9
+1.
+<pictures/csma_non_persistent.png, id=318, pagebox=cropbox, 403.5075pt x 375.402
 5pt>
 File: pictures/csma_non_persistent.png Graphic file (type png)
 <use pictures/csma_non_persistent.png>
-Package luatex.def Info: pictures/csma_non_persistent.png  used on input line 10
-6. on input line 106.
-Package luatex.def Info: Requested size: 127.719pt x 118.81949pt on input line 1
-06.
-<pictures/csma_p_persistent.png, id=311, pagebox=cropbox, 452.69125pt x 579.1637
+Package luatex.def Info: pictures/csma_non_persistent.png  used on input line 93
+. on input line 93.
+Package luatex.def Info: Requested size: 127.719pt x 118.81949pt on input line 9
+3.
+<pictures/csma_p_persistent.png, id=319, pagebox=cropbox, 452.69125pt x 579.1637
 6pt>
 File: pictures/csma_p_persistent.png Graphic file (type png)
 <use pictures/csma_p_persistent.png>
-Package luatex.def Info: pictures/csma_p_persistent.png  used on input line 108.
- on input line 108.
+Package luatex.def Info: pictures/csma_p_persistent.png  used on input line 95. 
+on input line 95.
 Package luatex.def Info: Requested size: 144.20251pt x 184.4878pt on input line 
-108.
- [4<./pictures/aloha_performance.png>]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 125.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+95.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 108.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-Overfull \hbox (3.5255pt too wide) in paragraph at lines 134--135
+) [4<./pictures/aloha_performance.png>]
+Overfull \hbox (3.5255pt too wide) in paragraph at lines 115--116
 \T1/ppl/m/n/10.95 the chan-nel as soon as it be-comes idle a less greedy at-tem
 pt is made with non-persistent
  []
 
 [5<./pictures/csma_1_persistent.png><./pictures/csma_non_persistent.png><./pictu
-res/csma_p_persistent.png>] [6]
-<pictures/hidden_exposed_node_problem.png, id=347, pagebox=cropbox, 642.4pt x 22
+res/csma_p_persistent.png>]
+<pictures/hidden_exposed_node_problem.png, id=346, pagebox=cropbox, 642.4pt x 22
 0.825pt>
 File: pictures/hidden_exposed_node_problem.png Graphic file (type png)
 <use pictures/hidden_exposed_node_problem.png>
 Package luatex.def Info: pictures/hidden_exposed_node_problem.png  used on input
- line 187. on input line 187.
+ line 160. on input line 160.
 Package luatex.def Info: Requested size: 341.43306pt x 117.37025pt on input line
- 187.
- [7<./pictures/hidden_exposed_node_problem.png>]
+ 160.
+ [6]
 <pictures/virtual_carrier_sensing.png, id=360, pagebox=cropbox, 689.57625pt x 23
 6.885pt>
 File: pictures/virtual_carrier_sensing.png Graphic file (type png)
 <use pictures/virtual_carrier_sensing.png>
 Package luatex.def Info: pictures/virtual_carrier_sensing.png  used on input lin
-e 226. on input line 226.
+e 187. on input line 187.
 Package luatex.def Info: Requested size: 398.33858pt x 136.84036pt on input line
- 226.
- [8<./pictures/virtual_carrier_sensing.png>]
-<pictures/fm_radio_receiver_circuit.jpg, id=370, pagebox=cropbox, 803.0pt x 326.
+ 187.
+ [7<./pictures/hidden_exposed_node_problem.png>] [8<./pictures/virtual_carrier_s
+ensing.png>]
+<pictures/fm_radio_receiver_circuit.jpg, id=378, pagebox=cropbox, 803.0pt x 326.
 21875pt>
 File: pictures/fm_radio_receiver_circuit.jpg Graphic file (type jpg)
 <use pictures/fm_radio_receiver_circuit.jpg>
 Package luatex.def Info: pictures/fm_radio_receiver_circuit.jpg  used on input l
-ine 274. on input line 274.
-Package luatex.def Info: Requested size: 206.0pt x 83.68494pt on input line 274.
+ine 223. on input line 223.
+Package luatex.def Info: Requested size: 206.0pt x 83.68494pt on input line 223.
 
-<pictures/am_radio_receiver_circuit.jpg, id=371, pagebox=cropbox, 648.17157pt x 
+<pictures/am_radio_receiver_circuit.jpg, id=379, pagebox=cropbox, 648.17157pt x 
 387.69844pt>
 File: pictures/am_radio_receiver_circuit.jpg Graphic file (type jpg)
 <use pictures/am_radio_receiver_circuit.jpg>
 Package luatex.def Info: pictures/am_radio_receiver_circuit.jpg  used on input l
-ine 276. on input line 276.
+ine 225. on input line 225.
 Package luatex.def Info: Requested size: 164.79749pt x 98.56895pt on input line 
-276.
- [9]
-Package svg Info: Last page of `./svg-inkscape/gnuradio_logo_svg-tex.pdf' is 1 o
-n input line 292.
-
-(./svg-inkscape/gnuradio_logo_svg-tex.pdf_tex
-<./svg-inkscape/gnuradio_logo_svg-tex.pdf, id=382, page=1, pagebox=cropbox, 465.
-30232pt x 100.49287pt>
-File: ./svg-inkscape/gnuradio_logo_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/gnuradio_logo_svg-tex.pdf, page 1>
-Package luatex.def Info: ./svg-inkscape/gnuradio_logo_svg-tex.pdf , page1 used o
-n input line 52. on input line 52.
-Package luatex.def Info: Requested size: 164.79749pt x 35.59164pt on input line 
-52.
-)
-<pictures/grc_ui.png, id=383, pagebox=cropbox, 1394.96156pt x 767.86874pt>
+225.
+<pictures/grc_ui.png, id=380, pagebox=cropbox, 1394.96156pt x 767.86874pt>
 File: pictures/grc_ui.png Graphic file (type png)
 <use pictures/grc_ui.png>
-Package luatex.def Info: pictures/grc_ui.png  used on input line 294. on input l
-ine 294.
-Package luatex.def Info: Requested size: 206.0pt x 113.3944pt on input line 294.
+Package luatex.def Info: pictures/grc_ui.png  used on input line 241. on input l
+ine 241.
+Package luatex.def Info: Requested size: 370.79749pt x 204.10522pt on input line
+ 241.
+ [9<./pictures/fm_radio_receiver_circuit.jpg><./pictures/am_radio_receiver_circu
+it.jpg>] [10<./pictures/grc_ui.png>]) [11]
+\openout2 = chapters/related_work.aux
+ (./chapters/related_work.tex) [12
 
- [10<./pictures/fm_radio_receiver_circuit.jpg><./pictures/am_radio_receiver_circ
-uit.jpg><./svg-inkscape/gnuradio_logo_svg-tex.pdf><./pictures/grc_ui.png>]) [11
+
+
 ]
 \openout2 = chapters/methodology.aux
  (./chapters/methodology.tex
-<pictures/grc_common_variables.png, id=404, pagebox=cropbox, 861.2175pt x 347.29
+<pictures/grc_common_variables.png, id=410, pagebox=cropbox, 861.2175pt x 347.29
 75pt>
 File: pictures/grc_common_variables.png Graphic file (type png)
 <use pictures/grc_common_variables.png>
 Package luatex.def Info: pictures/grc_common_variables.png  used on input line 1
-4. on input line 14.
-Package luatex.def Info: Requested size: 412.0pt x 166.14977pt on input line 14.
+6. on input line 16.
+Package luatex.def Info: Requested size: 412.0pt x 166.14977pt on input line 16.
 
+<pictures/grc_receiver_flowgraph.png, id=411, pagebox=cropbox, 1053.9375pt x 226
+.59656pt>
+File: pictures/grc_receiver_flowgraph.png Graphic file (type png)
+<use pictures/grc_receiver_flowgraph.png>
+Package luatex.def Info: pictures/grc_receiver_flowgraph.png  used on input line
+ 26. on input line 26.
+Package luatex.def Info: Requested size: 636.60028pt x 136.87523pt on input line
+ 26.
+<pictures/grc_sniffer_flowgraph.png, id=412, pagebox=cropbox, 273.27094pt x 65.4
+9469pt>
+File: pictures/grc_sniffer_flowgraph.png Graphic file (type png)
+<use pictures/grc_sniffer_flowgraph.png>
+Package luatex.def Info: pictures/grc_sniffer_flowgraph.png  used on input line 
+28. on input line 28.
+Package luatex.def Info: Requested size: 190.98203pt x 45.773pt on input line 28
+.
+<pictures/grc_aloha_transmitter_flowgraph.png, id=413, pagebox=cropbox, 1099.106
+25pt x 517.935pt>
+File: pictures/grc_aloha_transmitter_flowgraph.png Graphic file (type png)
+<use pictures/grc_aloha_transmitter_flowgraph.png>
+Package luatex.def Info: pictures/grc_aloha_transmitter_flowgraph.png  used on i
+nput line 38. on input line 38.
+Package luatex.def Info: Requested size: 636.60028pt x 299.99153pt on input line
+ 38.
 
-
-! LaTeX Error: File `pictures/grc_receiver_flowchart' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...\textwidth]{pictures/grc_receiver_flowchart}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `pictures/grc_aloha_flowchart' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 ...0.9\textwidth]{pictures/grc_aloha_flowchart}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-! LaTeX Error: File `pictures/grc_aloha_flowchart' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...0.9\textwidth]{pictures/grc_aloha_flowchart}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[12
+[13
 
 
 
 <./pictures/grc_common_variables.png>]
 
-! LaTeX Error: File `pictures/grc_sniffer' not found.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...s[width=0.5\textwidth]{pictures/grc_sniffer}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<pictures/grc_csma_transmitter_flowgraph.png, id=420, pagebox=cropbox, 1246.6575
+pt x 471.26062pt>
+File: pictures/grc_csma_transmitter_flowgraph.png Graphic file (type png)
+<use pictures/grc_csma_transmitter_flowgraph.png>
+Package luatex.def Info: pictures/grc_csma_transmitter_flowgraph.png  used on in
+put line 48. on input line 48.
+Package luatex.def Info: Requested size: 636.60028pt x 240.64894pt on input line
+ 48.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-! LaTeX Error: File `pictures/measurement_setup' not found.
+<pictures/measurement_setup.png, id=421, pagebox=cropbox, 628.3475pt x 626.34pt>
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 ...h=0.9\textwidth]{pictures/measurement_setup}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+File: pictures/measurement_setup.png Graphic file (type png)
+<use pictures/measurement_setup.png>
+Package luatex.def Info: pictures/measurement_setup.png  used on input line 62. 
+on input line 62.
+Package luatex.def Info: Requested size: 206.0pt x 205.33571pt on input line 62.
 
-
-! LaTeX Error: File `pictures/script_system' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 ...width=0.9\textwidth]{pictures/script_system}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2 ,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) [13] [14]
+<pictures/script_system.png, id=422, pagebox=cropbox, 635.37375pt x 1028.84375pt
+>
+File: pictures/script_system.png Graphic file (type png)
+<use pictures/script_system.png>
+Package luatex.def Info: pictures/script_system.png  used on input line 73. on i
+nput line 73.
+Package luatex.def Info: Requested size: 247.20251pt x 400.28983pt on input line
+ 73.
+) [14] [15<./pictures/grc_receiver_flowgraph.png><./pictures/grc_sniffer_flowgra
+ph.png>] [16<./pictures/grc_aloha_transmitter_flowgraph.png>] [17<./pictures/grc
+_csma_transmitter_flowgraph.png>] [18<./pictures/measurement_setup.png>]
+[19<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
- (./chapters/results.tex) [15
+ (./chapters/results.tex) [20
 
 
 
 ]
 \openout2 = chapters/conclusions.aux
- (./chapters/conclusions.tex) [16
+
+(./chapters/conclusions.tex) [21
 
 
 
 ]
 \openout2 = appendices/scripts.aux
-
-(./appendices/scripts.tex
+ (./appendices/scripts.tex
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -2734,43 +2697,40 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 5.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [17
+) [22
 
 
 
-] [18] [19] [20]
+] [23] [24] [25]
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [21]
-Overfull \hbox (58.0pt too wide) in paragraph at lines 242--243
+)
+Overfull \hbox (58.0pt too wide) in paragraph at lines 238--239
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][]  
  []
 
-[22] [23]) [24]
+[26] [27] [28]) [29]
 \openout2 = appendices/abbreviations.aux
- (./appendices/abbreviations.tex [25
+ (./appendices/abbreviations.tex [30
 
 
 
-]) [26] (./Thesis.bbl
+]) [31] (./Thesis.bbl
 bibitemlist
-
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
-
 )
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=867, pagebox=cropb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=896, pagebox=cropb
 ox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f  used on input line 40. on input line 40.
+f  used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 40.
+ 41.
 
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
@@ -2779,9 +2739,9 @@ File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f  used on input line 40. on input line 40.
+f  used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 40.
+ 41.
 
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
@@ -2790,23 +2750,23 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=870, page=1, pageb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=899, page=1, pageb
 ox=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 40. on input line 40.
+f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 40.
+ 41.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 40. on input line 40.
+f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 40.
-[27
+ 41.
+[32
 
 
 
@@ -2815,50 +2775,50 @@ File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 40. on input line 40.
+f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 40.
+ 41.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 40. on input line 40.
+f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 40.
+ 41.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 40. on input line 40.
+f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 40.
- [28<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+ 41.
+ [33<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
 \tf@toc=\write7
 
 \openout7 = Thesis.toc
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 
 (./Thesis.aux (./chapters/introduction.aux) (./chapters/background.aux)
-(./chapters/methodology.aux) (./chapters/results.aux)
-(./chapters/conclusions.aux) (./appendices/scripts.aux)
-(./appendices/abbreviations.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+(./chapters/related_work.aux) (./chapters/methodology.aux)
+(./chapters/results.aux) (./chapters/conclusions.aux) (./appendices/scripts.aux
+) (./appendices/abbreviations.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 28C260DB41CA964FC2C0CEB6BFFED4F0;3331.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+(rerunfilecheck)             Checksum: 46797767D924838833DA1389B6C4779C;3370.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34068 strings out of 494472
- 305240,794899 words of node,token memory allocated
- 2520 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 192 kern, 97 attribute, 200 glue_spec, 97 a
-ttribute_list, 2 write nodes
-   avail lists: 1:2,2:7210,3:189,4:606,5:8599,6:3137,7:5296,8:4691,9:10626,10:25
-,11:605
- 35903 multiletter control sequences out of 65536+600000
+ 33981 strings out of 494472
+ 305232,953878 words of node,token memory allocated
+ 2537 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 191 kern, 100 attribute, 202 glue_spec, 100
+ attribute_list, 2 write nodes
+   avail lists: 1:1,2:7306,3:186,4:625,5:8543,6:3030,7:5294,8:4663,9:10624,10:25
+,11:601
+ 35999 multiletter control sequences out of 65536+600000
  90 fonts using 10413991 bytes
  85i,18n,101p,959b,1093s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
@@ -2872,10 +2832,10 @@ msfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
 /fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pala
 tino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (35 pages, 1542343 bytes).
+Output written on Thesis.pdf (39 pages, 2540598 bytes).
 
-PDF statistics: 950 PDF objects out of 1000 (max. 8388607)
- 859 compressed objects within 9 object streams
- 506 named destinations out of 1000 (max. 131072)
- 376 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 979 PDF objects out of 1000 (max. 8388607)
+ 878 compressed objects within 9 object streams
+ 511 named destinations out of 1000 (max. 131072)
+ 384 words of extra memory for PDF output out of 10000 (max. 100000000)
 

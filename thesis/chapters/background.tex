@@ -1,9 +1,8 @@
 \chapter{Background}
 
-In this chapter the theoretical foundations and tools for the succeeding work are treated.
-Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing weaknesses with respect to the challenges coming up in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.  
+In this chapter the theoretical foundations and software development kit (SDK) for the succeeding work are treated. Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing weaknesses with respect to the challenges coming up in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.
 
-\bigskip
+
 
 \section{MAC Protocols}
 
@@ -13,7 +12,7 @@ The OSI model is a layered architecture that divides a telecommunication system 
 
 % Sketch of ISO/OSI-model
 
-\begin{table}[h]
+\begin{table}[b]
 	\centering
 	\begin{center}
 		\begin{tabular}{p{3.5cm}p{10cm}}
@@ -37,8 +36,6 @@ The OSI model is a layered architecture that divides a telecommunication system 
 
 ALOHA is arguably the most simple MAC protocol. The basic idea is whenever a user wants to send data he does so. The higher the channel load, i.e. sending requests per time unit, the more likely collisions will occur, which render all transmitted information useless.
 
-\bigskip
-
 The question that comes to mind is, how likely is it that a collision will not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions:
 
 \smallskip
@@ -50,7 +47,7 @@ The question that comes to mind is, how likely is it that a collision will not o
 	\item The channel load $G$ comprises of two portions: "new" and retransmitted frames.
 \end{enumerate}
 
-\bigskip
+
 
 The probability mass function of the Poisson distribution and thus the probability of $k$ frames being generated during a given frame time amounts to:
 
@@ -60,14 +57,9 @@ The probability mass function of the Poisson distribution and thus the probabili
 
 The probability of zero frames being generated during the transmission of the frame is $Pr(X=0) = e^{-G}$ (assumption 3). If no collision occurs during the transmission of frame $F$ no other frame was sent off during that transmission. Conversely, $F$ itself did not collide with a frame sent off prior to $F$. We conclude that the vulnerability period during which collision may corrupt data is two frame times (assumption 2).
 
-\bigskip
-
 The probability that no frame other than the frame to be transmitted is generated during the two frame time vulnerability period is $P_0 = e^{-2G}$. The throughput $S$ is given by $S=GP_0 = Ge^{-2G}$.
 
-\bigskip
-
 The maximum throughput is achieved when $\frac{\partial S}{\partial G} \stackrel{!}{=} 0$:
-
 
 \begin{eqnarray}
 	& \frac{\partial S}{\partial G} & = \frac{\partial}{\partial G} Ge^{-2G} \\ 
@@ -76,16 +68,11 @@ The maximum throughput is achieved when $\frac{\partial S}{\partial G} \stackrel
 	\Leftrightarrow & G & = 0.5
 \end{eqnarray}
 	
-
-\bigskip
-
 This means that for $G=0.5$ the throughput S reaches its maximum $S_\text{ALOHA,max} = \frac{1}{2e} \approx 0.18$. This result is very reasonable, since the transmission of a frame is vulnerable for the duration of two frame times, so the maximum is achieved when sending exactly every second slot, where a slot is equivalent to the frame time.
-
-\bigskip
 
 As an aside, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA allows transmission only at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case.
 
-\begin{figure}[h]
+\begin{figure}[tb]
 	\label{fig:aloha-performance}
 	\begin{center}
 		\includegraphics[width=13cm]{pictures/aloha_performance}
@@ -99,7 +86,7 @@ As shown above in figure \ref{fig:aloha-performance} and the preceding paragraph
 
 Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by the "listen before talk" (LBT) mechanism, which means in order to avoid collisions we sense the channel and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three flavors, as depicted in figure \ref{fig:csma-flavors} which will be discussed next.
 
-\begin{figure}[htp] \label{fig:csma-flavors}
+\begin{figure}[tb] \label{fig:csma-flavors}
 	\begin{center}
 		\subfloat[1-persitent CSMA]{\includegraphics[width=0.22\textwidth,valign=c]{pictures/csma_1_persistent}}
 		\qquad
@@ -113,11 +100,7 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 
 \subsubsection{1-Persistent CSMA}
 
-% 1-persistent CSMA flowchart
-
 When the channel is busy 1-persistent CSMA waits until the channel becomes idle. As soon as the channel is found idle a frame is transmitted with a probability of 1, hence 1-persistent CSMA. If the frame collides with another, the node waits for a random backoff time and then the whole process is started all over again.
-
-\bigskip
 
 Despite being a substantial improvement over ALOHA, this protocol has at least two problems:
 
@@ -129,29 +112,19 @@ Despite being a substantial improvement over ALOHA, this protocol has at least t
 
 \subsubsection{Non-Persistent CSMA}
 
-% non-persistent CSMA flowchart 
-
 In order to alleviate 1-persistent CSMA's problem with several nodes trying to seize the channel as soon as it becomes idle a less greedy attempt is made with non-persistent CSMA. Instead of continuously sensing the channel until it becomes idle nodes wait a random backoff time until they listen again. As a result, this protocol leads to better channel utilization with the downside of higher delays.
 
 \subsubsection{P-Persistent CSMA}
 
-% p-persistent CSMA flowchart
-
 P-persitent CSMA is a protocol for slotted channels. Whenever a node $A$ wishes to send off a packet the channel is sensed. If the channel is found idle it transmits its packet with a probability of $p$. With a probability $1-p$ it defers the transmissions to the next slot. This process is repeated until one either the packet is sent off or the channel is found busy again. In the latter case $A$ acts as though a collision had taken place and waits a random time until starting again.
-
-\bigskip
 
 This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA and non-persistent CSMA, where the choice of $p$ determines the greediness. The smaller $p$, the less greedy and thus the closer p-persistent CSMA approximates non-persistent behavior. An appropriate choice of $p$ can get the best out of both worlds: minimal delays as in 1-persistent CSMA, as well as high channel efficiency as in non-persistent CSMA.
 
 \subsection{CSMA with Collision Detection}
 
-A way to further improve CSMA-family protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case. Stating the obvious, aborting transmission saves both bandwidth and time. 
-
-\bigskip
+A way to further improve CSMA-family protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves both bandwidth and time. 
 
 CSMA/CD is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted signal's energy or pulse width, which premises transmission and reception taking place simultaneously. 
-
-\bigskip
 
 This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy.
 
@@ -181,7 +154,7 @@ Wireless MAC protocols have to tackle a few problems that do not occur in wired 
 
 \subsubsection{The Hidden Node and the Exposed Node Problem}
 
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\label{fig:hidden_exposed_node_problem}
 	\begin{center}
 		\includegraphics[width=12cm]{pictures/hidden_exposed_node_problem}
@@ -191,18 +164,12 @@ Wireless MAC protocols have to tackle a few problems that do not occur in wired 
 
 Suppose that the node's radio range is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ won't hear $C$ and falsely assume that the channel is idle and start transmitting. This is the hidden node problem.
 
-\bigskip
-
 For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending despite collisions would only take place between $B$ and $C$, where it does not matter. This is the exposed node problem. 
-
-\bigskip
 
 \subsubsection{Further Challenges}
 
 % Citation needed for verification
 Further challenges to MAC protocol design include the power conservation when faced with constrained power resources, as in wireless sensor networks (WSN) where devices rely on batteries for their supply with power. Attempts to mitigate waste of energy have been made in several specialized, duty-cycle based MACs such as Sensor MAC, Timeout MAC and Berkeley MAC as in more detail shown in section \ref{sec:duty-cycle-mac}.
-
-\bigskip
 
 On the same page, due to constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system's lifetime. It is due to this fact that security is paramount in biomedical or military fields of application. 
 
@@ -210,17 +177,11 @@ On the same page, due to constrained energy resources, WSN are especially suscep
 
 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer.
 
-\bigskip
-
 Beside physical carrier sensing previously simply referred to as carrier sensing another mechanism, namely virtual carrier sensing in combination with RTS/CTS exchange is employed to mitigate the trouble caused by hidden nodes. 
-
-\bigskip
 
 In order to explain these mechanisms we refer to the setup of figure \ref{fig:hidden_exposed_node_problem} with a slight modification in so far as that each node's radio range shall span across two neighboring nodes in both directions. That is to say, $A$ can hear $B$ and $C$, but not $D$ and so on. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
 
-\bigskip
-
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\label{fig:virtual_carrier_sensing}
 	\begin{center}
 		\includegraphics[width=14cm]{pictures/virtual_carrier_sensing}
@@ -230,19 +191,11 @@ In order to explain these mechanisms we refer to the setup of figure \ref{fig:hi
 
 $A$ wants to send to $B$, hence issues a request to send (RTS). Every node receiving the RTS is shut down, except for $B$ that in response to the RTS creates a clear to send (CTS) frame. Not only $A$ receives this CTS frame, but also $D$, a hidden node from $A$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame in this case $A$ wants to transmit. Based on this length $C$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $C$ and $D$ that the channel is still in use. Due to the fact, that no physical process is running to detect the channel status this mechanism get its name virtual carrier sensing. Shutting down nodes has the beneficial side-effect of reducing overhearing and therefore reduces energy consumption.
 
-\bigskip
-
 As further depicted in figure \ref{fig:virtual_carrier_sensing} there are named intervals of specified length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others. 
 
-\medskip
 The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one party out of the two parties in dialog send off their frame without interference by another node. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
-\medskip
 For the sake of completeness, we briefly mention two previously consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operates in an alternative mode of operation, where a base station acts as the coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
-
-\bigskip
-
-As a remark on the exposed node problem: MAC protocols such as MACA that feature the RTS/CTS exchange, but no ACK from the receiver also solve the exposed station problem. The inclusion of the ACK however "resurrects" the exposed station problem, since the receiver's ACK can now interfere with node's that are out of the sender's range. However, renouncing on ACKs was dropped in the revised version MACAW, because the absence of lost frames was not noticed until much later in the transport layer, causing huge drops in throughput.
 
 \subsection{Duty-Cycle-Based MAC Protocols} \label{sec:duty-cycle-mac}  
 
@@ -258,15 +211,11 @@ As a remark on the exposed node problem: MAC protocols such as MACA that feature
 
 Traditional radio equipment is "hardware-defined", i.e. that the signal processing runs on a specialized electrical circuit. This has the potential advantages of efficient energy use and cheap building at the cost of very limited flexibility in operation. 
 
-\bigskip
-
 In contrast to hardware-defined radio there is SDR, where components such as filters, amplifiers, modulators, detectors and many more are implemented in software and run on general-purpose processors.
-
-\bigskip
 
 While the limitations of hardware-defined radios are acceptable for a number of applications, such as e.g. self-made radio receivers as shown in figure \ref{fig:radio-receiver-circuits}, it is very desirable to get rid of these limitations for rapid prototyping of new technologies including but not limited to cognitive radio, software-defined antennas and wireless mesh networks. In this thesis SDR enables the variation of different MAC mechanisms' parameters.
 
-\begin{figure}[ht]
+\begin{figure}[t]
 	\label{fig:radio-receiver-circuits}
 	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
 	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
@@ -282,31 +231,25 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 
 \label{sec:gnu-radio}
 
-The GNU Radio (GR) project is dedicated to the evolution of a free and open-source software development kit enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flow charts simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.      
+The GNU Radio (GR) project is dedicated to the evolution of a free and open-source SDK enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flow charts simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.      
 
-\begin{figure}[ht]
+\begin{figure}[t]
 	\label{fig:gnuradio}
 	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
 	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
 	\begin{center}
-		\subfloat[GNU Radio Logo]{\includesvg[width=0.4\textwidth]{pictures/gnuradio_logo}}
-		\qquad
-		\subfloat[GRC GUI]{\includegraphics[width=0.5\textwidth,valign=c]{pictures/grc_ui}}
+		\includegraphics[width=0.9\textwidth,valign=c]{pictures/grc_ui}
 	\end{center}
-	\caption{GNU Radio \& GNU Radio Companion}
+	\caption{GNU Radio Companion GUI}
 \end{figure}
 
 \subsection{Core Concepts of GNU Radio}
 
 \subsubsection{Flowcharts and Blocks}
 
-The two most basic concepts of GNU Radio are flowcharts and blocks. As mentioned in \ref{sec:gnu-radio} flowcharts are directed graphs, whose nodes are functional blocks and whose vertices determine the direction of data flow. 
-
-\bigskip
+The two most basic concepts of GNU Radio are flowgraphs and blocks. As mentioned in \ref{sec:gnu-radio} flowgraphs are directed graphs, whose nodes are functional blocks and whose vertices determine the direction of data flow. 
 
 The behavior of these blocks is programmed in either Python or C++, where the latter is recommended for performance-critical applications, which is also why the blocks in our flowgraphs are all written in C++. If performance is less critical Python is a superior choice since it is more concise and allows faster prototyping as there is no need for compilation. Each block generally serves exactly one purpose for the sake of modularity. Blocks in turn can be composed of an arbitrary number of inner blocks, making extensive use of the modularity and hiding implementation complexity from the user, much like a blackbox in electrical circuits. These composed blocks are called hierarchical blocks. In our case the complete PHY layer is hidden in hierarchical blocks called "sending" and "receiving".
-
-\bigskip
 
 Blocks are connected through ports, which can either be input or output ports. Depending on which types of ports a block has, it can either be a source, sink or neither of the former. 
 Each input port only consumes data of a specific data type. Similarly, each output port only produces data of a specific data type. The set of types ranges from integers, floating point and complex numbers to messages and a bunch of others. Since each block implements a certain function these ports can be regarded as input parameters and return values of a function, respectively.
@@ -317,8 +260,6 @@ When designing packet-based protocols, such as MAC protocols it is of tremendous
 
 \subsubsection{Polymorphic Types and SWIG} 
 
-Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic container of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing.
-
-\bigskip
+Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic containers of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing.
 
 SWIG (simplified wrapper and interface generator) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.

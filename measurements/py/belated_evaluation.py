@@ -137,12 +137,14 @@ import sniffer
 #                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
 #                 ]
 
-# measurement     =       [619,620]
-# links           =       [1,2]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz"
-#                 ]
+measurement     =       [619,620,720,724]
+links           =       [1,2,1,2]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+                ]
 
 # measurement     =       [638,639]
 # links           =       [1,2]
@@ -158,12 +160,12 @@ import sniffer
 #                     "ALOHA saturated\nLink 2 @ 450MHz"
 #                 ]
 
-measurement     =       [648,647]
-links           =       [2,1]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-                    "ALOHA unsaturated\nLink 2 @ 450MHz"
-                ]
+# measurement     =       [648,647]
+# links           =       [2,1]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
+#                 ]
 
 # measurement     =       [667,666]
 # links           =       [2,1]
@@ -219,7 +221,7 @@ co_data_files           =   ["sender_bfr_dq","receiver_ack_sent","sender_ack_rec
 sniffer_data_files      =   ["sniffer"]
 retxs_data_files        =   ["sender_retransmissions"]
 show_plot               =   False
-rtt_mode                =   "rtt"
+rtt_mode                =   "frame_delay"
 receiver_mode           =   "single"
 timer                   =   100
 
@@ -240,8 +242,19 @@ custom_legend_coordinates   = {
                                 "sniffer":             [1,0,"lower right"]
                             }
 
+create_plots                = {
+                                "rtt":                  True,
+                                "packet_loss":          False,
+                                "retxs":                False,
+                                "throughput":           False,
+                                "diagnostic":           False,
+                                "backoff":              False,
+                                "channel_occupation":   False,
+                                "sniffer":              False
+                            }
+
 # create_plots                = {
-#                                 "rtt":                  False,
+#                                 "rtt":                  True,
 #                                 "packet_loss":          False,
 #                                 "retxs":                False,
 #                                 "throughput":           True,
@@ -250,17 +263,6 @@ custom_legend_coordinates   = {
 #                                 "channel_occupation":   True,
 #                                 "sniffer":              True
 #                             }
-
-create_plots                = {
-                                "rtt":                  True,
-                                "packet_loss":          False,
-                                "retxs":                False,
-                                "throughput":           True,
-                                "diagnostic":           False,
-                                "backoff":              True,
-                                "channel_occupation":   True,
-                                "sniffer":              False
-                            }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],

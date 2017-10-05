@@ -126,7 +126,8 @@ class tp:
                 annotations_below=self.annotations_below,
                 annotations_other=self.annotations_other,
                 legend_coordinates=self.legend_coordinates["throughput"],
-                eval_mode=self.eval_mode)
+                eval_mode=self.eval_mode,
+                xlims=[0,135])
 
         if not self.receiver_mode == "single":
             if self.create_plots == True or self.create_plots["diagnostic"] == True:

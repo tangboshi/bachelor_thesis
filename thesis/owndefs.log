@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 01:12
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 17:32
  restricted system commands enabled.
 **owndefs.tex
 (./owndefs.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.081 seconds
+luaotfload | main : initialization completed in 0.093 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 
 ! LaTeX Error: \usepackage before \documentclass.
@@ -120,8 +120,20 @@ l.9 \usepackage{
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \usepackage{
+               rotating}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
 ! Undefined control sequence.
-l.11 \definecolor
+l.12 \definecolor
                {dkgreen}{rgb}{0,0.6,0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -136,13 +148,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \definecolor{d
+l.12 \definecolor{d
                  kgreen}{rgb}{0,0.6,0}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.12 \definecolor
+l.13 \definecolor
                {gray}{rgb}{0.5,0.5,0.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -151,7 +163,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.13 \definecolor
+l.14 \definecolor
                {mauve}{rgb}{0.58,0,0.82}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -160,12 +172,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 11--14
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--15
 []dkgreenrgb0,0.6,0
  []
 
 ! Undefined control sequence.
-l.15 \lstset
+l.16 \lstset
           {frame=left,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -180,13 +192,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \lstset{f
+l.16 \lstset{f
             rame=left,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.21 	basicstyle={\small
+l.22 	basicstyle={\small
                       \ttfamily},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -198,7 +210,7 @@ luaotfload | db : Font names database loaded from /home/alex/.texlive/texmf-var/
 luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/alex/.texlive/te
 xmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc)
 ! Undefined control sequence.
-l.24 	keywordstyle=\color
+l.25 	keywordstyle=\color
                        {mauve},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -207,7 +219,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.25 	commentstyle=\color
+l.26 	commentstyle=\color
                        {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -216,7 +228,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.26 	stringstyle=\color
+l.27 	stringstyle=\color
                       {dkgreen},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -225,7 +237,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.27 	numberstyle=\color
+l.28 	numberstyle=\color
                       {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -234,7 +246,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 15--33
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--34
 []frame=left,
  []
 

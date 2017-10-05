@@ -114,7 +114,8 @@ class backoff:
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
                     legend_coordinates=self.legend_coordinates["backoff"],
-                    eval_mode=self.eval_mode)
+                    eval_mode=self.eval_mode,
+                    xlims=[0,self.timer])
 
             myplot.myplot(data=self.backoff_ack_sum,
                     plottype=self.plot_type,
@@ -130,7 +131,8 @@ class backoff:
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
                     legend_coordinates=self.legend_coordinates["backoff"],
-                    eval_mode=self.eval_mode)
+                    eval_mode=self.eval_mode,
+                    xlims=[0,self.timer])
 
             myplot.myplot(data=self.backoff_joint_sum,
                     plottype=self.plot_type,
@@ -146,4 +148,5 @@ class backoff:
                     annotations_below=self.annotations_below,
                     annotations_other=self.annotations_other,
                     legend_coordinates=self.legend_coordinates["backoff"],
-                    eval_mode=self.eval_mode)
+                    eval_mode=self.eval_mode,
+                    xlims=[0,self.timer])

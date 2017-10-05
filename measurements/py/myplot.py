@@ -34,7 +34,7 @@ class myplot:
         self.xlabel             = xlabel
         self.ylabel             = ylabel
         # Let's have reasonable figure dimensions
-        self.fig, self.ax       = plt.subplots(figsize=(10,8))
+        self.fig, self.ax       = plt.subplots(figsize=(9,6))
         self.kwargs             = kwargs
         self.grid               = kwargs.get("grid", False)
         self.legend             = kwargs.get("legend", [])
@@ -84,6 +84,8 @@ class myplot:
         for aplot in plottype:
             #print("single plot in plottype array is:"+str(aplot))
             self.title = title+" "+titles[aplot]
+            self.savename = self.title
+            self.title = ""
             # scientific axis scaling, deactivated because not liked by supervisors
             # if aplot not in no_sci_label:
             #     plt.ticklabel_format(style='sci', scilimits=(0,0))
@@ -91,7 +93,7 @@ class myplot:
             plottypes[aplot]()
             #set axis limits
             self.ax.set_ylim(ymin=0)
-            if self.xlims != False:
+            if self.xlims != False and not (aplot in ["boxplot", "bar"]):
                 self.ax.set_xlim(self.xlims[0], self.xlims[1])
             else:
                 self.ax.set_xlim(xmin=0)
@@ -438,7 +440,8 @@ class myplot:
         self.ax.set_title(title)
 
     def save(self, savepath, plot_type):
-        savename = self.title
+        #savename = self.title
+        savename = self.savename
         savename = savename.lower()
         savename = savename.replace(" ", "_")
         self.fig.savefig(savepath+savename+".png")

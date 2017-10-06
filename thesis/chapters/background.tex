@@ -252,7 +252,11 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 
 \label{sec:gnu-radio}
 
-The GNU Radio (GR) project is dedicated to the evolution of a free and open-source SDK enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flow charts simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.      
+The GNU Radio (GR) project is dedicated to the evolution of a free and open-source SDK enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flow charts simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.
+
+A proprietary, well-documented alternative to GNU Radio is LabVIEW developed by National Instruments. LabVIEW takes a purely graphical approach similar to GRC relying on block diagrams, but lacks the freedom of user-defined virtual instrument (block) creation with a programming language such as C++ or Python.
+
+Mathworks MATLAB also provides a communication systems toolbox, however the institute's devices are not on the list of officially supported devices \cite{Matlab}.
 
 \begin{figure}[t]
 	\label{fig:gnuradio}
@@ -265,6 +269,8 @@ The GNU Radio (GR) project is dedicated to the evolution of a free and open-sour
 \end{figure}
 
 \subsection{Core Concepts of GNU Radio}
+
+The following section is based on \cite{GR1}.
 
 \subsubsection{Flowcharts and Blocks}
 

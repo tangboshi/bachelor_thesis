@@ -1,16 +1,12 @@
 \chapter{Background}
 
-In this chapter the theoretical foundations and software development kit (SDK) for the succeeding work are treated. Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing weaknesses with respect to the challenges coming up in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.
-
-
+In this chapter the theoretical foundations and software development kit (SDK) for the succeeding work are treated. Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing performance with respect to the challenges and goals in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.
 
 \section{MAC Protocols}
 
 \subsection{MAC Layer in the OSI Model}
 
-The OSI model is a layered architecture that divides a telecommunication system into several manageable layers. The original model features seven layers, where the focus in this thesis is on the MAC layer. Note that the data link layer has been split into two sublayers: the medium access and the logical link control sublayers.
-
-% Sketch of ISO/OSI-model
+The OSI model is a layered architecture that divides a telecommunication system into several manageable layers. The second of seven layers featured by the original model is the data link layer, which in turn is split into the upper logical link control (LLC) and the lower medium access control (MAC) sublayers. Table \ref{tab:osi-layers} gives a short overview of the layers' responsibilities. 
 
 \begin{table}[b]
 	\centering
@@ -25,23 +21,42 @@ The OSI model is a layered architecture that divides a telecommunication system 
 				Network Layer & routing and congestion control \\
 				Transport Layer & transmission reliability, same-order-delivery, congestion avoidance  \\
 				Session Layer & token management, dialog control, synchronization \\
-				Presentation Layer & abstracting syntax and semantics of transmission \\
+				Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
 				Application Layer & user application protocols, such as http, ftp, smtp and many more \\
 			\bottomrule
 		\end{tabular}\caption{Layers in the OSI model} \label{tab:osi-layers}
 	\end{center}
 \end{table}
 
+\subsection{Classification of MAC Protocols}
+
+\begin{figure}[tb] \label{fig:mac-classification}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{pictures/mac_classification}
+	\end{center}
+	\caption{Classification of MAC techniques according to \cite{Garg07}}
+\end{figure}
+
+Traditional MAC protocols can be classified into one of two subgroups: reservation-based and contention-based. According to \cite{Bachir10} the appropriate choice of MAC protocol depends on a plethora of design-drivers such as requirements concerning throughput, latency, energy consumption and traffic patterns.
+
+\subsection{Reservation-Based MAC Protocols}
+
+Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time.
+
+TDMA is a representative protocol in this group, which divides time into frames. Each frame is subdivided into slots, where each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware. As a result, TDMA becomes less attractive for large-scale networks \cite{Bachir10}.  
+
+
 \subsection{ALOHA}
+\label{sec:aloha}
 
-ALOHA is arguably the most simple MAC protocol. The basic idea is whenever a user wants to send data he does so. The higher the channel load, i.e. sending requests per time unit, the more likely collisions will occur, which render all transmitted information useless.
+ALOHA is arguably the most simple MAC protocol. Whenever a user wants to send data he just does so. The higher the channel load, i.e. sending requests per time unit, the more likely collisions will occur, which render all transmitted information useless.
 
-The question that comes to mind is, how likely is it that a collision will not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions:
+The question is how likely it is that a collision does not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions as shown in \cite{Tanenbaum02}:
 
 \smallskip
 
 \begin{enumerate}
-	\item We are taking a look at pure ALOHA as described above.
+	\item We are taking a look at pure ALOHA.
 	\item We simplify the calculation by assuming a fixed frame length.
 	\item The number of packets generated during a frame time is a poisson-distributed random variable $X$.
 	\item The channel load $G$ comprises of two portions: "new" and retransmitted frames.
@@ -72,17 +87,17 @@ This means that for $G=0.5$ the throughput S reaches its maximum $S_\text{ALOHA,
 
 As an aside, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA allows transmission only at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case.
 
-\begin{figure}[tb]
-	\label{fig:aloha-performance}
-	\begin{center}
-		\includegraphics[width=13cm]{pictures/aloha_performance}
-	\end{center}
-	\caption{Pure ALOHA and slotted ALOHA's performance.}
-\end{figure}
-
-As shown above in figure \ref{fig:aloha-performance} and the preceding paragraphs ALOHA's performance is discouraging and improvements over ALOHA were found. 
+As shown in figure \ref{fig:aloha-csma-performance} ALOHA's performance is discouraging and improvements over ALOHA were found. 
 
 \subsection{CSMA}
+
+\begin{figure}[tb]
+	\label{fig:aloha-csma-performance}
+	\begin{center}
+		\includegraphics[width=\textwidth]{pictures/aloha_csma_performance}
+	\end{center}
+	\caption{Normalized throughput over offered load according to formulae in \cite{Garg07}, \cite{Bachir10},  \cite{Tanenbaum02}, with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions 2-4 made in section \ref{sec:aloha}. }
+\end{figure}
 
 Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by the "listen before talk" (LBT) mechanism, which means in order to avoid collisions we sense the channel and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three flavors, as depicted in figure \ref{fig:csma-flavors} which will be discussed next.
 
@@ -122,31 +137,29 @@ This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA an
 
 \subsection{CSMA with Collision Detection}
 
-A way to further improve CSMA-family protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves both bandwidth and time. 
+A way to further improve CSMA-family protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves bandwidth, time and energy. 
 
-CSMA/CD is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted signal's energy or pulse width, which premises transmission and reception taking place simultaneously. 
+CSMA/CD is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted signal's energy or pulse width, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signal spreads spherically around its origin and thus degrades with the second order of distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.
 
-This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy.
-
-\begin{equation}
-	P = \int_{A} I(\vec{x}) \, dA
-\end{equation}
-
-Where $P$ is the power, $I$ the intensity as function of the position $\vec{x}$ and $dA$ the differential element of a closed surface around the source. Assuming that the integration takes place over the surface of a sphere with the radius $r$ the term simplifies to:
-
-\begin{eqnarray} 
-	& P = & \abs{I(r)} \cdot 4\pi r^2 \\
-	\label{eqn:intensity}
-	\Leftrightarrow & \abs{I(r)} = & \frac{P}{4\pi r^2} 
-\end{eqnarray}
-
-Another, and more common quantity in telecommunications is signal-to-noise ratio (SNR), which is defined as follows, where $P$ is the signal power and $N$ the noise power: 
-
-\begin{equation} \label{eqn:snr}
-	SNR [dB] = 10 \, log \left( \frac{P}{N} \right)
-\end{equation}
-
-Equations \ref{eqn:intensity} and \ref{eqn:snr} imply if we increase the distance $r$ by $\sqrt{2}$ the signal's intensity halves or lose 3dB in SNR, respectively. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.  
+%\begin{equation}
+%	P = \int_{A} I(\vec{x}) \, dA
+%\end{equation}
+%
+%Where $P$ is the power, $I$ the intensity as function of the position $\vec{x}$ and $dA$ the differential element of a closed surface around the source. Assuming that the integration takes place over the surface of a sphere with the radius $r$ the term simplifies to:
+%
+%\begin{eqnarray} 
+%	& P = & \abs{I(r)} \cdot 4\pi r^2 \\
+%	\label{eqn:intensity}
+%	\Leftrightarrow & \abs{I(r)} = & \frac{P}{4\pi r^2} 
+%\end{eqnarray}
+%
+%Another, and more common quantity in telecommunications is signal-to-noise ratio (SNR), which is defined as follows, where $P$ is the signal power and $N$ the noise power: 
+%
+%\begin{equation} \label{eqn:snr}
+%	SNR [dB] = 10 \, log \left( \frac{P}{N} \right)
+%\end{equation}
+%
+%Equations \ref{eqn:intensity} and \ref{eqn:snr} imply if we increase the distance $r$ by $\sqrt{2}$ the signal's intensity halves or lose 3dB in SNR, respectively. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.  
 
 \subsection{Challenges for Wireless MAC Protocols}
 
@@ -186,7 +199,7 @@ In order to explain these mechanisms we refer to the setup of figure \ref{fig:hi
 	\begin{center}
 		\includegraphics[width=14cm]{pictures/virtual_carrier_sensing}
 	\end{center}
-	\caption{Virtual Carrier Sensing in CSMA/CA}
+	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}}
 \end{figure}
 
 $A$ wants to send to $B$, hence issues a request to send (RTS). Every node receiving the RTS is shut down, except for $B$ that in response to the RTS creates a clear to send (CTS) frame. Not only $A$ receives this CTS frame, but also $D$, a hidden node from $A$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame in this case $A$ wants to transmit. Based on this length $C$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $C$ and $D$ that the channel is still in use. Due to the fact, that no physical process is running to detect the channel status this mechanism get its name virtual carrier sensing. Shutting down nodes has the beneficial side-effect of reducing overhearing and therefore reduces energy consumption.
@@ -195,15 +208,23 @@ As further depicted in figure \ref{fig:virtual_carrier_sensing} there are named 
 
 The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one party out of the two parties in dialog send off their frame without interference by another node. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
-For the sake of completeness, we briefly mention two previously consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operates in an alternative mode of operation, where a base station acts as the coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
+For the sake of completeness, we briefly mention two previously consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operates in an alternative mode of operation, where the base station acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
 
 \subsection{Duty-Cycle-Based MAC Protocols} \label{sec:duty-cycle-mac}  
 
+In duty-cycle-based MAC schemes nodes repeatedly alternate between active and sleep phases to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The share of an active period in a cycle is called duty factor. Sources to this section were \cite{Bachir10} and \cite{Demirkol06}.
+
 \subsubsection{Sensor MAC}
+
+In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is predetermined on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle-listening and contention. The higher the duty factor the more idle-listening and the less contention occurs.
 
 \subsubsection{Timeout MAC}
 
+While TMAC shares the same principle of schedule establishment with SMAC nodes adaptively vary duty factors depending on expected traffic. Furthermore, TMAC shifts all communication to the beginning of the active period. This allows nodes to sleep earlier should no traffic be detected during a certain time period. In variable load situations TMAC saves as much as five times more energy compared to SMAC at the cost of increased latency. 
+
 \subsubsection{Berekeley MAC}
+
+Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding used in CSMA further reducing energy use \cite{Polastre04}. 
 
 \section{Software Defined Radio}
  

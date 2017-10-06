@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 19:06
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  5 OCT 2017 11:05
  restricted system commands enabled.
 **acknowledgements.tex
 (./acknowledgements.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.096 seconds
+luaotfload | main : initialization completed in 0.079 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 
 ! LaTeX Error: Missing \begin{document}.
@@ -61,7 +61,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.3 \cite{Tanenbaum02}
-                     \cite{Garg07} \cite{Gast05}
+                     \cite{Garg07} \cite{Gast05} \cite{WinNT}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -74,7 +74,7 @@ ex/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc)
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
 l.3 \cite{Tanenbaum02}
-                     \cite{Garg07} \cite{Gast05}
+                     \cite{Garg07} \cite{Gast05} \cite{WinNT}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -89,7 +89,7 @@ LaTeX Warning: Citation `Tanenbaum02' on page  undefined on input line 3.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
 l.3 \cite{Tanenbaum02} \cite{Garg07}
-                                   \cite{Gast05}
+                                   \cite{Gast05} \cite{WinNT}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -104,7 +104,7 @@ LaTeX Warning: Citation `Garg07' on page  undefined on input line 3.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
 l.3 \cite{Tanenbaum02} \cite{Garg07} \cite{Gast05}
-                                                
+                                                 \cite{WinNT}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -113,6 +113,21 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Citation `Gast05' on page  undefined on input line 3.
+
+\citation{WinNT}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.3 ...m02} \cite{Garg07} \cite{Gast05} \cite{WinNT}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `WinNT' on page  undefined on input line 3.
 
 )
 ! Emergency stop.
@@ -123,12 +138,12 @@ LaTeX Warning: Citation `Gast05' on page  undefined on input line 3.
 
 
 Here is how much of LuaTeX's memory you used:
- 17 strings out of 494472
- 100000,89155 words of node,token memory allocated 562 words of node memory still in use:
-   7 hlist, 2 local_par, 1 dir, 10 glue, 3 kern, 2 penalty, 19 glyph, 9 attribut
-e, 35 glue_spec, 9 attribute_list, 1 temp nodes
+ 18 strings out of 494472
+ 100000,89155 words of node,token memory allocated 604 words of node memory still in use:
+   8 hlist, 2 local_par, 1 dir, 11 glue, 3 kern, 2 penalty, 22 glyph, 11 attribu
+te, 35 glue_spec, 11 attribute_list, 1 temp nodes
    avail lists: 2:3,3:2,4:1,5:6,8:1
- 4271 multiletter control sequences out of 65536+600000
+ 4272 multiletter control sequences out of 65536+600000
  16 fonts using 855119 bytes
- 19i,2n,23p,68b,100s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 19i,2n,23p,81b,100s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!

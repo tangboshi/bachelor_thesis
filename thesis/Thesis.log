@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  7 OCT 2017 11:56
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  7 OCT 2017 13:55
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.123 seconds
+luaotfload | main : initialization completed in 0.097 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2609,15 +2609,7 @@ Package luatex.def Info: Requested size: 370.79749pt x 204.10522pt on input line
 ]
 \openout2 = chapters/methodology.aux
  (./chapters/methodology.tex
-<pictures/grc_common_variables.png, id=453, pagebox=cropbox, 861.2175pt x 347.29
-75pt>
-File: pictures/grc_common_variables.png Graphic file (type png)
-<use pictures/grc_common_variables.png>
-Package luatex.def Info: pictures/grc_common_variables.png  used on input line 1
-6. on input line 16.
-Package luatex.def Info: Requested size: 412.0pt x 166.14977pt on input line 16.
-
-<pictures/grc_receiver_flowgraph.png, id=454, pagebox=cropbox, 1053.9375pt x 226
+<pictures/grc_receiver_flowgraph.png, id=453, pagebox=cropbox, 1053.9375pt x 226
 .59656pt>
 File: pictures/grc_receiver_flowgraph.png Graphic file (type png)
 <use pictures/grc_receiver_flowgraph.png>
@@ -2625,7 +2617,7 @@ Package luatex.def Info: pictures/grc_receiver_flowgraph.png  used on input line
  26. on input line 26.
 Package luatex.def Info: Requested size: 636.60028pt x 136.87523pt on input line
  26.
-<pictures/grc_sniffer_flowgraph.png, id=455, pagebox=cropbox, 273.27094pt x 65.4
+<pictures/grc_sniffer_flowgraph.png, id=454, pagebox=cropbox, 273.27094pt x 65.4
 9469pt>
 File: pictures/grc_sniffer_flowgraph.png Graphic file (type png)
 <use pictures/grc_sniffer_flowgraph.png>
@@ -2633,7 +2625,7 @@ Package luatex.def Info: pictures/grc_sniffer_flowgraph.png  used on input line
 28. on input line 28.
 Package luatex.def Info: Requested size: 190.98203pt x 45.773pt on input line 28
 .
-<pictures/grc_aloha_transmitter_flowgraph.png, id=456, pagebox=cropbox, 1099.106
+<pictures/grc_aloha_transmitter_flowgraph.png, id=455, pagebox=cropbox, 1099.106
 25pt x 517.935pt>
 File: pictures/grc_aloha_transmitter_flowgraph.png Graphic file (type png)
 <use pictures/grc_aloha_transmitter_flowgraph.png>
@@ -2641,15 +2633,11 @@ Package luatex.def Info: pictures/grc_aloha_transmitter_flowgraph.png  used on i
 nput line 38. on input line 38.
 Package luatex.def Info: Requested size: 636.60028pt x 299.99153pt on input line
  38.
- [14
 
-
-
-<./pictures/grc_common_variables.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/grc_csma_transmitter_flowgraph.png, id=464, pagebox=cropbox, 1246.6575
+<pictures/grc_csma_transmitter_flowgraph.png, id=456, pagebox=cropbox, 1246.6575
 pt x 471.26062pt>
 File: pictures/grc_csma_transmitter_flowgraph.png Graphic file (type png)
 <use pictures/grc_csma_transmitter_flowgraph.png>
@@ -2660,10 +2648,14 @@ Package luatex.def Info: Requested size: 636.60028pt x 240.64894pt on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15] [16<./pictures/grc_receiver_flowgraph.png><./pictures/grc_sniffer_flowgraph
-.png>] [17<./pictures/grc_aloha_transmitter_flowgraph.png>] [18<./pictures/grc_c
-sma_transmitter_flowgraph.png>]
-<pictures/measurement_setup.png, id=487, pagebox=cropbox, 628.3475pt x 626.34pt>
+[14
+
+
+
+] [15<./pictures/grc_receiver_flowgraph.png><./pictures/grc_sniffer_flowgraph.pn
+g>] [16<./pictures/grc_aloha_transmitter_flowgraph.png>] [17<./pictures/grc_csma
+_transmitter_flowgraph.png>]
+<pictures/measurement_setup.png, id=480, pagebox=cropbox, 628.3475pt x 626.34pt>
 
 File: pictures/measurement_setup.png Graphic file (type png)
 <use pictures/measurement_setup.png>
@@ -2671,7 +2663,7 @@ Package luatex.def Info: pictures/measurement_setup.png  used on input line 64.
 on input line 64.
 Package luatex.def Info: Requested size: 206.0pt x 205.33571pt on input line 64.
 
-<pictures/script_system.png, id=488, pagebox=cropbox, 635.37375pt x 1028.84375pt
+<pictures/script_system.png, id=481, pagebox=cropbox, 635.37375pt x 1028.84375pt
 >
 File: pictures/script_system.png Graphic file (type png)
 <use pictures/script_system.png>
@@ -2679,19 +2671,19 @@ Package luatex.def Info: pictures/script_system.png  used on input line 75. on i
 nput line 75.
 Package luatex.def Info: Requested size: 247.20251pt x 400.28983pt on input line
  75.
-) [19
+) [18
 
 <./pictures/measurement_setup.png>]
-[20<./pictures/script_system.png>]
+[19<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
- (./chapters/results.tex) [21
+ (./chapters/results.tex) [20
 
 
 
 ]
 \openout2 = chapters/conclusions.aux
 
-(./chapters/conclusions.tex) [22
+(./chapters/conclusions.tex) [21
 
 
 
@@ -2710,11 +2702,11 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 5.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [23
+) [22
 
 
 
-] [24] [25] [26]
+] [23] [24] [25]
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -2723,7 +2715,7 @@ Overfull \hbox (58.0pt too wide) in paragraph at lines 238--239
 ][][][][][][][][]  
  []
 
-[27] [28] [29]) [30]
+[26] [27] [28]) [29]
 \openout2 = appendices/abbreviations.aux
  (./appendices/abbreviations.tex
 ! Undefined control sequence.
@@ -2735,11 +2727,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[31
+[30
 
 
 
-]) [32] (./Thesis.bbl
+]) [31] (./Thesis.bbl
 bibitemlist
 
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
@@ -2751,7 +2743,7 @@ g/in-dex.ph-p/-Tu-to-ri-
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=950, pagebox=cropb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=943, pagebox=cropb
 ox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -2779,7 +2771,7 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=953, page=1, pageb
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=946, page=1, pageb
 ox=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -2795,7 +2787,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  41.
-[33
+[32
 
 
 
@@ -2821,7 +2813,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  41.
- [34<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+ [33<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
 \tf@toc=\write7
 
 \openout7 = Thesis.toc
@@ -2834,22 +2826,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 ) (./appendices/abbreviations.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D486D7BBF3F5512C27A3943DB7998764;3552.
+
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: D486D7BBF3F5512C27A3943DB7998764;3552
+(rerunfilecheck)             After:  082733556F8E67A6E8F06ED92BB55337;3476.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34036 strings out of 494472
- 305237,953878 words of node,token memory allocated
- 2809 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 235 kern, 113 attribute, 202 glue_spec, 113
+ 34019 strings out of 494472
+ 305240,953878 words of node,token memory allocated
+ 2776 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 230 kern, 111 attribute, 202 glue_spec, 111
  attribute_list, 2 write nodes
-   avail lists: 1:2,2:7292,3:185,4:626,5:8535,6:3107,7:5294,8:4663,9:10624,10:25
+   avail lists: 1:1,2:7292,3:185,4:625,5:8535,6:3110,7:5294,8:4663,9:10624,10:25
 ,11:601
- 36028 multiletter control sequences out of 65536+600000
+ 36022 multiletter control sequences out of 65536+600000
  90 fonts using 10413991 bytes
  85i,18n,101p,1109b,1093s stack positions out of 5000i,500n,10000p,200000b,100000s
+
+warning  (pdf backend): unreferenced destination with name 'subsection.4.1.5'
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
@@ -2860,10 +2864,10 @@ er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (40 pages, 2612514 bytes).
+Output written on Thesis.pdf (39 pages, 2573541 bytes).
 
-PDF statistics: 1033 PDF objects out of 1200 (max. 8388607)
- 922 compressed objects within 10 object streams
- 528 named destinations out of 1000 (max. 131072)
+PDF statistics: 1026 PDF objects out of 1200 (max. 8388607)
+ 918 compressed objects within 10 object streams
+ 526 named destinations out of 1000 (max. 131072)
  400 words of extra memory for PDF output out of 10000 (max. 100000000)
 

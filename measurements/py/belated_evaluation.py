@@ -137,22 +137,62 @@ import sniffer
 #                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
 #                 ]
 
-measurement     =       [619,620,720,724]
-links           =       [1,2,1,2]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
-                ]
-
-# measurement     =       [638,639]
-# links           =       [1,2]
+################################################################################
+# measurement     =       [619,620,720,724]
+# links           =       [1,2,1,2]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
+# measurement     =       [638,639]#,716]
+# links           =       [1,2,1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"#,
+#                     #"CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     #"CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+#
+# measurement     =       [631,630]#,720,724]
+# links           =       [1,2]#,1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+#                     #"CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     #"CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [643,644,725,716]
+# links           =       [1,2,1,1]
+# boxplot_xticks  = [
+#                     "ALOHA\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [708,709,728,724]
+# links           =       [1,2,1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+measurement     =       [714,715,728,646]
+links           =       [1,2,1,2]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+                    r"unsaturated ALOHA ~ Poisson($1/\lambda=200ms$), Link 2 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+                    "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
+                ]
+
+################################################################################
 # measurement     =       [644,643]
 # links           =       [2,1]
 # boxplot_xticks  = [
@@ -242,31 +282,37 @@ custom_legend_coordinates   = {
                                 "sniffer":             [1,0,"lower right"]
                             }
 
-create_plots                = {
-                                "rtt":                  True,
-                                "packet_loss":          False,
-                                "retxs":                False,
-                                "throughput":           False,
-                                "diagnostic":           False,
-                                "backoff":              False,
-                                "channel_occupation":   False,
-                                "sniffer":              False
-                            }
-
 # create_plots                = {
 #                                 "rtt":                  True,
 #                                 "packet_loss":          False,
 #                                 "retxs":                False,
-#                                 "throughput":           True,
+#                                 "throughput":           False,
 #                                 "diagnostic":           False,
-#                                 "backoff":              True,
-#                                 "channel_occupation":   True,
-#                                 "sniffer":              True
+#                                 "backoff":              False,
+#                                 "channel_occupation":   False,
+#                                 "sniffer":              False
 #                             }
+
+if len(measurement) == 2:
+    backoff_cond = True
+else:
+    backoff_cond = False
+sniffer_cond = backoff_cond
+
+create_plots                = {
+                                "rtt":                  False,
+                                "packet_loss":          False,
+                                "retxs":                False,
+                                "throughput":           True,
+                                "diagnostic":           False,
+                                "backoff":              backoff_cond,
+                                "channel_occupation":   True,
+                                "sniffer":              sniffer_cond
+                            }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [5,7],
+                                    "zoom":             [8,10],
                                     "zoom_mode":        "interval",
                                     "zoom_interval":    2
                                 }

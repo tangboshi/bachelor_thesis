@@ -1,8 +1,32 @@
 \chapter{Measurement Methodology}
 
-This chapter is dedicated to answering the questions of what was measured and how results were obtained. Firstly, the GNU Radio flowgraphs are explained. Secondly, with reference to the flowgraphs measurement metrics are formally defined. Subsequently, the measurement setup is discussed in view of the necessity to verify the recorded data. Lastly, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given.
+This chapter is dedicated to answering the questions of what was measured and how results were obtained. Firstly, the measurement setup is discussed in view of the necessity to verify the recorded data. Subsequently,  the GNU Radio flowgraphs are explained. Secondly, with reference to the flowgraphs measurement metrics are formally defined.  Lastly, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given.
 
-\bigskip
+\section{Measurement Setup}
+
+The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. Where the former pair is programmed as receiver and sniffer and the latter  as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from the institute's computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Table \ref{tab:measurement-parameters} contains all other necessary parameters to reproduce the measurement results.
+
+\begin{figure}[tb]
+	\label{fig:measurement-setup}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{pictures/measurement_setup}
+	\end{center}
+	\caption{Photo of the Measurement Setup}
+\end{figure}
+
+% Measurement parameters
+\begin{table}
+	\label{tab:measurement-parameters}
+	\begin{center}
+		\begin{tabular}{p{3.5cm}p{10cm}}
+			\toprule
+			a & b \\
+			c & d \\
+			\bottomrule	
+		\end{tabular}\caption{Measurement parameters}
+	\end{center}
+\end{table}
+
 
 \section{GNU Radio Flowgraphs}
 
@@ -19,6 +43,17 @@ This chapter is dedicated to answering the questions of what was measured and ho
 %\end{figure}     
 
 \subsection{Receiver and Sniffer}
+
+Figure \ref{fig:grc-receiver} shows the two-way handshake receiving logic. After frame integrity is checked and type is confirmed to be data frame an acknowledgment is generated. The frame probe blocks record the times when the frames reach certain positions in the flowgraph representing the occurrence of events such as frame reception, passed or failed frame integrity check and more. Note that the address check is disabled so that the receiver may receive frames from any sender.
+
+The sniffer consists only of a single frame probe block, which records detected power above noise level during the whole measurement. The sniffer provides valuable insight of what is actually going on in the channel from a "neutral" point of view. Neutral in the sense of:
+
+\begin{itemize}
+	\item A clear distinction between the senders can be made according to the energy levels, since the sniffer is located between the senders and transmission gains were set accordingly.
+	\item Sensing the channel is possible during the whole measurement time, because the sniffer is never sending.
+\end{itemize}
+
+In a nutshell, the sniffer is a valuable debugging and verification tool as described in more detail in section \ref{sec:measurement-metrics}.
 
 \begin{sidewaysfigure}[ht]
 	\label{fig:grc-receiver}
@@ -50,21 +85,10 @@ This chapter is dedicated to answering the questions of what was measured and ho
 \caption{GRC CSMA Transmitter Flowgraph}
 \end{sidewaysfigure}
 
-\subsection{Sniffer}
-
 \clearpage
 
 \section{Measurement Metrics}
-
-\section{Measurement Setup}
-
-\begin{figure}[ht]
-	\label{fig:measurement-setup}
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{pictures/measurement_setup}
-	\end{center}
-	\caption{Photo of the Measurement Setup}
-\end{figure}
+\label{sec:measurement-metrics}
 
 \section{Measurement Script System}
 \label{sec:script-system}

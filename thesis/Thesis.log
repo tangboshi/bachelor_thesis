@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  9 OCT 2017 13:27
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  9 OCT 2017 16:01
  system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.142 seconds
+luaotfload | main : initialization completed in 0.110 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2627,6 +2627,11 @@ Package luatex.def Info: Requested size: 370.79749pt x 204.10522pt on input line
 ]
 \openout2 = chapters/methodology.aux
  (./chapters/methodology.tex
+Overfull \hbox (8.03679pt too wide) in paragraph at lines 3--4
+\T1/ppl/m/n/10.95 mea-sure-ment met-rics are for-mally de-fined in view of the 
+ne-ces-sity to ver-ify the recorded
+ []
+
 <pictures/measurement_setup.png, id=471, pagebox=cropbox, 628.3475pt x 626.34pt>
 
 File: pictures/measurement_setup.png Graphic file (type png)
@@ -2707,17 +2712,17 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 put line 129.
-<pictures/script_system.png, id=535, pagebox=cropbox, 744.7825pt x 1028.84375pt>
-
+<pictures/script_system.png, id=535, pagebox=cropbox, 743.77875pt x 1028.84375pt
+>
 File: pictures/script_system.png Graphic file (type png)
 <use pictures/script_system.png>
 Package luatex.def Info: pictures/script_system.png  used on input line 143. on 
 input line 143.
-Package luatex.def Info: Requested size: 329.60126pt x 455.33006pt on input line
+Package luatex.def Info: Requested size: 329.60126pt x 455.94232pt on input line
  143.
 
 
-LaTeX Warning: Float too large for page by 32.77757pt on input line 146.
+LaTeX Warning: Float too large for page by 33.38983pt on input line 146.
 
 ) [21] [22<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
@@ -2863,11 +2868,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
 
 Here is how much of LuaTeX's memory you used:
  34360 strings out of 494472
- 305232,953878 words of node,token memory allocated
+ 305245,953878 words of node,token memory allocated
  3927 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 7 glue, 287 kern, 65 glyph, 219 attribute, 202 glue
 _spec, 219 attribute_list, 2 write nodes
-   avail lists: 1:3,2:7288,3:200,4:626,5:8533,6:4251,7:5294,8:4663,9:10624,10:25
+   avail lists: 1:4,2:7288,3:198,4:626,5:8533,6:4251,7:5294,8:4663,9:10624,10:25
 ,11:601
  36290 multiletter control sequences out of 65536+600000
  103 fonts using 11241191 bytes
@@ -2882,7 +2887,7 @@ er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (43 pages, 2602966 bytes).
+Output written on Thesis.pdf (43 pages, 2600893 bytes).
 
 PDF statistics: 1102 PDF objects out of 1200 (max. 8388607)
  989 compressed objects within 10 object streams

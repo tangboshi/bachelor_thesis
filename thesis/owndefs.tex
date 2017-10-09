@@ -9,9 +9,27 @@
 \usepackage{color}
 \usepackage{rotating}
 
+\usepackage{soul}
+\makeatletter
+\def\SOUL@hlpreamble{%
+    \setul{}{3ex}% increased by 0.5ex
+    \let\SOUL@stcolor\SOUL@hlcolor
+    \dimen@\SOUL@ulthickness
+    \dimen@i=-.75ex % increased by -0.25ex
+    \advance\dimen@i-.5\dimen@
+    \edef\SOUL@uldepth{\the\dimen@i}%
+    \let\SOUL@ulcolor\SOUL@stcolor
+    \SOUL@ulpreamble
+}
+\makeatother
+
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\DeclareRobustCommand{\hlcode}[1]{{\sethlcolor{lightgray}\hl{#1}}}
+\newcommand{\code}[1]{{\ttfamily\relax\hlcode{$\;$#1$\;$}}}
 
 \lstset{frame=left,
 	aboveskip=7mm,
@@ -31,6 +49,7 @@
 	tabsize=4,
 	keepspaces=true
 }
+
 
 
 %\usepackage{marvosym} % Martin Vogel's symbol package

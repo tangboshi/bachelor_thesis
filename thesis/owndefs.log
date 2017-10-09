@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  4 OCT 2017 17:32
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  9 OCT 2017 02:39
  restricted system commands enabled.
 **owndefs.tex
 (./owndefs.tex
@@ -34,20 +34,8 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.093 seconds
+luaotfload | main : initialization completed in 0.096 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage[latin1]{
-                      inputenc} % latin1 for Windows and older Linuxes,
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -132,8 +120,20 @@ l.10 \usepackage{
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \usepackage{
+               soul}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
 ! Undefined control sequence.
-l.12 \definecolor
+l.27 \definecolor
                {dkgreen}{rgb}{0,0.6,0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -148,13 +148,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \definecolor{d
+l.27 \definecolor{d
                  kgreen}{rgb}{0,0.6,0}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.13 \definecolor
+l.28 \definecolor
                {gray}{rgb}{0.5,0.5,0.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -163,7 +163,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.14 \definecolor
+l.29 \definecolor
+               {lightgray}{rgb}{0.95,0.95,0.95}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.30 \definecolor
                {mauve}{rgb}{0.58,0,0.82}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -172,12 +181,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 12--15
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--31
 []dkgreenrgb0,0.6,0
  []
 
 ! Undefined control sequence.
-l.16 \lstset
+l.35 \lstset
           {frame=left,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -192,13 +201,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \lstset{f
+l.35 \lstset{f
             rame=left,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.22 	basicstyle={\small
+l.41 	basicstyle={\small
                       \ttfamily},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -210,7 +219,7 @@ luaotfload | db : Font names database loaded from /home/alex/.texlive/texmf-var/
 luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/alex/.texlive/te
 xmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc)
 ! Undefined control sequence.
-l.25 	keywordstyle=\color
+l.44 	keywordstyle=\color
                        {mauve},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -219,7 +228,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.26 	commentstyle=\color
+l.45 	commentstyle=\color
                        {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -228,7 +237,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.27 	stringstyle=\color
+l.46 	stringstyle=\color
                       {dkgreen},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -237,7 +246,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.28 	numberstyle=\color
+l.47 	numberstyle=\color
                       {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -246,7 +255,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--34
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--53
 []frame=left,
  []
 
@@ -257,7 +266,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 \renewenvironment{quote}
+l.61 \renewenvironment{quote}
                            %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -271,12 +280,12 @@ If that doesn't work, type  X <return>  to quit.
 
 
 Here is how much of LuaTeX's memory you used:
- 13 strings out of 494472
- 100000,89155 words of node,token memory allocated 2528 words of node memory still in use:
-   6 hlist, 2 local_par, 1 dir, 28 glue, 4 penalty, 323 glyph, 18 attribute, 35 
-glue_spec, 18 attribute_list nodes
+ 27 strings out of 494472
+ 100000,89155 words of node,token memory allocated 2703 words of node memory still in use:
+   6 hlist, 2 local_par, 1 dir, 29 glue, 4 penalty, 349 glyph, 21 attribute, 35 
+glue_spec, 21 attribute_list nodes
    avail lists: 2:3,3:1,4:17,5:5,7:19,8:1,10:16
- 4268 multiletter control sequences out of 65536+600000
+ 4282 multiletter control sequences out of 65536+600000
  15 fonts using 717767 bytes
- 12i,1n,10p,93b,63s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 12i,1n,10p,93b,61s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!

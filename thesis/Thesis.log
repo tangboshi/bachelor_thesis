@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  8 OCT 2017 18:06
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  9 OCT 2017 02:47
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.089 seconds
+luaotfload | main : initialization completed in 0.086 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2344,6 +2344,18 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rotFPbot=\skip281
 \rot@float@box=\box65
 \rot@mess@toks=\toks54
+)
+(/usr/share/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks55
+\SOUL@lasttoken=\toks56
+\SOUL@cmds=\toks57
+\SOUL@buffer=\toks58
+\SOUL@token=\toks59
+\SOUL@spaceskip=\skip282
+\SOUL@ttwidth=\dimen321
+\SOUL@uldp=\dimen322
+\SOUL@ulht=\dimen323
 ))
 \c@thesisday=\count367
  (./Thesis.aux
@@ -2384,16 +2396,16 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count368
-\scratchdimen=\dimen321
+\scratchdimen=\dimen324
 \scratchbox=\box66
 \nofMPsegments=\count369
 \nofMParguments=\count370
-\everyMPshowfont=\toks55
+\everyMPshowfont=\toks60
 \MPscratchCnt=\count371
-\MPscratchDim=\dimen322
+\MPscratchDim=\dimen325
 \MPnumerator=\count372
 \makeMPintoPDFobject=\count373
-\everyMPtoPDFconversion=\toks56
+\everyMPtoPDFconversion=\toks61
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2677,61 +2689,67 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [16] [17<./pictures/grc_receiver_flowgraph.png><./pictures/grc_sniffer_flowgraph
 .png>] [18<./pictures/grc_aloha_transmitter_flowgraph.png>] [19<./pictures/grc_c
 sma_transmitter_flowgraph.png>]
-<pictures/script_system.png, id=517, pagebox=cropbox, 635.37375pt x 1028.84375pt
+
+LaTeX Warning: Reference `fig:channel-occupation-example' on page 20 undefined o
+n input line 118.
+
+[20
+
+] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
+put line 129.
+<pictures/script_system.png, id=535, pagebox=cropbox, 635.37375pt x 1028.84375pt
 >
 File: pictures/script_system.png Graphic file (type png)
 <use pictures/script_system.png>
-Package luatex.def Info: pictures/script_system.png  used on input line 120. on 
-input line 120.
+Package luatex.def Info: pictures/script_system.png  used on input line 145. on 
+input line 145.
 Package luatex.def Info: Requested size: 267.79749pt x 433.64992pt on input line
- 120.
-) [20
+ 145.
 
-] [21<./pictures/script_system.png>]
+
+LaTeX Warning: Float too large for page by 11.09743pt on input line 148.
+
+[21]) [22] [23<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
-
-(./chapters/results.tex) [22
+ (./chapters/results.tex) [24
 
 
 
 ]
 \openout2 = chapters/conclusions.aux
- (./chapters/conclusions.tex) [23
+
+(./chapters/conclusions.tex) [25
 
 
 
 ]
 \openout2 = appendices/scripts.aux
-
-(./appendices/scripts.tex
+ (./appendices/scripts.tex
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
-put line 5.
- [24
+) [26
 
 
 
-] [25] [26] [27]
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
+] [27] [28] [29]
 Overfull \hbox (58.0pt too wide) in paragraph at lines 238--239
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][]  
  []
 
-[28] [29] [30]) [31]
+[30] [31] [32]) [33]
 \openout2 = appendices/abbreviations.aux
- (./appendices/abbreviations.tex [32
+ (./appendices/abbreviations.tex [34
 
 
 
-]) [33] (./Thesis.bbl
+]) [35] (./Thesis.bbl
 bibitemlist
 
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
@@ -2743,8 +2761,8 @@ g/in-dex.ph-p/-Tu-to-ri-
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=981, pagebox=cropb
-ox, 597.45204pt x 845.1575pt>
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1017, pagebox=crop
+box, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>
@@ -2771,8 +2789,8 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=984, page=1, pageb
-ox=cropbox, 597.45204pt x 845.1575pt>
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1020, page=1, page
+box=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
@@ -2787,7 +2805,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  41.
-[34
+[36
 
 
 
@@ -2813,7 +2831,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 41. on input line 41.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  41.
- [35<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+ [37<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
 \tf@toc=\write7
 
 \openout7 = Thesis.toc
@@ -2827,25 +2845,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AAA8823EF5134C80A19DAADF7D521D0C;3783.
+(rerunfilecheck)             Checksum: 52ED531C907A7B1C52A740CD8B95BFEA;3807.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34061 strings out of 494472
- 305222,953878 words of node,token memory allocated
- 2999 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 4 glue, 255 kern, 132 attribute, 202 glue_spec, 132
- attribute_list, 2 write nodes
-   avail lists: 1:1,2:7292,3:190,4:626,5:8535,6:3108,7:5294,8:4663,9:10624,10:25
+ 34265 strings out of 494472
+ 305245,953878 words of node,token memory allocated
+ 3900 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 7 glue, 284 kern, 65 glyph, 216 attribute, 202 glue
+_spec, 216 attribute_list, 2 write nodes
+   avail lists: 1:2,2:7290,3:189,4:626,5:8534,6:4316,7:5294,8:4663,9:10624,10:25
 ,11:601
- 36041 multiletter control sequences out of 65536+600000
- 102 fonts using 11158327 bytes
- 85i,18n,101p,1109b,1093s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 36219 multiletter control sequences out of 65536+600000
+ 103 fonts using 11241191 bytes
+ 85i,18n,95p,2156b,1040s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
@@ -2856,10 +2874,10 @@ er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (41 pages, 2579633 bytes).
+Output written on Thesis.pdf (43 pages, 2592845 bytes).
 
-PDF statistics: 1064 PDF objects out of 1200 (max. 8388607)
- 954 compressed objects within 10 object streams
- 537 named destinations out of 1000 (max. 131072)
+PDF statistics: 1100 PDF objects out of 1200 (max. 8388607)
+ 987 compressed objects within 10 object streams
+ 553 named destinations out of 1000 (max. 131072)
  424 words of extra memory for PDF output out of 10000 (max. 100000000)
 

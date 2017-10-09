@@ -29,20 +29,22 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Throughput}{20}{subsection.4.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Round-Trip Time}{20}{subsection.4.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Backoff Times}{20}{subsection.4.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Channel Energy Level}{20}{subsection.4.3.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Packet Durations}{20}{subsection.4.3.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Measurement Script System}{20}{section.4.4}}
-\newlabel{sec:script-system}{{4.4}{20}{Measurement Script System}{section.4.4}{}}
-\newlabel{fig:script-system}{{4.5}{21}{Measurement Script System}{figure.4.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The three-phase measurement script system}}{21}{figure.4.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Packet Durations \& Channel Occupation}{20}{subsection.4.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Channel Energy Level}{21}{subsection.4.3.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Measurement Script System}{21}{section.4.4}}
+\newlabel{sec:script-system}{{4.4}{21}{Measurement Script System}{section.4.4}{}}
+\newlabel{lst:belated-evaluation-example}{{4.1}{21}{Evaluation of measurements with \code {belated\_evaluation.py}. In \code {links} we denote the link we used in the corresponding measurement (compare figure \ref {fig:measurement-setup})}{lstlisting.4.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}Evaluation of measurements with {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$belated\_evaluation.py$\tmspace  +\thickmuskip {.2777em}$}}. In {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$links$\tmspace  +\thickmuskip {.2777em}$}} we denote the link we used in the corresponding measurement (compare figure \ref  {fig:measurement-setup})}{21}{lstlisting.4.1}}
+\newlabel{fig:script-system}{{4.5}{23}{Measurement Script System}{figure.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The three-phase measurement script system. Starting with the user calling {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace  +\thickmuskip {.2777em}$}}, where n is the ID of the link, general settings are "imported" from {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$measurement\_n.conf$\tmspace  +\thickmuskip {.2777em}$}}. If the user sets {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$remote\_measurement$\tmspace  +\thickmuskip {.2777em}$}} to 1 in the conf file then {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$remote\_measurement\_n.sh$\tmspace  +\thickmuskip {.2777em}$}} synchronizes the files on the remote machine with the github repository, then executes {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace  +\thickmuskip {.2777em}$}} remotely. Subsequently, {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$measurement.sh$\tmspace  +\thickmuskip {.2777em}$}} for link n works on open "jobs" from the {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$jobs\_open\_n$\tmspace  +\thickmuskip {.2777em}$}} repositories and optionally puts them into the {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$jobs\_done\_n$\tmspace  +\thickmuskip {.2777em}$}} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$evaluation.py$\tmspace  +\thickmuskip {.2777em}$}} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in {\ttfamily  \relax \hlcode  {$\tmspace  +\thickmuskip {.2777em}$myplot.py$\tmspace  +\thickmuskip {.2777em}$}}.}}{23}{figure.4.5}}
 \@setckpt{chapters/methodology}{
-\setcounter{page}{22}
+\setcounter{page}{24}
 \setcounter{equation}{0}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{1}
+\setcounter{footnote}{4}
 \setcounter{mpfootnote}{0}
 \setcounter{@memmarkcntra}{0}
 \setcounter{storedpagenumber}{1}
@@ -83,9 +85,9 @@
 \setcounter{cmsm@mctr}{0}
 \setcounter{bsm@mctr}{0}
 \setcounter{workm@mctr}{0}
-\setcounter{sheetsequence}{28}
-\setcounter{lastsheet}{40}
-\setcounter{lastpage}{34}
+\setcounter{sheetsequence}{30}
+\setcounter{lastsheet}{43}
+\setcounter{lastpage}{37}
 \setcounter{figure}{5}
 \setcounter{lofdepth}{1}
 \setcounter{table}{1}
@@ -107,15 +109,15 @@
 \setcounter{LT@chunks}{0}
 \setcounter{AM@survey}{0}
 \setcounter{Item}{4}
-\setcounter{Hfootnote}{1}
+\setcounter{Hfootnote}{4}
 \setcounter{memhycontfloat}{0}
 \setcounter{Hpagenote}{0}
 \setcounter{bookmark@seq@number}{33}
 \setcounter{svg@param@lastpage}{0}
 \setcounter{svg@param@currpage}{-1}
-\setcounter{lstnumber}{1}
+\setcounter{lstnumber}{9}
 \setcounter{r@tfl@t}{3}
 \setcounter{thesisday}{24}
 \setcounter{section@level}{0}
-\setcounter{lstlisting}{0}
+\setcounter{lstlisting}{1}
 }

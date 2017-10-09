@@ -4,18 +4,18 @@ This chapter is dedicated to answering the questions of what was measured and ho
 
 \section{Measurement Setup}
 
-The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. Where the former pair is programmed as receiver and sniffer and the latter  as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from the institute's computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Table \ref{tab:measurement-parameters} contains other necessary information to reproduce the measurement results.
+The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. Where the former pair is programmed as receiver and sniffer and the latter  as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from the institute's computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Hereafter, we will call the node pair 10.0.0.9-10.0.0.6 link 1 and 10.0.0.3-10.0.0.6 link 2. Table \ref{tab:measurement-parameters} contains other necessary information to reproduce the measurement results.
 
 \begin{figure}[tb]
 	\label{fig:measurement-setup}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{pictures/measurement_setup}
 	\end{center}
-	\caption{Photo of the measurement setup}
+	\caption{Photo of the measurement setup after many less successful tries due to different technical difficulties such as randomly failing devices, increased latency, asymmetrical RX/TX gains and more}
 \end{figure}
 
 % Measurement parameters
-\begin{table}
+\begin{table}[t]
 	\label{tab:measurement-parameters}
 	\begin{center}
 		\begin{tabular}{p{2.5cm}p{2cm}p{2cm}p{1.5cm}p{1.5cm}p{2cm}}
@@ -82,7 +82,7 @@ The \code{run} block enables us to start several senders exactly at the same tim
 
 \subsection{CSMA Transmitter}
 
-The CSMA flowgraph aims at resembling 802.11 DCF and features CCA through thresholding in the \code{carrier\_sensing} block. Despite the fact that this block has the feature of adaptively determining an appropriate carrier sensing threshold we chose a fixed value of 0.002 power units (PU) \footnote{Power unit is a linear-scale unit read out via the UHD driver.}. This choice was made to make sure that ALOHA transmission power levels were not confused with noise during the adaptive CSMA noise floor detection period. 
+The CSMA transmitter is based on the ALOHA transmitter, but features extra mechanisms as described in section \ref{sec:csma}, which will now be exclusively discussed. The flowgraph aims at resembling 802.11 DCF and features CCA through thresholding in the \code{carrier\_sensing} block. Despite the fact that this block has the feature of adaptively determining an appropriate carrier sensing threshold we chose a fixed value of 0.002 power units (PU) \footnote{Power unit is a linear-scale unit read out via the UHD driver.}. This choice was made to make sure that ALOHA transmission power levels were not confused with noise during the adaptive CSMA noise floor detection period. 
 
 DIFS and SIFS are realized through \code{general\_timer} blocks with the respective values. The design, as depicted, does not feature the RTS/CTS exhange.
 
@@ -107,7 +107,7 @@ We define throughput as the mean useful data \footnote{payload and headers disre
 
 \subsection{Round-Trip Time}
 
-We define round-trip time as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} in \code{rtt.py} is set to \code{rtt} then this calculation excludes retransmitted frames. As an experimental feature if \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. Note, however that when the latter mode is chosen correct numbers are only guaranteed if the maximum number of retransmissions is never once reached, since there is no currently implemented way of telling if the acknowledgment belongs to the current or the next data frame. We will, however, throughout the whole theis refer to the actual round-trip time according to its original definition disregarding retransmitted frames. 
+We define round-trip time as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} in \code{rtt.py} is set to \code{rtt} then this calculation excludes retransmitted frames. As an experimental feature if \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. Note, however that when the latter mode is chosen correct numbers are only guaranteed if the maximum number of retransmissions is never once reached, since there is no currently implemented way of telling if the acknowledgment belongs to the current or the next data frame in that case. We will, however, throughout the whole theis refer to the actual round-trip time according to its original definition disregarding retransmitted frames. 
 
 \subsection{Backoff Times}
 
@@ -137,12 +137,10 @@ boxplot_xticks  = [
 ]
 \end{lstlisting}
 
-The structure of the measurement system is depicted in figure \ref{fig:script-system}.
-
 \begin{figure}[tb]
 	\label{fig:script-system}
 	\begin{center}
-		\includegraphics[width=0.65\textwidth]{pictures/script_system}
+		\includegraphics[width=0.8\textwidth]{pictures/script_system}
 	\end{center}
 	\caption{The three-phase measurement script system. Starting with the user calling \code{measurement\_n.sh}, where n is the ID of the link, general settings are "imported" from \code{measurement\_n.conf}. If the user sets \code{remote\_measurement} to 1 in the conf file then \code{remote\_measurement\_n.sh} synchronizes the files on the remote machine with the github repository, then executes \code{measurement\_n.sh} remotely. Subsequently, \code{measurement.sh} for link n works on open "jobs" from the \code{jobs\_open\_n} repositories and optionally puts them into the \code{jobs\_done\_n} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded \code{evaluation.py} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in \code{myplot.py}.}
 \end{figure}

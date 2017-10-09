@@ -282,16 +282,16 @@ custom_legend_coordinates   = {
                                 "sniffer":             [1,0,"lower right"]
                             }
 
-# create_plots                = {
-#                                 "rtt":                  True,
-#                                 "packet_loss":          False,
-#                                 "retxs":                False,
-#                                 "throughput":           False,
-#                                 "diagnostic":           False,
-#                                 "backoff":              False,
-#                                 "channel_occupation":   False,
-#                                 "sniffer":              False
-#                             }
+create_plots                = {
+                                "rtt":                  True,
+                                "packet_loss":          False,
+                                "retxs":                False,
+                                "throughput":           False,
+                                "diagnostic":           False,
+                                "backoff":              False,
+                                "channel_occupation":   False,
+                                "sniffer":              False
+                            }
 
 if len(measurement) == 2:
     backoff_cond = True
@@ -299,16 +299,16 @@ else:
     backoff_cond = False
 sniffer_cond = backoff_cond
 
-create_plots                = {
-                                "rtt":                  False,
-                                "packet_loss":          False,
-                                "retxs":                False,
-                                "throughput":           True,
-                                "diagnostic":           False,
-                                "backoff":              backoff_cond,
-                                "channel_occupation":   True,
-                                "sniffer":              sniffer_cond
-                            }
+# create_plots                = {
+#                                 "rtt":                  False,
+#                                 "packet_loss":          False,
+#                                 "retxs":                False,
+#                                 "throughput":           True,
+#                                 "diagnostic":           False,
+#                                 "backoff":              backoff_cond,
+#                                 "channel_occupation":   True,
+#                                 "sniffer":              sniffer_cond
+#                             }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],

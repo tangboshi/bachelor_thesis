@@ -184,7 +184,7 @@ For the same configuration, in another scenario $B$ would like to send to $A$ an
 % Citation needed for verification
 Further challenges to MAC protocol design include the power conservation when faced with constrained power resources, as in wireless sensor networks (WSN) where devices rely on batteries for their supply with power. Attempts to mitigate waste of energy have been made in several specialized, duty-cycle based MACs such as Sensor MAC, Timeout MAC and Berkeley MAC as in more detail shown in section \ref{sec:duty-cycle-mac}.
 
-On the same page, due to constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system's lifetime. It is due to this fact that security is paramount in biomedical or military fields of application. 
+On the same page, due to constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system's lifetime. It is due to this fact that security is paramount in biomedical or military fields of application \cite{raymond09}. 
 
 \subsection{CSMA with Collision Avoidance}
 
@@ -225,6 +225,15 @@ While TMAC shares the same principle of schedule establishment with SMAC nodes a
 \subsubsection{Berekeley MAC}
 
 Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA further reducing energy use \cite{Polastre04}. 
+
+\subsection{LTE in the Unlicensed Band}
+\label{sec:lte-mac}
+
+The base station (eNB) of LTE in the licensed band coordinates traffic by assigning physical resource blocks (PRB) to users. The set of PRBs is a cartesian product of frequency and time slots based on the reservation techniques of OFDMA and TDMA. 
+
+Clearly, additional measures need to be taken if LTE was to share the unlicensed bands with contention-based services such as WiFi. The two principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band are on the hand LTE-U, a duty-cycle-based approach (LTE-U CSAT) and on the other hand LAA, relying on LBT. Since LAA in large part resembles CSMA/CA's LBT mechanism it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}.
+
+With the carrier aggregation (CA) in LTE Unlicensed primary cells (PCells) used to establish and maintain the connection of UE (user equipment) to the network and secondary cells (SCells) need to be distinguished. One or more additional SCells can be allocated to extend a UE's bandwidth. On the grounds that the unlicensed carrier is shared with multiple systems the same QoS, reliability and mobility cannot be achieved as on the licensed carrier. For this reason unlicensed carriers are only considered to be supplemental downlink (SDL) SCells.
 
 \section{Software Defined Radio}
  

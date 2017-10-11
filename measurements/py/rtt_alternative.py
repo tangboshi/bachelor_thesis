@@ -105,7 +105,7 @@ class rtt:
                             line.strip("\n")
                             line = [int(item) for item in line.split()]
                             retxs_per_repetition += [item for item in line]
-                            print("retx: "+str(line))
+                            #print("retx: "+str(line))
                         #print("len:retx: "+str(len(retxs_per_repetition)))
 
 
@@ -119,6 +119,36 @@ class rtt:
                 #frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
                 #rtt_condition = self.rtt_mode == "rtt" and counter == 0
 
+                data_pos = 0
+                for k,ack in enumerate(ack_received_times):
+                    for l,data in enumerate(data_sent_times):
+                        if data > ack:
+                            if self.rtt_mode == "rtt":
+                                rtt_single_measurement += [round(ack - data_sent_times[l-1],5)]
+                            if self.rtt_mode == "frame_delay":
+                                rtt_single_measurement += [round(ack - data_sent_times[data_pos], 5)]
+                            data_pos = l
+                            break;
+
+                print(rtt_single_measurement)
+
+                #Now calculate mean RTT for this measurement
+                print(str(float(sum(rtt_single_measurement))))
+                print(str(len(rtt_single_measurement)))
+                if len(rtt_single_measurement) > 0:
+                    rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
+                else:
+                    rtt_single_mean =   0
+                # rtt_single_mean seems to be calculated correctly, but source data is odd.
+                print("\nThe resulting mean RTT of this single measurement is:")
+                print(rtt_single_mean)
+                print("\n")
+
+                print("self.rtt is:"+str(self.rtt))
+                self.rtt[index,i] = rtt_single_mean
+                print(str(self.rtt.shape))
+                print("index:"+str(index))
+                print("i:"+str(i))
 
                 ### Packet loss ###
                 packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
@@ -153,7 +183,7 @@ class rtt:
             print(len(retxs_per_measurement))
             retxs_per_measurement = []
 
-            return data_sent_times,ack_received_times
+            #return data_sent_times,ack_received_times
             #print("self.rtt after calc:"+str(self.rtt))
             #print("****************************************")
             #print("\n\n\n\n")

@@ -1,7 +1,7 @@
 import numpy as np
 import myplot
 
-import rtt
+import rtt_alternative as rtt
 import throughput as tp
 import channel_occupation
 import backoff
@@ -139,36 +139,63 @@ import sniffer
 
 ################################################################################
 measurement     =       [
-                            756,757,
-                            #720,724
+                            742,743,
+                            725,727
                         ]
 links           =       [
                             1,2,
-                            #1,2
+                            1,2
                         ]
 boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+                    "ALOHA\nLink 1 @ 450MHz",
+                    "ALOHA\nLink 2 @ 450MHz",
+                    "ALOHA\nLink 1 @ 450MHz\n Baseline",
+                    "ALOHA\nLink 2 @ 450MHz\n Baseline",
                 ]
 
-# measurement     =       [638,639]#,716]
-# links           =       [1,2,1,2]
+# measurement     =       [
+#                             619,620,
+#                             720,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [
+#                             638,639,
+#                             736,737
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
 # boxplot_xticks  = [
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"#,
-#                     #"CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     #"CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 #
-# measurement     =       [631,630]#,720,724]
-# links           =       [1,2]#,1,2]
+# measurement     =       [
+#                             630,631,
+#                             738,739
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
 # boxplot_xticks  = [
 #                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
 #                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     #"CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     #"CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
 # measurement     =       [643,644,725,716]
@@ -277,7 +304,7 @@ plot_pdf                =   False
 legend_labels           =   [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
 
 custom_legend_coordinates   = {
-                                "rtt":                 [0.24,0.85,"upper left"],
+                                "rtt":                 [1,0,"lower right"],
                                 "packet_loss":         [1,0,"lower right"],
                                 "retxs":               [1,0,"lower right"],
                                 "throughput":          [1,0,"lower right"],
@@ -288,34 +315,36 @@ custom_legend_coordinates   = {
                                 "sniffer":             [1,0,"lower right"]
                             }
 
-create_plots                = {
-                                "rtt":                  True,
-                                "packet_loss":          False,
-                                "retxs":                False,
-                                "throughput":           False,
-                                "diagnostic":           False,
-                                "backoff":              False,
-                                "channel_occupation":   False,
-                                "sniffer":              False
-                            }
-show_plot = True
-
-# if len(measurement) == 2:
-#     backoff_cond = True
-# else:
-#     backoff_cond = False
-# sniffer_cond = backoff_cond
-#
 # create_plots                = {
 #                                 "rtt":                  True,
-#                                 "packet_loss":          True,
-#                                 "retxs":                True,
-#                                 "throughput":           True,
-#                                 "diagnostic":           True,
-#                                 "backoff":              backoff_cond,
-#                                 "channel_occupation":   True,
-#                                 "sniffer":              sniffer_cond
+#                                 "packet_loss":          False,
+#                                 "retxs":                False,
+#                                 "throughput":           False,
+#                                 "diagnostic":           False,
+#                                 "backoff":              False,
+#                                 "channel_occupation":   False,
+#                                 "sniffer":              False
 #                             }
+# show_plot = True
+
+if len(measurement) == 4:
+    backoff_cond = True
+else:
+    backoff_cond = False
+sniffer_cond = backoff_cond
+
+create_plots                = {
+                                "rtt":                  True,
+                                "packet_loss":          True,
+                                # Retxs numbers are wrong prior to a flowgraph change,
+                                # because cs fail backoffs were counted as retxs
+                                "retxs":                False,
+                                "throughput":           True,
+                                "diagnostic":           True,
+                                "backoff":              backoff_cond,
+                                "channel_occupation":   True,
+                                "sniffer":              sniffer_cond
+                            }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
@@ -326,6 +355,7 @@ channel_occupation_mode     =   {
 
 #FIXME: link obsolete, remove
 sniffer_settings            =   {
+                                    # smoothed | physical
                                     "sniffer_mode":             ["smoothed"],
                                     "link":                     1,
                                     "zoom":                     [0.0,timer*repetitions],

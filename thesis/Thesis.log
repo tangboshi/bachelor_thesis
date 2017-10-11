@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  11 OCT 2017 14:45
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  11 OCT 2017 18:40
  system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.085 seconds
+luaotfload | main : initialization completed in 0.088 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2619,13 +2619,7 @@ Package luatex.def Info: Requested size: 370.79749pt x 204.10522pt on input line
 uit.jpg><./pictures/grc_ui.png>]) [12]
 \openout2 = chapters/related_work.aux
 
-(./chapters/related_work.tex
-Overfull \hbox (15.3394pt too wide) in paragraph at lines 19--20
-\T1/ppl/m/n/10.95 An-other em-pir-i-cal study [[]18[]] con-ducted by Capretti e
-t al. eval-u-ates LTE Un-li-censed/WiFi
- []
-
-[13
+(./chapters/related_work.tex [13
 
 
 
@@ -2732,477 +2726,513 @@ LaTeX Warning: Float too large for page by 33.38983pt on input line 146.
 ) [22] [23<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
  (./chapters/results.tex
-<pictures/results/same_combinations/csma_large_params/throughput_cdf.png, id=611
-, pagebox=cropbox, 650.43pt x 433.62pt>
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 21. on input line 21.
+<pictures/results/same_combinations/csma_high_params/throughput_cdf.png, id=611,
+ pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 21. on input line 21.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  21.
-<pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cd
-f.png, id=612, pagebox=cropbox, 650.43pt x 433.62pt>
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 21. on input line 21.
+<pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cdf
+.png, id=612, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 21. on input line 21.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  21.
-<pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_le
-vel_4_line_chart.png, id=613, pagebox=cropbox, 650.43pt x 433.62pt>
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 25. on input li
-ne 25.
+<pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_lev
+el_4_line_chart.png, id=613, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 25. on input lin
+e 25.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  25.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 25. on input line 25.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 25. on input line 25.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  25.
  [24
 
 
 
-] [25<./pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-<./pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_
-cdf.png><./pictures/results/same_combinations/csma_large_params/smoothed_channel
-_energy_level_4_line_chart.png>]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 42. on input line 42.
+] [25<./pictures/results/same_combinations/csma_high_params/throughput_cdf.png><
+./pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cd
+f.png><./pictures/results/same_combinations/csma_high_params/smoothed_channel_en
+ergy_level_4_line_chart.png>]
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 42. on input line 42.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  42.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 42. on input line 42.
+<pictures/results/same_combinations/csma_high_params/frame_delay_boxplot.png, id
+=631, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/frame_delay_boxplot.pn
+g Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/frame_delay_boxplot.png
+>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/fra
+me_delay_boxplot.png  used on input line 42. on input line 42.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  42.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 46. on input li
-ne 46.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 46. on input lin
+e 46.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  46.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 46. on input line 46.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 46. on input line 46.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  46.
-<pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_
-gantt_chart.png, id=631, pagebox=cropbox, 650.43pt x 433.62pt>
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 50. on input line 50
-.
+<pictures/results/same_combinations/csma_high_params/zoomed_channel_occupation_g
+antt_chart.png, id=632, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 50. on input line 50.
+
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  50.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 50. on input line 50
-.
+<pictures/results/same_combinations/csma_high_params/backoff_(joint)_sum_cdf.png
+, id=633, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_high_params/backoff_(joint)_sum_cd
+f.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/backoff_(joint)_sum_cdf
+.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/bac
+koff_(joint)_sum_cdf.png  used on input line 50. on input line 50.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  50.
  [26
 
-] [27<./pictures/results/same_combinations/csma_large_params/zoomed_channel_occu
-pation_gantt_chart.png>]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 67. on input line 67.
+] [27<./pictures/results/same_combinations/csma_high_params/frame_delay_boxplot.
+png><./pictures/results/same_combinations/csma_high_params/zoomed_channel_occupa
+tion_gantt_chart.png><./pictures/results/same_combinations/csma_high_params/back
+off_(joint)_sum_cdf.png>]
+<pictures/results/same_combinations/csma_low_params/throughput_cdf.png, id=652, 
+pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/throughput_cdf.png Grap
+hic file (type png)
+<use pictures/results/same_combinations/csma_low_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/thro
+ughput_cdf.png  used on input line 67. on input line 67.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  67.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 67. on input line 67.
+<pictures/results/same_combinations/csma_low_params/frame_delay_boxplot.png, id=
+653, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/frame_delay_boxplot.png
+ Graphic file (type png)
+<use pictures/results/same_combinations/csma_low_params/frame_delay_boxplot.png>
+
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/fram
+e_delay_boxplot.png  used on input line 67. on input line 67.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  67.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 71. on input li
-ne 71.
+<pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_leve
+l_4_line_chart.png, id=654, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/smoothed_channel_energy
+_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_
+level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/smoo
+thed_channel_energy_level_4_line_chart.png  used on input line 71. on input line
+ 71.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  71.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 71. on input line 71.
+<pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_cdf.
+png, id=655, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/smoothed_channel_energy
+_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_
+cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/smoo
+thed_channel_energy_cdf.png  used on input line 71. on input line 71.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  71.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 75. on input line 75
-.
+<pictures/results/same_combinations/csma_low_params/zoomed_channel_occupation_ga
+ntt_chart.png, id=656, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/zoomed_channel_occupati
+on_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_low_params/zoomed_channel_occupatio
+n_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/zoom
+ed_channel_occupation_gantt_chart.png  used on input line 75. on input line 75.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  75.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 75. on input line 75
-.
+<pictures/results/same_combinations/csma_low_params/backoff_(joint)_sum_cdf.png,
+ id=657, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_low_params/backoff_(joint)_sum_cdf
+.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_low_params/backoff_(joint)_sum_cdf.
+png>
+Package luatex.def Info: pictures/results/same_combinations/csma_low_params/back
+off_(joint)_sum_cdf.png  used on input line 75. on input line 75.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
  75.
  [28
 
-] [29]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 93. on input line 93.
+] [29<./pictures/results/same_combinations/csma_low_params/throughput_cdf.png><.
+/pictures/results/same_combinations/csma_low_params/frame_delay_boxplot.png><./p
+ictures/results/same_combinations/csma_low_params/smoothed_channel_energy_level_
+4_line_chart.png><./pictures/results/same_combinations/csma_low_params/smoothed_
+channel_energy_cdf.png><./pictures/results/same_combinations/csma_low_params/zoo
+med_channel_occupation_gantt_chart.png><./pictures/results/same_combinations/csm
+a_low_params/backoff_(joint)_sum_cdf.png>]
+<pictures/results/same_combinations/csma_med_params/throughput_cdf.png, id=679, 
+pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/throughput_cdf.png Grap
+hic file (type png)
+<use pictures/results/same_combinations/csma_med_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/thro
+ughput_cdf.png  used on input line 90. on input line 90.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 93.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 93. on input line 93.
+ 90.
+<pictures/results/same_combinations/csma_med_params/frame_delay_boxplot.png, id=
+680, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/frame_delay_boxplot.png
+ Graphic file (type png)
+<use pictures/results/same_combinations/csma_med_params/frame_delay_boxplot.png>
+
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/fram
+e_delay_boxplot.png  used on input line 90. on input line 90.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 93.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 97. on input li
-ne 97.
+ 90.
+<pictures/results/same_combinations/csma_med_params/smoothed_channel_energy_leve
+l_4_line_chart.png, id=681, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/smoothed_channel_energy
+_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_med_params/smoothed_channel_energy_
+level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/smoo
+thed_channel_energy_level_4_line_chart.png  used on input line 94. on input line
+ 94.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 97.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 97. on input line 97.
+ 94.
+<pictures/results/same_combinations/csma_med_params/smoothed_channel_energy_cdf.
+png, id=682, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/smoothed_channel_energy
+_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_med_params/smoothed_channel_energy_
+cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/smoo
+thed_channel_energy_cdf.png  used on input line 94. on input line 94.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 97.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 101. on input line 1
-01.
+ 94.
+<pictures/results/same_combinations/csma_med_params/zoomed_channel_occupation_ga
+ntt_chart.png, id=683, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/zoomed_channel_occupati
+on_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_med_params/zoomed_channel_occupatio
+n_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/zoom
+ed_channel_occupation_gantt_chart.png  used on input line 98. on input line 98.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 101.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 101. on input line 1
-01.
+ 98.
+<pictures/results/same_combinations/csma_med_params/backoff_(joint)_sum_cdf.png,
+ id=684, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_med_params/backoff_(joint)_sum_cdf
+.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_med_params/backoff_(joint)_sum_cdf.
+png>
+Package luatex.def Info: pictures/results/same_combinations/csma_med_params/back
+off_(joint)_sum_cdf.png  used on input line 98. on input line 98.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 101.
+ 98.
  [30
 
-] [31]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 118. on input line 118.
+] [31<./pictures/results/same_combinations/csma_med_params/throughput_cdf.png><.
+/pictures/results/same_combinations/csma_med_params/frame_delay_boxplot.png><./p
+ictures/results/same_combinations/csma_med_params/smoothed_channel_energy_level_
+4_line_chart.png><./pictures/results/same_combinations/csma_med_params/smoothed_
+channel_energy_cdf.png><./pictures/results/same_combinations/csma_med_params/zoo
+med_channel_occupation_gantt_chart.png><./pictures/results/same_combinations/csm
+a_med_params/backoff_(joint)_sum_cdf.png>]
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 115. on input line 115.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 118.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 118. on input line 118.
+ 115.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 115. on input line 115.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 118.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 122. on input l
-ine 122.
+ 115.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 119. on input li
+ne 119.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 122.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 122. on input line 122.
+ 119.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 119. on input line 119.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 122.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 126. on input line 1
-26.
+ 119.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 123. on input line 12
+3.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 126.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 126. on input line 1
-26.
+ 123.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 123. on input line 12
+3.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 126.
-
+ 123.
 [32
 
 ] [33]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 146. on input line 146.
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 143. on input line 143.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 146.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 146. on input line 146.
+ 143.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 143. on input line 143.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 146.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 150. on input l
-ine 150.
+ 143.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 147. on input li
+ne 147.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 150.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 150. on input line 150.
+ 147.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 147. on input line 147.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 150.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 154. on input line 1
-54.
+ 147.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 151. on input line 15
+1.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 154.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 154. on input line 1
-54.
+ 151.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 151. on input line 15
+1.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 154.
+ 151.
  [34
 
 ] [35]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 171. on input line 171.
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 168. on input line 168.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 171.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 171. on input line 171.
+ 168.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 168. on input line 168.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 171.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 175. on input l
-ine 175.
+ 168.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 172. on input li
+ne 172.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 175.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 175. on input line 175.
+ 172.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 172. on input line 172.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 175.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 179. on input line 1
-79.
+ 172.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 176. on input line 17
+6.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 179.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 179. on input line 1
-79.
+ 176.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 176. on input line 17
+6.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 179.
+ 176.
  [36
 
 ] [37]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 201. on input line 201.
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 198. on input line 198.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 201.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 201. on input line 201.
+ 198.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 198. on input line 198.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 201.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 205. on input l
-ine 205.
+ 198.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 202. on input li
+ne 202.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 205.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 205. on input line 205.
+ 202.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 202. on input line 202.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 205.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 209. on input line 2
-09.
+ 202.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 206. on input line 20
+6.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 209.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 209. on input line 2
-09.
+ 206.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 206. on input line 20
+6.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 209.
+ 206.
  [38
 
 ] [39]
-File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
-aphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
-roughput_cdf.png  used on input line 226. on input line 226.
+File: pictures/results/same_combinations/csma_high_params/throughput_cdf.png Gra
+phic file (type png)
+<use pictures/results/same_combinations/csma_high_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/thr
+oughput_cdf.png  used on input line 223. on input line 223.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 226.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 226. on input line 226.
+ 223.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 223. on input line 223.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 226.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_level_4_line_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_level_4_line_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_level_4_line_chart.png  used on input line 230. on input l
-ine 230.
+ 223.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_level_4_line_chart.png  used on input line 227. on input li
+ne 227.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 230.
-File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
-gy_cdf.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
-y_cdf.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
-oothed_channel_energy_cdf.png  used on input line 230. on input line 230.
+ 227.
+File: pictures/results/same_combinations/csma_high_params/smoothed_channel_energ
+y_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/smoothed_channel_energy
+_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/smo
+othed_channel_energy_cdf.png  used on input line 227. on input line 227.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 230.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 234. on input line 2
-34.
+ 227.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 231. on input line 23
+1.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 234.
-File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
-tion_gantt_chart.png Graphic file (type png)
-<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
-ion_gantt_chart.png>
-Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
-omed_channel_occupation_gantt_chart.png  used on input line 234. on input line 2
-34.
+ 231.
+File: pictures/results/same_combinations/csma_high_params/zoomed_channel_occupat
+ion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_high_params/zoomed_channel_occupati
+on_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_high_params/zoo
+med_channel_occupation_gantt_chart.png  used on input line 231. on input line 23
+1.
 Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
- 234.
+ 231.
 ) [40
 
 ] [41]
@@ -3310,7 +3340,7 @@ Underfull \hbox (badness 1112) in paragraph at lines 109--113
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1297, pagebox=crop
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1325, pagebox=crop
 box, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -3338,7 +3368,7 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1300, page=1, page
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1328, page=1, page
 box=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -3399,7 +3429,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 735A92E8B950955DB1AEB1C8122E7FDD;4189.
+(rerunfilecheck)             Checksum: 6637BCAB3FC647614324EE7E722264AF;4186.
 
 
 LaTeX Warning: There were undefined references.
@@ -3408,14 +3438,14 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35094 strings out of 494472
+ 35150 strings out of 494472
  305243,953878 words of node,token memory allocated
  4583 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 7 glue, 351 kern, 83 glyph, 270 attribute, 202 glue
 _spec, 270 attribute_list, 2 write, 4 pdf_action nodes
-   avail lists: 1:1,2:7214,3:199,4:626,5:8513,6:4229,7:5294,8:4663,9:10624,10:25
+   avail lists: 1:1,2:7214,3:199,4:625,5:8513,6:4227,7:5294,8:4663,9:10624,10:25
 ,11:601
- 36369 multiletter control sequences out of 65536+600000
+ 36425 multiletter control sequences out of 65536+600000
  103 fonts using 11241191 bytes
  85i,18n,95p,2158b,1040s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
@@ -3428,9 +3458,9 @@ er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (65 pages, 2831840 bytes).
+Output written on Thesis.pdf (65 pages, 3448749 bytes).
 
-PDF statistics: 1383 PDF objects out of 1440 (max. 8388607)
+PDF statistics: 1411 PDF objects out of 1440 (max. 8388607)
  1237 compressed objects within 13 object streams
  665 named destinations out of 1000 (max. 131072)
  472 words of extra memory for PDF output out of 10000 (max. 100000000)

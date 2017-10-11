@@ -10,7 +10,26 @@ Throughout this section both transmitters are executing identical flowgraphs. Ge
 
 \subsection{Pure ALOHA}
 
-For two links with saturated ALOHA traffic we have zero throughput, since each and every package collides.  
+For two links with saturated ALOHA traffic we have zero throughput, since each and every package collides. 
+
+\begin{figure}[tb]
+	\label{fig:results-aloha-dbl}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure} 
+
+\clearpage
+
+
 
 \subsection{CSMA/CA With Large Parameter Set}
 
@@ -33,20 +52,186 @@ For two links with saturated ALOHA traffic we have zero throughput, since each a
 	\caption{Measurement results for the CSMA/CA with large parameter set}
 \end{figure}
 
+\clearpage
+
+
+
 \subsection{CSMA/CA With Small Parameter Set}
+
+\begin{figure}[tb]
+	\label{fig:results-csma-small-dbl}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
+
+\clearpage
+
+
+
 
 \subsection{CSMA/CA With Medium Parameter Set}
 
+\begin{figure}[tb]
+	\label{fig:results-csma-med-dbl}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
+
+\clearpage
+
+
+
 \subsection{1-persistent CSMA}
+
+\begin{figure}[tb]
+	\label{fig:results-difs-only-dbl}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
+
+\clearpage
+
+
+
 
 \section{Different Protocol Combinations}
 
-\subsection{ALOHA and Non-Persistent CSMA}
+\subsection{ALOHA and CSMA/CA}
 
-\subsection{Unsaturated ALOHA and Non-Persistent CSMA}
+\begin{figure}[tb]
+	\label{fig:results-aloha-csma}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
 
-\subsection{Inhomogeneous Non-Persistent CSMA }
+\clearpage
+
+
+
+\subsection{Unsaturated ALOHA and CSMA/CA}
+
+\begin{figure}[tb]
+	\label{fig:results-unsat-aloha-csma}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
+
+\clearpage
+
+
+
+
+\subsection{Inhomogeneous CSMA/CA }
+
+
 
 \subsection{1-persistent CSMA and ALOHA}
 
-\subsection{1-persistent CSMA and Non-Persistent CSMA}
+\begin{figure}[tb]
+	\label{fig:results-difs-aloha}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
+
+\clearpage
+
+
+
+\subsection{1-persistent CSMA and CSMA/CA}
+
+\begin{figure}[tb]
+	\label{fig:results-difs-csma}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}

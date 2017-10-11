@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  11 OCT 2017 02:18
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  11 OCT 2017 03:10
  system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.085 seconds
+luaotfload | main : initialization completed in 0.089 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2368,7 +2368,8 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/related_work.aux) (./chapters/methodology.aux)
 (./chapters/results.aux) (./chapters/conclusions.aux) (./appendices/scripts.aux
-) (./appendices/abbreviations.aux))
+) (./appendices/abbreviations.aux) (./appendices/list_figures.aux)
+(./appendices/list_tables.aux))
 \openout1 = Thesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -2387,16 +2388,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
-
-(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 26.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/t1ppl.fd
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -2464,7 +2463,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
-<pictures/inets_new.pdf, id=227, pagebox=cropbox, 3424.795pt x 477.785pt>
+<pictures/inets_new.pdf, id=235, pagebox=cropbox, 3424.795pt x 477.785pt>
 File: pictures/inets_new.pdf Graphic file (type pdf)
 <use pictures/inets_new.pdf>
 Package luatex.def Info: pictures/inets_new.pdf  used on input line 26. on input
@@ -2515,7 +2514,7 @@ Underfull \hbox (badness 1371) in paragraph at lines 21--22
 es-tion
  []
 
-<pictures/mac_classification.png, id=331, pagebox=cropbox, 443.6575pt x 242.9075
+<pictures/mac_classification.png, id=342, pagebox=cropbox, 443.6575pt x 242.9075
 pt>
 File: pictures/mac_classification.png Graphic file (type png)
 <use pictures/mac_classification.png>
@@ -2528,7 +2527,7 @@ Package luatex.def Info: Requested size: 206.0pt x 112.78401pt on input line 34.
 
 
 ] [3<./pictures/mac_classification.png>]
-<pictures/aloha_csma_performance.png, id=360, pagebox=cropbox, 722.7pt x 433.62p
+<pictures/aloha_csma_performance.png, id=370, pagebox=cropbox, 722.7pt x 433.62p
 t>
 File: pictures/aloha_csma_performance.png Graphic file (type png)
 <use pictures/aloha_csma_performance.png>
@@ -2536,7 +2535,7 @@ Package luatex.def Info: pictures/aloha_csma_performance.png  used on input line
  97. on input line 97.
 Package luatex.def Info: Requested size: 412.0pt x 247.19905pt on input line 97.
 
-<pictures/csma_1_persistent.png, id=370, pagebox=cropbox, 272.01625pt x 375.4025
+<pictures/csma_1_persistent.png, id=380, pagebox=cropbox, 272.01625pt x 375.4025
 pt>
 File: pictures/csma_1_persistent.png Graphic file (type png)
 <use pictures/csma_1_persistent.png>
@@ -2544,7 +2543,7 @@ Package luatex.def Info: pictures/csma_1_persistent.png  used on input line 106.
  on input line 106.
 Package luatex.def Info: Requested size: 90.6405pt x 125.09184pt on input line 1
 06.
-<pictures/csma_non_persistent.png, id=371, pagebox=cropbox, 403.5075pt x 375.402
+<pictures/csma_non_persistent.png, id=381, pagebox=cropbox, 403.5075pt x 375.402
 5pt>
 File: pictures/csma_non_persistent.png Graphic file (type png)
 <use pictures/csma_non_persistent.png>
@@ -2552,7 +2551,7 @@ Package luatex.def Info: pictures/csma_non_persistent.png  used on input line 10
 8. on input line 108.
 Package luatex.def Info: Requested size: 127.719pt x 118.81949pt on input line 1
 08.
-<pictures/csma_p_persistent.png, id=372, pagebox=cropbox, 452.69125pt x 579.1637
+<pictures/csma_p_persistent.png, id=382, pagebox=cropbox, 452.69125pt x 579.1637
 6pt>
 File: pictures/csma_p_persistent.png Graphic file (type png)
 <use pictures/csma_p_persistent.png>
@@ -2573,7 +2572,7 @@ pt is made with non-persistent
 
 [5<./pictures/aloha_csma_performance.png>] [6<./pictures/csma_1_persistent.png><
 ./pictures/csma_non_persistent.png><./pictures/csma_p_persistent.png>]
-<pictures/hidden_exposed_node_problem.png, id=409, pagebox=cropbox, 642.4pt x 22
+<pictures/hidden_exposed_node_problem.png, id=419, pagebox=cropbox, 642.4pt x 22
 0.825pt>
 File: pictures/hidden_exposed_node_problem.png Graphic file (type png)
 <use pictures/hidden_exposed_node_problem.png>
@@ -2583,7 +2582,7 @@ Package luatex.def Info: Requested size: 341.43306pt x 117.37025pt on input line
  173.
 
 [7<./pictures/hidden_exposed_node_problem.png>]
-<pictures/virtual_carrier_sensing.png, id=423, pagebox=cropbox, 689.57625pt x 23
+<pictures/virtual_carrier_sensing.png, id=433, pagebox=cropbox, 689.57625pt x 23
 6.885pt>
 File: pictures/virtual_carrier_sensing.png Graphic file (type png)
 <use pictures/virtual_carrier_sensing.png>
@@ -2592,7 +2591,7 @@ e 200. on input line 200.
 Package luatex.def Info: Requested size: 398.33858pt x 136.84036pt on input line
  200.
  [8<./pictures/virtual_carrier_sensing.png>] [9]
-<pictures/fm_radio_receiver_circuit.jpg, id=452, pagebox=cropbox, 803.0pt x 326.
+<pictures/fm_radio_receiver_circuit.jpg, id=462, pagebox=cropbox, 803.0pt x 326.
 21875pt>
 File: pictures/fm_radio_receiver_circuit.jpg Graphic file (type jpg)
 <use pictures/fm_radio_receiver_circuit.jpg>
@@ -2600,7 +2599,7 @@ Package luatex.def Info: pictures/fm_radio_receiver_circuit.jpg  used on input l
 ine 253. on input line 253.
 Package luatex.def Info: Requested size: 206.0pt x 83.68494pt on input line 253.
 
-<pictures/am_radio_receiver_circuit.jpg, id=453, pagebox=cropbox, 648.17157pt x 
+<pictures/am_radio_receiver_circuit.jpg, id=463, pagebox=cropbox, 648.17157pt x 
 387.69844pt>
 File: pictures/am_radio_receiver_circuit.jpg Graphic file (type jpg)
 <use pictures/am_radio_receiver_circuit.jpg>
@@ -2609,7 +2608,7 @@ ine 255. on input line 255.
 Package luatex.def Info: Requested size: 164.79749pt x 98.56895pt on input line 
 255.
  [10]
-<pictures/grc_ui.png, id=463, pagebox=cropbox, 1394.96156pt x 767.86874pt>
+<pictures/grc_ui.png, id=474, pagebox=cropbox, 1394.96156pt x 767.86874pt>
 File: pictures/grc_ui.png Graphic file (type png)
 <use pictures/grc_ui.png>
 Package luatex.def Info: pictures/grc_ui.png  used on input line 275. on input l
@@ -2638,7 +2637,7 @@ Overfull \hbox (8.03679pt too wide) in paragraph at lines 3--4
 ne-ces-sity to ver-ify the recorded
  []
 
-<pictures/measurement_setup.png, id=513, pagebox=cropbox, 628.3475pt x 626.34pt>
+<pictures/measurement_setup.png, id=523, pagebox=cropbox, 628.3475pt x 626.34pt>
 
 File: pictures/measurement_setup.png Graphic file (type png)
 <use pictures/measurement_setup.png>
@@ -2660,7 +2659,7 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 51.
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<pictures/grc_receiver_flowgraph.png, id=516, pagebox=cropbox, 1053.9375pt x 226
+<pictures/grc_receiver_flowgraph.png, id=526, pagebox=cropbox, 1053.9375pt x 226
 .59656pt>
 File: pictures/grc_receiver_flowgraph.png Graphic file (type png)
 <use pictures/grc_receiver_flowgraph.png>
@@ -2668,7 +2667,7 @@ Package luatex.def Info: pictures/grc_receiver_flowgraph.png  used on input line
  65. on input line 65.
 Package luatex.def Info: Requested size: 636.60028pt x 136.87523pt on input line
  65.
-<pictures/grc_sniffer_flowgraph.png, id=517, pagebox=cropbox, 273.27094pt x 65.4
+<pictures/grc_sniffer_flowgraph.png, id=527, pagebox=cropbox, 273.27094pt x 65.4
 9469pt>
 File: pictures/grc_sniffer_flowgraph.png Graphic file (type png)
 <use pictures/grc_sniffer_flowgraph.png>
@@ -2681,7 +2680,7 @@ Package luatex.def Info: Requested size: 190.98203pt x 45.773pt on input line 67
 
 
 ]
-<pictures/grc_aloha_transmitter_flowgraph.png, id=527, pagebox=cropbox, 1099.106
+<pictures/grc_aloha_transmitter_flowgraph.png, id=537, pagebox=cropbox, 1099.106
 25pt x 517.935pt>
 File: pictures/grc_aloha_transmitter_flowgraph.png Graphic file (type png)
 <use pictures/grc_aloha_transmitter_flowgraph.png>
@@ -2693,7 +2692,7 @@ Package luatex.def Info: Requested size: 636.60028pt x 299.99153pt on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/grc_csma_transmitter_flowgraph.png, id=536, pagebox=cropbox, 1246.6575
+<pictures/grc_csma_transmitter_flowgraph.png, id=546, pagebox=cropbox, 1246.6575
 pt x 471.26062pt>
 File: pictures/grc_csma_transmitter_flowgraph.png Graphic file (type png)
 <use pictures/grc_csma_transmitter_flowgraph.png>
@@ -2718,7 +2717,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 put line 129.
-<pictures/script_system.png, id=577, pagebox=cropbox, 743.77875pt x 1028.84375pt
+<pictures/script_system.png, id=587, pagebox=cropbox, 743.77875pt x 1028.84375pt
 >
 File: pictures/script_system.png Graphic file (type png)
 <use pictures/script_system.png>
@@ -2732,14 +2731,78 @@ LaTeX Warning: Float too large for page by 33.38983pt on input line 146.
 
 ) [22] [23<./pictures/script_system.png>]
 \openout2 = chapters/results.aux
- (./chapters/results.tex) [24
+ (./chapters/results.tex
+<pictures/results/same_combinations/csma_large_params/throughput_cdf.png, id=609
+, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_large_params/throughput_cdf.png Gr
+aphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/throughput_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/th
+roughput_cdf.png  used on input line 23. on input line 23.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 23.
+<pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cd
+f.png, id=610, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
+gy_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
+y_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
+oothed_channel_energy_cdf.png  used on input line 23. on input line 23.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 23.
+<pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_le
+vel_4_line_chart.png, id=611, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
+gy_level_4_line_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
+y_level_4_line_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
+oothed_channel_energy_level_4_line_chart.png  used on input line 27. on input li
+ne 27.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 27.
+File: pictures/results/same_combinations/csma_large_params/smoothed_channel_ener
+gy_cdf.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/smoothed_channel_energ
+y_cdf.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/sm
+oothed_channel_energy_cdf.png  used on input line 27. on input line 27.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 27.
+<pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_
+gantt_chart.png, id=612, pagebox=cropbox, 650.43pt x 433.62pt>
+File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
+tion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
+ion_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
+omed_channel_occupation_gantt_chart.png  used on input line 31. on input line 31
+.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 31.
+File: pictures/results/same_combinations/csma_large_params/zoomed_channel_occupa
+tion_gantt_chart.png Graphic file (type png)
+<use pictures/results/same_combinations/csma_large_params/zoomed_channel_occupat
+ion_gantt_chart.png>
+Package luatex.def Info: pictures/results/same_combinations/csma_large_params/zo
+omed_channel_occupation_gantt_chart.png  used on input line 31. on input line 31
+.
+Package luatex.def Info: Requested size: 247.20251pt x 164.79715pt on input line
+ 31.
+) [24
 
 
 
 ]
+[25<./pictures/results/same_combinations/csma_large_params/throughput_cdf.png><.
+/pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cd
+f.png><./pictures/results/same_combinations/csma_large_params/smoothed_channel_e
+nergy_level_4_line_chart.png><./pictures/results/same_combinations/csma_large_pa
+rams/zoomed_channel_occupation_gantt_chart.png>]
 \openout2 = chapters/conclusions.aux
 
-(./chapters/conclusions.tex) [25
+(./chapters/conclusions.tex) [26
 
 
 
@@ -2751,24 +2814,42 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [26
+) [27
 
 
 
-] [27] [28] [29]
+] [28] [29] [30]
 Overfull \hbox (58.0pt too wide) in paragraph at lines 238--239
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][]  
  []
 
-[30] [31] [32]) [33]
+[31] [32] [33]) [34]
 \openout2 = appendices/abbreviations.aux
- (./appendices/abbreviations.tex [34
+ (./appendices/abbreviations.tex [35
 
 
 
-] [35]) [36]
-(./Thesis.bbl
+] [36]) [37]
+\openout2 = appendices/list_figures.aux
+
+(./appendices/list_figures.tex (./Thesis.lof
+Overfull \hbox (12.62851pt too wide) in paragraph at lines 25--25
+ \T1/ppl/m/n/10.95 ex-e-cutes [][]\T1/pcr/m/n/10.95 mea[][]sure[][]ment_n.sh[] 
+\T1/ppl/m/n/10.95 re-motely. Sub-se-quently, [][]\T1/pcr/m/n/10.95 mea[][]sure[
+][]ment.sh[] 
+ []
+
+) [38
+
+
+])
+\openout2 = appendices/list_tables.aux
+ (./appendices/list_tables.tex (./Thesis.lot) [39
+
+
+
+]) (./Thesis.bbl
 bibitemlist
 
 Underfull \hbox (badness 10000) in paragraph at lines 69--71
@@ -2788,7 +2869,8 @@ l.87 N.~Rupasinghe and
 A funny symbol that I can't read has just been (re)read.
 Just continue, I'll change it to 0xFFFD.
 
-[37
+[40
+
 
 
 
@@ -2802,15 +2884,15 @@ Underfull \hbox (badness 1112) in paragraph at lines 104--108
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1078, pagebox=crop
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1159, pagebox=crop
 box, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f  used on input line 41. on input line 41.
+f  used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 41.
+ 43.
 
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
@@ -2819,9 +2901,9 @@ File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f  used on input line 41. on input line 41.
+f  used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 41.
+ 43.
 
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
@@ -2830,77 +2912,84 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1081, page=1, page
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=1162, page=1, page
 box=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 41. on input line 41.
+f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.45058pt x 845.15544pt on input line
- 41.
+ 43.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 41. on input line 41.
+f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 41.
-[38
+ 43.
+[41
 Missing character: There is no � (U+FFFD) in font pplr8t!
 ]
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 41. on input line 41.
+f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 41.
+ 43.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 41. on input line 41.
+f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 41.
+ 43.
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
 <use appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, page 1>
 Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
-f , page1 used on input line 41. on input line 41.
+f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
- 41.
- [39<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+ 43.
+ [42<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
 \tf@toc=\write7
 
 \openout7 = Thesis.toc
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+\tf@lof=\write8
+
+\openout8 = Thesis.lof
+\tf@lot=\write9
+
+\openout9 = Thesis.lot
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
 
 (./Thesis.aux (./chapters/introduction.aux) (./chapters/background.aux)
 (./chapters/related_work.aux) (./chapters/methodology.aux)
 (./chapters/results.aux) (./chapters/conclusions.aux) (./appendices/scripts.aux
-) (./appendices/abbreviations.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+) (./appendices/abbreviations.aux) (./appendices/list_figures.aux)
+(./appendices/list_tables.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5C97C81DE18FAD48CDFF31DD346497A0;4148.
+(rerunfilecheck)             Checksum: D656D32F269BDB4E0E1388D7F6250D32;4237.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34414 strings out of 494472
- 305243,953878 words of node,token memory allocated
- 4233 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 7 glue, 333 kern, 65 glyph, 238 attribute, 202 glue
-_spec, 238 attribute_list, 2 write nodes
-   avail lists: 1:1,2:7272,3:199,4:625,5:8523,6:4252,7:5294,8:4663,9:10624,10:25
+ 34586 strings out of 494472
+ 305219,953878 words of node,token memory allocated
+ 4550 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 7 glue, 346 kern, 83 glyph, 268 attribute, 202 glue
+_spec, 268 attribute_list, 2 write, 4 pdf_action nodes
+   avail lists: 1:1,2:7216,3:199,4:625,5:8514,6:4229,7:5294,8:4663,9:10624,10:25
 ,11:601
- 36321 multiletter control sequences out of 65536+600000
+ 36349 multiletter control sequences out of 65536+600000
  103 fonts using 11241191 bytes
  85i,18n,95p,2158b,1040s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
@@ -2913,10 +3002,10 @@ er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (45 pages, 2611180 bytes).
+Output written on Thesis.pdf (48 pages, 2820147 bytes).
 
-PDF statistics: 1161 PDF objects out of 1200 (max. 8388607)
- 1045 compressed objects within 11 object streams
- 579 named destinations out of 1000 (max. 131072)
- 456 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1243 PDF objects out of 1440 (max. 8388607)
+ 1115 compressed objects within 12 object streams
+ 591 named destinations out of 1000 (max. 131072)
+ 472 words of extra memory for PDF output out of 10000 (max. 100000000)
 

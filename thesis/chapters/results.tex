@@ -2,28 +2,51 @@
 
 For this chapter different combinations of two links employing pure ALOHA, non-persistent CSMA and 1-persitent-CSMA-like MAC protocols were run on the same channel. In-depth analysis of different metrics and a consecutive protocol assessment are provided. 
 
+\textbf{As a reminder:} If not specified otherwise all transmitters are backlogged. CSMA/CA throughout this thesis is not featuring the optional RTS/CTS exchange.
+
 \section{Same Protocol Combinations}
+
+Throughout this section both transmitters are executing identical flowgraphs. Generally, when both links use the same MAC protocol we expect to see comparable results for any over a sufficiently longer period of time, although small variations are also expected due to statistical and hardware-related effects and inaccuracies. 
 
 \subsection{Pure ALOHA}
 
-\subsection{Non-Persistent CSMA With Large Parameter Set}
+For two links with saturated ALOHA traffic we have zero throughput, since each and every package collides.  
 
-\subsection{Non-Persistent CSMA With Small Parameter Set}
+\subsection{CSMA/CA With Large Parameter Set}
 
-\subsection{Non-Persistent CSMA With Medium Parameter Set}
+\begin{figure}[tb]
+	\label{fig:results-csma-large-dbl}
+	\begin{center}
+		\centerline{
+			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/throughput_cdf}}
+			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/smoothed_channel_energy_cdf}}
+		}
+		\centerline{
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_large_params/zoomed_channel_occupation_gantt_chart}}
+		}		
+	\end{center}
+	\caption{Measurement results for the CSMA/CA with large parameter set}
+\end{figure}
 
-\subsection{DIFS-Only}
+\subsection{CSMA/CA With Small Parameter Set}
+
+\subsection{CSMA/CA With Medium Parameter Set}
+
+\subsection{1-persistent CSMA}
 
 \section{Different Protocol Combinations}
 
 \subsection{ALOHA and Non-Persistent CSMA}
 
-
-
 \subsection{Unsaturated ALOHA and Non-Persistent CSMA}
 
 \subsection{Inhomogeneous Non-Persistent CSMA }
 
-\subsection{DIFS-Only and ALOHA}
+\subsection{1-persistent CSMA and ALOHA}
 
-\subsection{DIFS-Only and Non-Persistent CSMA}
+\subsection{1-persistent CSMA and Non-Persistent CSMA}

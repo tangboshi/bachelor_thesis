@@ -115,61 +115,10 @@ class rtt:
                     for index in range(len(ack_received_times)):
                         retxs += [0]
 
-                # Let's get rid of the silly out index out of range bug by simply discarding
-                # the last frame in our calculations
-                # This also fixes wrong packet loss rate.
-                # Both bugs are due to the fact that the last ack might not be recevied when the
-                # transmission is interrupted due to the timer running out.
-                if len(data_sent_times) > len(ack_received_times) + sum(retxs_per_repetition):
-                    last_frame_retxs = retxs_per_repetition[-1]
-                    data_sent_times = data_sent_times[:-(last_frame_retxs+1)]
-                    retxs_per_repetition = retxs_per_repetition[:-1]
-                    print("len data_sent_times:"+str(len(data_sent_times)))
-                    print("len ack_received_times:"+str(len(ack_received_times)))
-                    print("sum retxs_per_repetition:"+str(sum(retxs_per_repetition)))
-                    print("len retxs_per_repetition:"+str(len(retxs_per_repetition)))
 
-                # Calculate RTT for each packet
+                #frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
+                #rtt_condition = self.rtt_mode == "rtt" and counter == 0
 
-                for idx, counter in enumerate(retxs_per_repetition):
-                    # This check must be added to catch the case where the last data
-                    # frame isnt followed up by an ACK (max retries)
-                    if len(ack_received_times) > idx:
-                        total_retxs += counter
-                        print("total_retxs"+str(total_retxs))
-                        frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
-                        rtt_condition = self.rtt_mode == "rtt" and counter == 0
-                        if frame_delay_condition or rtt_condition:
-                            if idx+total_retxs < len(data_sent_times) and idx < len(ack_received_times):
-                                res = ack_received_times[idx] - data_sent_times[idx+total_retxs]
-                                rtt_single_measurement += [round(res,5)]
-                            if counter == self.max_retxs:
-                                txs_fails += 1
-                    else:
-                        print("No corresponding ACK. Retransmission count was "+str(counter)+".")
-
-
-                print("\nThe resulting RTTs of this single measurement are:")
-                print(rtt_single_measurement)
-                print("\n")
-
-                #Now calculate mean RTT for this measurement
-                print(str(float(sum(rtt_single_measurement))))
-                print(str(len(rtt_single_measurement)))
-                if len(rtt_single_measurement) > 0:
-                    rtt_single_mean =   float(sum(rtt_single_measurement))/len(rtt_single_measurement)
-                else:
-                    rtt_single_mean =   0
-                # rtt_single_mean seems to be calculated correctly, but source data is odd.
-                print("\nThe resulting mean RTT of this single measurement is:")
-                print(rtt_single_mean)
-                print("\n")
-
-                print("self.rtt is:"+str(self.rtt))
-                self.rtt[index,i] = rtt_single_mean
-                print(str(self.rtt.shape))
-                print("index:"+str(index))
-                print("i:"+str(i))
 
                 ### Packet loss ###
                 packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )

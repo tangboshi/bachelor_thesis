@@ -105,7 +105,7 @@ class rtt:
                             line.strip("\n")
                             line = [int(item) for item in line.split()]
                             retxs_per_repetition += [item for item in line]
-                            print("retx: "+str(line))
+                            #print("retx: "+str(line))
                         #print("len:retx: "+str(len(retxs_per_repetition)))
 
 
@@ -136,7 +136,7 @@ class rtt:
                     # frame isnt followed up by an ACK (max retries)
                     if len(ack_received_times) > idx:
                         total_retxs += counter
-                        print("total_retxs"+str(total_retxs))
+                        #print("total_retxs"+str(total_retxs))
                         frame_delay_condition = self.rtt_mode == "frame_delay" and counter <= self.max_retxs
                         rtt_condition = self.rtt_mode == "rtt" and counter == 0
                         if frame_delay_condition or rtt_condition:

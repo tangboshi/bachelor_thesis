@@ -138,14 +138,20 @@ import sniffer
 #                 ]
 
 ################################################################################
-# measurement     =       [619,620,720,724]
-# links           =       [1,2,1,2]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
-#                 ]
+measurement     =       [
+                            756,757,
+                            #720,724
+                        ]
+links           =       [
+                            1,2,
+                            #1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+                ]
 
 # measurement     =       [638,639]#,716]
 # links           =       [1,2,1,2]
@@ -183,14 +189,14 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-measurement     =       [714,715,728,646]
-links           =       [1,2,1,2]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-                    r"unsaturated ALOHA ~ Poisson($1/\lambda=200ms$), Link 2 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-                    "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
-                ]
+# measurement     =       [714,715,728,646]
+# links           =       [1,2,1,2]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+#                     r"unsaturated ALOHA ~ Poisson($1/\lambda=200ms$), Link 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+#                     "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
+#                 ]
 
 ################################################################################
 # measurement     =       [644,643]
@@ -292,19 +298,20 @@ create_plots                = {
                                 "channel_occupation":   False,
                                 "sniffer":              False
                             }
+show_plot = True
 
-if len(measurement) == 2:
-    backoff_cond = True
-else:
-    backoff_cond = False
-sniffer_cond = backoff_cond
-
+# if len(measurement) == 2:
+#     backoff_cond = True
+# else:
+#     backoff_cond = False
+# sniffer_cond = backoff_cond
+#
 # create_plots                = {
-#                                 "rtt":                  False,
-#                                 "packet_loss":          False,
-#                                 "retxs":                False,
+#                                 "rtt":                  True,
+#                                 "packet_loss":          True,
+#                                 "retxs":                True,
 #                                 "throughput":           True,
-#                                 "diagnostic":           False,
+#                                 "diagnostic":           True,
 #                                 "backoff":              backoff_cond,
 #                                 "channel_occupation":   True,
 #                                 "sniffer":              sniffer_cond

@@ -9,6 +9,8 @@ A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/conclusions.aux
 A level-1 auxiliary file: appendices/scripts.aux
 A level-1 auxiliary file: appendices/abbreviations.aux
+A level-1 auxiliary file: appendices/list_figures.aux
+A level-1 auxiliary file: appendices/list_tables.aux
 The style file: IEEE.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -23,45 +25,45 @@ Database file #2: bibliography.bib
 Warning--empty journal in gomezmiguelez16
 
 Done.
-You've used 17 entries,
+You've used 18 entries,
             4087 wiz_defined-function locations,
-            1470 strings with 25242 characters,
-and the built_in function-call counts, 12872 in all, are:
-= -- 946
-> -- 349
+            1476 strings with 25464 characters,
+and the built_in function-call counts, 13184 in all, are:
+= -- 969
+> -- 350
 < -- 98
-+ -- 190
++ -- 191
 - -- 64
-* -- 623
-:= -- 1830
-add.period$ -- 36
-call.type$ -- 17
-change.case$ -- 19
+* -- 632
+:= -- 1879
+add.period$ -- 38
+call.type$ -- 18
+change.case$ -- 21
 chr.to.int$ -- 237
-cite$ -- 18
-duplicate$ -- 939
-empty$ -- 1105
+cite$ -- 19
+duplicate$ -- 970
+empty$ -- 1140
 format.name$ -- 75
-if$ -- 3034
+if$ -- 3106
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 180
-newline$ -- 78
+int.to.str$ -- 18
+missing$ -- 187
+newline$ -- 81
 num.names$ -- 14
-pop$ -- 466
+pop$ -- 488
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 959
+skip$ -- 984
 stack$ -- 0
-substring$ -- 546
-swap$ -- 738
+substring$ -- 549
+swap$ -- 753
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 17
+type$ -- 18
 warning$ -- 1
 while$ -- 52
-width$ -- 19
-write$ -- 178
+width$ -- 20
+write$ -- 185
 (There was 1 warning)

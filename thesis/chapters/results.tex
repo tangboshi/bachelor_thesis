@@ -16,12 +16,12 @@ For two links with saturated ALOHA traffic we have zero throughput, since each a
 	\label{fig:results-aloha-dbl}
 	\begin{center}
 		\centerline{
-			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/throughput_cdf}}
-			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cdf}}
+			\subfloat[throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/throughput_cdf}}
+			\subfloat[packet loss CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/packet_loss_cdf}}
 		}
 		\centerline{
-			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_level_4_line_chart}}
-			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cdf}}
+			\subfloat[channel energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[channel energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_cdf}}
 		}		
 	\end{center}
 	\caption{Measurement results for the CSMA/CA with large parameter set}
@@ -110,19 +110,19 @@ For two links with saturated ALOHA traffic we have zero throughput, since each a
 	\label{fig:results-difs-only-dbl}
 	\begin{center}
 		\centerline{
-			\subfloat[Throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/throughput_cdf}}
-			\subfloat[RTT]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cdf}}
+			\subfloat[throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/throughput_cdf}}
+			\subfloat[frame delay]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/frame_delay_cdf}}
 		}
 		\centerline{
-			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_level_4_line_chart}}
-			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/smoothed_channel_energy_cdf}}
+			\subfloat[Channel Energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/smoothed_channel_energy_level_4_line_chart}}
+			\subfloat[Channel Energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/smoothed_channel_energy_cdf}}
 		}
 		\centerline{
-			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/zoomed_channel_occupation_gantt_chart}}
-			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/csma_high_params/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Logical Channel Occupation]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/zoomed_channel_occupation_gantt_chart}}
+			\subfloat[Total Backoff]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/difs_only/backoff_(joint)_sum_cdf}}
 		}		
 	\end{center}
-	\caption{Measurement results for the CSMA/CA with large parameter set}
+	\caption{Measurement results for 1-persistent CSMA/CA}
 \end{figure}
 
 \clearpage
@@ -132,6 +132,7 @@ For two links with saturated ALOHA traffic we have zero throughput, since each a
 
 \section{Different Protocol Combinations}
 
+%flawed
 \subsection{ALOHA and CSMA/CA}
 
 \begin{figure}[tb]

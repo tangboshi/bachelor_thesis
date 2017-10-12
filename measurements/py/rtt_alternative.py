@@ -152,12 +152,14 @@ class rtt:
 
                 ### Packet loss ###
                 packet_loss_abs = float( len(data_sent_times) - len(ack_received_times) )
-                packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
+                if len(data_sent_times) > 0:
+                    packet_loss_rel = float( packet_loss_abs / len(data_sent_times) )
+                else:
+                    packet_loss_rel = 0
                 self.packet_loss_percent += [round(packet_loss_rel*100, 2)]
                 plp_per_measurement += [round(packet_loss_rel*100, 2)]
                 print("abs. packet loss: "+str(packet_loss_abs))
                 print("packet loss in %: "+str(self.packet_loss_percent[-1])+"%")
-
                 ### Average retransmissions per frame ###
                 ### practically the same  as packet loss
                 if not sum(retxs_per_repetition) == 0 and not len(retxs_per_repetition) == 0:

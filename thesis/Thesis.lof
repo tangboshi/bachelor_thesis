@@ -2,89 +2,89 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Classification of MAC techniques according to \cite {Garg07}}}{3}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Normalized throughput over offered load according to formulae in \cite {Garg07}, \cite {Bachir10}, \cite {Tanenbaum02}, with $a=\tau /T_p$, where $\tau $ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions 2-4 made in section \ref {sec:aloha}. }}{5}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The three flavors of CSMA}}{6}{figure.2.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1-persitent CSMA}}}{6}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {non-persistent CSMA}}}{6}{subfigure.3.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {p-persistent CSMA}}}{6}{subfigure.3.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Setup to explain the hidden and exposed node problem. Each node can only reach its neighbors.}}{7}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Virtual carrier sensing in CSMA/CA, as described in \cite {Tanenbaum02} and \cite {Gast05}}}{8}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Simple DIY radio receiver circuit diagrams}}{11}{figure.2.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FM Receiver}}}{11}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AM Receiver}}}{11}{subfigure.6.2}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces GNU Radio Companion GUI}}{11}{figure.2.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Setup to explain the hidden and exposed node problem. Each node can only reach its direct neighbors.}}{3}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of MAC techniques}}{4}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Normalized throughput over offered load according to formulae in \cite {Garg07}, \cite {Bachir10}, \cite {Tanenbaum02}, with $a=\tau /T_p$, where $\tau $ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions made in Section \ref {sec:aloha}. }}{7}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The three flavors of CSMA}}{8}{figure.2.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1-persitent CSMA}}}{8}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {non-persistent CSMA}}}{8}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {p-persistent CSMA}}}{8}{subfigure.4.3}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Virtual carrier sensing in CSMA/CA, as described in \cite {Tanenbaum02} and \cite {Gast05}}}{9}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Simple DIY radio receiver circuit diagrams}}{12}{figure.2.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FM Receiver}}}{12}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AM Receiver}}}{12}{subfigure.6.2}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces GNU Radio Companion GUI}}{12}{figure.2.7}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Photo of the measurement setup after many less successful tries due to different technical difficulties such as randomly failing devices, increased latency, asymmetrical RX/TX gains and more}}{16}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces GRC Receiver Flowgraphs}}{18}{figure.4.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Receiver}}}{18}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sniffer}}}{18}{subfigure.2.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces GRC Pure ALOHA Transmitter Flowgraph}}{19}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GRC CSMA Transmitter Flowgraph}}{20}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The three-phase measurement script system. Starting with the user calling {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}}, where n is the ID of the link, general settings are "imported" from {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.conf$\tmspace +\thickmuskip {.2777em}$}}. If the user sets {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$remote\_measurement$\tmspace +\thickmuskip {.2777em}$}} to 1 in the conf file then {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$remote\_measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}} synchronizes the files on the remote machine with the github repository, then executes {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}} remotely. Subsequently, {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement.sh$\tmspace +\thickmuskip {.2777em}$}} for link n works on open "jobs" from the {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$jobs\_open\_n$\tmspace +\thickmuskip {.2777em}$}} directories and optionally puts them into the {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$jobs\_done\_n$\tmspace +\thickmuskip {.2777em}$}} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$evaluation.py$\tmspace +\thickmuskip {.2777em}$}} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$myplot.py$\tmspace +\thickmuskip {.2777em}$}}.}}{23}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Photo of the measurement setup.}}{16}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces GRC Receiver Flowgraphs}}{19}{figure.4.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Receiver}}}{19}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sniffer}}}{19}{subfigure.2.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces GRC Pure ALOHA Transmitter Flowgraph}}{20}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GRC CSMA Transmitter Flowgraph}}{21}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The three-phase measurement script system. Starting with the user calling {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}}, where n is the ID of the link, general settings are "imported" from {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.conf$\tmspace +\thickmuskip {.2777em}$}}. If the user sets {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$remote\_measurement$\tmspace +\thickmuskip {.2777em}$}} to 1 in the conf file then {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$remote\_measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}} synchronizes the files on the remote machine with the github repository, then executes {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement\_n.sh$\tmspace +\thickmuskip {.2777em}$}} remotely. Subsequently, {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$measurement.sh$\tmspace +\thickmuskip {.2777em}$}} for link n works on open "jobs" from the {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$jobs\_open\_n$\tmspace +\thickmuskip {.2777em}$}} directories and optionally puts them into the {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$jobs\_done\_n$\tmspace +\thickmuskip {.2777em}$}} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$evaluation.py$\tmspace +\thickmuskip {.2777em}$}} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in {\ttfamily \relax \hlcode {$\tmspace +\thickmuskip {.2777em}$myplot.py$\tmspace +\thickmuskip {.2777em}$}}.}}{24}{figure.4.5}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{25}{figure.5.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{25}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{25}{subfigure.1.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{25}{subfigure.1.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{25}{subfigure.1.4}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Measurement results for the CSMA/CA with high parameter set}}{27}{figure.5.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{27}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{27}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{27}{subfigure.2.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{27}{subfigure.2.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{27}{subfigure.2.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{27}{subfigure.2.6}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Measurement results for the CSMA/CA with low parameter set}}{29}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{29}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{29}{subfigure.3.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{29}{subfigure.3.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{29}{subfigure.3.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{29}{subfigure.3.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{29}{subfigure.3.6}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Measurement results for the CSMA/CA with medium parameter set}}{31}{figure.5.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{31}{subfigure.4.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{31}{subfigure.4.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{31}{subfigure.4.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{31}{subfigure.4.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{31}{subfigure.4.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{31}{subfigure.4.6}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{33}{figure.5.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{33}{subfigure.5.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{33}{subfigure.5.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{33}{subfigure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{33}{subfigure.5.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{33}{subfigure.5.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{33}{subfigure.5.6}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{35}{figure.5.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{35}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{35}{subfigure.6.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{35}{subfigure.6.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{35}{subfigure.6.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{35}{subfigure.6.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{35}{subfigure.6.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{37}{figure.5.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{37}{subfigure.7.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{37}{subfigure.7.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{37}{subfigure.7.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{37}{subfigure.7.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{37}{subfigure.7.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{37}{subfigure.7.6}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{39}{figure.5.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{39}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{39}{subfigure.8.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{39}{subfigure.8.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{39}{subfigure.8.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{39}{subfigure.8.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{39}{subfigure.8.6}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{41}{figure.5.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{41}{subfigure.9.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{41}{subfigure.9.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{41}{subfigure.9.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{41}{subfigure.9.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{41}{subfigure.9.5}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{41}{subfigure.9.6}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{26}{figure.5.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{26}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {packet loss CDF}}}{26}{subfigure.1.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{26}{subfigure.1.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{26}{subfigure.1.4}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Measurement results for the CSMA/CA with high parameter set}}{28}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{28}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{28}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{28}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{28}{subfigure.2.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{28}{subfigure.2.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{28}{subfigure.2.6}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Measurement results for the CSMA/CA with low parameter set}}{30}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{30}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{30}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{30}{subfigure.3.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{30}{subfigure.3.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{30}{subfigure.3.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{30}{subfigure.3.6}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Measurement results for the CSMA/CA with medium parameter set}}{32}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{32}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{32}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {channel energy}}}{32}{subfigure.4.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {channel energy CDF}}}{32}{subfigure.4.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {logical channel occupation}}}{32}{subfigure.4.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {total backoff}}}{32}{subfigure.4.6}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Measurement results for 1-persistent CSMA/CA}}{34}{figure.5.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {throughput}}}{34}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {frame delay}}}{34}{subfigure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{34}{subfigure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{34}{subfigure.5.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{34}{subfigure.5.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{34}{subfigure.5.6}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{36}{figure.5.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{36}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{36}{subfigure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{36}{subfigure.6.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{36}{subfigure.6.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{36}{subfigure.6.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{36}{subfigure.6.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{38}{figure.5.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{38}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{38}{subfigure.7.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{38}{subfigure.7.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{38}{subfigure.7.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{38}{subfigure.7.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{38}{subfigure.7.6}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{40}{figure.5.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{40}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{40}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{40}{subfigure.8.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{40}{subfigure.8.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{40}{subfigure.8.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{40}{subfigure.8.6}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Measurement results for the CSMA/CA with large parameter set}}{42}{figure.5.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Throughput}}}{42}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RTT}}}{42}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Channel Energy}}}{42}{subfigure.9.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Channel Energy CDF}}}{42}{subfigure.9.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Logical Channel Occupation}}}{42}{subfigure.9.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Total Backoff}}}{42}{subfigure.9.6}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}

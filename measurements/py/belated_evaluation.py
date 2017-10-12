@@ -138,20 +138,20 @@ import sniffer
 #                 ]
 
 ################################################################################
-measurement     =       [
-                            742,743,
-                            725,727
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "ALOHA\nLink 1 @ 450MHz",
-                    "ALOHA\nLink 2 @ 450MHz",
-                    "ALOHA\nLink 1 @ 450MHz\n Baseline",
-                    "ALOHA\nLink 2 @ 450MHz\n Baseline",
-                ]
+# measurement     =       [
+#                             742,743,
+#                             725,727
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "ALOHA\nLink 1 @ 450MHz",
+#                     "ALOHA\nLink 2 @ 450MHz",
+#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
+#                     "ALOHA\nLink 2 @ 450MHz\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             619,620,
@@ -198,14 +198,36 @@ boxplot_xticks  = [
 #                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-# measurement     =       [643,644,725,716]
-# links           =       [1,2,1,1]
+# measurement     =       [
+#                             712,713,
+#                             728,729
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
+
+### flawed
+measurement     =       [
+                            643,644,
+                            716,725
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "ALOHA\nLink 1 @ 450MHz",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+                    "ALOHA\nLink 1 @ 450MHz\n Baseline",
+                ]
 
 # measurement     =       [708,709,728,724]
 # links           =       [1,2,1,2]
@@ -226,61 +248,7 @@ boxplot_xticks  = [
 #                 ]
 
 ################################################################################
-# measurement     =       [644,643]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "ALOHA saturated\nLink 2 @ 450MHz"
-#                 ]
 
-# measurement     =       [648,647]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
-#                 ]
-
-# measurement     =       [667,666]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
-#                 ]
-
-# measurement     =       [661,660]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA unsaturated\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
-#                 ]
-
-# measurement     =       [665,664]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA unsaturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "ALOHA unsaturated\nLink 2 @ 450MHz"
-#                 ]
-
-# measurement     =       [632,633]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
-#                 ]
-
-# measurement     =       [634,635]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=7.5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
-#                 ]
-#
-# measurement     =       [637,636]
-# links           =       [2,1]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
-#                 ]
 #From "Bash"
 repetitions             =   5
 data_source_path        =   "/home/alex/Schreibtisch/teebs/measurements/debug/data"

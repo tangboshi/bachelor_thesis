@@ -1,31 +1,58 @@
 \chapter{Background}
 
-In this chapter the theoretical foundations for the succeeding work are treated. Firstly, the MAC layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while analyzing performance with respect to the challenges and goals in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU Radio can be used to create SDR.
+In this chapter the theoretical foundations for the succeeding work are treated. Firstly, the Medium Access Control (MAC) layer is introduced in the context of the OSI reference model. Successively, a glance on a number of different MAC protocols and mechanisms is taken, while discussing performance with respect to the challenges and goals in wireless transmission. The chapter concludes with describing the advantages of software-defined radio (SDR) and how GNU (GNU is not Unix) Radio can be used to support SDR.
 
 \section{MAC Protocols}
 
 \subsection{MAC Layer in the OSI Model}
 
-The OSI model is a layered architecture that divides a telecommunication system into several manageable layers. The second of seven layers featured by the original model is the data link layer, which in turn is split into the upper logical link control (LLC) and the lower medium access control (MAC) sublayers. Table \ref{tab:osi-layers} gives a short overview of the layers' responsibilities. 
+The OSI (Open Systems Interconnection) model is a layered architecture that divides a telecommunication system into several manageable layers. It features seven layers, where the second layer - the Data Link Layer (DLL) - can be split into two sublayers. The focus of this thesis lies on the lower sublayer, which is MAC. The upper sublayer is Logical Link Control (LLC). Table \ref{tab:osi-layers} gives a short overview of the layers' responsibilities.
+
+\paragraph{MAC Responsibilities} These are some placeholder words for the actual content.
 
 \begin{table}[b]
 	\begin{center}
-		\begin{tabular}{p{3.5cm}p{10cm}}
+		\begin{tabular}{p{1cm}p{4cm}p{8cm}}
 			\toprule
-				Layer & Responsibilities \\
+				Level & Layer & Responsibilities \\
 			\midrule
-				Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
-				MAC Sublayer & controlling medium access and frame synchronization \\
-				LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control \\
-				Network Layer & routing and congestion control \\
-				Transport Layer & transmission reliability, same-order-delivery, congestion avoidance  \\
-				Session Layer & token management, dialog control, synchronization \\
-				Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
-				Application Layer & user application protocols, such as http, ftp, smtp and many more \\
+				1 & Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
+				2 & DLL: MAC Sublayer & controlling medium access and frame synchronization \\
+				2 & DLL: LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control \\
+				3 & Network Layer & routing and congestion control \\
+				4 &Transport Layer & transmission reliability, same-order-delivery, congestion avoidance  \\
+				5 & Session Layer & token management, dialog control, synchronization \\
+				6 & Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
+				7 & Application Layer & user application protocols, such as http, ftp, smtp and many more \\
 			\bottomrule
 		\end{tabular}\caption{Layers in the OSI model} \label{tab:osi-layers}
 	\end{center}
 \end{table}
+
+\subsection{Challenges for Wireless MAC Protocols}
+
+Wireless MAC protocols have to tackle a few problems that do not occur in wired data exchange. Among them are the hidden node and the exposed node problem, which will be discussed by reference to Figure \ref{fig:hidden_exposed_node_problem}. Further challenges, such as energy limitations will also be delineated.
+
+\subsubsection{The Hidden Node and the Exposed Node Problem}
+
+\begin{figure}[tb]
+	\label{fig:hidden_exposed_node_problem}
+	\begin{center}
+		\includegraphics[width=12cm]{pictures/hidden_exposed_node_problem}
+	\end{center}
+	\caption{Setup to explain the hidden and exposed node problem. Each node can only reach its direct neighbors.}
+\end{figure}
+
+Suppose that the radio range of the nodes in \ref{fig:hidden_exposed_node_problem} is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ does not hear $C$ and falsely assume that the channel is idle and start transmitting, which leads to a collision. This is the hidden node problem.
+
+For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending although collisions would only take place between $B$ and $C$, where it does not matter as both $B$ and $C$ are transmitters. This is the exposed node problem. 
+
+\subsubsection{Power Problems}
+
+% Citation needed for verification
+Further challenges when designing MAC protocols include the power conservation when faced with constrained power resources, as e.g. in wireless sensor networks (WSN) where devices rely on batteries for their power supply. Attempts to reduce energy consumption have been made in several specialized, duty-cycle based MAC protocols for WSN such as Sensor MAC, Timeout MAC and Berkeley MAC as in more detail shown in Section \ref{sec:duty-cycle-mac}.
+
+As a consequence of the constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system lifetime. It is due to this fact that security is paramount in biomedical or military fields of application \cite{raymond09}. 
 
 \subsection{Classification of MAC Protocols}
 
@@ -33,31 +60,39 @@ The OSI model is a layered architecture that divides a telecommunication system 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{pictures/mac_classification}
 	\end{center}
-	\caption{Classification of MAC techniques according to \cite{Garg07}}
+	\caption{Classification of MAC techniques}
 \end{figure}
 
-Traditional MAC protocols can be classified into one of two subgroups: reservation-based and contention-based. According to \cite{Bachir10} the appropriate choice of MAC protocol depends on a plethora of design-drivers such as requirements concerning throughput, latency, energy consumption and traffic patterns.
+Traditional MAC protocols can be classified into one of two groups: reservation-based and contention-based as depicted in Figure \ref{fig:mac-classification} \cite{Garg07}. The difference between them is that in reservation-based protocols a coordinator prevents collisions by assigning physical resources to devices, whereas in contention-based protocols no such infrastructure exists and nodes have to contend for channel utilization, hence the name. Another technique independent from these categories is to employ duty cycles (DC), where nodes continuously alternate between active and inactive periods. According to \cite{Bachir10} the appropriate choice of MAC protocol depends on a plethora of design-drivers such as requirements concerning throughput, latency, energy consumption and traffic patterns. 
+
+We will proceed with discussing representative protocols of the two categories. Thereafter, we will take a look at a few protocols that use DC mechanism.
 
 \subsection{Reservation-Based MAC Protocols}
+\label{sec:reservation-mac}
 
-Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time.
+Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a centrally coordinated schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time. Owing to the fact that we do not incorporate reservation-based protocols in our experiments we will only briefly describe the basic principles of the time-division multiple access (TDMA), frequency-division multiple access (FDMA) and code-division multiple access (CDMA). 
 
-TDMA is a representative protocol in this group, which divides time into frames. Each frame is subdivided into slots, where each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware. As a result, TDMA becomes less attractive for large-scale networks \cite{Bachir10}.  
+TDMA is a representative protocol in this group, which divides time into slots. Each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware \cite{Bachir10}.
 
+FDMA (FDMA) divides a frequency band into a number of channels. One or more may be assigned to each node. Receivers use bandpass filters to obtain the transmitted signal.
 
-\subsection{ALOHA}
+CDMA is a digital spread-spectrum technique where multiple transmitters share the same frequency band and transmissions may occur at the same time. In this method transmitted signals are combined (XORed) with special \footnote{by special we mean that the signal has certain properties such as orthogonality and in some cases pseudo-randomness} sequences making the transmitted signal's frequency vary in order to avoid interference. The receiver has to follow along this variation of frequency (that is to say know the spreading code) when decoding to retrieve the original data signal, resulting in increasing security as a side effect.
+
+It is also possible to combine several of these techniques. Making use of this, the base station (eNB) of LTE in the licensed band coordinates traffic by assigning physical resource blocks (PRB) to devices. A PRB is a combination of a frequency and a time slot based on the reservation techniques of orthogonal FDMA (OFDMA) and TDMA. 
+
+\subsection{Contention-Based MAC Protocols}
+\subsubsection{ALOHA}
 \label{sec:aloha}
 
-ALOHA is arguably the most simple MAC protocol. Whenever a user wants to send data he just does so. The higher the channel load, i.e. sending requests per time unit, the more likely collisions will occur, which render all transmitted information useless.
+ALOHA is arguably the most simple MAC protocol. Whenever a user wants to send data he just does so. The higher the channel load, i.e. transmissions per time unit, the more likely collisions will occur, which render all transmitted information useless.
 
 The question is how likely it is that a collision does not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions as shown in \cite{Tanenbaum02}:
 
 \smallskip
 
 \begin{enumerate}
-	\item We are taking a look at pure ALOHA.
 	\item We simplify the calculation by assuming a fixed frame length.
-	\item The number of packets generated during a frame time is a poisson-distributed random variable $X$.
+	\item The number of packets generated during a frame time is a Poisson-distributed random variable $X$.
 	\item The channel load $G$ comprises of two portions: "new" and retransmitted frames.
 \end{enumerate}
 
@@ -69,9 +104,9 @@ The probability mass function of the Poisson distribution and thus the probabili
 	Pr(X=k) = \frac{G^k\cdot e^{-G}}{k!}
 \end{equation}
 
-The probability of zero frames being generated during the transmission of the frame is $Pr(X=0) = e^{-G}$ (assumption 3). If no collision occurs during the transmission of frame $F$ no other frame was sent off during that transmission. Conversely, $F$ itself did not collide with a frame sent off prior to $F$. We conclude that the vulnerability period during which collision may corrupt data is two frame times (assumption 2).
+The probability of zero frames being generated during the transmission of the frame is $Pr(X=0) = e^{-G}$ (assumption 3). If no collision occurs during the transmission of frame $F$, no other frame was sent during that transmission. Conversely, $F$ itself did not collide with a frame sent off prior to $F$. We conclude that the vulnerability period during which collisions may corrupt data is two frame times (assumption 2).
 
-The probability that no frame other than the frame to be transmitted is generated during the two frame time vulnerability period is $P_0 = e^{-2G}$. The throughput $S$ is given by $S=GP_0 = Ge^{-2G}$.
+The probability that no frame other than the frame to be transmitted is generated during the two-frame-time vulnerability period is $P_0 = e^{-2G}$. The throughput $S$ is given by $S=GP_0 = Ge^{-2G}$.
 
 The maximum throughput is achieved when $\frac{\partial S}{\partial G} \stackrel{!}{=} 0$:
 
@@ -84,11 +119,11 @@ The maximum throughput is achieved when $\frac{\partial S}{\partial G} \stackrel
 	
 This means that for $G=0.5$ the throughput S reaches its maximum $S_\text{ALOHA,max} = \frac{1}{2e} \approx 0.18$. This result is very reasonable, since the transmission of a frame is vulnerable for the duration of two frame times, so the maximum is achieved when sending exactly every second slot, where a slot is equivalent to the frame time.
 
-As an aside, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA allows transmission only at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case and the need for synchronization. 
+We note that, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA divides time into slots, where transmissions are may only commence at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case and the need for synchronization. 
 
-As shown in figure \ref{fig:aloha-csma-performance} ALOHA's performance is discouraging and improvements over ALOHA were found. 
+As shown in Figure \ref{fig:aloha-csma-performance}, ALOHA's performance is discouraging and improvements over ALOHA were found. 
 
-\subsection{CSMA}
+\subsubsection{CSMA}
 \label{sec:csma}
 
 \begin{figure}[tb]
@@ -96,10 +131,10 @@ As shown in figure \ref{fig:aloha-csma-performance} ALOHA's performance is disco
 	\begin{center}
 		\includegraphics[width=\textwidth]{pictures/aloha_csma_performance}
 	\end{center}
-	\caption{Normalized throughput over offered load according to formulae in \cite{Garg07}, \cite{Bachir10},  \cite{Tanenbaum02}, with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions 2-4 made in section \ref{sec:aloha}. }
+	\caption{Normalized throughput over offered load according to formulae in \cite{Garg07}, \cite{Bachir10},  \cite{Tanenbaum02}, with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions made in Section \ref{sec:aloha}. }
 \end{figure}
 
-Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by the "listen before talk" (LBT) mechanism, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three flavors, as depicted in figure \ref{fig:csma-flavors} which will be discussed next.
+Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by "listen before talk" (LBT) mechanisms, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three flavors, i.e. 1-persistent CSMA, non-persistent CSMA and p-persistent CSMA as depicted in Figure \ref{fig:csma-flavors} which will be discussed next.
 
 \begin{figure}[tb] \label{fig:csma-flavors}
 	\begin{center}
@@ -113,86 +148,48 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 \end{figure}
 
 
-\subsubsection{1-Persistent CSMA}
+\paragraph{1-Persistent CSMA}
 
-When the channel is busy 1-persistent CSMA waits until the channel becomes idle. As soon as the channel is found idle a frame is transmitted with a probability of 1, hence 1-persistent CSMA. If the frame collides with another, the node waits for a random backoff time and then the whole process is started all over again.
+If the channel is busy, 1-persistent CSMA waits until the channel becomes idle. As soon as the channel is found idle a frame is transmitted with a probability of 1, hence 1-persistent CSMA. If the frame collides with another, the node waits for a random backoff time and then the whole process is started all over again.
 
-Despite being a substantial improvement over ALOHA, this protocol has at least two problems:
+Despite being a substantial improvement over ALOHA, this protocol has at least two problems \cite{Tanenbaum02}:
 
 \begin{itemize}
-	\item Provided propagation delay is zero or negligible, collisions can still occur.  Imagine a three-node-scenario with nodes $A$, $B$ and $C$. $A$ is transmitting, while $B$ and $C$ are waiting for their turn. Once $A$ finished transmission $B$ and $C$ will lunge onto the channel like a pack of wolves leading to collision.
+	\item Provided propagation delay is zero or negligible, collisions can still occur.  Imagine a three-node-scenario with nodes $A$, $B$ and $C$. $A$ is transmitting, while $B$ and $C$ are waiting for their turn. Once $A$ finished transmission $B$ and $C$ will simultaneously start their transmissions leading to collision.
 	
-	\item If propagation delay is not negligible the protocol suffers from an additional problem. In this scenario $A$ has just begun sending. $B$ will assume the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper this protocol's performance.
+	\item If propagation delay is not negligible the protocol suffers from an additional problem. In another scenario $A$ has just begun sending. $B$ will assume the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper the performance of this protocol.
 \end{itemize}  
 
-\subsubsection{Non-Persistent CSMA}
+\paragraph{Non-Persistent CSMA}
 
-In order to alleviate 1-persistent CSMA's problem with several nodes trying to seize the channel as soon as it becomes idle a less greedy attempt is made with non-persistent CSMA. Instead of continuously sensing the channel until it becomes idle nodes wait a random backoff time until they listen again. As a result, this protocol leads to better channel utilization with the downside of higher delays.
+In order to alleviate 1-persistent CSMA's problem with several nodes trying to seize the channel as soon as it becomes idle, a less greedy attempt is made with non-persistent CSMA. Instead of continuously sensing the channel until it becomes idle, the nodes wait a random backoff time until they listen again. As a result, this protocol leads to better channel utilization with the downside of higher delays.
 
-\subsubsection{P-Persistent CSMA}
+\paragraph{P-Persistent CSMA}
 
-P-persitent CSMA is a protocol for slotted channels. Whenever a node $A$ wishes to send off a packet the channel is sensed. If the channel is found idle it transmits its packet with a probability of $p$. With a probability $1-p$ it defers the transmissions to the next slot. This process is repeated until one either the packet is sent off or the channel is found busy again. In the latter case $A$ acts as though a collision had taken place and waits a random time until starting again.
+P-persitent CSMA is a protocol for slotted channels. Whenever a node $A$ wishes to send a packet, the channel is sensed. If the channel is found idle the node transmits its packet with a probability of $p$. With a probability $1-p$ the node defers its transmission to the next slot. This process is repeated until either the packet is sent or the channel is found busy again. In the latter case $A$ acts as though a collision had taken place and waits a random time until starting again \cite{Tanenbaum02}.
 
-This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA and non-persistent CSMA, where the choice of $p$ determines the greediness. The smaller $p$, the less greedy and thus the closer p-persistent CSMA approximates non-persistent behavior. An appropriate choice of $p$ can get the best out of both worlds: minimal delays as in 1-persistent CSMA, as well as high channel efficiency as in non-persistent CSMA.
+This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA and non-persistent CSMA, where the choice of $p$ determines the greediness. The smaller $p$, the less greedy and thus the closer p-persistent CSMA approximates non-persistent behavior. An appropriate choice of $p$ can get the best out of both mechanisms: minimal delays as in 1-persistent CSMA, as well as high channel efficiency as in non-persistent CSMA.
 
-\subsection{CSMA with Collision Detection}
+\subsubsection{CSMA with Collision Detection}
 
-A way to further improve CSMA-family protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves bandwidth, time and energy. 
+A way to further improve the CSMA protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves bandwidth, time and energy. 
 
-CSMA/CD is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted signal's energy or pulse width, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signal spreads spherically around its origin and thus degrades with the second order of distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.
+CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted energy or pulse width of the signal, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signals spread in all directions around their origin and thus degrade exponentially with the distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as energy consumption.
 
-%\begin{equation}
-%	P = \int_{A} I(\vec{x}) \, dA
-%\end{equation}
-%
-%Where $P$ is the power, $I$ the intensity as function of the position $\vec{x}$ and $dA$ the differential element of a closed surface around the source. Assuming that the integration takes place over the surface of a sphere with the radius $r$ the term simplifies to:
-%
-%\begin{eqnarray} 
-%	& P = & \abs{I(r)} \cdot 4\pi r^2 \\
-%	\label{eqn:intensity}
-%	\Leftrightarrow & \abs{I(r)} = & \frac{P}{4\pi r^2} 
-%\end{eqnarray}
-%
-%Another, and more common quantity in telecommunications is signal-to-noise ratio (SNR), which is defined as follows, where $P$ is the signal power and $N$ the noise power: 
-%
-%\begin{equation} \label{eqn:snr}
-%	SNR [dB] = 10 \, log \left( \frac{P}{N} \right)
-%\end{equation}
-%
-%Equations \ref{eqn:intensity} and \ref{eqn:snr} imply if we increase the distance $r$ by $\sqrt{2}$ the signal's intensity halves or lose 3dB in SNR, respectively. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as electricity consumption.  
+\subsubsection{CSMA with Collision Avoidance}
 
-\subsection{Challenges for Wireless MAC Protocols}
+% Restructure!!
+IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next.
 
-Wireless MAC protocols have to tackle a few problems that do not occur in wired data exchange. Among them are the hidden node and the exposed node problem, which will be discussed by reference to \ref{fig:hidden_exposed_node_problem}. Further challenges, such as energy limitations will also be delineated.
+As depicted in Figure \ref{fig:virtual_carrier_sensing} there are named intervals of specified length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others. 
 
-\subsubsection{The Hidden Node and the Exposed Node Problem}
+The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one node out of the two nodes in dialog to have a higher priority when accessing the channel. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
-\begin{figure}[tb]
-	\label{fig:hidden_exposed_node_problem}
-	\begin{center}
-		\includegraphics[width=12cm]{pictures/hidden_exposed_node_problem}
-	\end{center}
-	\caption{Setup to explain the hidden and exposed node problem. Each node can only reach its neighbors.}
-\end{figure}
-
-Suppose that the node's radio range is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ won't hear $C$ and falsely assume that the channel is idle and start transmitting. This is the hidden node problem.
-
-For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending despite collisions would only take place between $B$ and $C$, where it does not matter. This is the exposed node problem. 
-
-\subsubsection{Further Challenges}
-
-% Citation needed for verification
-Further challenges to MAC protocol design include the power conservation when faced with constrained power resources, as in wireless sensor networks (WSN) where devices rely on batteries for their supply with power. Attempts to mitigate waste of energy have been made in several specialized, duty-cycle based MACs such as Sensor MAC, Timeout MAC and Berkeley MAC as in more detail shown in section \ref{sec:duty-cycle-mac}.
-
-On the same page, due to constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system's lifetime. It is due to this fact that security is paramount in biomedical or military fields of application \cite{raymond09}. 
-
-\subsection{CSMA with Collision Avoidance}
-
-802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer.
+For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 is operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
 
 Beside physical carrier sensing previously simply referred to as carrier sensing another mechanism, namely virtual carrier sensing in combination with RTS/CTS exchange is (optionally) employed to mitigate the trouble caused by hidden nodes. 
 
-In order to explain these mechanisms we refer to the setup of figure \ref{fig:hidden_exposed_node_problem} with a slight modification in so far as that each node's radio range shall span across two neighboring nodes in both directions. That is to say, $A$ can hear $B$ and $C$, but not $D$ and so on. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
+In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hidden_exposed_node_problem}. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
 
 \begin{figure}[tb]
 	\label{fig:virtual_carrier_sensing}
@@ -202,17 +199,21 @@ In order to explain these mechanisms we refer to the setup of figure \ref{fig:hi
 	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}}
 \end{figure}
 
-$A$ wants to send to $B$, hence issues a request to send (RTS). Every node receiving the RTS is shut down, except for $B$ that in response to the RTS creates a clear to send (CTS) frame. Not only $A$ receives this CTS frame, but also $D$, a hidden node from $A$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame in this case $A$ wants to transmit. Based on this length $C$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $C$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that no physical process is involved in obtaining the channel status. Shutting down nodes has the beneficial side-effect of reducing overhearing and therefore reduces energy consumption.
+$B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame in this case $B$ wants to transmit. Based on this length $A$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that no physical process is involved in obtaining the channel status. Shutting down nodes has the beneficial side-effect of reducing overhearing and therefore reduces energy consumption.
 
-As further depicted in figure \ref{fig:virtual_carrier_sensing} there are named intervals of specified length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others. 
 
-The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one party out of the two parties in dialog send off their frame without interference by another node. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
-For the sake of completeness, we briefly mention two previously consciously left out intervals, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If 802.11 is operates in an alternative mode of operation, where the base station acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the base station to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
+
+
+LTE in the licensed band uses reservation-based techniques as will be discussed in more detail in Section \ref{sec:reservation-mac}. Additional measures need to be taken if LTE was to share the unlicensed bands with contention-based services such as WiFi. The reason is that reservation-based rely on the fact that the coordinating node, i.e. the base station, has full control of all traffic.
+ 
+The two principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band are on the hand LTE-U, a duty-cycle-based approach (LTE-U CSAT) and on the other hand LAA, relying on LBT. Since LAA largely resembles CSMA/CA's LBT mechanism it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. LTE-U CSAT (carrier sense adaptive transmission) tries to avoid primary channels of WiFi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on WiFi medium utilization (MU). If MU is below a certain threshold the DC is increased, if it is between that threshold and a higher one the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
+
+With the carrier aggregation (CA) in LTE Unlicensed primary cells (PCells) used to establish and maintain the connection of UE (user equipment) to the network and secondary cells (SCells) need to be distinguished. One or more additional SCells can be allocated to extend a UE's bandwidth. On the grounds that the unlicensed carrier is shared with multiple systems the same QoS, reliability and mobility cannot be achieved as on the licensed carrier. For this reason unlicensed carriers are only allocated in supplemental downlink (SDL) SCells.
 
 \subsection{Duty-Cycle-Based MAC Protocols} \label{sec:duty-cycle-mac}  
 
-In duty-cycle-based MAC schemes nodes repeatedly alternate between active and sleep phases to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The share of an active period in a cycle is called duty factor. Sources to this section were \cite{Bachir10} and \cite{Demirkol06}.
+In duty-cycle-based MAC schemes nodes repeatedly alternate between active and sleep phases to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The share of an active period in a cycle is called duty factor. Sources to this Section were \cite{Bachir10} and \cite{Demirkol06}.
 
 \subsubsection{Sensor MAC}
 
@@ -226,24 +227,15 @@ While TMAC shares the same principle of schedule establishment with SMAC nodes a
 
 Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA further reducing energy use \cite{Polastre04}. 
 
-\subsection{LTE in the Unlicensed Band}
-\label{sec:lte-mac}
-
-The base station (eNB) of LTE in the licensed band coordinates traffic by assigning physical resource blocks (PRB) to users. The set of PRBs is a cartesian product of frequency and time slots based on the reservation techniques of OFDMA and TDMA. 
-
-Clearly, additional measures need to be taken if LTE was to share the unlicensed bands with contention-based services such as WiFi. The two principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band are on the hand LTE-U, a duty-cycle-based approach (LTE-U CSAT) and on the other hand LAA, relying on LBT. Since LAA in large part resembles CSMA/CA's LBT mechanism it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. LTE-U CSAT (carrier sense adaptive transmission) tries to avoid primary channels of WiFi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on WiFi medium utilization (MU). If MU is below a certain threshold the DC is increased, if it is between that threshold and a higher one the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
-
-With the carrier aggregation (CA) in LTE Unlicensed primary cells (PCells) used to establish and maintain the connection of UE (user equipment) to the network and secondary cells (SCells) need to be distinguished. One or more additional SCells can be allocated to extend a UE's bandwidth. On the grounds that the unlicensed carrier is shared with multiple systems the same QoS, reliability and mobility cannot be achieved as on the licensed carrier. For this reason unlicensed carriers are only allocated in supplemental downlink (SDL) SCells.
-
-\section{Software Defined Radio}
+\section{Software-Defined Radio}
  
-\subsection{Purpose of Software Defined Radio}
+\subsection{Purpose of Software-Defined Radio}
 
 Traditional radio equipment is "hardware-defined", i.e. that the signal processing runs on a specialized electrical circuit. This has the potential advantages of efficient energy use and cheap production at the cost of limited flexibility in operation. 
 
-In SDR signal processing components such as filters, amplifiers, modulators, detectors and many more are implemented in software and mostly run on general-purpose processors, sometimes in combination with DSPs and FPGAs.
+In SDR signal processing components such as filters, amplifiers, modulators, detectors and many more are implemented in software and mostly run on general-purpose processors, sometimes in combination with digital speech processors (DSPs) and field programmable gate arrays (FPGAs).
 
-While the limitations of hardware-defined radios are acceptable for a number of applications, such as e.g. self-made radio receivers as shown in figure \ref{fig:radio-receiver-circuits}, it is very desirable to get rid of these limitations for rapid prototyping of new technologies including but not limited to cognitive radio, software-defined antennas and wireless mesh networks. In the case of this thesis SDR simplifies studying the influence of different MAC mechanisms.
+While the limitations of hardware-defined radios are acceptable for a number of applications, such as e.g. self-made radio receivers as shown in Figure \ref{fig:radio-receiver-circuits}, it is very desirable to get rid of these limitations for rapid prototyping of new technologies including but not limited to cognitive radio, software-defined antennas and wireless mesh networks. In the case of this thesis SDR simplifies studying the influence of different MAC mechanisms.
 
 \begin{figure}[t]
 	\label{fig:radio-receiver-circuits}

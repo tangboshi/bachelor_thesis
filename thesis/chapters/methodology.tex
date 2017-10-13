@@ -136,7 +136,9 @@ The channel occupation chart as in figure \ref{fig:channel-occupation-example} p
 
 \subsection{Channel Energy Level}
 
-The energy levels (denoted in a linear-scale, non-negative power unit) in the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by opting in data representation as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step roughly at $y=0.5$.
+The energy levels (denoted in a linear-scale, non-negative power unit) in the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by opting in data representation as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step where the height of the "energy columns" to the left and right have equal height, i.e. both senders have sent an equal number of data packets.
+
+\subsection{Additional Measures}
 
 \section{Measurement Script System}
 \label{sec:script-system}

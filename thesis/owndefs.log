@@ -1,5 +1,5 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  9 OCT 2017 02:39
- restricted system commands enabled.
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  12 OCT 2017 17:01
+ system commands enabled.
 **owndefs.tex
 (./owndefs.tex
 LaTeX2e <2017-04-15>
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.096 seconds
+luaotfload | main : initialization completed in 0.084 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 
 ! LaTeX Error: \usepackage before \documentclass.
@@ -57,18 +57,6 @@ Type  H <return>  for immediate help.
                                                   
 l.5 \usepackage{
               physics}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \usepackage{
-              svg}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -127,7 +115,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \usepackage{
+l.11 \usepackage[rawfloats=true]{
+                               floatrow}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \usepackage{
                soul}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -266,7 +266,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \renewenvironment{quote}
+l.59 \renewenvironment{quote}
                            %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -280,12 +280,12 @@ If that doesn't work, type  X <return>  to quit.
 
 
 Here is how much of LuaTeX's memory you used:
- 27 strings out of 494472
+ 26 strings out of 494472
  100000,89155 words of node,token memory allocated 2703 words of node memory still in use:
    6 hlist, 2 local_par, 1 dir, 29 glue, 4 penalty, 349 glyph, 21 attribute, 35 
 glue_spec, 21 attribute_list nodes
    avail lists: 2:3,3:1,4:17,5:5,7:19,8:1,10:16
- 4282 multiletter control sequences out of 65536+600000
+ 4281 multiletter control sequences out of 65536+600000
  15 fonts using 717767 bytes
  12i,1n,10p,93b,61s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!

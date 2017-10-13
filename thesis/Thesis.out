@@ -9,45 +9,47 @@
 \BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Classification of MAC Protocols}{section.2.1}% 9
 \BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 Reservation-Based MAC Protocols}{section.2.1}% 10
 \BOOKMARK [2][-]{subsection.2.1.5}{2.1.5 Contention-Based MAC Protocols}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Duty-Cycle-Based MAC Protocols}{section.2.1}% 12
-\BOOKMARK [1][-]{section.2.2}{2.2 Software-Defined Radio}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Purpose of Software-Defined Radio}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 What is GNU Radio?}{section.2.2}% 15
-\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Core Concepts of GNU Radio}{section.2.2}% 16
-\BOOKMARK [0][]{chapter.3}{3 Related Work}{}% 17
-\BOOKMARK [1][-]{section.3.1}{3.1 Coexistence Study by Gomez-Miguelez et al.}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{3.2 Coexistence Study by Capretti et al.}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{3.3 Connection to Our Work}{chapter.3}% 20
-\BOOKMARK [0][]{chapter.4}{4 Measurement Methodology}{}% 21
-\BOOKMARK [1][-]{section.4.1}{4.1 Measurement Setup}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{4.2 GNU Radio Flowgraphs}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Receiver and Sniffer}{section.4.2}% 24
-\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Pure ALOHA Transmitter}{section.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 CSMA Transmitter}{section.4.2}% 26
-\BOOKMARK [1][-]{section.4.3}{4.3 Measurement Metrics}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Throughput}{section.4.3}% 28
-\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Round-Trip Time}{section.4.3}% 29
-\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Backoff Times}{section.4.3}% 30
-\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Packet Durations \046 Channel Occupation}{section.4.3}% 31
-\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Channel Energy Level}{section.4.3}% 32
-\BOOKMARK [1][-]{section.4.4}{4.4 Measurement Script System}{chapter.4}% 33
-\BOOKMARK [0][]{chapter.5}{5 Measurement Results}{}% 34
-\BOOKMARK [1][-]{section.5.1}{5.1 Same Protocol Combinations}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Pure ALOHA}{section.5.1}% 36
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 CSMA/CA With High Parameter Set}{section.5.1}% 37
-\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 CSMA/CA With Low Parameter Set}{section.5.1}% 38
-\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 CSMA/CA With Medium Parameter Set}{section.5.1}% 39
-\BOOKMARK [2][-]{subsection.5.1.5}{5.1.5 1-persistent CSMA}{section.5.1}% 40
-\BOOKMARK [1][-]{section.5.2}{5.2 Different Protocol Combinations}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 ALOHA and CSMA/CA}{section.5.2}% 42
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Unsaturated ALOHA and CSMA/CA}{section.5.2}% 43
-\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Inhomogeneous CSMA/CA }{section.5.2}% 44
-\BOOKMARK [2][-]{subsection.5.2.4}{5.2.4 1-persistent CSMA and ALOHA}{section.5.2}% 45
-\BOOKMARK [2][-]{subsection.5.2.5}{5.2.5 1-persistent CSMA and CSMA/CA}{section.5.2}% 46
-\BOOKMARK [0][]{chapter.6}{6 Conclusions and Future Work}{}% 47
-\BOOKMARK [0][]{appendix.A}{A Bash and Python Scripts}{}% 48
-\BOOKMARK [0][]{appendix.B}{B Abbreviations}{}% 49
-\BOOKMARK [0][]{section*.8}{List of Figures}{}% 50
-\BOOKMARK [0][]{section*.9}{List of Tables}{}% 51
-\BOOKMARK [0][]{section*.11}{Bibliography}{}% 52
-\BOOKMARK [0][]{section*.11}{Declaration}{}% 53
+\BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Duty-Cycle MAC Protocols}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.7}{2.1.7 LTE-U}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{2.2 Software-Defined Radio}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Purpose of Software-Defined Radio}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 What is GNU Radio?}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Core Concepts of GNU Radio}{section.2.2}% 17
+\BOOKMARK [0][]{chapter.3}{3 Related Work}{}% 18
+\BOOKMARK [1][-]{section.3.1}{3.1 Coexistence Study by Gomez-Miguelez et al.}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{3.2 Coexistence Study by Capretti et al.}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{3.3 Connection to Our Work}{chapter.3}% 21
+\BOOKMARK [0][]{chapter.4}{4 Measurement Methodology}{}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Measurement Setup}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{4.2 GNU Radio Flowgraphs}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Receiver and Sniffer}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Pure ALOHA Transmitter}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 CSMA Transmitter}{section.4.2}% 27
+\BOOKMARK [1][-]{section.4.3}{4.3 Measurement Metrics}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Throughput}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Round-Trip Time}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Packet Loss and Retransmissions per Frame}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Backoff Times}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Packet Durations \046 Channel Occupation}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.6}{4.3.6 Channel Energy Level}{section.4.3}% 34
+\BOOKMARK [1][-]{section.4.4}{4.4 Measurement Script System}{chapter.4}% 35
+\BOOKMARK [0][]{chapter.5}{5 Measurement Results}{}% 36
+\BOOKMARK [1][-]{section.5.1}{5.1 Same Protocol Combinations}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Pure ALOHA}{section.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 CSMA/CA With High Parameter Set}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 CSMA/CA With Low Parameter Set}{section.5.1}% 40
+\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 CSMA/CA With Medium Parameter Set}{section.5.1}% 41
+\BOOKMARK [2][-]{subsection.5.1.5}{5.1.5 1-persistent CSMA}{section.5.1}% 42
+\BOOKMARK [1][-]{section.5.2}{5.2 Different Protocol Combinations}{chapter.5}% 43
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 ALOHA and CSMA/CA}{section.5.2}% 44
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Unsaturated ALOHA and CSMA/CA}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Inhomogeneous CSMA/CA }{section.5.2}% 46
+\BOOKMARK [2][-]{subsection.5.2.4}{5.2.4 1-persistent CSMA and ALOHA}{section.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.2.5}{5.2.5 1-persistent CSMA and CSMA/CA}{section.5.2}% 48
+\BOOKMARK [0][]{chapter.6}{6 Conclusions and Future Work}{}% 49
+\BOOKMARK [0][]{appendix.A}{A Bash and Python Scripts}{}% 50
+\BOOKMARK [0][]{appendix.B}{B Abbreviations}{}% 51
+\BOOKMARK [0][]{section*.8}{List of Figures}{}% 52
+\BOOKMARK [0][]{section*.9}{List of Tables}{}% 53
+\BOOKMARK [0][]{section*.11}{Bibliography}{}% 54
+\BOOKMARK [0][]{section*.11}{Declaration}{}% 55

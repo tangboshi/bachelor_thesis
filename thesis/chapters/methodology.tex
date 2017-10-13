@@ -4,7 +4,7 @@ This chapter is dedicated to answering the questions of what was measured and ho
 
 \section{Measurement Setup}
 
-The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. The former pair is programmed as receiver and sniffer, whereas the latter as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from the institute's computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Hereafter, we will call the node pair 10.0.0.9-10.0.0.6 link 1 and 10.0.0.3-10.0.0.6 link 2. Table \ref{tab:measurement-parameters} contains other necessary information to reproduce the measurement results.
+The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. The former pair is programmed as receiver and sniffer, whereas the latter as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from a local computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Hereafter, we will call the node pair 10.0.0.9-10.0.0.6 link 1 and 10.0.0.3-10.0.0.6 link 2. Table \ref{tab:measurement-parameters} contains other necessary information to reproduce the measurement results.
 
 \begin{figure}[tb]
 	\label{fig:measurement-setup}
@@ -95,7 +95,36 @@ We define throughput as the mean useful data \footnote{payload and headers disre
 
 \subsection{Round-Trip Time}
 
-We define round-trip time as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} in \code{rtt.py} is set to \code{rtt} then this calculation excludes retransmitted frames. As an experimental feature if \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. Note, however that when the latter mode is chosen correct numbers are only guaranteed if the maximum number of retransmissions is never once reached, since there is no currently implemented way of telling if the acknowledgment belongs to the current or the next data frame in that case. We will, however, throughout the whole theis refer to the actual round-trip time according to its original definition disregarding retransmitted frames. 
+We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt} then this calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
+
+\begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate rtt and frame\_delay,label=lst:rtt]
+# pointer onto data frame which we use for frame delay calculation
+data_pos = 0
+for k,ack in enumerate(ack_received_times):
+    for l,data in enumerate(data_sent_times):
+		# go to 1st data frame that is sent after the respective ack 
+        if data > ack:
+            if self.rtt_mode == "rtt":
+				# the data frame before current position l 
+				# must be the frame the ack corresponds to
+                rtt_single_measurement += [round(ack - data_sent_times[l-1],5)]
+            if self.rtt_mode == "frame_delay":
+				# the pointer onto our frame delay reference
+				# is used to calculate frame delay
+                rtt_single_measurement += [round(ack - data_sent_times[data_pos], 5)]
+			# set new reference point for frame delay calculation
+            data_pos = l
+			# break loop to look at next ack frame!
+            break
+\end{lstlisting} 
+
+Another way to calculate the RTT is by recording the number of retransmissions of each data frame and subtracting the element with the correct offset in \code{data\_sent\_times} from each ACK reception time. We will not show any code (which can be found in \code{rtt.py}) here, because this has not been used to create any of the plots, although it has been verified to return the same results as the first method. 
+
+\subsection{Packet Loss and Retransmissions per Frame}
+
+Obtaining both metrics involves data processed in \code{rtt.py}, which is why they are calculated there as well. Specifically, we make use of the lists containing the timestamps of ACKs and data frames as well as the number of retransmissions per frame. 
+We define packet loss as $ 1 - \frac{n_\text{ACKs}}{n_\text{data}} $, where $ n_\text{ACKs} $ and $ n_\text{data} $ are the number of ACK packets received and data packets sent by the transmitter.
+Retransmissions per frame are obtained simply by recording them with a \code{counter} block, which is incremented whenever the \code{timeout} runs out and reset when an ACK is received.
 
 \subsection{Backoff Times}
 
@@ -132,3 +161,4 @@ boxplot_xticks  = [
 	\end{center}
 	\caption{The three-phase measurement script system. Starting with the user calling \code{measurement\_n.sh}, where n is the ID of the link, general settings are "imported" from \code{measurement\_n.conf}. If the user sets \code{remote\_measurement} to 1 in the conf file then \code{remote\_measurement\_n.sh} synchronizes the files on the remote machine with the github repository, then executes \code{measurement\_n.sh} remotely. Subsequently, \code{measurement.sh} for link n works on open "jobs" from the \code{jobs\_open\_n} directories and optionally puts them into the \code{jobs\_done\_n} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded \code{evaluation.py} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in \code{myplot.py}.}
 \end{figure}
+

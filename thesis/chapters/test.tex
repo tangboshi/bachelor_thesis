@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{caption}
+\usepackage[rawfloats=true]{floatrow}
+
+\begin{document}
+
+\begin{figure}
+  \floatsetup{heightadjust=all, valign=c}
+  \begin{floatrow}
+    \ffigbox{%
+      \rule{3cm}{6cm}% replace with figure
+    }{%
+      \captionof{figure}{A figure}%
+      \label{fig:test1}%
+    }
+    \ffigbox{%
+      \rule{3cm}{3cm}% replace with figure
+    }{%
+      \captionof{figure}{Another figure}%
+      \label{fig:test2}%
+    }
+  \end{floatrow}
+\end{figure}
+
+\end{document}

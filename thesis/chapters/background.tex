@@ -54,6 +54,7 @@ Further challenges when designing MAC protocols include the power conservation w
 
 As a consequence of the constrained energy resources, WSN are especially susceptible to denial of sleep attacks, a special form of denial of service (DoS) attack, drastically increasing energy consumption and thus reducing the system lifetime. It is due to this fact that security is paramount in biomedical or military fields of application \cite{raymond09}. 
 
+
 \subsection{Classification of MAC Protocols}
 
 \begin{figure}[tb] \label{fig:mac-classification}
@@ -96,8 +97,6 @@ The question is how likely it is that a collision does not occur. In other words
 	\item The channel load $G$ comprises of two portions: "new" and retransmitted frames.
 \end{enumerate}
 
-
-
 The probability mass function of the Poisson distribution and thus the probability of $k$ frames being generated during a given frame time amounts to:
 
 \begin{equation}
@@ -138,15 +137,16 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 
 \begin{figure}[tb] \label{fig:csma-flavors}
 	\begin{center}
-		\subfloat[1-persitent CSMA]{\includegraphics[width=0.22\textwidth,valign=c]{pictures/csma_1_persistent}}
+		\subfloat[1-persitent CSMA]{\includegraphics[width=0.22\textwidth]{pictures/csma_1_persistent}}
 		\qquad
-		\subfloat[non-persistent CSMA]{\includegraphics[width=0.31\textwidth,valign=c]{pictures/csma_non_persistent}}
+		\subfloat[non-persistent CSMA]{\includegraphics[width=0.31\textwidth]{pictures/csma_non_persistent}}
 		\qquad
-		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth,valign=c]{pictures/csma_p_persistent}}
+		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth]{pictures/csma_p_persistent}}
 	\end{center}
-\caption{The three flavors of CSMA}
+\caption{The three basic flavors of CSMA}
 \end{figure}
 
+%LTE Unlicensed sends all control traffic through the licensed carriers, because in the unlicensed carrier the same quality of service, reliability and mobility cannot be achieved. The reason is that the unlicensed carrier is shared with multiple other systems that are out of the LTE operator's control. For this reason unlicensed carriers are only allocated for supplemental downlink (SDL) traffic.
 
 \paragraph{1-Persistent CSMA}
 
@@ -178,19 +178,6 @@ CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basi
 
 \subsubsection{CSMA with Collision Avoidance}
 
-% Restructure!!
-IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next.
-
-As depicted in Figure \ref{fig:virtual_carrier_sensing} there are named intervals of specified length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others. 
-
-The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one node out of the two nodes in dialog to have a higher priority when accessing the channel. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
-
-For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 is operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to this action's low priority is the longest interval among the mentioned four. 
-
-Beside physical carrier sensing previously simply referred to as carrier sensing another mechanism, namely virtual carrier sensing in combination with RTS/CTS exchange is (optionally) employed to mitigate the trouble caused by hidden nodes. 
-
-In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hidden_exposed_node_problem}. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
-
 \begin{figure}[tb]
 	\label{fig:virtual_carrier_sensing}
 	\begin{center}
@@ -199,21 +186,32 @@ In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hi
 	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}}
 \end{figure}
 
-$B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame in this case $B$ wants to transmit. Based on this length $A$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that no physical process is involved in obtaining the channel status. Shutting down nodes has the beneficial side-effect of reducing overhearing and therefore reduces energy consumption.
+IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next.
 
+As depicted in Figure \ref{fig:virtual_carrier_sensing} there are specific intervals of given length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others.
 
+The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one node out of the two nodes in dialog to have a higher priority to access the channel than uninvolved nodes. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
+For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 is operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to the low priority of this action is the longest interval among the mentioned four. 
 
+Physical carrier sensing takes place in these intervals. If a node wants to transmit a packet and the channel is sensed busy in one of these intervals then the node defers its transmission and launches the binary exponential backoff (BEB) procedure \cite{Gast05}. With BEB a node picks a slot in the so-called contention window (CW). This slot is just a random integer and the contention window is a range lower-bounded by zero and upper-bounded by $2^{n+m}-1$, where $m$ is a fixed integer, $2^m$ called minimum CW ($CW_\text{min}$) and $n=0$ for the moment. After picking the slot the node waits for $t_w = \text{\#slot} \cdot t_s+ t_i$, where $\text{\#slot}$ is the number of the slot, $t_s$ a constant called backoff slot duration or simply backoff slot and $t_i$ the appropriate of the four intervals SIFS, PIFS, DIFS and EIFS. After $t_w$ has elapsed the channel is sensed again. In the case it is sensed busy again the whole BEB procedure is repeated with $n$ incremented, thus the CW doubled, hence \textbf{binary} exponential backoff.  The motivation for $CW_\text{min}$ is to reduce the chance that two contending nodes pick the same slot in the first round of BEB.   
 
-LTE in the licensed band uses reservation-based techniques as will be discussed in more detail in Section \ref{sec:reservation-mac}. Additional measures need to be taken if LTE was to share the unlicensed bands with contention-based services such as WiFi. The reason is that reservation-based rely on the fact that the coordinating node, i.e. the base station, has full control of all traffic.
- 
-The two principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band are on the hand LTE-U, a duty-cycle-based approach (LTE-U CSAT) and on the other hand LAA, relying on LBT. Since LAA largely resembles CSMA/CA's LBT mechanism it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. LTE-U CSAT (carrier sense adaptive transmission) tries to avoid primary channels of WiFi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on WiFi medium utilization (MU). If MU is below a certain threshold the DC is increased, if it is between that threshold and a higher one the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
+Beside physical carrier sensing, another mechanism, namely virtual carrier sensing using RTS/CTS exchange is optionally employed to mitigate the problems caused by hidden nodes. In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hidden_exposed_node_problem}. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
 
-With the carrier aggregation (CA) in LTE Unlicensed primary cells (PCells) used to establish and maintain the connection of UE (user equipment) to the network and secondary cells (SCells) need to be distinguished. One or more additional SCells can be allocated to extend a UE's bandwidth. On the grounds that the unlicensed carrier is shared with multiple systems the same QoS, reliability and mobility cannot be achieved as on the licensed carrier. For this reason unlicensed carriers are only allocated in supplemental downlink (SDL) SCells.
+$B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame that, in this case, $B$ wants to transmit. Based on this length, $A$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that the nodes defer their transmission based on the information received through other frames.
 
-\subsection{Duty-Cycle-Based MAC Protocols} \label{sec:duty-cycle-mac}  
+\subsubsection{LAA}
+% EDCA
+One principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band is LAA, relying on LBT. Since the LBT mechanism of LAA largely resembles CSMA/CA it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. The other one is LTE-U which uses DCs and is discussed in Section \ref{sec:lteu}.
 
-In duty-cycle-based MAC schemes nodes repeatedly alternate between active and sleep phases to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The share of an active period in a cycle is called duty factor. Sources to this Section were \cite{Bachir10} and \cite{Demirkol06}.
+\subsection{Duty-Cycle MAC Protocols} \label{sec:duty-cycle-mac}  
+
+In duty-cycle MAC schemes nodes repeatedly alternate between active and inactive phases. In some protocols, especially in those designed for WSNs, nodes may sleep when inactive to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The fraction of an active period in a cycle is called duty factor. Sources to this Section were \cite{Bachir10} and \cite{Demirkol06}.
+
+\subsection{LTE-U}
+\label{sec:lteu}
+%reference
+LTE-U uses Carrier Sense Adaptive Transmission (CSAT), which tries to avoid primary channels of WiFi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on WiFi medium utilization (MU). If MU is below a certain threshold the DC is increased. If it is between that threshold and a higher one, the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
 
 \subsubsection{Sensor MAC}
 
@@ -237,7 +235,7 @@ In SDR signal processing components such as filters, amplifiers, modulators, det
 
 While the limitations of hardware-defined radios are acceptable for a number of applications, such as e.g. self-made radio receivers as shown in Figure \ref{fig:radio-receiver-circuits}, it is very desirable to get rid of these limitations for rapid prototyping of new technologies including but not limited to cognitive radio, software-defined antennas and wireless mesh networks. In the case of this thesis SDR simplifies studying the influence of different MAC mechanisms.
 
-\begin{figure}[t]
+\begin{figure}[tb]
 	\label{fig:radio-receiver-circuits}
 	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
 	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
@@ -246,18 +244,18 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 		\qquad
 		\subfloat[AM Receiver]{\includegraphics[width=0.4\textwidth,valign=c]{pictures/am_radio_receiver_circuit}}
 	\end{center}
-	\caption{Simple DIY radio receiver circuit diagrams}
+	\caption{Simple do-it-yourself (DIY) radio receiver circuit diagrams}
 \end{figure}
 
 \subsection{What is GNU Radio?}
 
 \label{sec:gnu-radio}
 
-The GNU Radio (GR) project is dedicated to the evolution of a free and open-source SDK enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flowgraphs simply by connecting signal processing blocks into a directed graph. Its audience is not merely limited to research and industry, but also encompasses academia, government and private users.
+The GNU Radio (GR) project is dedicated to the evolution of a free and open-source software development kit (SDK) enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flowgraphs simply by connecting signal processing blocks into a directed graph. Its target user market is not merely limited to research and industry, but also encompasses academia, government and private users.
 
 A proprietary, well-documented alternative to GNU Radio is LabVIEW developed by National Instruments. LabVIEW takes a purely graphical approach similar to GRC relying on block diagrams, but lacks the freedom of user-defined block creation with a programming language such as C++ or Python.
 
-Mathworks MATLAB/Simulink also provides a communication systems toolbox, however the institute's devices are not on the list of officially supported devices \cite{Matlab}.
+Mathworks MATLAB/Simulink also provides a communication systems toolbox. However, the devices we used are not on the list of officially supported devices \cite{Matlab}.
 
 \begin{figure}[t]
 	\label{fig:gnuradio}
@@ -288,4 +286,4 @@ When designing packet-based protocols, such as MAC protocols it is of tremendous
 
 Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic containers of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing \cite{GRDocs}.
 
-SWIG (simplified wrapper and interface generator) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.
+Simplified wrapper and interface generator (SWIG) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.

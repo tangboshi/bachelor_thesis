@@ -1,8 +1,19 @@
 \chapter{Measurement Results}
 
-For this chapter different combinations of two links employing pure ALOHA, non-persistent CSMA and 1-persitent-CSMA-like MAC protocols were run on the same channel. In-depth analysis of different metrics and a consecutive protocol assessment are provided. 
+In this chapter we discuss different combinations of MAC protocols employed on the two links. Firstly, we briefly discuss how we configured the flowgraphs for to model the MAC protocols studied. Thereafter, we assess the measurement results where both senders employ the same MAC protocols. Eventually, we do the same where the senders employ different MAC protocols. 
 
-\textbf{As a reminder:} If not specified otherwise all transmitters are backlogged. CSMA/CA throughout this thesis is not featuring the optional RTS/CTS exchange.
+If not specified otherwise all transmitters are backlogged. CSMA/CA throughout this thesis is not featuring the optional RTS/CTS exchange.
+
+\section{Flowgraph Protocol Configuration}
+
+\paragraph{Pure ALOHA}
+
+\paragraph{CSMA/CA}
+
+\paragraph{1-persistent CSMA}
+
+\paragraph{Traffic Saturation}
+
 
 \section{Same Protocol Combinations}
 
@@ -10,25 +21,29 @@ Throughout this section both transmitters are executing identical flowgraphs. Ge
 
 \subsection{Pure ALOHA}
 
-For two links with saturated ALOHA traffic we have zero throughput, since each and every package collides. 
-
+For two links with saturated ALOHA traffic we should have zero throughput, since each and every package collides. Figure \ref{fig:results-aloha-dbl-1} confirms this assumption since throughput is zero and the corresponding packet loss is 100\%.
+In \ref{fig:results-aloha-dbl-2} provides a physical view on the channel from the perspective of the sniffer. Due to very slight misalignment of the sender transmissions we 
 \begin{figure}[tb]
-	\label{fig:results-aloha-dbl}
+	\label{fig:results-aloha-dbl-1}
 	\begin{center}
 		\centerline{
 			\subfloat[throughput]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/throughput_cdf}}
 			\subfloat[packet loss CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/packet_loss_cdf}}
-		}
+		}		
+	\end{center}
+	\caption{Measurement results for two ALOHA senders in the same channel}
+\end{figure} 
+
+\begin{figure}[tb]
+	\label{fig:results-aloha-dbl-2}
+	\begin{center}
 		\centerline{
 			\subfloat[channel energy]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_level_4_line_chart}}
 			\subfloat[channel energy CDF]{\includegraphics[width=0.6\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_cdf}}
 		}		
 	\end{center}
-	\caption{Measurement results for the CSMA/CA with large parameter set}
-\end{figure} 
-
-\clearpage
-
+	\caption{Measurement results for two ALOHA senders in the same channel}
+\end{figure}
 
 
 \subsection{CSMA/CA With High Parameter Set}

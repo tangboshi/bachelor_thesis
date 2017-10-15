@@ -6,15 +6,15 @@ In this chapter the theoretical foundations for the succeeding work are treated.
 
 \subsection{MAC Layer in the OSI Model}
 
-The OSI (Open Systems Interconnection) model is a layered architecture that divides a telecommunication system into several manageable layers. It features seven layers, where the second layer - the Data Link Layer (DLL) - can be split into two sublayers. The focus of this thesis lies on the lower sublayer, which is MAC. The upper sublayer is Logical Link Control (LLC). Table \ref{tab:osi-layers} gives a short overview of the layers' responsibilities.
+The OSI (Open Systems Interconnection) model is a layered architecture that divides a telecommunication system into several manageable layers. It features seven layers, where the second layer - the Data Link Layer (DLL) - can be split into two sublayers. The focus of this thesis lies on the lower sublayer, which is MAC. The upper sublayer is Logical Link Control (LLC). Table \ref{tab:osi-layers} gives a short overview of the layers' responsibilities. We will now take a closer look at the MAC functionalities in IEEE 802.11 (WLAN) networks. 
 
-\paragraph{MAC Responsibilities} These are some placeholder words for the actual content.
+\paragraph{MAC Functionalities} The MAC layer provides the functionalities to enable connection-less (datagram style) transfer of data between nodes. It transparently carries the data of the next higher - the LLC layer - as service data unit (SDU). Other important functions include frame delimiting and recognition, addressing of destination stations, conveying the source-address, protection against errors with frame check sequences and controlling the access to physical medium \cite{802-std}. In this thesis we will only examine physical medium access aspects. 
 
 \begin{table}[b]
 	\begin{center}
 		\begin{tabular}{p{1cm}p{4cm}p{8cm}}
 			\toprule
-				Level & Layer & Responsibilities \\
+				Level & Layer & Principal Functionalities \\
 			\midrule
 				1 & Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
 				2 & DLL: MAC Sublayer & controlling medium access and frame synchronization \\
@@ -25,7 +25,7 @@ The OSI (Open Systems Interconnection) model is a layered architecture that divi
 				6 & Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
 				7 & Application Layer & user application protocols, such as http, ftp, smtp and many more \\
 			\bottomrule
-		\end{tabular}\caption{Layers in the OSI model} \label{tab:osi-layers}
+		\end{tabular}\caption{Layers in the OSI model \cite{osi}} \label{tab:osi-layers}
 	\end{center}
 \end{table}
 
@@ -43,9 +43,9 @@ Wireless MAC protocols have to tackle a few problems that do not occur in wired 
 	\caption{Setup to explain the hidden and exposed node problem. Each node can only reach its direct neighbors.}
 \end{figure}
 
-Suppose that the radio range of the nodes in \ref{fig:hidden_exposed_node_problem} is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ does not hear $C$ and falsely assume that the channel is idle and start transmitting, which leads to a collision. This is the hidden node problem.
+Suppose that the radio range of the nodes in \ref{fig:hidden_exposed_node_problem} is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ does not hear $C$ and falsely assume that the channel is idle and start transmitting, which leads to a collision. This is the hidden node problem \cite{Tanenbaum02}\cite{Gast05}.
 
-For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending although collisions would only take place between $B$ and $C$, where it does not matter as both $B$ and $C$ are transmitters. This is the exposed node problem. 
+For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending although collisions would only take place between $B$ and $C$, where it does not matter as both $B$ and $C$ are transmitters. This is the exposed node problem \cite{Tanenbaum02}\cite{Gast05} . 
 
 \subsubsection{Power Problems}
 
@@ -75,9 +75,9 @@ Reservation-based protocols may implement an array of desirable features, but re
 
 TDMA is a representative protocol in this group, which divides time into slots. Each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware \cite{Bachir10}.
 
-FDMA (FDMA) divides a frequency band into a number of channels. One or more may be assigned to each node. Receivers use bandpass filters to obtain the transmitted signal.
+FDMA (FDMA) divides a frequency band into a number of channels. One or more may be assigned to each node. Receivers use bandpass filters to obtain the transmitted signal \cite{Garg07}.
 
-CDMA is a digital spread-spectrum technique where multiple transmitters share the same frequency band and transmissions may occur at the same time. In this method transmitted signals are combined (XORed) with special \footnote{by special we mean that the signal has certain properties such as orthogonality and in some cases pseudo-randomness} sequences making the transmitted signal's frequency vary in order to avoid interference. The receiver has to follow along this variation of frequency (that is to say know the spreading code) when decoding to retrieve the original data signal, resulting in increasing security as a side effect.
+CDMA is a digital spread-spectrum technique where multiple transmitters share the same frequency band and transmissions may occur at the same time. In this method transmitted signals are combined (XORed) with special \footnote{by special we mean that the signal has certain properties such as orthogonality and in some cases pseudo-randomness} sequences making the transmitted signal's frequency vary in order to avoid interference. The receiver has to follow along this variation of frequency (that is to say know the spreading code) when decoding to retrieve the original data signal, resulting in increasing security as a side effect \cite{Garg07}.
 
 It is also possible to combine several of these techniques. Making use of this, the base station (eNB) of LTE in the licensed band coordinates traffic by assigning physical resource blocks (PRB) to devices. A PRB is a combination of a frequency and a time slot based on the reservation techniques of orthogonal FDMA (OFDMA) and TDMA. 
 
@@ -85,7 +85,7 @@ It is also possible to combine several of these techniques. Making use of this, 
 \subsubsection{ALOHA}
 \label{sec:aloha}
 
-ALOHA is arguably the most simple MAC protocol. Whenever a user wants to send data he just does so. The higher the channel load, i.e. transmissions per time unit, the more likely collisions will occur, which render all transmitted information useless.
+ALOHA is arguably the most simple MAC protocol. Whenever a device wants to send data it just does so. The higher the channel load, i.e. transmissions per time unit, the more likely collisions will occur, which render all transmitted information useless.
 
 The question is how likely it is that a collision does not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions as shown in \cite{Tanenbaum02}:
 
@@ -118,7 +118,7 @@ The maximum throughput is achieved when $\frac{\partial S}{\partial G} \stackrel
 	
 This means that for $G=0.5$ the throughput S reaches its maximum $S_\text{ALOHA,max} = \frac{1}{2e} \approx 0.18$. This result is very reasonable, since the transmission of a frame is vulnerable for the duration of two frame times, so the maximum is achieved when sending exactly every second slot, where a slot is equivalent to the frame time.
 
-We note that, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA divides time into slots, where transmissions are may only commence at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case and the need for synchronization. 
+We note that, the throughput can be doubled with slotted ALOHA. In contrast to pure ALOHA, slotted ALOHA divides time into slots, where transmissions may only commence at the beginning of slots, which effectively halves the vulnerability period to only one slot, since frames transmitted prior to a frame $F$ cannot interfere with $F$ anymore. Thus, $S_\text{ALOHA,max} = \frac{1}{e} \approx 0.36$, reached at $G=1$. However, this comes at the cost of an additional frame delay of $t_\text{slot}$ in the worst case and $\frac{t_\text{slot}}{2}$ in the average case and the need for synchronization. 
 
 As shown in Figure \ref{fig:aloha-csma-performance}, ALOHA's performance is discouraging and improvements over ALOHA were found. 
 
@@ -130,10 +130,10 @@ As shown in Figure \ref{fig:aloha-csma-performance}, ALOHA's performance is disc
 	\begin{center}
 		\includegraphics[width=\textwidth]{pictures/aloha_csma_performance}
 	\end{center}
-	\caption{Normalized throughput over offered load according to formulae in \cite{Garg07}, \cite{Bachir10},  \cite{Tanenbaum02}, with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions made in Section \ref{sec:aloha}. }
+	\caption{Normalized throughput over offered load according to formulae in \cite{Tanenbaum02}, \cite{Garg07}, \cite{Bachir10},  , with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions made in Section \ref{sec:aloha}. }
 \end{figure}
 
-Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by "listen before talk" (LBT) mechanisms, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three flavors, i.e. 1-persistent CSMA, non-persistent CSMA and p-persistent CSMA as depicted in Figure \ref{fig:csma-flavors} which will be discussed next.
+Main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by "listen before talk" (LBT) mechanisms, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three basic flavors, i.e. 1-persistent CSMA, non-persistent CSMA and p-persistent CSMA as depicted in Figure \ref{fig:csma-flavors} which will be discussed next.
 
 \begin{figure}[tb] \label{fig:csma-flavors}
 	\begin{center}
@@ -186,7 +186,7 @@ CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basi
 	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}}
 \end{figure}
 
-IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next.
+IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next in accordance to \cite{Gast05} and \cite{Garg07}. 
 
 As depicted in Figure \ref{fig:virtual_carrier_sensing} there are specific intervals of given length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others.
 
@@ -194,32 +194,30 @@ The short interframe spacing (SIFS) is the interval until the next control frame
 
 For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 is operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to the low priority of this action is the longest interval among the mentioned four. 
 
-Physical carrier sensing takes place in these intervals. If a node wants to transmit a packet and the channel is sensed busy in one of these intervals then the node defers its transmission and launches the binary exponential backoff (BEB) procedure \cite{Gast05}. With BEB a node picks a slot in the so-called contention window (CW). This slot is just a random integer and the contention window is a range lower-bounded by zero and upper-bounded by $2^{n+m}-1$, where $m$ is a fixed integer, $2^m$ called minimum CW ($CW_\text{min}$) and $n=0$ for the moment. After picking the slot the node waits for $t_w = \text{\#slot} \cdot t_s+ t_i$, where $\text{\#slot}$ is the number of the slot, $t_s$ a constant called backoff slot duration or simply backoff slot and $t_i$ the appropriate of the four intervals SIFS, PIFS, DIFS and EIFS. After $t_w$ has elapsed the channel is sensed again. In the case it is sensed busy again the whole BEB procedure is repeated with $n$ incremented, thus the CW doubled, hence \textbf{binary} exponential backoff.  The motivation for $CW_\text{min}$ is to reduce the chance that two contending nodes pick the same slot in the first round of BEB.   
+Physical carrier sensing takes place in these intervals. If a node wants to transmit a packet and the channel is sensed busy in one of these intervals then the node defers its transmission and launches the binary exponential backoff (BEB) procedure \cite{Gast05}. With BEB a node picks a slot in the so-called contention window (CW). This slot is just a random integer and the contention window is a range lower-bounded by zero and upper-bounded by $2^{n+m}-1$, whereed busy again the whole BEB procedure is repeated with $n$ incremented, thus the CW doubled, hence \textbf{binary} exponential backoff.  The motivation for $CW_\text{min}$ is to reduce the cha $m$ is a fixed integer, $2^m$ called minimum CW ($CW_\text{min}$) and $n=0$ for the moment. After picking the slot the node waits for $t_w = \text{\#slot} \cdot t_s$, where $\text{\#slot}$ is the number of the slot, $t_s$ a constant called backoff slot duration or simply backoff slot. After $t_w$ has elapsed the channel is sensed again. In the case it is sensed busy again the whole BEB procedure is repeated with $n$ incremented, thus the CW doubled, hence \textbf{binary exponential} backoff.  The motivation for $CW_\text{min}$ is to greatly reduce the chance that two contending nodes pick the same slot in the first round of BEB defeating the purpose of BEB.   
 
 Beside physical carrier sensing, another mechanism, namely virtual carrier sensing using RTS/CTS exchange is optionally employed to mitigate the problems caused by hidden nodes. In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hidden_exposed_node_problem}. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
 
 $B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame that, in this case, $B$ wants to transmit. Based on this length, $A$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that the nodes defer their transmission based on the information received through other frames.
 
 \subsubsection{LAA}
-% EDCA
-One principal approaches to ensure harmonious coexistence of LTE and WiFi in the unlicensed band is LAA, relying on LBT. Since the LBT mechanism of LAA largely resembles CSMA/CA it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. The other one is LTE-U which uses DCs and is discussed in Section \ref{sec:lteu}.
+One principal approach to ensure harmonious coexistence of LTE and WiFi in the unlicensed band is LAA, relying on LBT. Since the LBT mechanism of LAA largely resembles CSMA/CA \footnote{actually CSMA/CA hybrid coordination function (HCF) enhanced distributed channel access (EDCA), where data packets with higher priority have a higher chance of being sent.} it seems quite natural to assume it will coexist better with WiFi \cite{kwon17}. The other one is LTE-U which uses DCs and is discussed in Section \ref{sec:lteu}.
 
 \subsection{Duty-Cycle MAC Protocols} \label{sec:duty-cycle-mac}  
 
-In duty-cycle MAC schemes nodes repeatedly alternate between active and inactive phases. In some protocols, especially in those designed for WSNs, nodes may sleep when inactive to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The fraction of an active period in a cycle is called duty factor. Sources to this Section were \cite{Bachir10} and \cite{Demirkol06}.
+In duty-cycle MAC schemes nodes repeatedly alternate between active and inactive phases. In some protocols, especially in those designed for WSNs, nodes may sleep when inactive to reduce idle listening and thus energy consumption. Due to increased contention during active phases these protocols are mostly designed for limited contention traffic situations as in WSNs. The fraction of an active period in a cycle is called duty factor.
 
-\subsection{LTE-U}
+\subsubsection{LTE-U}
 \label{sec:lteu}
-%reference
 LTE-U uses Carrier Sense Adaptive Transmission (CSAT), which tries to avoid primary channels of WiFi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on WiFi medium utilization (MU). If MU is below a certain threshold the DC is increased. If it is between that threshold and a higher one, the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
 
 \subsubsection{Sensor MAC}
 
-In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is predetermined on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle listening and contention. The higher the duty factor the more idle-listening and the less contention occurs.
+In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is predetermined on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle listening and contention. The higher the duty factor the more idle-listening and the less contention occurs \cite{Bachir10}\cite{Demirkol06}.
 
 \subsubsection{Timeout MAC}
 
-While TMAC shares the same principle of schedule establishment with SMAC nodes adaptively vary duty factors depending on expected traffic. Furthermore, TMAC shifts all communication to the beginning of the active period. This allows nodes to sleep earlier should no traffic be detected during a certain time period. In variable load situations TMAC saves as much as five times more energy compared to SMAC at the cost of increased latency. 
+While TMAC shares the same principle of schedule establishment with SMAC nodes adaptively vary duty factors depending on expected traffic. Furthermore, TMAC shifts all communication to the beginning of the active period. This allows nodes to sleep earlier should no traffic be detected during a certain time period. In variable load situations TMAC saves as much as five times more energy compared to SMAC at the cost of increased latency \cite{Bachir10}. 
 
 \subsubsection{Berekeley MAC}
 
@@ -237,12 +235,10 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 
 \begin{figure}[tb]
 	\label{fig:radio-receiver-circuits}
-	% source: http://electronicsforu.com/electronics-projects/simple-fm-receiver 03.10.17
-	% source: http://www.electroschematics.com/9043/am-receiver-circuit/ 03.10.17
 	\begin{center}
-		\subfloat[FM Receiver]{\includegraphics[width=0.5\textwidth,valign=c]{pictures/fm_radio_receiver_circuit}}
+		\subfloat[FM Receiver \cite{fm-receiver}]{\includegraphics[width=0.5\textwidth,valign=c]{pictures/fm_radio_receiver_circuit}}
 		\qquad
-		\subfloat[AM Receiver]{\includegraphics[width=0.4\textwidth,valign=c]{pictures/am_radio_receiver_circuit}}
+		\subfloat[AM Receiver \cite{am-receiver}]{\includegraphics[width=0.4\textwidth,valign=c]{pictures/am_radio_receiver_circuit}}
 	\end{center}
 	\caption{Simple do-it-yourself (DIY) radio receiver circuit diagrams}
 \end{figure}
@@ -251,9 +247,9 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 
 \label{sec:gnu-radio}
 
-The GNU Radio (GR) project is dedicated to the evolution of a free and open-source software development kit (SDK) enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flowgraphs simply by connecting signal processing blocks into a directed graph. Its target user market is not merely limited to research and industry, but also encompasses academia, government and private users.
+The GNU Radio (GR) project is dedicated to the evolution of a free and open-source software development kit (SDK) enabling both the creation of actual software-defined radio, as well as simulated signal processing. Written in C++ and Python, GNU Radio also comes with the intuitive graphical software GNU Radio Companion (GRC) that allows creating block diagrams called flowgraphs simply by connecting signal processing blocks into a directed graph. Its target user market is not merely limited to research and industry, but also encompasses academia, government and private users \cite{gnuradio-about}.
 
-A proprietary, well-documented alternative to GNU Radio is LabVIEW developed by National Instruments. LabVIEW takes a purely graphical approach similar to GRC relying on block diagrams, but lacks the freedom of user-defined block creation with a programming language such as C++ or Python.
+A proprietary, well-documented alternative to GNU Radio is LabVIEW developed by National Instruments \cite{labview-about}. LabVIEW takes a purely graphical approach similar to GRC relying on block diagrams, but lacks the freedom of user-defined block creation with a programming language such as C++ or Python without extra efforts, such as buying a Python integration toolkit \cite{labview-python}.
 
 Mathworks MATLAB/Simulink also provides a communication systems toolbox. However, the devices we used are not on the list of officially supported devices \cite{Matlab}.
 
@@ -269,8 +265,8 @@ Mathworks MATLAB/Simulink also provides a communication systems toolbox. However
 
 \subsection{Core Concepts of GNU Radio}
 
-\subsubsection{Flowcharts and Blocks}
-
+\subsubsection{Flowgraphs and Blocks}
+\label{sec:flowgraphs}
 The two most basic concepts of GNU Radio are flowgraphs and blocks. As mentioned in \ref{sec:gnu-radio} flowgraphs are directed graphs, whose nodes are functional blocks and whose vertices determine the direction of data flow \cite{GR1}. 
 
 The behavior of these blocks is programmed in either Python or C++, where the latter is recommended for performance-critical applications, which is also why the blocks in our flowgraphs are all written in C++. If performance is less critical Python is a superior choice since it is more concise and allows faster prototyping as there is no need for compilation. Each block generally serves exactly one purpose for the sake of modularity. Blocks in turn can be composed of an arbitrary number of inner blocks, making extensive use of the modularity and hiding implementation complexity from the user, much like a blackbox in electrical circuits. These composed blocks are called hierarchical blocks. In our case the complete PHY layer is hidden in hierarchical blocks called "sending" and "receiving".

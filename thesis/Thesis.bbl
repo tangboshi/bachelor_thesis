@@ -21,6 +21,29 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{802-std}
+``Ieee standard for local and metropolitan area networks: Overview and
+  architecture - redline,'' \emph{IEEE Std 802-2014 (Revision to IEEE Std
+  802-2001) - Redline}, pp. 1--166, June 2014.
+
+\bibitem{osi}
+J.~D. Day and H.~Zimmermann, ``The osi reference model,'' \emph{Proceedings of
+  the IEEE}, vol.~71, no.~12, pp. 1334--1340, Dec 1983.
+
+\bibitem{Tanenbaum02}
+A.~Tanenbaum, \emph{Computer Networks}, 4th~ed.\hskip 1em plus 0.5em minus
+  0.4em\relax Prentice Hall Professional Technical Reference, 2002.
+
+\bibitem{Gast05}
+M.~S. Gast, \emph{802.11 Wireless Networks: The Definitive Guide, Second
+  Edition}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, Inc., 2005.
+
+\bibitem{raymond09}
+D.~R. Raymond, R.~C. Marchany, M.~I. Brownfield, and S.~F. Midkiff, ``Effects
+  of denial-of-sleep attacks on wireless sensor network mac protocols,''
+  \emph{IEEE transactions on vehicular technology}, vol.~58, no.~1, pp.
+  367--380, 2009.
+
 \bibitem{Garg07}
 V.~Garg, \emph{Wireless Communications \& Networking}, 1st~ed.\hskip 1em plus
   0.5em minus 0.4em\relax San Francisco, CA, USA: Morgan Kaufmann Publishers
@@ -31,19 +54,16 @@ A.~Bachir, M.~Dohler, T.~Watteyne, and K.~K. Leung, ``Mac essentials for
   wireless sensor networks,'' \emph{IEEE Communications Surveys Tutorials},
   vol.~12, no.~2, pp. 222--248, Second 2010.
 
-\bibitem{Tanenbaum02}
-A.~Tanenbaum, \emph{Computer Networks}, 4th~ed.\hskip 1em plus 0.5em minus
-  0.4em\relax Prentice Hall Professional Technical Reference, 2002.
+\bibitem{kwon17}
+H.~J. Kwon, J.~Jeon, A.~Bhorkar, Q.~Ye, H.~Harada, Y.~Jiang, L.~Liu, S.~Nagata,
+  B.~L. Ng, T.~Novlan, J.~Oh, and W.~Yi, ``Licensed-assisted access to
+  unlicensed spectrum in lte release 13,'' \emph{IEEE Communications Magazine},
+  vol.~55, no.~2, pp. 201--207, February 2017.
 
-\bibitem{raymond09}
-D.~R. Raymond, R.~C. Marchany, M.~I. Brownfield, and S.~F. Midkiff, ``Effects
-  of denial-of-sleep attacks on wireless sensor network mac protocols,''
-  \emph{IEEE transactions on vehicular technology}, vol.~58, no.~1, pp.
-  367--380, 2009.
-
-\bibitem{Gast05}
-M.~S. Gast, \emph{802.11 Wireless Networks: The Definitive Guide, Second
-  Edition}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, Inc., 2005.
+\bibitem{qualcomm15}
+``Lte-u technology and coexistence,''
+  http://www.lteuforum.org/uploads/3/5/6/8/3568127/lte-u\_coexistence\_mechansim\_qualcomm\_may\_28\_2015.pdf,
+  accessed: 2017-10-11.
 
 \bibitem{Demirkol06}
 I.~Demirkol, C.~Ersoy, and F.~Alagoz, ``Mac protocols for wireless sensor
@@ -59,16 +79,26 @@ J.~Polastre, J.~Hill, and D.~Culler, ``Versatile low power media access for
   [Online]. Available: \url{http://doi.acm.org/10.1145/1031495.1031508}
 \BIBentrySTDinterwordspacing
 
-\bibitem{kwon17}
-H.~J. Kwon, J.~Jeon, A.~Bhorkar, Q.~Ye, H.~Harada, Y.~Jiang, L.~Liu, S.~Nagata,
-  B.~L. Ng, T.~Novlan, J.~Oh, and W.~Yi, ``Licensed-assisted access to
-  unlicensed spectrum in lte release 13,'' \emph{IEEE Communications Magazine},
-  vol.~55, no.~2, pp. 201--207, February 2017.
+\bibitem{fm-receiver}
+``Simple fm receiver,''
+  http://electronicsforu.com/electronics-projects/simple-fm-receiver, accessed:
+  2017-10-03.
 
-\bibitem{qualcomm15}
-``Lte-u technology and coexistence,''
-  http://www.lteuforum.org/uploads/3/5/6/8/3568127/lte-u\_coexistence\_mechansim\_qualcomm\_may\_28\_2015.pdf,
-  accessed: 2017-10-11.
+\bibitem{am-receiver}
+``Am receiver circuit,''
+  http://www.electroschematics.com/9043/am-receiver-circuit/, accessed:
+  2017-10-03.
+
+\bibitem{gnuradio-about}
+``About gnu radio,'' https://www.gnuradio.org/about/, accessed: 2017-10-05.
+
+\bibitem{labview-about}
+``What is labview?'' http://www.ni.com/en-us/shop/labview.html, accessed:
+  2017-10-05.
+
+\bibitem{labview-python}
+``Python integration toolkit for labview by enthought,''
+  http://sine.ni.com/nips/cds/view/p/lang/en/nid/213990, accessed: 2017-10-05.
 
 \bibitem{Matlab}
 ``Usrp support package from communications system toolbox,''
@@ -120,5 +150,10 @@ C.~Capretti, F.~Gringoli, N.~Facchi, and P.~Patras, ``Lte/wi-fi co-existence
   0.4em\relax New York, NY, USA: ACM, 2016, pp. 33--40. [Online]. Available:
   \url{http://doi.acm.org/10.1145/2980159.2980164}
 \BIBentrySTDinterwordspacing
+
+\bibitem{gr-python-tut}
+``Gnu radio guided tutorial in python,''
+  https://wiki.gnuradio.org/index.php/Guided\_Tutorial\_GNU\_Radio\_in\_Python,
+  accessed: 2017-10-08.
 
 \end{thebibliography}

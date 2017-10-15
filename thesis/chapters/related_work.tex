@@ -1,6 +1,6 @@
 \chapter{Related Work}
 
-\section{Coexistence Study by Gomez-Miguelez et al.}
+\section{LTE-U/WiFi Coexistence Studies}
 
 Gomez-Miguelez et al. propose srsLTE, an open-source SDR library for the PHY layer of LTE release 8 \cite{gomezmiguelez16}. In contrast to many earlier simulation-based studies they have actually set up physical devices, better reflecting system level details of both technologies and providing insight for real-world deployments \cite{rupasinghe14} \cite{nihtilä13} \cite{jeon14} \cite{cavalcante13} . Their testbed comprises of several WiFi and LTE links, for which they used Ettus USRP B210 boards (LTE) and low-power single-board computers from Soekris (WiFi). In order to detect vendor-specific performance issues they decided to use two different sets of wireless NICs from Atheros and Broadcomm.
 
@@ -13,8 +13,6 @@ Their main results can be summarized as follows:
 	\item WiFi TX power has little impact on WiFi throughput.
 	\item The influence of LTE bandwidth and central frequency on WiFi throughput depends very much on the vendor of the NIC card. As a result, more experimental research with physical devices from different vendors is strongly recommended. 
 \end{itemize}
-
-\section{Coexistence Study by Capretti et al.}
 
 Another empirical study \cite{capretti16} conducted by Capretti et al. also evaluates LTE Unlicensed/WiFi coexistence based on LTE-U.  Their testbed consists of one eNB and one UE, one WiFi access point and five WiFi nodes. Their WiFi network was based on embedded PCs equipped with commodity wireless adapters. The LTE nodes were based on desktop computers with Ettus USRP B210 RF front ends running the open-source driver UHD. The software used includes srsLTE to build up a LTE release 8 compliant LTE stack, as well as GNU Radio. 
 

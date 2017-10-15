@@ -34,9 +34,12 @@ The setup consists of two USRP2s from Ettus Research and two USRP 2920s from Nat
 
 \section{GNU Radio Flowgraphs}    
 
+A GNU Radio flowgraph is a directed graph, whose each vertex called block implements a certain functionality of the MAC protocol and the edge determine the direction of data flow as discussed in Section \ref{sec:flowgraphs}. The blocks used are part of a out-of-tree (OOT) \footnote{an OOT module is an external module not provided in the standard setup of GR} module programmed by Peng Wang. 
+
 \subsection{Receiver and Sniffer}
 
-Figure \ref{fig:grc-receiver} shows the two-way handshake receiving logic. After frame integrity is checked and type is confirmed to be data frame an acknowledgment is generated. The \code{frame\_probe} blocks record the times when the frames reach certain positions in the flowgraph representing the occurrence of events such as frame reception, passed or failed frame integrity check and more. Note that the address check is disabled so that the receiver may receive frames from any sender.
+%frame_analysis block missing
+Figure \ref{fig:grc-receiver} shows the two-way handshake receiving logic. After frame integrity is checked by the \code{frame\_check} block and type is confirmed to be data frame an acknowledgment by the \code{frame\_type\_check} is generated. The \code{frame\_probe} blocks record the times when the frames reach certain positions in the flowgraph representing the occurrence of events such as frame reception, passed or failed frame integrity check and more. Note that the address check is disabled so that the receiver may receive frames from any sender.
 
 The sniffer consists only of a single \code{frame\_probe} block, which records detected power above noise level during the whole measurement. The sniffer provides valuable insight of what is actually going on in the channel from a "neutral" point of view. Neutral in the sense of:
 
@@ -94,10 +97,11 @@ All recorded metrics will be defined in this section. Furthermore, we will descr
 We define throughput as the mean useful data \footnote{payload and headers disregarding retransmissions} transmission rate in the unit kbit/s. We obtain this metric simply by counting the number of ACKs received at the sender, multiply it with the frame length of 8 kbits and divide it by the measurement duration. The calculations are done in \code{throughput.py} making use of the CLI tool \code{wc} to count lines. Joint and single throughputs are our main metrics to judge a protocol's efficiency or how well a certain combination of protocols can coexist under different conditions, respectively.
 
 \subsection{Round-Trip Time}
+\label{sec:rtt}
 
 We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt} then this calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
 
-\begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate rtt and frame\_delay,label=lst:rtt]
+\begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate RTT and frame delay,label=lst:rtt]
 # pointer onto data frame which we use for frame delay calculation
 data_pos = 0
 for k,ack in enumerate(ack_received_times):
@@ -107,11 +111,11 @@ for k,ack in enumerate(ack_received_times):
             if self.rtt_mode == "rtt":
 				# the data frame before current position l 
 				# must be the frame the ack corresponds to
-                rtt_single_measurement += [round(ack - data_sent_times[l-1],5)]
+                rtt += [round(ack - data_sent_times[l-1],5)]
             if self.rtt_mode == "frame_delay":
 				# the pointer onto our frame delay reference
 				# is used to calculate frame delay
-                rtt_single_measurement += [round(ack - data_sent_times[data_pos], 5)]
+                rtt += [round(ack - data_sent_times[data_pos], 5)]
 			# set new reference point for frame delay calculation
             data_pos = l
 			# break loop to look at next ack frame!
@@ -132,20 +136,18 @@ The script \code{backoff.py} sums up three different backoff times: Firstly, the
 
 \subsection{Packet Durations \& Channel Occupation}
 
-The channel occupation chart as in figure \ref{fig:channel-occupation-example} provides an approximated logical view on the channel in the fashion of a Gantt chart. Blue patches represent data frames, red patches ACKs and black patches the reception of ACKs. The chart is only a (good) approximation of the channel because the width of the patches are fixed and defined in \code{channel\_occupation.py}. The duration of DATA and ACK frames was previously recorded with the \code{time\_probe} blocks as the difference between the times when the frame was dequeued from the buffer and when it was received by the receiver. As expected, the frame durations were very stable. A data frame took 40ms to transmit and an ACK frame took 7ms. The variation of frame length was in the range of 1-2  milliseconds for data frames and in the sub-millisecond range for ACK frames. Depending on the time-limits chosen for the plot this may be well below the plot's resolution, which is why the time axis of such plot will be limited to a range of a few seconds at most.
+The channel occupation chart as in Figure \ref{fig:channel-occupation-example} provides an approximated logical view on the channel in the fashion of a Gantt chart. Blue patches represent data frames, red patches ACKs and black patches the reception of ACKs. The chart is only a (good) approximation of the channel because the width of the patches are fixed and defined in \code{channel\_occupation.py}. The duration of DATA and ACK frames was previously recorded with the \code{time\_probe} blocks as the difference between the times when the frame was dequeued from the buffer and when it was received by the receiver. As expected, the frame durations were very stable. A data frame took 40ms to transmit and an ACK frame took 7ms. The variation of frame length was in the range of 1-2  milliseconds for data frames and in the sub-millisecond range for ACK frames. Depending on the time-limits chosen for the plot this may be well below the plot's resolution, which is why the time axis of such plot will be limited to a range of a few seconds at most.
 
 \subsection{Channel Energy Level}
 
-The energy levels (denoted in a linear-scale, non-negative power unit) in the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by opting in data representation as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step where the height of the "energy columns" to the left and right have equal height, i.e. both senders have sent an equal number of data packets.
-
-\subsection{Additional Measures}
+The energy levels (denoted in a linear-scale, non-negative power unit) in the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation\footnote{Frame durations can be verified by reading the time values from the x-axis. RTT and frame delay as per definition in Section \ref{sec:rtt} is obtained in the same way. Theoretically, for saturated traffic, we could add up all times where the energy level is zero to obtain backoff times. Logical channel occupation can easily be derived provided the energy level of each frame type is distinct and known.}. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by opting in data representation as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step where the height of the "energy columns" to the left and right have equal height, i.e. both senders have sent an equal number of data packets.
 
 \section{Measurement Script System}
 \label{sec:script-system}
 
-The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github \ldots Instead everything is automatically done for them. Literally the transmission of every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in listing \ref{lst:belated-evaluation-example}.
+The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github\ldots Instead everything is automatically done for them. The transmission of literally every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in listing \ref{lst:belated-evaluation-example}.
   
-\begin{lstlisting}[language=Python,caption=Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare figure \ref{fig:measurement-setup}),label=lst:belated-evaluation-example]
+\begin{lstlisting}[language=Python,caption=Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare Figure \ref{fig:measurement-setup}).,label=lst:belated-evaluation-example]
 measurement     = [714,715,728,646]
 links           = [1,2,1,2]
 boxplot_xticks  = [
@@ -156,11 +158,36 @@ boxplot_xticks  = [
 ]
 \end{lstlisting}
 
+We will now discuss in detail how the script system works by reference to Figure \ref{fig:script-system}.
+Starting with the user calling \code{measurement\_n.sh}, where n is the ID of the link, general settings are "imported" from \code{measurement\_n.conf}. If the user sets \code{remote\_measurement} to 1 in the conf file then \code{remote\_measurement\_n.sh} synchronizes the files on the remote machine with the github repository, then executes \code{measurement\_n.sh} remotely. Subsequently, \code{measurement.sh} for link n works on open "jobs" from the \code{jobs\_open\_n} directories and optionally puts them into the \code{jobs\_done\_n} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded \code{evaluation.py} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in \code{myplot.py}.
+
 \begin{figure}[tb]
 	\label{fig:script-system}
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{pictures/script_system}
 	\end{center}
-	\caption{The three-phase measurement script system. Starting with the user calling \code{measurement\_n.sh}, where n is the ID of the link, general settings are "imported" from \code{measurement\_n.conf}. If the user sets \code{remote\_measurement} to 1 in the conf file then \code{remote\_measurement\_n.sh} synchronizes the files on the remote machine with the github repository, then executes \code{measurement\_n.sh} remotely. Subsequently, \code{measurement.sh} for link n works on open "jobs" from the \code{jobs\_open\_n} directories and optionally puts them into the \code{jobs\_done\_n} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded \code{evaluation.py} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in \code{myplot.py}.}
+	\caption{The three-phase measurement script system}
 \end{figure}
 
+\clearpage
+
+\section{Quality Assurance (QA)}
+
+\paragraph{Data Processing}
+Making use of modularity, multiple sets of test data were created for each data processing script, provided to and processed by the script and compared with manually calculated results in a similar fashion as GNU Radio QA tests discussed in \cite{gr-python-tut}. Intermediate data processing steps were printed to the console and logged in the log files where applicable. Additionally, experimental results were checked for plausibility. 
+
+\paragraph{Hardware Functionality}
+For each device and protocol variation single link baseline measurements were carried out. Not only can we compare the results of device/protocol combinations to two link scenarios, but also assure that the devices are configured and work correctly. RX/TX gains, when necessary, were tweaked each time the hardware was restarted until no or very little ($<0.2\%$) packet loss was observable in single links scenarios.
+
+\paragraph{Remaining Hardware Problems}
+Despite all efforts to find a combination of RX/TX gains and distances between nodes, where no packet loss would occur in single link configurations and at the same time the sniffer detects distinct energy levels for each packet type there still remains some degree of imperfection as depicted in Figure \ref{fig:qa-plots}. This problem of packet loss is generally worse for link 1, because it is further away from the receiver as is shown in Figure \ref{fig:measurement-setup}.  
+
+\begin{figure}[bt]
+	\label{fig:qa-plots}
+	\begin{center}
+		\subfloat[packet loss ]{\includegraphics[width=0.45\textwidth]{pictures/qa_packet_loss}}
+		\qquad
+		\subfloat[channel energy ]{\includegraphics[width=0.45\textwidth]{pictures/qa_channel_energy}}
+	\end{center}
+	\caption{\textbf{Packet loss plot:} Link 1 and 2 were active at the same time for the blue and orange boxplots. The green and red boxplots are baseline measurements with only one link active at a time. \textbf{Channel energy plot:} sender 1 data packet energy is 0.0004 PU, sender 2 data packet energy is 0.0006 PU and ACK packet energy is 0.0008 PU.}
+\end{figure}

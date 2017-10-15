@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  12 OCT 2017 17:01
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  15 OCT 2017 01:36
  system commands enabled.
 **owndefs.tex
 (./owndefs.tex
@@ -34,8 +34,20 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.084 seconds
+luaotfload | main : initialization completed in 0.096 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage[utf8]{
+                    inputenc} % latin1 for Windows and older Linuxes,
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -57,6 +69,18 @@ Type  H <return>  for immediate help.
                                                   
 l.5 \usepackage{
               physics}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+              svg}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -115,25 +139,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \usepackage[rawfloats=true]{
-                               floatrow}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \usepackage{
+l.12 \usepackage{
                soul}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.27 \definecolor
+l.26 \definecolor
                {dkgreen}{rgb}{0,0.6,0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -148,13 +160,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 \definecolor{d
+l.26 \definecolor{d
                  kgreen}{rgb}{0,0.6,0}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.28 \definecolor
+l.27 \definecolor
                {gray}{rgb}{0.5,0.5,0.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -163,7 +175,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.29 \definecolor
+l.28 \definecolor
                {lightgray}{rgb}{0.95,0.95,0.95}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -172,7 +184,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.30 \definecolor
+l.29 \definecolor
                {mauve}{rgb}{0.58,0,0.82}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -181,12 +193,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 27--31
+Overfull \hbox (20.0pt too wide) in paragraph at lines 26--30
 []dkgreenrgb0,0.6,0
  []
 
 ! Undefined control sequence.
-l.35 \lstset
+l.34 \lstset
           {frame=left,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -201,13 +213,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \lstset{f
+l.34 \lstset{f
             rame=left,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.41 	basicstyle={\small
+l.40 	basicstyle={\small
                       \ttfamily},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -219,7 +231,7 @@ luaotfload | db : Font names database loaded from /home/alex/.texlive/texmf-var/
 luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/alex/.texlive/te
 xmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc)
 ! Undefined control sequence.
-l.44 	keywordstyle=\color
+l.43 	keywordstyle=\color
                        {mauve},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -228,7 +240,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.45 	commentstyle=\color
+l.44 	commentstyle=\color
                        {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -237,7 +249,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.46 	stringstyle=\color
+l.45 	stringstyle=\color
                       {dkgreen},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -246,7 +258,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.47 	numberstyle=\color
+l.46 	numberstyle=\color
                       {gray},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -255,7 +267,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--53
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--52
 []frame=left,
  []
 
@@ -266,7 +278,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \renewenvironment{quote}
+l.60 \renewenvironment{quote}
                            %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.

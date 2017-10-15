@@ -214,19 +214,50 @@ import sniffer
 #                 ]
 
 ### flawed
+# measurement     =       [
+#                             643,644,
+#                             716,725
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "ALOHA\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [
+#                             665,664,
+                                #720 is wrong baseline: need unsaturated measurement
+#                             720,745
+#                         ]
+# links           =       [
+#                             2,1,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "unsaturated CSMA\nDIFS=15ms\nSIFS=3s\nBO=6ms\nLink 1 @ 450MHz",
+#                     "unsaturated ALOHA\n ~ "+r"Poisson($1/\lambda=200ms$)"+"\n Link 2 @ 450MHz",
+#                     "unsaturated CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+#                     "unsaturated ALOHA\n ~ "+r"Poisson($1/\lambda=200ms$)"+"\n Link 2 @ 450MHz\n Baseline",
+#                 ]
+
 measurement     =       [
-                            643,644,
-                            716,725
+                            636,637,
+                            720,737
                         ]
 links           =       [
                             1,2,
                             1,2
                         ]
 boxplot_xticks  = [
-                    "ALOHA\nLink 1 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
-                    "ALOHA\nLink 1 @ 450MHz\n Baseline",
                 ]
 
 # measurement     =       [708,709,728,724]

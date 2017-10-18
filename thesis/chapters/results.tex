@@ -2,7 +2,7 @@
 
 In this chapter we discuss different combinations of MAC protocols employed on the two links.  We fist assess the measurement results where both senders employ the same MAC protocols. Subsequently, we will do the same for different combinations of MAC protocols 
 
-\section{Flowgraph Protocol Configuration}
+\section{MAC Protocols}
 
 \paragraph{Pure ALOHA}
 For pure ALOHA senders we use the flowgraph as described in Section \ref{sec:aloha-sender} and shown in Figure \ref{fig:grc-aloha-sender}. 
@@ -23,7 +23,7 @@ Throughout this section both transmitters are executing identical flowgraphs. Ge
 \subsection{ALOHA}
 \label{sec:dbl-aloha}
 
-For two links with saturated ALOHA traffic we expect zero aggregate throughput, since each and every package collides. Figure \ref{fig:results-aloha-dbl} \subref{fig:results-aloha-dbl-throughput} confirms this assumption. The corresponding packet loss of 100\% is depicted in Subfigure \subref{fig:results-aloha-dbl-packet-loss}. A reference value that can be read off Subfigure \subref{fig:results-aloha-dbl-throughput} is the throughput of a single saturated ALOHA link, which is about 130 kbps. This means that the combined throughput of multiple nodes in this channel with the same underlying PHY layer can never exceed 130 kbps and we can assess how well different protocols coexist and how much efficiently they make use of the channel by comparing their joint throughput to this value. Furthermore, a physical view on the channel from the sniffer's perspective is provided in Subfigure \subref{fig:results-aloha-dbl-channel-energy}. Due to the fact that the two transmissions of the senders are not completely overlapping we can see that we don't have a single sender with observed transmission energy level around 0.0011 PU, but instead two senders, where the observed energy level of the first transmitter is around 0.0006 PU, which the channel energy CDF in Subfigure \subref{fig:results-aloha-dbl-channel-energy-cdf} confirms. Note that the share of this particular energy (0.0006 PU) in the CDF is so high, because the transmission overlap does not stay constant throughout the whole measurement, but slightly varies with each repetition.
+For two links with saturated ALOHA traffic we expect zero aggregate throughput, since each and every package collides. Figure \ref{fig:results-aloha-dbl} \subref{fig:results-aloha-dbl-throughput} confirms this assumption. The corresponding packet loss of 100\% is depicted in Subfigure \subref{fig:results-aloha-dbl-packet-loss}. A reference value that can be read off Subfigure \subref{fig:results-aloha-dbl-throughput} is the throughput of a single saturated ALOHA link, which is about 130 kbps. This means that the combined throughput of multiple nodes in this channel with the same underlying PHY layer can never exceed 130 kbps and we can assess how well different protocols coexist and how much efficiently they make use of the channel by comparing their joint throughput to this value. Furthermore, a physical view on the channel from the sniffer's perspective is provided in Subfigure \subref{fig:results-aloha-dbl-channel-energy}. Due to the fact that the two transmissions of the senders are not completely overlapping we can see that we do not have a single sender with observed transmission energy level around 0.0011 PU, but instead two senders, where the observed energy level of the first transmitter is around 0.0006 PU, which the channel energy CDF in Subfigure \subref{fig:results-aloha-dbl-channel-energy-cdf} confirms. Note that the share of this particular energy (0.0006 PU) in the CDF is so high, because the transmission overlap does not stay constant throughout the whole measurement, but slightly varies with each repetition.
 \begin{figure}[tb]
 	\label{fig:results-aloha-dbl}
 	\begin{center}
@@ -77,7 +77,6 @@ For two links with saturated ALOHA traffic we expect zero aggregate throughput, 
 	\caption{Measurement results for the CSMA/CA with high parameter set}
 \end{figure}
 
-
 First of all with "high parameter set" we mean we chose high values for DIFS, SIFS and backoff slot time (BO) from which we expected that they lead to good coexistence of the two links. In particular, we chose DIFS=15ms, SIFS=3ms and BO=6ms. Figure \ref{fig:results-csma-high-dbl-1} \subref{fig:results-csma-high-dbl-throughput} shows that the throughput roughly halves when two links are active at the same time. Subfigure \subref{fig:results-csma-high-dbl-frame-delay} shows that the frame delay roughly stays the same, where the deviation of the first link comes from packet loss related to hardware problems as described in Section \ref{sec:quality-standards}. Figure \ref{fig:results-csma-high-dbl-2} illustrates the same from the sniffer's point of view (POV), as the even throughput among senders is reflected in Subfigure \subref{fig:results-csma-high-dbl-channel-energy-cdf} with the two observed energy levels of the senders being 0.0004 PU and 0.0007 PU, which is confirmed by Subfigure \subref{fig:results-csma-high-dbl-channel-energy}. Figure \ref{fig:results-csma-high-dbl-3} shows the cumulative backoff times and the logical channel occupation which corresponds to the channel energy plot in Figure \ref{fig:results-csma-high-dbl-2} \subref{fig:results-csma-high-dbl-channel-energy}.
 
 \subsection{CSMA/CA With Low Parameter Set}
@@ -123,7 +122,7 @@ The next thing we were interested in is to what extent we can scale down DIFS, S
 	\begin{center}
 		\centerline{
 			\subfloat[throughput]{\includegraphics[width=0.5\textwidth]{pictures/results/same_combinations/csma_med_params/throughput_cdf}}
-			\subfloat[frame delay]{\includegraphics[width=0.5\textwidth]{pictures/results/same_combinations/csma_med_params/frame_delay_boxplot}}
+			\subfloat[frame delay]{\includegraphics[width=0.5\textwidth]{pictures/results/same_combinations/csma_med_params/frame_delay_boxplot}\label{fig:results-csma-med-dbl-frame-delay}}
 		}
 		\centerline{
 			\subfloat[channel energy]{\includegraphics[width=0.5\textwidth]{pictures/results/same_combinations/csma_med_params/smoothed_channel_energy_level_4_line_chart}}
@@ -137,7 +136,7 @@ The next thing we were interested in is to what extent we can scale down DIFS, S
 	\caption{Measurement results for the CSMA/CA with medium parameter set}
 \end{figure}
 
-Due to the collisions of ACKs with the data packets of sender 1 as described in the preceding Section \ref{sec:csma-dbl-low} we increased DIFS to 9 ms, kept SIFS to 1 ms and BO to 2ms and indeed, as shown in Figure \ref{fig:results-csma-med-dbl} the frame delay of link 2 is close to the baseline level as result of avoiding collisions. However, since collisions as a result of low DIFS occurred quite infrequently in the last scenario, the metrics roughly stay the same as in the previous scenario, as can be seen in all other subfigures.
+Due to the collisions of ACKs with the data packets of sender 1 as described in the preceding Section \ref{sec:csma-dbl-low} we increased DIFS to 9 ms, kept SIFS to 1 ms and BO to 2ms and indeed, as shown in Figure \ref{fig:results-csma-med-dbl}\subref{fig:results-csma-med-dbl-frame-delay} the frame delay of link 2 is close to the baseline level as result of avoiding collisions. However, since collisions as a result of low DIFS occurred quite infrequently in the last scenario, the metrics roughly stay the same as in the previous scenario, as can be seen in all other subfigures.
 
 \clearpage
 

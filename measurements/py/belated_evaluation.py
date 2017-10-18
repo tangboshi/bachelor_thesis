@@ -155,7 +155,7 @@ import sniffer
 
 # measurement     =       [
 #                             619,620,
-#                             720,724
+#                             #720,724
 #                         ]
 # links           =       [
 #                             1,2,
@@ -168,21 +168,21 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             638,639,
-#                             736,737
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,2
-#                         ]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
-#                 ]
-#
+measurement     =       [
+                            638,639,
+                            #736,737
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+                ]
+
 # measurement     =       [
 #                             630,631,
 #                             738,739
@@ -274,20 +274,20 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-measurement     =       [
-                            714,715,
-                            #728,646
-                        ]
-links           =       [
-                            1,2,
-                            1,1
-                        ]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-                    "unsaturated ALOHA\n Link 2 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-                    "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
-                ]
+# measurement     =       [
+#                             714,715,
+#                             #728,646
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,1
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+#                     "unsaturated ALOHA\n Link 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+#                     "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             708,709,

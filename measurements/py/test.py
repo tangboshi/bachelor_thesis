@@ -3,8 +3,8 @@ import numpy as np
 
 # ALOHA vs. CSMA vs. reservation-based
 a                           = 0.04
-xmax                        = 7
-G                           = np.arange(0,xmax,0.01)
+Gmax                        = 7
+G                           = np.arange(0,Gmax,0.01)
 S_pure_ALOHA                = G*np.exp(-2*G)
 S_slotted_ALOHA             = G*np.exp(-G)
 S_non_pers_CSMA             = G*np.exp(-a*G)/(G*(1+2*a)+np.exp(-a*G))

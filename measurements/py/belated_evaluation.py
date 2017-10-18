@@ -200,7 +200,7 @@ import sniffer
 
 # measurement     =       [
 #                             712,713,
-#                             728,729
+#                             #728,729
 #                         ]
 # links           =       [
 #                             1,2,
@@ -213,10 +213,10 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-### flawed
+###
 # measurement     =       [
 #                             643,644,
-#                             716,725
+#                             725,737
 #                         ]
 # links           =       [
 #                             1,2,
@@ -225,40 +225,101 @@ import sniffer
 # boxplot_xticks  = [
 #                     "ALOHA\nLink 1 @ 450MHz",
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
 #                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
 # measurement     =       [
-#                             665,664,
-                                #720 is wrong baseline: need unsaturated measurement
-#                             720,745
+#                             666,667,
+#                             #744,724
 #                         ]
 # links           =       [
-#                             2,1,
+#                             1,2,
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "unsaturated CSMA\nDIFS=15ms\nSIFS=3s\nBO=6ms\nLink 1 @ 450MHz",
-#                     "unsaturated ALOHA\n ~ "+r"Poisson($1/\lambda=200ms$)"+"\n Link 2 @ 450MHz",
-#                     "unsaturated CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-#                     "unsaturated ALOHA\n ~ "+r"Poisson($1/\lambda=200ms$)"+"\n Link 2 @ 450MHz\n Baseline",
+#                     "ALOHA unsaturated\nLink 1 @ 450MHz",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "ALOHA unsaturated \nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [
+#                             633,632,
+#                             738,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2s\nLink 1 @ 450MHz",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+# measurement     =       [
+#                             636,637,
+#                             #736,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2s\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
 measurement     =       [
-                            636,637,
-                            720,737
+                            714,715,
+                            #728,646
                         ]
 links           =       [
                             1,2,
-                            1,2
+                            1,1
                         ]
 boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
+                    "unsaturated ALOHA\n Link 2 @ 450MHz",
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+                    "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
                 ]
+
+# measurement     =       [
+#                             708,709,
+#                             #728,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
+
+
+# stopped here %%%
+# measurement     =       [
+#                             636,637,
+#                             720,737
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                 ]
 
 # measurement     =       [708,709,728,724]
 # links           =       [1,2,1,2]
@@ -269,14 +330,7 @@ boxplot_xticks  = [
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
 #                 ]
 
-# measurement     =       [714,715,728,646]
-# links           =       [1,2,1,2]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-#                     r"unsaturated ALOHA ~ Poisson($1/\lambda=200ms$), Link 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-#                     "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
-#                 ]
+
 
 ################################################################################
 

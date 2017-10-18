@@ -149,6 +149,7 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 %LTE Unlicensed sends all control traffic through the licensed carriers, because in the unlicensed carrier the same quality of service, reliability and mobility cannot be achieved. The reason is that the unlicensed carrier is shared with multiple other systems that are out of the LTE operator's control. For this reason unlicensed carriers are only allocated for supplemental downlink (SDL) traffic.
 
 \paragraph{1-Persistent CSMA}
+\label{sec:csma-1-persistent}
 
 If the channel is busy, 1-persistent CSMA waits until the channel becomes idle. As soon as the channel is found idle a frame is transmitted with a probability of 1, hence 1-persistent CSMA. If the frame collides with another, the node waits for a random backoff time and then the whole process is started all over again.
 
@@ -281,6 +282,6 @@ When designing packet-based protocols, such as MAC protocols it is of tremendous
 
 \subsubsection{Polymorphic Types and SWIG} 
 
-Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic containers of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing \cite{GRDocs}.
+Polymorphic types (PMT) are opaque data types that enable safe information exchange across blocks by serving as generic containers of data. Self-evidently, the original data type must be retained as a PMT class member. For thread-safety reasons PMT are immutable. We make extensive use of PMTs when passing messages. As an aside, note that the Python PMT class has some powerful tools unavailable its C++ counterpart, making use of Python's weak typing \cite{GRDocs}.
 
 Simplified wrapper and interface generator (SWIG) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.

@@ -73,7 +73,7 @@ class tp:
                     print("ackcount: "+str(ackcount))
                     print("datacount: "+str(datacount))
                     # *8 => bytes --> bits ||| /1000 => 1 --> kilo
-                    self.data[index,i] = min(ackcount, datacount)*self.packet_size/self.timer*8/1000
+                    self.data[index,i] = min(datacount,ackcount)*self.packet_size/self.timer*8/1000
                 else:
                     # no data sent off
                     print("Data file not found at "+data_sent_file_path+".")

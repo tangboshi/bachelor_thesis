@@ -22,10 +22,10 @@ The setup consists of two USRP2s from Ettus Research and two USRP 2920s from Nat
 			\toprule
 			Function & TX Gain & RX Gain & Source Address & Dest. Address & IP Address\\
 			\midrule
-			Receiver 		& 4dB 	& 10dB 	& X 	& any	& 10.0.0.6\\
+			Receiver 		& 4 dB 	& 10 dB & X 	& any	& 10.0.0.6\\
 			Sniffer 		& 0 	& 0 	& any 	& any	& 10.0.0.10 \\
-			Transmitter 1 	& 5dB 	& 0 	& Y 	& 	X 	& 10.0.0.9 \\
-			Transmitter 2	& 9dB 	& 0 	& Z 	& 	X 	& 10.0.0.3 \\
+			Transmitter 1 	& 5 dB 	& 0 	& Y 	& 	X 	& 10.0.0.9 \\
+			Transmitter 2	& 9 dB 	& 0 	& Z 	& 	X 	& 10.0.0.3 \\
 			\bottomrule	
 		\end{tabular}\caption{Setup parameters}
 	\end{center}
@@ -150,7 +150,7 @@ The energy levels (denoted in a linear-scale, non-negative power unit) in the ch
 \section{Measurement Script System}
 \label{sec:script-system}
 
-The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github\ldots Instead everything is automatically done for them. The transmission of literally every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in listing \ref{lst:belated-evaluation-example}.
+The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github. Instead everything is automatically done for them. The transmission of literally every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in listing \ref{lst:belated-evaluation-example}.
   
 \begin{lstlisting}[language=Python,caption=Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare Figure \ref{fig:measurement-setup}).,label=lst:belated-evaluation-example]
 measurement     = [714,715,728,646]
@@ -166,10 +166,10 @@ boxplot_xticks  = [
 We will now discuss in detail how the script system works by reference to Figure \ref{fig:script-system}.
 Starting with the user calling \code{measurement\_n.sh}, where n is the ID of the link, general settings are "imported" from \code{measurement\_n.conf}. If the user sets \code{remote\_measurement} to 1 in the conf file then \code{remote\_measurement\_n.sh} synchronizes the files on the remote machine with the github repository, then executes \code{measurement\_n.sh} remotely. Subsequently, \code{measurement.sh} for link n works on open "jobs" from the \code{jobs\_open\_n} directories and optionally puts them into the \code{jobs\_done\_n} directory after completion. In the job files important variables such as duration, repetitions and flowgraph scripts of the measurement are defined. Any variable set in the conf file can be overwritten in the job file since they both are just exporting variables and were separated for semantic reasons only. After the measurement concluded \code{evaluation.py} coordinates data processing which eventually leads to plotting based on Matplotlib as defined in \code{myplot.py}.
 
-\begin{figure}[tb]
+\begin{figure}[bt]
 	\label{fig:script-system}
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{pictures/script_system}
+		\includegraphics[width=0.5\textwidth]{pictures/script_system}
 	\end{center}
 	\caption{The three-phase measurement script system}
 \end{figure}
@@ -177,12 +177,13 @@ Starting with the user calling \code{measurement\_n.sh}, where n is the ID of th
 \clearpage
 
 \section{Quality Standards}
+\label{sec:quality-standards}
 
 \paragraph{Statistical Reliability}
-Each measurement features five repetitions of the same à 100 seconds. Compared to a single measurement of 500 seconds this has the downside that script and hardware initialization\footnote{In order to repeat the measurement we simply kill the GR flowgraph Python script and restart it.} (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-plots} \subref{fig:qa-channel-energy}\footnote{Of the 1.1 seonds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be improved by adding more repetitions and increasing the measurement time. 
+Each measurement features five repetitions\footnote{In order to repeat the measurement we simply kill the GR flowgraph Python script and restart it.} of the same à 100 seconds. Compared to a single measurement of 500 seconds this has the downside that script and  initialization (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-plots} \subref{fig:qa-channel-energy}\footnote{Of the 1.1 seconds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be improved by adding more repetitions and increasing the measurement time. 
 
 \paragraph{Data Processing}
-Making use of modularity, multiple sets of test data were created for each data processing script (i.e. metric calculation and plotting scripts), provided to and processed by the script and compared with manually calculated results in a similar fashion as GNU Radio QA tests discussed in \cite{gr-python-tut}. Intermediate data processing steps were printed to the console and logged in the log files where applicable. Additionally, experimental results were checked for plausibility. 
+Making use of modularity, multiple sets of test data were created for each data processing script (i.e. metric calculation and plotting scripts), provided to and processed by the script and compared with manually calculated results in a similar fashion as GNU Radio quality assurance tests discussed in \cite{gr-python-tut}. Intermediate data processing steps were printed to the console and logged in the log files where applicable. Additionally, experimental results were checked for plausibility. 
 
 \paragraph{Hardware Functionality}
 For each device and protocol variation single link baseline measurements were carried out. Not only can we compare the results of device/protocol combinations to two link scenarios, but also assure that the devices are configured and work correctly. RX/TX gains, when necessary, were tweaked each time the hardware was restarted until no or very little ($\le0.2\%$ mean) packet loss was observable in single links scenarios.

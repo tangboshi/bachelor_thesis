@@ -142,12 +142,16 @@ class channel_occupation:
         # Normalize the x-axis to start at 0
         # 'cause UNIX-time isnt really a nice human-readable format
         offset_candidates = [item[0] for item in busy_starting_times]
-        offset = min(offset_candidates)
+
+        hardware_delay = 0
+        #hardware_delay = 1.09
+        offset = min(offset_candidates) - hardware_delay
 
         # barwidths in seconds
         data_width = 0.04
         ack_width = 0.007
         ack_received_width = 0.004
+
 
         for index,process in enumerate(busy_starting_times):
             busy_starting_times[index] = [time-offset for time in process]

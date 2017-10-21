@@ -179,6 +179,7 @@ A way to further improve the CSMA protocols is to immediately cancel transmissio
 CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted energy or pulse width of the signal, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signals spread in all directions around their origin and thus degrade exponentially with the distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as energy consumption.
 
 \subsubsection{CSMA with Collision Avoidance}
+\label{sec:csma-ca}
 
 \begin{figure}[tb]
 	\label{fig:virtual_carrier_sensing}
@@ -203,8 +204,8 @@ Beside physical carrier sensing, another mechanism, namely virtual carrier sensi
 $B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame that, in this case, $B$ wants to transmit. Based on this length, $A$ and $D$ setup the so-called network allocation vector (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that the nodes defer their transmission based on the information received through other frames.
 
 \subsubsection{Licensed Assisted Access}
-Generally\footnote{for both license assisted access (LAA) as well as LTE-U}, the unlicensed band is only used to enhance the downlink rate in LTE traffic. The procedure of allocating additional carriers is called carrier aggregation (CA), and due to its limitation to downlink traffic more specifically supplemental downlink (SDL) CA. All control traffic is still sent through the licensed bands as it may exclusively be used by the licensee and is thus generally more reliable in terms of quality of service \cite{qualcomm15}.
-One principal approach to ensure harmonious coexistence of LTE and Wi-Fi in the unlicensed band is License Assisted Access (LAA), relying on LBT. Since the LBT mechanism of LAA largely resembles CSMA/CA \footnote{actually CSMA/CA hybrid coordination function (HCF) enhanced distributed channel access (EDCA), where data packets with higher priority have a higher chance of being sent.} it seems quite natural to assume it will coexist better with Wi-Fi \cite{kwon17}. The other one is LTE-U which uses DCs and is discussed in Section \ref{sec:lteu}. 
+Generally\footnote{for both license assisted access (LAA) as well as LTE-U}, the unlicensed band is only used to enhance the downlink rate in LTE traffic. The procedure of allocating additional carriers is called carrier aggregation (CA), and due to its limitation to downlink traffic more specifically supplemental downlink (SDL) CA. All control traffic is still sent through the licensed bands as it may exclusively be used by the licensee and thus is generally more reliable in terms of quality of service \cite{qualcomm15}.
+One principal approach to ensure harmonious coexistence of LTE and Wi-Fi in the unlicensed band is License Assisted Access (LAA), relying on LBT. Since the LBT mechanism of LAA largely resembles CSMA/CA\footnote{actually CSMA/CA hybrid coordination function (HCF) enhanced distributed channel access (EDCA), where data packets with higher priority have a higher chance of being sent.} it seems quite natural to assume it will coexist better with Wi-Fi \cite{kwon17}. The other one is LTE-U which uses DCs and is discussed in Section \ref{sec:lteu}. 
 
 \subsection{Duty-Cycle MAC Protocols} \label{sec:duty-cycle-mac}  
 
@@ -214,15 +215,15 @@ In duty-cycle MAC schemes nodes repeatedly alternate between active and inactive
 \label{sec:lteu}
 LTE-U uses Carrier Sense Adaptive Transmission (CSAT), which tries to avoid primary channels of Wi-Fi transmissions and other LTE-U operators. If that is not possible, duty-cycles are dynamically adapted depending on Wi-Fi medium utilization (MU). If MU is below a certain threshold the DC is increased. If it is between that threshold and a higher one, the DC is kept constant, otherwise it is decreased \cite{qualcomm15}.
 
-\subsubsection{Sensor MAC}
+\subsubsection{Sensor MAC (SMAC)}
 
 In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is predetermined on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle listening and contention. The higher the duty factor the more idle-listening and the less contention occurs \cite{Bachir10}\cite{Demirkol06}.
 
-\subsubsection{Timeout MAC}
+\subsubsection{Timeout MAC (TMAC)}
 
 While TMAC shares the same principle of schedule establishment with SMAC nodes adaptively vary duty factors depending on expected traffic. Furthermore, TMAC shifts all communication to the beginning of the active period. This allows nodes to sleep earlier should no traffic be detected during a certain time period. In variable load situations TMAC saves as much as five times more energy compared to SMAC at the cost of increased latency \cite{Bachir10}. 
 
-\subsubsection{Berekeley MAC}
+\subsubsection{Berekeley MAC (BMAC)}
 
 Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA further reducing energy use \cite{Polastre04}. 
 

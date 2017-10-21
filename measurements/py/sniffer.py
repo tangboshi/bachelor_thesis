@@ -1,5 +1,5 @@
-import numpy as np
 import myplot
+import numpy as np
 import os
 
 print("Hello from sniffer.py!")
@@ -31,6 +31,9 @@ class sniffer:
         self.sniffer_data_files         =   kwargs.get("sniffer_data_files", ["sniffer"])
         self.sniffer_settings           =   kwargs.get("sniffer_settings", {"link":2})
 
+        self.energy_lower_bound = 0
+        self.energy_upper_bound = 0.0012
+        
         # debugging:
         self.calc()
         self.plot()
@@ -224,7 +227,6 @@ class sniffer:
             }
 
     def plot(self):
-
         print("Let's plot.")
 
         if  (self.create_plots == True
@@ -252,7 +254,8 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=[xlim_lower_bound,xlim_upper_bound])
+                        xlims=[xlim_lower_bound,xlim_upper_bound],
+                        ylims=[self.energy_lower_bound,self.energy_upper_bound])
 
         if  (self.create_plots == True
             or self.create_plots["sniffer"] == True
@@ -273,7 +276,8 @@ class sniffer:
                     legend_coordinates=self.legend_coordinates["sniffer"],
                     eval_mode=self.eval_mode,
                     timer=self.timer,
-                    repetitions=self.repetitions)
+                    repetitions=self.repetitions,
+                    xlims=[self.energy_lower_bound,self.energy_upper_bound])
 
             zoom_interval = self.sniffer_settings["zoom_interval"]
             for index,interval in enumerate(self.sniffer_smoothed_data["sniffer_times"]):
@@ -297,4 +301,5 @@ class sniffer:
                         eval_mode=self.eval_mode,
                         timer=self.timer,
                         repetitions=self.repetitions,
-                        xlims=[xlim_lower_bound,xlim_upper_bound])
+                        xlims=[xlim_lower_bound,xlim_upper_bound],
+                        ylims=[self.energy_lower_bound,self.energy_upper_bound])

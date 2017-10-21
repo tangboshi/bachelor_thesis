@@ -47,6 +47,7 @@ class myplot:
         self.repetitions        = kwargs.get("repetitions", 5)
         self.eval_mode          = kwargs.get("eval_mode", "belated")
         self.xlims              = kwargs.get("xlims", False)
+        self.ylims              = kwargs.get("ylims", False)
         self.savepath           = savepath,
         self.plot_pdf           = kwargs.get("plot_pdf", False)
 
@@ -133,6 +134,13 @@ class myplot:
                             + " and len(self.legend) = "
                             + str(len(self.legend))
                             +" don't match!")
+
+            font = {'family' : 'normal',
+                    'weight' : 400,
+                    'size'   : 12}
+
+            plt.rc('font', **font)
+
             # Add anotations:
             for annotation in self.annotations_other:
                 self.ax.annotate(annotation)
@@ -224,6 +232,8 @@ class myplot:
         self.ax.set_ylim(10, 5*data_len+20)
         if self.xlims == False:
             self.ax.set_xlim(0, self.timer*self.repetitions)
+        if self.ylims != False:
+            self.ax.set_ylim(self.ylims)
         self.ax.xaxis.grid(self.grid, linestyle="dashdot")
         self.ax.yaxis.grid(self.grid, linestyle="dashdot")
 

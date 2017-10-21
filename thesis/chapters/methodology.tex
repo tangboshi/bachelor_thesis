@@ -1,42 +1,108 @@
 \chapter{Measurement Methodology}
 \label{ch:methodology}
 
-This chapter is dedicated to answering the questions of what was measured and how results were obtained. Firstly, the measurement setup is discussed. Secondly,  the GNU Radio flowgraphs are explained. Subsequently, with reference to the flowgraphs measurement metrics are formally defined in view of the necessity to verify the recorded data.  Thereafter, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given. Eventually, we will discuss the quality standards of the measurements.
+This chapter is dedicated to describing methods and scenarios of the measurements we have taken. Firstly, the measurement testbed is discussed. Secondly, we define central terms to guard against misapprehensions. Thereafter, we give an overview of the MAC protocols we empirically evaluated, implemented as GNU Radio flowgraphs. Subsequently, measurement metrics which we use in chapter \ref{ch:results} to analyze the performance of the protocols are formally defined with reference to the flowgraphs. Thereafter, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given. Eventually, we discuss the quality norms of the measurements.
 
-\section{Measurement Setup}
+\section{Measurement Testbed}
 
-The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. The former pair is programmed as receiver and sniffer, whereas the latter as senders as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cabel. The scripts running on the devices were launched from a local computer with the IP 134.130.223.151, which was remote controlled from my private laptop. Hereafter, we will call the node pair 10.0.0.9-10.0.0.6 link 1 and 10.0.0.3-10.0.0.6 link 2. Table \ref{tab:measurement-parameters} contains other necessary information to reproduce the measurement results.
+The setup consists of two USRP2s from Ettus Research and two USRP 2920s from National Instruments. The first two USRPs are programmed as receiver and sniffer, respectively, whereas the latter two as senders, as depicted in \ref{fig:measurement-setup}. Each USRP was connected to a gigabit switch through a LAN cable. The scripts running on the devices were launched from a local computer with the IP 134.130.223.151, which was remotely controlled from a laptop. Both senders sent their data to the single receiver. Hereafter, we will call the node pair 10.0.0.9-10.0.0.6 link 1 and 10.0.0.3-10.0.0.6 link 2. Tables \ref{tab:measurement-parameters} and \ref{tab:measurement-parameters-2}  contains other necessary configuration parameters to reproduce the measurement results.
 
 \begin{figure}[tb]
 	\label{fig:measurement-setup}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{pictures/measurement_setup}
 	\end{center}
-	\caption{Photo of the measurement setup.}
+	\caption{Photo of the measurement setup. The transmitters 10.0.0.3 and 10.0.0.9 transmit their data to the receiver 10.0.0.6. Their conversations are overheard by the sniffer 10.0.0.10.}
 \end{figure}
 
 % Measurement parameters
 \begin{table}[t]
 	\label{tab:measurement-parameters}
 	\begin{center}
-		\begin{tabular}{p{2.5cm}p{2cm}p{2cm}p{1.5cm}p{1.5cm}p{2cm}}
-			\toprule
+		\begin{tabular}{*{14}{|c}|}
+			\hline
 			Function & TX Gain & RX Gain & Source Address & Dest. Address & IP Address\\
-			\midrule
+			\hline
 			Receiver 		& 4 dB 	& 10 dB & X 	& any	& 10.0.0.6\\
 			Sniffer 		& 0 	& 0 	& any 	& any	& 10.0.0.10 \\
 			Transmitter 1 	& 5 dB 	& 0 	& Y 	& 	X 	& 10.0.0.9 \\
 			Transmitter 2	& 9 dB 	& 0 	& Z 	& 	X 	& 10.0.0.3 \\
-			\bottomrule	
-		\end{tabular}\caption{Setup parameters}
+			\hline	
+		\end{tabular}\caption{Device-dependent setup parameters.}
 	\end{center}
 \end{table}
 
-Other important parameters were the timeout\footnote{the period of time for each data packet within which an ACK must be received or otherwise declared lost} that we set to 100ms, where the round-trip time (RTT) as defined in \ref{sec:rtt} was 68ms at most. We used the quadrature phase-shift keying (QPSK) MCS.
+\begin{table}[t]
+	\label{tab:measurement-parameters-2}
+	\begin{center}
+		\begin{tabular}{*{14}{|c}|}
+			\hline
+			Layer & Parameter & Value & Comment\\
+			\hline
+			PHY Layer 	& MCS & QPSK & BPSK optional, unused\\
+						& central frequency & 450 MHz & 420 MHz or 480 MHz work as well \\
+						& sampling rate & 400k & \\
+			\hline	
+			MAC Layer	& timeout & 100 ms & $\text{RTT \le 68 ms}$ \\
+						& CSMA CS threshold & 0.001 PU & for RX/TX gains as in Table \ref{tab:measurement-parameters} \\  
+						& max. retransmissions & 6 & \\
+			\hline	
+		\end{tabular}\caption{General setup parameters.}
+	\end{center}
+\end{table}
+
+The MAC layer is part of a GNU Radio out-of-tree (OOT) \footnote{An OOT module is an external module not provided in the standard setup of GR.} module programmed by Peng Wang. The underlying PHY layer was also implemented as GNU Radio flowgraph by Julian Arnold. The changes we made to the MAC layer flowgraphs include additional blocks to capture the metrics as described in Section \ref{sec:measurement-metrics} and shutting off self-reception during frame transmission. 
+
+\section{Measurement Protocols and Scenarios}
+\label{sec:measurement-scenarios}
+
+Next, we define some central terms used throughout the remainder of the thesis and then present the measurement scenarios.
+
+\paragraph{Traffic Saturation}
+If not specified otherwise all transmitters are backlogged, i.e. we have \emph{saturated} traffic. In that case the time between the generation of each packet is constant and well below the RTT. When we use the term \emph{unsaturated} the time between packets generated by the \code{dummy\_source} is exponentially distributed with $\frac{1}{\lambda}=200ms$. These packets are then buffered in a \code{frame\_buffer}. For single link scenarios this leads to Poisson-distributed traffic.
+
+\paragraph{Measurement and Repetition}
+In this thesis \emph{measurement} refers to a period of 500 seconds comprising of five \emph{repetitions} with a duration of 100 seconds each. 
+
+\paragraph{Baseline and Coexistence Measurements}
+When referring to the term \emph{baseline} measurement we mean that only one of the two links was active. If both links were active we refer to a \emph{coexistence} measurement. The baseline measurements serve two purposes: confirming that the devices work properly and for comparison with the coexistence measurements. A more detailed description on baseline measurements can be found in Section \ref{sec:quality-standards}.   
+
+\paragraph{Measurement Scenarios}
+A scenario is a combination of  MAC protocols employed on the two links as depicted in Table \ref{tab:measurement-scenarios}. We distinguish between two types of scenarios. In "same MAC" scenarios the same MAC protocol is employed on both senders. In "different MAC" scenarios different MAC protocols are employed on the senders.
+
+\paragraph{Pure ALOHA}
+We implement the pure ALOHA protocol based on the theory in Section \ref{sec:aloha} as GNU Radio flowgraph depicted in Figure \ref{fig:grc-aloha-sender} and described in Section \ref{sec:aloha-sender}.
+
+\paragraph{CSMA/CA}
+We implement CSMA/CA based on the theory in Section \ref{sec:csma-ca}. The flowgraph is depicted in Figure \ref{fig:grc-csma-sender} with the corresponding description found in Section \ref{sec:csma-transmiter} are \textbf{not} featuring the optional IEEE 802.11 RTS/CTS exchange, realize DIFS and SIFS with \code{general\_timers} and the backoff with the \code{backoff} blocks. In two of three measurement variants we set SIFS, DIFS and backoff slot (BO) times to different scaled versions of their values\footnote{The values of DIFS, SIFS and BO in the standard are $\text{DIFS}=50 µs$, $\text{SIFS}=10 µs$, $\text{BO}=20 µs$, $\text{CW}_\text{min}=31$,  $\text{CW}_\text{max}=1023$} prescribed in the IEEE 802.11g standard \cite{802.11g}. We refer to these two variants as the high parameter values ($\text{DIFS}=15 ms$, $\text{SIFS}=3 ms$, $\text{BO}=6 ms$) and the low parameter values ($\text{DIFS}=5 ms$, $\text{SIFS}=1 ms$, $\text{BO}=2 ms$). The third variant are the medium parameter values based on the low parameter set but with $\text{DIFS}=9 ms$. We employ the same $\text{CW}_\text{min}=31$ as the IEEE 802.11g standard, but $\text{CW}_\text{max}=2047$.
+
+\paragraph{1-persistent CSMA}
+For 1-persistent CSMA we use the same flowgraph as for CSMA/CA and set SIFS and backoff slot times to zero. In contrast to theoretical p-persistent CSMA we sense the channel for DIFS instead of a minimal number of samples. More accurately, we could describe the protocol as "1-persistent CSMA-like with fixed sensing duration", but for brevity's sake we will refer to it as 1-persistent CSMA.  
+ 
+\begin{table}[bt]
+	\label{tab:measurement-scenarios}
+	\begin{center}	
+		\begin{tabular}{*{14}{|c}|}
+			\hline
+				 Scenario Type & Link 1 & Link 2 \\
+			\hline
+				 & \multicolumn{2}{c|}{ALOHA} \\ 
+				Same MAC & \multicolumn{2}{c|}{CSMA/CA (3 variants)} \\
+				& \multicolumn{2}{c|}{1-persistent CSMA} \\ 
+				\hline
+				& ALOHA & CSMA/CA \\
+				& unsaturated ALOHA & CSMA/CA \\
+				Different MAC & CSMA/CA & CSMA/CA \\
+				& 1-persitent CSMA & unsaturated ALOHA \\
+				& 1-persistent CSMA & CSMA/CA \\
+			\hline
+		\end{tabular}\caption{Measurement Scenarios.}
+	\end{center}
+\end{table}
 
 \section{GNU Radio Flowgraphs}    
 
-A GNU Radio flowgraph is a directed graph, whose each vertex called block implements a certain functionality of the MAC protocol and the edge determine the direction of data flow as discussed in Section \ref{sec:flowgraphs}. The blocks used are part of a out-of-tree (OOT) \footnote{an OOT module is an external module not provided in the standard setup of GR} module programmed by Peng Wang. 
+A GNU Radio flowgraph is a directed graph, each of whose vertices called blocks implements a certain functionality of the MAC protocol. The edges determine the direction of data flow as discussed in Section \ref{sec:flowgraphs}.
 
 \subsection{Receiver and Sniffer}
 
@@ -100,12 +166,12 @@ All recorded metrics will be defined in this section. Furthermore, we will descr
 
 \subsection{Throughput}
 
-We define throughput as the mean useful data\footnote{payload and headers disregarding retransmissions} transmission rate in the unit kbit/s. We obtain this metric simply by counting the number of ACKs received at the sender, multiply it with the frame length of 8 kbits and divide it by the measurement duration. The calculations are done in \code{throughput.py} making use of the CLI tool \code{wc} to count lines. Joint and single throughputs are our main metrics to judge a protocol's efficiency or how well a certain combination of protocols can coexist under different conditions, respectively.
+We define throughput as the mean useful data (payload and headers disregarding retransmissions) transmission rate in the unit kbit/s. We obtain this metric simply by counting the number of ACKs received at the sender, multiply it with the frame length of 8 kbits and divide it by the measurement duration. The calculations are done in \code{throughput.py} making use of the CLI tool \code{wc} to count lines. Aggregate and single throughputs are our main metrics to judge a protocol's efficiency or how well a certain combination of protocols can coexist under different conditions, respectively.
 
 \subsection{Round-Trip Time}
 \label{sec:rtt}
 
-We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt} then this calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
+We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt}, then this calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
 
 \begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate RTT and frame delay,label=lst:rtt]
 # pointer onto data frame which we use for frame delay calculation
@@ -136,22 +202,22 @@ Obtaining both metrics involves data processed in \code{rtt.py}, which is why th
 We define packet loss as $ 1 - \frac{n_\text{ACKs}}{n_\text{data}} $, where $ n_\text{ACKs} $ and $ n_\text{data} $ are the number of ACK packets received and data packets sent by the transmitter.
 Retransmissions per frame are obtained simply by recording them with a \code{counter} block, which is incremented whenever the \code{timeout} runs out and reset when an ACK is received.
 
-\subsection{Backoff Times}
+\subsection{Backoff Time}
 
-The script \code{backoff.py} sums up three different backoff times: Firstly, the backoff due to failed \footnote{by failed we mean a negative CCA, i.e. a busy channel.} carrier sensing. Secondly, we capture the backoff times due to successful transmission to give other nodes a chance to seize the channel. Lastly, we sum up the two to obtain the total backoff. The total backoff duration in our view reflects the efficiency of the CSMA protocols in dependency on the parameters DIFS, SIFS and backoff slot length \footnote{E.g. for two CSMA transmitter it would be ideal to have both transmitters back off for around 50\% of the transmission time to give each other a chance to transmit.}. We chose a minimum contention window of $2^5=32$ backoff slots with binary exponential increase. 
+The script \code{backoff.py} sums up three different backoff times: Firstly, the backoff due to negative CCA, i.e. a busy channel. Secondly, we capture the backoff times after successful transmissions to give other nodes a chance to seize the channel. Lastly, we sum up the two to obtain the total backoff. The total backoff duration reflects the efficiency of the CSMA protocols in dependency on the parameters DIFS, SIFS and backoff slot length \footnote{E.g. for two CSMA transmitter it would be ideal to have both transmitters back off for around 50\% of the transmission time to give each other a chance to transmit.}
 
 \subsection{Packet Durations \& Channel Occupation}
 
-The channel occupation chart as in Figure \ref{fig:channel-occupation-example} provides an approximated logical view on the channel in the fashion of a Gantt chart. Blue patches represent data frames, red patches ACKs and black patches the reception of ACKs. The chart is only a (good) approximation of the channel because the width of the patches are fixed and defined in \code{channel\_occupation.py}. The duration of DATA and ACK frames was previously recorded with the \code{time\_probe} blocks as the difference between the times when the frame was dequeued from the buffer and when it was received by the receiver. As expected, the frame durations were very stable. A data frame took 40ms to transmit and an ACK frame took 7ms. The variation of frame length was in the range of 1-2  milliseconds for data frames and in the sub-millisecond range for ACK frames. Depending on the time-limits chosen for the plot this may be well below the plot's resolution, which is why the time axis of such plot will be limited to a range of a few seconds at most.
+The channel occupation chart as in Figure \ref{fig:channel-occupation-example} provides an approximated logical view on the channel in the fashion of a Gantt chart. Blue patches represent data frames, red patches ACKs and black patches the reception of ACKs. The chart is only a (good) approximation of the channel occupation because the width of the patches are fixed and defined in \code{channel\_occupation.py}. The duration of DATA and ACK frames was previously recorded with the \code{time\_probe} blocks as the difference between the times when the frame was dequeued from the buffer and when it was received by the receiver. As expected, the frame durations were very stable. A data frame took 40 ms to be transmitted and an ACK frame took 7 ms. The variation of frame duration was in the range of 1-2  milliseconds for data frames and in the sub-millisecond range for ACK frames. Depending on the time limits chosen for the plot this may be well below the plot's resolution, which is why the time axis of such plot will be limited to a range of a few seconds at most.
 
 \subsection{Channel Energy Level}
 
-The energy levels (denoted in a linear-scale, non-negative power unit) in the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation\footnote{Frame durations can be verified by reading the time values from the x-axis. RTT and frame delay as per definition in Section \ref{sec:rtt} are obtained in the same way. Theoretically, for saturated traffic, we could add up all times where the energy level is zero to obtain backoff times. Logical channel occupation can easily be derived provided the energy level of each frame type is distinct and known.}. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by opting in data representation as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step where the height of the "energy columns" to the left and right have equal height, i.e. both senders have sent an equal number of data packets.
+The energy levels (measured in a linear-scale, non-negative power unit) over the channel observed by the sniffer (and processed in \code{sniffer.py}) help us to verify a multitude of metrics. We can verify frame durations, round-trip time, backoff time (for saturated traffic) and logical channel occupation\footnote{Frame durations can be verified by reading the time values from the x-axis. RTT and frame delay as per definition in Section \ref{sec:rtt} are obtained in the same way. Theoretically, for saturated traffic, we could add up all times where the energy level is zero to obtain backoff times. Logical channel occupation can easily be derived provided the energy level of each frame type is distinct and known.}. Even collisions are clearly visible and which sender caused them. Throughput ratio among senders can easily be verified by representing data as CDF, e.g. if two identical MAC protocols run under identical circumstances then we expect a CDF with a step where the height of the "energy columns" to the left and right have equal height, i.e. both senders have sent an equal number of data packets.
 
 \section{Measurement Script System}
 \label{sec:script-system}
 
-The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github. Instead everything is automatically done for them. The transmission of literally every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in listing \ref{lst:belated-evaluation-example}.
+The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github. Instead everything is automatically done for them. The transmission of every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison, a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in Listing \ref{lst:belated-evaluation-example}.
   
 \begin{lstlisting}[language=Python,caption=Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare Figure \ref{fig:measurement-setup}).,label=lst:belated-evaluation-example]
 measurement     = [714,715,728,646]
@@ -177,11 +243,11 @@ Starting with the user calling \code{measurement\_n.sh}, where n is the ID of th
 
 \clearpage
 
-\section{Quality Standards}
+\section{Quality Norms}
 \label{sec:quality-standards}
 
 \paragraph{Statistical Reliability}
-Each measurement features five repetitions\footnote{In order to repeat the measurement we simply kill the GR flowgraph Python script and restart it.} of the same à 100 seconds. Compared to a single measurement of 500 seconds this has the downside that script and  initialization (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-plots} \subref{fig:qa-channel-energy}\footnote{Of the 1.1 seconds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be improved by adding more repetitions and increasing the measurement time. 
+As mentioned in Section \ref{sec:measurement-scenarios} Each measurement features five repetitions of the same à 100 seconds. Compared to a single measurement of 500 seconds this has the downside that script and  initialization (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-plots} \subref{fig:qa-channel-energy}\footnote{Of the 1.1 seconds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be improved by adding more repetitions and increasing the measurement time. 
 
 \paragraph{Data Processing}
 Making use of modularity, multiple sets of test data were created for each data processing script (i.e. metric calculation and plotting scripts), provided to and processed by the script and compared with manually calculated results in a similar fashion as GNU Radio quality assurance tests discussed in \cite{gr-python-tut}. Intermediate data processing steps were printed to the console and logged in the log files where applicable. Additionally, experimental results were checked for plausibility. 

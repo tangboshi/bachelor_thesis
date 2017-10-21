@@ -27,7 +27,7 @@ import sniffer
 # show_plot                       = False
 #
 # boxplot_xticks      =   [
-#                             "fake1",
+#                             "fake1\n Coexistence",
 #                             "fake2"
 #                         ]
 
@@ -43,7 +43,7 @@ import sniffer
 # measurement     =       [13,10,11]
 # links           =       [1,2,3]
 # boxplot_xticks  = [
-#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz",
+#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1\n Coexistence",
 #                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 2 @ 420MHz",
 #                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 3 @ 480MHz"
 #                 ]
@@ -51,7 +51,7 @@ import sniffer
 # measurement     =       [3,14,5]
 # links           =       [1,2,3]
 # boxplot_xticks  = [
-#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 1 @ 450MHz",
+#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 1\n Coexistence",
 #                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 2 @ 420MHz",
 #                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 3 @ 480MHz"
 #                 ]
@@ -59,7 +59,7 @@ import sniffer
 # measurement     =       [6,12,8]
 # links           =       [1,2,3]
 # boxplot_xticks  = [
-#                         "SIFS=0ms,DIFS=0ms,BO=0ms\nLink 1 @ 450MHz",
+#                         "SIFS=0ms,DIFS=0ms,BO=0ms\nLink 1\n Coexistence",
 #                         "SIFS=0ms,DIFS=0ms,BO=0ms\nLink 2 @ 420MHz",
 #                         "SIFS=0ms,DIFS=0ms,BO=0_ ams\nLink 3 @ 480MHz"
 #                 ]
@@ -67,7 +67,7 @@ import sniffer
 # measurement     =       [208,209,210]
 # links           =       [1,2,3]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
+#                     "ALOHA\nLink 1\n Coexistence",
 #                     "ALOHA\nLink 2 @ 420MHz",
 #                     "ALOHA\nLink 3 @ 480MHz"
 #                 ]
@@ -75,7 +75,7 @@ import sniffer
 # measurement     =       [345,346,347]
 # links           =       [1,2,3]
 # boxplot_xticks  = [
-#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1 @ 450MHz",
+#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1\n Coexistence",
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 420MHz",
 #                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 3 @ 480MHz"
 #                  ]
@@ -83,58 +83,58 @@ import sniffer
 # measurement     =       [349,348]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2"
 #                 ]
 # # ALOHA + RB HIGH
 # measurement     =       [416,415]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                      "ALOHA\nLink 1 @ 450MHz",
-#                      "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz"
+#                      "ALOHA\nLink 1\n Coexistence",
+#                      "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1"
 #                  ]
 # # # ALOHA + NO BACKOFF
 # measurement     =       #[352,351]
 # links           =       [2,1]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "SIFS=5ms,DIFS=1ms,BO=0ms\nLink 1 @ 450MHz"
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "SIFS=5ms,DIFS=1ms,BO=0ms\nLink 1"
 #                 ]
 # # RB LOW DUAL
 # measurement     =       [344,343]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1 @ 450MHz",
-#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2 @ 450MHz"
+#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 1\n Coexistence",
+#                         "SIFS=5ms,DIFS=1ms,BO=2ms\nLink 2"
 #                 ]
 #RB HIGH DUAL
 # measurement     =       [341,342]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1 @ 450MHz",
-#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 2 @ 450MHz"
+#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 1\n Coexistence",
+#                         "SIFS=15ms,DIFS=3ms,BO=6ms\nLink 2"
 #                  ]
 # # NO BACKOFF DUAL
 # measurement     =       [?,?]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 1 @ 450MHz",
-#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 2 @ 450MHz"
+#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 1\n Coexistence",
+#                         "SIFS=15ms,DIFS=3ms,BO=0ms\nLink 2"
 #                 ]
 # # ALOHA DUAL
 # measurement     =       [355,354]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "ALOHA\nLink 2 @ 450MHz"
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "ALOHA\nLink 2"
 #                 ]
 ############ ~~~~~~~~~~~~~~~~~~~  ############
 
 # measurement     =       [630,631]
 # links           =       [1,2]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz"
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2"
 #                 ]
 
 ################################################################################
@@ -147,10 +147,10 @@ import sniffer
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "ALOHA\nLink 2 @ 450MHz",
-#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
-#                     "ALOHA\nLink 2 @ 450MHz\n Baseline",
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "ALOHA\nLink 2\n Coexistence",
+#                     "ALOHA\nLink 1\n Baseline",
+#                     "ALOHA\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -162,25 +162,25 @@ import sniffer
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 measurement     =       [
                             638,639,
-                            #736,737
+                            736,737
                         ]
 links           =       [
                             1,2,
                             1,2
                         ]
 boxplot_xticks  = [
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
                 ]
 
 # measurement     =       [
@@ -192,10 +192,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -207,10 +207,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 2\n Baseline",
 #                 ]
 
 ###
@@ -223,10 +223,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "ALOHA\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "ALOHA\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+#                     "ALOHA\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -238,10 +238,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "ALOHA unsaturated\nLink 1 @ 450MHz",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "ALOHA unsaturated \nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "ALOHA unsaturated\nLink 1\n Coexistence",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "ALOHA unsaturated \nLink 1\n Baseline",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -253,10 +253,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2s\nLink 1 @ 450MHz",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2s\nLink 1\n Coexistence",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -268,10 +268,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2s\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2s\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -283,10 +283,10 @@ boxplot_xticks  = [
 #                             1,1
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-#                     "unsaturated ALOHA\n Link 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-#                     "unsaturated ALOHA\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
+#                     "unsaturated ALOHA\n Link 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "unsaturated ALOHA\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
@@ -298,10 +298,10 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 
@@ -315,19 +315,19 @@ boxplot_xticks  = [
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [708,709,728,724]
 # links           =       [1,2,1,2]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1 @ 450MHz\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2 @ 450MHz\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 
@@ -356,16 +356,28 @@ plot_pdf                =   False
 #boxplot_xticks          =   [ "measurement "+str(index) for index in measurement ]
 legend_labels           =   [ tick.replace("\n", ", ") for tick in boxplot_xticks ]
 
+# custom_legend_coordinates   = {
+#                                 "rtt":                 [1,0,"lower right"],
+#                                 "packet_loss":         [1,0,"lower right"],
+#                                 "retxs":               [1,0,"lower right"],
+#                                 "throughput":          [1,0,"lower right"],
+#                                 "diagnosis_sender":    [1,0,"lower right"],
+#                                 "diagnosis_receiver":  [1,0,"lower right"],
+#                                 "backoff":             [1,0,"lower right"],
+#                                 "channel_occupation":  [1,0,"lower right"],
+#                                 "sniffer":             [1,0,"lower right"]
+#                             }
+
 custom_legend_coordinates   = {
-                                "rtt":                 [1,0,"lower right"],
-                                "packet_loss":         [1,0,"lower right"],
-                                "retxs":               [1,0,"lower right"],
-                                "throughput":          [1,0,"lower right"],
-                                "diagnosis_sender":    [1,0,"lower right"],
-                                "diagnosis_receiver":  [1,0,"lower right"],
-                                "backoff":             [1,0,"lower right"],
-                                "channel_occupation":  [1,0,"lower right"],
-                                "sniffer":             [1,0,"lower right"]
+                                "rtt":                 [1,0,"best"],
+                                "packet_loss":         [1,0,"best"],
+                                "retxs":               [1,0,"best"],
+                                "throughput":          [1,0,"best"],
+                                "diagnosis_sender":    [1,0,"best"],
+                                "diagnosis_receiver":  [1,0,"best"],
+                                "backoff":             [1,0,"best"],
+                                "channel_occupation":  [1,0,"best"],
+                                "sniffer":             [1,0,"best"]
                             }
 
 # create_plots                = {
@@ -381,7 +393,8 @@ custom_legend_coordinates   = {
 # show_plot = True
 
 if len(measurement) == 4:
-    backoff_cond = True
+    #backoff_cond = True
+    backoff_cond = False
 else:
     backoff_cond = False
 sniffer_cond = backoff_cond

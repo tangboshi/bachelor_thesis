@@ -18,7 +18,7 @@
 \contentsline {paragraph}{Non-Persistent CSMA}{7}{section*.6}
 \contentsline {paragraph}{P-Persistent CSMA}{7}{section*.7}
 \contentsline {subsubsection}{\numberline {2.1.5.3}CSMA with Collision Detection}{8}{subsubsection.2.1.5.3}
-\contentsline {subsubsection}{\numberline {2.1.5.4}CSMA with Collision Avoidance}{9}{subsubsection.2.1.5.4}
+\contentsline {subsubsection}{\numberline {2.1.5.4}CSMA with Collision Avoidance}{8}{subsubsection.2.1.5.4}
 \contentsline {subsubsection}{\numberline {2.1.5.5}Licensed Assisted Access}{10}{subsubsection.2.1.5.5}
 \contentsline {subsection}{\numberline {2.1.6}Duty-Cycle MAC Protocols}{10}{subsection.2.1.6}
 \contentsline {subsubsection}{\numberline {2.1.6.1}LTE-U}{10}{subsubsection.2.1.6.1}
@@ -32,52 +32,52 @@
 \contentsline {subsubsection}{\numberline {2.2.3.1}Flowgraphs and Blocks}{12}{subsubsection.2.2.3.1}
 \contentsline {subsubsection}{\numberline {2.2.3.2}Message Passing and Stream Tags}{13}{subsubsection.2.2.3.2}
 \contentsline {subsubsection}{\numberline {2.2.3.3}Polymorphic Types and SWIG}{13}{subsubsection.2.2.3.3}
-\contentsline {chapter}{\chapternumberline {3}Related Work}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}LTE-U/WiFi Coexistence Studies}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Connection to Our Work}{16}{section.3.2}
-\contentsline {chapter}{\chapternumberline {4}Measurement Methodology}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Measurement Testbed}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Measurement Protocols and Scenarios}{17}{section.4.2}
-\contentsline {paragraph}{Traffic Saturation}{17}{section*.8}
-\contentsline {paragraph}{Measurement and Repetition}{18}{section*.9}
-\contentsline {paragraph}{Baseline and Coexistence Measurements}{19}{section*.10}
-\contentsline {paragraph}{Measurement Scenarios}{19}{section*.11}
-\contentsline {paragraph}{Pure ALOHA}{19}{section*.12}
-\contentsline {paragraph}{CSMA/CA}{19}{section*.13}
-\contentsline {paragraph}{1-persistent CSMA}{19}{section*.14}
-\contentsline {section}{\numberline {4.3}GNU Radio Flowgraphs}{19}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Receiver and Sniffer}{20}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Pure ALOHA Transmitter}{20}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}CSMA Transmitter}{21}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Measurement Metrics}{25}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Throughput}{25}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Round-Trip Time}{25}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Packet Loss and Retransmissions per Frame}{26}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Backoff Time}{26}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Packet Durations \& Channel Occupation}{26}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}Channel Energy Level}{27}{subsection.4.4.6}
-\contentsline {section}{\numberline {4.5}Measurement Script System}{27}{section.4.5}
-\contentsline {section}{\numberline {4.6}Quality Norms}{29}{section.4.6}
-\contentsline {paragraph}{Statistical Reliability}{29}{section*.15}
-\contentsline {paragraph}{Data Processing}{29}{section*.16}
-\contentsline {paragraph}{Hardware Functionality}{29}{section*.17}
-\contentsline {chapter}{\chapternumberline {5}Measurement Results}{30}{chapter.5}
-\contentsline {section}{\numberline {5.1}Same Protocol Combinations}{30}{section.5.1}
+\contentsline {chapter}{\chapternumberline {3}Related Work}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}LTE-U/WiFi Coexistence Studies}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}Connection to Our Work}{15}{section.3.2}
+\contentsline {chapter}{\chapternumberline {4}Measurement Methodology}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Measurement Testbed}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Measurement Protocols and Scenarios}{16}{section.4.2}
+\contentsline {paragraph}{Traffic Saturation}{16}{section*.8}
+\contentsline {paragraph}{Measurement and Repetition}{17}{section*.9}
+\contentsline {paragraph}{Baseline and Coexistence Measurements}{18}{section*.10}
+\contentsline {paragraph}{Measurement Scenarios}{18}{section*.11}
+\contentsline {paragraph}{Pure ALOHA}{18}{section*.12}
+\contentsline {paragraph}{CSMA/CA}{18}{section*.13}
+\contentsline {paragraph}{1-persistent CSMA}{18}{section*.14}
+\contentsline {section}{\numberline {4.3}GNU Radio Flowgraphs}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Receiver and Sniffer}{19}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Pure ALOHA Transmitter}{19}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}CSMA Transmitter}{20}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Measurement Metrics}{24}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Throughput}{24}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Round-Trip Time}{24}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Packet Loss and Retransmissions per Frame}{25}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Backoff Time}{25}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Packet Durations \& Channel Occupation}{25}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}Channel Energy Level}{26}{subsection.4.4.6}
+\contentsline {section}{\numberline {4.5}Measurement Script System}{26}{section.4.5}
+\contentsline {section}{\numberline {4.6}Quality Norms}{28}{section.4.6}
+\contentsline {paragraph}{Statistical Reliability}{28}{section*.15}
+\contentsline {paragraph}{Data Processing}{28}{section*.16}
+\contentsline {paragraph}{Hardware Functionality}{28}{section*.17}
+\contentsline {chapter}{\chapternumberline {5}Measurement Results}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Same Protocol Combinations}{29}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}ALOHA}{30}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}CSMA/CA With High Parameter Set}{32}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}CSMA/CA With Low Parameter Set}{34}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}CSMA/CA With Medium Parameter Set}{37}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}1-persistent CSMA}{40}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Different Protocol Combinations}{41}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}ALOHA and CSMA/CA}{41}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Unsaturated ALOHA and CSMA/CA}{45}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Two Variants of CSMA/CA}{48}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}1-persistent CSMA and unsaturated ALOHA}{51}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}1-persistent CSMA and CSMA/CA}{54}{subsection.5.2.5}
-\contentsline {chapter}{\chapternumberline {6}Conclusions and Future Work}{56}{chapter.6}
-\contentsline {appendix}{\chapternumberline {A}Bash and Python Scripts}{58}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Abbreviations}{74}{appendix.B}
-\contentsline {chapter}{List of Figures}{77}{section*.18}
-\contentsline {chapter}{List of Tables}{79}{section*.19}
-\contentsline {chapter}{Bibliography}{80}{section*.21}
-\contentsline {chapter}{Declaration}{82}{section*.21}
+\contentsline {subsection}{\numberline {5.1.2}CSMA/CA With High Parameter Set}{31}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}CSMA/CA With Low Parameter Set}{33}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}CSMA/CA With Medium Parameter Set}{36}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}1-persistent CSMA}{39}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Different Protocol Combinations}{40}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}ALOHA and CSMA/CA}{40}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Unsaturated ALOHA and CSMA/CA}{44}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Two Variants of CSMA/CA}{47}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}1-persistent CSMA and unsaturated ALOHA}{50}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}1-persistent CSMA and CSMA/CA}{53}{subsection.5.2.5}
+\contentsline {chapter}{\chapternumberline {6}Conclusions and Future Work}{55}{chapter.6}
+\contentsline {appendix}{\chapternumberline {A}Bash and Python Scripts}{57}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Abbreviations}{73}{appendix.B}
+\contentsline {chapter}{List of Figures}{76}{section*.18}
+\contentsline {chapter}{List of Tables}{78}{section*.19}
+\contentsline {chapter}{Bibliography}{79}{section*.21}
+\contentsline {chapter}{Declaration}{81}{section*.21}

@@ -229,20 +229,20 @@ import sniffer
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             666,667,
-#                             744,724
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,2
-#                         ]
-# boxplot_xticks  = [
-#                     "ALOHA unsaturated\nLink 1\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-#                     "ALOHA unsaturated \nLink 1\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
-#                 ]
+measurement     =       [
+                            666,667,
+                            #744,724
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "ALOHA unsaturated\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+                    "ALOHA unsaturated \nLink 1\n Baseline",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+                ]
 
 # measurement     =       [
 #                             633,632,
@@ -274,20 +274,20 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
-measurement     =       [
-                            714,715,
-                            #728,646
-                        ]
-links           =       [
-                            1,2,
-                            1,1
-                        ]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
-                    "unsaturated ALOHA\n Link 2\n Coexistence",
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
-                    "unsaturated ALOHA\nLink 2\n Baseline",
-                ]
+# measurement     =       [
+#                             714,715,
+#                             #728,646
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,1
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
+#                     "unsaturated ALOHA\n Link 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "unsaturated ALOHA\nLink 2\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             708,709,

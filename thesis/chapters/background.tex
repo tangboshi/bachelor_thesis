@@ -17,14 +17,14 @@ The OSI (Open Systems Interconnection) model is a layered architecture that divi
 			\hline
 				Level & Layer & Principal Functionalities \\
 			\hline
-				1 & Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
-				2 & DLL: MAC Sublayer & controlling medium access and frame synchronization \\
-				2 & DLL: LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control \\
-				3 & Network Layer & routing and congestion control \\
-				4 &Transport Layer & transmission reliability, same-order-delivery, congestion avoidance  \\
-				5 & Session Layer & token management, dialog control, synchronization \\
-				6 & Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
-				7 & Application Layer & user application protocols, such as http, ftp, smtp and many more \\
+				1 & Physical Layer & Dealing with mechanical, electrical and timing interfaces of data transmission  \\
+				2 & DLL: MAC Sublayer & Controlling medium access and frame synchronization \\
+				2 & DLL: LLC Sublayer & Multiplexing to enable different network protocols coexist, flow control and error control \\
+				3 & Network Layer & Routing and congestion control \\
+				4 &Transport Layer & Transmission reliability, same-order-delivery, congestion avoidance  \\
+				5 & Session Layer & Token management, dialog control, synchronization \\
+				6 & Presentation Layer & Abstracting syntax and semantics of transmission, encryption \\
+				7 & Application Layer & User application protocols, such as http, ftp, smtp and many more \\
 			\hline
 		\end{tabular}\caption{Layers in the OSI model \cite{osi}.} \label{tab:osi-layers}
 	\end{center}
@@ -44,7 +44,7 @@ Wireless MAC protocols have to tackle a few problems that do not occur in wired 
 	\caption[Setup to explain the hidden and exposed node problem.]{Setup to explain the hidden and exposed node problem. Each node can only reach its direct neighbors.}
 \end{figure}
 
-Suppose that the radio range of the nodes in \ref{fig:hidden_exposed_node_problem} is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting $A$ does not hear $C$ and falsely assume that the channel is idle and start transmitting, which leads to a collision. This is the hidden node problem \cite{Tanenbaum02}\cite{Gast05}.
+Suppose that the radio range of the nodes in \ref{fig:hidden_exposed_node_problem} is limited to the neighboring nodes and $A$ would like to transmit to $B$. If $C$ just started transmitting, $A$ does not hear $C$ and falsely assumes that the channel is idle and start transmitting, which leads to a collision. This is the hidden node problem \cite{Tanenbaum02}\cite{Gast05}.
 
 For the same configuration, in another scenario $B$ would like to send to $A$ and $C$ is already transmitting to $D$. $B$ refrains from sending although collisions would only take place between $B$ and $C$, where it does not matter as both $B$ and $C$ are transmitters. This is the exposed node problem \cite{Tanenbaum02}\cite{Gast05} . 
 
@@ -72,7 +72,7 @@ We will proceed with discussing representative protocols of the two categories. 
 \subsection{Reservation-Based MAC Protocols}
 \label{sec:reservation-mac}
 
-Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a centrally coordinated schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time. Owing to the fact that we do not incorporate reservation-based protocols in our experiments we will only briefly describe the basic principles of the time-division multiple access (TDMA), frequency-division multiple access (FDMA) and code-division multiple access (CDMA). 
+Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a centrally coordinated schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time. Since we do not incorporate reservation-based protocols in our experiments we will only briefly describe the basic principles of the time-division multiple access (TDMA), frequency-division multiple access (FDMA) and code-division multiple access (CDMA). 
 
 TDMA is a representative protocol in this group, which divides time into slots. Each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware \cite{Bachir10}.
 
@@ -201,7 +201,7 @@ Physical carrier sensing takes place in these intervals. If a node wants to tran
 
 Beside physical carrier sensing, another mechanism, namely virtual carrier sensing using RTS/CTS exchange is optionally employed to mitigate the problems caused by hidden nodes. In order to explain these mechanisms we refer to the setup of Figure \ref{fig:hidden_exposed_node_problem}. Figure \ref{fig:virtual_carrier_sensing} visualizes the chain of events whose explanation follows.
 
-$B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame that, in this case, $B$ wants to transmit. Based on this length, $A$ and $D$ setup so-called network allocation vectors (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing due to the fact that the nodes defer their transmission based on the information received through other frames.
+$B$ wants to send to $C$, hence issues a request to send (RTS). Every node receiving the RTS remains silent, except for $C$ that in response to the RTS creates a clear to send (CTS) frame. Not only $B$ receives this CTS frame, but also $D$, a hidden node from $B$'s point of view. Upon reception of CTS $D$ is silenced as well. Therefore, RTS/CTS is addressing the hidden node problem. RTS/CTS are frames of 30 bytes length containing the length of the frame that, in this case, $B$ wants to transmit. Based on this length, $A$ and $D$ setup so-called network allocation vectors (NAV), which are node-internal timers reminding $A$ and $D$ that the channel is still in use. This mechanism is called virtual carrier sensing because nodes defer their transmission based on the information received through other frames.
 
 \subsubsection{Licensed Assisted Access}
 Generally\footnote{for both license assisted access (LAA) as well as LTE-U}, the unlicensed band is only used to enhance the downlink rate in LTE traffic. The procedure of allocating additional carriers is called carrier aggregation (CA), and due to its limitation to downlink traffic more specifically supplemental downlink (SDL) CA. All control traffic is still sent through the licensed bands as it may exclusively be used by the licensee and thus is generally more reliable in terms of quality of service \cite{qualcomm15}.
@@ -225,7 +225,7 @@ While TMAC shares the same principle of schedule establishment with SMAC nodes a
 
 \subsubsection{Berekeley MAC (BMAC)}
 
-Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA further reducing energy use \cite{Polastre04}. 
+Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA, further reducing energy use \cite{Polastre04}. 
 
 \section{Software-Defined Radio}
  

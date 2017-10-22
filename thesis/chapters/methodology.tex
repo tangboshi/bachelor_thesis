@@ -1,7 +1,7 @@
 \chapter{Measurement Methodology}
 \label{ch:methodology}
 
-This chapter is dedicated to describing methods and scenarios of the measurements we have taken. Firstly, the measurement testbed is discussed. Secondly, we define central terms to guard against misapprehensions. Thereafter, we give an overview of the MAC protocols we empirically evaluated, implemented as GNU Radio flowgraphs. Subsequently, measurement metrics which we use in chapter \ref{ch:results} to analyze the performance of the protocols are formally defined with reference to the flowgraphs. Thereafter, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given. Eventually, we discuss the quality norms of the measurements.
+This chapter describes methods and scenarios of the measurements we have taken. Firstly, the measurement testbed is discussed. Secondly, we define central terms to guard against misapprehensions. Thereafter, we give an overview of the MAC protocols we empirically evaluated, implemented as GNU Radio flowgraphs. Subsequently, measurement metrics which we use in chapter \ref{ch:results} to analyze the performance of the protocols are formally defined with reference to the flowgraphs. Thereafter, an overview of the semi-automatic measurement script system designed to automate, therefore accelerate the process of file system management, data processing and result plotting is given. Eventually, we discuss the quality norms of the measurements.
 
 \section{Measurement Testbed}
 
@@ -162,7 +162,7 @@ DIFS and SIFS are realized through \code{general\_timer} blocks with the respect
 \section{Measurement Metrics}
 \label{sec:measurement-metrics}
 
-All recorded metrics will be defined in this section. Furthermore, we will describe the way how they were obtained and how we verified them. All metrics were originally captured with at least one of the following blocks: \code{frame\_probe}, \code{counter}, \code{number\_recorder} and \code{time\_probe} as depicted in figures \ref{fig:grc-receiver}, \ref{fig:grc-aloha-sender} and \ref{fig:grc-csma-sender}. In particular, we used the \code{frame\_probe} block to record files with timestamps - and in the case of the sniffer also with energy levels - when frames reach positions in the flowgraph that are associated with certain events, such as data transmission or ACK reception at the sender. The \code{counter} block was used to count how often a certain frame was retransmitted and how often the \code{backoff} block was activated. The \code{number\_recorder} was used to capture backoff times and the \code{time\_probe} block to verify frame durations.
+All recorded metrics will be defined in this section. Furthermore, we will describe how the metrics were obtained and verified. All metrics were originally captured with at least one of the following blocks: \code{frame\_probe}, \code{counter}, \code{number\_recorder} and \code{time\_probe} as depicted in figures \ref{fig:grc-receiver}, \ref{fig:grc-aloha-sender} and \ref{fig:grc-csma-sender}. In particular, we used the \code{frame\_probe} block to record files with timestamps - and in the case of the sniffer also with energy levels - when frames reach positions in the flowgraph that are associated with certain events, such as data transmission or ACK reception at the sender. The \code{counter} block was used to count how often a certain frame was retransmitted and how often the \code{backoff} block was activated. The \code{number\_recorder} was used to capture backoff times and the \code{time\_probe} block to verify frame durations.
 
 \subsection{Throughput}
 
@@ -252,7 +252,7 @@ Making use of modularity, multiple sets of test data were created for each data 
 
 \paragraph{Hardware Functionality}
 For each device and protocol variation single link baseline measurements were carried out. Not only can we compare the results of device/protocol combinations to two link scenarios, but also assure that the devices are configured and work correctly. RX/TX gains, when necessary, were tweaked each time the hardware was restarted until no or very little ($\le0.2\%$ mean) packet loss was observable in single links scenarios.
-Despite all efforts to find a combination of RX/TX gains and distances between nodes, where no packet loss would occur in single link configurations and at the same time the sniffer detects distinct energy levels for each packet type there still remains some degree of imperfection as depicted in Figure \ref{fig:qa-packet-loss}. This problem of packet loss is generally worse for link 1, because it is further away from the receiver as is shown in Figure \ref{fig:measurement-setup}.  
+Despite all efforts to find a combination of RX/TX gains and distances between nodes, where no packet loss would occur in single link configurations and at the same time the sniffer detects distinct energy levels for each packet type there still remains some degree of imperfection as depicted in Figure \ref{fig:qa-packet-loss}. This problem of packet loss is generally worse for link 1, because it is farther away from the receiver as is shown in Figure \ref{fig:measurement-setup}.  
 
 \begin{figure}[tb]
 	\label{fig:qa-packet-loss}

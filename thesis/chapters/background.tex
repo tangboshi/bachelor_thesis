@@ -13,10 +13,10 @@ The OSI (Open Systems Interconnection) model is a layered architecture that divi
 
 \begin{table}[b]
 	\begin{center}
-		\begin{tabular}{p{1cm}p{4cm}p{8cm}}
-			\toprule
+		\begin{tabular}{|p{1cm}|p{4cm}|p{8cm}|}
+			\hline
 				Level & Layer & Principal Functionalities \\
-			\midrule
+			\hline
 				1 & Physical Layer & dealing with mechanical, electrical and timing interfaces of data transmission  \\
 				2 & DLL: MAC Sublayer & controlling medium access and frame synchronization \\
 				2 & DLL: LLC Sublayer & multiplexing to enable different network protocols coexist, flow control and error control \\
@@ -25,8 +25,8 @@ The OSI (Open Systems Interconnection) model is a layered architecture that divi
 				5 & Session Layer & token management, dialog control, synchronization \\
 				6 & Presentation Layer & abstracting syntax and semantics of transmission, encryption \\
 				7 & Application Layer & user application protocols, such as http, ftp, smtp and many more \\
-			\bottomrule
-		\end{tabular}\caption{Layers in the OSI model \cite{osi}} \label{tab:osi-layers}
+			\hline
+		\end{tabular}\caption{Layers in the OSI model \cite{osi}.} \label{tab:osi-layers}
 	\end{center}
 \end{table}
 
@@ -62,7 +62,7 @@ As a consequence of the constrained energy resources, WSN are especially suscept
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{pictures/mac_classification}
 	\end{center}
-	\caption{Classification of MAC techniques}
+	\caption{Classification of MAC techniques.}
 \end{figure}
 
 Traditional MAC protocols can be classified into one of two groups: reservation-based and contention-based as depicted in Figure \ref{fig:mac-classification} \cite{Garg07}. The difference between them is that in reservation-based protocols a coordinator prevents collisions by assigning physical resources to devices, whereas in contention-based protocols no such infrastructure exists and nodes have to contend for channel utilization, hence the name. Another technique independent from these categories is to employ duty cycles (DC), where nodes continuously alternate between active and inactive periods. According to \cite{Bachir10} the appropriate choice of MAC protocol depends on a plethora of design-drivers such as requirements concerning throughput, latency, energy consumption and traffic patterns. 
@@ -144,7 +144,7 @@ Main problem of ALOHA is the negligence of concurrent traffic in the channel. A 
 		\qquad
 		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth]{pictures/csma_p_persistent}}
 	\end{center}
-\caption{The three basic flavors of CSMA}
+\caption{The three basic flavors of CSMA.}
 \end{figure}
 
 %LTE Unlicensed sends all control traffic through the licensed carriers, because in the unlicensed carrier the same quality of service, reliability and mobility cannot be achieved. The reason is that the unlicensed carrier is shared with multiple other systems that are out of the LTE operator's control. For this reason unlicensed carriers are only allocated for supplemental downlink (SDL) traffic.
@@ -186,7 +186,7 @@ CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basi
 	\begin{center}
 		\includegraphics[width=14cm]{pictures/virtual_carrier_sensing}
 	\end{center}
-	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}}
+	\caption{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}.}
 \end{figure}
 
 IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next in accordance to \cite{Gast05} and \cite{Garg07}. 
@@ -244,7 +244,7 @@ While the limitations of hardware-defined radios are acceptable for a number of 
 		\qquad
 		\subfloat[AM Receiver \cite{am-receiver}]{\includegraphics[width=0.4\textwidth,valign=c]{pictures/am_radio_receiver_circuit}}
 	\end{center}
-	\caption{Simple do-it-yourself (DIY) radio receiver circuit diagrams}
+	\caption{Simple do-it-yourself (DIY) radio receiver circuit diagrams.}
 \end{figure}
 
 \subsection{What is GNU Radio?}
@@ -264,7 +264,7 @@ Mathworks MATLAB/Simulink also provides a communication systems toolbox. However
 	\begin{center}
 		\includegraphics[width=0.9\textwidth,valign=c]{pictures/grc_ui}
 	\end{center}
-	\caption{GNU Radio Companion GUI}
+	\caption{GNU Radio Companion GUI.}
 \end{figure}
 
 \subsection{Core Concepts of GNU Radio}

@@ -32,8 +32,8 @@ class sniffer:
         self.sniffer_settings           =   kwargs.get("sniffer_settings", {"link":2})
 
         self.energy_lower_bound = 0
-        self.energy_upper_bound = 0.0012
-        
+        self.energy_upper_bound = 0.0013
+
         # debugging:
         self.calc()
         self.plot()

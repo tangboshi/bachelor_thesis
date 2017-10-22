@@ -34,7 +34,7 @@ class myplot:
         self.xlabel             = xlabel
         self.ylabel             = ylabel
         # Let's have reasonable figure dimensions
-        self.fig, self.ax       = plt.subplots(figsize=(9,6))
+        self.fig, self.ax       = plt.subplots(figsize=(9,5))
         self.kwargs             = kwargs
         self.grid               = kwargs.get("grid", False)
         self.legend             = kwargs.get("legend", [])
@@ -51,6 +51,7 @@ class myplot:
         self.savepath           = savepath,
         self.plot_pdf           = kwargs.get("plot_pdf", False)
 
+        legend_outside_plot     = True
         #print(self.legend_loc)
 
         plottypes = {
@@ -94,6 +95,9 @@ class myplot:
             plottypes[aplot]()
             #set axis limits
             self.ax.set_ylim(ymin=0)
+            print("self.ylims is:"+str(self.ylims))
+            if self.ylims:
+                self.ax.set_ylim(ymin=self.ylims[0], ymax=self.ylims[1])
             if self.xlims != False and not (aplot in ["boxplot", "bar"]):
                 self.ax.set_xlim(self.xlims[0], self.xlims[1])
             else:
@@ -109,17 +113,17 @@ class myplot:
             #As a workaround the xticks are labeled
             if not aplot == "boxplot" and not aplot == "broken_barh":
                 if len(np.asarray(self.data).transpose()) == len(self.legend):
-                    if self.legend_coordinates == False:
+                    if self.legend_coordinates == False or legend_outside_plot:
                         box = self.ax.get_position()
                         self.ax.set_position([
                             box.x0,
-                            box.y0+box.height*0.3,
+                            box.y0+box.height*0.4,
                             box.width,
-                            box.height*0.7
+                            box.height*0.6
                         ])
                         self.ax.legend(fancybox=True,
                                     loc='upper center',
-                                    bbox_to_anchor=(0.5, -0.15))
+                                    bbox_to_anchor=(0.5, -0.35))
                     else:
                         if self.legend_coordinates[2] != "best":
                             self.ax.legend(fancybox=True,
@@ -136,8 +140,9 @@ class myplot:
                             +" don't match!")
 
             font = {'family' : 'normal',
-                    'weight' : 400,
-                    'size'   : 12}
+                    #'size'   : 12,
+                    'weight' : 400
+                }
 
             plt.rc('font', **font)
 
@@ -232,8 +237,6 @@ class myplot:
         self.ax.set_ylim(10, 5*data_len+20)
         if self.xlims == False:
             self.ax.set_xlim(0, self.timer*self.repetitions)
-        if self.ylims != False:
-            self.ax.set_ylim(self.ylims)
         self.ax.xaxis.grid(self.grid, linestyle="dashdot")
         self.ax.yaxis.grid(self.grid, linestyle="dashdot")
 
@@ -330,8 +333,9 @@ class myplot:
         #print(self.data)
         print(self.legend)
         markers = ["x","v","o","^","8","s","p","+","D","*"]
-        linestyles = ["-", "--", "-.", ":","-", "--", "-.", ":","-", "--"]
-        linewidths = [1.8,1.65,1.5,1.35,1.2,1.05,1,0.9,0.8,0.75]
+        linestyles = ["-", "-", ":", ":","-", "--", "-.", ":","-", "--"]
+        linewidths = [6,3,6,3,1.2,1.05,1,0.9,0.8,0.75]
+        colors = ["blue","orange","blue","orange","blue","orange","blue","orange","blue"]
 
         if self.eval_mode == "belated":
             cdf_data = np.asarray(self.data).transpose()
@@ -358,9 +362,9 @@ class myplot:
                     linestyle=linestyles[index],
                     linewidth=linewidths[index],
                     markevery=range(1,len(x)),
-                    label=self.legend[index])
+                    label=self.legend[index],
+                    color=colors[index])
         else:
-            print("I'm really executed")
             x = np.sort(cdf_data[0])
             y = np.arange(1,len(x)+1) / len(x)
             x = np.insert(x,0,x[0])
@@ -373,7 +377,8 @@ class myplot:
                     linestyle=linestyles[0],
                     linewidth=linewidths[0],
                     markevery=range(1,len(x)),
-                    label=self.legend[0])
+                    label=self.legend[0],
+                    color=colors[0])
 
 
         self.setLabels( xlabel=self.xlabel,

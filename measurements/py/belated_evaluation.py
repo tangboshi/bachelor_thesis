@@ -155,7 +155,7 @@ import sniffer
 
 # measurement     =       [
 #                             619,620,
-#                             #720,724
+#                             720,724
 #                         ]
 # links           =       [
 #                             1,2,
@@ -168,20 +168,20 @@ import sniffer
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
-measurement     =       [
-                            638,639,
-                            736,737
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
-                    "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
-                ]
+# measurement     =       [
+#                             638,639,
+#                             #736,737
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             630,631,
@@ -216,7 +216,7 @@ boxplot_xticks  = [
 ###
 # measurement     =       [
 #                             643,644,
-#                             725,737
+#                             #725,737
 #                         ]
 # links           =       [
 #                             1,2,
@@ -231,7 +231,7 @@ boxplot_xticks  = [
 
 # measurement     =       [
 #                             666,667,
-#                             #744,724
+#                             744,724
 #                         ]
 # links           =       [
 #                             1,2,
@@ -239,29 +239,29 @@ boxplot_xticks  = [
 #                         ]
 # boxplot_xticks  = [
 #                     "ALOHA unsaturated\nLink 1\n Coexistence",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
 #                     "ALOHA unsaturated \nLink 1\n Baseline",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
 # measurement     =       [
 #                             633,632,
-#                             738,724
+#                             #738,724
 #                         ]
 # links           =       [
 #                             1,2,
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2s\nLink 1\n Coexistence",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-#                     "CSMA saturated\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
-#                     "CSMA saturated\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2s\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
-
+#
 # measurement     =       [
 #                             636,637,
-#                             #736,724
+#                             736,724
 #                         ]
 # links           =       [
 #                             1,2,
@@ -276,7 +276,7 @@ boxplot_xticks  = [
 
 # measurement     =       [
 #                             714,715,
-#                             #728,646
+#                             728,646
 #                         ]
 # links           =       [
 #                             1,2,
@@ -289,20 +289,20 @@ boxplot_xticks  = [
 #                     "unsaturated ALOHA\nLink 2\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             708,709,
-#                             #728,724
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,2
-#                         ]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
-#                 ]
+measurement     =       [
+                            708,709,
+                            #728,724
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+                ]
 
 
 # stopped here %%%
@@ -393,24 +393,27 @@ custom_legend_coordinates   = {
 # show_plot = True
 
 if len(measurement) == 4:
-    #backoff_cond = True
-    backoff_cond = False
+    create_plots = {
+                    "rtt":                  True,
+                    "packet_loss":          True,
+                    "retxs":                False,
+                    "throughput":           True,
+                    "diagnostic":           True,
+                    "backoff":              True,
+                    "channel_occupation":   False,
+                    "sniffer":              True
+                }
 else:
-    backoff_cond = False
-sniffer_cond = backoff_cond
-
-create_plots                = {
-                                "rtt":                  True,
-                                "packet_loss":          True,
-                                # Retxs numbers are wrong prior to a flowgraph change,
-                                # because cs fail backoffs were counted as retxs
-                                "retxs":                False,
-                                "throughput":           True,
-                                "diagnostic":           True,
-                                "backoff":              backoff_cond,
-                                "channel_occupation":   True,
-                                "sniffer":              sniffer_cond
-                            }
+    create_plots = {
+                    "rtt":                  False,
+                    "packet_loss":          False,
+                    "retxs":                False,
+                    "throughput":           False,
+                    "diagnostic":           False,
+                    "backoff":              False,
+                    "channel_occupation":   True,
+                    "sniffer":              False
+                }
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
@@ -424,7 +427,8 @@ sniffer_settings            =   {
                                     # smoothed | physical
                                     "sniffer_mode":             ["smoothed"],
                                     "link":                     1,
-                                    "zoom":                     [0.0,timer*repetitions],
+                                    "zoom":                     [0.0,20],
+                                    #"zoom":                     [0.0,timer*repetitions],
                                     "zoom_mode":                "interval",
                                     "zoom_interval":            2,
                                     "smoothing_difference":     0.0001,

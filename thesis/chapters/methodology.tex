@@ -74,7 +74,7 @@ A scenario is a combination of  MAC protocols employed on the two links as depic
 We implement the pure ALOHA protocol based on the theory in Section \ref{sec:aloha} as GNU Radio flowgraph depicted in Figure \ref{fig:grc-aloha-sender} and described in Section \ref{sec:aloha-sender}.
 
 \paragraph{CSMA/CA}
-We implement CSMA/CA based on the theory in Section \ref{sec:csma-ca}. The flowgraph is depicted in Figure \ref{fig:grc-csma-sender} with the corresponding description found in Section \ref{sec:csma-transmiter} are \textbf{not} featuring the optional IEEE 802.11 RTS/CTS exchange, realize DIFS and SIFS with \code{general\_timers} and the backoff with the \code{backoff} blocks. In two of three measurement variants we set SIFS, DIFS and backoff slot (BO) times to different scaled versions of their values\footnote{The values of DIFS, SIFS and BO in the IEEE 802.11g standard are $\text{DIFS}=50 \,\text{\mu s}$, $\text{SIFS}=10 \,\text{\mu s}$, $\text{BO}=20 \,\text{\mu s}$, $\text{CW}_\text{min}=31$,  $\text{CW}_\text{max}=1023$ \cite{802.11g}.} prescribed in the IEEE 802.11g standard. We refer to these two variants as the high parameter values ($\text{DIFS}=15\,\text{ms}$, $\text{SIFS}=3\,\text{ms}$, $\text{BO}=6\,\text{ms}$) and the low parameter values ($\text{DIFS}=5\,\text{ms}$, $\text{SIFS}=1\,\text{ms}$, $\text{BO}=2\,\text{ms}$). The third variant are the medium parameter values based on the low parameter set but with $\text{DIFS}=9\,\text{ms}$. We employ the same $\text{CW}_\text{min}=31$ as the IEEE 802.11g standard, but $\text{CW}_\text{max}=2047$.
+We implement CSMA/CA based on the theory in Section \ref{sec:csma-ca}. The flowgraph is depicted in Figure \ref{fig:grc-csma-sender} with the corresponding description found in Section \ref{sec:csma-transmiter}. We are \textbf{not} featuring the optional IEEE 802.11 RTS/CTS exchange, realize DIFS and SIFS with \code{general\_timers} and the backoff with the \code{backoff} blocks. In two of three measurement variants we set SIFS, DIFS and backoff slot (BO) times to different scaled versions of their values\footnote{The values of DIFS, SIFS and BO in the IEEE 802.11g standard are $\text{DIFS}=50 \,\text{\mu s}$, $\text{SIFS}=10 \,\text{\mu s}$, $\text{BO}=20 \,\text{\mu s}$, $\text{CW}_\text{min}=31$,  $\text{CW}_\text{max}=1023$ \cite{802.11g}.} prescribed in the IEEE 802.11g standard. We refer to these two variants as the high parameter values ($\text{DIFS}=15\,\text{ms}$, $\text{SIFS}=3\,\text{ms}$, $\text{BO}=6\,\text{ms}$) and the low parameter values ($\text{DIFS}=5\,\text{ms}$, $\text{SIFS}=1\,\text{ms}$, $\text{BO}=2\,\text{ms}$). The third variant are the medium parameter values based on the low parameter set but with $\text{DIFS}=9\,\text{ms}$. We employ the same $\text{CW}_\text{min}=31$ as the IEEE 802.11g standard, but $\text{CW}_\text{max}=2047$.
 
 \paragraph{1-persistent CSMA}
 For 1-persistent CSMA we use the same flowgraph as for CSMA/CA and set SIFS and backoff slot times to zero. In contrast to theoretical p-persistent CSMA we sense the channel for DIFS instead of a minimal number of samples. More accurately, we could describe the protocol as "1-persistent CSMA-like with fixed sensing duration", but for brevity's sake we will refer to it as 1-persistent CSMA.  
@@ -241,27 +241,32 @@ Starting with the user calling \code{measurement\_n.sh}, where n is the ID of th
 	\caption{The three-phase measurement script system.}
 \end{figure}
 
-\clearpage
-
 \section{Quality Norms}
 \label{sec:quality-standards}
 
 \paragraph{Statistical Reliability}
-As mentioned in Section \ref{sec:measurement-scenarios}, each measurement features five repetitions of 100 seconds length. Compared to a single measurement of 500 seconds this has the downside that script and hardware initialization (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-plots} \subref{fig:qa-channel-energy}\footnote{Of the 1.1 seconds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be slightly improved by adding more repetitions and increasing the measurement time. 
+As mentioned in Section \ref{sec:measurement-scenarios}, each measurement features five repetitions of 100 seconds length. Compared to a single measurement of 500 seconds this has the downside that script and hardware initialization (about 1.1 seconds per repetition as can be seen in \ref{fig:qa-channel-energy}\footnote{Of the 1.1 seconds less than 100ms are script initialization overhead since as soon as the the energy is nonzero the devices started working.}) has a negative impact on the accuracy of some metrics, particularly throughput, but was easier to implement as this way five data points are provided in a natural way. The statistical quality could be slightly improved by adding more repetitions and increasing the measurement time. 
 
 \paragraph{Data Processing}
 Making use of modularity, multiple sets of test data were created for each data processing script (i.e. metric calculation and plotting scripts), provided to and processed by the script and compared with manually calculated results in a similar fashion as GNU Radio quality assurance tests discussed in \cite{gr-python-tut}. Intermediate data processing steps were printed to the console and logged in the log files where applicable. Additionally, experimental results were checked for plausibility. 
 
 \paragraph{Hardware Functionality}
 For each device and protocol variation single link baseline measurements were carried out. Not only can we compare the results of device/protocol combinations to two link scenarios, but also assure that the devices are configured and work correctly. RX/TX gains, when necessary, were tweaked each time the hardware was restarted until no or very little ($\le0.2\%$ mean) packet loss was observable in single links scenarios.
-Despite all efforts to find a combination of RX/TX gains and distances between nodes, where no packet loss would occur in single link configurations and at the same time the sniffer detects distinct energy levels for each packet type there still remains some degree of imperfection as depicted in Figure \ref{fig:qa-plots} \subref{fig:qa-packet-loss}. This problem of packet loss is generally worse for link 1, because it is further away from the receiver as is shown in Figure \ref{fig:measurement-setup}.  
+Despite all efforts to find a combination of RX/TX gains and distances between nodes, where no packet loss would occur in single link configurations and at the same time the sniffer detects distinct energy levels for each packet type there still remains some degree of imperfection as depicted in Figure \ref{fig:qa-packet-loss}. This problem of packet loss is generally worse for link 1, because it is further away from the receiver as is shown in Figure \ref{fig:measurement-setup}.  
 
 \begin{figure}[tb]
-	\label{fig:qa-plots}
+	\label{fig:qa-packet-loss}
 	\begin{center}
-		\subfloat[packet loss ]{\includegraphics[width=0.45\textwidth]{pictures/qa_packet_loss}\label{fig:qa-packet-loss}}
-		\qquad
-		\subfloat[channel energy ]{\includegraphics[width=0.45\textwidth]{pictures/qa_channel_energy}\label{fig:qa-channel-energy}}
+		\includegraphics[width=0.9\textwidth]{pictures/qa_packet_loss}
 	\end{center}
-	\caption{Plots concerning the quality norms of our measurements.}
+	\caption[Quality norm packet loss plot.]{Packet loss plot. We only carry out coexistence measurements, if we have less than 0.2\% mean packet loss in the baseline measurements.}
 \end{figure}
+
+\begin{figure}[tb]
+	\label{fig:qa-channel-energy}
+	\begin{center}
+		\subfloat[channel energy ]{\includegraphics[width=0.9\textwidth]{pictures/qa_channel_energy}}
+	\end{center}
+	\caption[Quality norm channel energy plot.]{Channel energy plot. The first 1.1 seconds of delay in each measurement repetition are caused by hardware initialization and script delays.}
+\end{figure}
+

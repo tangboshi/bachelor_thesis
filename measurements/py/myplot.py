@@ -34,7 +34,7 @@ class myplot:
         self.xlabel             = xlabel
         self.ylabel             = ylabel
         # Let's have reasonable figure dimensions
-        self.fig, self.ax       = plt.subplots(figsize=(9,5))
+        self.fig, self.ax       = plt.subplots(figsize=(9,3))
         self.kwargs             = kwargs
         self.grid               = kwargs.get("grid", False)
         self.legend             = kwargs.get("legend", [])

@@ -1,7 +1,7 @@
 \chapter{Measurement Results}
 \label{ch:results}
 
-In this chapter we discuss different combinations of MAC protocols employed on the two links.  We fist assess the measurement results where both senders employ the same MAC protocols. Subsequently, we will do the same for different combinations of MAC protocols 
+In this chapter we discuss different combinations of MAC protocols employed on the two links.  We first assess the measurement results where both senders employ the same MAC protocols. Subsequently, we will do the same for different combinations of MAC protocols. 
 
 \section{Same Protocol Combinations}
 \label{sec:same-protocols}
@@ -30,14 +30,16 @@ Throughout this section both transmitters are executing identical flowgraphs. Ge
 \begin{figure}[tb]
 	\label{fig:results-aloha-dbl-channel-meta}
 	\begin{center}
-		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_level_4_line_chart}\label{fig:results-aloha-dbl-channel-energy}}
+		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_cdf}\label{fig:results-aloha-dbl-channel-energy-cdf}}
 		\\
-		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_cdf}\label{fig:results-aloha-dbl-channel-energy-cdf}}		
+		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/same_combinations/aloha/smoothed_channel_energy_level_4_line_chart}\label{fig:results-aloha-dbl-channel-energy}}	
 	\end{center}
 	\caption{Observed channel energy for two links with ALOHA.}
 \end{figure}
 
-For two links with saturated ALOHA traffic we expect zero aggregate throughput, since each and every package collides. Figure \ref{fig:results-aloha-dbl-throughput} confirms this assumption. The corresponding packet loss of 100\% is depicted in Figure \ref{fig:results-aloha-dbl-packet-loss}. A reference value that can be read off Figure \ref{fig:results-aloha-dbl-throughput} is the throughput of a single saturated ALOHA link, which is about 130 kbps. This means that the combined throughput of multiple nodes in this channel with the same underlying PHY layer can never exceed 130 kbps and we can assess how well different protocols coexist and how much efficiently they make use of the channel by comparing their aggregated throughput to this value. Furthermore, a physical view on the channel from the sniffer's perspective is provided in Figure \ref{fig:results-aloha-dbl-channel-meta}\subref{fig:results-aloha-dbl-channel-energy}. Due to the fact that the two transmissions of the senders are not completely overlapping we can see that we do not have a single sender with observed transmission energy level around 0.0011 PU, but instead two senders, where the observed energy level of the first transmitter is around 0.0006 PU, which the channel energy CDF in Figure \ref{fig:results-aloha-dbl-channel-meta}\subref{fig:results-aloha-dbl-channel-energy-cdf} confirms. Note that the share of this particular energy (0.0006 PU) in the CDF is so high, because the transmission overlap does not stay constant throughout the whole measurement, but slightly varies with each repetition.
+For two links with saturated ALOHA traffic we expect zero aggregate throughput, since each and every package collides. Figure \ref{fig:results-aloha-dbl-throughput} confirms this assumption. The corresponding packet loss of 100\% is depicted in Figure \ref{fig:results-aloha-dbl-packet-loss}. A reference value that can be read off Figure \ref{fig:results-aloha-dbl-throughput} is the throughput of a single saturated ALOHA link, which is about 130 kbps. This means that the combined throughput of multiple nodes in this channel with the same underlying PHY layer can never exceed 130 kbps and we can assess how well different protocols coexist and how much efficiently they make use of the channel by comparing their aggregated throughput to this value.
+
+Furthermore, a physical view on the channel from the sniffer's perspective is provided in Figure \ref{fig:results-aloha-dbl-channel-meta}\subref{fig:results-aloha-dbl-channel-energy}. Due to the fact that the two transmissions of the senders are not completely overlapping we can see that we do not have a single sender with observed transmission energy level around 0.0011 PU, but instead two senders, where the observed energy level of the first transmitter is around 0.0006 PU, which the channel energy CDF in Figure \ref{fig:results-aloha-dbl-channel-meta}\subref{fig:results-aloha-dbl-channel-energy-cdf} confirms. Note that the share of this particular energy (0.0006 PU) in the CDF is so high, because the transmission overlap does not stay constant throughout the whole measurement, but slightly varies with each repetition.
 
 \clearpage
 
@@ -238,9 +240,9 @@ In the following experiment we examined if a fixed sensing duration of DIFS is e
 \begin{figure}[tb]
 	\label{fig:results-aloha-csma-channel-meta}
 	\begin{center}
-		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_csma/smoothed_channel_energy_level_4_line_chart}\label{fig:results-aloha-csma-channel-energy}}
-		\\
 		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_csma/smoothed_channel_energy_cdf}\label{fig:results-aloha-csma-channel-energy-cdf}}
+		\\
+		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_csma/smoothed_channel_energy_level_4_line_chart}\label{fig:results-aloha-csma-channel-energy}}
 	\end{center}
 	\caption{Observed channel energy for one link with ALOHA and one link with the medium parameter CSMA/CA variant.}
 \end{figure}
@@ -279,9 +281,9 @@ In this experiment we aimed at an experimental confirmation that saturated ALOHA
 \begin{figure}[tb]
 	\label{fig:results-unsat-aloha-csma-channel-meta}
 	\begin{center}
-		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_unsat_csma/smoothed_channel_energy_level_4_line_chart}\label{fig:results-unsat-aloha-csma-channel-energy}}
-		\\
 		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_unsat_csma/smoothed_channel_energy_cdf}\label{fig:results-unsat-aloha-csma-channel-energy-cdf}}
+		\\
+		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_unsat_csma/smoothed_channel_energy_level_4_line_chart}\label{fig:results-unsat-aloha-csma-channel-energy}}
 		\\
 		\subfloat[logical channel occupation]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/aloha_unsat_csma/zoomed_channel_occupation_gantt_chart}\label{fig:results-unsat-aloha-csma-channel-occupation}}
 	\end{center}
@@ -323,9 +325,9 @@ Only if the CSMA/CA node transmits a frame before the ALOHA node a collision can
 \begin{figure}[bt]
 	\label{fig:results-csma-15-5-channel-meta}
 	\begin{center}
-		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/csma_inhomogeneous/15_5/smoothed_channel_energy_level_4_line_chart}\label{fig:results-csma-15-5-channel-energy}}
-		\\
 		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/csma_inhomogeneous/15_5/smoothed_channel_energy_cdf}\label{fig:results-csma-15-5-channel-energy-cdf}}
+		\\
+		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/csma_inhomogeneous/15_5/smoothed_channel_energy_level_4_line_chart}\label{fig:results-csma-15-5-channel-energy}}
 		\\
 		\subfloat[logical channel occupation]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/csma_inhomogeneous/15_5/zoomed_channel_occupation_gantt_chart}\label{fig:results-csma-15-5-channel-occupation}}
 	\end{center}
@@ -365,9 +367,9 @@ The goal of our next experiment is to examine how CSMA/CA with different paramet
 \begin{figure}[bt]
 	\label{fig:results-difs-only-aloha-channel-meta}
 	\begin{center}
-		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/difs_only_aloha/smoothed_channel_energy_level_4_line_chart}\label{fig:results-difs-only-aloha-channel-energy}}
-		\\
 		\subfloat[channel energy CDF]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/difs_only_aloha/smoothed_channel_energy_cdf}\label{fig:results-difs-only-aloha-channel-energy-cdf}}
+		\\
+		\subfloat[channel energy]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/difs_only_aloha/smoothed_channel_energy_level_4_line_chart}\label{fig:results-difs-only-aloha-channel-energy}}
 		\\
 		\subfloat[logical channel occupation]{\includegraphics[width=0.9\textwidth]{pictures/results/different_combinations/difs_only_aloha/zoomed_channel_occupation_gantt_chart}\label{fig:results-difs-only-aloha-channel-occupation}}
 	\end{center}

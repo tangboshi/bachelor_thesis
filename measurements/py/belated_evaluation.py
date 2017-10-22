@@ -153,20 +153,20 @@ import sniffer
 #                     "ALOHA\nLink 2\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             619,620,
-#                             720,724
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,2
-#                         ]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
-#                 ]
+measurement     =       [
+                            619,620,
+                            720,724
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+                ]
 
 # measurement     =       [
 #                             638,639,
@@ -289,20 +289,20 @@ import sniffer
 #                     "unsaturated ALOHA\nLink 2\n Baseline",
 #                 ]
 
-measurement     =       [
-                            708,709,
-                            #728,724
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1\n Coexistence",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
-                ]
+# measurement     =       [
+#                             708,709,
+#                             #728,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0s\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+#                 ]
 
 
 # stopped here %%%

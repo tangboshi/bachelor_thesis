@@ -144,7 +144,7 @@ class channel_occupation:
         offset_candidates = [item[0] for item in busy_starting_times]
 
         #hardware_delay = 0
-        hardware_delay = 1.25
+        hardware_delay = 1.1
         offset = min(offset_candidates) - hardware_delay
 
         # barwidths in seconds

@@ -183,20 +183,20 @@ import sniffer
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             630,631,
-#                             738,739
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,2
-#                         ]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
-#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
-#                 ]
+measurement     =       [
+                            630,631,
+                            #738,739
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
+                ]
 
 # measurement     =       [
 #                             712,713,
@@ -229,20 +229,20 @@ import sniffer
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
-measurement     =       [
-                            666,667,
-                            #744,724
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "ALOHA unsaturated\nLink 1\n Coexistence",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-                    "ALOHA unsaturated \nLink 1\n Baseline",
-                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
-                ]
+# measurement     =       [
+#                             666,667,
+#                             #744,724
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "ALOHA unsaturated\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+#                     "ALOHA unsaturated \nLink 1\n Baseline",
+#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             633,632,
@@ -417,7 +417,7 @@ else:
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [8,10],
+                                    "zoom":             [10,12],
                                     "zoom_mode":        "interval",
                                     "zoom_interval":    2
                                 }

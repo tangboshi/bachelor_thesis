@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  23 OCT 2017 01:23
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  23 OCT 2017 01:45
  system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.112 seconds
+luaotfload | main : initialization completed in 0.116 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -2887,13 +2887,13 @@ thed_channel_energy_cdf.png  used on input line 120. on input line 120.
 Package luatex.def Info: Requested size: 370.79749pt x 131.84302pt on input line
  120.
 <pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_leve
-l_4_line_chart.png, id=835, pagebox=cropbox, 650.43pt x 231.264pt>
+l_5_line_chart.png, id=835, pagebox=cropbox, 650.43pt x 231.264pt>
 File: pictures/results/same_combinations/csma_low_params/smoothed_channel_energy
-_level_4_line_chart.png Graphic file (type png)
+_level_5_line_chart.png Graphic file (type png)
 <use pictures/results/same_combinations/csma_low_params/smoothed_channel_energy_
-level_4_line_chart.png>
+level_5_line_chart.png>
 Package luatex.def Info: pictures/results/same_combinations/csma_low_params/smoo
-thed_channel_energy_level_4_line_chart.png  used on input line 122. on input lin
+thed_channel_energy_level_5_line_chart.png  used on input line 122. on input lin
 e 122.
 Package luatex.def Info: Requested size: 370.79749pt x 131.84302pt on input line
  122.
@@ -2915,7 +2915,7 @@ ures/results/same_combinations/csma_low_params/frame_delay_boxplot.png><./pictur
 es/results/same_combinations/csma_low_params/backoff_(joint)_sum_cdf.png>] [34]
  [35<./pictures/results/same_combinations/csma_low_params/smoothed_channel_energ
 y_cdf.png><./pictures/results/same_combinations/csma_low_params/smoothed_channel
-_energy_level_4_line_chart.png><./pictures/results/same_combinations/csma_low_pa
+_energy_level_5_line_chart.png><./pictures/results/same_combinations/csma_low_pa
 rams/zoomed_channel_occupation_gantt_chart.png>]
 <pictures/results/same_combinations/csma_med_params/throughput_cdf.png, id=872, 
 pagebox=cropbox, 650.43pt x 231.264pt>
@@ -3575,10 +3575,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 8461CF3C6D59DA1B1592888D06AF4485;4062.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 )
 
@@ -3607,7 +3603,7 @@ ype1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/urw/courier
 re/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (87 pages, 4430451 bytes).
+Output written on Thesis.pdf (87 pages, 4432596 bytes).
 
 PDF statistics: 2321 PDF objects out of 2487 (max. 8388607)
  2034 compressed objects within 21 object streams

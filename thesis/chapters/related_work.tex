@@ -1,36 +1,24 @@
 \chapter{Related Work}
 \label{ch:related-work}
 
-\section{LTE-U/WiFi Coexistence Studies}
+This chapter introduces work related to the thesis. We will highlight similarities and differences of their approaches to our work. 
 
-Gomez-Miguelez et al. propose srsLTE, an open-source SDR library for the PHY layer of LTE release 8 \cite{gomezmiguelez16}. In contrast to many earlier simulation-based studies they have actually set up physical devices, better reflecting system level details of both technologies and providing insight for real-world deployments \cite{rupasinghe14} \cite{nihtilä13} \cite{jeon14} \cite{cavalcante13} . Their testbed comprises of several WiFi and LTE links, for which they used Ettus USRP B210 boards (LTE) and low-power single-board computers from Soekris (WiFi). In order to detect vendor-specific performance issues they decided to use two different sets of wireless NICs from Atheros and Broadcomm.
+\section{Inter-Technology Coexistence}
 
-In their study the influence of the following parameters was examined: LTE-U duty cycle, WiFi and LTE TX power, LTE bandwidth, LTE central frequency (i.e. LTE and WiFi spectrum overlap).
+Studies concerning inter-technology coexistence can be split into two groups. The first group of studies is based on simulations, whereas the second is based on measurements with physical devices. The latter group has the benefit of better reflecting system level details of the technologies and providing insight for real-world deployments. However, as pointed out in \cite{gomezmiguelez16} vendor-specific effects of the test hardware must be taken into account in the conclusions. 
 
-Their main results can be summarized as follows:
+\paragraph{LTE-U/Wi-Fi Coexistence}
+A number of simulation-based studies exist on this topic 
 
-\begin{itemize}
-	\item WiFi throughput is inversely proportional to LTE duty cycle.
-	\item WiFi TX power has little impact on WiFi throughput.
-	\item The influence of LTE bandwidth and central frequency on WiFi throughput depends very much on the vendor of the NIC card. As a result, more experimental research with physical devices from different vendors is strongly recommended. 
-\end{itemize}
+srsLTE, an open-source SDR library for the PHY layer of LTE release 8 is proposed in . In contrast to many earlier simulation-based studies () they have actually set up physical devices,  Their testbed comprises of several WiFi and LTE links, for which they used Ettus USRP B210 boards (LTE) and low-power single-board computers from Soekris (WiFi). In order to detect vendor-specific performance issues they decided to use two different sets of wireless NICs from Atheros and Broadcomm. In their study the influence of the following parameters was examined: LTE-U duty cycle, WiFi and LTE TX power, LTE bandwidth, LTE central frequency (i.e. LTE and WiFi spectrum overlap). Their main results can be summarized as follows. WiFi throughput is inversely proportional to LTE duty cycle. WiFi TX power has little impact on WiFi throughput. The influence of LTE bandwidth and central frequency on WiFi throughput depends very much on the vendor of the NIC card. As a result, more experimental research with physical devices from different vendors is strongly recommended. 
 
-Another empirical study \cite{capretti16} conducted by Capretti et al. also evaluates LTE Unlicensed/WiFi coexistence based on LTE-U.  Their testbed consists of one eNB and one UE, one WiFi access point and five WiFi nodes. Their WiFi network was based on embedded PCs equipped with commodity wireless adapters. The LTE nodes were based on desktop computers with Ettus USRP B210 RF front ends running the open-source driver UHD. The software used includes srsLTE to build up a LTE release 8 compliant LTE stack, as well as GNU Radio. 
+Another empirical study \cite{capretti16} also evaluates LTE Unlicensed/WiFi coexistence based on LTE-U. Their testbed consists of one LTE base station (eNodeB or eNB) and one user equipment (UE), one WiFi access point and five other WiFi nodes. Their WiFi network was based on embedded PCs equipped with commodity wireless adapters. The LTE nodes were based on desktop computers with Ettus USRP B210 RF front ends running the open-source driver UHD. The software used includes srsLTE to build up a LTE release 8 compliant LTE stack, as well as GNU Radio. The following parameters were subject of interest: duty cycle, WiFi power settings WiFi MCS (modulation and coding scheme) and packet size. The metrics measured were satisfied load in percent, total WiFi throughput, WiFi jitter and LTE packet loss.  Their main findings can be summarized as follows. The duty cycle patterns are a main influence on achievable WiFi throughput. Particularly, shorter duty cycles decrease jitter, which is important for real-time applications. On the other hand longer duty cycles offer superior throughput due to reduced overhead. LTE suppresses WiFi transmissions if the TX power levels are comparable and no duty cycling is employed. If WiFi TX power is increased, WiFi load negatively impacts LTE throughput. There is no panacea strategy ensuring maximum WiFi throughput operating under different MCSs and packet sizes. LTE performance is unaffected by WiFi contention levels.
 
-The following parameters were subject of interest: duty cycle, WiFi power settings WiFi MCS (modulation and coding scheme) and packet size. The metrics measured were satisfied load in percent, total WiFi throughput, WiFi jitter and LTE packet loss.  
+Both studies aim at understanding under which circumstances duty-cycle-based LTE-U can coexist with WiFi in the unlicensed band by conducting experimental research with SDR (USRP) LTE and commodity WiFi devices. We, too, carry out experimental research and use USRPs to understand the influence of parameters used in CSMA/CA in a setup with two links each either employing ALOHA or a CSMA/CA on the overall performance. While the studies focus on the variation of power and bandwidth parameters of the transmission, we put emphasis on timing aspects.   
 
-Their main findings can be summarized as follows:
+\paragraph{ZigBee/Wi-Fi Coexistence}
 
-\begin{itemize}
-	\item The duty cycle patterns are a main influence on achievable WiFi throughput. Particularly, shorter duty cycles decrease jitter, which is important for real-time applications. On the other hand longer duty cycles offer superior throughput due to reduced overhead.
-	\item LTE suppresses WiFi transmissions if the TX power levels are comparable and no duty cycling is employed.
-	\item If WiFi TX power is increased, WiFi load negatively impacts LTE throughput.
-	\item There is no panacea strategy ensuring maximum WiFi throughput operating under different MCSs and packet sizes.
-	\item LTE performance is unaffected by WiFi contention levels.
-\end{itemize}
+\paragraph{Bluetooth/Wi-Fi Coexistence}
 
-\section{Connection to Our Work}
+\section{MAC Protocol Design}
 
-Both studies aim at understanding under which circumstances duty-cycle-based LTE-U can coexist with WiFi in the unlicensed band by conducting experimental research with SDR (USRP) LTE and commodity WiFi devices. 
-
-We, too, carry out experimental research and use USRPs to understand the influence of parameters used in CSMA/CA in a setup with two links each either employing ALOHA or a CSMA/CA on the overall performance. While the studies focus on the variation of power and bandwidth parameters of the transmission, we put emphasis on timing aspects.   

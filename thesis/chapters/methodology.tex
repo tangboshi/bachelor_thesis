@@ -40,12 +40,14 @@ The setup consists of two USRP2s from Ettus Research and two USRP 2920s from Nat
 			Layer & Parameter & Value & Comment\\
 			\hline
 			 			& MCS & QPSK & BPSK optional, unused\\
-			PHY Layer	& central frequency & 450 MHz & 420 MHz or 480 MHz work as well \\
-						& sampling rate & 400k & \\
+			PHY Layer	& Central frequency & 450 MHz & 420 MHz - 480 MHz work as well \\
+						& Sampling rate & 400k/s & \\
 			\hline	
-						& timeout & 100 ms & $\text{RTT \le 68 ms}$ \\
-			MAC Layer	& CSMA CS threshold & 0.001 PU & for RX/TX gains as in Table \ref{tab:measurement-parameters} \\  
-						& max. retransmissions & 6 & \\
+						& Frame size & 1000 bytes & max. supported by OS\\
+						& Payload size & 837 bytes & \\
+			MAC Layer	& Timeout & 100 ms & $\text{RTT \le 68 ms}$ \\
+						& CSMA CS threshold & 0.001 PU & for RX/TX gains as in Table \ref{tab:measurement-parameters} \\  
+						& Max. retransmissions & 6 & \\
 			\hline	
 		\end{tabular}\caption{General setup parameters.}
 	\end{center}

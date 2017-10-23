@@ -147,6 +147,7 @@ class myplot:
             plt.rc('font', **font)
 
             # Add anotations:
+            self.annotate()
             for annotation in self.annotations_other:
                 self.ax.annotate(annotation)
             # Save and show plot
@@ -160,8 +161,6 @@ class myplot:
             #plt.close(self.fig)
             self.fig.clear()
             #print(self.data)
-
-            self.annotate()
 
     def bar(self):
 
@@ -467,14 +466,38 @@ class myplot:
         plt.show()
 
     def annotate(self):
-        pass
-    ''' uncomment if these functions should become a necessity.
-    def getFig(self):
-        return self.fig
+        print("xlim:"+str(self.ax.get_xlim()))
+        print("ylim:"+str(self.ax.get_ylim()))
+        circle_rad = 18
+        # dual 1-pers CSMA
+        #points = [(8.17,0.00065),(8.33,0.00065),(8.71,0.00066),(8.87,0.00064),(9.19,0.00066),(9.41,0.00066),(9.575,0.00066)]
+        #points = [(8.17,21.7),(8.33,21.7),(8.71,21.7),(8.87,21.7),(9.19,21.7),(9.41,21.7),(9.575,21.7)]
+        # dual low parameter CSMA/CA
+        #points = [(10.46,0.00067),(10.68,0.00041),(11.77,0.00073)]
+        #points = [(10.44,21.7),(10.65,21.7),(11.75,21.7)]
+        # unsaturated ALOHA + CSMA/CA
+        #points = [(8.335,0.00068),(8.365,0.00041),(8.634,0.00041),(8.68,0.00041),(9.69,0.00074)]
+        # points = [(8.335,21.7),(8.365,21.7),(8.634,21.7),(8.68,21.7),(9.69,21.7)]
+        # unsaturated ALOHA + 1-persistent CSMA
+        #points = [(8.86,0.00039),(9.1,0.00039),(9.36,0.00063),(9.57,0.00041),(9.61,0.00059)]
+        points = [(8.86,21.7),(9.1,21.7),(9.36,21.7),(9.57,21.7),(9.61,21.7)]
+        for item in points:
+            #print ("Hooray, I'm executed!")
+            self.ax.plot(item[0], item[1], 'o',
+                    ms=circle_rad * 2, mec='g', mfc='none', mew=2)
 
-    def getAx(self):
-        return self.ax
-    '''
+        # logical channel occupation: xy=(8.85,5)
+        # channel energy: xy=(10.85,0.00105)
+        self.ax.annotate('collisions', xy=(8.85,5), color='g',size=18)
+
+        # arrow annotation
+        # self.ax.annotate('collision', xy=point, xytext=(60, 60),
+        #             textcoords='offset points',
+        #             color='r', size='large',
+        #             arrowprops=dict(
+        #                 arrowstyle='simple,tail_width=0.3,head_width=0.8,head_length=0.8',
+        #                 facecolor='r', shrinkB=circle_rad * 1.2)
+        #)
 
     def debug(self):
         print("data: "+str(self.data))

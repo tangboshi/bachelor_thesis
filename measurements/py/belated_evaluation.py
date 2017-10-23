@@ -183,20 +183,20 @@ import sniffer
 #                     "CSMA\nDIFS=9ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
 #                 ]
 
-measurement     =       [
-                            630,631,
-                            #738,739
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
-                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
-                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
-                    "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
-                ]
+# measurement     =       [
+#                             630,631,
+#                             738,739
+#                         ]
+# links           =       [
+#                             1,2,
+#                             1,2
+#                         ]
+# boxplot_xticks  = [
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Coexistence",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 1\n Baseline",
+#                     "CSMA\nDIFS=5ms\nSIFS=1ms\nBO=2ms\nLink 2\n Baseline",
+#                 ]
 
 # measurement     =       [
 #                             712,713,
@@ -274,24 +274,24 @@ boxplot_xticks  = [
 #                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
 #                 ]
 
-# measurement     =       [
-#                             714,715,
-#                             #728,646
-#                         ]
-# links           =       [
-#                             1,2,
-#                             1,1
-#                         ]
-# boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
-#                     "unsaturated ALOHA\n Link 2\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
-#                     "unsaturated ALOHA\nLink 2\n Baseline",
-#                 ]
+measurement     =       [
+                            714,715,
+                            #728,646
+                        ]
+links           =       [
+                            1,2,
+                            1,1
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Coexistence",
+                    "unsaturated ALOHA\n Link 2\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=0ms\nBO=0ms\nLink 1\n Baseline",
+                    "unsaturated ALOHA\nLink 2\n Baseline",
+                ]
 
 # measurement     =       [
 #                             708,709,
-#                             #728,724
+#                             728,724
 #                         ]
 # links           =       [
 #                             1,2,
@@ -393,13 +393,23 @@ custom_legend_coordinates   = {
 # show_plot = True
 
 if len(measurement) == 4:
+    # create_plots = {
+    #                 "rtt":                  True,
+    #                 "packet_loss":          True,
+    #                 "retxs":                False,
+    #                 "throughput":           True,
+    #                 "diagnostic":           True,
+    #                 "backoff":              True,
+    #                 "channel_occupation":   False,
+    #                 "sniffer":              True
+    #             }
     create_plots = {
-                    "rtt":                  True,
-                    "packet_loss":          True,
+                    "rtt":                  False,
+                    "packet_loss":          False,
                     "retxs":                False,
-                    "throughput":           True,
-                    "diagnostic":           True,
-                    "backoff":              True,
+                    "throughput":           False,
+                    "diagnostic":           False,
+                    "backoff":              False,
                     "channel_occupation":   False,
                     "sniffer":              True
                 }
@@ -417,7 +427,7 @@ else:
 
 channel_occupation_mode     =   {
                                     "occupation_mode":  ["overview", "zoom"],
-                                    "zoom":             [10,12],
+                                    "zoom":             [8,10],
                                     "zoom_mode":        "interval",
                                     "zoom_interval":    2
                                 }
@@ -427,7 +437,7 @@ sniffer_settings            =   {
                                     # smoothed | physical
                                     "sniffer_mode":             ["smoothed"],
                                     "link":                     1,
-                                    "zoom":                     [0.0,20],
+                                    "zoom":                     [8,12],
                                     #"zoom":                     [0.0,timer*repetitions],
                                     "zoom_mode":                "interval",
                                     "zoom_interval":            2,

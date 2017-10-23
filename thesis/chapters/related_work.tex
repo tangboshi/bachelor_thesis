@@ -5,10 +5,10 @@ This chapter introduces work related to the thesis. We will highlight similariti
 
 \section{Inter-Technology Coexistence}
 
-In the following section we discuss the results of some studies that examined the coexistence of different technologies in the same frequency band. Studies concerning inter-technology coexistence can be split into two groups. The first group of studies is based on simulations, whereas the second is based on measurements with physical devices. Due to the fact, that we also carry out experimental research using USRPs, we are more interested in the latter group. Furthermore, studies based on real devices have the benefit of better reflecting system level details of the technologies and providing insight for real-world deployments. However, as pointed out in \cite{gomezmiguelez16} vendor-specific effects of the test hardware must be taken into account since they may exert great influence on the results. 
+In the following section we discuss approaches and results of studies that examined the coexistence of different technologies in the same frequency band. Studies concerning inter-technology coexistence are based on at least one of the following: theoretical analysis, simulation or measurements with physical devices. Due to the fact, that we also carry out experimental research using USRPs, we are more interested in studies based on the latter. Furthermore, studies based on measurement with real devices have the benefit of better reflecting system level details of the technologies and providing insight for real-world deployments. However, as pointed out in \cite{gomezmiguelez16} vendor-specific properties of the test hardware must be taken into account since they may exert great influence on the measurement results. 
 
 \paragraph{LTE-U/Wi-Fi Coexistence}
-Although a number of simulation-based studies \cite{nihtilä13}, \cite{rupasinghe14}, \cite{jeon14} and \cite{cavalcante13} exist on this topic we will confine the discussion to two studies \cite{gomezmiguelez16}, \cite{capretti16} based on measurements with physical devices. Both studies evaluate LTE Unlicensed /Wi-Fi coexistence based on LTE-U using srsLTE, an open-source SDR library to implement the PHY layer of LTE release 8. Another common feature of both studies is the use of commodity Wi-Fi network interface cards and USRPs as LTE nodes. 
+Although a great number of simulation-based studies \cite{nihtilä13}, \cite{rupasinghe14}, \cite{jeon14}, \cite{cavalcante13} exist on this topic we will confine the discussion to two studies \cite{gomezmiguelez16}, \cite{capretti16} based on measurements with physical devices. Both studies evaluate LTE Unlicensed /Wi-Fi coexistence based on LTE-U using srsLTE, an open-source SDR library to implement the PHY layer of LTE. Another common feature of both studies is the use of USRPs as LTE nodes. 
 
 In \cite{gomezmiguelez16} the testbed comprises of several Wi-Fi and LTE links, for which they used Ettus USRP B210 boards (LTE) and low-power single-board computers from Soekris (Wi-Fi). In order to detect vendor-specific performance issues they decided to use two different sets of wireless NICs from Atheros and Broadcomm. In their study the influence of the following parameters was examined: LTE-U duty cycle, Wi-Fi and LTE TX power, LTE bandwidth, LTE central frequency (i.e. LTE and Wi-Fi spectrum overlap). Their main results can be summarized as follows:
 \begin{itemize}
@@ -26,15 +26,29 @@ The testbed in\cite{capretti16} consists of one LTE base station (eNodeB or eNB)
 
 \paragraph{ZigBee/Wi-Fi Coexistence}
 
+In the MAC layer ZigBee uses the CSMA/CA protocol in nonbeacon-enabled mode or a mixture of CSMA/CA and TDMA in beacon-enabled mode. If upper layers detect that the throughput degrades below a certain threshold the MAC layer will be instructed to perform an energy scan through all available channels. Thereafter, the upper layers switch to the channel with the lowest detected energy  \cite{yi11},\cite{zhang11}. 
+The comprehensive study \cite{yi11} which is based on theoretical analysis, simulation (using Matlab/Simulink) and measurement with real devices take an approach that differs from ours. Instead of relying on the CSMA/CA algorithm in contention situations they try to avoid sharing the same channel with Wi-Fi. They conclude that adhering to certain deployment rules or alternatively appropriate channel management guarantee good coexistence of Wi-Fi and ZigBee:
+\begin{itemize}
+	\item A frequency offset of 8 MHz between the Wi-Fi and ZigBee channel central frequencies with a distance of 2 m between Wi-Fi and ZigBee nodes is always sufficient. In such a case adjacent channel interference is negligible.
+	\item Alternatively a distance of 8 m between Wi-Fi and ZigBee nodes is always sufficient.
+	\item If the former two rules are not applicable smart channel management can drastically reduce interference with Wi-Fi.
+\end{itemize}
+
+In \cite{zhang11} a SDR testbed with USRPs and GNU Radio is deployed to evaluate the influence of a proposed mechanism, namely cooperative busy tone, on the throughput of ZigBee and Wi-Fi. The idea is that a separate ZigBee node schedules a busy tone whenever a transmission between nodes is desired to enhance the visibility of ZigBee to Wi-Fi nodes.
+
+The ZigBee Alliance white paper \cite{thonet08} shows that ZigBee can coexist well with Wi-Fi in home networks if the Wi-Fi load is low. However, as Wi-Fi load increases to medium and high loads ZigBee throughput decreases severely in \cite{gummadi09} and \cite{polin08}. 
+
 
 \paragraph{Bluetooth/Wi-Fi Coexistence}
+Bluetooth is a coordination-based technology where a master device and up to seven active slave devices form a piconet using adaptive frequency hopping, which is a type of frequency hopping spread spectrum, which is a CDMA technique. With the pseudo-random frequency hopping scheme Bluetooth may interfere with Wi-Fi nodes. The simulation-based study \cite{chiasserini02} proposes two algorithms to avoid overlapping of Bluetooth with WLANs (such as Wi-Fi) in the time and the frequency domain, respectively. The key idea of the first algorithm is to adjust the WLAN packet length to fit in between two Bluetooth packet transmissions. The second algorithm induces the Bluetooth master node to schedule data packets with appropriate durations to skip the frequencies of the hopping pattern that are expected to drop on the IEEE 802.11 band.
 
-\section{MAC Protocol Modeling}
 
-In this section we discuss approaches to modeling MAC protocols.
-
-\paragraph{Finite State Machines}
-
-\paragraph{Data Flow}
+%\section{MAC Protocol Modeling}
+%
+%In this section we discuss approaches to modeling MAC protocols.
+%
+%\paragraph{Finite State Machines}
+%
+%\paragraph{Data Flow}
 
 

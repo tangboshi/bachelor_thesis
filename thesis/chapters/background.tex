@@ -26,7 +26,7 @@ The OSI (Open Systems Interconnection) model is a layered architecture that divi
 				6 & Presentation Layer & Abstracting syntax and semantics of transmission, encryption \\
 				7 & Application Layer & User application protocols, such as http, ftp, smtp and many more \\
 			\hline
-		\end{tabular}\caption{Layers in the OSI model \cite{osi}.} \label{tab:osi-layers}
+		\end{tabular}\caption[Layers in the OSI model.]{Layers in the OSI model \cite{osi}.} \label{tab:osi-layers}
 	\end{center}
 \end{table}
 
@@ -78,7 +78,7 @@ TDMA is a representative protocol in this group, which divides time into slots. 
 
 FDMA (FDMA) divides a frequency band into a number of channels. One or more may be assigned to each node. Receivers use bandpass filters to obtain the transmitted signal \cite{Garg07}.
 
-CDMA is a digital spread-spectrum technique where multiple transmitters share the same frequency band and transmissions may occur at the same time. In this method transmitted signals are combined (XORed) with special \footnote{by special we mean that the signal has certain properties such as orthogonality and in some cases pseudo-randomness} sequences making the transmitted signal's frequency vary in order to avoid interference. The receiver has to follow along this variation of frequency (that is to say know the spreading code) when decoding to retrieve the original data signal, resulting in increasing security as a side effect \cite{Garg07}.
+CDMA is a digital spread-spectrum technique where multiple transmitters share the same frequency band and transmissions may occur at the same time. In this method transmitted signals are combined (XORed) with special\footnote{by special we mean that the signal has certain properties such as orthogonality and in some cases pseudo-randomness} sequences making the transmitted signal's frequency vary in order to avoid interference. The receiver has to follow along this variation of frequency (that is to say know the spreading code) when decoding to retrieve the original data signal, resulting in increasing security as a side effect \cite{Garg07}.
 
 It is also possible to combine several of these techniques. Making use of this, the base station (eNB) of LTE in the licensed band coordinates traffic by assigning physical resource blocks (PRB) to devices. A PRB is a combination of a frequency and a time slot based on the reservation techniques of orthogonal FDMA (OFDMA) and TDMA. 
 
@@ -284,4 +284,4 @@ Polymorphic types (PMT) are opaque data types that enable safe information excha
 Simplified wrapper and interface generator (SWIG) is a software that helps to connect code written in C or C++ to a variety of scripting languages, such as in our case Python. This is achieved by generating a Python module from the C/C++ code with the help of an interface file. This "compatibility layer" is necessary, because blocks can be written in either Python or C++ as mentioned earlier.
 
 \subsection{GNU Radio Modules}
-A GNU Radio module is a set of blocks that are grouped together based on their purpose. A basic GNU Radio installation already provides a lot of modules, but almost all of them are associated with the PHY layer. The PHY layer used in this thesis was implemented in GNU Radio flowgraphs by Julian Arnold. For the MAC layer we use flowgraphs based on blocks of a GNU Radio out-of-tree (OOT) \footnote{An OOT module is an external module not provided in the standard setup of GR.} module programmed by Peng Wang. The changes we made to the MAC layer flowgraphs include additional blocks to capture the metrics as described in Section \ref{sec:measurement-metrics} and shutting off self-reception during frame transmission. 
+A GNU Radio module is a set of blocks that are grouped together based on their purpose. A basic GNU Radio installation already provides a lot of modules, but almost all of them are associated with the PHY layer. The PHY layer used in this thesis was implemented in GNU Radio flowgraphs by Julian Arnold. For the MAC layer we use flowgraphs based on blocks of a GNU Radio out-of-tree (OOT)\footnote{An OOT module is an external module not provided in the standard setup of GR.} module programmed by Peng Wang. The changes we made to the MAC layer flowgraphs include additional blocks to capture the metrics as described in Section \ref{sec:measurement-metrics} and shutting off self-reception during frame transmission. 

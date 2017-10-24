@@ -7,7 +7,7 @@ In this chapter the theoretical foundations for the succeeding work are treated.
 
 \subsection{MAC Layer in the OSI Model}
 
-The OSI (Open Systems Interconnection) model is a layered architecture that divides a telecommunication system into several manageable layers. It features seven layers, where the second layer - the Data Link Layer (DLL) - can be split into two sublayers. The focus of this thesis lies on the lower sublayer, which is MAC. The upper sublayer is Logical Link Control (LLC). Table \ref{tab:osi-layers} gives a short overview of the responsibilities of each layer. We will now take a closer look at the MAC functionalities in IEEE 802.11 (WLAN) networks. 
+The OSI (Open Systems Interconnection) model is a layered architecture that divides a telecommunication system into several manageable layers. It features seven layers, where the second layer - the Data Link Layer (DLL) - can be split into two sublayers. The focus of this thesis lies on the lower sublayer, which is MAC. The upper sublayer is Logical Link Control (LLC). Table \ref{tab:osi-layers} gives a short overview of the responsibilities of each layer. We now take a closer look at the MAC functionalities in IEEE 802.11 (WLAN) networks. 
 
 \paragraph{MAC Functionalities} The MAC layer provides the functionalities to enable connection-less (datagram style) transfer of data between nodes. It transparently carries the data of the next higher - the LLC layer - as service data unit (SDU). Other important functions include frame delimiting and recognition, addressing of destination stations, conveying the source-address, protection against errors with frame check sequences and controlling the access to physical medium \cite{802-std}. In this thesis we will only examine physical medium access aspects. 
 
@@ -62,17 +62,17 @@ As a consequence of the constrained energy resources, WSN are especially suscept
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{pictures/mac_classification}
 	\end{center}
-	\caption{Classification of MAC techniques.}
+	\caption[Classification of MAC techniques.]{Classification of MAC techniques as in \cite{Garg07}.}
 \end{figure}
 
 Traditional MAC protocols can be classified into one of two groups: reservation-based and contention-based as depicted in Figure \ref{fig:mac-classification} \cite{Garg07}. The difference between them is that in reservation-based protocols a coordinator prevents collisions by assigning physical resources to devices, whereas in contention-based protocols no such infrastructure exists and nodes have to contend for channel utilization, hence the name. Another technique independent from these categories is to employ duty cycles (DC), where nodes continuously alternate between active and inactive periods. According to \cite{Bachir10} the appropriate choice of MAC protocol depends on a plethora of design-drivers such as requirements concerning throughput, latency, energy consumption and traffic patterns. 
 
-We will proceed with discussing representative protocols of the two categories. Thereafter, we will take a look at a few protocols that use DC mechanism.
+We proceed with discussing representative protocols of the two categories. Thereafter, we take a look at a few protocols that use DC mechanism.
 
 \subsection{Reservation-Based MAC Protocols}
 \label{sec:reservation-mac}
 
-Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a centrally coordinated schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time. Since we do not incorporate reservation-based protocols in our experiments we will only briefly describe the basic principles of the time-division multiple access (TDMA), frequency-division multiple access (FDMA) and code-division multiple access (CDMA). 
+Reservation-based protocols may implement an array of desirable features, but require knowledge of network topology in order to allow each node to communicate with every other on the basis of a centrally coordinated schedule. These features include reduced collisions, fairness among nodes or multiple transmissions at the same time. Since we do not incorporate reservation-based protocols in our experiments we only briefly describe the basic principles of the time-division multiple access (TDMA), frequency-division multiple access (FDMA) and code-division multiple access (CDMA). 
 
 TDMA is a representative protocol in this group, which divides time into slots. Each node is assigned to a unique slot during which it may transmit. As a result we obtain collision-free transmission, predictable scheduling delays, high throughput in heavy load situations and fairness among nodes. However, both the knowledge of topology and tight synchronization require large overheads or expensive hardware \cite{Bachir10}.
 
@@ -86,7 +86,7 @@ It is also possible to combine several of these techniques. Making use of this, 
 \subsubsection{ALOHA}
 \label{sec:aloha}
 
-ALOHA is arguably the most simple MAC protocol. Whenever a device wants to send data it just does so. The higher the channel load, i.e. transmissions per time unit, the more likely collisions will occur, which render all transmitted information useless.
+ALOHA is arguably the most simple MAC protocol. Whenever a device wants to send data it just does so. The higher the channel load, i.e. transmissions per time unit, the more likely collisions will occur, which may render all transmitted information useless.
 
 The question is how likely it is that a collision does not occur. In other words, how efficient is an ALOHA channel? Making a statement requires a few preliminary assumptions as shown in \cite{Tanenbaum02}:
 
@@ -134,7 +134,7 @@ As shown in Figure \ref{fig:aloha-csma-performance}, ALOHA's performance is disc
 	\caption[Normalized throughput over offerered load for various ALOHA and CSMA variants.]{Normalized throughput over offered load according to formulae in \cite{Tanenbaum02}, \cite{Garg07}, \cite{Bachir10}, with $a=\tau/T_p$, where $\tau$ is the maximum propagation delay and $T_p$ the packet transmission time and under the assumptions made in Section \ref{sec:aloha}. }
 \end{figure}
 
-The main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by "listen before talk" (LBT) mechanisms, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three basic flavors, i.e. 1-persistent CSMA, non-persistent CSMA and p-persistent CSMA as depicted in Figure \ref{fig:csma-flavors} which will be discussed next.
+The main problem of ALOHA is the negligence of concurrent traffic in the channel. A solution to this problem is offered by "listen before talk" (LBT) mechanisms, which means in order to avoid collisions we make a clear channel assessment (CCA) and refrain from sending should it be busy. This is the simple, yet effective basic idea of carrier sensing multiple access (CSMA) which comes in three basic flavors, i.e. 1-persistent CSMA, non-persistent CSMA and p-persistent CSMA as depicted in Figure \ref{fig:csma-flavors} which is discussed next.
 
 \begin{figure}[tb] \label{fig:csma-flavors}
 	\begin{center}
@@ -144,7 +144,7 @@ The main problem of ALOHA is the negligence of concurrent traffic in the channel
 		\qquad
 		\subfloat[p-persistent CSMA]{\includegraphics[width=0.35\textwidth]{pictures/csma_p_persistent}}
 	\end{center}
-\caption{The three basic flavors of CSMA.}
+\caption[The three basic flavors of CSMA.]{The three basic flavors of CSMA according to \cite{Tanenbaum02}.}
 \end{figure}
 
 %LTE Unlicensed sends all control traffic through the licensed carriers, because in the unlicensed carrier the same quality of service, reliability and mobility cannot be achieved. The reason is that the unlicensed carrier is shared with multiple other systems that are out of the LTE operator's control. For this reason unlicensed carriers are only allocated for supplemental downlink (SDL) traffic.
@@ -157,9 +157,9 @@ If the channel is busy, 1-persistent CSMA waits until the channel becomes idle. 
 Despite being a substantial improvement over ALOHA, this protocol has at least two problems \cite{Tanenbaum02}:
 
 \begin{itemize}
-	\item Provided propagation delay is zero or negligible, collisions can still occur.  Imagine a three-node-scenario with nodes $A$, $B$ and $C$. $A$ is transmitting, while $B$ and $C$ are waiting for their turn. Once $A$ finished transmission $B$ and $C$ will simultaneously start their transmissions leading to collision.
+	\item Provided propagation delay is zero or negligible, collisions can still occur.  Imagine a three-node-scenario with nodes $A$, $B$ and $C$. $A$ is transmitting, while $B$ and $C$ are waiting for their turn. Once $A$ finishes transmission $B$ and $C$ simultaneously start their transmissions leading to collision.
 	
-	\item If propagation delay is not negligible the protocol suffers from an additional problem. In another scenario $A$ has just begun sending. $B$ will assume the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper the performance of this protocol.
+	\item If propagation delay is not negligible the protocol suffers from an additional problem. In another scenario $A$ has just begun sending. $B$ assumes the channel is idle and send off his frame, since, due to the propagation delay, $B$ has not yet heard of $A$. This is why propagation delay may significantly hamper the performance of this protocol.
 \end{itemize}  
 
 \paragraph{Non-Persistent CSMA}
@@ -168,7 +168,7 @@ In order to alleviate 1-persistent CSMA's problem with several nodes trying to s
 
 \paragraph{P-Persistent CSMA}
 
-P-persitent CSMA is a protocol for slotted channels. Whenever a node $A$ wishes to send a packet, the channel is sensed. If the channel is found idle the node transmits its packet with a probability of $p$. With a probability $1-p$ the node defers its transmission to the next slot. This process is repeated until either the packet is sent or the channel is found busy again. In the latter case $A$ acts as though a collision had taken place and waits a random time until starting again \cite{Tanenbaum02}.
+P-persitent CSMA is a protocol for slotted channels. Whenever a node $A$ wishes to send a packet, the channel is sensed. If the channel is found idle the node transmits its packet with a probability of $p$. With a probability $1-p$ the node defers its transmission to the next slot. This process is repeated until either the packet is sent or the channel is found busy again. In the latter case $A$ acts \textbf{as though} a collision had taken place and waits a random time until starting again \cite{Tanenbaum02}.
 
 This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA and non-persistent CSMA, where the choice of $p$ determines the greediness. The smaller $p$, the less greedy and thus the closer p-persistent CSMA approximates non-persistent behavior. An appropriate choice of $p$ can get the best out of both mechanisms: minimal delays as in 1-persistent CSMA, as well as high channel efficiency as in non-persistent CSMA.
 
@@ -176,7 +176,7 @@ This flavor of CSMA can be regarded as a compromise between 1-persistent CSMA an
 
 A way to further improve the CSMA protocols is to immediately cancel transmissions once a collision is detected. There is no point in continuing these transmissions, as the transmitted data is lost in any case and aborting the transmission saves bandwidth, time and energy. 
 
-CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the received and transmitted energy or pulse width of the signal, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signals spread in all directions around their origin and thus degrade exponentially with the distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as energy consumption.
+CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basis of the wide-spread Ethernet. However, this mechanism is not extensively made use of in wireless networks. Concerning the reason, it is cardinal to understand that collision detection is an analog process. A collision is detected by comparing the energy or pulse width of the received and transmitted signals, which premises transmission and reception taking place simultaneously. This condition is seldom met for wireless nodes, which are mostly half-duplex. The reason for this lies in the conservation of energy, since wireless signals spread in all directions around their origin and thus degrade exponentially with the distance. Furthermore, wireless channels are typically much more noisy than their wired counterparts and suffer from multipath fading. To make up for the loss in signal strength we would have to employ expensive signal processing in order to recover fainter signals. Alternatively, we could increase the transmit power, but this increases interference with other nodes, as well as energy consumption.
 
 \subsubsection{CSMA with Collision Avoidance}
 \label{sec:csma-ca}
@@ -189,13 +189,13 @@ CSMA with Collision Detection (CSMA/CD) is used on wired LANs and serves as basi
 	\caption[Virtual carrier sensing in CSMA/CA]{Virtual carrier sensing in CSMA/CA, as described in \cite{Tanenbaum02} and \cite{Gast05}.}
 \end{figure}
 
-IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we will discuss next in accordance to \cite{Gast05} and \cite{Garg07}. 
+IEEE 802.11 is a set of physical layer (PHY) and MAC specifications for wireless local area networks (WLANs). When the dominant mode of operation, the so-called distributed coordination function (DCF) is employed CSMA/CA is used in the MAC layer, which we discuss next in accordance to \cite{Gast05} and \cite{Garg07}. 
 
 As depicted in Figure \ref{fig:virtual_carrier_sensing} there are specific intervals of given length between each of the frames. Varying lengths of these interval types serve the purpose of prioritizing certain frames over others.
 
 The short interframe spacing (SIFS) is the interval until the next control frame or next fragment (of a fragmented data frame) may be sent. SIFS is designed to allow one node out of the two nodes in dialog to have a higher priority to access the channel than uninvolved nodes. The longer interval DCF interframe spacing (DIFS) is the interval after which any station may try to seize the channel for their transmission.
 
-For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 is operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to the low priority of this action is the longest interval among the mentioned four. 
+For the sake of completeness, we briefly mention two further intervals used in IEEE 802.11, namely point coordination function interframe spacing (PIFS) and extended interframe spacing (EIFS). If IEEE 802.11 operates in an alternative mode of operation, where a node acts as point coordinator of traffic the standard prescribes an interval of length PIFS to allow the controlling node to send certain control (beacon and poll) frames. EIFS is used to report the reception of a bad or unknown frame and due to the low priority of this action is the longest interval among the mentioned four. 
 
 Physical carrier sensing takes place in these intervals. If a node wants to transmit a packet and the channel is sensed busy in one of these intervals then the node defers its transmission and launches the binary exponential backoff (BEB) procedure \cite{Gast05}. With BEB a node picks a slot in the so-called contention window (CW). The picked slot is just a random integer and the contention window is a range lower-bounded by zero and upper-bounded by $2^{n+m}-1$, where $m$ is a fixed integer, $2^m-1$ called minimum CW ($CW_\text{min}$) and $n=0$ for the moment. After picking the slot the node waits for $t_w = \text{\#slot} \cdot t_s$, where $\text{\#slot}$ is the number of the slot, $t_s$ a constant called backoff slot duration or simply backoff slot. After $t_w$ has elapsed the channel is sensed again. In the case it is busy again the whole BEB procedure is repeated with $n$ incremented by 1, thus the CW doubled, hence \textbf{binary exponential} backoff.  The motivation for $CW_\text{min}$ is to greatly reduce the chance that two contending nodes pick the same slot in the first round of BEB defeating the purpose of BEB. The BEB mechanism is also used if collisions occur. Once a data frame is transmitted a timer is started, which is canceled when the corresponding ACK is received. If the timer runs out, i.e. no ACK was received, a collision is assumed and a round of BEB precedes the next try.    
 
@@ -217,7 +217,7 @@ LTE-U uses Carrier Sense Adaptive Transmission (CSAT), which tries to avoid prim
 
 \subsubsection{Sensor MAC (SMAC)}
 
-In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is predetermined on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle listening and contention. The higher the duty factor the more idle-listening and the less contention occurs \cite{Bachir10}\cite{Demirkol06}.
+In SMAC the active period is divided into to a synchronization and a data transmission phase. During sync phase nodes transmit SYNC packets. Nodes receiving SYNC packets adopt the schedule carried by the packet and broadcast into their neighborhood. Nodes that follow the same schedule form a virtual cluster. Borderline nodes between virtual clusters adopt multiple schedules and thus have an increased duty factor. During contention period SMAC features the RTS/CTS exchange and fragments data frames, which are transmitted in a burst to reduce collision likelihood. The duty factor per schedule is \textbf{predetermined} on the basis of expected load as the result of an optimization problem on the competing goals of reducing idle listening and contention. The higher the duty factor the more idle-listening and the less contention occurs \cite{Bachir10}\cite{Demirkol06}.
 
 \subsubsection{Timeout MAC (TMAC)}
 
@@ -225,7 +225,7 @@ While TMAC shares the same principle of schedule establishment with SMAC nodes a
 
 \subsubsection{Berekeley MAC (BMAC)}
 
-Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. In BMAC CCA is based on outlier detection, instead of thresholding like in CSMA, further reducing energy use \cite{Polastre04}. 
+Still, TMAC maintains common active phases at high energy expenses. BMAC drops the requirement of maintaining common active phases. Instead payload is preceded by extended preambles such that every receiver is able to reliably detect packets. This has the effect of shifting energy expenses from the receiving to the sending side, which saves energy in low load applications such as surveillance. Furthermore, in BMAC CCA is based on outlier detection, instead of thresholding like in CSMA, further reducing energy use \cite{Polastre04}. 
 
 \section{Software-Defined Radio}
  

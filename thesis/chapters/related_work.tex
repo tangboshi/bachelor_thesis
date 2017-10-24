@@ -24,6 +24,8 @@ The testbed in\cite{capretti16} consists of one LTE base station (eNodeB or eNB)
 	\item If Wi-Fi TX power is increased, Wi-Fi load negatively impacts LTE throughput. There is no panacea strategy ensuring maximum Wi-Fi throughput operating under different MCSs and packet sizes. LTE performance is unaffected by Wi-Fi contention levels.
 \end{itemize}
 
+Both studies are similar to our work in so far that they use SDR with real hardware to experimentally evaluate inter-technology coexistence. However, the examined parameters of their studies are mostly related to power, frequency and duty-cycle, whereas we focus on CSMA/CA timing aspects.
+
 \paragraph{ZigBee/Wi-Fi Coexistence}
 
 In the MAC layer ZigBee uses the CSMA/CA protocol in nonbeacon-enabled mode or a mixture of CSMA/CA and TDMA in beacon-enabled mode. If upper layers detect that the throughput degrades below a certain threshold the MAC layer will be instructed to perform an energy scan through all available channels after which follows a switch to the channel with the lowest detected energy \cite{yi11},\cite{zhang11}. 
@@ -36,12 +38,10 @@ The comprehensive study \cite{yi11}, which is based on theoretical analysis, sim
 
 In \cite{zhang11} a SDR testbed with USRPs and GNU Radio is deployed to evaluate the influence of a proposed mechanism, namely cooperative busy tone, on the throughput of ZigBee and Wi-Fi. The idea is that a separate ZigBee node schedules a busy tone whenever a transmission between nodes is desired to enhance the visibility of ZigBee to Wi-Fi nodes.
 
-The ZigBee Alliance white paper \cite{thonet08} shows that ZigBee can coexist well with Wi-Fi in home networks if the Wi-Fi load is low. However, as Wi-Fi load increases to medium and high loads ZigBee throughput decreases severely in \cite{gummadi09} and \cite{polin08}. 
-
+The ZigBee Alliance white paper \cite{thonet08} shows that ZigBee can coexist well with Wi-Fi in home networks if the Wi-Fi load is low. However, as Wi-Fi load increases to medium and high loads ZigBee throughput decreases severely in \cite{gummadi09} and \cite{polin08}. All three of these papers are based on measurements with physical devices, but none features SDR.
 
 \paragraph{Bluetooth/Wi-Fi Coexistence}
-Bluetooth is a coordination-based technology where a master device and up to seven active slave devices form a piconet using adaptive frequency hopping, which is a type of frequency hopping spread spectrum, which is a CDMA technique. With the pseudo-random frequency hopping scheme Bluetooth may interfere with Wi-Fi nodes. The simulation-based study \cite{chiasserini02} proposes two algorithms to avoid overlapping of Bluetooth with WLANs (such as Wi-Fi) in the time and the frequency domain, respectively. The key idea of the first algorithm is to adjust the WLAN packet length to fit in between two Bluetooth packet transmissions. The second algorithm induces the Bluetooth master node to schedule data packets with appropriate durations to skip the frequencies of the hopping pattern that are expected to drop on the IEEE 802.11 band.
-
+Bluetooth is a coordination-based technology where a master device and up to seven active slave devices form a piconet using adaptive frequency hopping, which is a type of frequency hopping spread spectrum, which is a CDMA technique. With the pseudo-random frequency hopping scheme Bluetooth may interfere with Wi-Fi nodes. The simulation-based study \cite{chiasserini02}, in contrast to our work, proposes two algorithms to avoid overlapping of Bluetooth with Wi-Fi in the time and the frequency domain, respectively, rather than evaluating the influence of parameter variation on standardized mechanisms. The key idea of the first algorithm is to adjust the Wi-Fi packet length to fit in between two Bluetooth packet transmissions. The second algorithm induces the Bluetooth master node to schedule data packets with appropriate durations to skip the frequencies of the hopping pattern that are expected to drop on the IEEE 802.11 band.
 
 %\section{MAC Protocol Modeling}
 %

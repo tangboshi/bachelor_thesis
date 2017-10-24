@@ -41,7 +41,7 @@ The setup consists of two USRP2s from Ettus Research and two USRP 2920s from Nat
 			\hline
 			 			& MCS & QPSK & BPSK optional, unused\\
 			PHY Layer	& Carrier frequency & 450 MHz & 420 MHz - 480 MHz work as well \\
-						& Sampling rate & 400k/s & \\
+						& Sampling rate & 400 k/s & \\
 			\hline	
 						& Frame size & 1000 bytes & max. supported by OS\\
 						& Payload size & 837 bytes & \\
@@ -171,7 +171,7 @@ We define throughput as the mean useful data (payload and headers disregarding r
 \subsection{Round-Trip Time}
 \label{sec:rtt}
 
-We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt}, then this calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
+We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt}, then the calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
 
 \begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate RTT and frame delay,label=lst:rtt]
 # pointer onto data frame which we use for frame delay calculation

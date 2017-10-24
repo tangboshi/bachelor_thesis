@@ -1,5 +1,5 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  5 OCT 2017 11:05
- restricted system commands enabled.
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  24 OCT 2017 12:49
+ system commands enabled.
 **acknowledgements.tex
 (./acknowledgements.tex
 LaTeX2e <2017-04-15>
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.079 seconds
+luaotfload | main : initialization completed in 0.085 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 
 ! LaTeX Error: Missing \begin{document}.
@@ -43,14 +43,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 W
-   e thank\ldots
+l.1 I
+    would like to thank my thesis advisors Andra Voicu and Peng Wang for gui...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
-[]We
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]I
  []
 
 
@@ -60,74 +60,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 \cite{Tanenbaum02}
-                     \cite{Garg07} \cite{Gast05} \cite{WinNT}
+l.5 \noindent
+            Alexander Pastor
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-\citation{Tanenbaum02}
-luaotfload | db : Font names database loaded from /home/alex/.texlive/texmf-var/
-luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/alex/.texlive/te
-xmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)(load luc: /home/al
-ex/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc)
-! Undefined control sequence.
-<write> ... Warning: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.3 \cite{Tanenbaum02}
-                     \cite{Garg07} \cite{Gast05} \cite{WinNT}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Tanenbaum02' on page  undefined on input line 3.
-
-\citation{Garg07}
-! Undefined control sequence.
-<write> ... Warning: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.3 \cite{Tanenbaum02} \cite{Garg07}
-                                   \cite{Gast05} \cite{WinNT}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Garg07' on page  undefined on input line 3.
-
-\citation{Gast05}
-! Undefined control sequence.
-<write> ... Warning: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.3 \cite{Tanenbaum02} \cite{Garg07} \cite{Gast05}
-                                                 \cite{WinNT}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Gast05' on page  undefined on input line 3.
-
-\citation{WinNT}
-! Undefined control sequence.
-<write> ... Warning: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.3 ...m02} \cite{Garg07} \cite{Gast05} \cite{WinNT}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `WinNT' on page  undefined on input line 3.
 
 )
 ! Emergency stop.
@@ -138,12 +74,12 @@ LaTeX Warning: Citation `WinNT' on page  undefined on input line 3.
 
 
 Here is how much of LuaTeX's memory you used:
- 18 strings out of 494472
- 100000,89155 words of node,token memory allocated 604 words of node memory still in use:
-   8 hlist, 2 local_par, 1 dir, 11 glue, 3 kern, 2 penalty, 22 glyph, 11 attribu
-te, 35 glue_spec, 11 attribute_list, 1 temp nodes
-   avail lists: 2:3,3:2,4:1,5:6,8:1
- 4272 multiletter control sequences out of 65536+600000
- 16 fonts using 855119 bytes
- 19i,2n,23p,81b,100s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 8 strings out of 494472
+ 100000,89155 words of node,token memory allocated 3570 words of node memory still in use:
+   3 hlist, 2 local_par, 1 dir, 93 glue, 2 penalty, 436 glyph, 3 attribute, 35 g
+lue_spec, 3 attribute_list, 1 temp nodes
+   avail lists: 2:5,3:1,4:83,5:1,7:78,10:82
+ 4264 multiletter control sequences out of 65536+600000
+ 14 fonts using 591679 bytes
+ 5i,0n,4p,441b,15s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!

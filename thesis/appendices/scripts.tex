@@ -63,7 +63,7 @@ function prepare_measurement
         echo  "no measurement scripts set,
               going through files inside of $locate_base_path."
         echo "please add a the full path of one of the files to \$scritps."
-        #locate -r "$locate_base_path" | grep "\.py$"
+        locate -r "$locate_base_path" | grep "\.py$"
         echo "terminated. ding dong"
         exit -1
     fi
@@ -471,8 +471,7 @@ class myplot:
                             + str(len(self.legend))
                             +" don't match!")
             # Add anotations:
-            for annotation in self.annotations_other:
-                self.ax.annotate(annotation)
+			self.annotate(annotation)
             # Save and show plot
             if(savepath):
                 print("***savepath***")
@@ -484,8 +483,6 @@ class myplot:
             #plt.close(self.fig)
             self.fig.clear()
             #print(self.data)
-
-            self.annotate()
 
     def bar(self):
 
@@ -675,7 +672,6 @@ class myplot:
                     markevery=range(1,len(x)),
                     label=self.legend[0])
 
-
         self.setLabels( xlabel=self.xlabel,
                         ylabel="cumulative density",
                         title=self.title)
@@ -754,8 +750,11 @@ class myplot:
     def show(self):
         plt.show()
 
-    def annotate(self):
-        pass
+    def annotate(self, annotations=False):
+        if annotations:
+			self.ax.annotate(annotations)
+		# Add custom annotation code here
+			...
 
     def debug(self):
         print("data: "+str(self.data))

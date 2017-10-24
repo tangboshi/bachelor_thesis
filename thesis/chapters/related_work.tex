@@ -3,8 +3,6 @@
 
 This chapter introduces work related to the thesis. We will highlight similarities and differences of various studies to our work. 
 
-\section{Inter-Technology Coexistence}
-
 In the following section we discuss approaches and results of studies that examined the coexistence of different technologies in the same frequency band. Studies concerning inter-technology coexistence are based on at least one of the following: theoretical analysis, simulation or measurements with physical devices. Due to the fact, that we also carry out experimental research using USRPs, we are more interested in studies based on the latter. Furthermore, studies based on measurement with real devices have the benefit of better reflecting system level details of the technologies and providing insight for real-world deployments. However, as pointed out in \cite{gomezmiguelez16} vendor-specific properties of the test hardware must be taken into account since they may exert great influence on the measurement results. Some studies propose new mechanisms for one of the technologies which we do not do.
 
 \paragraph{LTE-U/Wi-Fi Coexistence}
@@ -41,14 +39,4 @@ In \cite{zhang11} a SDR testbed with USRPs and GNU Radio is deployed to evaluate
 The ZigBee Alliance white paper \cite{thonet08} shows that ZigBee can coexist well with Wi-Fi in home networks if the Wi-Fi load is low. However, as Wi-Fi load increases to medium and high loads ZigBee throughput decreases severely in \cite{gummadi09} and \cite{polin08}. All three of these papers are based on measurements with physical devices, but none features SDR. Furthermore, the focus in these papers lies on different traffic patterns, a subject we only touch.
 
 \paragraph{Bluetooth/Wi-Fi Coexistence}
-Bluetooth is a coordination-based technology where a master device and up to seven active slave devices form a piconet using adaptive frequency hopping, which is a type of frequency hopping spread spectrum, which is a CDMA technique. With the pseudo-random frequency hopping scheme Bluetooth may interfere with Wi-Fi nodes. The simulation-based study \cite{chiasserini02}, in contrast to our work, proposes two algorithms to avoid overlapping of Bluetooth with Wi-Fi in the time and the frequency domain, respectively, rather than evaluating the influence of parameter variation on standardized mechanisms. The key idea of the first algorithm is to adjust the Wi-Fi packet length to fit in between two Bluetooth packet transmissions. The second algorithm induces the Bluetooth master node to schedule data packets with appropriate durations to skip the frequencies of the hopping pattern that are expected to drop on the IEEE 802.11 band.
-
-%\section{MAC Protocol Modeling}
-%
-%In this section we discuss approaches to modeling MAC protocols.
-%
-%\paragraph{Finite State Machines}
-%
-%\paragraph{Data Flow}
-
-
+Bluetooth is a coordination-based technology where a master device and up to seven active slave devices form a piconet using adaptive frequency hopping, which is a type of frequency hopping spread spectrum, which is a CDMA technique. With the pseudo-random frequency hopping scheme Bluetooth may interfere with Wi-Fi nodes. The simulation-based study \cite{chiasserini02}, in contrast to our work, proposes two algorithms to avoid overlapping of Bluetooth with Wi-Fi in the time and the frequency domain, respectively, rather than evaluating the influence of parameter variation on standardized mechanisms. The key idea of the first algorithm is to adjust the Wi-Fi packet length to fit in between two Bluetooth packet transmissions. The second algorithm induces the Bluetooth master node to schedule data packets with appropriate durations to skip the frequencies of the hopping pattern that are expected to drop on the IEEE 802.11 band. The similarities of this study to our work is limited to examining coexistence mechanisms.

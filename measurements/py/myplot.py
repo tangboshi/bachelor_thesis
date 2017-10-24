@@ -34,7 +34,7 @@ class myplot:
         self.xlabel             = xlabel
         self.ylabel             = ylabel
         # Let's have reasonable figure dimensions
-        self.fig, self.ax       = plt.subplots(figsize=(9,5))
+        self.fig, self.ax       = plt.subplots(figsize=(9,3.2))
         self.kwargs             = kwargs
         self.grid               = kwargs.get("grid", False)
         self.legend             = kwargs.get("legend", [])
@@ -469,6 +469,9 @@ class myplot:
         print("xlim:"+str(self.ax.get_xlim()))
         print("ylim:"+str(self.ax.get_ylim()))
         circle_rad = 18
+        # dual ALOHA
+        points = [(8.02,0.00062),(8.27,0.00062),(8.52,0.00062),(8.77,0.00062),(9.00,0.00062),(9.24,0.00062),(9.49,0.00062),(9.73,0.00062),(9.97,0.00062)]
+        #points = [(8.17,21.7),(8.33,21.7),(8.71,21.7),(8.87,21.7),(9.19,21.7),(9.41,21.7),(9.575,21.7)]
         # dual 1-pers CSMA
         #points = [(8.17,0.00065),(8.33,0.00065),(8.71,0.00066),(8.87,0.00064),(9.19,0.00066),(9.41,0.00066),(9.575,0.00066)]
         #points = [(8.17,21.7),(8.33,21.7),(8.71,21.7),(8.87,21.7),(9.19,21.7),(9.41,21.7),(9.575,21.7)]
@@ -480,15 +483,15 @@ class myplot:
         # points = [(8.335,21.7),(8.365,21.7),(8.634,21.7),(8.68,21.7),(9.69,21.7)]
         # unsaturated ALOHA + 1-persistent CSMA
         #points = [(8.86,0.00039),(9.1,0.00039),(9.36,0.00063),(9.57,0.00041),(9.61,0.00059)]
-        points = [(8.86,21.7),(9.1,21.7),(9.36,21.7),(9.57,21.7),(9.61,21.7)]
+        #points = [(8.86,21.7),(9.1,21.7),(9.36,21.7),(9.57,21.7),(9.61,21.7)]
         for item in points:
             #print ("Hooray, I'm executed!")
             self.ax.plot(item[0], item[1], 'o',
-                    ms=circle_rad * 2, mec='g', mfc='none', mew=2)
+                    ms=circle_rad * 2, mec='r', mfc='none', mew=2)
 
         # logical channel occupation: xy=(8.85,5)
         # channel energy: xy=(10.85,0.00105)
-        self.ax.annotate('collisions', xy=(8.85,5), color='g',size=18)
+        self.ax.annotate('collisions', xy=(8.78,0.00086), color='r',size=18)
 
         # arrow annotation
         # self.ax.annotate('collision', xy=point, xytext=(60, 60),

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  24 OCT 2017 16:01
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  24 OCT 2017 16:25
  system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.103 seconds
+luaotfload | main : initialization completed in 0.093 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./inets-thesis.cls
 Document Class: inets-thesis 2015/03/27
@@ -3398,19 +3398,31 @@ Overfull \hbox (58.0pt too wide) in paragraph at lines 238--239
 ][][][][][][][][]  
  []
 
-[62] [63] [64] [65] [66] [67]
-Overfull \hbox (10.0pt too wide) in paragraph at lines 514--516
+[62] [63] [64]
+Overfull \hbox (34.0pt too wide) in paragraph at lines 387--388
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][]  
+ []
+
+[65]
+Overfull \hbox (46.0pt too wide) in paragraph at lines 389--390
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+]  
+ []
+
+[66] [67] [68] [69] [70]
+Overfull \hbox (10.0pt too wide) in paragraph at lines 653--655
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[68] [69] [70] [71] [72]) [73]
+[71] [72] [73] [74] [75]) [76]
 \openout2 = appendices/abbreviations.aux
- (./appendices/abbreviations.tex [74
+ (./appendices/abbreviations.tex [77
 
 
 
-] [75])
-[76]
+] [78])
+[79]
 \openout2 = appendices/list_figures.aux
  (./appendices/list_figures.tex (./Thesis.lof
 Overfull \hbox (3.57002pt too wide) in paragraph at lines 7--7
@@ -3430,7 +3442,7 @@ Overfull \hbox (18.80093pt too wide) in paragraph at lines 60--60
 ion for two links with 1-persistent 
  []
 
-[77
+[80
 
 
 ]
@@ -3445,9 +3457,9 @@ Overfull \hbox (13.07414pt too wide) in paragraph at lines 92--92
 ion for one link with 1-persistent 
  []
 
-) [78])
+) [81])
 \openout2 = appendices/list_tables.aux
- (./appendices/list_tables.tex (./Thesis.lot) [79
+ (./appendices/list_tables.tex (./Thesis.lot) [82
 
 
 
@@ -3464,12 +3476,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--35
 \T1/ppl/m/n/10.95 ploads/3/5/6/8/3568127/lte-u_co-ex-is-tence_mechan-sim_qual-
  []
 
-[80
+[83
 
 
 
 
-] [81]
+] [84]
 Underfull \hbox (badness 10000) in paragraph at lines 164--166
 []\T1/ppl/m/n/10.95 ``Usrp sup-port pack-age from com-mu-ni-ca-tions sys-tem to
 ol-box,''
@@ -3503,7 +3515,7 @@ EE Std 802.11-2016 (Re-vi-sion of IEEE Std
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=2229, pagebox=crop
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=2380, pagebox=crop
 box, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -3531,7 +3543,7 @@ wed
 warning  (file appendices/Formular_Eidesstattliche_Versicherung_neu.pdf) (pdf in
 clusion): PDF inclusion: found PDF version '1.6', but at most version '1.5' allo
 wed
-<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=2232, page=1, page
+<appendices/Formular_Eidesstattliche_Versicherung_neu.pdf, id=2383, page=1, page
 box=cropbox, 597.45204pt x 845.1575pt>
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
 e pdf)
@@ -3547,7 +3559,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  43.
-[82
+[85
 Missing character: There is no � (U+FFFD) in font pplr8t!
 ]
 File: appendices/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (typ
@@ -3571,7 +3583,7 @@ Package luatex.def Info: appendices/Formular_Eidesstattliche_Versicherung_neu.pd
 f , page1 used on input line 43. on input line 43.
 Package luatex.def Info: Requested size: 597.47792pt x 845.19412pt on input line
  43.
- [83<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
+ [86<./appendices/Formular_Eidesstattliche_Versicherung_neu.pdf>]
 \tf@toc=\write7
 
 \openout7 = Thesis.toc
@@ -3597,14 +3609,14 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36257 strings out of 494472
- 476942,953878 words of node,token memory allocated
- 6248 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 18 glue, 588 kern, 59 glyph, 377 attribute, 203 glu
-e_spec, 377 attribute_list, 2 write, 23 pdf_action nodes
-   avail lists: 1:1,2:10354,3:199,4:625,5:13602,6:3659,7:11448,8:7408,9:16587,10
-:56,11:1000
- 36978 multiletter control sequences out of 65536+600000
+ 36422 strings out of 494472
+ 476951,953878 words of node,token memory allocated
+ 6266 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 18 glue, 590 kern, 59 glyph, 379 attribute, 203 glu
+e_spec, 379 attribute_list, 2 write, 23 pdf_action nodes
+   avail lists: 1:1,2:10932,3:199,4:625,5:14176,6:3659,7:13645,8:7715,9:17342,10
+:56,11:1045
+ 37003 multiletter control sequences out of 65536+600000
  105 fonts using 11402079 bytes
  85i,18n,95p,2539b,1122s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/
@@ -3621,10 +3633,10 @@ ype1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/urw/courier
 re/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Thesis.pdf (89 pages, 4503343 bytes).
+Output written on Thesis.pdf (92 pages, 4514694 bytes).
 
-PDF statistics: 2347 PDF objects out of 2487 (max. 8388607)
- 2054 compressed objects within 21 object streams
- 1172 named destinations out of 1200 (max. 131072)
+PDF statistics: 2503 PDF objects out of 2984 (max. 8388607)
+ 2205 compressed objects within 23 object streams
+ 1312 named destinations out of 1440 (max. 131072)
  456 words of extra memory for PDF output out of 10000 (max. 100000000)
 

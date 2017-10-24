@@ -393,26 +393,26 @@ custom_legend_coordinates   = {
 # show_plot = True
 
 if len(measurement) == 4:
-    # create_plots = {
-    #                 "rtt":                  True,
-    #                 "packet_loss":          True,
-    #                 "retxs":                False,
-    #                 "throughput":           True,
-    #                 "diagnostic":           True,
-    #                 "backoff":              True,
-    #                 "channel_occupation":   False,
-    #                 "sniffer":              True
-    #             }
     create_plots = {
-                    "rtt":                  False,
-                    "packet_loss":          False,
+                    "rtt":                  True,
+                    "packet_loss":          True,
                     "retxs":                False,
-                    "throughput":           False,
-                    "diagnostic":           False,
-                    "backoff":              False,
+                    "throughput":           True,
+                    "diagnostic":           True,
+                    "backoff":              True,
                     "channel_occupation":   False,
                     "sniffer":              True
                 }
+    # create_plots = {
+    #                 "rtt":                  False,
+    #                 "packet_loss":          False,
+    #                 "retxs":                False,
+    #                 "throughput":           False,
+    #                 "diagnostic":           False,
+    #                 "backoff":              False,
+    #                 "channel_occupation":   False,
+    #                 "sniffer":              True
+    #             }
 else:
     create_plots = {
                     "rtt":                  False,

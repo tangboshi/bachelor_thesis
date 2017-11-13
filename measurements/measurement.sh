@@ -118,7 +118,7 @@ function measure
     echo  "measurement $x raw data directory created $data_source_path/$measurement_counter/$x/."
 
     #code for debugging
-    echo "regex pattern is: _________________________________"
+    echo "regex pattern is:"
     echo "*_$link.txt"
     echo $raw_data_source_path
     echo $(ls $raw_data_source_path | egrep "*_$link.txt")

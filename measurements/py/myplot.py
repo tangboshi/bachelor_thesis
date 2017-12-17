@@ -34,7 +34,7 @@ class myplot:
         self.xlabel             = xlabel
         self.ylabel             = ylabel
         # Let's have reasonable figure dimensions
-        self.fig, self.ax       = plt.subplots(figsize=(9,3.2))
+        self.fig, self.ax       = plt.subplots(figsize=(9,5))
         self.kwargs             = kwargs
         self.grid               = kwargs.get("grid", False)
         self.legend             = kwargs.get("legend", [])
@@ -257,13 +257,13 @@ class myplot:
         patch_c  = mpatches.Patch(color=colors[2], alpha=transparency, label="ack received")
 
         if self.legend_coordinates[2] != "best":
-            self.ax.legend( handles=[patch_a,patch_b,patch_c],
+            self.ax.legend( handles=[patch_a,patch_b],#patch_c],
                             fancybox=True,
                             loc=self.legend_coordinates[2],
                             bbox_to_anchor=(self.legend_coordinates[0],
                                             self.legend_coordinates[1]))
         else:
-            self.ax.legend( handles=[patch_a,patch_b,patch_c],
+            self.ax.legend( handles=[patch_a,patch_b],#patch_c],
                             fancybox=True,
                             loc="best")
 
@@ -274,12 +274,12 @@ class myplot:
             elif (index-1) % 2 == 0: # well else should be enough here :)
                 self.ax.broken_barh(item,((index)*5+5,13), facecolors=colors[1], alpha=0.5)
 
-        for index,item in enumerate(debug_data):
-            print("Added (debug) set with index "+str(index)+" to plot.")
-            if index % 2 == 0:
-                self.ax.broken_barh(item,((index+1)*5+5,13), facecolors=colors[2], alpha=0.5)
-            elif (index-1) % 2 == 0:
-                self.ax.broken_barh(item,((index)*5+5,13), facecolors=colors[2], alpha=0.5)
+        # for index,item in enumerate(debug_data):
+        #     print("Added (debug) set with index "+str(index)+" to plot.")
+        #     if index % 2 == 0:
+        #         self.ax.broken_barh(item,((index+1)*5+5,13), facecolors=colors[2], alpha=0.5)
+        #     elif (index-1) % 2 == 0:
+        #         self.ax.broken_barh(item,((index)*5+5,13), facecolors=colors[2], alpha=0.5)
 
         plt.tight_layout()
 
@@ -485,13 +485,14 @@ class myplot:
         #points = [(8.86,0.00039),(9.1,0.00039),(9.36,0.00063),(9.57,0.00041),(9.61,0.00059)]
         #points = [(8.86,21.7),(9.1,21.7),(9.36,21.7),(9.57,21.7),(9.61,21.7)]
         for item in points:
+            pass
             #print ("Hooray, I'm executed!")
-            self.ax.plot(item[0], item[1], 'o',
-                    ms=circle_rad * 2, mec='r', mfc='none', mew=2)
+            #self.ax.plot(item[0], item[1], 'o',
+                    #ms=circle_rad * 2, mec='r', mfc='none', mew=2)
 
         # logical channel occupation: xy=(8.85,5)
         # channel energy: xy=(10.85,0.00105)
-        self.ax.annotate('collisions', xy=(8.78,0.00086), color='r',size=18)
+        #self.ax.annotate('collisions', xy=(8.78,0.00086), color='r',size=18)
 
         # arrow annotation
         # self.ax.annotate('collision', xy=point, xytext=(60, 60),

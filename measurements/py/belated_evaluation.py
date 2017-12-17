@@ -138,35 +138,35 @@ import sniffer
 #                 ]
 
 ################################################################################
-measurement     =       [
-                            742,743,
-                            725,727
-                        ]
-links           =       [
-                            1,2,
-                            1,2
-                        ]
-boxplot_xticks  = [
-                    "ALOHA\nLink 1\n Coexistence",
-                    "ALOHA\nLink 2\n Coexistence",
-                    "ALOHA\nLink 1\n Baseline",
-                    "ALOHA\nLink 2\n Baseline",
-                ]
-
 # measurement     =       [
-#                             619,620,
-#                             720,724
+#                             742,743,
+#                             725,727
 #                         ]
 # links           =       [
 #                             1,2,
 #                             1,2
 #                         ]
 # boxplot_xticks  = [
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
-#                     "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+#                     "ALOHA\nLink 1\n Coexistence",
+#                     "ALOHA\nLink 2\n Coexistence",
+#                     "ALOHA\nLink 1\n Baseline",
+#                     "ALOHA\nLink 2\n Baseline",
 #                 ]
+
+measurement     =       [
+                            619,620,
+                            #720,724
+                        ]
+links           =       [
+                            1,2,
+                            1,2
+                        ]
+boxplot_xticks  = [
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Coexistence",
+                    "CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Coexistence",
+                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 1\n Baseline",
+                    #"CSMA\nDIFS=15ms\nSIFS=3ms\nBO=6ms\nLink 2\n Baseline",
+                ]
 
 # measurement     =       [
 #                             638,639,
@@ -393,26 +393,26 @@ custom_legend_coordinates   = {
 # show_plot = True
 
 if len(measurement) == 4:
-    create_plots = {
-                    "rtt":                  True,
-                    "packet_loss":          True,
-                    "retxs":                False,
-                    "throughput":           True,
-                    "diagnostic":           True,
-                    "backoff":              True,
-                    "channel_occupation":   False,
-                    "sniffer":              True
-                }
     # create_plots = {
-    #                 "rtt":                  False,
-    #                 "packet_loss":          False,
+    #                 "rtt":                  True,
+    #                 "packet_loss":          True,
     #                 "retxs":                False,
-    #                 "throughput":           False,
-    #                 "diagnostic":           False,
-    #                 "backoff":              False,
+    #                 "throughput":           True,
+    #                 "diagnostic":           True,
+    #                 "backoff":              True,
     #                 "channel_occupation":   False,
     #                 "sniffer":              True
     #             }
+    create_plots = {
+                    "rtt":                  False,
+                    "packet_loss":          False,
+                    "retxs":                False,
+                    "throughput":           False,
+                    "diagnostic":           False,
+                    "backoff":              False,
+                    "channel_occupation":   True,
+                    "sniffer":              False
+                }
 else:
     create_plots = {
                     "rtt":                  False,

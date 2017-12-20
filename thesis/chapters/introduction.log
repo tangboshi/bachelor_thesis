@@ -1,0 +1,414 @@
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.11.17)  20 DEC 2017 13:56
+ system commands enabled.
+**introduction.tex
+(./introduction.tex
+LaTeX2e <2017-04-15>
+Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
+Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
+llection.(using write cache: /home/alex/.texlive/texmf-var/luatex-cache/generic)
+(using read cache: /var/lib/texmf/luatex-cache/generic /home/alex/.texlive/texmf
+-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /home/alex/.texlive/texmf-var/luatex
+-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
+-resolved path “/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2017-02
+-11.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.027”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 4
+luaotfload | conf : Root cache directory is /home/alex/.texlive/texmf-var/luatex
+-cache/generic/names.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.092 seconds
+Babel <3.15> and hyphenation patterns for 1 language(s) loaded.
+! Undefined control sequence.
+l.1 \chapter
+          {Introduction}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{I
+            ntroduction}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]Introduction
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 I
+   n this chapter we motivate the thesis and explain its structure by briefl...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--5
+[]In
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 A
+    great number of technologies already operate in the unlicensed bands. Ho...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{nihtilä13}
+luaotfload | db : Font names database loaded from /home/alex/.texlive/texmf-var/
+luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/alex/.texlive/te
+xmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)(load luc: /home/al
+ex/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc)(save: /
+home/alex/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.lua)(
+save: /home/alex/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bol
+d.luc)
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...opulated with Wi-Fi devices \cite{nihtilä13}
+                                                  ,\cite{qualcomm15}. Howeve...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `nihtilä13' on page  undefined on input line 6.
+
+\citation{qualcomm15}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...i devices \cite{nihtilä13},\cite{qualcomm15}
+                                                  . However, the original LT...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `qualcomm15' on page  undefined on input line 6.
+
+\citation{ghosh10}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ... coordinated by a base station \cite{ghosh10}
+                                                  . Another unlicensed band,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `ghosh10' on page  undefined on input line 6.
+
+\citation{lee07}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ... all coexist in the 2.4 GHz band \cite{lee07}
+                                                  . The specifications and s...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `lee07' on page  undefined on input line 6.
+
+\citation{bhushan14}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ... rapid network densification \cite{bhushan14}
+                                                  . In order to facilitate h...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `bhushan14' on page  undefined on input line 6.
+
+\citation{gomezmiguelez16}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...tence studies, such as \cite{gomezmiguelez16}
+                                                   and \cite{capretti16} on ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `gomezmiguelez16' on page  undefined on input line 6.
+
+\citation{capretti16}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ... \cite{gomezmiguelez16} and \cite{capretti16}
+                                                   on LTE-U/Wi-Fi coexistenc...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `capretti16' on page  undefined on input line 6.
+
+\citation{zhang11}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...6} on LTE-U/Wi-Fi coexistence, \cite{zhang11}
+                                                  , \cite{yi11} on Zigbee/Wi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `zhang11' on page  undefined on input line 6.
+
+\citation{yi11}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...i-Fi coexistence, \cite{zhang11}, \cite{yi11}
+                                                   on Zigbee/Wi-Fi coexisten...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `yi11' on page  undefined on input line 6.
+
+\citation{chiasserini02}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...ee/Wi-Fi coexistence and \cite{chiasserini02}
+                                                   on Bluetooth/Wi-Fi coexis...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `chiasserini02' on page  undefined on input line 6.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[]A
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 6--7
+[[]],[[]].
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]].
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]].
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]].
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]]
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]]
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]],
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]]
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 6--7
+[[]]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 T
+   he rest of the thesis is structured as follows. In Chapter \ref{ch:backgr...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<write> ...ng: Reference `ch:background' on page \thepage 
+                                                  \space undefined\on@line .
+l.8 ...ed as follows. In Chapter \ref{ch:background}
+                                                   we discuss the theoretica...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:background' on page  undefined on input line 8.
+
+! Undefined control sequence.
+<write> ...: Reference `ch:related-work' on page \thepage 
+                                                  \space undefined\on@line .
+l.8 ... The purpose of Chapter \ref{ch:related-work}
+                                                   is to put our work into t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:related-work' on page  undefined on input line 8.
+
+! Undefined control sequence.
+<write> ...g: Reference `ch:methodology' on page \thepage 
+                                                  \space undefined\on@line .
+l.9 In Chapter \ref{ch:methodology}
+                                  we give an overview of the conducted exper...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:methodology' on page  undefined on input line 9.
+
+! Undefined control sequence.
+<write> ...rning: Reference `ch:results' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 Chapter \ref{ch:results}
+                            contains the measurement results and our interpr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:results' on page  undefined on input line 10.
+
+! Undefined control sequence.
+<write> ...g: Reference `ch:conclusions' on page \thepage 
+                                                  \space undefined\on@line .
+l.11 In Chapter \ref{ch:conclusions}
+                                   we discuss the main findings of Chapter \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:conclusions' on page  undefined on input line 11.
+
+! Undefined control sequence.
+<write> ...rning: Reference `ch:results' on page \thepage 
+                                                  \space undefined\on@line .
+l.11 ...he main findings of Chapter \ref{ch:results}
+                                                   and give an outlook on po...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ch:results' on page  undefined on input line 11.
+
+)
+! Emergency stop.
+<*> introduction.tex
+                 
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 28 strings out of 494483
+ 100000,89155 words of node,token memory allocated 19904 words of node memory still in use:
+   43 hlist, 4 local_par, 1 dir, 503 glue, 7 penalty, 2591 glyph, 39 attribute, 
+35 glue_spec, 39 attribute_list, 1 temp, 1 write nodes
+   avail lists: 2:2,3:1,4:98,5:6,7:157,8:1,10:97
+ 4271 multiletter control sequences out of 65536+600000
+ 16 fonts using 855119 bytes
+ 19i,2n,23p,2167b,100s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

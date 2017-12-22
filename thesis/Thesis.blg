@@ -11,6 +11,7 @@ A level-1 auxiliary file: appendices/scripts.aux
 A level-1 auxiliary file: appendices/abbreviations.aux
 A level-1 auxiliary file: appendices/list_figures.aux
 A level-1 auxiliary file: appendices/list_tables.aux
+A level-1 auxiliary file: appendices/list_listings.aux
 The style file: IEEE.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -22,50 +23,49 @@ Database file #2: bibliography.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in gomezmiguelez16
 Warning--empty author in 802-std
 Warning--empty author in 802.11g
 
 Done.
 You've used 36 entries,
             4087 wiz_defined-function locations,
-            1563 strings with 28638 characters,
-and the built_in function-call counts, 25209 in all, are:
-= -- 1909
+            1564 strings with 28664 characters,
+and the built_in function-call counts, 25325 in all, are:
+= -- 1915
 > -- 592
 < -- 196
 + -- 328
 - -- 101
-* -- 1190
-:= -- 3633
-add.period$ -- 75
+* -- 1196
+:= -- 3645
+add.period$ -- 76
 call.type$ -- 36
 change.case$ -- 45
 chr.to.int$ -- 465
-cite$ -- 39
-duplicate$ -- 1877
-empty$ -- 2174
+cite$ -- 38
+duplicate$ -- 1886
+empty$ -- 2199
 format.name$ -- 122
-if$ -- 5948
+if$ -- 5982
 int.to.chr$ -- 0
 int.to.str$ -- 36
-missing$ -- 351
+missing$ -- 354
 newline$ -- 137
 num.names$ -- 24
-pop$ -- 897
+pop$ -- 905
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1901
+skip$ -- 1910
 stack$ -- 0
 substring$ -- 1097
-swap$ -- 1463
+swap$ -- 1467
 text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 36
-warning$ -- 3
+warning$ -- 2
 while$ -- 100
 width$ -- 38
-write$ -- 347
-(There were 3 warnings)
+write$ -- 348
+(There were 2 warnings)

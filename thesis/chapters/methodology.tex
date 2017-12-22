@@ -77,7 +77,7 @@ We implement the pure ALOHA protocol based on the theory in Section \ref{sec:alo
 We implement CSMA/CA based on the theory in Section \ref{sec:csma-ca}. The flowgraph is depicted in Figure \ref{fig:grc-csma-transmitter} with the corresponding description found in Section \ref{sec:csma-transmiter}. We are \textbf{not} featuring the optional IEEE 802.11 RTS/CTS exchange, realize DIFS and SIFS with \code{general\_timers} and the backoff with the \code{backoff} blocks. In two of three measurement variants we set SIFS, DIFS and backoff slot (BO) times to different scaled versions of their values\footnote{The values of DIFS, SIFS and BO in the IEEE 802.11g standard are $\text{DIFS}=50 \,\text{\mu s}$, $\text{SIFS}=10 \,\text{\mu s}$, $\text{BO}=20 \,\text{\mu s}$, $\text{CW}_\text{min}=31$,  $\text{CW}_\text{max}=1023$ \cite{802.11g}.} prescribed in the IEEE 802.11g standard. We refer to these two variants as the high parameter values ($\text{DIFS}=15\,\text{ms}$, $\text{SIFS}=3\,\text{ms}$, $\text{BO}=6\,\text{ms}$) and the low parameter values ($\text{DIFS}=5\,\text{ms}$, $\text{SIFS}=1\,\text{ms}$, $\text{BO}=2\,\text{ms}$). The third variant are the medium parameter values based on the low parameter set but with $\text{DIFS}=9\,\text{ms}$. We employ the same $\text{CW}_\text{min}=31$ and $\text{CW}_\text{max}=1023$ as the IEEE 802.11g standard.
 
 \paragraph{1-persistent CSMA}
-For 1-persistent CSMA we use the same flowgraph as for CSMA/CA and set SIFS and backoff slot times to zero. In contrast to theoretical p-persistent CSMA we sense the channel for DIFS instead of a minimal number of samples. More accurately, we could describe the protocol as "1-persistent CSMA-like with fixed sensing duration", but for brevity's sake we refer to it as 1-persistent CSMA.  
+For 1-persistent CSMA we use the same flowgraph as for CSMA/CA and set SIFS and backoff slot times to zero. In contrast to theoretical 1-persistent CSMA we sense the channel for DIFS instead of a minimal number of samples. More accurately, we could describe the protocol as "1-persistent CSMA-like with fixed sensing duration", but for brevity's sake we refer to it as 1-persistent CSMA.  
  
 \begin{table}[bt]
 	\label{tab:measurement-scenarios}
@@ -173,7 +173,7 @@ We define throughput as the mean useful data (payload and headers disregarding r
 
 We define round-trip time (RTT) as the mean time from the buffer dequeuing a data frame until ACK reception. If the variable \code{rtt\_mode} is set to \code{rtt}, then the calculation excludes retransmitted frames. If \code{rtt\_mode} is set to \code{frame\_delay} instead then retransmitted frames are taken into account. How we obtain these metrics is best explained with the code in Listing \ref{lst:rtt}, where \code{ack\_received\_times} and \code{data\_sent\_times} contain the timestamps of the frames. 
 
-\begin{lstlisting}[language=Python, caption=The method used in \code{rtt\_alternative.py} to calculate RTT and frame delay,label=lst:rtt]
+\begin{lstlisting}[language=Python, caption={[{Alternative method to calculate RTT and frame delay}](The method used in \code{rtt\_alternative.py} to calculate RTT and frame delay)},label=lst:rtt]
 # pointer onto data frame which we use for frame delay calculation
 data_pos = 0
 for k,ack in enumerate(ack_received_times):
@@ -219,7 +219,7 @@ The energy levels (measured in a linear-scale, non-negative power unit) over the
 
 The elaborate script-system was an integral part of the work and enables future users to much more quickly gain results based on automation, since it is no longer necessary to manually execute flowgraphs, manage captured files, run data processing scripts, sync files with github. Instead everything is automatically done for them. The transmission of every frame and data processing step can be traced back with the log files. Furthermore, to accommodate the need for comparison, a retrospective evaluation of any set of measurements \code{belated\_evaluation.py} was created. The user only needs to add a few lines to the script as shown in Listing \ref{lst:belated-evaluation-example}.
   
-\begin{lstlisting}[language=Python,caption=Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare Figure \ref{fig:measurement-setup}).,label=lst:belated-evaluation-example]
+\begin{lstlisting}[language=Python,caption={[{Retrospective evaluation of measurements}](Evaluation of measurements with \code{belated\_evaluation.py}. In \code{links} we denote the link we used in the corresponding measurement (compare Figure \ref{fig:measurement-setup}).)},label=lst:belated-evaluation-example]
 measurement     = [714,715,728,646]
 links           = [1,2,1,2]
 boxplot_xticks  = [

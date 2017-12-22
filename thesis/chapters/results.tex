@@ -6,7 +6,7 @@ In this chapter we present and discuss the measurement results for different com
 \section{Same MAC Protocol For Both Links}
 \label{sec:same-protocols}
 
-For the results presented tfhroughout this section, both transmitters executed identical flowgraphs. Generally, when both links use the same MAC protocol we expect to see comparable results for each link over a sufficiently longer period of time, although small variations are also expected due to statistical and hardware-related effects and inaccuracies. 
+For the results presented throughout this section, both transmitters executed identical flowgraphs. Generally, when both links use the same MAC protocol we expect to see comparable results for each link over a sufficiently long period of time, although small variations are also expected due to statistical and hardware-related effects and inaccuracies. 
 
 \subsection{ALOHA}
 \label{sec:dbl-aloha}
@@ -180,7 +180,7 @@ The next aspect we were interested in is to what extent we can scale down DIFS, 
 	\caption{Observed channel energy and logical occupation for two links with the medium parameter CSMA/CA variant.}
 \end{figure}
 
-Due to the collisions of ACKs with the data packets of transmitter 1 as described in Section \ref{sec:csma-dbl-low} we increased DIFS to 9 ms, kept SIFS to 1 ms and BO to 2 ms and indeed, as shown in Figure \ref{fig:results-csma-med-dbl-frame-delay} the frame delay of link 2 is close to the baseline level as result of avoiding collisions. However, since collisions as a result of low DIFS occurred quite infrequently in the last scenario, the metrics (Figures \ref{fig:results-csma-med-dbl-throughput}, \ref{fig:results-csma-med-dbl-backoff}, \ref{fig:results-csma-med-dbl-channel-meta}) roughly stay the same as in the previous scenario (Figures \ref{fig:results-csma-low-dbl-throughput}, \ref{fig:results-csma-low-dbl-backoff}, \ref{fig:results-csma-low-dbl-channel-meta}).
+Due to the collisions of ACKs with the data packets of transmitter 1 as described in Section \ref{sec:csma-dbl-low} we increased DIFS to 9 ms, kept SIFS to 1 ms and BO to 2 ms and indeed, as shown in Figure \ref{fig:results-csma-med-dbl-frame-delay} the frame delay of link 2 is close to the baseline level as result of avoiding collisions. However, since collisions as a result of low DIFS occurred quite infrequently in the last scenario, the metrics (Figures \ref{fig:results-csma-med-dbl-throughput}, \ref{fig:results-csma-med-dbl-backoff} and \ref{fig:results-csma-med-dbl-channel-meta}) roughly stay the same as in the previous scenario (Figures \ref{fig:results-csma-low-dbl-throughput}, \ref{fig:results-csma-low-dbl-backoff} and \ref{fig:results-csma-low-dbl-channel-meta}).
 
 \clearpage
 

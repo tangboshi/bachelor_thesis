@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.8.3)  24 OCT 2017 09:46
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Arch Linux)  (format=lualatex 2017.11.17)  23 DEC 2017 05:58
  system commands enabled.
 **background.tex
 (./background.tex
@@ -34,8 +34,8 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.134 seconds
-Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
+luaotfload | main : initialization completed in 0.100 seconds
+Babel <3.15> and hyphenation patterns for 1 language(s) loaded.
 ! Undefined control sequence.
 l.1 \chapter
           {Background}
@@ -259,7 +259,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.29 		\end{tabular}\caption
-                          {Layers in the OSI model \cite{osi}.} \label{tab:o...
+                          [Layers in the OSI model.]{Layers in the OSI model...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -267,7 +267,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.29 ...}\caption{Layers in the OSI model \cite{osi}
+l.29 ...I model.]{Layers in the OSI model \cite{osi}
                                                   .} \label{tab:osi-layers}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -280,7 +280,7 @@ LaTeX Warning: Citation `osi' on page  undefined on input line 29.
 
 
 Overfull \hbox (369.8858pt too wide) in paragraph at lines 16--30
- []Layers 
+ [][Layers 
  []
 
 
@@ -489,7 +489,7 @@ Overfull \hbox (89.75575pt too wide) in paragraph at lines 42--46
 ! Undefined control sequence.
 <write> ...:hidden_exposed_node_problem' on page \thepage 
                                                   \space undefined\on@line .
-l.47 ...des in \ref{fig:hidden_exposed_node_problem}
+l.47 ...Figure \ref{fig:hidden_exposed_node_problem}
                                                    is limited to the neighbo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -869,11 +869,11 @@ l.65 	\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\citation{garg07}
+\citation{Garg07}
 ! Undefined control sequence.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.65 ...cation of MAC techniques as in \cite{garg07}
+l.65 ...cation of MAC techniques as in \cite{Garg07}
                                                   .}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -882,7 +882,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `garg07' on page  undefined on input line 65.
+LaTeX Warning: Citation `Garg07' on page  undefined on input line 65.
 
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
@@ -1232,7 +1232,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 81--82
 
 
 Overfull \hbox (4.483pt too wide) in paragraph at lines 81--82
-[]
+special[]
  []
 
 
@@ -1277,7 +1277,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 89--90
 ! Undefined control sequence.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.91 ...y assumptions as shown in \cite{Tanenbaum02}
+l.91 ...sumptions as listed below \cite{Tanenbaum02}
                                                   :
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1332,11 +1332,6 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 103--103
 Overfull \hbox (101.66995pt too wide) detected at line 105
 \OML/cmm/m/it/10 Pr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = \OML/c
 mm/m/it/10 k\OT1/cmr/m/n/10 ) = []
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 107--108
-[]The
  []
 
 
@@ -1842,7 +1837,7 @@ Overfull \hbox (10.85999pt too wide) in paragraph at lines 132--136
 <write> ... Reference `fig:csma-flavors' on page \thepage 
                                                   \space undefined\on@line .
 l.137 ...s depicted in Figure \ref{fig:csma-flavors}
-                                                   which will be discussed n...
+                                                   which is discussed next.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2115,11 +2110,11 @@ l.147 \caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\citation{tanenbaum02}
+\citation{Tanenbaum02}
 ! Undefined control sequence.
 <write> ... Warning: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.147 ...ors of CSMA according to \cite{tanenbaum02}
+l.147 ...ors of CSMA according to \cite{Tanenbaum02}
                                                   .}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2128,7 +2123,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `tanenbaum02' on page  undefined on input line 147.
+LaTeX Warning: Citation `Tanenbaum02' on page  undefined on input line 147.
 
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
@@ -2595,6 +2590,9 @@ Missing character: There is no d (U+0064) in font nullfont!
 Missing character: There is no h (U+0068) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
 Missing character: There is no w (U+0077) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no h (U+0068) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
 Missing character: There is no G (U+0047) in font nullfont!
 Missing character: There is no N (U+004E) in font nullfont!
 Missing character: There is no U (U+0055) in font nullfont!
@@ -2617,6 +2615,15 @@ Missing character: There is no a (U+0061) in font nullfont!
 Missing character: There is no d (U+0064) in font nullfont!
 Missing character: There is no i (U+0069) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no f (U+0066) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no m (U+006D) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no w (U+0077) in font nullfont!
+Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no k (U+006B) in font nullfont!
 Missing character: There is no c (U+0063) in font nullfont!
 Missing character: There is no a (U+0061) in font nullfont!
 Missing character: There is no n (U+006E) in font nullfont!
@@ -3043,10 +3050,6 @@ Missing character: There is no r (U+0072) in font nullfont!
 Missing character: There is no . (U+002E) in font nullfont!
 Missing character: There is no W (U+0057) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
-Missing character: There is no w (U+0077) in font nullfont!
-Missing character: There is no i (U+0069) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
 Missing character: There is no n (U+006E) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
 Missing character: There is no w (U+0077) in font nullfont!
@@ -4176,6 +4179,28 @@ Missing character: There is no m (U+006D) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
 Missing character: There is no r (U+0072) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no [ (U+005B) in font nullfont!
+Missing character: There is no L (U+004C) in font nullfont!
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no y (U+0079) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no s (U+0073) in font nullfont!
+Missing character: There is no i (U+0069) in font nullfont!
+Missing character: There is no n (U+006E) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no h (U+0068) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no O (U+004F) in font nullfont!
+Missing character: There is no S (U+0053) in font nullfont!
+Missing character: There is no I (U+0049) in font nullfont!
+Missing character: There is no m (U+006D) in font nullfont!
+Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no d (U+0064) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
+Missing character: There is no . (U+002E) in font nullfont!
+Missing character: There is no ] (U+005D) in font nullfont!
 Missing character: There is no L (U+004C) in font nullfont!
 Missing character: There is no a (U+0061) in font nullfont!
 Missing character: There is no y (U+0079) in font nullfont!
@@ -4721,6 +4746,12 @@ Missing character: There is no e (U+0065) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
 Missing character: There is no i (U+0069) in font nullfont!
 Missing character: There is no n (U+006E) in font nullfont!
+Missing character: There is no F (U+0046) in font nullfont!
+Missing character: There is no i (U+0069) in font nullfont!
+Missing character: There is no g (U+0067) in font nullfont!
+Missing character: There is no u (U+0075) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
 Missing character: There is no i (U+0069) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
 Missing character: There is no l (U+006C) in font nullfont!
@@ -6606,10 +6637,6 @@ Missing character: There is no s (U+0073) in font nullfont!
 Missing character: There is no . (U+002E) in font nullfont!
 Missing character: There is no W (U+0057) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
-Missing character: There is no w (U+0077) in font nullfont!
-Missing character: There is no i (U+0069) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no r (U+0072) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
@@ -6686,10 +6713,6 @@ Missing character: There is no r (U+0072) in font nullfont!
 Missing character: There is no , (U+002C) in font nullfont!
 Missing character: There is no w (U+0077) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
-Missing character: There is no w (U+0077) in font nullfont!
-Missing character: There is no i (U+0069) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no a (U+0061) in font nullfont!
 Missing character: There is no k (U+006B) in font nullfont!
@@ -7126,10 +7149,6 @@ Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
 Missing character: There is no w (U+0077) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
-Missing character: There is no w (U+0077) in font nullfont!
-Missing character: There is no i (U+0069) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
-Missing character: There is no l (U+006C) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
 Missing character: There is no n (U+006E) in font nullfont!
 Missing character: There is no l (U+006C) in font nullfont!
@@ -8708,6 +8727,9 @@ Missing character: There is no h (U+0068) in font nullfont!
 Missing character: There is no i (U+0069) in font nullfont!
 Missing character: There is no c (U+0063) in font nullfont!
 Missing character: There is no h (U+0068) in font nullfont!
+Missing character: There is no m (U+006D) in font nullfont!
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no y (U+0079) in font nullfont!
 Missing character: There is no r (U+0072) in font nullfont!
 Missing character: There is no e (U+0065) in font nullfont!
 Missing character: There is no n (U+006E) in font nullfont!
@@ -8894,13 +8916,17 @@ Missing character: There is no n (U+006E) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
 Missing character: There is no a (U+0061) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
+Missing character: There is no i (U+0069) in font nullfont!
 Missing character: There is no s (U+0073) in font nullfont!
-Missing character: There is no h (U+0068) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no d (U+0064) in font nullfont!
+Missing character: There is no b (U+0062) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
 Missing character: There is no o (U+006F) in font nullfont!
 Missing character: There is no w (U+0077) in font nullfont!
-Missing character: There is no n (U+006E) in font nullfont!
-Missing character: There is no i (U+0069) in font nullfont!
-Missing character: There is no n (U+006E) in font nullfont!
 Missing character: There is no [ (U+005B) in font nullfont!
 Missing character: There is no ] (U+005D) in font nullfont!
 Missing character: There is no : (U+003A) in font nullfont!
@@ -10945,6 +10971,16 @@ Overfull \hbox (7.50002pt too wide) in paragraph at lines 171--172
  []
 
 
+Overfull \hbox (10.12999pt too wide) in paragraph at lines 171--172
+\TU/lmr/bx/n/10 as
+ []
+
+
+Overfull \hbox (35.14pt too wide) in paragraph at lines 171--172
+\TU/lmr/bx/n/10 though
+ []
+
+
 Overfull \hbox (5.43pt too wide) in paragraph at lines 171--172
 [[]]. 
  []
@@ -11960,6 +11996,26 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 220--221
  []
 
 
+Overfull \hbox (20.23001pt too wide) in paragraph at lines 220--221
+\TU/lmr/bx/n/10 pre-
+ []
+
+
+Overfull \hbox (15.49pt too wide) in paragraph at lines 220--221
+\TU/lmr/bx/n/10 de-
+ []
+
+
+Overfull \hbox (18.31001pt too wide) in paragraph at lines 220--221
+\TU/lmr/bx/n/10 ter-
+ []
+
+
+Overfull \hbox (30.82pt too wide) in paragraph at lines 220--221
+\TU/lmr/bx/n/10 mined
+ []
+
+
 Overfull \hbox (10.85999pt too wide) in paragraph at lines 220--221
 [[]][[]]. 
  []
@@ -12899,13 +12955,13 @@ ine 287.
 
 
 Here is how much of LuaTeX's memory you used:
- 70 strings out of 494472
- 156263,89155 words of node,token memory allocated 127063 words of node memory still in use:
-   469 hlist, 4 rule, 2 ins, 28 disc, 60 local_par, 1 dir, 57 math, 3535 glue, 6
-6 kern, 233 penalty, 15804 glyph, 1 page_insert, 213 attribute, 35 glue_spec, 21
-3 attribute_list, 1 temp, 10 write nodes
-   avail lists: 2:254,3:137,4:167,5:41,8:205,9:134,10:166
- 4311 multiletter control sequences out of 65536+600000
+ 68 strings out of 494483
+ 156263,89155 words of node,token memory allocated 126422 words of node memory still in use:
+   477 hlist, 4 rule, 2 ins, 31 disc, 60 local_par, 1 dir, 57 math, 3522 glue, 6
+8 kern, 236 penalty, 15689 glyph, 1 page_insert, 217 attribute, 35 glue_spec, 21
+7 attribute_list, 1 temp, 10 write nodes
+   avail lists: 1:1,2:246,3:135,4:148,5:38,8:205,9:124,10:147
+ 4298 multiletter control sequences out of 65536+600000
  27 fonts using 1608479 bytes
  23i,8n,21p,1436b,183s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!

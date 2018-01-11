@@ -1,23 +1,9 @@
 # Bachelor Thesis
 
 ## Abstract
-It is far, too early for that, just a placeholder here.
+The demand for higher wireless transmission rates and capacity is growing rapidly. As a consequence, options to more efficiently make use of the limited frequency resources are being explored. Recently, it was proposed that operators of cellular networks should make use of license-free frequency bands that were not originally designated for their purposes. However, due to the exemption of licenses these bands are densely populated and measures for peaceful coexistence with incumbent technologies must be taken. In the case of the license-free 2.4 GHz band multiple technologies already coexist, namely IEEE 802.11 (Wi-Fi), Bluetooth and IEEE 802.15.4 (ZigBee). With this in mind, it is only natural to take mechanisms of technologies into account that were designed for contention-based coexistence, in our case the CSMA/CA protocol used in Wi-Fi devices.
+This thesis experimentally examines how different medium access control protocols determine the overall performance of the nodes. To this end, we use USRP software-defined radio devices and GNU Radio to employ different medium access control protocols, namely CSMA/CA, 1-persistent CSMA and ALOHA in various combinations on two links, where the focus lies on the influence of CSMA timing aspects.
+Our measurements reveal that the appropriate choice of timing parameters is crucial to the performance of the devices in different traffic situations concerning throughput and frame delays. On the one hand, it is important that the transmission channel is not idle due to excessive sensing periods in spite of backlogged nodes. On the other hand, it is important to prevent nodes starting transmission prematurely causing collisions due to inaccuracies related to the time granularity of the overall system.
 
-## Summaries
-Weekly summaries to document the progress of the thesis. They contain the most important information that has been processed during the specified week.
-
-### Color Coding
-* Black
-    * informative text.
-* <span style="color:blue">Blue</span>
-    * a question that requires a text answer marked as [question], or a simple yes/no question marked as [confirmation required].
-* <span style="color:red">Red</span>           
-    * my processed or refined [answer] to the questions. Can also denote [deferred] status, which implies that the question A) cannot be generally or easily answered or B) has been skipped (insufficient answer to minor problen) or C) has been passed
-* <span style="color:orange">Orange</span>
-    * already processed question, but needs more/rephrased/repeated information, marked as [clarification required].
-
-## GR Code
-Code processed during work for the thesis.
-
-## Thesis
-Draft of the thesis. Again, this is just a placeholder.
+## Goodies
+Apart from the thesis (/thsis/Thesis.pdf) you can also find the thesis presentation (/bt_presentation.pptx), measurement data, logs and some summaries of Q&A that came to my mind durig the initial phase of my endeavor.
